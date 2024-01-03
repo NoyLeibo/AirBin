@@ -13,7 +13,7 @@ const initialState = {
     lastRemovedStay: null
 }
 
-export function carReducer(state = initialState, action) {
+export function stayReducer(state = initialState, action) {
     var newState = state
     var stays
     var cart
