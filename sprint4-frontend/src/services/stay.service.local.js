@@ -15,6 +15,7 @@ export const stayService = {
 }
 window.cs = stayService
 
+_createStays()
 
 async function query(filterBy = { txt: '', price: 0 }) {
     var stays = await storageService.query(STORAGE_KEY)
@@ -72,6 +73,115 @@ function getEmptyStay() {
     }
 }
 
+function _createStays(){
+   let stays =JSON.parse(localStorage.getItem(STORAGE_KEY))
+   if(!stays || !stays.length){
+    stays=[
+           {
+            _id: "s101",
+            name: "Ribeira Charming Duplex",
+            type: "House",
+            imgUrls: ["https://e26e9b.jpg", "otherImg.jpg"],
+            price: 80.00,
+            summary: "Fantastic duplex apartment...",
+            capacity: 8,
+            amenities: [
+              "TV",
+              "Wifi",
+              "Kitchen",
+              "Smoking allowed",
+              "Pets allowed",
+              "Cooking basics"
+            ],
+            labels: [
+              "Top of the world",
+              "Trending",
+              "Play",
+              "Tropical"
+            ],
+            host: {
+              _id: "u101",
+              fullname: "Davit Pok",
+              imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+            },
+            loc: {
+              area: "Europe",
+              country: "Portugal",
+              countryCode: "PT",
+              city: "Lisbon",
+              address: "17 Kombo st",
+              lat: -8.61308,
+              lng: 41.1413
+            },
+            reviews: [
+              {
+                id: "madeId",
+                txt: "Very helpful hosts. Cooked traditional...",
+                rate: 4,
+                by: {
+                  _id: "u102",
+                  fullname: "user2",
+                  imgUrl: "/img/img2.jpg"
+                }
+              }
+            ],
+            likedByUsers: ['mini-user']
+          },
+           {
+            _id: "s102",
+            name: "Ribeira Charming Duplex",
+            type: "House",
+            imgUrls: ["https://e26e9b.jpg", "otherImg.jpg"],
+            price: 80.00,
+            summary: "Fantastic duplex apartment...",
+            capacity: 8,
+            amenities: [
+              "TV",
+              "Wifi",
+              "Kitchen",
+              "Smoking allowed",
+              "Pets allowed",
+              "Cooking basics"
+            ],
+            labels: [
+              "Top of the world",
+              "Trending",
+              "Play",
+              "Tropical"
+            ],
+            host: {
+              _id: "u101",
+              fullname: "Davit Pok",
+              imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+            },
+            loc: {
+              area: 'Asia',
+              country: "China",
+              countryCode: "CN",
+              city: "Beijing",
+              address: "30 Fui st",
+              lat: 39.858139, 
+              lng: 116.356046
+            },
+            reviews: [
+              {
+                id: "madeId",
+                txt: "Very helpful hosts. Cooked traditional...",
+                rate: 4,
+                by: {
+                  _id: "u102",
+                  fullname: "user2",
+                  imgUrl: "/img/img2.jpg"
+                }
+              }
+            ],
+            likedByUsers: ['mini-user']
+          }
+
+    ]
+   }
+
+}
 
 // TEST DATA
 // storageService.post(STORAGE_KEY, {vendor: 'Subali Rahok 2', price: 980}).then(x => console.log(x))
