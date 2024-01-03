@@ -7,15 +7,15 @@ import { AdminApp } from "./pages/AdminIndex.jsx";
 
 // Routes accesible from the main navigation (in AppHeader)
 const routes = [
+  // {
+  //   path: "/",
+  //   component: <HomePage />,
+  //   label: "Home 🏠",
+  // },
   {
     path: "/",
-    component: <HomePage />,
-    label: "Home 🏠",
-  },
-  {
-    path: "stay",
     component: <StayIndex />,
-    label: "Cars",
+    label: "Stays",
   },
   {
     path: "review",

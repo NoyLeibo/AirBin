@@ -4,6 +4,8 @@ import routes from '../routes'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { login, logout, signup } from '../store/user.actions.js'
 import { LoginSignup } from './LoginSignup.jsx'
+const LOGO='../../public/img/airbnb.png'
+const LOGO_ICON='../../public/img/airbnb-icon.png'
 
 export function AppHeader() {
     const user = useSelector(storeState => storeState.userModule.user)
@@ -34,9 +36,17 @@ export function AppHeader() {
     }
 
     return (
-        <header className="app-header">
-            <nav>
-                {routes.map(route => <NavLink key={route.path} to={route.path}>{route.label}</NavLink>)}
+        <header className="app-header full flex ">
+            <NavLink to='/'>
+                <div className='logo-container flex'>
+                <img src={LOGO_ICON} alt='logo icon'/>
+                <img src={LOGO} alt='logo name'/>
+                </div>
+            </NavLink>
+            <nav className='flex'>
+                {routes.map(route => {
+                 if(route.label==='Stays')return
+                return <NavLink key={route.path} to={route.path}>{route.label}</NavLink>})}
 
                 {user &&
                     <span className="user-info">
@@ -54,7 +64,6 @@ export function AppHeader() {
                     </section>
                 }
             </nav>
-            <h1>My App</h1>
         </header>
     )
 }

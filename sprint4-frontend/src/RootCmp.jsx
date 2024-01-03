@@ -9,9 +9,9 @@ import { StayDetails } from "./pages/StayDetails";
 
 export function RootCmp() {
   return (
-    <div>
+    <div className="main-container">
       <AppHeader />
-      <main>
+      <main >
         <Routes>
           {routes.map((route) => (
             <Route
