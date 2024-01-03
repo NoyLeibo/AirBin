@@ -13,7 +13,7 @@ import { userService } from "../services/user.service.js";
 import { stayService } from "../services/stay.service.js";
 
 export function StayIndex() {
-  const stay = useSelector((storeState) => storeState.stayModule.stay);
+  const stays = useSelector((storeState) => storeState.stayModule.stays);
 
   useEffect(() => {
     loadStay();
@@ -71,7 +71,6 @@ export function StayIndex() {
     if (user.isAdmin) return true;
     return stay.owner?._id === user._id;
   }
-
   return (
     <div>
       <h3>Stay App</h3>

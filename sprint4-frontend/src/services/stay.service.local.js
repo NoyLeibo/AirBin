@@ -3,7 +3,8 @@ import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
 
-const STORAGE_KEY = 'stay'
+const STORAGE_KEY = 'stay_db'
+_createStays()
 
 export const stayService = {
     query,
@@ -15,7 +16,6 @@ export const stayService = {
 }
 window.cs = stayService
 
-_createStays()
 
 async function query(filterBy = { txt: '', price: 0 }) {
     var stays = await storageService.query(STORAGE_KEY)
@@ -74,7 +74,7 @@ function getEmptyStay() {
 }
 
 function _createStays(){
-   let stays =JSON.parse(localStorage.getItem(STORAGE_KEY))
+   let stays =utilService.loadFromStorage(STORAGE_KEY)
    if(!stays || !stays.length){
     stays=[
            {
@@ -179,6 +179,7 @@ function _createStays(){
           }
 
     ]
+    utilService.saveToStorage(STORAGE_KEY, stays)
    }
 
 }
