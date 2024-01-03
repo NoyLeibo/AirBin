@@ -11,6 +11,7 @@ import {
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
 import { userService } from "../services/user.service.js";
 import { stayService } from "../services/stay.service.js";
+import { StayList } from "../cmps/StayList.jsx";
 
 export function StayIndex() {
   const stays = useSelector((storeState) => storeState.stayModule.stays);
@@ -76,54 +77,7 @@ export function StayIndex() {
       <h3>Stay App</h3>
       <main>
         <button onClick={onAddStay}>Add Stay ⛐</button>
-        <ul className="stay-list">
-          {stays.map((stay) => (
-            <li className="stay-preview" key={stay._id}>
-              <h4>{stay.vendor}</h4>
-              <h1>⛐</h1>
-              <p>
-                Price: <span>${stay.price.toLocaleString()}</span>
-              </p>
-              <p>
-                Owner: <span>{stay.owner && stay.owner.fullname}</span>
-              </p>
-              {shouldShowActionBtns(stay) && (
-                <div>
-                  <button
-                    onClick={() => {
-                      onRemoveStay(stay._id);
-                    }}
-                  >
-                    x
-                  </button>
-                  <button
-                    onClick={() => {
-                      onUpdateStay(stay);
-                    }}
-                  >
-                    Edit
-                  </button>
-                </div>
-              )}
-
-              <button
-                onClick={() => {
-                  onAddCarMsg(stay);
-                }}
-              >
-                Add stay msg
-              </button>
-              <button
-                className="buy"
-                onClick={() => {
-                  onAddToCart(stay);
-                }}
-              >
-                Add to cart
-              </button>
-            </li>
-          ))}
-        </ul>
+        <StayList stays={stays}/>
       </main>
     </div>
   );
