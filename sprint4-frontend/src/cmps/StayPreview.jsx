@@ -2,11 +2,11 @@ import { Link, NavLink } from 'react-router-dom'
 
 
 
-export function StayPreview({stay}){
+export function StayPreview({ stay }) {
 
 
 
-  return(
+  return (
     <li className="stay-preview" key={stay._id}>
               < NavLink to={`/details/${stay._id}`}>              
               <div className="stay-img">
@@ -54,6 +54,6 @@ export function StayPreview({stay}){
               >
                 Add to cart
               </button> */}
-            </li>
+    </li>
   )
 }
