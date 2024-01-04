@@ -1,0 +1,49 @@
+.emojis-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: minmax(50px, auto); // Ensuring each row has a minimum height
+    grid-column-gap: 10px; // Added some gap for visual separation
+    grid-row-gap: 10px;
+    justify-items: center; // Centering items horizontally in their grid areas
+
+    .emoji-container {
+        display: flex;
+        flex-direction: column; // Stack items vertically
+        justify-content: center;
+        align-items: center;
+        width: 100%; // Adjust width to fill the grid area
+        height: 100%; // Adjust height to fill the grid area
+        font-size: 12px;
+        position: relative; // Changed from sticky to relative
+        z-index: 2;
+        background-color: white;
+
+        .emoji-filter {
+            filter: grayscale(100%);
+            width: 24px;
+            height: 24px;
+
+            &:hover {
+                filter: grayscale(0%);
+            }
+        }
+
+        .emoji-text {
+            margin-top: 5px; // Added margin for spacing between image and text
+        }
+    }
+}
+
+@for $i from 1 through 16 {
+    .filter#{$i} {
+        grid-area: 1 / $i / 2 / $i + 1;
+        color: #717171;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            color: black;
+            border-bottom: 1px solid #717171;
+
+        }
+    }
+}
