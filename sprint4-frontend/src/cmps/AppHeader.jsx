@@ -111,30 +111,34 @@ export function AppHeader() {
                     )}
                 </div>
             </div>
-            <form className="search-form justify-center flex row">
-                <div className='form-control flex column'>
-                    <div className='destination-title'>Where</div>
-                    <input type="text" placeholder="Search destinations" className='destination-input'></input>
-                </div>
-                <span className="splitter"></span>
-                <div className='form-dates flex column'>
-                    <div>check in</div>
-                    <div>Add dates</div>
-                </div>
-                <span className="splitter"></span>
-                <div className='form-dates flex column'>
-                    <div>check out</div>
-                    <div>Add dates</div>
-                </div>
-                <span className="splitter"></span>
-                <div className='form-dates flex column'>
-                    <div>Who</div>
-                    <div>Add guests</div>
-                </div>
-                <button class="header-search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
+            <div className='flex align-center'>
+                <div style={{ width: '275px', height: '64px' }}></div>
+                <form className="search-form justify-center flex row">
+                    <div className='form-control flex column'>
+                        <div className='destination-title'>Where</div>
+                        <input type="text" placeholder="Search destinations" className='destination-input'></input>
+                    </div>
+                    <span className="splitter"></span>
+                    <div className='form-dates flex column'>
+                        <div>check in</div>
+                        <div>Add dates</div>
+                    </div>
+                    <span className="splitter"></span>
+                    <div className='form-dates flex column'>
+                        <div>check out</div>
+                        <div>Add dates</div>
+                    </div>
+                    <span className="splitter"></span>
+                    <div className='form-dates flex column'>
+                        <div>Who</div>
+                        <div>Add guests</div>
+                    </div>
+                    <button class="header-search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div style={{ width: '275px', height: '64px' }}></div>
+            </div>
             {/* 
                 {user &&
                     <span className="user-info">
