@@ -11,23 +11,15 @@
 @import "basics/links";
 @import "basics/forms";
 
-
 // Views
 @import "views/AboutUs";
 @import "views/HomePage";
 @import "views/StayIndex";
 @import "views/ReviewIndex";
 @import "views/UserDetails";
-
-// Components
+@import "views/StayDetails.scss"; // Components
 @import "cmps/AppHeader";
 @import "cmps/AppFooter";
 @import "cmps/UserMsg";
 @import "cmps/ShoppingCart";
 @import "cmps/StayPreview";
-
-
-
-
-
-
