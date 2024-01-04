@@ -2,6 +2,10 @@
     padding-left: 24px;
     padding-right: 24px;
     justify-content: space-between;
+    position: sticky;
+    z-index: 200;
+    top: 0;
+    background-color: white;
 
     @include for-narrow-layout {
         padding-left: 40px;
@@ -19,7 +23,18 @@
     }
 
     .logo-container {
-        height: 32px;
+        width: 102px;
+        height: 80px;
+
+        .logo-header-img {
+            width: 30px;
+            height: 32px;
+        }
+
+        .logo-header-txt {
+            width: 63px;
+            height: 22px;
+        }
     }
 
 
@@ -75,6 +90,8 @@
 
 // התחלתי מכאן --נוי
 .mid-header {
+    height: 80px;
+
     .header-btns {
         font-size: 1rem;
         border-radius: 10px;
@@ -100,6 +117,7 @@
     .moveto-host {
         color: #222222;
         border-radius: 10px;
+        font-size: 1rem;
 
         &:hover {
             background-color: $hoverbgc;
@@ -182,6 +200,7 @@
     border: 1px solid #DDDDDD;
     border-radius: 32px;
     font-size: 12px;
+    box-shadow: 0 3px 12px #0000001a, 0 1px 2px #00000014;
 
     .header-search-btn {
         width: 48px;
