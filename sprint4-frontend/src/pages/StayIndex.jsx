@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useEffect } from "react"
+import { useSelector } from "react-redux"
 import {
   loadStay,
   addStay,
   updateStay,
   removeStay,
   addToCart,
-} from "../store/stay.actions.js";
+} from "../store/stay.actions.js"
 
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
 import { userService } from "../services/user.service.js";
@@ -19,60 +19,60 @@ export function StayIndex() {
   const isLoading = useSelector(storeState => storeState.stayModule.isLoading)
 
   useEffect(() => {
-    loadStay();
-  }, []);
+    loadStay()
+  }, [])
 
   async function onRemoveStay(stayId) {
     try {
-      await removeStay(stayId);
-      showSuccessMsg("Stay removed");
+      await removeStay(stayId)
+      showSuccessMsg("Stay removed")
     } catch (err) {
-      showErrorMsg("Cannot remove stay");
+      showErrorMsg("Cannot remove stay")
     }
   }
 
   async function onAddStay() {
-    const stay = stayService.getEmptyStay();
-    stay.vendor = prompt("Vendor?");
+    const stay = stayService.getEmptyStay()
+    stay.vendor = prompt("Vendor?")
     try {
-      const savedStay = await addStay(stay);
-      showSuccessMsg(`Stay added (id: ${savedStay._id})`);
+      const savedStay = await addStay(stay)
+      showSuccessMsg(`Stay added (id: ${savedStay._id})`)
     } catch (err) {
-      showErrorMsg("Cannot add stay");
+      showErrorMsg("Cannot add stay")
     }
   }
 
   async function onUpdateStay(stay) {
-    const price = +prompt("New price?");
-    const stayToSave = { ...stay, price };
+    const price = +prompt("New price?")
+    const stayToSave = { ...stay, price }
     try {
-      const savedStay = await updateStay(stayToSave);
-      showSuccessMsg(`Stay updated, new price: ${savedStay.price}`);
+      const savedStay = await updateStay(stayToSave)
+      showSuccessMsg(`Stay updated, new price: ${savedStay.price}`)
     } catch (err) {
-      showErrorMsg("Cannot update stay");
+      showErrorMsg("Cannot update stay")
     }
   }
 
   function onAddToCart(stay) {
-    console.log(`Adding ${stay.vendor} to Cart`);
-    addToCart(stay);
-    showSuccessMsg("Added to Cart");
+    console.log(`Adding ${stay.vendor} to Cart`)
+    addToCart(stay)
+    showSuccessMsg("Added to Cart")
   }
 
   function onAddStayMsg(stay) {
-    console.log(`TODO Adding msg to stay`);
+    console.log(`TODO Adding msg to stay`)
     try {
-      showSuccessMsg(`Stay msg added, it now has: ${3}`);
+      showSuccessMsg(`Stay msg added, it now has: ${3}`)
     } catch (err) {
-      showErrorMsg("Cannot update stay");
+      showErrorMsg("Cannot update stay")
     }
   }
 
   function shouldShowActionBtns(stay) {
     const user = userService.getLoggedinUser();
-    if (!user) return false;
-    if (user.isAdmin) return true;
-    return stay.owner?._id === user._id;
+    if (!user) return false
+    if (user.isAdmin) return true
+    return stay.owner?._id === user._id
   }
 
   if (isLoading) {

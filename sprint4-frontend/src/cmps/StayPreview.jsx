@@ -10,16 +10,21 @@ export function StayPreview({ stay }) {
       <div className="stay-img">
         <NavLink to={`/details/${stay._id}`}>
           <img src={stay.imgUrls[0]} />
-          {console.log(stay.imgUrls[0])}
         </NavLink>
-        <button onClick={toggleLike} className="btn-like">
+        <button onClick={toggleLike} className="btn-like ">
+          Next
+        </button>
+        <button onClick={toggleLike} className="btn-like ">
+          Previos
+        </button>
+        <button onClick={toggleLike} className="btn-like ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"
             aria-hidden="true"
             role="presentation"
             focusable="false"
-            className="heart-icon"
+            className="heart-icon "
           >
             <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
           </svg>
@@ -28,8 +33,8 @@ export function StayPreview({ stay }) {
       <NavLink to={`/details/${stay._id}`}>
         <h3>{stay.name}</h3>
         <h3>
-          {/* <span>{stay.loc.country},</span>
-          <span> {stay.loc.city}</span> */}
+          <span>{stay.loc.country},</span>
+          <span> {stay.loc.city}</span>
         </h3>
         <h3>
           <span>${stay.price.toLocaleString()} night</span>
