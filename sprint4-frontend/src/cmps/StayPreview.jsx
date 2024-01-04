@@ -9,7 +9,7 @@ export function StayPreview({ stay }) {
     <li className="stay-preview" key={stay._id}>
       <div className="stay-img">
         <NavLink to={`/details/${stay._id}`}>
-          <img src={stay.imgUrls[1]}></img>
+          {/* <img src={stay.imgUrls[1]} /> */}
         </NavLink>
         <button onClick={toggleLike} className="btn-like">
           <svg
@@ -27,8 +27,8 @@ export function StayPreview({ stay }) {
       <NavLink to={`/details/${stay._id}`}>
         <h3>{stay.name}</h3>
         <h3>
-          <span>{stay.loc.country},</span>
-          <span> {stay.loc.city}</span>
+          {/* <span>{stay.loc.country},</span>
+          <span> {stay.loc.city}</span> */}
         </h3>
         <h3>
           <span>${stay.price.toLocaleString()} night</span>
