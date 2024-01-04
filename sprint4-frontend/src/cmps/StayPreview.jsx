@@ -2,23 +2,23 @@
 
 
 
-export function StayPreview({stay}){
+export function StayPreview({ stay }) {
 
 
 
-  return(
+  return (
     <li className="stay-preview" key={stay._id}>
-              <div className="stay-img">
-                <img src={stay.imgUrls[1]}/>
-              </div>
-              <h3>{stay.name}</h3>
-              <p>
-                <span>{stay.summary}</span>
-              </p>
-              <h3>
-                <span>${stay.price.toLocaleString()} night</span>
-              </h3>
-              {/* {shouldShowActionBtns(stay) && (
+      <div className="stay-img">
+        <img src={stay.imgUrls[1]} />
+      </div>
+      <h3>{stay.name}</h3>
+      <p>
+        <span>{stay.summary}</span>
+      </p>
+      <h3>
+        <span>${stay.price.toLocaleString()} night</span>
+      </h3>
+      {/* {shouldShowActionBtns(stay) && (
                 <div>
                   <button
                     onClick={() => {
@@ -52,6 +52,6 @@ export function StayPreview({stay}){
               >
                 Add to cart
               </button> */}
-            </li>
+    </li>
   )
 }
