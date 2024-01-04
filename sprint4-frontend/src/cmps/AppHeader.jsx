@@ -75,12 +75,12 @@ export function AppHeader() {
                         Online Experiences
                     </button>
                 </div>
-                <form class="search-form flex row">
+                <form className="search-form flex row">
                     <div className='form-control flex column'>
                         <div className='destination-input'>Where</div>
                         <input type="text" className='destination-input'></input>
                     </div>
-                    <span class="splitter"></span>
+                    <span className="splitter"></span>
                     <div className='form-control flex column'>
                         <div>check in</div>
                         <input type="text" className='destination-input'></input>
