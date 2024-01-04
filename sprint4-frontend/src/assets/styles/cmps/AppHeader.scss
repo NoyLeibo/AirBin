@@ -2,21 +2,23 @@
     padding-left: 24px;
     padding-right: 24px;
     justify-content: space-between;
-    
+
     @include for-narrow-layout {
         padding-left: 40px;
         padding-right: 40px;
     }
+
     @include for-normal-layout {
         padding-left: 40px;
         padding-right: 40px;
     }
+
     @include for-wide-layout {
         padding-left: 80px;
         padding-right: 80px;
     }
 
-    .logo-container{
+    .logo-container {
         height: 32px;
     }
 
@@ -59,7 +61,7 @@
     //     padding: 0 5px;
     //     margin: 10px;
     // }
-    nav a{
+    nav a {
         border-top: 1px solid $clr1;
         padding: 0 5px;
         margin: 10px;
@@ -69,4 +71,32 @@
         color: $clr1;
     }
 
+}
+
+// התחלתי מכאן --נוי
+.mid-header {
+    .header-btns {
+        background: none;
+        /* מבטל את הרקע */
+        color: gray;
+        /* הצבע יורש מהאלמנט האב */
+        font: inherit;
+        /* הגופן יורש מהאלמנט האב */
+        text-align: inherit;
+        /* יישור הטקסט יורש מהאלמנט האב */
+        cursor: pointer;
+        /* מגדיר את הסמן להצביע */
+        font-size: 1.20rem;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: $hoverbgc;
+        }
+
+        &.selected {
+            background-color: white; // שינוי הרקע לשחור
+            color: black; // אפשר לשנות גם את צבע הטקסט אם רוצים
+            font-weight: bold;
+        }
+    }
 }
