@@ -130,7 +130,228 @@ function _createStays() {
           }
         ],
         likedByUsers: ['mini-user']
-      }
+      },
+      {
+        _id: "s102",
+        name: "Ribeira Charming Duplex",
+        type: "House",
+        imgUrls: [
+          "https://a0.muscache.com/im/pictures/103406579/d70068da_original.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/83cd682a-4ffe-4ed0-a4b2-3f3b0c14d1b2.jpg?im_w=480"
+        ],
+        price: 80.00,
+        summary: "Fantastic duplex apartment...",
+        capacity: 8,
+        amenities: [
+          "TV",
+          "Wifi",
+          "Kitchen",
+          "Smoking allowed",
+          "Pets allowed",
+          "Cooking basics"
+        ],
+        labels: [
+          "Top of the world",
+          "Trending",
+          "Play",
+          "Tropical"
+        ],
+        host: {
+          _id: "u101",
+          fullname: "Davit Pok",
+          imgUrl: "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+        },
+        loc: {
+          area: 'Asia',
+          country: "China",
+          countryCode: "CN",
+          city: "Beijing",
+          address: "30 Fui st",
+          lat: 39.858139,
+          lng: 116.356046
+        },
+        reviews: [
+          {
+            id: "madeId",
+            txt: "Very helpful hosts. Cooked traditional...",
+            rate: 4,
+            by: {
+              _id: "u102",
+              fullname: "user2",
+              imgUrl: "/img/img2.jpg"
+            }
+          }
+        ],
+        likedByUsers: ['mini-user']
+      },
+      {
+        _id: "s103",
+        name: "Urban Central Studio",
+        type: "Apartment",
+        imgUrls: [
+          "https://a0.muscache.com/im/pictures/9d11ec4c-664e-4ef6-9461-ae55ff16bfc8.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/6978a9e8-4f78-4c50-ae71-48b44083e56c.jpg?im_w=480"
+          // ... more image URLs
+        ],
+        price: 95.00,
+        summary: "Cozy studio apartment in the city center with modern amenities.",
+        capacity: 4,
+        amenities: ["Wifi", "Air Conditioning", "Kitchen", "Washer", "Dryer", "Iron"],
+        labels: ["City Life", "Business", "Comfort"],
+        host: {
+          _id: "u103",
+          fullname: "Anna Smith",
+          imgUrl: "https://example.com/host2.jpg"
+        },
+        loc: {
+          area: "North America",
+          country: "USA",
+          countryCode: "US",
+          city: "New York",
+          address: "500 5th Ave",
+          lat: 40.7128,
+          lng: -74.0060
+        },
+        reviews: [
+          {
+            id: "r102",
+            txt: "Great location and fantastic city view!",
+            rate: 5,
+            by: {
+              _id: "u104",
+              fullname: "user3",
+              imgUrl: "/img/img3.jpg"
+            }
+          }
+        ],
+        likedByUsers: ['user4', 'user5']
+      },
+      {
+        _id: "s104",
+        name: "Mountain Retreat Lodge",
+        type: "Lodge",
+        imgUrls: [
+          "https://a0.muscache.com/im/pictures/e287757a-389d-424b-8863-4651b9303a49.jpg?im_w=960",
+          "https://a0.muscache.com/im/pictures/8ccefdd3-d255-48b1-adab-9ffc78f588ce.jpg?im_w=480"
+          // ... more image URLs
+        ],
+        price: 130.00,
+        summary: "Cozy mountain lodge in the heart of the Rockies, perfect for adventure seekers.",
+        capacity: 5,
+        amenities: ["Fireplace", "Hot Tub", "Ski Access", "Mountain Bikes", "Hiking Gear", "Panoramic Views"],
+        labels: ["Mountain Adventure", "Rustic", "Nature Lover's Paradise"],
+        host: {
+          _id: "u107",
+          fullname: "Emily Johnson",
+          imgUrl: "https://example.com/host4.jpg"
+        },
+        loc: {
+          area: "North America",
+          country: "Canada",
+          countryCode: "CA",
+          city: "Banff",
+          address: "100 Mountain Peak Rd.",
+          lat: 51.178363,
+          lng: -115.570769
+        },
+        reviews: [
+          {
+            id: "r104",
+            txt: "The perfect getaway for outdoor enthusiasts!",
+            rate: 4,
+            by: {
+              _id: "u108",
+              fullname: "user9",
+              imgUrl: "/img/img9.jpg"
+            }
+          }
+        ],
+        likedByUsers: ['user10', 'user11']
+      },
+      {
+        _id: "s105",
+        name: "Mountain Retreat Lodge",
+        type: "Lodge",
+        imgUrls: [
+          "https://a0.muscache.com/im/pictures/e287757a-389d-424b-8863-4651b9303a49.jpg?im_w=960",
+          "https://a0.muscache.com/im/pictures/8ccefdd3-d255-48b1-adab-9ffc78f588ce.jpg?im_w=480"
+          // ... more image URLs
+        ],
+        price: 130.00,
+        summary: "Cozy mountain lodge in the heart of the Rockies, perfect for adventure seekers.",
+        capacity: 5,
+        amenities: ["Fireplace", "Hot Tub", "Ski Access", "Mountain Bikes", "Hiking Gear", "Panoramic Views"],
+        labels: ["Mountain Adventure", "Rustic", "Nature Lover's Paradise"],
+        host: {
+          _id: "u107",
+          fullname: "Emily Johnson",
+          imgUrl: "https://example.com/host4.jpg"
+        },
+        loc: {
+          area: "North America",
+          country: "Canada",
+          countryCode: "CA",
+          city: "Banff",
+          address: "100 Mountain Peak Rd.",
+          lat: 51.178363,
+          lng: -115.570769
+        },
+        reviews: [
+          {
+            id: "r104",
+            txt: "The perfect getaway for outdoor enthusiasts!",
+            rate: 4,
+            by: {
+              _id: "u108",
+              fullname: "user9",
+              imgUrl: "/img/img9.jpg"
+            }
+          }
+        ],
+        likedByUsers: ['user10', 'user11']
+      },
+      {
+        _id: "s106",
+        name: "Mountain Retreat Lodge",
+        type: "Lodge",
+        imgUrls: [
+          "https://a0.muscache.com/im/pictures/e287757a-389d-424b-8863-4651b9303a49.jpg?im_w=960",
+          "https://a0.muscache.com/im/pictures/8ccefdd3-d255-48b1-adab-9ffc78f588ce.jpg?im_w=480"
+          // ... more image URLs
+        ],
+        price: 130.00,
+        summary: "Cozy mountain lodge in the heart of the Rockies, perfect for adventure seekers.",
+        capacity: 5,
+        amenities: ["Fireplace", "Hot Tub", "Ski Access", "Mountain Bikes", "Hiking Gear", "Panoramic Views"],
+        labels: ["Mountain Adventure", "Rustic", "Nature Lover's Paradise"],
+        host: {
+          _id: "u107",
+          fullname: "Emily Johnson",
+          imgUrl: "https://example.com/host4.jpg"
+        },
+        loc: {
+          area: "North America",
+          country: "Canada",
+          countryCode: "CA",
+          city: "Banff",
+          address: "100 Mountain Peak Rd.",
+          lat: 51.178363,
+          lng: -115.570769
+        },
+        reviews: [
+          {
+            id: "r104",
+            txt: "The perfect getaway for outdoor enthusiasts!",
+            rate: 4,
+            by: {
+              _id: "u108",
+              fullname: "user9",
+              imgUrl: "/img/img9.jpg"
+            }
+          }
+        ],
+        likedByUsers: ['user10', 'user11']
+      },
     ]
     utilService.saveToStorage(STORAGE_KEY, stays)
   }
