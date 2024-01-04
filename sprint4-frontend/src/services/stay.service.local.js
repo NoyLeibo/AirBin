@@ -135,7 +135,7 @@ function _createStays() {
         _id: "s102",
         name: "Ribeira Charming Duplex",
         type: "House",
-        imgUrls: ["https://e26e9b.jpg", "otherImg.jpg"],
+        imgUrls: ["https://a0.muscache.com/im/pictures/103406579/d70068da_original.jpg?im_w=720", "https://a0.muscache.com/im/pictures/83cd682a-4ffe-4ed0-a4b2-3f3b0c14d1b2.jpg?im_w=480"],
         price: 80.00,
         summary: "Fantastic duplex apartment...",
         capacity: 8,
@@ -186,8 +186,8 @@ function _createStays() {
         name: "Urban Central Studio",
         type: "Apartment",
         imgUrls: [
-          "https://example.com/apartment1.jpg",
-          "https://example.com/apartment2.jpg"
+          "https://a0.muscache.com/im/pictures/9d11ec4c-664e-4ef6-9461-ae55ff16bfc8.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/6978a9e8-4f78-4c50-ae71-48b44083e56c.jpg?im_w=480"
           // ... more image URLs
         ],
         price: 95.00,
@@ -228,8 +228,8 @@ function _createStays() {
         name: "Mountain Retreat Lodge",
         type: "Lodge",
         imgUrls: [
-          "https://example.com/lodge1.jpg",
-          "https://example.com/lodge2.jpg"
+          "https://a0.muscache.com/im/pictures/e287757a-389d-424b-8863-4651b9303a49.jpg?im_w=960",
+          "https://a0.muscache.com/im/pictures/8ccefdd3-d255-48b1-adab-9ffc78f588ce.jpg?im_w=480"
           // ... more image URLs
         ],
         price: 130.00,
