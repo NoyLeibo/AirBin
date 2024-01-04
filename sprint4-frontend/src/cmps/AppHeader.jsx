@@ -132,8 +132,8 @@ export function AppHeader() {
                         <div>Who</div>
                         <div>Add guests</div>
                     </div>
-                    <button class="header-search-btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                    <button className="header-search-btn">
+                        <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
             </div>
