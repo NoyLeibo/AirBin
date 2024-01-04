@@ -11,13 +11,13 @@ export function StayPreview({ stay }) {
         <NavLink to={`/details/${stay._id}`}>
           <img src={stay.imgUrls[0]} />
         </NavLink>
-        <button onClick={toggleLike} className="btn-like ">
+        <button onClick={toggleLike} className=" btn-img btn-next ">
           Next
         </button>
-        <button onClick={toggleLike} className="btn-like ">
+        <button onClick={toggleLike} className="btn-img btn-next">
           Previos
         </button>
-        <button onClick={toggleLike} className="btn-like ">
+        <button onClick={toggleLike} className="btn-like">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32"

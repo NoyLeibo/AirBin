@@ -67,7 +67,18 @@
     .favorite{
         fill: #FF385C;
       }
-  }
+      .btn-img{
+       
+        
+      }
+      .btn-next{
+        position: relative;
+        top: 0px;
+        right:45px;
+        width: 24px;
+        height: 24px;
+    }
+    }
   li {
     background-color: #ffff;
     // background-color: $clr2;
