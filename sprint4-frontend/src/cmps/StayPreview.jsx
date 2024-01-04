@@ -8,8 +8,10 @@ export function StayPreview({stay}){
 
   return(
     <li className="stay-preview" key={stay._id}>
+              <div className="stay-img">
+                <img src={stay.imgUrls[1]}/>
+              </div>
               <h3>{stay.name}</h3>
-              <h1>⛐</h1>
               <p>
                 <span>{stay.summary}</span>
               </p>
