@@ -6,11 +6,13 @@ export const ADD_TO_CART = 'ADD_TO_CART'
 export const CLEAR_CART = 'CLEAR_CART'
 export const UNDO_REMOVE_STAY = 'UNDO_REMOVE_STAY'
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
+export const SET_IS_LOADING = 'SET_IS_LOADING'
 
 const initialState = {
     stays: [],
     cart: [],
-    lastRemovedStay: null
+    lastRemovedStay: null,
+    isLoading: false
 }
 
 export function stayReducer(state = initialState, action) {
@@ -43,6 +45,8 @@ export function stayReducer(state = initialState, action) {
         case CLEAR_CART:
             newState = { ...state, cart: [] }
             break
+        case SET_IS_LOADING:
+            return { ...state, isLoading: action.isLoading }
         case UNDO_REMOVE_STAY:
             if (state.lastRemovedStay) {
                 newState = { ...state, stays: [...state.stays, state.lastRemovedStay], lastRemovedStay: null }

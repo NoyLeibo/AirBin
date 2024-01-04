@@ -1,0 +1,34 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    position: relative;
+
+    span {
+        position: absolute;
+        font-size: 5px;
+        width: 15px;
+        height: 15px;
+        background: rgb(255, 56, 92);
+        border-radius: 50%;
+    }
+
+    @for $i from 1 through 6 {
+        span:nth-child(#{$i}) {
+            animation: propogate-#{$i} 1.875s ease-in-out 0s infinite normal forwards;
+        }
+
+        @keyframes propogate-#{$i} {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translateX(calc(20px * #{$i})) scale(1.5);
+            }
+        }
+    }
+}

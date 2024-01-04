@@ -12,9 +12,11 @@ import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
 import { userService } from "../services/user.service.js";
 import { stayService } from "../services/stay.service.js";
 import { StayList } from "../cmps/StayList.jsx";
+import { StayFilter } from "../cmps/StayFilter.jsx";
 
 export function StayIndex() {
   const stays = useSelector((storeState) => storeState.stayModule.stays);
+  const isLoading = useSelector(storeState => storeState.stayModule.isLoading)
 
   useEffect(() => {
     loadStay();
@@ -72,13 +74,24 @@ export function StayIndex() {
     if (user.isAdmin) return true;
     return stay.owner?._id === user._id;
   }
+
+  if (isLoading) {
+    console.log('no stays');
+    return (<div>
+      <div className="loader">
+        {Array.from({ length: 6 }).map((_, index) => (
+          <span key={index} style={{ animationDelay: `${index * 0.15}s` }}></span>
+        ))}
+      </div>
+    </div>)
+  }
+
   return (
-    <div>
-      <h3>Stay App</h3>
-      <main>
-        <button onClick={onAddStay}>Add Stay ⛐</button>
-        <StayList stays={stays}/>
-      </main>
-    </div>
+    <main>
+      <StayFilter />
+      <button onClick={onAddStay}>Add Stay ⛐</button>
+      <StayList stays={stays} />
+    </main>
+
   );
 }
