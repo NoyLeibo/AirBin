@@ -50,11 +50,16 @@
 
     }
 
-    nav a:first-child {
-        margin-right: 30px;
-    }
+    // nav a:first-child {
+    //     margin-right: 30px;
+    // }
 
-    nav a:not(:first-child) {
+    // nav a:not(:first-child) {
+    //     border-top: 1px solid $clr1;
+    //     padding: 0 5px;
+    //     margin: 10px;
+    // }
+    nav a{
         border-top: 1px solid $clr1;
         padding: 0 5px;
         margin: 10px;

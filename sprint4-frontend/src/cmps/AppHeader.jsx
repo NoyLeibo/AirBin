@@ -44,6 +44,7 @@ export function AppHeader() {
                 </div>
             </NavLink>
             <nav className='flex'>
+
                 {routes.map(route => {
                  if(route.label==='Stays')return
                 return <NavLink key={route.path} to={route.path}>{route.label}</NavLink>})}
