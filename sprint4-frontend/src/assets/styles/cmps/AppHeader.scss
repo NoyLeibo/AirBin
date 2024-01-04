@@ -48,7 +48,7 @@
     }
 
     nav {
-        font-size: .8em;
+        font-size: 0.8em;
 
     }
 
@@ -76,7 +76,7 @@
 // התחלתי מכאן --נוי
 .mid-header {
     .header-btns {
-        font-size: 1.20rem;
+        font-size: 1rem;
         border-radius: 10px;
 
         &:hover {
@@ -86,7 +86,6 @@
         &.selected {
             background-color: white;
             color: black;
-            font-weight: bold;
         }
     }
 }
@@ -96,7 +95,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+    font-family: 'AirbnbCereal';
 
     .moveto-host {
         color: #222222;
@@ -182,6 +181,15 @@
     border: 1px solid #DDDDDD;
     border-radius: 32px;
     font-size: 12px;
+
+    .header-search-btn {
+        width: 48px;
+        height: 48px;
+        background-color: #FF385D;
+        border: transparent;
+        border-radius: 50%;
+        color: #fff;
+    }
 
     .splitter {
         flex: 0 0 1px;

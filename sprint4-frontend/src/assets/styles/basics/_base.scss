@@ -3,12 +3,12 @@
 }
 
 ::selection {
-    background-color: $clr1;
+    background-color: blue;
     color: $clr6;
 }
 
 html {
-    font-family: montserrat;
+    font-family: 'AirbnbCereal';
     line-height: 1.6;
     color: $clr2;
 }
@@ -21,14 +21,21 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: caveat;
     margin: 0 0 0.6em;
     line-height: 1;
 }
 
 
-section, main, footer {
+section,
+main,
+footer {
     padding: 0px;
 }
 
@@ -43,7 +50,7 @@ p {
 a {
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
-

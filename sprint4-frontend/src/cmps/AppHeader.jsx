@@ -119,14 +119,21 @@ export function AppHeader() {
                 <span className="splitter"></span>
                 <div className='form-dates flex column'>
                     <div>check in</div>
-                    <input type="text" placeholder="Add dates" className='destination-input'></input>
+                    <div>Add dates</div>
                 </div>
                 <span className="splitter"></span>
                 <div className='form-dates flex column'>
                     <div>check out</div>
-                    <input type="text" placeholder="Add dates" className='destination-input'></input>
+                    <div>Add dates</div>
                 </div>
                 <span className="splitter"></span>
+                <div className='form-dates flex column'>
+                    <div>Who</div>
+                    <div>Add guests</div>
+                </div>
+                <button class="header-search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
             {/* 
                 {user &&
