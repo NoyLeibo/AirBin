@@ -9,7 +9,8 @@ export function StayPreview({ stay }) {
     <li className="stay-preview" key={stay._id}>
       <div className="stay-img">
         <NavLink to={`/details/${stay._id}`}>
-          {/* <img src={stay.imgUrls[1]} /> */}
+          <img src={stay.imgUrls[0]} />
+          {console.log(stay.imgUrls[0])}
         </NavLink>
         <button onClick={toggleLike} className="btn-like">
           <svg
