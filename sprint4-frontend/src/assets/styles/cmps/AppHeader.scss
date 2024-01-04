@@ -179,6 +179,10 @@
 }
 
 .search-form {
+    border: 1px solid #DDDDDD;
+    border-radius: 32px;
+    font-size: 12px;
+
     .splitter {
         flex: 0 0 1px;
         height: 32px;
@@ -189,16 +193,66 @@
     .form-control {
         // border: 1px solid gray;
         border-radius: 15px;
-        width: 284px;
-        height: 66px;
+        width: 328px;
+        height: 64px;
         padding: 14px 33px;
         margin: 0;
+        border: 1px solid transparent;
+        border-radius: 32px;
+
+        &:hover {
+            z-index: 1;
+            border: 1px solid transparent;
+            background-color: #ddd;
+        }
 
         .destination-input {
-            width: 218px;
-            height: 18px;
+            width: 260px;
+            height: 30px;
+            border: 0;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .destination-title {
+            width: 260px;
+            height: 16px;
             border: 0;
         }
+    }
+
+    .form-dates {
+        border-radius: 15px;
+        width: 140px;
+        height: 64px;
+        padding: 14px 33px;
+        margin: 0;
+        border: 1px solid transparent;
+        border-radius: 32px;
+
+        &:hover {
+            border: 1px solid transparent;
+            background-color: #ddd;
+        }
+
+        .destination-input {
+            width: 92px;
+            height: 18px;
+            border: 0;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .destination-title {
+            width: 260px;
+            height: 16px;
+            border: 0;
+        }
+
     }
 
 }
