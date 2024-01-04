@@ -1,4 +1,4 @@
-
+import { Link, NavLink } from 'react-router-dom'
 
 
 
@@ -8,9 +8,11 @@ export function StayPreview({stay}){
 
   return(
     <li className="stay-preview" key={stay._id}>
+              < NavLink to={`/details/${stay._id}`}>              
               <div className="stay-img">
                 <img src={stay.imgUrls[1]}/>
               </div>
+              </NavLink>
               <h3>{stay.name}</h3>
               <p>
                 <span>{stay.summary}</span>

@@ -1,49 +1,36 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react"
+import { useEffect } from "react"
+import { useNavigate, useParams ,NavLink } from "react-router-dom"
 
-import { loadUser } from "../store/user.actions";
-import { store } from "../store/store";
-import { showSuccessMsg } from "../services/event-bus.service";
-import {
-  socketService,
-  SOCKET_EVENT_USER_UPDATED,
-  SOCKET_EMIT_USER_WATCH,
-} from "../services/socket.service";
-import { utilService } from "../services/util.service";
+import { showErrorMsg } from "../services/event-bus.service"
+import { stayService } from "../services/stay.service.local"
 
 export function StayDetails() {
-  const params = useParams();
-  const user = useSelector((storeState) => storeState.userModule.watchedUser);
+  const [stay, setStay] = useState(null)
+
+  const { stayId } = useParams()
+  const navigate = useNavigate()
 
   useEffect(() => {
-    loadUser(params.id);
+    loadStay()
+  })
 
-    socketService.emit(SOCKET_EMIT_USER_WATCH, params.id);
-    socketService.on(SOCKET_EVENT_USER_UPDATED, onUserUpdate);
-
-    return () => {
-      socketService.off(SOCKET_EVENT_USER_UPDATED, onUserUpdate);
-    };
-  }, [params.id]);
-
-  function onUserUpdate(user) {
-    showSuccessMsg(
-      `This user ${user.fullname} just got updated from socket, new score: ${user.score}`
-    );
-    store.dispatch({ type: "SET_WATCHED_USER", user });
+  function loadStay() {
+    stayService
+      .getById(stayId)
+      .then(setStay)
+      .catch((err) => {
+        showErrorMsg("Cant load stay")
+        navigate("/stay")
+      })
   }
 
+  if (!stay) return <div>Loading...</div>
   return (
-    <section className="user-details">
-      <h1>User Details</h1>
-      {user && (
-        <div>
-          <h3>{user.fullname}</h3>
-          <img src={user.imgUrl} style={{ width: "100px" }} />
-          <pre> {JSON.stringify(user, null, 2)} </pre>
-        </div>
-      )}
+    <section className="stay-details-container flex column align-center">
+        <h2>{stay.name}</h2>
+        <div><img src={stay.imgUrls[0]}/></div>
+        <h2>{stay.summary}</h2>
     </section>
-  );
+  )
 }

@@ -22,9 +22,19 @@
     &.justify-center {
         justify-content: center;
     }
+    &.flex.justify-between{
+        justify-content: space-between;
+    }
+    
     &.align-center {
         align-items: center;
     }
+}
+
+.clean-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 // Media helpers
@@ -38,3 +48,4 @@
 .portrait-ratio {
     @include aspect-ratio(9, 16);
 }
+

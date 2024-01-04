@@ -1,6 +1,7 @@
 import { HomePage } from "./pages/HomePage.jsx";
 import { AboutUs } from "./pages/AboutUs.jsx";
 import { StayIndex } from "./pages/StayIndex.jsx";
+import { StayDetails } from "./pages/StayDetails.jsx";
 import { ReviewIndex } from "./pages/ReviewIndex.jsx";
 import { ChatApp } from "./pages/Chat.jsx";
 import { AdminApp } from "./pages/AdminIndex.jsx";
@@ -16,6 +17,11 @@ const routes = [
     path: "/",
     component: <StayIndex />,
     label: "Stays",
+  },
+  {
+    path: "details/:stayId",
+    component: <StayDetails />,
+    label: "Details",
   },
   {
     path: "review",
