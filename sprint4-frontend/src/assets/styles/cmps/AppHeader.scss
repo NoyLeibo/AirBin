@@ -76,16 +76,6 @@
 // התחלתי מכאן --נוי
 .mid-header {
     .header-btns {
-        background: none;
-        /* מבטל את הרקע */
-        color: gray;
-        /* הצבע יורש מהאלמנט האב */
-        font: inherit;
-        /* הגופן יורש מהאלמנט האב */
-        text-align: inherit;
-        /* יישור הטקסט יורש מהאלמנט האב */
-        cursor: pointer;
-        /* מגדיר את הסמן להצביע */
         font-size: 1.20rem;
         border-radius: 10px;
 
@@ -94,9 +84,121 @@
         }
 
         &.selected {
-            background-color: white; // שינוי הרקע לשחור
-            color: black; // אפשר לשנות גם את צבע הטקסט אם רוצים
+            background-color: white;
+            color: black;
             font-weight: bold;
         }
     }
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+
+    .moveto-host {
+        color: #222222;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: $hoverbgc;
+        }
+    }
+
+    .burger-menu {
+        border: 1px solid #dddddd;
+        border-radius: 30px;
+        padding: 0;
+        width: 86px;
+        height: 48px;
+        justify-content: space-evenly;
+        cursor: pointer;
+
+        .avatar {
+            margin: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+
+        }
+
+        &:hover {
+            box-shadow: 0 2px 2px 1px #dddddd88;
+        }
+    }
+
+    .fa-user,
+    .fa-bars {
+        // shared styles for icons
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fa-user {
+        background-color: rgba(136, 135, 135, 0.696);
+        border-radius: 25px;
+        height: 32px;
+    }
+
+    .fa-bars {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hamburger-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        padding: 0;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+
+        .manu-one {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        a,
+        span {
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none; // Removing underline from links
+
+            &:hover {
+                background-color: #f5f5f5; // Change background on hover
+            }
+        }
+    }
+
+}
+
+.search-form {
+    .splitter {
+        flex: 0 0 1px;
+        height: 32px;
+        width: 1px;
+        background-color: #ddd;
+    }
+
+    .form-control {
+        // border: 1px solid gray;
+        border-radius: 15px;
+        width: 284px;
+        height: 66px;
+        padding: 14px 33px;
+        margin: 0;
+
+        .destination-input {
+            width: 218px;
+            height: 18px;
+            border: 0;
+        }
+    }
+
 }
