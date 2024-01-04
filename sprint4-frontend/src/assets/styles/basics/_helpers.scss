@@ -27,10 +27,8 @@
     font-size: rem(30px);
 }
 
-// flex helpers
-
+// Flex Helpers
 .flex {
-
     display: flex;
 
     >*.full {
@@ -45,7 +43,7 @@
         justify-content: center;
     }
 
-    &.flex.justify-between {
+    &.justify-between {
         justify-content: space-between;
     }
 
@@ -60,13 +58,13 @@
 
 .clean-btn {
     background: none;
-    /* מבטל את הרקע */
+    /* Cancels the background */
     color: #717171;
-    /* הצבע יורש מהאלמנט האב */
+    /* Color is inherited from the parent element */
     font: inherit;
-    /* הגופן יורש מהאלמנט האב */
+    /* Font is inherited from the parent element */
     text-align: inherit;
-    /* יישור הטקסט יורש מהאלמנט האב */
+    /* Text alignment is inherited from the parent element */
     cursor: pointer;
 }
 
@@ -82,8 +80,7 @@
     list-style-type: none;
 }
 
-// Media helpers
-
+// Media Helpers
 .square-ratio {
     @include aspect-ratio(1, 1);
 }

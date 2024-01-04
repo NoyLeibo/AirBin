@@ -1,11 +1,11 @@
-import React from "react";
-import { Routes, Route } from "react-router";
+import React from "react"
+import { Routes, Route } from "react-router"
 
-import routes from "./routes";
+import routes from "./routes"
 
-import { AppHeader } from "./cmps/AppHeader";
-import { AppFooter } from "./cmps/AppFooter";
-import { StayDetails } from "./pages/StayDetails";
+import { AppHeader } from "./cmps/AppHeader"
+import { AppFooter } from "./cmps/AppFooter"
+import { StayDetails } from "./pages/StayDetails"
 
 export function RootCmp() {
   return (
@@ -26,5 +26,5 @@ export function RootCmp() {
       </main>
       <AppFooter />
     </div>
-  );
+  )
 }

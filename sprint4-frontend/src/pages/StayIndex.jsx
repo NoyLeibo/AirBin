@@ -8,14 +8,14 @@ import {
   addToCart,
 } from "../store/stay.actions.js"
 
-import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
-import { userService } from "../services/user.service.js";
-import { stayService } from "../services/stay.service.js";
-import { StayList } from "../cmps/StayList.jsx";
-import { StayFilter } from "../cmps/StayFilter.jsx";
+import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js"
+import { userService } from "../services/user.service.js"
+import { stayService } from "../services/stay.service.js"
+import { StayList } from "../cmps/StayList.jsx"
+import { StayFilter } from "../cmps/StayFilter.jsx"
 
 export function StayIndex() {
-  const stays = useSelector((storeState) => storeState.stayModule.stays);
+  const stays = useSelector((storeState) => storeState.stayModule.stays)
   const isLoading = useSelector(storeState => storeState.stayModule.isLoading)
 
   useEffect(() => {
@@ -69,14 +69,14 @@ export function StayIndex() {
   }
 
   function shouldShowActionBtns(stay) {
-    const user = userService.getLoggedinUser();
+    const user = userService.getLoggedinUser()
     if (!user) return false
     if (user.isAdmin) return true
     return stay.owner?._id === user._id
   }
 
   if (isLoading) {
-    console.log('no stays');
+    console.log('no stays')
     return (<div>
       <div className="loader">
         {Array.from({ length: 6 }).map((_, index) => (
@@ -93,5 +93,5 @@ export function StayIndex() {
       <StayList stays={stays} />
     </main>
 
-  );
+  )
 }

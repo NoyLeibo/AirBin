@@ -11,16 +11,16 @@ const LOGO_ICON = '../../public/img/airbnb-icon.png'
 export function AppHeader() {
     const user = useSelector(storeState => storeState.userModule.user)
 
-    const [selectedButton, setSelectedButton] = useState('stays');
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [selectedButton, setSelectedButton] = useState('stays')
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+        setIsMenuOpen(!isMenuOpen)
+    }
 
     const handleButtonClick = (buttonName) => {
-        setSelectedButton(buttonName);
-    };
+        setSelectedButton(buttonName)
+    }
 
 
     async function onLogin(credentials) {

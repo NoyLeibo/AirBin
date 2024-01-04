@@ -37,9 +37,7 @@
         }
     }
 
-
     .user-info {
-        // padding-left: 100px;
         color: $clr1;
 
         .score {
@@ -49,13 +47,6 @@
             margin: 10px;
             border-radius: 50%;
         }
-
-        // img {
-        //     width: 32px;
-        //     height: 32px;
-        //     border-radius: 50%;
-        //     object-fit: cover;
-        // }
     }
 
     .user-info .btn-link {
@@ -65,27 +56,16 @@
     nav {
         font-size: 0.8em;
 
+        a {
+            border-top: 1px solid $clr1;
+            padding: 0 5px;
+            margin: 10px;
+        }
+
+        .active {
+            color: $clr1;
+        }
     }
-
-    // nav a:first-child {
-    //     margin-right: 30px;
-    // }
-
-    // nav a:not(:first-child) {
-    //     border-top: 1px solid $clr1;
-    //     padding: 0 5px;
-    //     margin: 10px;
-    // }
-    nav a {
-        border-top: 1px solid $clr1;
-        padding: 0 5px;
-        margin: 10px;
-    }
-
-    nav .active {
-        color: $clr1;
-    }
-
 }
 
 // התחלתי מכאן --נוי
@@ -138,7 +118,6 @@
             width: 32px;
             height: 32px;
             border-radius: 50%;
-
         }
 
         &:hover {
@@ -148,7 +127,6 @@
 
     .fa-user,
     .fa-bars {
-        // shared styles for icons
         display: flex;
         justify-content: center;
         align-items: center;
@@ -186,14 +164,13 @@
         span {
             padding: 8px 12px;
             color: #333;
-            text-decoration: none; // Removing underline from links
+            text-decoration: none;
 
             &:hover {
-                background-color: #f5f5f5; // Change background on hover
+                background-color: #f5f5f5;
             }
         }
     }
-
 }
 
 .search-form {
@@ -219,7 +196,6 @@
     }
 
     .form-control {
-        // border: 1px solid gray;
         border-radius: 15px;
         width: 328px;
         height: 64px;
@@ -280,7 +256,6 @@
             height: 16px;
             border: 0;
         }
-
     }
 
     .empty-contain {

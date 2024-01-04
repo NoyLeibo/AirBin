@@ -1,8 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom"
 
 export function StayPreview({ stay }) {
   function toggleLike() {
-    console.log("zzzzzzzzz");
+    console.log("zzzzzzzzz")
   }
 
   return (
@@ -41,5 +41,5 @@ export function StayPreview({ stay }) {
         </h3>
       </NavLink>
     </li>
-  );
+  )
 }

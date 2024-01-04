@@ -1,22 +1,22 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
-import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service";
+import { useState } from "react"
+import { useSelector } from "react-redux"
+import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service"
 
-import { removeFromCart, checkout } from "../store/stay.actions";
-import { UserMsg } from "./UserMsg.jsx";
+import { removeFromCart, checkout } from "../store/stay.actions"
+import { UserMsg } from "./UserMsg.jsx"
 
 export function AppFooter() {
-  const [isCartShown, setIsCartShown] = useState(false);
-  const cart = useSelector((storeState) => storeState.stayModule.cart);
-  const count = useSelector((storeState) => storeState.userModule.count);
-  const cartTotal = cart.reduce((acc, stay) => acc + stay.price, 0);
+  const [isCartShown, setIsCartShown] = useState(false)
+  const cart = useSelector((storeState) => storeState.stayModule.cart)
+  const count = useSelector((storeState) => storeState.userModule.count)
+  const cartTotal = cart.reduce((acc, stay) => acc + stay.price, 0)
 
   async function onCheckout() {
     try {
-      const score = await checkout(cartTotal);
-      showSuccessMsg(`Charged, your new score: ${score.toLocaleString()}`);
+      const score = await checkout(cartTotal)
+      showSuccessMsg(`Charged, your new score: ${score.toLocaleString()}`)
     } catch (err) {
-      showErrorMsg("Cannot checkout");
+      showErrorMsg("Cannot checkout")
     }
   }
 
@@ -29,8 +29,8 @@ export function AppFooter() {
           <button
             className="btn-link"
             onClick={(ev) => {
-              ev.preventDefault();
-              setIsCartShown(!isCartShown);
+              ev.preventDefault()
+              setIsCartShown(!isCartShown)
             }}
           >
             ({isCartShown ? "hide" : "show"})
@@ -46,7 +46,7 @@ export function AppFooter() {
               <li key={idx}>
                 <button
                   onClick={() => {
-                    removeFromCart(stay._id);
+                    removeFromCart(stay._id)
                   }}
                 >
                   x
@@ -61,5 +61,5 @@ export function AppFooter() {
       )}
       <UserMsg />
     </footer>
-  );
+  )
 }
