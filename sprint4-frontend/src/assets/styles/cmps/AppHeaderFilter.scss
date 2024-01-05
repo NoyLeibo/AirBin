@@ -1,22 +1,44 @@
+.filters-layout {
+    width: 87vw;
+    display: flex;
+    align-items: center;
+    color: #717171;
+}
+
 .emojis-filters {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-auto-rows: minmax(50px, auto); // Ensuring each row has a minimum height
-    grid-column-gap: 10px; // Added some gap for visual separation
-    grid-row-gap: 10px;
-    justify-items: center; // Centering items horizontally in their grid areas
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    margin: 0 10px;
+    flex-grow: 1;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     .emoji-container {
+        flex: 0 0 auto;
+        width: 100px;
         display: flex;
-        flex-direction: column; // Stack items vertically
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%; // Adjust width to fill the grid area
-        height: 100%; // Adjust height to fill the grid area
         font-size: 12px;
-        position: relative; // Changed from sticky to relative
-        z-index: 2;
         background-color: white;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        &.selectedEmoji {
+            border-bottom: 1px solid #000;
+        }
 
         .emoji-filter {
             filter: grayscale(100%);
@@ -29,21 +51,45 @@
         }
 
         .emoji-text {
-            margin-top: 5px; // Added margin for spacing between image and text
+            margin-top: 5px;
         }
     }
 }
 
-@for $i from 1 through 16 {
-    .filter#{$i} {
-        grid-area: 1 / $i / 2 / $i + 1;
-        color: #717171;
-        border-bottom: 1px solid transparent;
+@media (max-width: 600px) {
+    .emojis-filters .emoji-container {
+        width: 80px;
+        font-size: 10px;
 
-        &:hover {
-            color: black;
-            border-bottom: 1px solid #717171;
-
+        .emoji-filter {
+            width: 20px;
+            height: 20px;
         }
+    }
+}
+
+@media (max-width: 400px) {
+    .emojis-filters .emoji-container {
+        width: 60px;
+        font-size: 8px;
+
+        .emoji-filter {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.previous-filters,
+.next-filters {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 3;
+    color: #000;
+
+    &:hover {
+        background-color: #e0e0e0;
     }
 }

@@ -1,4 +1,11 @@
+import React, { useRef, useState, useEffect } from 'react';
+
 export function StayFilter() {
+    const [scrolledLeft, setScrolledLeft] = useState(false);
+    const [scrolledRight, setScrolledRight] = useState(true);
+    const [selectedEmoji, setSelectedEmoji] = useState(null);
+    const filterContainerRef = useRef(null);
+
     const filters = [{
         'Arctic': 'https://a0.muscache.com/pictures/8b44f770-7156-4c7b-b4d3-d92549c8652f.jpg',
         'Iconic cities': 'https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg',
@@ -18,14 +25,59 @@ export function StayFilter() {
         'Amazing views': 'https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg',
     }];
 
+    useEffect(() => {
+        const updateScrollState = () => {
+            const container = filterContainerRef.current;
+            setScrolledLeft(container.scrollLeft > 0);
+            setScrolledRight(container.scrollLeft < container.scrollWidth - container.clientWidth);
+        };
+
+        const container = filterContainerRef.current;
+        container.addEventListener('scroll', updateScrollState);
+        updateScrollState(); // Initialize the scroll state
+
+        return () => {
+            container.removeEventListener('scroll', updateScrollState);
+        };
+    }, []);
+
+    const handlePreviousScroll = () => {
+        if (filterContainerRef.current) {
+            filterContainerRef.current.scrollLeft -= 110;
+        }
+    };
+
+    const handleNextScroll = () => {
+        if (filterContainerRef.current) {
+            filterContainerRef.current.scrollLeft += 110;
+        }
+    };
+    const handleEmojiSelect = (key) => {
+        setSelectedEmoji(key);
+    };
+
     return (
-        <div className="emojis-filters grid">
-            {Object.entries(filters[0]).map(([key, value], filterIndex) => (
-                <label key={key + filterIndex} className={`emoji-container flex column filter${filterIndex + 1}`}>
-                    <img className="emoji-filter" src={value} alt={key} width="24" height="24" />
-                    <div className="emoji-text">{key}</div>
-                </label>
-            ))}
+        <div className='filters-layout flex row'>
+            {scrolledLeft && (
+                <button className="previous-filters" onClick={handlePreviousScroll}>Previous</button>
+            )}
+
+            <div className='filters-layout flex row'>
+                <div ref={filterContainerRef} className="emojis-filters">
+                    {Object.entries(filters[0]).map(([key, value], filterIndex) => (
+                        <label key={key + filterIndex}
+                            className={`emoji-container ${selectedEmoji === key ? 'selectedEmoji' : ''}`}
+                            onClick={() => handleEmojiSelect(key)}>
+                            <img className="emoji-filter" src={value} alt={key} width="24" height="24" />
+                            <div className="emoji-text">{key}</div>
+                        </label>
+                    ))}
+                </div>
+            </div>
+
+            {scrolledRight && (
+                <button className="next-filters" onClick={handleNextScroll}>Next</button>
+            )}
         </div>
     );
 }
