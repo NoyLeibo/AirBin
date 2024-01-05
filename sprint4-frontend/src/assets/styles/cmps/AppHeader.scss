@@ -189,7 +189,7 @@
     }
 
     .splitter {
-        flex: 0 0 1px;
+        // flex: 0 0 1px;
         height: 32px;
         width: 1px;
         background-color: #ddd;
@@ -198,7 +198,7 @@
     .form-control {
         border-radius: 15px;
         width: 328px;
-        height: 64px;
+        height: 70px;
         padding: 14px 33px;
         margin: 0;
         border: 1px solid transparent;
@@ -230,7 +230,7 @@
     .form-dates {
         border-radius: 15px;
         width: 140px;
-        height: 64px;
+        height: 70px;
         padding: 14px 33px;
         margin: 0;
         border: 1px solid transparent;
@@ -248,6 +248,8 @@
 
             &:focus {
                 outline: none;
+                background-color: transparent;
+
             }
         }
 
