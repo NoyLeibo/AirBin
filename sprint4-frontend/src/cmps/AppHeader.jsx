@@ -31,9 +31,6 @@ export function AppHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
-    const menuRef = useRef();
-    const datesRef = useRef();
-    const guestsRef = useRef();
 
     useOutsideClick(menuRef, () => setIsMenuOpen(false));
     useOutsideClick(datesRef, () => setIsOpenDates(false));
@@ -46,9 +43,15 @@ export function AppHeader() {
         setSelectedButton(buttonName)
     }
 
+
     const toggleCalendarModal = () => {
         setIsOpenGuests(false);
+        setIsOpenGuests(false);
         setIsOpenDates(!isOpenDates);
+    };
+    const toggleGuestModal = () => {
+        setIsOpenDates(false);
+        setIsOpenGuests(!isOpenGuests);
     };
     const toggleGuestModal = () => {
         setIsOpenDates(false);
@@ -155,18 +158,22 @@ export function AppHeader() {
                         <div>check in</div>
                         <div>Add dates</div>
                     </div>
-                    <div ref={datesRef} className='form-dates flex column' onClick={toggleCalendarModal}>
+                    {isOpenDates && <div className="calendar-modal">
+                        <Calendar />
+                    </div>}
+                    <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div>check out</div>
                         <div>Add dates</div>
                     </div>
                     {isOpenDates && <Calendar />} {/* will open the Calendar modal if true */}
 
                     <span className="splitter"></span>
-                    <div ref={guestsRef} className='form-dates flex column' onClick={toggleGuestModal}>
+                    <div className='form-dates flex column' onClick={toggleGuestModal}>
                         <div>Who</div>
                         <div>Add guests</div>
                         {isOpenGuests && <Guests />}
                     </div>
+                    {isOpenGuests && <Guests />} {/* will open the guests modal if true */}
                     <button className="header-search-btn">
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -191,3 +198,4 @@ export function AppHeader() {
         </header>
     )
 }
+
