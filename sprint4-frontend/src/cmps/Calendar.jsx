@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Calendar = () => {
+export function Calendar() {
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
   useEffect(() => {
@@ -89,5 +89,3 @@ const Calendar = () => {
     </div>
   );
 };
-
-export default Calendar;

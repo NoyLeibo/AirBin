@@ -5,7 +5,8 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { login, logout, signup } from '../store/user.actions.js'
 import { LoginSignup } from './LoginSignup.jsx'
 import { useState } from 'react'
-import Calendar from './Calendar'
+import { Calendar } from './Calendar'
+import { Guests } from './Guests.jsx'
 const LOGO = '/img/airbnb.png'
 const LOGO_ICON = '/img/airbnb-icon.png'
 
@@ -15,6 +16,7 @@ export function AppHeader() {
     const [selectedButton, setSelectedButton] = useState('stays')
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpenDates, setIsOpenDates] = useState(false)
+    const [isOpenGuests, setIsOpenGuests] = useState(false)
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -23,8 +25,14 @@ export function AppHeader() {
     const handleButtonClick = (buttonName) => {
         setSelectedButton(buttonName)
     }
+
     const toggleCalendarModal = () => {
+        setIsOpenGuests(false);
         setIsOpenDates(!isOpenDates);
+    };
+    const toggleGuestModal = () => {
+        setIsOpenDates(false);
+        setIsOpenGuests(!isOpenGuests);
     };
 
     async function onLogin(credentials) {
@@ -115,6 +123,7 @@ export function AppHeader() {
                     )}
                 </div>
             </div>
+
             <div className='flex justify-center'>
                 <form className="search-form justify-center flex row">
                     <div className='form-control flex column'>
@@ -133,11 +142,11 @@ export function AppHeader() {
                     {isOpenDates && <Calendar />}
 
                     <span className="splitter"></span>
-                    <div className='form-dates flex column'>
+                    <div className='form-dates flex column' onClick={toggleGuestModal}>
                         <div>Who</div>
                         <div>Add guests</div>
                     </div>
-
+                    {isOpenGuests && <Guests />}
                     <button className="header-search-btn">
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
