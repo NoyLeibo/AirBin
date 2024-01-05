@@ -5,14 +5,16 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { login, logout, signup } from '../store/user.actions.js'
 import { LoginSignup } from './LoginSignup.jsx'
 import { useState } from 'react'
-const LOGO = '../../public/img/airbnb.png'
-const LOGO_ICON = '../../public/img/airbnb-icon.png'
+import Calendar from './Calendar'
+const LOGO = '/img/airbnb.png'
+const LOGO_ICON = '/img/airbnb-icon.png'
 
 export function AppHeader() {
     const user = useSelector(storeState => storeState.userModule.user)
 
     const [selectedButton, setSelectedButton] = useState('stays')
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isOpenDates, setIsOpenDates] = useState(false)
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -21,7 +23,9 @@ export function AppHeader() {
     const handleButtonClick = (buttonName) => {
         setSelectedButton(buttonName)
     }
-
+    const toggleCalendarModal = () => {
+        setIsOpenDates(!isOpenDates);
+    };
 
     async function onLogin(credentials) {
         try {
@@ -118,12 +122,14 @@ export function AppHeader() {
                         <input type="text" placeholder="Search destinations" className='destination-input'></input>
                     </div>
                     <span className="splitter"></span>
-                    <div className='form-dates flex column'>
+                    <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div>check in</div>
                         <div>Add dates</div>
                     </div>
-                    <span className="splitter"></span>
-                    <div className='form-dates flex column'>
+                    {isOpenDates && <div className="calendar-modal">
+                        <Calendar />
+                    </div>}
+                    <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div>check out</div>
                         <div>Add dates</div>
                     </div>
