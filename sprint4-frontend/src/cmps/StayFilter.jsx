@@ -57,13 +57,11 @@ export function StayFilter() {
     };
 
     return (
-        <div className='filters-layout flex row'>
+        <div className='filters-layout '>
             {scrolledLeft && (
                 <button className="previous-filters" onClick={handlePreviousScroll}>Previous</button>
             )}
-
-            <div className='filters-layout flex row'>
-                <div ref={filterContainerRef} className="emojis-filters">
+                <div ref={filterContainerRef} className="emojis-filters ">
                     {Object.entries(filters[0]).map(([key, value], filterIndex) => (
                         <label key={key + filterIndex}
                             className={`emoji-container ${selectedEmoji === key ? 'selectedEmoji' : ''}`}
@@ -73,11 +71,34 @@ export function StayFilter() {
                         </label>
                     ))}
                 </div>
-            </div>
-
             {scrolledRight && (
                 <button className="next-filters" onClick={handleNextScroll}>Next</button>
-            )}
+            )} 
+            <button>Filters..</button>
         </div>
     );
+    // return (
+    //     <div className='filters-layout flex row'>
+    //         {scrolledLeft && (
+    //             <button className="previous-filters" onClick={handlePreviousScroll}>Previous</button>
+    //         )}
+
+    //         <div className='filters-layout flex row'>
+    //             <div ref={filterContainerRef} className="emojis-filters">
+    //                 {Object.entries(filters[0]).map(([key, value], filterIndex) => (
+    //                     <label key={key + filterIndex}
+    //                         className={`emoji-container ${selectedEmoji === key ? 'selectedEmoji' : ''}`}
+    //                         onClick={() => handleEmojiSelect(key)}>
+    //                         <img className="emoji-filter" src={value} alt={key} width="24" height="24" />
+    //                         <div className="emoji-text">{key}</div>
+    //                     </label>
+    //                 ))}
+    //             </div>
+    //         </div>
+
+    //         {scrolledRight && (
+    //             <button className="next-filters" onClick={handleNextScroll}>Next</button>
+    //         )}
+    //     </div>
+    // );
 }
