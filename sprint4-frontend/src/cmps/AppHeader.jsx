@@ -11,8 +11,6 @@ const LOGO = '/img/airbnb.png'
 const LOGO_ICON = '/img/airbnb-icon.png'
 
 
-
-
 export function AppHeader() {
     const user = useSelector(storeState => storeState.userModule.user)
 
@@ -20,6 +18,7 @@ export function AppHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -135,7 +134,7 @@ export function AppHeader() {
                         <input type="text" placeholder="Search destinations" className='destination-input'></input>
                     </div>
                     <span className="splitter"></span>
-                    <div  className='form-dates flex column' onClick={toggleCalendarModal}>
+                    <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div>check in</div>
                         <div>Add dates</div>
                     </div>
