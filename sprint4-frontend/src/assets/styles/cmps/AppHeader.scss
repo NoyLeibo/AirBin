@@ -2,6 +2,10 @@
     padding-left: 24px;
     padding-right: 24px;
     justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: white;
 
     @include for-narrow-layout {
         padding-left: 40px;
@@ -19,12 +23,21 @@
     }
 
     .logo-container {
-        height: 32px;
+        width: 102px;
+        height: 80px;
+
+        .logo-header-img {
+            width: 30px;
+            height: 32px;
+        }
+
+        .logo-header-txt {
+            width: 63px;
+            height: 22px;
+        }
     }
 
-
     .user-info {
-        // padding-left: 100px;
         color: $clr1;
 
         .score {
@@ -34,13 +47,6 @@
             margin: 10px;
             border-radius: 50%;
         }
-
-        // img {
-        //     width: 32px;
-        //     height: 32px;
-        //     border-radius: 50%;
-        //     object-fit: cover;
-        // }
     }
 
     .user-info .btn-link {
@@ -50,31 +56,22 @@
     nav {
         font-size: 0.8em;
 
+        a {
+            border-top: 1px solid $clr1;
+            padding: 0 5px;
+            margin: 10px;
+        }
+
+        .active {
+            color: $clr1;
+        }
     }
-
-    // nav a:first-child {
-    //     margin-right: 30px;
-    // }
-
-    // nav a:not(:first-child) {
-    //     border-top: 1px solid $clr1;
-    //     padding: 0 5px;
-    //     margin: 10px;
-    // }
-    nav a {
-        border-top: 1px solid $clr1;
-        padding: 0 5px;
-        margin: 10px;
-    }
-
-    nav .active {
-        color: $clr1;
-    }
-
 }
 
 // התחלתי מכאן --נוי
 .mid-header {
+    height: 80px;
+
     .header-btns {
         font-size: 1rem;
         border-radius: 10px;
@@ -100,6 +97,7 @@
     .moveto-host {
         color: #222222;
         border-radius: 10px;
+        font-size: 1rem;
 
         &:hover {
             background-color: $hoverbgc;
@@ -120,7 +118,6 @@
             width: 32px;
             height: 32px;
             border-radius: 50%;
-
         }
 
         &:hover {
@@ -130,7 +127,6 @@
 
     .fa-user,
     .fa-bars {
-        // shared styles for icons
         display: flex;
         justify-content: center;
         align-items: center;
@@ -149,7 +145,7 @@
 
     .hamburger-menu {
         position: absolute;
-        top: 100%;
+        top: 82%;
         right: 0;
         background-color: white;
         box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
@@ -168,20 +164,20 @@
         span {
             padding: 8px 12px;
             color: #333;
-            text-decoration: none; // Removing underline from links
+            text-decoration: none;
 
             &:hover {
-                background-color: #f5f5f5; // Change background on hover
+                background-color: #f5f5f5;
             }
         }
     }
-
 }
 
 .search-form {
     border: 1px solid #DDDDDD;
     border-radius: 32px;
     font-size: 12px;
+    box-shadow: 0 3px 12px #0000001a, 0 1px 2px #00000014;
 
     .header-search-btn {
         width: 48px;
@@ -200,7 +196,6 @@
     }
 
     .form-control {
-        // border: 1px solid gray;
         border-radius: 15px;
         width: 328px;
         height: 64px;
@@ -261,7 +256,6 @@
             height: 16px;
             border: 0;
         }
-
     }
 
     .empty-contain {

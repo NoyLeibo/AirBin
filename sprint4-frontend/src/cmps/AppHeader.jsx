@@ -11,16 +11,16 @@ const LOGO_ICON = '../../public/img/airbnb-icon.png'
 export function AppHeader() {
     const user = useSelector(storeState => storeState.userModule.user)
 
-    const [selectedButton, setSelectedButton] = useState('stays');
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [selectedButton, setSelectedButton] = useState('stays')
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+        setIsMenuOpen(!isMenuOpen)
+    }
 
     const handleButtonClick = (buttonName) => {
-        setSelectedButton(buttonName);
-    };
+        setSelectedButton(buttonName)
+    }
 
 
     async function onLogin(credentials) {
@@ -49,16 +49,16 @@ export function AppHeader() {
     }
 
     return (
-        <header className="app-header full flex column justify-between ">
+        <header className="app-header full flex column justify-between divider">
             <div className='flex justify-between'>
                 <NavLink to='/'>
-                    <div className='logo-container flex right-header'>
-                        <img src={LOGO_ICON} alt='logo icon' />
-                        <img src={LOGO} alt='logo name' />
+                    <div className='logo-container flex justify-center align-center right-header'>
+                        <img src={LOGO_ICON} alt='logo icon' className='logo-header-img' />
+                        <img src={LOGO} alt='logo name' className='logo-header-txt' />
                     </div>
                 </NavLink>
 
-                <nav className='flex column mid-header'>
+                <nav className='flex column justify-center mid-header'>
                     <div>
                         <button
                             className={`header-btns clean-btn ${selectedButton === 'stays' ? 'selected' : ''}`}
@@ -111,8 +111,7 @@ export function AppHeader() {
                     )}
                 </div>
             </div>
-            <div className='flex align-center'>
-                <div style={{ width: '275px', height: '64px' }}></div>
+            <div className='flex justify-center'>
                 <form className="search-form justify-center flex row">
                     <div className='form-control flex column'>
                         <div className='destination-title'>Where</div>
@@ -133,11 +132,10 @@ export function AppHeader() {
                         <div>Who</div>
                         <div>Add guests</div>
                     </div>
-                    <button class="header-search-btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                    <button className="header-search-btn">
+                        <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
-                <div style={{ width: '275px', height: '64px' }}></div>
             </div>
             {/* 
                 {user &&

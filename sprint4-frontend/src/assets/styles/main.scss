@@ -17,8 +17,11 @@
 @import "views/StayIndex";
 @import "views/ReviewIndex";
 @import "views/UserDetails";
-@import "views/StayDetails.scss"; // Components
+@import "views/StayDetails";
+
+// Components
 @import "cmps/AppHeader";
+@import "cmps/AppHeaderFilter";
 @import "cmps/AppFooter";
 @import "cmps/UserMsg";
 @import "cmps/ShoppingCart";
