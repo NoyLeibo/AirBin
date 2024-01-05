@@ -4,11 +4,12 @@ import routes from '../routes'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { login, logout, signup } from '../store/user.actions.js'
 import { LoginSignup } from './LoginSignup.jsx'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Calendar } from './Calendar'
 import { Guests } from './Guests.jsx'
 const LOGO = '/img/airbnb.png'
 const LOGO_ICON = '/img/airbnb-icon.png'
+
 
 export function AppHeader() {
     const user = useSelector(storeState => storeState.userModule.user)
