@@ -1,19 +1,21 @@
-import React, { useState } from "react"
-import { useEffect } from "react"
-import { useNavigate, useParams, NavLink } from "react-router-dom"
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { useNavigate, useParams, NavLink } from "react-router-dom";
+// import { StickyCard } from "../cmps/StickyCardDets";
 
-import { showErrorMsg } from "../services/event-bus.service"
-import { stayService } from "../services/stay.service.local"
+import { showErrorMsg } from "../services/event-bus.service";
+import { stayService } from "../services/stay.service.local";
 
 export function StayDetails() {
-  const [stay, setStay] = useState(null)
+  const [stay, setStay] = useState(null);
 
-  const { stayId } = useParams()
-  const navigate = useNavigate()
+  const { stayId } = useParams();
+  const navigate = useNavigate();
+  var x = 1;
 
   useEffect(() => {
-    loadStay()
-  })
+    loadStay();
+  });
 
   //  function loadStay() {
   //   stayService
@@ -27,22 +29,32 @@ export function StayDetails() {
 
   async function loadStay() {
     try {
-      const currStay = await stayService.getById(stayId)
-      setStay(currStay)
+      const currStay = await stayService.getById(stayId);
+      setStay(currStay);
     } catch (err) {
-      showErrorMsg("Cant load stay")
-      navigate("/stay")
+      showErrorMsg("Cant load stay");
+      navigate("/stay");
     }
   }
 
-  if (!stay) return <div>Loading...</div>
+  if (!stay) return <div>Loading...</div>;
   return (
     <section className="stay-details-container flex column align-center">
       <h2>{stay.name}</h2>
-      <div>
-        <img src={stay.imgUrls[0]} />
+      <h4>
+        {stay.reviews[0].rate},{stay.loc.city},{stay.loc.country}
+      </h4>
+      <div className="imgs-grid">
+        {stay.imgUrls.map((imgUrl) => (
+          <img src={imgUrl} className={"img" + x} key={x++} />
+        ))}
+        {/* <img src={stay.imgUrls[0]} /> */}
       </div>
-      <h2>{stay.summary}</h2>
+      <div className="stay-dets-summary">
+        <h2>{stay.summary}</h2>
+        <h4>{stay.capacity} guests, 2 rooms, 2 beds, 1 bath</h4>
+        <StickyCard />
+      </div>
     </section>
-  )
+  );
 }
