@@ -8,7 +8,6 @@
 }
 
 html {
-    font-family: 'AirbnbCereal';
     line-height: 1.6;
     color: $clr2;
 }
@@ -16,6 +15,7 @@ html {
 body {
     font-size: rem(18px);
     margin: 0;
+    font-family: 'AirbnbCereal';
     // max-width: 1024px;
     // margin: auto;
 }
@@ -26,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: caveat;
+    // font-family: caveat;
     margin: 0 0 0.6em;
     line-height: 1;
 }

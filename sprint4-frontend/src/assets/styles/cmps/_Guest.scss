@@ -3,7 +3,45 @@
     left: 49.5%;
     top: 100%;
     background-color: white;
-    border: 2px solid black;
+    border-radius: 32px;
     width: 406px;
     height: 395px;
+    cursor: auto;
+    box-shadow: 0 0 0 1px #0000000a, 0 8px 16px #00000026;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.guest-section {
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .guest-modal-title {
+        font-size: 1rem;
+        color: #222;
+    }
+
+    .guest-modal-subtitle {
+        color: #717171;
+    }
+
+}
+
+.guest-splitter {
+    height: 1px;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.change-guests {
+    width: 104px;
+
+}
+
+.change-guest-btn {
+    border: 1px solid #b0b0b0;
+    border-radius: 50%;
 }

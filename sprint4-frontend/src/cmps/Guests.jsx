@@ -26,56 +26,63 @@ export function Guests() {
     };
 
     return (
-        <div className='guest-modal flex row'>
-            {/* Adults Section */}
-            <div className='guests-section'>
-                <div className='guests-title flex column'>
-                    <h3 className='guests-modal-title'>Adults</h3>
-                    <span className='guests-modal-subtitle'>Ages 13 or above</span>
+        <section className='guest-modal flex column'>
+            <div>
+                {/* Adults Section */}
+                <div className='guest-section flex row'>
+                    <div className='guest-title'>
+                        <h3 className='guest-modal-title'>Adults</h3>
+                        <span className='guest-modal-subtitle fs12'>Ages 13 or above</span>
+                    </div>
+                    <div className='change-guests flex row align-center justify-between'>
+                        <button className='clean-btn change-guest-btn' onClick={(e) => handleAdultsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>
+                        <span className='fs16'>{numberOfAdults}</span>
+                        <button className='clean-btn change-guest-btn' onClick={(e) => handleAdultsChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
+                    </div>
                 </div>
-                <div className='change-guests'>
-                    <button onClick={(e) => handleAdultsChange(-1, e)}>-</button>
-                    {numberOfAdults}
-                    <button onClick={(e) => handleAdultsChange(1, e)}>+</button>
-                </div>
-            </div>
+                <div className='guest-splitter'></div>
 
-            {/* Children Section */}
-            <div className='guests-section'>
-                <div className='guests-title flex column'>
-                    <h3 className='guests-modal-title'>Children</h3>
-                    <span className='guests-modal-subtitle'>Ages 2-12</span>
+                {/* Children Section */}
+                <div className='guest-section flex row'>
+                    <div className='guest-title'>
+                        <h3 className='guest-modal-title'>Children</h3>
+                        <span className='guest-modal-subtitle fs12'>Ages 2-12</span>
+                    </div>
+                    <div className='change-guests flex row align-center justify-between'>
+                        <button className='clean-btn change-guest-btn' onClick={(e) => handleChildrenChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>
+                        <span className='fs16'>{numberOfChildren}</span>
+                        <button className='clean-btn change-guest-btn' onClick={(e) => handleChildrenChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
+                    </div>
                 </div>
-                <div className='change-guests'>
-                    <button onClick={(e) => handleChildrenChange(-1, e)}>-</button>
-                    {numberOfChildren}
-                    <button onClick={(e) => handleChildrenChange(1, e)}>+</button>
-                </div>
-            </div>
+                <div className='guest-splitter'></div>
 
-            {/* Infants Section */}
-            <div className='guests-section'>
-                <div className='guests-title flex column'>
-                    <h3 className='guests-modal-title'>Infants</h3>
-                    <span className='guests-modal-subtitle'>Under 2</span>
+                {/* Infants Section */}
+                <div className='guest-section flex row'>
+                    <div className='guest-title'>
+                        <h3 className='guest-modal-title'>Infants</h3>
+                        <span className='guest-modal-subtitle fs12'>Under 2</span>
+                    </div>
+                    <div className='change-guests flex row align-center justify-between'>
+                        <button className='clean-btn change-guest-btn' onClick={(e) => handleInfantsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>
+                        <span className='fs16'>{numberOfInfants}</span>
+                        <button className='clean-btn change-guest-btn' onClick={(e) => handleInfantsChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
+                    </div>
                 </div>
-                <div className='change-guests'>
-                    <button onClick={(e) => handleInfantsChange(-1, e)}>-</button>
-                    {numberOfInfants}
-                    <button onClick={(e) => handleInfantsChange(1, e)}>+</button>
+                <div className='guest-splitter'></div>
+
+                {/* Pets Section */}
+                <div className='guest-section flex row'>
+                    <div className='guest-title'>
+                        <h3 className='guest-modal-title'>Pets</h3>
+                        <span className='guest-modal-subtitle fs12'>Bringing a service animal?</span>
+                    </div>
+                    <div className='change-guests flex row align-center justify-between'>
+                        <button className='clean-btn change-guest-btn' onClick={(e) => handlePetsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>
+                        <span className='fs16'>{numberOfPets}</span>
+                        <button className='clean-btn change-guest-btn' onClick={(e) => handlePetsChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
+                    </div>
                 </div>
             </div>
-            <div className='guests-section'>
-                <div className='guests-title flex column'>
-                    <h3 className='guests-modal-title'>Pets</h3>
-                    <span className='guests-modal-subtitle'>Bringing a service animal?</span>
-                </div>
-                <div className='change-guests'>
-                    <button onClick={(e) => handlePetsChange(-1, e)}>-</button>
-                    {numberOfPets}
-                    <button onClick={(e) => handlePetsChange(1, e)}>+</button>
-                </div>
-            </div>
-        </div>
+        </section>
     );
 }
