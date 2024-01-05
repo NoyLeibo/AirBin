@@ -1,4 +1,9 @@
 import { Link, NavLink } from "react-router-dom"
+import * as bootstrap from 'bootstrap'
+// import Alert from 'bootstrap/js/dist/alert';
+
+// or, specify which plugins you need:
+// import { Tooltip, Toast, Popover } from 'bootstrap';
 
 export function StayPreview({ stay }) {
   function toggleLike() {
@@ -7,7 +12,47 @@ export function StayPreview({ stay }) {
 
   return (
     <li className="stay-preview" key={stay._id}>
-      <div className="stay-img-card">
+  <div id={`carouselExampleIndicators${stay._id}`} className="carousel slide">
+    <div className="carousel-indicators">
+      {stay.imgUrls.map((url, idx) => (
+        <button
+          key={idx}
+          type="button"
+          data-bs-target={`#carouselExampleIndicators${stay._id}`}
+          data-bs-slide-to={idx}
+          className={idx === 0 ? "active" : ""}
+          aria-current={idx === 0 ? "true" : "false"}
+          aria-label={`Slide ${idx + 1}`}
+        ></button>
+      ))}
+    </div>
+    <div className="carousel-inner">
+      {stay.imgUrls.map((url, idx) => (
+        <div key={url+idx} className={`carousel-item ${idx === 0 ? "active" : ""}`}>
+          <img src={url} className="d-block w-100" alt='Place Image' />
+        </div>
+      ))}
+    </div>
+    <button
+      className="carousel-control-prev"
+      type="button"
+      data-bs-target={`#carouselExampleIndicators${stay._id}`}
+      data-bs-slide="prev"
+    >
+      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span className="visually-hidden">Previous</span>
+    </button>
+    <button
+      className="carousel-control-next"
+      type="button"
+      data-bs-target={`#carouselExampleIndicators${stay._id}`}
+      data-bs-slide="next"
+    >
+      <span className="carousel-control-next-icon" aria-hidden="true"></span>
+      <span className="visually-hidden">Next</span>
+    </button>
+  </div>
+      {/* <div className="stay-img-card">
         
         <NavLink to={`/details/${stay._id}`}>
           <img src={stay.imgUrls[0]} />
@@ -30,9 +75,6 @@ export function StayPreview({ stay }) {
         <button onClick={toggleLike} className=" btn-card-img btn-card-next ">
         <i className="fa-solid fa-angle-right"></i>
         </button>
-        {/* <div className="btn-card-img">
-        
-        </div> */}
       </div>
       <NavLink to={`/details/${stay._id}`}>
         <h3>{stay.name}</h3>
@@ -43,7 +85,7 @@ export function StayPreview({ stay }) {
         <h3>
           <span>${stay.price.toLocaleString()} night</span>
         </h3>
-      </NavLink>
+      </NavLink> */}
     </li>
   )
 }
