@@ -1,0 +1,10 @@
+.stay-details-stickyCard {
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  z-index: 999;
+}
