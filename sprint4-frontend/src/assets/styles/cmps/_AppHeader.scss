@@ -178,6 +178,7 @@
     border-radius: 32px;
     font-size: 12px;
     box-shadow: 0 3px 12px #0000001a, 0 1px 2px #00000014;
+    cursor: pointer;
 
     .header-search-btn {
         width: 48px;
@@ -192,6 +193,7 @@
         // flex: 0 0 1px;
         height: 32px;
         width: 1px;
+        margin-top: 20px;
         background-color: #ddd;
     }
 
@@ -214,6 +216,7 @@
             width: 260px;
             height: 30px;
             border: 0;
+            cursor: pointer;
 
             &:focus {
                 outline: none;
