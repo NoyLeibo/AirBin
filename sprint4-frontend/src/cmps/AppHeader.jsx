@@ -10,18 +10,7 @@ import { Guests } from './Guests.jsx'
 const LOGO = '/img/airbnb.png'
 const LOGO_ICON = '/img/airbnb-icon.png'
 
-function useOutsideClick(ref, callback) {
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                callback();
-            }
-        }
 
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, [ref, callback]);
-}
 
 
 export function AppHeader() {
@@ -32,9 +21,6 @@ export function AppHeader() {
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
 
-    useOutsideClick(menuRef, () => setIsMenuOpen(false));
-    useOutsideClick(datesRef, () => setIsOpenDates(false));
-    useOutsideClick(guestsRef, () => setIsOpenGuests(false));
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
@@ -46,12 +32,7 @@ export function AppHeader() {
 
     const toggleCalendarModal = () => {
         setIsOpenGuests(false);
-        setIsOpenGuests(false);
         setIsOpenDates(!isOpenDates);
-    };
-    const toggleGuestModal = () => {
-        setIsOpenDates(false);
-        setIsOpenGuests(!isOpenGuests);
     };
     const toggleGuestModal = () => {
         setIsOpenDates(false);
@@ -121,7 +102,7 @@ export function AppHeader() {
                             </svg>
                         </div>
                     </div>
-                    <button ref={menuRef} className='burger-menu clean-btn flex align-center' onClick={toggleMenu}>
+                    <button className='burger-menu clean-btn flex align-center' onClick={toggleMenu}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style={{ display: 'block', fill: 'none', height: '16px', width: '16px', stroke: 'currentColor', strokeWidth: 3, overflow: 'visible' }}>
                             <g fill="none">
                                 <path d="M2 16h28M2 24h28M2 8h28"></path>
@@ -154,7 +135,7 @@ export function AppHeader() {
                         <input type="text" placeholder="Search destinations" className='destination-input'></input>
                     </div>
                     <span className="splitter"></span>
-                    <div ref={datesRef} className='form-dates flex column' onClick={toggleCalendarModal}>
+                    <div  className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div>check in</div>
                         <div>Add dates</div>
                     </div>
