@@ -24,11 +24,13 @@ const Calendar = () => {
     return daysArray;
   };
 
-  const goToNextMonths = () => {
+  const goToNextMonths = (ev) => {
+    event.preventDefault()
     setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 2, 1));
   };
 
-  const goToPrevMonths = () => {
+  const goToPrevMonths = (ev) => {
+    event.preventDefault()
     setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 2, 1));
   };
 
@@ -66,13 +68,15 @@ const Calendar = () => {
   };
 
   return (
-    <div className="airbnb-calendar">
+    <div className="airbnb-calendar flex column">
       <div className="calendar-controls">
         <button onClick={goToPrevMonths}>Previous Months</button>
         <button onClick={goToNextMonths}>Next Months</button>
       </div>
-      {renderCalendar(currentMonth)}
-      {renderCalendar(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1))}
+      <div className="flex">
+        {renderCalendar(currentMonth)}
+        {renderCalendar(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1))}
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
-@font-face {
-    font-family: "RobotoLight";
-    src: url(fonts/Roboto-Light.ttf);
-}
+// @font-face {
+//     font-family: "RobotoLight";
+//     src: url(fonts/Roboto-Light.ttf);
+// }
 
 
 .airbnb-calendar {
@@ -9,9 +9,20 @@
     user-select: none;
     display: flex;
     flex-direction: row;
-    justify-content: center; // Ensures centering if there's extra space
+    justify-content: center;
     flex-wrap: nowrap;
-    font-family: RobotoLight;
+    // font-family: RobotoLight;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    top: 100%;
+    width: 100%;
+    max-width: fit-content;
+    margin-top: 12px;
+    background: white;
+    border-radius: 32px;
+    box-shadow: 0 0 0 1px #0000000a, 0 8px 16px #00000026;
+    padding: 16px 32px;
 
     .calendar-controls {
         width: 100%;
