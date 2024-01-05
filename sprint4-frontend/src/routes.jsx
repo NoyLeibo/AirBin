@@ -1,10 +1,10 @@
-import { HomePage } from "./pages/HomePage.jsx";
-import { AboutUs } from "./pages/AboutUs.jsx";
-import { StayIndex } from "./pages/StayIndex.jsx";
-import { StayDetails } from "./pages/StayDetails.jsx";
-import { ReviewIndex } from "./pages/ReviewIndex.jsx";
-import { ChatApp } from "./pages/Chat.jsx";
-import { AdminApp } from "./pages/AdminIndex.jsx";
+import { HomePage } from "./pages/HomePage.jsx"
+import { AboutUs } from "./pages/AboutUs.jsx"
+import { StayIndex } from "./pages/StayIndex.jsx"
+import { StayDetails } from "./pages/StayDetails.jsx"
+import { ReviewIndex } from "./pages/ReviewIndex.jsx"
+import { ChatApp } from "./pages/Chat.jsx"
+import { AdminApp } from "./pages/AdminIndex.jsx"
 
 // Routes accesible from the main navigation (in AppHeader)
 const routes = [
@@ -43,6 +43,6 @@ const routes = [
     component: <AdminApp />,
     label: "Admin Only",
   },
-];
+]
 
-export default routes;
+export default routes 
