@@ -7,16 +7,11 @@ export function StayPreview({ stay }) {
 
   return (
     <li className="stay-preview" key={stay._id}>
-      <div className="stay-img">
+      <div className="stay-img-card">
+        
         <NavLink to={`/details/${stay._id}`}>
           <img src={stay.imgUrls[0]} />
         </NavLink>
-        <button onClick={toggleLike} className=" btn-img btn-next ">
-          Next
-        </button>
-        <button onClick={toggleLike} className="btn-img btn-next">
-          Previos
-        </button>
         <button onClick={toggleLike} className="btn-like">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +24,15 @@ export function StayPreview({ stay }) {
             <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
           </svg>
         </button>
+        <button onClick={toggleLike} className="btn-card-img btn-card-prev">
+        <i className="fa-solid fa-angle-left"></i>
+        </button>
+        <button onClick={toggleLike} className=" btn-card-img btn-card-next ">
+        <i className="fa-solid fa-angle-right"></i>
+        </button>
+        {/* <div className="btn-card-img">
+        
+        </div> */}
       </div>
       <NavLink to={`/details/${stay._id}`}>
         <h3>{stay.name}</h3>
