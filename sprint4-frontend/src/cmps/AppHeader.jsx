@@ -126,18 +126,18 @@ export function AppHeader() {
                         <div>check in</div>
                         <div>Add dates</div>
                     </div>
-                    {isOpenDates && <div className="calendar-modal">
-                        <Calendar />
-                    </div>}
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div>check out</div>
                         <div>Add dates</div>
                     </div>
+                    {isOpenDates && <Calendar />}
+
                     <span className="splitter"></span>
                     <div className='form-dates flex column'>
                         <div>Who</div>
                         <div>Add guests</div>
                     </div>
+
                     <button className="header-search-btn">
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>

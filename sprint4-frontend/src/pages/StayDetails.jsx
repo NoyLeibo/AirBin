@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate, useParams, NavLink } from "react-router-dom";
-import { StickyCard } from "../cmps/StickyCardDets";
+// import { StickyCard } from "../cmps/StickyCardDets";
 
 import { showErrorMsg } from "../services/event-bus.service";
 import { stayService } from "../services/stay.service.local";
