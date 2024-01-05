@@ -1,18 +1,19 @@
 .filters-layout {
-    width: 87vw;
-    display: flex;
-    align-items: center;
     color: #717171;
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 100%;
+
 }
 
 .emojis-filters {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 10px;
-    margin: 0 10px;
-    flex-grow: 1;
+        height: 78px;
+        display: grid;
+        overflow: hidden;
+        overscroll-behavior-inline: contain;
+        grid-auto-columns:max-content;
+        grid-auto-flow: column;
+        gap: 32px;
 
     &::-webkit-scrollbar {
         display: none;
@@ -22,15 +23,17 @@
     scrollbar-width: none;
 
     .emoji-container {
-        flex: 0 0 auto;
-        width: 100px;
+
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         font-size: 12px;
+        
         background-color: white;
         border-bottom: 1px solid transparent;
+        cursor: pointer;
 
         &:hover {
             border-bottom: 1px solid #DDDDDD;
@@ -52,30 +55,6 @@
 
         .emoji-text {
             margin-top: 5px;
-        }
-    }
-}
-
-@media (max-width: 600px) {
-    .emojis-filters .emoji-container {
-        width: 80px;
-        font-size: 10px;
-
-        .emoji-filter {
-            width: 20px;
-            height: 20px;
-        }
-    }
-}
-
-@media (max-width: 400px) {
-    .emojis-filters .emoji-container {
-        width: 60px;
-        font-size: 8px;
-
-        .emoji-filter {
-            width: 16px;
-            height: 16px;
         }
     }
 }
