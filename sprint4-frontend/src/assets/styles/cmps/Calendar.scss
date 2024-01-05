@@ -1,9 +1,3 @@
-// @font-face {
-//     font-family: "RobotoLight";
-//     src: url(fonts/Roboto-Light.ttf);
-// }
-
-
 .airbnb-calendar {
     font-family: Arial, sans-serif;
     user-select: none;
@@ -11,18 +5,18 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: nowrap;
-    // font-family: RobotoLight;
     position: absolute;
     transform: translate(-50%);
     left: 50%;
     top: 100%;
-    width: 100%;
-    max-width: fit-content;
+    width: 848px;
+    height: 511px;
     margin-top: 12px;
     background: white;
     border-radius: 32px;
     box-shadow: 0 0 0 1px #0000000a, 0 8px 16px #00000026;
     padding: 16px 32px;
+    justify-content: space-evenly;
 
     .calendar-controls {
         width: 100%;
@@ -46,9 +40,15 @@
     }
 
     .calendar-month {
-        max-width: 350px; // Applied to each calendar month
-        margin: 5px; // Adds spacing between calendars
+        width: 390px; // Applied to each calendar month
+        height: 343px;
+        padding: 27px;
         font-weight: bold;
+
+        .month-name {
+            font-size: 1rem;
+            color: #222
+        }
 
         .calendar-header {
             display: flex;
@@ -71,7 +71,7 @@
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             text-align: center;
-            width: 300px;
+            // width: 300px;
 
             .calendar-day {
                 padding: 0;
