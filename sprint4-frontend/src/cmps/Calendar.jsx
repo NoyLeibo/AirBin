@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Calendar = () => {
+export function Calendar() {
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
   useEffect(() => {
@@ -24,11 +24,13 @@ const Calendar = () => {
     return daysArray;
   };
 
-  const goToNextMonths = () => {
+  const goToNextMonths = (event) => { // Changed 'ev' to 'event'
+    event.preventDefault();
     setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 2, 1));
   };
 
-  const goToPrevMonths = () => {
+  const goToPrevMonths = (event) => { // Changed 'ev' to 'event'
+    event.preventDefault();
     setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 2, 1));
   };
 
@@ -42,13 +44,22 @@ const Calendar = () => {
     return date ? date.getDate() : '';
   };
 
+  const formatMonthName = (date) => {
+    const month = date.toLocaleString('en-US', { month: 'long' });// לשנות את en-US לdefault בשביל לשנות לעברית(השפה הגלובלית במחשב)
+    const year = date.getFullYear();
+    return `${month} ${year}`;
+  };
+
+
   const daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 
   const renderCalendar = (date) => {
     const monthDays = generateCalendarDays(date);
+    const monthName = formatMonthName(date);
 
     return (
       <div className="calendar-month">
+        <div className='month-name flex justify-center'>{monthName}</div>
         <div className="calendar-header">
           {daysOfWeek.map((day, index) => (
             <div key={index} className="calendar-header-day">{day}</div>
@@ -66,15 +77,15 @@ const Calendar = () => {
   };
 
   return (
-    <div className="airbnb-calendar">
+    <div className="airbnb-calendar flex column align-center">
       <div className="calendar-controls">
         <button onClick={goToPrevMonths}>Previous Months</button>
         <button onClick={goToNextMonths}>Next Months</button>
       </div>
-      {renderCalendar(currentMonth)}
-      {renderCalendar(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1))}
+      <div className="flex">
+        {renderCalendar(currentMonth)}
+        {renderCalendar(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1))}
+      </div>
     </div>
   );
 };
-
-export default Calendar;
