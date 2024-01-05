@@ -4,25 +4,11 @@ import routes from '../routes'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { login, logout, signup } from '../store/user.actions.js'
 import { LoginSignup } from './LoginSignup.jsx'
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import { Calendar } from './Calendar'
 import { Guests } from './Guests.jsx'
 const LOGO = '/img/airbnb.png'
 const LOGO_ICON = '/img/airbnb-icon.png'
-
-function useOutsideClick(ref, callback) {
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (ref.current && !ref.current.contains(event.target)) {
-                callback();
-            }
-        }
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, [ref, callback]);
-}
-
 
 export function AppHeader() {
     const user = useSelector(storeState => storeState.userModule.user)
@@ -31,13 +17,7 @@ export function AppHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
-    const menuRef = useRef();
-    const datesRef = useRef();
-    const guestsRef = useRef();
 
-    useOutsideClick(menuRef, () => setIsMenuOpen(false));
-    useOutsideClick(datesRef, () => setIsOpenDates(false));
-    useOutsideClick(guestsRef, () => setIsOpenGuests(false));
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
@@ -118,7 +98,7 @@ export function AppHeader() {
                             </svg>
                         </div>
                     </div>
-                    <button ref={menuRef} className='burger-menu clean-btn flex align-center' onClick={toggleMenu}>
+                    <button className='burger-menu clean-btn flex align-center' onClick={toggleMenu}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style={{ display: 'block', fill: 'none', height: '16px', width: '16px', stroke: 'currentColor', strokeWidth: 3, overflow: 'visible' }}>
                             <g fill="none">
                                 <path d="M2 16h28M2 24h28M2 8h28"></path>
@@ -151,22 +131,22 @@ export function AppHeader() {
                         <input type="text" placeholder="Search destinations" className='destination-input'></input>
                     </div>
                     <span className="splitter"></span>
-                    <div ref={datesRef} className='form-dates flex column' onClick={toggleCalendarModal}>
+                    <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div>check in</div>
                         <div>Add dates</div>
                     </div>
-                    <div ref={datesRef} className='form-dates flex column' onClick={toggleCalendarModal}>
+                    <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div>check out</div>
                         <div>Add dates</div>
                     </div>
                     {isOpenDates && <Calendar />} {/* will open the Calendar modal if true */}
 
                     <span className="splitter"></span>
-                    <div ref={guestsRef} className='form-dates flex column' onClick={toggleGuestModal}>
+                    <div className='form-dates flex column' onClick={toggleGuestModal}>
                         <div>Who</div>
                         <div>Add guests</div>
-                        {isOpenGuests && <Guests />}
                     </div>
+                    {isOpenGuests && <Guests />} {/* will open the guests modal if true */}
                     <button className="header-search-btn">
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
