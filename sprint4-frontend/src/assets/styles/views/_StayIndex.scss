@@ -147,3 +147,10 @@
   
 }
 
+.carousel-control {
+  display: none; /* Hide the control buttons by default */
+}
+
+.carousel:hover .carousel-control {
+  display: block; /* Display the control buttons when hovering over the carousel */
+}
