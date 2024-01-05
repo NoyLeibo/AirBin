@@ -31,7 +31,6 @@ export function AppHeader() {
 
     const toggleCalendarModal = () => {
         setIsOpenGuests(false);
-        setIsOpenGuests(false);
         setIsOpenDates(!isOpenDates);
     };
     const toggleGuestModal = () => {
