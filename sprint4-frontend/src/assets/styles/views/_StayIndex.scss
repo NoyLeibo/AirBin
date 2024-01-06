@@ -35,9 +35,7 @@
   .stay-img-card {
     display: grid;
     grid-auto-flow: column;
-    button{
-      background-color: transparent;
-    }
+    
     width: 100%;
     img {
       position: relative;
@@ -45,64 +43,38 @@
       aspect-ratio: 1;
       border-radius: 0.5em;
     }
-    .btn-like {
-      justify-self: end;
-      margin: 0;
-      padding: 0;
-      background-color: transparent;
-      position: absolute;
-      margin-top: 15px;
-      margin-right: 15px;
-      width: 24px;
-      height: 24px;
-    }
-
-    .heart-icon {
-      display: block;
-      fill: rgba(0, 0, 0, 0.5);
-      height: 24px;
-      width: 24px;
-      stroke: white;
-      stroke-width: 2;
-      overflow: visible;
-    }
-
-    .favorite {
-      fill: #FF385C;
-    }
-    .btn-card-next {
-      margin: 0;
-       padding: 0;
-      align-self: center;
-      justify-self: end;
-      position: absolute;
-      margin-right: 10px;
+    
+  //   .btn-card-next {
+  //     margin: 0;
+  //      padding: 0;
+  //     align-self: center;
+  //     justify-self: end;
+  //     position: absolute;
+  //     margin-right: 10px;
       
-    }
-    .btn-card-prev {
-      margin: 0;
-       padding: 0;
-      position: absolute;
-      align-self: center;
-      margin-left: 10px;
+  //   }
+  //   .btn-card-prev {
+  //     margin: 0;
+  //      padding: 0;
+  //     position: absolute;
+  //     align-self: center;
+  //     margin-left: 10px;
 
     
-  }
-    .btn-card-img {
-      width: 32px;
-      height: 32px;
-      z-index: 3;
-       background-color: rgba(255, 255, 255, 0.9);
-       border-radius: 50%;
-       color: #222222;
-       box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
-    }
+  // }
+  //   .btn-card-img {
+  //     width: 32px;
+  //     height: 32px;
+  //     z-index: 3;
+  //      background-color: rgba(255, 255, 255, 0.9);
+  //      border-radius: 50%;
+  //      color: #222222;
+  //      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
+  //   }
     
   }
 
-  .favorite {
-    fill: #FF385C;
-  }
+ 
   .angle-icon{
     width: 12px;
     height: 12px;
@@ -123,34 +95,4 @@
   h3 {
     margin: 5px;
   }
-}
-
-.slider{
-  position: relative;
-  // background-color: #222222;
-  width: 100%;
-  // min-height: ;
-  margin: 20px;
-  overflow: hidden;
-  border-radius: 10px;
-  .slide{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    img{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  
-}
-
-.carousel-control {
-  display: none; /* Hide the control buttons by default */
-}
-
-.carousel:hover .carousel-control {
-  display: block; /* Display the control buttons when hovering over the carousel */
 }

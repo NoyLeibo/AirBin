@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom"
 import * as bootstrap from 'bootstrap'
+import Carousel from './Carousel';
 // import Alert from 'bootstrap/js/dist/alert';
 
 // or, specify which plugins you need:
@@ -12,47 +13,10 @@ export function StayPreview({ stay }) {
 
   return (
     <li className="stay-preview" key={stay._id}>
-  <div id={`carouselExampleIndicators${stay._id}`} className="carousel slide">
-    <div className="carousel-indicators">
-      {stay.imgUrls.map((url, idx) => (
-        <button
-          key={idx}
-          type="button"
-          data-bs-target={`#carouselExampleIndicators${stay._id}`}
-          data-bs-slide-to={idx}
-          className={idx === 0 ? "active" : ""}
-          aria-current={idx === 0 ? "true" : "false"}
-          aria-label={`Slide ${idx + 1}`}
-        ></button>
-      ))}
-    </div>
-    <div className="carousel-inner">
-      {stay.imgUrls.map((url, idx) => (
-        <div key={url+idx} className={`carousel-item ${idx === 0 ? "active" : ""}`}>
-          <img src={url} className="d-block w-100" alt='Place Image' />
-        </div>
-      ))}
-    </div>
-    <button
-      className="carousel-control-prev"
-      type="button"
-      data-bs-target={`#carouselExampleIndicators${stay._id}`}
-      data-bs-slide="prev"
-    >
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Previous</span>
-    </button>
-    <button
-      className="carousel-control-next"
-      type="button"
-      data-bs-target={`#carouselExampleIndicators${stay._id}`}
-      data-bs-slide="next"
-    >
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Next</span>
-    </button>
-  </div>
-      {/* <div className="stay-img-card">
+      <div className="stay-img-card">
+       <Carousel images={stay.imgUrls} />
+      </div>
+      {/*
         
         <NavLink to={`/details/${stay._id}`}>
           <img src={stay.imgUrls[0]} />

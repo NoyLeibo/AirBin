@@ -1,0 +1,128 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+
+    & .carousel-slide {
+      flex: 0 0 100%;
+
+      & img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+
+  &-control-prev,
+  &-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    color: #222222;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
+    width: 32px;
+    height: 32px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-like {
+    // justify-self: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    margin-top: 15px;
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+    .favorite {
+      fill: #FF385C;
+    }
+
+  }
+
+  .heart-icon {
+    display: block;
+    fill: rgba(0, 0, 0, 0.5);
+    height: 24px;
+    width: 24px;
+    stroke: white;
+    stroke-width: 2;
+    // overflow: visible;
+  }
+  
+
+   
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      scale: 1.1;
+    }
+
+  &-control-prev {
+    left: 10px;
+  }
+
+  &-control-next {
+    right: 10px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 0 ;
+    transition: all 500ms;
+  
+  }
+
+  &:hover {
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      opacity: 1 ;
+    }
+  }
+  .carousel-indicators {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    .carousel-indicators-nav {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      margin: 0 5px;
+      cursor: pointer;
+      background-color:#dddddd;;
+
+      &.active {
+        background-color:#ffff;
+        scale: 1.2;
+      }
+    }
+    .scroll-left,
+    .scroll-right {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 0 5px;
+    }
+}
+}
