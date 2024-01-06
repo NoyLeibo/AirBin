@@ -39,7 +39,9 @@ export function StickyCard({ stay }) {
             <option value="pets">Pets</option>
           </select>
         </section>
-        <button onClick={() => navigate(`/payment`)}>Reserve</button>
+        <button onClick={() => navigate(`/payment/${stay._id}`)}>
+          Reserve
+        </button>
         <div>You won't be charged yet</div>
         <section className="total-reservation-count">
           <span>${stay.price} X 1 nights</span>
