@@ -2,6 +2,7 @@ import { StickyCard } from "../cmps/StickyCardDets";
 import { useNavigate, useParams } from "react-router";
 import { stayService } from "../services/stay.service.local";
 import { useState, useEffect } from "react";
+import { LoginSignup } from "../cmps/LoginSignup";
 
 export function PaymentPage() {
   const navigate = useNavigate();
@@ -52,6 +53,10 @@ export function PaymentPage() {
               <h4>Guests</h4>
               <h5>1 Guest</h5>
             </div>
+          </div>
+          <div className="login-section">
+            <h3>Log in or sign up to book</h3>
+            <LoginSignup />
           </div>
         </div>
         <div className="summary-card-section flex">
