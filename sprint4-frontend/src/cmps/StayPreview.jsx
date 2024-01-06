@@ -17,49 +17,26 @@ export function StayPreview({ stay }) {
        <Carousel  stay={stay} />
       </div>
      < NavLink to={`/details/${stay._id}`}>
-      <h3>{stay.name}</h3>
-        <h3>
-          <span>{stay.loc.country},</span>
-          <span> {stay.loc.city}</span>
-        </h3>
-        <h3>
-          <span>${stay.price.toLocaleString()} night</span>
-        </h3>
+        <div className="fs16  stay-card-title flex justify-between align-center">
+          <div className="stay-card-area fw600">{stay.loc.city},{stay.loc.country}</div>
+          <div className="stay-card-rating fs16 flex align-center">
+            <i class="fa-solid fa-star fs12 "></i> 
+            <span className="lighter"> 4,98 </span>
+            </div>
+        </div>
+        <div className="stay-card-distance fs16">
+          3,231 kilometer away
+        </div>
+        <div className="stay-card-dates fs16">
+          Apr 15-20
+        </div>
+        <div className="stay-card-price-container fs16">
+          <span className="stay-card-price fw600">${stay.price.toLocaleString()} </span> 
+          <span className="stay-card-price-details">
+             night
+            </span>
+        </div>
         </NavLink>
-      {/*
-        
-        <NavLink to={`/details/${stay._id}`}>
-          <img src={stay.imgUrls[0]} />
-        </NavLink>
-        <button onClick={toggleLike} className="btn-like">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            aria-hidden="true"
-            role="presentation"
-            focusable="false"
-            className="heart-icon "
-          >
-            <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
-          </svg>
-        </button>
-        <button onClick={toggleLike} className="btn-card-img btn-card-prev">
-        <i className="fa-solid fa-angle-left"></i>
-        </button>
-        <button onClick={toggleLike} className=" btn-card-img btn-card-next ">
-        <i className="fa-solid fa-angle-right"></i>
-        </button>
-      </div>
-      <NavLink to={`/details/${stay._id}`}>
-        <h3>{stay.name}</h3>
-        <h3>
-          <span>{stay.loc.country},</span>
-          <span> {stay.loc.city}</span>
-        </h3>
-        <h3>
-          <span>${stay.price.toLocaleString()} night</span>
-        </h3>
-      </NavLink> */}
     </li>
   )
 }
