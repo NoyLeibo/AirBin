@@ -21,11 +21,25 @@ export function AppHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
+    const [hideMiddleMenu, setHideMiddleMenu] = useState(false);
+    const [scrolledDown, setScrolledDown] = useState(false);
+    const [showScreenShadow, setShowScreenShadow] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY === 0) console.log('UP')
-            if (window.scrollY > 0) console.log('DOWN')
+            if (window.scrollY === 0) {
+                setHideMiddleMenu(true);
+                console.log('פתח את התפריט של 3 האופציות')
+            }
+            if (window.scrollY > 0) {
+                // התפריט אמור לעלות למעלה כל התפריטים ולהתכווץ
+
+                console.log('סגור את התפריטים של 3 האופציות')
+                console.log('סגור את התפריטים של הguest dates destinations')
+                setHideMiddleMenu(false)
+                setIsOpenDates(false)
+                setIsOpenGuests(false)
+            }
         };
         window.addEventListener('scroll', handleScroll);
 
@@ -34,6 +48,17 @@ export function AppHeader() {
         };
     }, []);
 
+    useEffect(() => {
+        if (window.scrollY > 0 & isOpenDates) {
+            setShowScreenShadow(true)
+            // להכניס פה את הקוד שזה הופך בחזרה למרכז התפריט של הפילטור לפי תאריכים והכל
+            setHideMiddleMenu(true);
+        }
+        if (isOpenDates === false) {
+            console.log('isOpenDates === false', isOpenDates === false);
+            setShowScreenShadow(false)
+        }
+    }, [isOpenDates])
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -47,6 +72,7 @@ export function AppHeader() {
     const toggleCalendarModal = () => {
         setIsOpenGuests(false);
         setIsOpenDates(!isOpenDates);
+
     };
     const toggleGuestModal = () => {
         setIsOpenDates(false);
@@ -88,7 +114,7 @@ export function AppHeader() {
                     </div>
                 </NavLink>
 
-                <nav className='flex column justify-center mid-header'>
+                {hideMiddleMenu && <nav className='mid-three-menu flex column justify-center mid-header'>
                     <div>
                         <button
                             className={`header-btns clean-btn ${selectedButton === 'stays' ? 'selected' : ''}`}
@@ -106,7 +132,7 @@ export function AppHeader() {
                             Online Experiences
                         </button>
                     </div>
-                </nav>
+                </nav>}
                 <div className='flex left-header justify-center align-center'>
                     <button className='clean-btn moveto-host'>Airbnb your home</button>
                     <div className="lx138ae atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr">
@@ -130,8 +156,8 @@ export function AppHeader() {
                     {isMenuOpen && (
                         <div className="hamburger-menu">
                             <div className='manu-one flex column'>
-                                <a href="#item1">Log in</a>
-                                <a href="#item2">Sign up</a>
+                                <NavLink to="/login" >Log in</NavLink>
+                                <NavLink to="/signup" >Sign up</NavLink>
                             </div><div className='flex column'>
                                 <a href="#item3">Gift cards</a>
                                 <a href="#item4">Airbnb your home</a>
@@ -145,27 +171,27 @@ export function AppHeader() {
             <div className='flex justify-center'>
                 <form className="search-form justify-center flex row">
                     <div className='form-control flex column'>
-                        <div className='destination-title'>Where</div>
+                        <div className='destination-title fs12 blacktxt fw600'>Where</div>
                         <input type="text" placeholder="Search destinations" className='destination-input'></input>
                     </div>
                     <span className="splitter"></span>
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
-                        <div>check in</div>
-                        <div>Add dates</div>
+                        <div className='fs12 blacktxt fw600'>check in</div>
+                        <div className='fs14 blacktxt fw600'>Add dates</div>
                     </div>
                     {isOpenDates && <div className="calendar-modal">
                         <Calendar />
                     </div>}
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
-                        <div>check out</div>
-                        <div>Add dates</div>
+                        <div className='fs12 blacktxt fw600'>check out</div>
+                        <div className='fs14 blacktxt fw600'>Add dates</div>
                     </div>
                     {isOpenDates && <Calendar />} {/* will open the Calendar modal if true */}
 
                     <span className="splitter"></span>
                     <div className='form-dates flex column' onClick={toggleGuestModal}>
-                        <div>Who</div>
-                        <div>Add guests</div>
+                        <div className='fs12 blacktxt'>Who</div>
+                        <div className='fs14 graytxt'>Add guests</div>
                         {isOpenGuests && <Guests />}
                     </div>
                     {isOpenGuests && <Guests />} {/* will open the guests modal if true */}
@@ -176,7 +202,7 @@ export function AppHeader() {
                 <Space direction="vertical" size={12}>
                 </Space>
             </div>
-
+            <div className="screen-shadow" style={{ display: showScreenShadow ? 'block' : 'none' }}></div>
             {/* 
                 {user &&
                     <span className="user-info">

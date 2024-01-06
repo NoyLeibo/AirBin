@@ -74,7 +74,7 @@ export function StayFilter() {
             {scrolledRight && (
                 <button className="next-filters" onClick={handleNextScroll}>Next</button>
             )}
-            <button>Filters..</button>
+            <button>Filters</button>
         </div>
     );
     // return (
