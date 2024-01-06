@@ -7,15 +7,25 @@ import Carousel from './Carousel';
 // import { Tooltip, Toast, Popover } from 'bootstrap';
 
 export function StayPreview({ stay }) {
-  function toggleLike() {
+  function toggleLike(stayid) {
     console.log("zzzzzzzzz")
   }
 
   return (
     <li className="stay-preview" key={stay._id}>
       <div className="stay-img-card">
-       <Carousel images={stay.imgUrls} />
+       <Carousel  stay={stay} />
       </div>
+     < NavLink to={`/details/${stay._id}`}>
+      <h3>{stay.name}</h3>
+        <h3>
+          <span>{stay.loc.country},</span>
+          <span> {stay.loc.city}</span>
+        </h3>
+        <h3>
+          <span>${stay.price.toLocaleString()} night</span>
+        </h3>
+        </NavLink>
       {/*
         
         <NavLink to={`/details/${stay._id}`}>
