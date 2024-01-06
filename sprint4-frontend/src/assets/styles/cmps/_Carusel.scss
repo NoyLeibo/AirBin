@@ -46,12 +46,9 @@
     margin-right: 15px;
     width: 24px;
     height: 24px;
-    .favorite {
-      fill: #FF385C;
-    }
-
+    
   }
-
+  
   .heart-icon {
     display: block;
     fill: rgba(0, 0, 0, 0.5);
@@ -61,6 +58,10 @@
     stroke-width: 2;
     // overflow: visible;
   }
+  .favorite {
+    fill: #FF385C;
+  }
+  
   
 
    
