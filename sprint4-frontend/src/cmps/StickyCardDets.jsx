@@ -1,16 +1,31 @@
-import { stayService } from "../services/stay.service.local";
+import { useNavigate } from "react-router";
+import { Calendar } from "./Calendar.jsx";
+import { Guests } from "./Guests.jsx";
+import { useState } from "react";
+
 export function StickyCard({ stay }) {
+  const navigate = useNavigate();
+  const [isOpenDates, setIsOpenDates] = useState(false);
+  const [isOpenGuests, setIsOpenGuests] = useState(false);
+
+  const toggleCalendarModal = () => {
+    setIsOpenGuests(false);
+    setIsOpenDates(!isOpenDates);
+  };
+  const toggleGuestModal = () => {
+    setIsOpenDates(false);
+    setIsOpenGuests(!isOpenGuests);
+  };
   return (
-    <section className="stay-details-stickyCard flex column align-center">
+    <section className="stay-details-stickyCard">
       <h1>
         ${stay.price} <span>night</span>
       </h1>
       <div className="stay-dates">
         <header>
           <label htmlFor="checkIn">CHECK-IN</label>
-          <input type="date" id="checkIn" name="checkIn" />
+          <Calendar />
         </header>
-
         <div className="data-section">
           <label htmlFor="checkOut">CHECK-OUT</label>
           <input type="date" id="checkOut" name="checkOut" />
@@ -24,11 +39,8 @@ export function StickyCard({ stay }) {
             <option value="pets">Pets</option>
           </select>
         </section>
-
         <button>Reserve</button>
-
         <div>You won't be charged yet</div>
-
         <section className="total-reservation-count">
           <span>${stay.price} X 1 nights</span>
           <span>${stay.price}</span>
