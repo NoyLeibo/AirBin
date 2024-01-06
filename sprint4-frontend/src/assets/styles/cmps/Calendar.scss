@@ -74,26 +74,34 @@
             // width: 300px;
 
             .calendar-day {
-                padding: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: 1px solid transparent;
-                position: relative;
+                border: 1.5px solid transparent;
                 cursor: pointer;
                 background-color: #fff;
                 color: #222;
                 transition: background-color 0.3s;
-                width: 44px;
                 height: 44px;
-                // font-weight: 600;
                 font-size: 0.875rem;
                 border-radius: 100%;
-                line-height: 18px;
 
                 &:hover {
                     background: rgb(255, 255, 255);
                     border: 1.5px solid rgb(34, 34, 34);
+                }
+
+                &.in-range {
+                    background-color: rgba(151, 150, 150, 0.306);
+                    border-radius: 0;
+                }
+
+                &.check-in-day,
+                &.check-out-day {
+                    background-color: #222222; // Check-in and check-out color
+                    color: white; // Optional: change text color for better contrast
+                    border-radius: 0;
+
                 }
 
                 &.empty-day {

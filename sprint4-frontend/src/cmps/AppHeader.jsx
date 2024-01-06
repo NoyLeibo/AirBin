@@ -7,6 +7,9 @@ import { LoginSignup } from './LoginSignup.jsx'
 import { useState, useEffect, useRef } from 'react'
 import { Calendar } from './Calendar'
 import { Guests } from './Guests.jsx'
+import { DatePicker, Space } from 'antd';
+
+const { RangePicker } = DatePicker;
 const LOGO = '/img/airbnb.png'
 const LOGO_ICON = '/img/airbnb-icon.png'
 
@@ -158,7 +161,10 @@ export function AppHeader() {
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
+                <Space direction="vertical" size={12}>
+                </Space>
             </div>
+
             {/* 
                 {user &&
                     <span className="user-info">

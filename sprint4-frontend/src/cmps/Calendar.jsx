@@ -2,10 +2,19 @@ import React, { useState, useEffect } from 'react';
 
 export function Calendar() {
   const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [selectedDates, setSelectedDates] = useState({ checkIn: null, checkOut: null });
 
   useEffect(() => {
 
   }, [currentMonth]);
+
+  const isCheckInDay = (day) => {
+    return day?.getTime() === selectedDates.checkIn?.getTime();
+  };
+
+  const isCheckOutDay = (day) => {
+    return day?.getTime() === selectedDates.checkOut?.getTime();
+  };
 
   const generateCalendarDays = (date) => {
     const year = date.getFullYear();
@@ -53,6 +62,23 @@ export function Calendar() {
 
   const daysOfWeek = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 
+  const selectDate = (day) => {
+    if (!day || isPastDay(day)) return;
+
+    const { checkIn, checkOut } = selectedDates;
+
+    if (!checkIn || (checkIn && checkOut)) {
+      setSelectedDates({ checkIn: day, checkOut: null });
+    } else if (day > checkIn) {
+      setSelectedDates({ ...selectedDates, checkOut: day });
+    }
+  };
+
+  const isInRange = (day) => {
+    const { checkIn, checkOut } = selectedDates;
+    return day > checkIn && day < checkOut;
+  };
+
   const renderCalendar = (date) => {
     const monthDays = generateCalendarDays(date);
     const monthName = formatMonthName(date);
@@ -67,7 +93,13 @@ export function Calendar() {
         </div>
         <div className="calendar-body">
           {monthDays.map((day, index) => (
-            <div key={index} className={`calendar-day${!day ? ' empty-day' : ''} ${isPastDay(day) ? 'past-day' : ''}`}>
+            <div key={index}
+              className={`calendar-day${!day ? ' empty-day' : ''} 
+                            ${isPastDay(day) ? 'past-day' : ''}
+                            ${isInRange(day) ? 'in-range' : ''}
+                            ${isCheckInDay(day) ? 'check-in-day' : ''}
+                            ${isCheckOutDay(day) ? 'check-out-day' : ''}`}
+              onClick={() => selectDate(day)}>
               {formatDate(day)}
             </div>
           ))}
