@@ -16,6 +16,7 @@
   border-radius: 12px;
   height: fit-content;
   margin-bottom: 48px;
+  flex-direction: row;
 }
 
 .trip-details {
@@ -24,4 +25,12 @@
 
 .trip-details > * {
   padding-bottom: 24px;
+}
+
+.summary-card-section {
+  img {
+    height: 106px;
+    width: 124px;
+    border-radius: 8px;
+  }
 }

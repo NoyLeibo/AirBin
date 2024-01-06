@@ -45,7 +45,7 @@ const routes = [
     label: "Admin Only",
   },
   {
-    path: "payment",
+    path: "payment/:stayId",
     component: <PaymentPage />,
     label: "logged user only",
   },

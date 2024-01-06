@@ -1,13 +1,37 @@
 import { StickyCard } from "../cmps/StickyCardDets";
+import { useNavigate, useParams } from "react-router";
+import { stayService } from "../services/stay.service.local";
+import { useState, useEffect } from "react";
 
 export function PaymentPage() {
+  const navigate = useNavigate();
+  const [stay, setStay] = useState(null);
+  const { stayId } = useParams();
+
+  useEffect(() => {
+    loadStay();
+  });
+
+  async function loadStay() {
+    try {
+      const currStay = await stayService.getById(stayId);
+      setStay(currStay);
+    } catch (err) {
+      showErrorMsg("Cant load stay");
+      navigate("/stay");
+    }
+  }
+
+  if (!stay) return <div>Loading...</div>;
   return (
     <section className="payment-container">
       <div className="page-title flex space-between">
-        <button className=".clean-btn">back</button>
+        <button onClick={() => navigate(`/`)} className=".clean-btn">
+          back
+        </button>
         <h2>Request to book</h2>
       </div>
-      <div className="order-content flex justify-content">
+      <div className="order-content flex justify-between">
         <div className="details-section">
           <div className="rare-find flex justify-between">
             <div>
@@ -30,7 +54,13 @@ export function PaymentPage() {
             </div>
           </div>
         </div>
-        <div className="summary-card-section"></div>
+        <div className="summary-card-section flex">
+          <img src={stay.imgUrls[0]} />
+          <div className="stay-desc ">
+            <h4>Entire home/apt</h4>
+            <h4>Spacious and quiet duplex apartment in Poble Sec</h4>
+          </div>
+        </div>
       </div>
     </section>
   );
