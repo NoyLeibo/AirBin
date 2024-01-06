@@ -92,7 +92,6 @@
     }
   }
   .carousel-indicators {
-    z-index: 1;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -113,7 +112,7 @@
 
       &.active {
         background-color:#ffff;
-        scale: 1.2;
+        scale: 1.1;
       }
     }
     .scroll-left,

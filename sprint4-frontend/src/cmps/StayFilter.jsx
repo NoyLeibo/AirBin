@@ -61,19 +61,19 @@ export function StayFilter() {
             {scrolledLeft && (
                 <button className="previous-filters" onClick={handlePreviousScroll}>Previous</button>
             )}
-                <div ref={filterContainerRef} className="emojis-filters ">
-                    {Object.entries(filters[0]).map(([key, value], filterIndex) => (
-                        <label key={key + filterIndex}
-                            className={`emoji-container ${selectedEmoji === key ? 'selectedEmoji' : ''}`}
-                            onClick={() => handleEmojiSelect(key)}>
-                            <img className="emoji-filter" src={value} alt={key} width="24" height="24" />
-                            <div className="emoji-text">{key}</div>
-                        </label>
-                    ))}
-                </div>
+            <div ref={filterContainerRef} className="emojis-filters ">
+                {Object.entries(filters[0]).map(([key, value], filterIndex) => (
+                    <label key={key + filterIndex}
+                        className={`emoji-container ${selectedEmoji === key ? 'selectedEmoji' : ''}`}
+                        onClick={() => handleEmojiSelect(key)}>
+                        <img className="emoji-filter" src={value} alt={key} width="24" height="24" />
+                        <div className="emoji-text">{key}</div>
+                    </label>
+                ))}
+            </div>
             {scrolledRight && (
                 <button className="next-filters" onClick={handleNextScroll}>Next</button>
-            )} 
+            )}
             <button>Filters..</button>
         </div>
     );
