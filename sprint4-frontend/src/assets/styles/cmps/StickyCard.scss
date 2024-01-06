@@ -30,8 +30,11 @@
 /* StickyCard.css */
 .stay-details-stickyCard {
   position: sticky;
-  width: fit-content;
+  width: max-content;
+  // display: flex;
+  justify-content: center;
   bottom: 0;
+  right: 0;
   background-color: white;
   z-index: 1000;
   padding: 20px;
@@ -39,9 +42,19 @@
   transition: transform 0.3s ease;
 }
 
-.stay-details-stickyCard.open {
-  transform: translateY(0);
-}
+// .stay-details-stickyCard.open {
+//   transform: translateY(0);
+//   // border: 1px solid #dedede;
+//   // border-radius: 12px;
+//   // box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+//   // flex-direction: column;
+//   // gap: 24px;
+//   // justify-content: space-between;
+//   // margin-left: 18.3333333333%;
+//   // margin-top: 32px;
+//   // max-width: 400px;
+//   // padding: 24px;
+// }
 
 .stay-details-stickyCard h1 {
   font-size: 24px;
