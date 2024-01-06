@@ -55,8 +55,9 @@ export function StayDetails() {
         <h4 className="capacity">
           {stay.capacity} guests, 2 rooms, 2 beds, 1 bath
         </h4>
-
-        <StickyCard stay={stay} />
+        <span className="sticky-card">
+          <StickyCard stay={stay} />
+        </span>
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import routes from "./routes"
 import { AppHeader } from "./cmps/AppHeader"
 import { AppFooter } from "./cmps/AppFooter"
 import { StayDetails } from "./pages/StayDetails"
+import { PaymentPage } from "./pages/PaymentPage"
 
 export function RootCmp() {
   return (
@@ -22,6 +23,7 @@ export function RootCmp() {
             />
           ))}
           <Route path="user/:id" element={<StayDetails />} />
+          <Route path="user/:id" element={<PaymentPage />} />
         </Routes>
       </main>
       <AppFooter />

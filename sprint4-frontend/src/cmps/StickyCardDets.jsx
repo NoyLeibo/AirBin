@@ -24,7 +24,7 @@ export function StickyCard({ stay }) {
       <div className="stay-dates">
         <header>
           <label htmlFor="checkIn">CHECK-IN</label>
-          <Calendar />
+          {/* <Calendar /> */}
         </header>
         <div className="data-section">
           <label htmlFor="checkOut">CHECK-OUT</label>
@@ -39,7 +39,7 @@ export function StickyCard({ stay }) {
             <option value="pets">Pets</option>
           </select>
         </section>
-        <button>Reserve</button>
+        <button onClick={() => navigate(`/payment`)}>Reserve</button>
         <div>You won't be charged yet</div>
         <section className="total-reservation-count">
           <span>${stay.price} X 1 nights</span>
