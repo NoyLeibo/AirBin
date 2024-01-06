@@ -23,17 +23,26 @@ const Carousel = ({stay}) => {
     setFavorite(!favoriteStay)
     console.log(isLike);
   };
-
   const renderIndicators = () => {
-    const totalButtons = Math.min(5, stay.imgUrls.length)
-    return [...Array(totalButtons)].map((_, index) => (
+    const totalButtons = Math.min(5, stay.imgUrls.length); // Maximum 5 buttons
+    let firstIndex = 0;
+  
+    if (stay.imgUrls.length > totalButtons) {
+      if (activeIndex >= 2 && activeIndex <= stay.imgUrls.length - 3) {
+        firstIndex = activeIndex - 2;
+      } else if (activeIndex > stay.imgUrls.length - 3) {
+        firstIndex = stay.imgUrls.length - totalButtons;
+      }
+    }
+  
+    return stay.imgUrls.slice(firstIndex, firstIndex + totalButtons).map((_, index) => (
       <div
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={index === activeIndex ? 'carousel-indicators-nav active' : 'carousel-indicators-nav'}
+            key={firstIndex + index}
+            onClick={() => goToSlide(firstIndex + index)}
+            className={firstIndex + index === activeIndex ? 'carousel-indicators-nav active' : 'carousel-indicators-nav'}
           />
-    ))
-  }
+    ));
+  };
   const isLike=favoriteStay?"heart-icon favorite":"heart-icon"
   console.log(activeIndex)
   return (

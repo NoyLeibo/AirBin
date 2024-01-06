@@ -30,11 +30,24 @@
   .stay-preview {
     display: flex;
     flex-direction: column;
+    .stay-card-rating{
+      // line-height: 1.1875rem;
+      margin-inline-start: 4px;
+      
+
+      
+    }
+
+    .stay-card-distance,
+    .stay-card-dates{
+      color: #717171;
+    }
   }
 
   .stay-img-card {
     display: grid;
     grid-auto-flow: column;
+    margin-bottom: 10px;
     
     width: 100%;
     img {
@@ -43,42 +56,10 @@
       aspect-ratio: 1;
       border-radius: 0.5em;
     }
-    
-  //   .btn-card-next {
-  //     margin: 0;
-  //      padding: 0;
-  //     align-self: center;
-  //     justify-self: end;
-  //     position: absolute;
-  //     margin-right: 10px;
-      
-  //   }
-  //   .btn-card-prev {
-  //     margin: 0;
-  //      padding: 0;
-  //     position: absolute;
-  //     align-self: center;
-  //     margin-left: 10px;
-
-    
-  // }
-  //   .btn-card-img {
-  //     width: 32px;
-  //     height: 32px;
-  //     z-index: 3;
-  //      background-color: rgba(255, 255, 255, 0.9);
-  //      border-radius: 50%;
-  //      color: #222222;
-  //      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.18) 0px 2px 4px 0px;
-  //   }
-    
   }
 
  
-  .angle-icon{
-    width: 12px;
-    height: 12px;
-  }
+  
   
 
 

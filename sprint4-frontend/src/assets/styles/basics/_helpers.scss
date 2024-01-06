@@ -61,9 +61,20 @@
 }
 
 .bold {
-    font-weight: bold;
+    font-weight:bold;
 }
-
+.lighter{
+    font-weight: lighter;
+}
+.fw600{
+    font-weight: 600;
+}
+.fw500{
+    font-weight: 500;
+}
+.fw300{
+    font-weight: 300;
+}
 .clean-btn {
     background: none;
     /* Cancels the background */
