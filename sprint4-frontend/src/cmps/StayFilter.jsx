@@ -29,7 +29,7 @@ export function StayFilter() {
         const updateScrollState = () => {
             const container = filterContainerRef.current;
             setScrolledLeft(container.scrollLeft > 0);
-            setScrolledRight(container.scrollLeft < container.scrollWidth - container.clientWidth);
+            setScrolledRight(container.scrollLeft < container.scrollWidth - container.clientWidth - 1);
         };
 
         const container = filterContainerRef.current;
