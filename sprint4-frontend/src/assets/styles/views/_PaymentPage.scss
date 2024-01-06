@@ -1,10 +1,10 @@
 .payment-container {
-  // display: grid;
-  // grid-template-columns: 40px 1fr 40px;
-  // grid-template-rows: auto 1fr 1fr;
-  // padding: 0;
-  // max-width: 2520px;
-  // margin-inline: auto;
+  //   display: grid;
+  //   grid-template-columns: 40px 1fr 40px;
+  //   grid-template-rows: auto 1fr 1fr;
+  //   padding: 0;
+  //   max-width: 2520px;
+  //   margin-inline: auto;
 }
 
 .page-title {
@@ -51,4 +51,24 @@
 
 .login-section {
   padding: 32px;
+}
+
+.stay-desc {
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.summary-card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 24px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  height: fit-content;
+  margin-bottom: 48px;
+  gap: 20px;
+}
+
+.price-dets {
+  width: 100%;
 }

@@ -1,0 +1,50 @@
+.card {
+  min-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  // border-top: 1px solid #ccc;
+  // border-radius: 8px;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  // background-color: #fff;
+}
+
+.login-signup {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 24px;
+  // margin-bottom: 1px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.demo-signup-section {
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    border: 1px solid #ddd;
+  }
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.section-divider {
+  margin: 20px 0;
+  color: #999;
+}

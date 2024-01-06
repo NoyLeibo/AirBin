@@ -1,126 +1,126 @@
 // Font Sizes
 .fs12 {
-    font-size: rem(12px);
+  font-size: rem(12px);
 }
 
 .fs14 {
-    font-size: rem(14px);
+  font-size: rem(14px);
 }
 
 .fs16 {
-    font-size: rem(16px);
+  font-size: rem(16px);
 }
 
 .fs18 {
-    font-size: rem(18px);
+  font-size: rem(18px);
 }
 
 .fs20 {
-    font-size: rem(20px);
+  font-size: rem(20px);
 }
 
 .fs24 {
-    font-size: rem(24px);
+  font-size: rem(24px);
 }
 
 .fs28 {
-    font-size: rem(28px);
+  font-size: rem(28px);
 }
 
 .fs30 {
-    font-size: rem(30px);
+  font-size: rem(30px);
 }
 
 // Flex Helpers
 .flex {
-    display: flex;
+  display: flex;
 
-    >*.full {
-        flex: 1;
-    }
+  > *.full {
+    flex: 1;
+  }
 
-    &.row {
-        flex-direction: row;
-    }
+  &.row {
+    flex-direction: row;
+  }
 
-    &.column {
-        flex-direction: column;
-    }
+  &.column {
+    flex-direction: column;
+  }
 
-    &.justify-center {
-        justify-content: center;
-    }
+  &.justify-center {
+    justify-content: center;
+  }
 
-    &.justify-between {
-        justify-content: space-between;
-    }
+  &.justify-between {
+    justify-content: space-between;
+  }
 
-    &.align-center {
-        align-items: center;
-    }
+  &.align-center {
+    align-items: center;
+  }
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .lighter {
-    font-weight: lighter;
+  font-weight: lighter;
 }
 
 .fw600 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .fw500 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .fw300 {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .clean-btn {
-    background: none;
-    /* Cancels the background */
-    color: #717171;
-    /* Color is inherited from the parent element */
-    font: inherit;
-    /* Font is inherited from the parent element */
-    text-align: inherit;
-    /* Text alignment is inherited from the parent element */
-    cursor: pointer;
+  background: none;
+  /* Cancels the background */
+  color: #717171;
+  /* Color is inherited from the parent element */
+  font: inherit;
+  /* Font is inherited from the parent element */
+  text-align: inherit;
+  /* Text alignment is inherited from the parent element */
+  cursor: pointer;
 }
 
 .divider {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #ddd;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ddd;
 }
 
 .clean-list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .graytxt {
-    color: #717171;
+  color: #717171;
 }
 
 .blacktxt {
-    color: #222222;
+  color: #222222;
 }
 
 // Media Helpers
 .square-ratio {
-    @include aspect-ratio(1, 1);
+  @include aspect-ratio(1, 1);
 }
 
 .video-ratio {
-    @include aspect-ratio(16, 9);
+  @include aspect-ratio(16, 9);
 }
 
 .portrait-ratio {
-    @include aspect-ratio(9, 16);
+  @include aspect-ratio(9, 16);
 }

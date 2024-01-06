@@ -61,9 +61,16 @@ export function PaymentPage() {
         </div>
         <div className="summary-card-section flex">
           <img src={stay.imgUrls[0]} />
-          <div className="stay-desc ">
+          <div className="stay-desc">
             <h4>Entire home/apt</h4>
             <h4>Spacious and quiet duplex apartment in Poble Sec</h4>
+          </div>
+          <div className="price-dets">
+            <h2>Price details</h2>
+            <div className="flex justify-between">
+              <h4>${stay.price} X 1 night</h4>
+              <h4>${stay.price}</h4>
+            </div>
           </div>
         </div>
       </div>
