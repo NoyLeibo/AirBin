@@ -1,10 +1,56 @@
+// .stay-details-stickyCard {
+//   position: fixed;
+//   top: 50%;
+//   right: 0%;
+//   transform: translate(-50%, -50%);
+//   background-color: #fff;
+//   padding: 20px;
+//   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+//   z-index: 999;
+// }
+
+// .stay-details-stickyCard {
+//   position: sticky;
+
+//   bottom: 0;
+//    right: 150px;
+//   transform: translate(50%, 0);
+//   background-color: #fff;
+//   padding: 20px;
+//   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+//   z-index: 999;
+// }
+
+// @media (max-width: 550px) {
+//   .stay-details-stickyCard {
+//     display: none;
+//   }
+// }
+
+/* StickyCard.css */
 .stay-details-stickyCard {
-  position: fixed;
-  bottom: 0%;
-  right: 0%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
+  position: sticky;
+  width: fit-content;
+  bottom: 0;
+  background-color: white;
+  z-index: 1000;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-  z-index: 999;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
+
+.stay-details-stickyCard.open {
+  transform: translateY(0);
+}
+
+.stay-details-stickyCard h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.stay-dates {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add more styles as needed */

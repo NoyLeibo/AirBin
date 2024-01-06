@@ -46,13 +46,16 @@ export function StayDetails() {
       </h4>
       <div className="imgs-grid">
         {stay.imgUrls.map((imgUrl) => (
-          <img src={imgUrl} className={"img" + x} key={x++} />
+          <img src={imgUrl} className={"img img" + x} key={x++} />
         ))}
         {/* <img src={stay.imgUrls[0]} /> */}
       </div>
       <div className="stay-dets-summary">
-        <h2>{stay.summary}</h2>
-        <h4>{stay.capacity} guests, 2 rooms, 2 beds, 1 bath</h4>
+        <h2 className="summary">{stay.summary}</h2>
+        <h4 className="capacity">
+          {stay.capacity} guests, 2 rooms, 2 beds, 1 bath
+        </h4>
+
         <StickyCard stay={stay} />
       </div>
     </section>

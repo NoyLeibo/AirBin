@@ -22,6 +22,18 @@ export function AppHeader() {
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY === 0) console.log('UP')
+            if (window.scrollY > 0) console.log('DOWN')
+        };
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)

@@ -1,5 +1,5 @@
 .app-header {
-    
+
     padding-left: 24px;
     padding-right: 24px;
     justify-content: space-between;
@@ -7,7 +7,7 @@
     z-index: 1;
     top: 0;
     background-color: white;
-    
+
     @include for-narrow-layout {
         padding-left: 40px;
         padding-right: 40px;
@@ -216,6 +216,7 @@
         }
 
         .destination-input {
+            all: unset;
             width: 260px;
             height: 30px;
             border: 0;
