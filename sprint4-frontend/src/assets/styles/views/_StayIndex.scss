@@ -30,6 +30,13 @@
   .stay-preview {
     display: flex;
     flex-direction: column;
+    .stay-card-rating{
+      // line-height: 1.1875rem;
+      margin-inline-start: 4px;
+      
+
+      
+    }
 
     .stay-card-distance,
     .stay-card-dates{
@@ -40,6 +47,7 @@
   .stay-img-card {
     display: grid;
     grid-auto-flow: column;
+    margin-bottom: 10px;
     
     width: 100%;
     img {
