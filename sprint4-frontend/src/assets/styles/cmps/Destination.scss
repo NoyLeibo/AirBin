@@ -1,0 +1,47 @@
+.destination-container {
+    width: rem(446px);
+    height: rem(434px);
+    padding: 1rem;
+    background: white;
+    position: absolute;
+    left: 20%;
+    top: 18%;
+    margin-top: 12px;
+    border-radius: 32px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.0392156863), 0 8px 16px rgba(0, 0, 0, 0.1490196078);
+    cursor: context-menu;
+    justify-content: space-evenly;
+}
+
+.region-option {
+    width: rem(124px);
+    height: rem(150px);
+    color: black;
+
+    .region-option-img {
+        overflow: hidden;
+        width: rem(122px);
+        height: rem(122px);
+        border: 1px solid #d2d0d0;
+        border-radius: 1em;
+
+        img {
+            cursor: pointer;
+            /* This line ensures the cursor becomes a pointer when hovering over the image */
+            border-radius: 1em;
+            object-fit: cover;
+        }
+
+        &:hover {
+            border: 1px solid #333;
+        }
+    }
+}
+
+.regions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
+}
