@@ -1,4 +1,5 @@
 .picker-container {
+  position: relative;
   border: 1px solid #b0b0b0;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -7,22 +8,41 @@
   }
 
   .stay-dates > button {
-    font-size: 0.8em;
+    font-size: 0.6em;
     gap: 0;
     width: 50%;
   }
   .guest-picker {
+    font-size: 0.6em;
     border-top: 1px solid #b0b0b0;
   }
 }
 
+.calendar-modal {
+  background-color: #fff;
+  position: absolute;
+  // right: -30px;
+  top: 43px;
+  z-index: 2;
+}
+
+.guests-modal {
+  // background: transparent;
+  //box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 16px;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  top: 60px;
+  left: -200px;
+  // z-index: 999;
+}
 .stay-details-stickyCard {
   position: sticky;
   min-width: 23em;
   height: fit-content;
-  // width: max-content;
-  // display: flex;
-  justify-content: center;
   top: 20%;
   z-index: 3;
   padding: 20px;
@@ -30,6 +50,16 @@
   background-color: #fff;
   border: 1px solid #e1e1e1;
   border-radius: 8px;
+
+  h1 {
+    font-family: "Circular-Bold";
+    font-size: 1.8em;
+    span {
+      font-size: 1rem;
+      font-family: "Circular";
+      margin-left: 5px;
+    }
+  }
 
   .reserve-btn {
     background-image: radial-gradient(
@@ -55,21 +85,22 @@
 }
 
 .reservation-dets {
-  margin-bottom: 15px;
+  margin-block: 24px;
   div {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #717171;
   }
 }
 
 .service-fee {
   margin-bottom: 15px;
   div {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #717171;
   }
 }
 
 .total-reservation-count {
   padding-top: 24px;
+  font-family: "Circular-Bold";
 }
 
 @media (max-width: 550px) {
