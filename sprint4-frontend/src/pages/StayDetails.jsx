@@ -10,6 +10,7 @@ import { StayAmenities } from "../cmps/StayAmenities";
 import { StayReviews } from "../cmps/StayReviews";
 
 export function StayDetails() {
+
   const [stay, setStay] = useState(null);
 
   const { stayId } = useParams();
@@ -38,8 +39,17 @@ export function StayDetails() {
       navigate("/stay");
     }
   }
-
-  if (!stay) return <div>Loading...</div>;
+  
+  if (!stay) {
+    console.log('no stays')
+    return (<div className="main-stay-index">
+      <div className="loader">
+        {Array.from({ length: 6 }).map((_, index) => (
+          <span key={index} style={{ animationDelay: `${index * 0.15}s` }}></span>
+        ))}
+      </div>
+    </div>)
+  }
   return (
     <div className="stay-details-container flex column">
       <div className="title">

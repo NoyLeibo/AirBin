@@ -11,7 +11,7 @@ export function StayReviews({ reviews }) {
                 <img
                   src="https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/male/68.jpg"
                   alt="Kiesha"
-                  class="mini-user-img"
+                  className="mini-user-img"
                 ></img>
                 <div className="fullname">{review.by.fullname}</div>
               </div>
