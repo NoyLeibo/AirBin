@@ -132,7 +132,7 @@ export function AppHeader() {
                 </div>}
 
                 <nav className={!isScrolledDown ? 'mid-three-menu flex column justify-center mid-header mid-three-menu-close' : 'mid-three-menu flex column justify-center mid-header'}>
-                    <div>
+                    <div className='header-btns-container'>
                         <button
                             className={`header-btns clean-btn ${selectedButton === 'stays' ? 'selected' : ''}`}
                             onClick={() => handleButtonClick('stays')}>
