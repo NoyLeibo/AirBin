@@ -19,6 +19,7 @@
 @import "views/UserDetails";
 @import "views/StayDetails";
 @import "views/PaymentPage";
+@import "views/BackOffice";
 
 // Components
 @import "cmps/AppHeader";
@@ -31,4 +32,5 @@
 @import "cmps/StayPreview";
 @import "cmps/StickyCard";
 @import "cmps/Carusel";
+@import "cmps/DashboardResarvation";
 @import "cmps/LoginSinup.scss";

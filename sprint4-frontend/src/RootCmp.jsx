@@ -10,9 +10,9 @@ import { PaymentPage } from "./pages/PaymentPage"
 
 export function RootCmp() {
   return (
-    <div className="main-container">
+    <div >
       <AppHeader />
-      <main >
+      <main  className="main-container">
         <Routes>
           {routes.map((route) => (
             <Route
