@@ -1,6 +1,9 @@
 .amenities-container {
   border-bottom: 1px solid #e1e1e1;
-
+  h4 {
+    font-family: "Circular-Bold";
+    font-size: 1.5rem;
+  }
   .amenities-ul {
     align-items: stretch;
     flex-wrap: wrap;

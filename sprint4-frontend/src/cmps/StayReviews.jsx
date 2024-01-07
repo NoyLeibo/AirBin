@@ -1,7 +1,8 @@
 export function StayReviews({ reviews }) {
+  let avgRate = reviews.rate / reviews.length;
   return (
-    <section className="reviews-container padding32">
-      <h4>What this place offers</h4>
+    <section className="reviews-container">
+      <h4>⭐ 4.87 • {reviews.length} Reviews</h4>
       <ul className="reviews-ul flex">
         {reviews.map((review, index) => {
           return (

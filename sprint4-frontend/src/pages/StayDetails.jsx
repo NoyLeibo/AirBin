@@ -42,10 +42,12 @@ export function StayDetails() {
   if (!stay) return <div>Loading...</div>;
   return (
     <div className="stay-details-container flex column">
-      <h2>{stay.name}</h2>
-      <h4>
-        {stay.reviews[0].rate},{stay.loc.city},{stay.loc.country}
-      </h4>
+      <div className="title">
+        <h2>{stay.name}</h2>
+        <h4>
+          ⭐ {stay.reviews[0].rate}.87 • {stay.loc.city} • {stay.loc.country}
+        </h4>
+      </div>
       <GalleryApt imgUrls={stay.imgUrls} />
 
       <div className="stay-dets-summary flex row">
@@ -54,7 +56,7 @@ export function StayDetails() {
             <div>
               <h2 className="summary">{stay.summary}</h2>
               <h4 className="capacity">
-                {stay.capacity} guests, 2 rooms, 2 beds, 1 bath
+                {stay.capacity} guests • 2 rooms • 2 beds • 1 bath
               </h4>
             </div>
             <img
@@ -64,11 +66,11 @@ export function StayDetails() {
           </div>
           <div className="apt-dets-highlights padding32">
             <h3>Great location</h3>
-            <div className="padding">
+            <div className="padding1">
               100% of recent guests gave the location a 5-star rating.
             </div>
             <h3>Great check-in experiance</h3>
-            <div className="padding">
+            <div className="padding1">
               100% of recent guests gave the check-in process a 5-star rating.
             </div>
             <h3>Free cancellation before Jan 8</h3>
