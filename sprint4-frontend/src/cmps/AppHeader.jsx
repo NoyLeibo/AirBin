@@ -26,7 +26,7 @@ export function AppHeader() {
     const [showScreenShadow, setShowScreenShadow] = useState(false);
     const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
 
-    const guestsRef = useRef();
+    const gRef = useRef();
     useEffect(() => {
         if (selectedDates.checkIn != null && selectedDates.checkOut != null) setIsOpenDates(false)
     }, [selectedDates])
@@ -68,12 +68,12 @@ export function AppHeader() {
 
     useEffect(() => {
         function handleClickOutside(event) {
-            if (isOpenGuests && guestsRef.current && !guestsRef.current.contains(event.target)) {
+            if (isOpenGuests && gRef.current && !gRef.current.contains(event.target)) {
                 setTimeout(() => {
                     setIsOpenGuests(false);
                 }, 120);
             }
-            if (isOpenDates && guestsRef.current && !guestsRef.current.contains(event.target)) {
+            if (isOpenDates && gRef.current && !gRef.current.contains(event.target)) {
                 setTimeout(() => {
                     setIsOpenDates(false)
                 }, 120);
@@ -223,6 +223,7 @@ export function AppHeader() {
                         <input type="text" placeholder="Search destinations" className='destination-input'></input>
                     </div>
                     <span className="splitter"></span>
+
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div className='fs12 blacktxt fw600'>check in</div>
                         {selectedDates.checkIn === null && <div className='fs14 blacktxt fw600'>Add dates</div>}
@@ -236,18 +237,19 @@ export function AppHeader() {
                         {selectedDates.checkOut && <div className='fs14 blacktxt fw600'>{selectedDates.checkOut.toLocaleDateString()}</div>}
                     </div>
                     {isOpenDates && (
-                        <div ref={guestsRef}>
+                        <div ref={gRef}>
                             <Calendar />
                         </div>
                     )}
                     <span className="splitter"></span>
+
                     <div className='form-dates flex column' onClick={toggleGuestModal}>
                         <div className='fs12 blacktxt'>Who</div>
                         <div className='fs14 graytxt'>Add guests</div>
                         {/* {isOpenGuests && <Guests />} */}
                     </div>
                     {isOpenGuests && (
-                        <div ref={guestsRef}>
+                        <div ref={gRef}>
                             <Guests />
                         </div>
                     )}
