@@ -20,7 +20,7 @@ export function StayPreview({ stay }) {
         <div className="fs16  stay-card-title flex justify-between align-center">
           <div className="stay-card-area fw600">{stay.loc.city},{stay.loc.country}</div>
           <div className="stay-card-rating-container fs16 flex align-center">
-            <i class="fa-solid fa-star fs12 "></i> 
+            <i className="fa-solid fa-star fs12 "></i> 
             <span className="fw300 stay-card-rating"> 4,98 </span>
             </div>
         </div>

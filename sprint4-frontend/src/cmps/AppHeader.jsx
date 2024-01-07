@@ -156,9 +156,7 @@ export function AppHeader() {
                     <button className='btn-small-search-bar  fs14'>Any week</button>
                     <span className="splitter"></span>
                     <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
-
-
-                </div>}
+                </div>
 
                 <nav className={!isScrolledDown ? 'mid-three-menu flex column justify-center mid-header mid-three-menu-close' : 'mid-three-menu flex column justify-center mid-header'}>
                     <div className='header-btns-container'>
