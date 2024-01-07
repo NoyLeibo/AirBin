@@ -14,7 +14,7 @@ export function DashboardResarvation() {
     <section className="dashboard-resarvation-container">
       {isLoading && "Loading..."}
       <div className="graphs-container">
-
+        
       </div>
     </section>
   )

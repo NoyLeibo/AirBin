@@ -12,7 +12,7 @@ export function BackOffice() {
   }, [])
 
   return (
-    <section className="main-container main-back-office-container">
+    <section className="main-back-office-container">
       {isLoading && "Loading..."}
       <div className="back-office-container ">
 

@@ -3,7 +3,7 @@
   padding-inline-start: 0px;
   display: grid;
   justify-content: center;
-
+  
   main {
     padding: 0;
   }
@@ -11,21 +11,14 @@
   @media (max-width: 550px) {
     grid-template-columns: 1fr;
   }
-
+  
   @media (min-width: 550px) {
     // grid-template-columns: repeat(auto-fill, minmax(239px, 1fr));
-    grid-template-columns: minmax(239px, 1fr) minmax(239px, 1fr);
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
     row-gap: 40px;
     column-gap: 24px;
   }
 
-  @media (min-width: 950px) {
-    grid-template-columns: minmax(274px, 1fr) minmax(274px, 1fr) minmax(274px, 1fr);
-  }
-
-  @media (min-width: 1128px) {
-    grid-template-columns: repeat(auto-fill, minmax(244px, 1fr));
-  }
 
   .stay-preview {
     display: flex;

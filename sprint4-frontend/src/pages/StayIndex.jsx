@@ -87,7 +87,7 @@ export function StayIndex() {
   }
 
   return (
-    <main className="main-container main-stay-index">
+    <main className=" main-stay-index">
       <StayFilter />
       <StayList stays={stays} />
     </main>
