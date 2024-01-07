@@ -6,7 +6,8 @@ import { login, logout, signup } from '../store/user.actions.js'
 import { LoginSignup } from './LoginSignup.jsx'
 import { useState, useEffect, useRef } from 'react'
 import { Calendar } from './Calendar'
-import { Guests } from './Guests.jsx'
+import { Guests } from './Guests'
+import { Destinations } from './Destinations'
 import { DatePicker, Space } from 'antd';
 import { setSelectedDates as setSelectedDatesAction } from '../store/stay.actions';
 
@@ -22,29 +23,29 @@ export function AppHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
+    const [isOpenDestinations, setIsOpenDestinations] = useState(false)
+    const [userSearchDestination, setUserSearchDestination] = useState('')
     const [isScrolledDown, setIsScrolledDown] = useState(true);
     const [showScreenShadow, setShowScreenShadow] = useState(false);
     const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
 
-    const gRef = useRef();
+    const gRef = useRef(); // global ref use for closing modals by noy
+
     useEffect(() => {
         if (selectedDates.checkIn != null && selectedDates.checkOut != null) setIsOpenDates(false)
     }, [selectedDates])
+
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY === 0) {
                 setIsScrolledDown(true);
-                // console.log('פתח את התפריט של 3 האופציות')
             }
             if (window.scrollY > 0) {
-                // התפריט אמור לעלות למעלה כל התפריטים ולהתכווץ
-
-                // console.log('סגור את התפריטים של 3 האופציות')
-                // console.log('סגור את התפריטים של הguest dates destinations')
                 setIsScrolledDown(false)
                 setIsOpenDates(false)
-                // dispatch(setSelectedDatesAction({ checkIn: null, checkOut: null })) // תאפס את התאריכים
                 setIsOpenGuests(false)
+                setIsOpenDestinations(false)
             }
         };
         window.addEventListener('scroll', handleScroll);
@@ -61,7 +62,6 @@ export function AppHeader() {
             setIsScrolledDown(true);
         }
         if (isOpenDates === false) {
-            console.log('isOpenDates === false', isOpenDates === false);
             setShowScreenShadow(false)
         }
     }, [isOpenDates])
@@ -69,21 +69,29 @@ export function AppHeader() {
     useEffect(() => {
         function handleClickOutside(event) {
             if (isOpenGuests && gRef.current && !gRef.current.contains(event.target)) {
+                console.log('isOpenGuests');
                 setTimeout(() => {
                     setIsOpenGuests(false);
-                }, 120);
+                }, 150);
             }
             if (isOpenDates && gRef.current && !gRef.current.contains(event.target)) {
+                console.log('isOpenDates');
                 setTimeout(() => {
                     setIsOpenDates(false)
-                }, 120);
+                }, 150);
             }
-        } // לא לשלב בין שתי התנאים זה יוצר באג!
+            if (isOpenDestinations && gRef.current && !gRef.current.contains(event.target)) {
+                console.log('isOpenDestinations');
+                setTimeout(() => {
+                    setIsOpenDestinations(false)
+                }, 150);
+            }
+        } // לא לשלב בין שלושת התנאים זה יוצר באג!
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [isOpenGuests, isOpenDates]);
+    }, [isOpenGuests, isOpenDates, isOpenDestinations]);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -95,6 +103,7 @@ export function AppHeader() {
 
 
     const toggleCalendarModal = () => {
+        setIsOpenDestinations(false)
         setIsOpenGuests(false);
         if (isOpenDates) {
             setIsOpenDates(false)
@@ -103,8 +112,17 @@ export function AppHeader() {
         setIsOpenDates(true);
 
     };
+    const toggleDestinationsModal = () => { // ---- DESTINATIONS
+        setIsOpenDates(false)
+        setIsOpenGuests(false);
+        if (isOpenDestinations) {
+            setIsOpenDestinations(false)
+            return
+        }
+        setIsOpenDestinations(true);
+    };
     const toggleGuestModal = () => {
-        console.log('toggleGuestModal');
+        setIsOpenDestinations(false)
         setIsOpenDates(false);
         if (isOpenGuests) {
             setIsOpenGuests(false)
@@ -138,6 +156,11 @@ export function AppHeader() {
         }
     }
 
+    const handleInputChange = (e) => {
+        const value = e.target.value;
+        setUserSearchDestination(value);
+    };
+
     return (
         <header className={!isScrolledDown ? "app-header grid header-inserted" : "app-header grid"}>
             {/* <div className='header-content flex justify-between align-center'> */}
@@ -150,16 +173,16 @@ export function AppHeader() {
                     </NavLink>
                 </div>
 
-                    <div className={!isScrolledDown?"small-search-form flex align-center small-form-expended":"small-search-form flex align-center"}>
+                <div className={!isScrolledDown ? "small-search-form flex align-center small-form-expended" : "small-search-form flex align-center"}>
 
-                        <button className='btn-small-search-bar  fs14'>Anywhere</button>
-                        <span className="splitter"></span>
-                        <button className='btn-small-search-bar  fs14'>Any week</button>
-                        <span className="splitter"></span>
-                        <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
+                    <button className='btn-small-search-bar  fs14'>Anywhere</button>
+                    <span className="splitter"></span>
+                    <button className='btn-small-search-bar  fs14'>Any week</button>
+                    <span className="splitter"></span>
+                    <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
 
 
-                    </div>
+                </div>
 
                 <nav className={!isScrolledDown ? 'mid-three-menu flex column justify-center mid-header mid-three-menu-close' : 'mid-three-menu flex column justify-center mid-header'}>
                     <div className='header-btns-container'>
@@ -215,13 +238,19 @@ export function AppHeader() {
                 </div>
             </div>
 
-           <div className='flex justify-center'>
-                <form className={!isScrolledDown?"search-form justify-center flex row header-search-inserted":
-            "search-form justify-center flex row"}>
-                    <div className='form-control flex column'>
+            <div className='flex justify-center'>
+                <form className={!isScrolledDown ? "search-form justify-center flex row header-search-inserted" :
+                    "search-form justify-center flex row"}>
+
+                    <div className='form-control flex column' onClick={toggleDestinationsModal}>
                         <div className='destination-title fs12 blacktxt fw600'>Where</div>
-                        <input type="text" placeholder="Search destinations" className='destination-input'></input>
+                        <input type="text" value={userSearchDestination} onInput={handleInputChange} placeholder="Search destinations" className='destination-input'></input>
                     </div>
+                    {isOpenDestinations && (
+                        <div ref={gRef}>
+                            <Destinations userSearchDestination={userSearchDestination} />
+                        </div>
+                    )}
                     <span className="splitter"></span>
 
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
