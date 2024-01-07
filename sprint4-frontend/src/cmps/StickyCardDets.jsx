@@ -19,7 +19,7 @@ export function StickyCard({ stay }) {
   return (
     <section className="stay-details-stickyCard">
       <h1>
-        ${stay.price} <span>night</span>
+        ₪{stay.price} <span>night</span>
       </h1>
       <div className="stay-dates flex column">
         <label htmlFor="checkIn">CHECK-IN</label>
@@ -32,11 +32,13 @@ export function StickyCard({ stay }) {
 
         <section className="guest-count">
           <label htmlFor="guests">GUESTS</label>
-          <select id="guests" name="guests">
+          {/* <select id="guests" name="guests">
             <option value="adults">Adults</option>
             <option value="children">Children</option>
             <option value="pets">Pets</option>
-          </select>
+          </select> */}
+          <button onClick={() => setIsOpenGuests(true)}> clickme</button>
+          {isOpenGuests && <Guests />}
         </section>
         <button onClick={() => navigate(`/payment/${stay._id}`)}>
           Reserve
