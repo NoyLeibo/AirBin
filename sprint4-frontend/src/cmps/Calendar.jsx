@@ -4,12 +4,11 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { useSelector, useDispatch } from "react-redux";
 import { setSelectedDates as setSelectedDatesAction } from '../store/stay.actions';
 
-export function Calendar() {
+export function Calendar({ setIsOpenDates }) {
   const dispatch = useDispatch();
   const [leftMonth, setLeftMonth] = useState(new Date());
   const [rightMonth, setRightMonth] = useState(new Date(new Date().getFullYear(), new Date().getMonth() + 1, 1));
   const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
-
   // useEffect(() => {
 
   // }, [currentMonth]);

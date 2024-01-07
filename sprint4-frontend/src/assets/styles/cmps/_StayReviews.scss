@@ -1,5 +1,11 @@
 .reviews-container {
   border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 32px;
+
+  h4 {
+    font-family: "Circular-Bold";
+    font-size: 1.5rem;
+  }
 
   .user-avatar {
     align-items: center;

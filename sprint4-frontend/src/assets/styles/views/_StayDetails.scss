@@ -3,13 +3,28 @@
   list-style: none;
   // padding-inline-start: 0px;
   justify-content: center;
+  color: black;
 
+  .title {
+    font-size: 1.625rem;
+    line-height: 1.875rem;
+    margin-bottom: 0.4375rem;
+
+    h4 {
+      font-family: "Circular";
+      font-size: 1.1rem;
+      color: grey;
+    }
+  }
   main {
     padding: 0;
   }
   h2 {
-    font-family: AirbnbCereal;
+    font-family: "Circular-Bold";
     color: black;
+  }
+  h3 {
+    margin: 0;
   }
 
   .stay-dets-summary {
@@ -22,6 +37,17 @@
     // .stay-dets-highlight {
     //   grid-row: 2;
     // }
+
+    .summary {
+      font-size: 1.625rem;
+      font-family: "Circular-Bold";
+    }
+
+    .capacity {
+      font-family: "Circular";
+      font-size: 1.1rem;
+      color: grey;
+    }
 
     .more-details {
       width: 60%;
@@ -45,6 +71,9 @@
 
     .apt-dets-highlights {
       border-bottom: 1px solid #ccc;
+      h3 {
+        font-family: "Circular-Bold";
+      }
     }
     .apt-extra-dets {
       border-bottom: 1px solid #ccc;

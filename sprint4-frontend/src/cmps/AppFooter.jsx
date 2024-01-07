@@ -22,7 +22,7 @@ export function AppFooter() {
 
   return (
     <footer className="app-footer">
-      <p>coffeerights - count: {count}</p>
+      <p>coffeerights - @chatGPT, Noy, Iris, Boris</p>
       {cart.length > 0 && (
         <h5>
           <span>{cart.length}</span> Products in your Cart

@@ -3,7 +3,7 @@
     display: grid;
     grid-auto-flow: column;
     max-width: 100%;
-    
+
     z-index: 2;
     background-color: #fff;
     grid-column: 1 / -1;
@@ -13,7 +13,8 @@
     button {
         height: 30px;
     }
-    &.filter-sticy{
+
+    &.filter-sticy {
         position: sticky;
         top: 80px;
     }
@@ -48,6 +49,11 @@
         border-bottom: 1px solid transparent;
         cursor: pointer;
         min-width: 56px;
+
+        &:active {
+            transform: scale(0.95);
+
+        }
 
         &:hover {
             border-bottom: 1px solid #DDDDDD;
