@@ -1,0 +1,44 @@
+.amenities-container {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 32px;
+
+  .amenities-ul {
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: start;
+    line-height: 1.25rem;
+    margin-bottom: 1.5rem;
+    width: calc(100% + 16px);
+  }
+
+  .amenities-li {
+    // align-items: center;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 50%;
+    span {
+      padding: 0px 0px 0px 16px;
+    }
+  }
+
+  .amenities-btn {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #222;
+    display: flex;
+    font-family: cereal-Medium;
+    font-size: 1rem;
+    gap: 8px;
+    justify-content: center;
+    line-height: 20px;
+    padding: 13px 23px;
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

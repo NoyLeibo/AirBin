@@ -6,6 +6,7 @@ import { StickyCard } from "../cmps/StickyCardDets";
 import { showErrorMsg } from "../services/event-bus.service";
 import { stayService } from "../services/stay.service.local";
 import { GalleryApt } from "../cmps/GalleryApt";
+import { StayAmenities } from "../cmps/StayAmenities";
 
 export function StayDetails() {
   const [stay, setStay] = useState(null);
@@ -90,6 +91,9 @@ export function StayDetails() {
               call resort directly to ensure U receive. If U need ADA U MUST
               inform us BEFORE booking.
             </div>
+          </div>
+          <div className="amenities-cmp padding32">
+            <StayAmenities amenities={stay.amenities} />
           </div>
         </div>
         <div className="sticky-card">
