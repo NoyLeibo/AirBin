@@ -12,18 +12,18 @@ export function RootCmp() {
   return (
     <main className="main-container">
       <AppHeader />
-        <Routes>
-          {routes.map((route) => (
-            <Route
-              key={route.path}
-              exact={true}
-              element={route.component}
-              path={route.path}
-            />
-          ))}
-          <Route path="user/:id" element={<StayDetails />} />
-          <Route path="user/:id" element={<PaymentPage />} />
-        </Routes>
+      <Routes>
+        {routes.map((route) => (
+          <Route
+            key={route.path}
+            exact={true}
+            element={route.component}
+            path={route.path}
+          />
+        ))}
+        <Route path="user/:id" element={<StayDetails />} />
+        <Route path="user/:id" element={<PaymentPage />} />
+      </Routes>
       <AppFooter />
     </main>
   )
