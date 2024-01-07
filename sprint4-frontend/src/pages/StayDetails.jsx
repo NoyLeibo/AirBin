@@ -48,28 +48,40 @@ export function StayDetails() {
 
       <div className="stay-dets-summary flex row">
         <div className="more-details">
-          <h2 className="summary">{stay.summary}</h2>
-          <h4 className="capacity">
-            {stay.capacity} guests, 2 rooms, 2 beds, 1 bath
-          </h4>
-          <div className="stay-dets-highlights-first">
-            <h3>Great location</h3>
-            <div>100% of recent guests gave the location a 5-star rating.</div>
-            <h3>Great check-in experiance</h3>
+          <div className="apt-host-details divider flex justify-between padding32">
             <div>
+              <h2 className="summary">{stay.summary}</h2>
+              <h4 className="capacity">
+                {stay.capacity} guests, 2 rooms, 2 beds, 1 bath
+              </h4>
+            </div>
+            <img
+              src="https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/48.jpg"
+              className="host-avatar-img"
+            ></img>
+          </div>
+          <div className="apt-dets-highlights padding32">
+            <h3>Great location</h3>
+            <div className="padding">
+              100% of recent guests gave the location a 5-star rating.
+            </div>
+            <h3>Great check-in experiance</h3>
+            <div className="padding">
               100% of recent guests gave the check-in process a 5-star rating.
             </div>
-            <h3 className="divider">Free cancellation before Jan 8</h3>
+            <h3>Free cancellation before Jan 8</h3>
+          </div>
+          <div className="apt-extra-dets padding32">
             <img
               className="aircover"
               src="https://a0.muscache.com/im/pictures/54e427bb-9cb7-4a81-94cf-78f19156faad.jpg"
               alt="aircover"
             ></img>
-            <div className="divider">
+            <div className="padding32">
               Every booking includes free protection from Host cancellations,
               listing inaccuracies, and other issues like trouble checking in.
             </div>
-            <div className="stay-owner-revirew">
+            <div className="stay-owner-revirew divider padding32">
               Moshe\'s house, stays under 7 night $38/res - Inquire about
               availability, I review then offer/approve if available :) - READ
               "The Space" for cleaning/etc AND brief explanation about timeshare
@@ -80,7 +92,9 @@ export function StayDetails() {
             </div>
           </div>
         </div>
-        <StickyCard stay={stay} />
+        <div className="sticky-card">
+          <StickyCard stay={stay} />
+        </div>
       </div>
     </div>
   );

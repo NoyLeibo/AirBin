@@ -11,9 +11,6 @@
     font-family: AirbnbCereal;
     color: black;
   }
-  .stay-dets {
-    grid-column: 2;
-  }
 
   .stay-dets-summary {
     padding: 0.5em;
@@ -22,9 +19,9 @@
     // grid-template-columns: 1fr 370px;
     display: flex;
     justify-content: space-between;
-    .stay-dets-highlight {
-      grid-row: 2;
-    }
+    // .stay-dets-highlight {
+    //   grid-row: 2;
+    // }
 
     .more-details {
       width: 60%;
@@ -34,23 +31,24 @@
       height: 26px;
       width: 123px;
       object-fit: contain;
-      margin: 0 0 15px;
+      // margin: 0 0 15px;
     }
 
-    .stay-owner-review {
-      padding-block: 2rem;
+    .apt-host-details {
+      border-bottom: 1px solid #ccc;
+      .host-avatar-img {
+        height: 56px;
+        width: 56px;
+        border-radius: 50%;
+      }
     }
-    .sticky-card {
-      // position: sticky;
-      //grid-column: 2;
-      justify-self: end;
-    }
-  }
 
-  .capacity {
-    grid-column: 1 / span 2;
-    border-bottom: 1px solid #dddddd;
-    width: 50%;
+    .apt-dets-highlights {
+      border-bottom: 1px solid #ccc;
+    }
+    .apt-extra-dets {
+      border-bottom: 1px solid #ccc;
+    }
   }
 
   @media (max-width: 550px) {
