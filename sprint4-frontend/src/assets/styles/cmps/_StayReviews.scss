@@ -1,0 +1,37 @@
+.reviews-container {
+  border-bottom: 1px solid #e1e1e1;
+
+  .user-avatar {
+    align-items: center;
+    margin: 0px 0px 12px;
+    .fullname {
+      padding-inline-start: 12px;
+    }
+    .mini-user-img {
+      border-radius: 50%;
+      height: 40px;
+      object-fit: cover;
+      width: 40px;
+    }
+  }
+
+  .reviews-btn {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #222;
+    display: flex;
+    font-family: cereal-Medium;
+    font-size: 1rem;
+    gap: 8px;
+    justify-content: center;
+    line-height: 20px;
+    padding: 13px 23px;
+    text-align: center;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

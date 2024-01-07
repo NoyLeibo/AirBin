@@ -43,7 +43,7 @@
 .flex {
   display: flex;
 
-  >*.full {
+  > *.full {
     flex: 1;
   }
 
@@ -116,6 +116,13 @@
 
 .blacktxt {
   color: #222222;
+}
+
+.padding1 {
+  padding-bottom: 1rem;
+}
+.padding32 {
+  padding-block: 32px;
 }
 
 // Media Helpers
