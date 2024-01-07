@@ -1,40 +1,17 @@
-// .stay-details-stickyCard {
-//   position: fixed;
-//   top: 50%;
-//   right: 0%;
-//   transform: translate(-50%, -50%);
-//   background-color: #fff;
-//   padding: 20px;
-//   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-//   z-index: 999;
-// }
-
-// .stay-details-stickyCard {
-//   position: sticky;
-
-//   bottom: 0;
-//    right: 150px;
-//   transform: translate(50%, 0);
-//   background-color: #fff;
-//   padding: 20px;
-//   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-//   z-index: 999;
-// }
-
-// @media (max-width: 550px) {
-//   .stay-details-stickyCard {
-//     display: none;
-//   }
-// }
+@media (max-width: 550px) {
+  .stay-details-stickyCard {
+    display: none;
+  }
+}
 
 /* StickyCard.css */
 .stay-details-stickyCard {
   position: sticky;
-  width: max-content;
+  min-width: 23em;
+  // width: max-content;
   // display: flex;
   justify-content: center;
-  bottom: 0;
-  right: 0;
+  top: 0;
   background-color: white;
   z-index: 1000;
   padding: 20px;
@@ -45,9 +22,4 @@
 .stay-details-stickyCard h1 {
   font-size: 24px;
   margin-bottom: 10px;
-}
-
-.stay-dates {
-  display: flex;
-  flex-direction: column;
 }

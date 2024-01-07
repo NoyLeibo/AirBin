@@ -21,14 +21,13 @@ export function StickyCard({ stay }) {
       <h1>
         ${stay.price} <span>night</span>
       </h1>
-      <div className="stay-dates">
-        <header>
-          <label htmlFor="checkIn">CHECK-IN</label>
-          {/* <Calendar /> */}
-        </header>
+      <div className="stay-dates flex column">
+        <label htmlFor="checkIn">CHECK-IN</label>
         <div className="data-section">
-          <label htmlFor="checkOut">CHECK-OUT</label>
-          <input type="date" id="checkOut" name="checkOut" />
+          {/* <label htmlFor="checkOut">CHECK-OUT</label>
+          <input type="date" id="checkOut" name="checkOut" /> */}
+          <button onClick={() => setIsOpenDates(true)}> clickme</button>
+          {isOpenDates && <Calendar />}
         </div>
 
         <section className="guest-count">
