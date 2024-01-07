@@ -105,7 +105,7 @@ export function AppHeader() {
     }
 
     return (
-        <header className="app-header full flex column justify-between divider">
+        <header className="app-header grid">
             <div className='flex justify-between'>
                 <NavLink to='/'>
                     <div className='logo-container flex justify-center align-center right-header'>
@@ -168,7 +168,7 @@ export function AppHeader() {
                 </div>
             </div>
 
-            <div className='flex justify-center'>
+            <div className='flex justify-center'> {/* ASI .asi */}
                 <form className="search-form justify-center flex row">
                     <div className='form-control flex column'>
                         <div className='destination-title fs12 blacktxt fw600'>Where</div>

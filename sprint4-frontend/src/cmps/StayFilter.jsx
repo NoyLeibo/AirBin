@@ -57,7 +57,7 @@ export function StayFilter() {
     };
 
     return (
-        <div className='filters-layout'>
+        <div className='filters-layout divider'>
             {scrolledLeft && (
                 <button className="previous-filters" onClick={handlePreviousScroll}>Previous</button>
             )}
