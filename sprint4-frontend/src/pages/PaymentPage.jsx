@@ -71,6 +71,15 @@ export function PaymentPage() {
               <h4>${stay.price} X 1 night</h4>
               <h4>${stay.price}</h4>
             </div>
+            <div className="flex justify-between">
+              <h4>Service fee</h4>
+              <h4>$14</h4>
+            </div>
+          </div>
+
+          <div className="flex justify-between">
+            <h4>Total</h4>
+            <h4>${stay.price}</h4>
           </div>
         </div>
       </div>

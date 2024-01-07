@@ -1,5 +1,5 @@
 .card {
-  min-width: 400px;
+  min-width: 450px;
   margin: 0 auto;
   padding: 20px;
   // border-top: 1px solid #ccc;
@@ -47,4 +47,13 @@ input {
 .section-divider {
   margin: 20px 0;
   color: #999;
+}
+
+@media (max-width: 550px) {
+  input {
+    width: 100%;
+    padding: 24px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 }

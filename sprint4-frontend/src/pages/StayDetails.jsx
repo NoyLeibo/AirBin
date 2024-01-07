@@ -40,24 +40,34 @@ export function StayDetails() {
   if (!stay) return <div>Loading...</div>;
   return (
     <section className="stay-details-container flex column align-center">
-      <h2>{stay.name}</h2>
-      <h4>
-        {stay.reviews[0].rate},{stay.loc.city},{stay.loc.country}
-      </h4>
-      <div className="imgs-grid">
-        {stay.imgUrls.map((imgUrl) => (
-          <img src={imgUrl} className={"img img" + x} key={x++} />
-        ))}
-        {/* <img src={stay.imgUrls[0]} /> */}
-      </div>
-      <div className="stay-dets-summary">
-        <h2 className="summary">{stay.summary}</h2>
-        <h4 className="capacity">
-          {stay.capacity} guests, 2 rooms, 2 beds, 1 bath
+      <div className="stay-dets">
+        <h2>{stay.name}</h2>
+        <h4>
+          {stay.reviews[0].rate},{stay.loc.city},{stay.loc.country}
         </h4>
-        <span className="sticky-card">
+        <div className="imgs-grid">
+          {stay.imgUrls.map((imgUrl) => (
+            <img src={imgUrl} className={"img img" + x} key={x++} />
+          ))}
+          {/* <img src={stay.imgUrls[0]} /> */}
+        </div>
+        <div className="stay-dets-summary">
+          <h2 className="summary">{stay.summary}</h2>
+          <h4 className="capacity">
+            {stay.capacity} guests, 2 rooms, 2 beds, 1 bath
+          </h4>
+          <span className="sticky-card"></span>
+          <div className="stay-dets-highlights">
+            <h3>Great location</h3>
+            <div>100% of recent guests gave the location a 5-star rating.</div>
+            <h3>Great check-in experiance</h3>
+            <div>
+              100% of recent guests gave the check-in process a 5-star rating.
+            </div>
+            <h3>Free cancellation before Jan 8</h3>
+          </div>
           <StickyCard stay={stay} />
-        </span>
+        </div>
       </div>
     </section>
   );
