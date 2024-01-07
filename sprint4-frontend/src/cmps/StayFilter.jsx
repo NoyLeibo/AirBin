@@ -6,6 +6,7 @@ export function StayFilter() {
     const [scrolledLeft, setScrolledLeft] = useState(false);
     const [scrolledRight, setScrolledRight] = useState(true);
     const [selectedEmoji, setSelectedEmoji] = useState(null);
+    const [isScrolledDown, setIsScrolledDown] = useState(false);
     const filterContainerRef = useRef(null);
 
     const filters = [{
@@ -26,7 +27,21 @@ export function StayFilter() {
         'Earth homes': 'https://a0.muscache.com/pictures/d7445031-62c4-46d0-91c3-4f29f9790f7a.jpg',
         'Amazing views': 'https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg',
     }];
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY === 0) {
+                setIsScrolledDown(true);
+            }
+            if (window.scrollY > 0) {
+                setIsScrolledDown(false)
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
 
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     useEffect(() => {
         const updateScrollState = () => {
             const container = filterContainerRef.current;
@@ -59,7 +74,7 @@ export function StayFilter() {
     };
 
     return (
-        <div className='filters-layout divider'>
+        <div className={!isScrolledDown?'filters-layout divider filter-sticy':'filters-layout divider'}>
             {scrolledLeft && (
                 <div className='flex justify-center align-center'>
                     <NavigateBeforeIcon className="previous-filters" onClick={handlePreviousScroll} />

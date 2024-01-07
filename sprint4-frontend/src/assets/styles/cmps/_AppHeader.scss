@@ -1,46 +1,83 @@
 .app-header {
-    padding-left: 24px;
-    padding-right: 24px;
     justify-content: space-between;
+    align-items: center;
     position: sticky;
     z-index: 1;
     top: 0;
     background-color: white;
     grid-template-columns: 1fr 1fr 1fr;
+    // height: 80px;
+    height: 160px;
     // height: 84px; ברגע שגולל למטה
     z-index: 4;
+    transition: all 0.3s;
 
-
-    @include for-narrow-layout {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    @include for-normal-layout {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    @include for-wide-layout {
-        padding-left: 80px;
-        padding-right: 80px;
-    }
-
-    .logo-container {
-        width: 102px;
+    
+    
+    &.header-inserted{
         height: 80px;
-
-        .logo-header-img {
-            width: 30px;
-            height: 32px;
-        }
-
-        .logo-header-txt {
-            width: 63px;
-            height: 22px;
-        }
     }
 
+    // @include for-narrow-layout {
+    //     padding-left: 40px;
+    //     padding-right: 40px;
+    // }
+
+    // @include for-normal-layout {
+    //     padding-left: 40px;
+    //     padding-right: 40px;
+    // }
+
+    // @include for-wide-layout {
+    //     padding-left: 80px;
+    //     padding-right: 80px;
+    // }
+    // .app-header-
+
+    .header-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-flow: column;
+        height: 80px;
+        .logo-container {
+            // justify-self: self-start;
+            width: 102px;
+            height: 80px;
+            .logo-header-img {
+               width: 100%;
+            }
+    
+            .logo-header-txt {
+                width:100%;
+            }
+        }
+
+        .mid-three-menu{
+            justify-self: center;
+            &.mid-three-menu-close{
+                display: none;
+            }
+        }
+        .left-header {
+            justify-self: end; // ASI
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-family: 'AirbnbCereal';
+        
+            .moveto-host {
+                color: #222222;
+                border-radius: 10px;
+                font-size: 1rem;
+        
+                &:hover {
+                    background-color: $hoverbgc;
+                }
+            }
+    }
+    
+    
     .user-info {
         color: $clr1;
 
@@ -91,31 +128,16 @@
     }
 }
 
+
 .small-search-form {
-    transform: translateY(-73px) (scale(0.55, 1.2));
-    background: #7f4040;
-    height: 48px;
+    // transform: translateY(-73px) (scale(0.55, 1.2));
+    // background: #7f4040;
+    height: 80px;
     width: 400px;
     // transition: transform .6s opacity .6s; צריך לעבור לחיפוש הגדול
 }
 
-.left-header {
-    justify-self: end; // ASI
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    font-family: 'AirbnbCereal';
 
-    .moveto-host {
-        color: #222222;
-        border-radius: 10px;
-        font-size: 1rem;
-
-        &:hover {
-            background-color: $hoverbgc;
-        }
-    }
 
     .burger-menu {
         border: 1px solid #dddddd;

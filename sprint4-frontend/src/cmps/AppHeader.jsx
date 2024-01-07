@@ -107,16 +107,23 @@ export function AppHeader() {
     }
 
     return (
-        <header className="app-header grid">
-            <div className='flex justify-between'>
+        <header className={!isScrolledDown?"app-header grid header-inserted":"app-header grid" }>
+            {/* <div className='header-content flex justify-between align-center'> */}
+            <div className='header-content'>
                 <NavLink to='/'>
                     <div className='logo-container flex justify-center align-center right-header'>
                         <img src={LOGO_ICON} alt='logo icon' className='logo-header-img' />
                         <img src={LOGO} alt='logo name' className='logo-header-txt' />
                     </div>
                 </NavLink>
+                {!isScrolledDown &&
+                <div className="small-search-form flex align-center">
+                    <button>Anywhere</button>
+                    <button>Any week</button>
+                    <button>Add guests</button>
+                </div>}
 
-                {isScrolledDown && <nav className='mid-three-menu flex column justify-center mid-header'>
+                <nav className={!isScrolledDown?'mid-three-menu flex column justify-center mid-header mid-three-menu-close':'mid-three-menu flex column justify-center mid-header'}>
                     <div>
                         <button
                             className={`header-btns clean-btn ${selectedButton === 'stays' ? 'selected' : ''}`}
@@ -134,7 +141,7 @@ export function AppHeader() {
                             Online Experiences
                         </button>
                     </div>
-                </nav>}
+                </nav>
                 <div className='flex left-header justify-center align-center'>
                     <button className='clean-btn moveto-host'>Airbnb your home</button>
                     <div className="lx138ae atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr">
@@ -203,10 +210,7 @@ export function AppHeader() {
                     </button>
                 </form>
             </div>}
-            {!isScrolledDown &&
-                <div className="small-search-form">
-                    <h1>test</h1>
-                </div>}
+            
             <div className="screen-shadow" style={{ display: showScreenShadow ? 'block' : 'none' }}></div>
             {/* 
                 {user &&

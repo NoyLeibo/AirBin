@@ -7,6 +7,7 @@ import { showErrorMsg } from "../services/event-bus.service";
 import { stayService } from "../services/stay.service.local";
 import { GalleryApt } from "../cmps/GalleryApt";
 import { StayAmenities } from "../cmps/StayAmenities";
+import { StayReviews } from "../cmps/StayReviews";
 
 export function StayDetails() {
   const [stay, setStay] = useState(null);
@@ -94,6 +95,9 @@ export function StayDetails() {
           </div>
           <div className="amenities-cmp padding32">
             <StayAmenities amenities={stay.amenities} />
+          </div>
+          <div className="reviews-cmp padding32">
+            <StayReviews reviews={stay.reviews} />
           </div>
         </div>
         <div className="sticky-card">

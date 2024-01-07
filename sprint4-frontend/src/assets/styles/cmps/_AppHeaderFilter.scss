@@ -3,15 +3,19 @@
     display: grid;
     grid-auto-flow: column;
     max-width: 100%;
-    position: sticky;
-    top: 158px;
+    
     z-index: 2;
     background-color: #fff;
     grid-column: 1 / -1;
     box-shadow: 0 0 #ccc;
+    transition: all 0.8s;
 
     button {
         height: 30px;
+    }
+    &.filter-sticy{
+        position: sticky;
+        top: 80px;
     }
 }
 
