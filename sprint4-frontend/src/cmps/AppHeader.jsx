@@ -22,7 +22,7 @@ export function AppHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
-    const [isScrolledDown, setIsScrolledDown] = useState(false);
+    const [isScrolledDown, setIsScrolledDown] = useState(true);
     const [showScreenShadow, setShowScreenShadow] = useState(false);
     const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
 
