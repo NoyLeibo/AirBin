@@ -3,6 +3,13 @@
     display: grid;
     grid-auto-flow: column;
     max-width: 100%;
+    position: sticky;
+    top: 158px;
+    z-index: 1;
+    background-color: #fff;
+    grid-column: 1 / -1;
+
+    box-shadow: 0 0 #ccc;
 
     button {
         height: 30px;

@@ -7,6 +7,7 @@
     z-index: 1;
     top: 0;
     background-color: white;
+    grid-template-columns: 1fr 1fr 1fr;
 
     @include for-narrow-layout {
         padding-left: 40px;
@@ -88,7 +89,14 @@
     }
 }
 
+.asi {
+    transform: translateY(-73px) (scale(0.55, 1.2));
+    background: #7f4040;
+    transition: transform .6s opacity .6s;
+}
+
 .left-header {
+    justify-self: end; // ASI
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,7 +206,7 @@
     height: 70px;
     box-shadow: 0 3px 12px #0000001a, 0 1px 2px #00000014;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 
 
     .header-search-btn {
