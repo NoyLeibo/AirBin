@@ -25,7 +25,9 @@ export function AppHeader() {
     const [isScrolledDown, setIsScrolledDown] = useState(false);
     const [showScreenShadow, setShowScreenShadow] = useState(false);
     const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
-
+    useEffect(() => {
+        if (selectedDates.checkIn != null && selectedDates.checkOut != null) setIsOpenDates(false)
+    }, [selectedDates])
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY === 0) {
@@ -107,7 +109,7 @@ export function AppHeader() {
     }
 
     return (
-        <header className={!isScrolledDown?"app-header grid header-inserted":"app-header grid" }>
+        <header className={!isScrolledDown ? "app-header grid header-inserted" : "app-header grid"}>
             {/* <div className='header-content flex justify-between align-center'> */}
             <div className='header-content'>
                 <NavLink to='/'>
@@ -117,13 +119,13 @@ export function AppHeader() {
                     </div>
                 </NavLink>
                 {!isScrolledDown &&
-                <div className="small-search-form flex align-center">
-                    <button>Anywhere</button>
-                    <button>Any week</button>
-                    <button>Add guests</button>
-                </div>}
+                    <div className="small-search-form flex align-center">
+                        <button>Anywhere</button>
+                        <button>Any week</button>
+                        <button>Add guests</button>
+                    </div>}
 
-                <nav className={!isScrolledDown?'mid-three-menu flex column justify-center mid-header mid-three-menu-close':'mid-three-menu flex column justify-center mid-header'}>
+                <nav className={!isScrolledDown ? 'mid-three-menu flex column justify-center mid-header mid-three-menu-close' : 'mid-three-menu flex column justify-center mid-header'}>
                     <div>
                         <button
                             className={`header-btns clean-btn ${selectedButton === 'stays' ? 'selected' : ''}`}
@@ -186,14 +188,14 @@ export function AppHeader() {
                     <span className="splitter"></span>
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div className='fs12 blacktxt fw600'>check in</div>
-                        {selectedDates.checkIn === null && <div className='fs14 blacktxt fw600'>Add guests</div>}
+                        {selectedDates.checkIn === null && <div className='fs14 blacktxt fw600'>Add dates</div>}
                         {selectedDates.checkIn && <div className='fs14 blacktxt fw600'>{selectedDates.checkIn.toLocaleDateString()}</div>}                    </div>
                     {isOpenDates && <div className="calendar-modal">
                         <Calendar />
                     </div>}
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div className='fs12 blacktxt fw600'>check out</div>
-                        {selectedDates.checkOut === null && <div className='fs14 blacktxt fw600'>Add guests</div>}
+                        {selectedDates.checkOut === null && <div className='fs14 blacktxt fw600'>Add dates</div>}
                         {selectedDates.checkOut && <div className='fs14 blacktxt fw600'>{selectedDates.checkOut.toLocaleDateString()}</div>}
                     </div>
                     {isOpenDates && <Calendar />} {/* will open the Calendar modal if true */}
@@ -210,7 +212,7 @@ export function AppHeader() {
                     </button>
                 </form>
             </div>}
-            
+
             <div className="screen-shadow" style={{ display: showScreenShadow ? 'block' : 'none' }}></div>
             {/* 
                 {user &&
