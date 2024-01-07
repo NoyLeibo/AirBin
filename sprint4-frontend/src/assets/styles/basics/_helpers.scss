@@ -43,7 +43,7 @@
 .flex {
   display: flex;
 
-  > *.full {
+  >*.full {
     flex: 1;
   }
 
@@ -121,6 +121,7 @@
 .padding1 {
   padding-bottom: 1rem;
 }
+
 .padding32 {
   padding-block: 32px;
 }
@@ -136,4 +137,8 @@
 
 .portrait-ratio {
   @include aspect-ratio(9, 16);
+}
+
+.no-drop {
+  cursor: no-drop;
 }

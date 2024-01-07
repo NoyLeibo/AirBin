@@ -25,6 +25,8 @@ export function Guests() {
         setNumberOfPets(numberOfPets + increment);
     };
 
+
+    // cursor: no-drop;
     return (
         <section className='guest-modal flex column'>
             <div>
@@ -35,7 +37,8 @@ export function Guests() {
                         <span className='guest-modal-subtitle fs12'>Ages 13 or above</span>
                     </div>
                     <div className='change-guests flex row align-center justify-between'>
-                        <button className='clean-btn change-guest-btn' onClick={(e) => handleAdultsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>
+                        {numberOfAdults === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
+                        {numberOfAdults > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handleAdultsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
                         <span className='fs16'>{numberOfAdults}</span>
                         <button className='clean-btn change-guest-btn' onClick={(e) => handleAdultsChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
                     </div>
@@ -49,7 +52,8 @@ export function Guests() {
                         <span className='guest-modal-subtitle fs12'>Ages 2-12</span>
                     </div>
                     <div className='change-guests flex row align-center justify-between'>
-                        <button className='clean-btn change-guest-btn' onClick={(e) => handleChildrenChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>
+                        {numberOfChildren === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
+                        {numberOfChildren > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handleChildrenChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
                         <span className='fs16'>{numberOfChildren}</span>
                         <button className='clean-btn change-guest-btn' onClick={(e) => handleChildrenChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
                     </div>
@@ -63,7 +67,9 @@ export function Guests() {
                         <span className='guest-modal-subtitle fs12'>Under 2</span>
                     </div>
                     <div className='change-guests flex row align-center justify-between'>
-                        <button className='clean-btn change-guest-btn' onClick={(e) => handleInfantsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>
+                        {numberOfInfants === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
+                        {numberOfInfants > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handleInfantsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
+
                         <span className='fs16'>{numberOfInfants}</span>
                         <button className='clean-btn change-guest-btn' onClick={(e) => handleInfantsChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
                     </div>
@@ -77,7 +83,8 @@ export function Guests() {
                         <span className='guest-modal-subtitle fs12'>Bringing a service animal?</span>
                     </div>
                     <div className='change-guests flex row align-center justify-between'>
-                        <button className='clean-btn change-guest-btn' onClick={(e) => handlePetsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>
+                        {numberOfPets === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
+                        {numberOfPets > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handlePetsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
                         <span className='fs16'>{numberOfPets}</span>
                         <button className='clean-btn change-guest-btn' onClick={(e) => handlePetsChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
                     </div>

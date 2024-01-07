@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import routes from '../routes'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { login, logout, signup } from '../store/user.actions.js'
@@ -8,6 +8,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Calendar } from './Calendar'
 import { Guests } from './Guests.jsx'
 import { DatePicker, Space } from 'antd';
+import { setSelectedDates as setSelectedDatesAction } from '../store/stay.actions';
 
 const { RangePicker } = DatePicker;
 const LOGO = '/img/airbnb.png'
@@ -15,7 +16,7 @@ const LOGO_ICON = '/img/airbnb-icon.png'
 
 
 export function AppHeader() {
-    const user = useSelector(storeState => storeState.userModule.user)
+    const dispatch = useDispatch();
 
     const [selectedButton, setSelectedButton] = useState('stays')
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,20 +24,22 @@ export function AppHeader() {
     const [isOpenGuests, setIsOpenGuests] = useState(false)
     const [isScrolledDown, setIsScrolledDown] = useState(false);
     const [showScreenShadow, setShowScreenShadow] = useState(false);
+    const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY === 0) {
                 setIsScrolledDown(true);
-                console.log('פתח את התפריט של 3 האופציות')
+                // console.log('פתח את התפריט של 3 האופציות')
             }
             if (window.scrollY > 0) {
                 // התפריט אמור לעלות למעלה כל התפריטים ולהתכווץ
 
-                console.log('סגור את התפריטים של 3 האופציות')
-                console.log('סגור את התפריטים של הguest dates destinations')
+                // console.log('סגור את התפריטים של 3 האופציות')
+                // console.log('סגור את התפריטים של הguest dates destinations')
                 setIsScrolledDown(false)
                 setIsOpenDates(false)
+                // dispatch(setSelectedDatesAction({ checkIn: null, checkOut: null })) // תאפס את התאריכים
                 setIsOpenGuests(false)
             }
         };
@@ -176,14 +179,15 @@ export function AppHeader() {
                     <span className="splitter"></span>
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div className='fs12 blacktxt fw600'>check in</div>
-                        <div className='fs14 blacktxt fw600'>Add dates</div>
-                    </div>
+                        {selectedDates.checkIn === null && <div className='fs14 blacktxt fw600'>Add guests</div>}
+                        {selectedDates.checkIn && <div className='fs14 blacktxt fw600'>{selectedDates.checkIn.toLocaleDateString()}</div>}                    </div>
                     {isOpenDates && <div className="calendar-modal">
                         <Calendar />
                     </div>}
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
                         <div className='fs12 blacktxt fw600'>check out</div>
-                        <div className='fs14 blacktxt fw600'>Add dates</div>
+                        {selectedDates.checkOut === null && <div className='fs14 blacktxt fw600'>Add guests</div>}
+                        {selectedDates.checkOut && <div className='fs14 blacktxt fw600'>{selectedDates.checkOut.toLocaleDateString()}</div>}
                     </div>
                     {isOpenDates && <Calendar />} {/* will open the Calendar modal if true */}
 

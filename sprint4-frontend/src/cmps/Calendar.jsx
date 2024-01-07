@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { useSelector, useDispatch } from "react-redux";
+import { setSelectedDates as setSelectedDatesAction } from '../store/stay.actions';
 
 export function Calendar() {
-  const [currentMonth, setCurrentMonth] = useState(new Date());
-  const [selectedDates, setSelectedDates] = useState({ checkIn: null, checkOut: null });
+  const dispatch = useDispatch();
+  const [leftMonth, setLeftMonth] = useState(new Date());
+  const [rightMonth, setRightMonth] = useState(new Date(new Date().getFullYear(), new Date().getMonth() + 1, 1));
+  const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
+
   // useEffect(() => {
 
   // }, [currentMonth]);
-
   const isCheckInDay = (day) => {
     return day?.getTime() === selectedDates.checkIn?.getTime();
   };
@@ -32,16 +38,24 @@ export function Calendar() {
     return daysArray;
   };
 
-  const goToNextMonths = (event) => { // Changed 'ev' to 'event'
+
+  const goToNextRightMonth = (event) => {
     event.preventDefault();
-    setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 2, 1));
+    const newLeftMonth = new Date(rightMonth.getFullYear(), rightMonth.getMonth(), 1);
+    const newRightMonth = new Date(newLeftMonth.getFullYear(), newLeftMonth.getMonth() + 1, 1);
+
+    setLeftMonth(newLeftMonth);
+    setRightMonth(newRightMonth);
   };
 
-  const goToPrevMonths = (event) => { // Changed 'ev' to 'event'
+  const goToPrevLeftMonth = (event) => {
     event.preventDefault();
-    setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 2, 1));
-  };
+    const newLeftMonth = new Date(leftMonth.getFullYear(), leftMonth.getMonth() - 1, 1);
+    const newRightMonth = new Date(newLeftMonth.getFullYear(), newLeftMonth.getMonth() + 1, 1);
 
+    setLeftMonth(newLeftMonth);
+    setRightMonth(newRightMonth);
+  };
   const isPastDay = (date) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -67,43 +81,52 @@ export function Calendar() {
     const { checkIn, checkOut } = selectedDates;
 
     if (checkIn && day.getTime() === checkIn.getTime() || checkIn && day.getTime() < checkIn.getTime() && !checkOut) { // אם בחרתי את אותו היום שנבחר בצאק אין או לפני אז תאפס הכל
-      setSelectedDates({ checkIn: null, checkOut: null });
+      dispatch(setSelectedDatesAction({ checkIn: null, checkOut: null }))
       return;
     }
 
     if (!checkIn || (checkIn && checkOut)) {
-      setSelectedDates({ checkIn: day, checkOut: null });
+      dispatch(setSelectedDatesAction({ checkIn: day, checkOut: null }));
     } else if (day > checkIn) {
-      setSelectedDates({ ...selectedDates, checkOut: day });
+      dispatch(setSelectedDatesAction({ ...selectedDates, checkOut: day }))
     }
   };
-
 
   const isInRange = (day) => {
     const { checkIn, checkOut } = selectedDates;
     return day > checkIn && day < checkOut;
   };
 
-  const renderCalendar = (date) => {
+  const renderCalendar = (date, isLeftCalendar) => {
     const monthDays = generateCalendarDays(date);
     const monthName = formatMonthName(date);
 
     return (
       <div className="calendar-month">
-        <div className='month-name flex justify-center'>{monthName}</div>
-        <div className="calendar-header">
-          {daysOfWeek.map((day, index) => (
-            <div key={index} className="calendar-header-day">{day}</div>
-          ))}
+        <div className="month-header">
+          <div className={`month-navigation ${isLeftCalendar ? 'month-prev' : 'month-next'}`}>
+            {isLeftCalendar && (
+              <NavigateBeforeIcon className="prev-month" onClick={goToPrevLeftMonth} />
+            )}
+            <div className='month-name'>{monthName}</div>
+            {!isLeftCalendar && (
+              <NavigateNextIcon className="next-month" onClick={goToNextRightMonth} />
+            )}
+          </div>
+          <div className="calendar-header">
+            {daysOfWeek.map((day, index) => (
+              <div key={index} className="calendar-header-day">{day}</div>
+            ))}
+          </div>
         </div>
         <div className="calendar-body">
           {monthDays.map((day, index) => (
             <div key={index}
               className={`calendar-day${!day ? ' empty-day' : ''} 
-                            ${isPastDay(day) ? 'past-day' : ''}
-                            ${isInRange(day) ? 'in-range' : ''}
-                            ${isCheckInDay(day) ? 'check-in-day' : ''}
-                            ${isCheckOutDay(day) ? 'check-out-day' : ''}`}
+                          ${isPastDay(day) ? 'past-day' : ''}
+                          ${isInRange(day) ? 'in-range' : ''}
+                          ${isCheckInDay(day) ? 'check-in-day' : ''}
+                          ${isCheckOutDay(day) ? 'check-out-day' : ''}`}
               onClick={() => selectDate(day)}>
               {formatDate(day)}
             </div>
@@ -111,18 +134,14 @@ export function Calendar() {
         </div>
       </div>
     );
-  };
+  }
 
   return (
     <div className="airbnb-calendar flex column align-center">
-      <div className="calendar-controls">
-        <button onClick={goToPrevMonths}>Previous Months</button>
-        <button onClick={goToNextMonths}>Next Months</button>
-      </div>
       <div className="flex">
-        {renderCalendar(currentMonth)}
-        {renderCalendar(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1, 1))}
+        {renderCalendar(leftMonth, true)}
+        {renderCalendar(rightMonth, false)}
       </div>
     </div>
-  );
-};
+  )
+}  
