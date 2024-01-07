@@ -25,6 +25,8 @@ export function AppHeader() {
     const [isScrolledDown, setIsScrolledDown] = useState(false);
     const [showScreenShadow, setShowScreenShadow] = useState(false);
     const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
+
+    const guestsRef = useRef();
     useEffect(() => {
         if (selectedDates.checkIn != null && selectedDates.checkOut != null) setIsOpenDates(false)
     }, [selectedDates])
@@ -64,6 +66,25 @@ export function AppHeader() {
         }
     }, [isOpenDates])
 
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (isOpenGuests && guestsRef.current && !guestsRef.current.contains(event.target)) {
+                setTimeout(() => {
+                    setIsOpenGuests(false);
+                }, 100);
+            }
+            if (isOpenDates && guestsRef.current && !guestsRef.current.contains(event.target)) {
+                setTimeout(() => {
+                    setIsOpenDates(false)
+                }, 100);
+            }
+        } // לא לשלב בין שתי התנאים זה יוצר באג!
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isOpenGuests, isOpenDates]);
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
@@ -75,12 +96,21 @@ export function AppHeader() {
 
     const toggleCalendarModal = () => {
         setIsOpenGuests(false);
-        setIsOpenDates(!isOpenDates);
+        if (isOpenDates) {
+            setIsOpenDates(false)
+            return
+        }
+        setIsOpenDates(true);
 
     };
     const toggleGuestModal = () => {
+        console.log('toggleGuestModal');
         setIsOpenDates(false);
-        setIsOpenGuests(!isOpenGuests);
+        if (isOpenGuests) {
+            setIsOpenGuests(false)
+            return
+        }
+        setIsOpenGuests(true);
     };
 
     async function onLogin(credentials) {
@@ -112,24 +142,24 @@ export function AppHeader() {
         <header className={!isScrolledDown ? "app-header grid header-inserted" : "app-header grid"}>
             {/* <div className='header-content flex justify-between align-center'> */}
             <div className='header-content'>
-                    <div className='logo-container flex justify-center align-center right-header'>
-                <NavLink className='flex justify-center align-center' to='/'>
-                    
+                <div className='logo-container flex justify-center align-center right-header'>
+                    <NavLink className='flex justify-center align-center' to='/'>
+
                         <img src={LOGO_ICON} alt='logo icon' className='logo-header-img' />
                         <img src={LOGO} alt='logo name' className='logo-header-txt' />
-                </NavLink>
-                    </div>
+                    </NavLink>
+                </div>
                 {!isScrolledDown &&
-                <div className="small-search-form flex align-center">
+                    <div className="small-search-form flex align-center">
 
-                    <button className='btn-small-search-bar  fs14'>Anywhere</button>
-                    <span className="splitter"></span>
-                    <button className='btn-small-search-bar  fs14'>Any week</button>
-                    <span className="splitter"></span>
-                    <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
+                        <button className='btn-small-search-bar  fs14'>Anywhere</button>
+                        <span className="splitter"></span>
+                        <button className='btn-small-search-bar  fs14'>Any week</button>
+                        <span className="splitter"></span>
+                        <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
 
-                    
-                </div>}
+
+                    </div>}
 
                 <nav className={!isScrolledDown ? 'mid-three-menu flex column justify-center mid-header mid-three-menu-close' : 'mid-three-menu flex column justify-center mid-header'}>
                     <div className='header-btns-container'>
@@ -204,15 +234,22 @@ export function AppHeader() {
                         {selectedDates.checkOut === null && <div className='fs14 blacktxt fw600'>Add dates</div>}
                         {selectedDates.checkOut && <div className='fs14 blacktxt fw600'>{selectedDates.checkOut.toLocaleDateString()}</div>}
                     </div>
-                    {isOpenDates && <Calendar />} {/* will open the Calendar modal if true */}
-
+                    {isOpenDates && (
+                        <div ref={guestsRef} className="guests-modal">
+                            <Calendar />
+                        </div>
+                    )}
                     <span className="splitter"></span>
                     <div className='form-dates flex column' onClick={toggleGuestModal}>
                         <div className='fs12 blacktxt'>Who</div>
                         <div className='fs14 graytxt'>Add guests</div>
-                        {isOpenGuests && <Guests />}
+                        {/* {isOpenGuests && <Guests />} */}
                     </div>
-                    {isOpenGuests && <Guests />} {/* will open the guests modal if true */}
+                    {isOpenGuests && (
+                        <div ref={guestsRef}>
+                            <Guests />
+                        </div>
+                    )}
                     <button className="header-search-btn">
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
