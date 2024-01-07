@@ -193,11 +193,13 @@
 
 .search-form {
     border: 1px solid #DDDDDD;
-    border-radius: 32px;
+    border-radius: 50px;
     font-size: 12px;
+    height: 70px;
     box-shadow: 0 3px 12px #0000001a, 0 1px 2px #00000014;
     cursor: pointer;
-    // margin-bottom: 10px; ??
+    margin-bottom: 20px;
+
 
     .header-search-btn {
         width: 48px;

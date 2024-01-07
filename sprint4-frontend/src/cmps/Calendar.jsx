@@ -3,10 +3,9 @@ import React, { useState, useEffect } from 'react';
 export function Calendar() {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDates, setSelectedDates] = useState({ checkIn: null, checkOut: null });
+  // useEffect(() => {
 
-  useEffect(() => {
-
-  }, [currentMonth]);
+  // }, [currentMonth]);
 
   const isCheckInDay = (day) => {
     return day?.getTime() === selectedDates.checkIn?.getTime();
@@ -67,12 +66,18 @@ export function Calendar() {
 
     const { checkIn, checkOut } = selectedDates;
 
+    if (checkIn && day.getTime() === checkIn.getTime() || checkIn && day.getTime() < checkIn.getTime() && !checkOut) { // אם בחרתי את אותו היום שנבחר בצאק אין או לפני אז תאפס הכל
+      setSelectedDates({ checkIn: null, checkOut: null });
+      return;
+    }
+
     if (!checkIn || (checkIn && checkOut)) {
       setSelectedDates({ checkIn: day, checkOut: null });
     } else if (day > checkIn) {
       setSelectedDates({ ...selectedDates, checkOut: day });
     }
   };
+
 
   const isInRange = (day) => {
     const { checkIn, checkOut } = selectedDates;
