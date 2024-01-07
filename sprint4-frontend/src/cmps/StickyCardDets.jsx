@@ -2,52 +2,97 @@ import { useNavigate } from "react-router";
 import { Calendar } from "./Calendar.jsx";
 import { Guests } from "./Guests.jsx";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 export function StickyCard({ stay }) {
   const navigate = useNavigate();
   const [isOpenDates, setIsOpenDates] = useState(false);
   const [isOpenGuests, setIsOpenGuests] = useState(false);
+  const selectedDates = useSelector(
+    (storeState) => storeState.stayModule.selectedDates
+  );
 
-  const toggleCalendarModal = () => {
-    setIsOpenGuests(false);
-    setIsOpenDates(!isOpenDates);
-  };
-  const toggleGuestModal = () => {
-    setIsOpenDates(false);
-    setIsOpenGuests(!isOpenGuests);
-  };
+  useEffect(() => {
+    if (selectedDates.checkIn != null && selectedDates.checkOut != null)
+      setIsOpenDates(false);
+  }, [selectedDates]);
+
+  // const toggleCalendarModal = () => {
+  //   setIsOpenGuests(false);
+  //   setIsOpenDates(!isOpenDates);
+  // };
+  // const toggleGuestModal = () => {
+  //   setIsOpenDates(false);
+  //   setIsOpenGuests(!isOpenGuests);
+  // };
+
   return (
     <section className="stay-details-stickyCard">
-      <h1>
+      <h1 className="flex align-center">
         ₪{stay.price} <span>night</span>
       </h1>
-      <div className="stay-dates flex column">
-        <label htmlFor="checkIn">CHECK-IN</label>
-        <div className="data-section">
-          {/* <label htmlFor="checkOut">CHECK-OUT</label>
-          <input type="date" id="checkOut" name="checkOut" /> */}
-          <button onClick={() => setIsOpenDates(true)}> clickme</button>
-          {isOpenDates && <Calendar />}
-        </div>
+      <div className="picker-container">
+        <section className="stay-dates flex row">
+          <button
+            className="clean-btn"
+            onClick={() => setIsOpenDates((currState) => !currState)}
+          >
+            <div className="flex">CHECK-IN</div>
+            <div className="flex">
+              {selectedDates.checkIn === null && <div>Add dates</div>}
+              {selectedDates.checkIn && (
+                <div>{selectedDates.checkIn.toLocaleDateString()}</div>
+              )}
+            </div>
+          </button>
+          <button
+            className="check-out clean-btn"
+            onClick={() => setIsOpenDates((currState) => !currState)}
+          >
+            <div className="flex">CHECK-OUT</div>
+            <div className="flex">
+              {selectedDates.checkOut === null && <div>Add dates</div>}
+              {selectedDates.checkOut && (
+                <div>{selectedDates.checkOut.toLocaleDateString()}</div>
+              )}
+            </div>
+          </button>
+          <div className="calendar-modal">{isOpenDates && <Calendar />}</div>
+        </section>
 
-        <section className="guest-count">
-          <label htmlFor="guests">GUESTS</label>
-          {/* <select id="guests" name="guests">
-            <option value="adults">Adults</option>
-            <option value="children">Children</option>
-            <option value="pets">Pets</option>
-          </select> */}
-          <button onClick={() => setIsOpenGuests(true)}> clickme</button>
-          {isOpenGuests && <Guests />}
+        <section className="guest-picker flex">
+          <button
+            className="clean-btn"
+            onClick={() => setIsOpenGuests((currState) => !currState)}
+          >
+            <div>Who</div>
+            <div>Add guests</div>
+          </button>
+          <div className="guests-modal">{isOpenGuests && <Guests />}</div>
         </section>
-        <button onClick={() => navigate(`/payment/${stay._id}`)}>
-          Reserve
-        </button>
-        <div>You won't be charged yet</div>
-        <section className="total-reservation-count">
-          <span>${stay.price} X 1 nights</span>
-          <span>${stay.price}</span>
-        </section>
+      </div>
+      <button
+        className="reserve-btn"
+        onClick={() => navigate(`/payment/${stay._id}`)}
+      >
+        Reserve
+      </button>
+      <div className="flex justify-center">You won't be charged yet</div>
+
+      <div className="reservation-dets flex justify-between graytxt">
+        <div>${stay.price} X 1 nights</div>
+        <span>${stay.price}</span>
+      </div>
+
+      <div className="service-fee flex justify-between graytxt">
+        <div>${stay.price} X 1 nights</div>
+        <span>${stay.price}</span>
+      </div>
+
+      <div className="total-reservation-count flex justify-between divider">
+        <span>Total</span>
+        <span>${stay.price}</span>
       </div>
     </section>
   );
