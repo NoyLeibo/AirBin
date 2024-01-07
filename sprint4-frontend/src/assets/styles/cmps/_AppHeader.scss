@@ -147,6 +147,7 @@
     grid-row: 1;
     padding: 0;
     width: max-content;
+    opacity: 0;
 
     border: 1px solid #dddddd;
     border-radius: 50px;
@@ -155,6 +156,11 @@
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1019607843),
       0 1px 2px rgba(0, 0, 0, 0.0784313725);
     cursor: pointer;
+
+    transition: all 0.4s;
+    &.small-form-expended{
+        opacity: 1;
+    }
 
     .splitter {
       width: 1px;
@@ -261,6 +267,8 @@
 }
 
 .search-form {
+    
+    
   border: 1px solid #dddddd;
   border-radius: 50px;
   font-size: 12px;
@@ -268,6 +276,13 @@
   box-shadow: 0 3px 12px #0000001a, 0 1px 2px #00000014;
   cursor: pointer;
   margin-bottom: 8px;
+  transition: all 0.4s;
+  opacity: 1;
+
+  &.header-search-inserted{
+      transform: translateY(-75px) scaleX(0.4) scaleY(0.7);
+      opacity: 0;
+  }
 
   .header-search-btn {
     width: 48px;

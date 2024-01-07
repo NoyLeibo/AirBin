@@ -29,7 +29,7 @@ export function StickyCard({ stay }) {
 
   return (
     <section className="stay-details-stickyCard">
-      <h1>
+      <h1 className="flex align-center">
         ₪{stay.price} <span>night</span>
       </h1>
       <div className="picker-container">
@@ -58,10 +58,10 @@ export function StickyCard({ stay }) {
               )}
             </div>
           </button>
-          {isOpenDates && <Calendar />}
+          <div className="calendar-modal">{isOpenDates && <Calendar />}</div>
         </section>
 
-        <div className="guest-picker flex">
+        <section className="guest-picker flex">
           <button
             className="clean-btn"
             onClick={() => setIsOpenGuests((currState) => !currState)}
@@ -69,8 +69,8 @@ export function StickyCard({ stay }) {
             <div>Who</div>
             <div>Add guests</div>
           </button>
-          {isOpenGuests && <Guests />}
-        </div>
+          <div className="guests-modal">{isOpenGuests && <Guests />}</div>
+        </section>
       </div>
       <button
         className="reserve-btn"
@@ -80,12 +80,12 @@ export function StickyCard({ stay }) {
       </button>
       <div className="flex justify-center">You won't be charged yet</div>
 
-      <div className="reservation-dets flex justify-between">
+      <div className="reservation-dets flex justify-between graytxt">
         <div>${stay.price} X 1 nights</div>
         <span>${stay.price}</span>
       </div>
 
-      <div className="service-fee flex justify-between">
+      <div className="service-fee flex justify-between graytxt">
         <div>${stay.price} X 1 nights</div>
         <span>${stay.price}</span>
       </div>
