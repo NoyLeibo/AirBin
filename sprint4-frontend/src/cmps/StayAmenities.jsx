@@ -1,13 +1,13 @@
 export function StayAmenities({ amenities }) {
   return (
-    <section className="amenities-container">
+    <section className="amenities-container padding32">
       <h4>What this place offers</h4>
       <ul className="amenities-ul flex">
-        {amenities.map((amenitie) => {
+        {amenities.map((amenitie, index) => {
           return (
-            <li className="amenities-li flex row">
+            <li className="amenities-li flex row" key={index}>
               <div>🎨</div>
-              <span className="">{amenitie}</span>
+              <span>{amenitie}</span>
             </li>
           );
         })}

@@ -1,27 +1,21 @@
-.amenities-container {
+.reviews-container {
   border-bottom: 1px solid #e1e1e1;
 
-  .amenities-ul {
-    align-items: stretch;
-    flex-wrap: wrap;
-    justify-content: start;
-    line-height: 1.25rem;
-    margin-bottom: 1.5rem;
-    width: calc(100% + 16px);
-  }
-
-  .amenities-li {
-    // align-items: center;
-    padding-bottom: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    width: 50%;
-    span {
-      padding: 0px 0px 0px 16px;
+  .user-avatar {
+    align-items: center;
+    margin: 0px 0px 12px;
+    .fullname {
+      padding-inline-start: 12px;
+    }
+    .mini-user-img {
+      border-radius: 50%;
+      height: 40px;
+      object-fit: cover;
+      width: 40px;
     }
   }
 
-  .amenities-btn {
+  .reviews-btn {
     align-items: center;
     background-color: #fff;
     border: 1px solid #222;
