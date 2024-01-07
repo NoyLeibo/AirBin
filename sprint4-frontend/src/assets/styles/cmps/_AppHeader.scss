@@ -1,5 +1,4 @@
 .app-header {
-
     padding-left: 24px;
     padding-right: 24px;
     justify-content: space-between;
@@ -8,6 +7,9 @@
     top: 0;
     background-color: white;
     grid-template-columns: 1fr 1fr 1fr;
+    // height: 84px; ברגע שגולל למטה
+    z-index: 4;
+
 
     @include for-narrow-layout {
         padding-left: 40px;
@@ -89,10 +91,12 @@
     }
 }
 
-.asi {
+.small-search-form {
     transform: translateY(-73px) (scale(0.55, 1.2));
     background: #7f4040;
-    transition: transform .6s opacity .6s;
+    height: 48px;
+    width: 400px;
+    // transition: transform .6s opacity .6s; צריך לעבור לחיפוש הגדול
 }
 
 .left-header {

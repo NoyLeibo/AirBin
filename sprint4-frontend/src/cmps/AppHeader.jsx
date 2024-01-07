@@ -21,14 +21,13 @@ export function AppHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
-    const [hideMiddleMenu, setHideMiddleMenu] = useState(false);
-    const [scrolledDown, setScrolledDown] = useState(false);
+    const [isScrolledDown, setIsScrolledDown] = useState(false);
     const [showScreenShadow, setShowScreenShadow] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY === 0) {
-                setHideMiddleMenu(true);
+                setIsScrolledDown(true);
                 console.log('פתח את התפריט של 3 האופציות')
             }
             if (window.scrollY > 0) {
@@ -36,7 +35,7 @@ export function AppHeader() {
 
                 console.log('סגור את התפריטים של 3 האופציות')
                 console.log('סגור את התפריטים של הguest dates destinations')
-                setHideMiddleMenu(false)
+                setIsScrolledDown(false)
                 setIsOpenDates(false)
                 setIsOpenGuests(false)
             }
@@ -52,7 +51,7 @@ export function AppHeader() {
         if (window.scrollY > 0 & isOpenDates) {
             setShowScreenShadow(true)
             // להכניס פה את הקוד שזה הופך בחזרה למרכז התפריט של הפילטור לפי תאריכים והכל
-            setHideMiddleMenu(true);
+            setIsScrolledDown(true);
         }
         if (isOpenDates === false) {
             console.log('isOpenDates === false', isOpenDates === false);
@@ -114,7 +113,7 @@ export function AppHeader() {
                     </div>
                 </NavLink>
 
-                {hideMiddleMenu && <nav className='mid-three-menu flex column justify-center mid-header'>
+                {isScrolledDown && <nav className='mid-three-menu flex column justify-center mid-header'>
                     <div>
                         <button
                             className={`header-btns clean-btn ${selectedButton === 'stays' ? 'selected' : ''}`}
@@ -168,7 +167,7 @@ export function AppHeader() {
                 </div>
             </div>
 
-            <div className='flex justify-center'> {/* ASI .asi */}
+            {isScrolledDown && <div className='flex justify-center'>
                 <form className="search-form justify-center flex row">
                     <div className='form-control flex column'>
                         <div className='destination-title fs12 blacktxt fw600'>Where</div>
@@ -199,9 +198,11 @@ export function AppHeader() {
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
-                <Space direction="vertical" size={12}>
-                </Space>
-            </div>
+            </div>}
+            {!isScrolledDown &&
+                <div className="small-search-form">
+                    <h1>test</h1>
+                </div>}
             <div className="screen-shadow" style={{ display: showScreenShadow ? 'block' : 'none' }}></div>
             {/* 
                 {user &&

@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 export function StayFilter() {
     const [scrolledLeft, setScrolledLeft] = useState(false);
@@ -59,7 +61,9 @@ export function StayFilter() {
     return (
         <div className='filters-layout divider'>
             {scrolledLeft && (
-                <button className="previous-filters" onClick={handlePreviousScroll}>Previous</button>
+                <div className='flex justify-center align-center'>
+                    <NavigateBeforeIcon className="previous-filters" onClick={handlePreviousScroll} />
+                </div>
             )}
             <div ref={filterContainerRef} className="emojis-filters ">
                 {Object.entries(filters[0]).map(([key, value], filterIndex) => (
@@ -72,7 +76,9 @@ export function StayFilter() {
                 ))}
             </div>
             {scrolledRight && (
-                <button className="next-filters" onClick={handleNextScroll}>Next</button>
+                <div className='flex justify-center align-center'>
+                    <NavigateNextIcon className="next-filters" onClick={handleNextScroll} />
+                </div>
             )}
             <button>Filters</button>
         </div>
