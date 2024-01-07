@@ -110,17 +110,23 @@ export function AppHeader() {
         <header className={!isScrolledDown?"app-header grid header-inserted":"app-header grid" }>
             {/* <div className='header-content flex justify-between align-center'> */}
             <div className='header-content'>
-                <NavLink to='/'>
                     <div className='logo-container flex justify-center align-center right-header'>
+                <NavLink className='flex justify-center align-center' to='/'>
+                    
                         <img src={LOGO_ICON} alt='logo icon' className='logo-header-img' />
                         <img src={LOGO} alt='logo name' className='logo-header-txt' />
-                    </div>
                 </NavLink>
+                    </div>
                 {!isScrolledDown &&
                 <div className="small-search-form flex align-center">
-                    <button>Anywhere</button>
-                    <button>Any week</button>
-                    <button>Add guests</button>
+
+                    <button className='btn-small-search-bar  fs14'>Anywhere</button>
+                    <span className="splitter"></span>
+                    <button className='btn-small-search-bar  fs14'>Any week</button>
+                    <span className="splitter"></span>
+                    <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
+
+                    
                 </div>}
 
                 <nav className={!isScrolledDown?'mid-three-menu flex column justify-center mid-header mid-three-menu-close':'mid-three-menu flex column justify-center mid-header'}>
