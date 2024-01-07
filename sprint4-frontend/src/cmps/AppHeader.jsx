@@ -71,12 +71,12 @@ export function AppHeader() {
             if (isOpenGuests && guestsRef.current && !guestsRef.current.contains(event.target)) {
                 setTimeout(() => {
                     setIsOpenGuests(false);
-                }, 100);
+                }, 120);
             }
             if (isOpenDates && guestsRef.current && !guestsRef.current.contains(event.target)) {
                 setTimeout(() => {
                     setIsOpenDates(false)
-                }, 100);
+                }, 120);
             }
         } // לא לשלב בין שתי התנאים זה יוצר באג!
         document.addEventListener('mousedown', handleClickOutside);
@@ -149,16 +149,17 @@ export function AppHeader() {
                         <img src={LOGO} alt='logo name' className='logo-header-txt' />
                     </NavLink>
                 </div>
-                <div className={!isScrolledDown ? "small-search-form flex align-center small-form-expended" : "small-search-form flex align-center"}>
+                {!isScrolledDown &&
+                    <div className="small-search-form flex align-center">
 
-                    <button className='btn-small-search-bar  fs14'>Anywhere</button>
-                    <span className="splitter"></span>
-                    <button className='btn-small-search-bar  fs14'>Any week</button>
-                    <span className="splitter"></span>
-                    <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
+                        <button className='btn-small-search-bar  fs14'>Anywhere</button>
+                        <span className="splitter"></span>
+                        <button className='btn-small-search-bar  fs14'>Any week</button>
+                        <span className="splitter"></span>
+                        <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
 
 
-                </div>}
+                    </div>}
 
                 <nav className={!isScrolledDown ? 'mid-three-menu flex column justify-center mid-header mid-three-menu-close' : 'mid-three-menu flex column justify-center mid-header'}>
                     <div className='header-btns-container'>
@@ -214,9 +215,8 @@ export function AppHeader() {
                 </div>
             </div>
 
-            {/* {isScrolledDown &&  */}
-            <div className='flex justify-center'>
-                <form className={!isScrolledDown ? "search-form justify-center flex row header-search-inserted" : "search-form justify-center flex row"}>
+            {isScrolledDown && <div className='flex justify-center'>
+                <form className="search-form justify-center flex row">
                     <div className='form-control flex column'>
                         <div className='destination-title fs12 blacktxt fw600'>Where</div>
                         <input type="text" placeholder="Search destinations" className='destination-input'></input>
@@ -226,7 +226,7 @@ export function AppHeader() {
                         <div className='fs12 blacktxt fw600'>check in</div>
                         {selectedDates.checkIn === null && <div className='fs14 blacktxt fw600'>Add dates</div>}
                         {selectedDates.checkIn && <div className='fs14 blacktxt fw600'>{selectedDates.checkIn.toLocaleDateString()}</div>}                    </div>
-                    {isOpenDates && <div className="calendar-modal">
+                    {isOpenDates && <div>
                         <Calendar />
                     </div>}
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
@@ -235,7 +235,7 @@ export function AppHeader() {
                         {selectedDates.checkOut && <div className='fs14 blacktxt fw600'>{selectedDates.checkOut.toLocaleDateString()}</div>}
                     </div>
                     {isOpenDates && (
-                        <div ref={guestsRef} className="guests-modal">
+                        <div ref={guestsRef}>
                             <Calendar />
                         </div>
                     )}
@@ -254,8 +254,7 @@ export function AppHeader() {
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
-            </div>
-            {/* } */}
+            </div>}
 
             <div className="screen-shadow" style={{ display: showScreenShadow ? 'block' : 'none' }}></div>
             {/* 
