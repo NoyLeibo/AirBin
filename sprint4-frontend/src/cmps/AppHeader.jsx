@@ -149,8 +149,8 @@ export function AppHeader() {
                         <img src={LOGO} alt='logo name' className='logo-header-txt' />
                     </NavLink>
                 </div>
-                {!isScrolledDown &&
-                    <div className="small-search-form flex align-center">
+
+                    <div className={!isScrolledDown?"small-search-form flex align-center small-form-expended":"small-search-form flex align-center"}>
 
                         <button className='btn-small-search-bar  fs14'>Anywhere</button>
                         <span className="splitter"></span>
@@ -159,7 +159,7 @@ export function AppHeader() {
                         <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
 
 
-                    </div>}
+                    </div>
 
                 <nav className={!isScrolledDown ? 'mid-three-menu flex column justify-center mid-header mid-three-menu-close' : 'mid-three-menu flex column justify-center mid-header'}>
                     <div className='header-btns-container'>
@@ -215,8 +215,9 @@ export function AppHeader() {
                 </div>
             </div>
 
-            {isScrolledDown && <div className='flex justify-center'>
-                <form className="search-form justify-center flex row">
+           <div className='flex justify-center'>
+                <form className={!isScrolledDown?"search-form justify-center flex row header-search-inserted":
+            "search-form justify-center flex row"}>
                     <div className='form-control flex column'>
                         <div className='destination-title fs12 blacktxt fw600'>Where</div>
                         <input type="text" placeholder="Search destinations" className='destination-input'></input>
@@ -256,7 +257,7 @@ export function AppHeader() {
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
-            </div>}
+            </div>
 
             <div className="screen-shadow" style={{ display: showScreenShadow ? 'block' : 'none' }}></div>
             {/* 
