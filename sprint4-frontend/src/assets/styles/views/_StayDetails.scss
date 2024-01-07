@@ -1,8 +1,7 @@
 .stay-details-container {
-  display: grid;
-  grid-template-columns: 40px 1fr 40px;
+  padding: 3em;
   list-style: none;
-  padding-inline-start: 0px;
+  // padding-inline-start: 0px;
   justify-content: center;
 
   main {
@@ -15,54 +14,36 @@
   .stay-dets {
     grid-column: 2;
   }
-  .imgs-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-    border-radius: 12px;
-    margin-top: 10px;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .imgs-grid .img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: filter 0.2s ease-in-out;
-  }
-
-  .imgs-grid .img:hover {
-    filter: brightness(0.8);
-  }
-
-  .img1 {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-  }
 
   .stay-dets-summary {
-    max-width: 70%;
-    grid-column: 2;
+    padding: 0.5em;
     padding-block: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    // grid-template-rows: 1fr;
+    // display: grid;
+    // grid-template-columns: 1fr 370px;
+    display: flex;
+    justify-content: space-between;
     .stay-dets-highlight {
       grid-row: 2;
     }
 
+    .more-details {
+      width: 60%;
+    }
+
     .aircover {
       height: 26px;
-      object-fit: contain;
       width: 123px;
+      object-fit: contain;
       margin: 0 0 15px;
     }
 
     .stay-owner-review {
       padding-block: 2rem;
+    }
+    .sticky-card {
+      // position: sticky;
+      //grid-column: 2;
+      justify-self: end;
     }
   }
 
@@ -72,33 +53,15 @@
     width: 50%;
   }
 
-  .sticky-card {
-    // position: sticky;
-    grid-column: 2;
-  }
-
   @media (max-width: 550px) {
-    grid-template-columns: min-content;
-    .imgs-grid {
-      border-radius: 12px;
+    .stay-details-container {
+      display: grid;
+      grid-template-columns: 40px 1fr 40px;
+    }
+    .stay-dets-summary {
+      display: grid;
       grid-template-columns: 1fr;
-      margin-top: 10px;
-      overflow: hidden;
-      width: 100%;
     }
-    .img {
-      border-radius: 12px;
-      overflow: hidden;
-
-      margin-top: 10px;
-
-      &:not(:first-child) {
-        display: none;
-      }
-    }
-    // .sticky-card {
-    //   display: none;
-    // }
   }
 
   // @media (min-width: 550px) {
