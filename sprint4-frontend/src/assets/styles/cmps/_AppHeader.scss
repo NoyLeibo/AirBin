@@ -174,12 +174,30 @@
     }
 }
 
+.screen-shadow {
+    position: fixed;
+    top: 153px;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000068;
+    display: none;
+    z-index: 1;
+    /* Initially hidden */
+}
+
+.screen-shadow-visible {
+    display: block;
+    /* Shown when this class is applied */
+}
+
 .search-form {
     border: 1px solid #DDDDDD;
     border-radius: 32px;
     font-size: 12px;
     box-shadow: 0 3px 12px #0000001a, 0 1px 2px #00000014;
     cursor: pointer;
+    // margin-bottom: 10px; ??
 
     .header-search-btn {
         width: 48px;
