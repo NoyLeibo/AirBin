@@ -1,6 +1,18 @@
-@media (max-width: 550px) {
-  .stay-details-stickyCard {
-    display: none;
+.picker-container {
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  .check-out {
+    border-left: 1px solid #b0b0b0;
+  }
+
+  .stay-dates > button {
+    font-size: 0.8em;
+    gap: 0;
+    width: 50%;
+  }
+  .guest-picker {
+    border-top: 1px solid #b0b0b0;
   }
 }
 
@@ -15,52 +27,53 @@
   z-index: 3;
   padding: 20px;
   box-shadow: #0000001f 0 6px 16px;
-  transition: transform 0.3s ease;
   background-color: #fff;
   border: 1px solid #e1e1e1;
   border-radius: 8px;
+
+  .reserve-btn {
+    background-image: radial-gradient(
+      circle,
+      #ff385c 0,
+      #e61e4d 27.5%,
+      #e31c5f 40%,
+      #d70466 57.5%,
+      #bd1e59 75%,
+      #bd1e59 100%
+    );
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Circular-Medium";
+    font-size: 1.2rem;
+    min-width: 200px;
+    padding: 13px 23px;
+    text-align: center;
+    width: 100%;
+  }
 }
 
-.stay-details-stickyCard h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.reservation-dets {
+  margin-bottom: 15px;
+  div {
+    border-bottom: 1px solid black;
+  }
 }
 
-.stay-details-stickyCard .price {
-  color: #ff385c;
+.service-fee {
+  margin-bottom: 15px;
+  div {
+    border-bottom: 1px solid black;
+  }
 }
 
-.stay-details-stickyCard label {
-  margin-bottom: 5px;
-  color: #555;
+.total-reservation-count {
+  padding-top: 24px;
 }
 
-.stay-details-stickyCard button {
-  background-color: #ff385c;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 15px;
-}
-
-.stay-details-stickyCard .charge-info {
-  margin-top: 10px;
-  color: #777;
-}
-
-.stay-details-stickyCard .total-reservation-count {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-}
-
-.stay-details-stickyCard .subtotal {
-  color: #555;
-}
-
-.stay-details-stickyCard .total {
-  color: #ff385c;
+@media (max-width: 550px) {
+  .stay-details-stickyCard {
+    display: none;
+  }
 }
