@@ -3,7 +3,7 @@
   list-style: none;
   // padding-inline-start: 0px;
   justify-content: center;
-  color: black;
+  color: $clblack;
 
   .title {
     font-size: 1.625rem;
@@ -13,7 +13,7 @@
     h4 {
       font-family: "Circular";
       font-size: 1.1rem;
-      color: grey;
+      color: $clgrey;
     }
   }
   main {
@@ -21,12 +21,32 @@
   }
   h2 {
     font-family: "Circular-Bold";
-    color: black;
+    color: $clr1;
   }
   h3 {
     margin: 0;
   }
+  .stay-dets-rating-link{
+    text-decoration: underline;
+    color: $clblack;
+  }
+  .apt-host-info{
+    padding-left: 24px;
+  }
+  .apt-dets-light-con{
+    display: flex;
+    .apt-dets-light-icon{
+      width: 24px;
+    }
+    .apt-dets-light-info{
+      padding-left: 24px;
+      margin-bottom: 0.8em;
 
+      h3{
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
   .stay-dets-summary {
     padding: 0.5em;
     padding-block: 2rem;
