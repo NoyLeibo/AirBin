@@ -77,7 +77,7 @@ export function StayIndex() {
 
   if (isLoading) {
     console.log('no stays')
-    return (<div>
+    return (<div className="main-stay-index">
       <div className="loader">
         {Array.from({ length: 6 }).map((_, index) => (
           <span key={index} style={{ animationDelay: `${index * 0.15}s` }}></span>
@@ -87,9 +87,8 @@ export function StayIndex() {
   }
 
   return (
-    <main>
+    <main className="main-container main-stay-index">
       <StayFilter />
-      <button onClick={onAddStay}>Add Stay ⛐</button>
       <StayList stays={stays} />
     </main>
 

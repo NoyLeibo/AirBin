@@ -4,7 +4,7 @@ import { StayIndex } from "./pages/StayIndex.jsx";
 import { StayDetails } from "./pages/StayDetails.jsx";
 import { ReviewIndex } from "./pages/ReviewIndex.jsx";
 import { ChatApp } from "./pages/Chat.jsx";
-import { AdminApp } from "./pages/AdminIndex.jsx";
+import { BackOffice } from "./pages/BackOffice.jsx";
 import { PaymentPage } from "./pages/PaymentPage.jsx";
 
 // Routes accesible from the main navigation (in AppHeader)
@@ -40,9 +40,14 @@ const routes = [
     label: "About us",
   },
   {
-    path: "admin",
-    component: <AdminApp />,
-    label: "Admin Only",
+    path: "BackOffice",
+    component: <BackOffice />,
+    label: "Back Office",
+  },
+  {
+    path: "BackOffice",
+    component: <BackOffice />,
+    label: "Back Office",
   },
   {
     path: "payment/:stayId",
