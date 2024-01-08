@@ -2,7 +2,7 @@ import { stayService } from '../services/stay.service.local.js'
 import { userService } from '../services/user.service.js'
 import { store } from './store.js'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
-import { ADD_STAY, ADD_TO_CART, CLEAR_CART, REMOVE_STAY, REMOVE_FROM_CART, SET_STAYS, UNDO_REMOVE_STAY, UPDATE_STAY, SET_IS_LOADING, SET_SELECTED_DATES } from './stay.reducer.js'
+import { ADD_STAY, ADD_TO_CART, CLEAR_CART, REMOVE_STAY, REMOVE_FROM_CART, SET_STAYS, UNDO_REMOVE_STAY, UPDATE_STAY, SET_IS_LOADING, SET_SELECTED_DATES, SET_GUESTS_NUMBER } from './stay.reducer.js'
 import { SET_SCORE } from './user.reducer.js'
 
 // Action Creators:
@@ -41,12 +41,14 @@ export async function loadStay() {
     } finally {
         store.dispatch({ type: SET_IS_LOADING, isLoading: false })
     }
-
 }
 
 export function setSelectedDates(selectedDates) {
-    console.log(selectedDates);
     store.dispatch({ type: SET_SELECTED_DATES, selectedDates })
+}
+
+export function setSelectedGuests(selectedGuests) {
+    return { type: SET_GUESTS_NUMBER, selectedGuests }
 }
 
 export async function removeStay(stayId) {

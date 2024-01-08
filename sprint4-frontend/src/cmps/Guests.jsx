@@ -1,32 +1,69 @@
 import React, { useState } from 'react';
+import { setSelectedGuests } from '../store/stay.actions';
+import { useSelector, useDispatch } from "react-redux";
 
 export function Guests() {
-    const [numberOfAdults, setNumberOfAdults] = useState(0);
-    const [numberOfChildren, setNumberOfChildren] = useState(0);
-    const [numberOfInfants, setNumberOfInfants] = useState(0);
-    const [numberOfPets, setNumberOfPets] = useState(0); // Assuming this is for pets
+    const selectedGuests = useSelector((storeState) => storeState.stayModule.selectedGuests)
+    const dispatch = useDispatch();
+
 
     const handleAdultsChange = (increment, event) => {
         event.preventDefault();
-        setNumberOfAdults(numberOfAdults + increment);
-    };
-
+        const newNumberOfAdults = selectedGuests.Adults + increment;
+        if (newNumberOfAdults >= 0) {
+            const updatedGuests = {
+                ...selectedGuests,
+                Adults: newNumberOfAdults
+            };
+            dispatch(setSelectedGuests(updatedGuests))
+        };
+    }
     const handleChildrenChange = (increment, event) => {
         event.preventDefault();
-        setNumberOfChildren(numberOfChildren + increment);
-    };
-
+        const newNumberOfChildren = selectedGuests.Children + increment;
+        if (newNumberOfChildren >= 0) {
+            if (selectedGuests.Adults === 0) {
+                selectedGuests.Adults = 1
+            }
+            const updatedGuests = {
+                ...selectedGuests,
+                Children: newNumberOfChildren
+            };
+            dispatch(setSelectedGuests(updatedGuests))
+            // setNumberOfChildren(numberOfChildren + increment);
+        };
+    }
     const handleInfantsChange = (increment, event) => {
         event.preventDefault();
-        setNumberOfInfants(numberOfInfants + increment);
-    };
+        const newNumberOfInfants = selectedGuests.Infants + increment;
+        if (newNumberOfInfants >= 0) {
+            if (selectedGuests.Adults === 0) {
+                selectedGuests.Adults = 1
+            }
+            const updatedGuests = {
+                ...selectedGuests,
+                Infants: newNumberOfInfants
+            };
+            dispatch(setSelectedGuests(updatedGuests))
+            // setNumberOfInfants(numberOfInfants + increment);
+        };
+    }
     const handlePetsChange = (increment, event) => {
         event.preventDefault();
-        setNumberOfPets(numberOfPets + increment);
-    };
+        const newNumberOfPets = selectedGuests.Pets + increment;
+        if (newNumberOfPets >= 0) {
+            if (selectedGuests.Adults === 0) {
+                selectedGuests.Adults = 1
+            }
+            const updatedGuests = {
+                ...selectedGuests,
+                Pets: newNumberOfPets
+            };
+            dispatch(setSelectedGuests(updatedGuests))
+            // setNumberOfPets(numberOfPets + increment);
+        };
+    }
 
-
-    // cursor: no-drop;
     return (
         <section className='guest-modal flex column'>
             <div>
@@ -37,11 +74,15 @@ export function Guests() {
                         <span className='guest-modal-subtitle fs12'>Ages 13 or above</span>
                     </div>
                     <div className='change-guests flex row align-center justify-between'>
-                        {numberOfAdults === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
-                        {numberOfAdults > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handleAdultsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
-                        <span className='fs16'>{numberOfAdults}</span>
+                        {
+                            (selectedGuests.Adults === 0 || (selectedGuests.Adults === 1 && selectedGuests.Children === 1) || (selectedGuests.Adults === 1 && selectedGuests.Infants === 1) || (selectedGuests.Adults === 1 && selectedGuests.Pets === 1)) ?
+                                <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div> :
+                                <button className='clean-btn change-guest-btn' onClick={(e) => handleAdultsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>
+                        }
+                        <span className='fs16'>{selectedGuests.Adults}</span>
                         <button className='clean-btn change-guest-btn' onClick={(e) => handleAdultsChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
                     </div>
+
                 </div>
                 <div className='guest-splitter'></div>
 
@@ -52,9 +93,9 @@ export function Guests() {
                         <span className='guest-modal-subtitle fs12'>Ages 2-12</span>
                     </div>
                     <div className='change-guests flex row align-center justify-between'>
-                        {numberOfChildren === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
-                        {numberOfChildren > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handleChildrenChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
-                        <span className='fs16'>{numberOfChildren}</span>
+                        {selectedGuests.Children === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
+                        {selectedGuests.Children > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handleChildrenChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
+                        <span className='fs16'>{selectedGuests.Children}</span>
                         <button className='clean-btn change-guest-btn' onClick={(e) => handleChildrenChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
                     </div>
                 </div>
@@ -67,10 +108,10 @@ export function Guests() {
                         <span className='guest-modal-subtitle fs12'>Under 2</span>
                     </div>
                     <div className='change-guests flex row align-center justify-between'>
-                        {numberOfInfants === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
-                        {numberOfInfants > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handleInfantsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
+                        {selectedGuests.Infants === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
+                        {selectedGuests.Infants > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handleInfantsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
 
-                        <span className='fs16'>{numberOfInfants}</span>
+                        <span className='fs16'>{selectedGuests.Infants}</span>
                         <button className='clean-btn change-guest-btn' onClick={(e) => handleInfantsChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
                     </div>
                 </div>
@@ -83,9 +124,9 @@ export function Guests() {
                         <span className='guest-modal-subtitle fs12'>Bringing a service animal?</span>
                     </div>
                     <div className='change-guests flex row align-center justify-between'>
-                        {numberOfPets === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
-                        {numberOfPets > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handlePetsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
-                        <span className='fs16'>{numberOfPets}</span>
+                        {selectedGuests.Pets === 0 && <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i class="fa-solid fa-minus fa-l"></i></div>}
+                        {selectedGuests.Pets > 0 && <button className='clean-btn change-guest-btn' onClick={(e) => handlePetsChange(-1, e)}><i class="fa-solid fa-minus fa-l"></i></button>}
+                        <span className='fs16'>{selectedGuests.Pets}</span>
                         <button className='clean-btn change-guest-btn' onClick={(e) => handlePetsChange(1, e)}><i class="fa-solid fa-plus fa-l"></i></button>
                     </div>
                 </div>

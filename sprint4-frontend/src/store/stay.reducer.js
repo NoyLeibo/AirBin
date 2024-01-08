@@ -8,13 +8,15 @@ export const UNDO_REMOVE_STAY = 'UNDO_REMOVE_STAY'
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 export const SET_IS_LOADING = 'SET_IS_LOADING'
 export const SET_SELECTED_DATES = 'SET_SELECTED_DATES'
+export const SET_GUESTS_NUMBER = 'SET_GUESTS_NUMBER'
 
 const initialState = {
     stays: [],
     cart: [],
     lastRemovedStay: null,
     isLoading: false,
-    selectedDates: { checkIn: null, checkOut: null }
+    selectedDates: { checkIn: null, checkOut: null },
+    selectedGuests: { Adults: 0, Children: 0, Infants: 0, Pets: 0 }
 }
 
 export function stayReducer(state = initialState, action) {
@@ -51,6 +53,8 @@ export function stayReducer(state = initialState, action) {
             return { ...state, isLoading: action.isLoading }
         case SET_SELECTED_DATES:
             return { ...state, selectedDates: action.selectedDates }
+        case SET_GUESTS_NUMBER:
+            return { ...state, selectedGuests: action.selectedGuests }
         case UNDO_REMOVE_STAY:
             if (state.lastRemovedStay) {
                 newState = { ...state, stays: [...state.stays, state.lastRemovedStay], lastRemovedStay: null }
