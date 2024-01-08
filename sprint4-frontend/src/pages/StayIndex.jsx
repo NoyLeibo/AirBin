@@ -12,6 +12,7 @@ import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
 import { userService } from "../services/user.service.js";
 import { stayService } from "../services/stay.service.js";
 import { StayList } from "../cmps/StayList.jsx";
+import { ChatWindow } from "../cmps/Chat.jsx";
 import { StayFilter } from "../cmps/StayFilter.jsx";
 import { setFilterBy } from "../store/stay.actions.js";
 
@@ -102,6 +103,8 @@ export function StayIndex() {
     <main className=" main-stay-index">
       <StayFilter filterBy={filterBy} onSetFilter={onSetFilter} />
       <StayList stays={stays} />
+      <ChatWindow />
+
     </main>
   );
 }
