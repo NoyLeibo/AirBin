@@ -178,7 +178,7 @@ function _createStays() {
           by: {
             _id: "u213",
             fullname: "James Carter",
-            imgUrl: "/img/james.jpg",
+            imgUrl: "https://a0.muscache.com/im/users/23331610/profile_pic/1415110296/original.jpg?im_w=240",
           },
         },
         {
@@ -188,7 +188,7 @@ function _createStays() {
           by: {
             _id: "u214",
             fullname: "Emily Harris",
-            imgUrl: "/img/emily.jpg",
+            imgUrl: "https://a0.muscache.com/im/pictures/user/User-26787824/original/362eb154-2928-4d8d-acc3-92f9a1fcd1ab.jpeg?im_w=240",
           },
         },
         {
@@ -198,7 +198,7 @@ function _createStays() {
           by: {
             _id: "u215",
             fullname: "Michael Brown",
-            imgUrl: "/img/michael.jpg",
+            imgUrl: "https://a0.muscache.com/im/pictures/user/87b83be7-edfc-4753-aa2a-89673e8d5f74.jpg?im_w=240",
           },
         },
         {
@@ -208,7 +208,7 @@ function _createStays() {
           by: {
             _id: "u216",
             fullname: "Linda Johnson",
-            imgUrl: "/img/linda.jpg",
+            imgUrl: "https://a0.muscache.com/im/pictures/user/933b5037-d93b-4e1c-af0a-f81ba7fdff71.jpg?im_w=240",
           },
         },
         {
@@ -218,7 +218,7 @@ function _createStays() {
           by: {
             _id: "u217",
             fullname: "Robert Smith",
-            imgUrl: "/img/robert.jpg",
+            imgUrl: "https://a0.muscache.com/im/pictures/user/e105ca81-b60f-47ff-9944-9166beca8ba2.jpg?im_w=240",
           },
         },
         {
@@ -228,7 +228,7 @@ function _createStays() {
           by: {
             _id: "u218",
             fullname: "Sophia Wilson",
-            imgUrl: "/img/sophia.jpg",
+            imgUrl: "https://a0.muscache.com/im/pictures/user/92cafe09-9d5a-4971-9985-48002f0c35ae.jpg?im_w=240",
           },
         },
       ],
