@@ -19,7 +19,7 @@ window.cs = stayService;
 
 async function query(
   filterBy = {
-    placeType: "",
+    placeType: [],
     priceRange: [0, 2000],
     bedrooms: "",
     beds: "",
@@ -46,8 +46,20 @@ async function query(
       return stay.bedrooms === filterBy.bedrooms;
     });
   }
+  if (filterBy.placeType.length > 0) {
+    stays = filterStaysByTags(filterBy.placeType, stays);
+  }
   console.log(stays);
   return stays;
+}
+
+function filterStaysByTags(placeType, stays) {
+  const updatedStayArray = stays.filter((stay) => {
+    // Check if any tag from tagArray is present in the stay's tags
+    return placeType.includes(stay.type);
+  });
+
+  return updatedStayArray;
 }
 
 function isInPriceRange(priceRange, stay) {
@@ -524,7 +536,7 @@ function _createStays() {
       {
         _id: "s109",
         name: "Ribeira Charming Duplex",
-        type: "House",
+        type: "Arctic",
         imgUrls: [
           "https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/10d2c21f-84c2-46c5-b20b-b51d1c2c971a.jpeg?im_w=960",
           "https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/e3beaf52-13ab-44ed-bbfa-56ccf43bab98.jpeg?im_w=480",
