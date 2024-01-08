@@ -49,7 +49,7 @@ export function StayDetails() {
   if (!stay) {
     console.log("no stays")
     return (
-      <div className="main-stay-index">
+      <div className="stay-details-container">
         <div className="loader">
           {Array.from({ length: 6 }).map((_, index) => (
             <span
@@ -62,7 +62,7 @@ export function StayDetails() {
     )
   }
   return (
-    <div className="stay-details-container flex column">
+    <div className="stay-details-container">
       <div className="title">
         <h2>{stay.name}</h2>
       </div>

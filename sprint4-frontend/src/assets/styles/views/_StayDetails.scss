@@ -1,9 +1,24 @@
 .stay-details-container {
-  padding: 3em;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+
+
+
+  // padding: 3em;
   list-style: none;
   // padding-inline-start: 0px;
   justify-content: center;
   color: $clblack;
+
+  @media (min-width: 1300px) {
+    
+    grid-template-columns: 1fr 1120px 1fr;
+
+    > * {
+      grid-column: 2;
+    }
+  }
 
   .title {
     font-size: 1.625rem;
@@ -98,12 +113,12 @@
   .apt-rating-dets-con {
     display: grid;
     grid-auto-flow: column;
-
+     
     .apt-rating-dets {
       margin-top: 10px;
       font-size: 16px;
       height: 84px;
-
+    
       .title-rating-det {
         margin-bottom: 2px;
       }
@@ -190,6 +205,8 @@
       }
     }
   }
+
+  
 
   @media (max-width: 550px) {
     .stay-details-container {
