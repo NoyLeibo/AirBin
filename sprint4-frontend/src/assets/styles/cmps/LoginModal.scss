@@ -1,0 +1,27 @@
+.screen-shadow-login {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #65656588;
+    z-index: 1;
+}
+
+.login-modal {
+    position: absolute;
+    width: rem(568px);
+    height: rem(500px);
+    background-color: rgb(255, 255, 255);
+    right: 35%;
+    bottom: 30%;
+    z-index: 10;
+    border-radius: 20px;
+
+    .login-modal-title {
+        font-size: rem(25px);
+        height: rem(80px);
+        text-align: center;
+        border-bottom: 1px solid rgb(170, 168, 168);
+    }
+}

@@ -258,14 +258,11 @@
   width: 100vw;
   height: 100vh;
   background-color: #00000068;
-  display: none;
   z-index: 1;
-  /* Initially hidden */
 }
 
 .screen-shadow-visible {
   display: block;
-  /* Shown when this class is applied */
 }
 
 .search-form {

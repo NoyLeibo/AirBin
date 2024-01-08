@@ -15,7 +15,7 @@ import {
   SET_SELECTED_DATES,
   SET_GUESTS_NUMBER,
 } from "./stay.reducer.js";
-import { SET_SCORE } from "./user.reducer.js";
+import { SET_SCORE, SET_USERS } from "./user.reducer.js";
 import { SET_FILTER_BY } from "./stay.reducer.js";
 
 // Action Creators:
