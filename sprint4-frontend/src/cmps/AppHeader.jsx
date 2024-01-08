@@ -80,12 +80,17 @@ export function AppHeader() {
                     setIsOpenDestinations(false)
                 }, 150);
             }
+            if (isMenuOpen && gRef.current && !gRef.current.contains(event.target)) {
+                setTimeout(() => {
+                    setIsMenuOpen(false)
+                }, 150);
+            }
         } // לא לשלב בין שלושת התנאים זה יוצר באג!
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [isOpenGuests, isOpenDates, isOpenDestinations]);
+    }, [isOpenGuests, isOpenDates, isOpenDestinations, isMenuOpen]);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -167,14 +172,11 @@ export function AppHeader() {
                 </div>
 
                 <div className={!isScrolledDown ? "small-search-form flex align-center small-form-expended" : "small-search-form flex align-center"}>
-
                     <button className='btn-small-search-bar  fs14'>Anywhere</button>
                     <span className="splitter"></span>
                     <button className='btn-small-search-bar  fs14'>Any week</button>
                     <span className="splitter"></span>
                     <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
-
-
                 </div>
 
                 <nav className={!isScrolledDown ? 'mid-three-menu flex column justify-center mid-header mid-three-menu-close' : 'mid-three-menu flex column justify-center mid-header'}>
@@ -217,17 +219,17 @@ export function AppHeader() {
                         </svg>
                     </button>
                     {isMenuOpen && (
-                        <div className="hamburger-menu">
+                        <div ref={gRef} className="hamburger-menu">
                             <div className='manu-one flex column'>
-                                <NavLink to="/login" >Log in</NavLink>
+                                <NavLink to="/login" className="bold" >Log in</NavLink>
                                 <NavLink to="/signup" >Sign up</NavLink>
                             </div><div className='flex column'>
-                                <a href="#item3">Gift cards</a>
-                                <a href="#item4">Airbnb your home</a>
-                                <a href="#item5">Help center</a>
+                                <NavLink to="/signup" >Gift cards</NavLink>
+                                <NavLink to="/signup" >Airbnb your home</NavLink>
+                                <NavLink to="/signup" >Help center</NavLink>
                             </div>
                         </div>
-                    )} {/* will open the isMenuOpen modal if true */}
+                    )}
                 </div>
             </div>
 

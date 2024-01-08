@@ -224,7 +224,7 @@ function _createStays() {
         {
           id: "r206",
           txt: "The infinity pool is just amazing - spent most of our time enjoying the view!",
-          rate: 5,
+          rate: 4,
           by: {
             _id: "u213",
             fullname: "James Carter",
@@ -324,7 +324,7 @@ function _createStays() {
         {
           id: "r102",
           txt: "Great location and fantastic city view!",
-          rate: 5,
+          rate: 2,
           by: {
             _id: "u104",
             fullname: "user3",
