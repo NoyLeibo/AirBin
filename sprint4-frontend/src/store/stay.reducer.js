@@ -21,6 +21,7 @@ const initialState = {
   selectedDates: { checkIn: null, checkOut: null },
   selectedGuests: { Adults: 0, Children: 0, Infants: 0, Pets: 0 },
   filterBy: stayService.getDefaultFilter(),
+  // selectedPriceRange: [0, 2000]
 };
 
 export function stayReducer(state = initialState, action) {
