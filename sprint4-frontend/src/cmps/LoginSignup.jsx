@@ -57,12 +57,8 @@ export function LoginSignup(props) {
   return (
     <div class="card">
       <div class="login-signup">
-        {/* <header>
-          <div>Log in</div>
-        </header> */}
         <div class="form-container">
           <section>
-            {/* <label for="username">Username</label> */}
             <div>
               <input
                 name="username"
@@ -71,7 +67,7 @@ export function LoginSignup(props) {
                 placeholder="Enter username"
               />
             </div>
-            {/* <label for="password">Password</label> */}
+
             <div>
               <input type="password" placeholder="Enter password" />
             </div>

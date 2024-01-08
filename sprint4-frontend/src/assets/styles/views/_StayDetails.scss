@@ -1,9 +1,21 @@
 .stay-details-container {
-  padding: 3em;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+
+  // padding: 3em;
   list-style: none;
   // padding-inline-start: 0px;
   justify-content: center;
   color: $clblack;
+
+  @media (min-width: 1300px) {
+    grid-template-columns: 1fr 1120px 1fr;
+
+    > * {
+      grid-column: 2;
+    }
+  }
 
   .title {
     font-size: 1.625rem;
@@ -134,40 +146,37 @@
     }
   }
 
-  .host-apt-det-ext{
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     column-gap: 1em ;
-    .host-info-ext{
-      
-      .host-profile-ext{
-        
-        .host-avatar-dets{
+  .host-apt-det-ext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    .host-info-ext {
+      .host-profile-ext {
+        .host-avatar-dets {
           margin-left: 1em;
           margin-bottom: 1em;
         }
       }
-      .host-icon-ext{
-        margin:auto 0;
+      .host-icon-ext {
+        margin: auto 0;
         display: grid;
         grid-auto-flow: column;
-        grid-template-columns: repeat(auto-fill,max-content);
+        grid-template-columns: repeat(auto-fill, max-content);
         margin-bottom: 1em;
       }
     }
-    .host-ctn-con{
+    .host-ctn-con {
       width: 250px;
-     display: flex;
-     flex-direction: column;
-     align-items: start;
-     justify-content: center;
-      .host-ctn-content{
-        p{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      .host-ctn-content {
+        p {
           margin-bottom: 8px;
         }
-        
       }
-      .btn-host-ctn{
+      .btn-host-ctn {
         margin-top: 1.5em;
         font-size: 16px;
         font-weight: 600;
@@ -175,38 +184,56 @@
         background-color: #fff;
         border: 1px solid black;
         border-radius: 0.5em;
-        padding:13px 24px 13px 23px ;
+        padding: 13px 24px 13px 23px;
       }
-      .protect-host{
-        p{
+      .protect-host {
+        p {
           margin: 0;
         }
       }
-      .protect-host-icon{
+      .protect-host-icon {
         display: flex;
         align-items: center;
-        justify-items:center ;
+        justify-items: center;
         margin-right: 10px;
       }
     }
   }
 
-  @media (max-width: 550px) {
-    .stay-details-container {
-      display: grid;
-      grid-template-columns: 40px 1fr 40px;
-    }
-    .stay-dets-summary {
-      max-width: fit-content;
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-  }
+  //   @media (max-width: 550px) {
+  //     .stay-details-container {
+  //       display: grid;
+  //       grid-template-columns: 40px 1fr 40px;
+  //     }
+  //     .stay-dets-summary {
+  //       max-width: fit-content;
+  //       display: grid;
+  //       grid-template-columns: 1fr;
+  //     }
+  //   }
 }
 @media (max-width: 550px) {
   .stay-details-container {
     grid-template-columns: 1fr;
+    padding: 0.5em;
+    width: 100%;
     // width: fit-content;
+    .imgs-grid {
+      width: 320px !important;
+    }
+
+    .stay-dets-summary {
+      width: 100%;
+    }
+    .stay-header {
+      width: 320px;
+    }
+    .apt-host-details {
+      width: 320px;
+    }
+    .apt-extra-dets {
+      width: 320px;
+    }
   }
 }
 
