@@ -85,7 +85,6 @@ export function StayIndex() {
   }
 
   if (isLoading) {
-    console.log("no stays");
     return (
       <div className="main-stay-index">
         <div className="loader">

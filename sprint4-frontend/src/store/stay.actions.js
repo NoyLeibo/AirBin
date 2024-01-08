@@ -42,9 +42,9 @@ export function getActionUpdateStay(stay) {
 
 export async function loadStay() {
   setIsLoading();
+  const filterBy = store.getState().stayModule.filterBy;
   try {
-    const stays = await stayService.query();
-    console.log("Stays from DB:", stays);
+    const stays = await stayService.query(filterBy);
     store.dispatch({
       type: SET_STAYS,
       stays,

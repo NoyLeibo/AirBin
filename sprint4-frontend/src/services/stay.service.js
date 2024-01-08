@@ -52,7 +52,7 @@ function getEmptyStay() {
 function getDefaultFilter() {
   return {
     placeType: "",
-    priceRange: "",
+    priceRange: [0, 2000],
     bedrooms: "",
     beds: "",
     bathrooms: "",
