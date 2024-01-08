@@ -15,7 +15,7 @@ export function StayReviews({ reviews }) {
                 ></img>
                 <div className="fullname">{review.by.fullname}</div>
               </div>
-              <div>{review.txt}</div>
+              <div className="txt-review">{review.txt}</div>
             </li>
           );
         })}
