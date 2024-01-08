@@ -117,12 +117,9 @@ function _createStays() {
           "https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/765e5508-233e-468b-98df-c45e475179b8.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/e02c29bb-30a1-484d-ba58-b4cffa91fc5f.jpeg?im_w=1200",
         ],
-        price: 1000.0,
+        price: 120.0,
         summary: "Beautiful villa with direct access to the beach...",
         capacity: 6,
-        bedrooms: 4,
-        beds: 5,
-        bathrooms: 3,
         amenities: [
           "TV",
           "Wifi",
@@ -231,7 +228,7 @@ function _createStays() {
           // "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/e98163f6-1b99-4ada-b2e1-710cd743d840.jpeg?im_w=720",
           // "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/e63a0d1f-336c-4bbe-8e80-548cb7761198.jpeg?im_w=1200"
         ],
-        price: 1500.0,
+        price: 150.0,
         summary:
           "Luxurious villa offering serene beachfront views and lush tropical gardens...",
         capacity: 6,
