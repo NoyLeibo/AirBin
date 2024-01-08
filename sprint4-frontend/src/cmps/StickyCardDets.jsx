@@ -28,7 +28,7 @@ export function StickyCard({ stay }) {
   // };
 
   return (
-    <section className="stay-details-stickyCard">
+    <section className="stay-details-sticky-card">
       <h1 className="flex align-center">
         ₪{stay.price} <span>night</span>
       </h1>
@@ -78,21 +78,21 @@ export function StickyCard({ stay }) {
       >
         Reserve
       </button>
-      <div className="flex justify-center">You won't be charged yet</div>
+      <div className="flex justify-center fs14">You won't be charged yet</div>
 
       <div className="reservation-dets flex justify-between graytxt">
-        <div>${stay.price} X 1 nights</div>
-        <span>${stay.price}</span>
+        <div className="fs16 blacktxt">${stay.price} X 1 nights</div>
+        <span className="fs16 blacktxt">${stay.price}</span>
       </div>
 
       <div className="service-fee flex justify-between graytxt">
-        <div>${stay.price} X 1 nights</div>
-        <span>${stay.price}</span>
+        <div className="fs16 blacktxt">${stay.price} X 1 nights</div>
+        <span className="fs16 blacktxt">${stay.price}</span>
       </div>
 
       <div className="total-reservation-count flex justify-between divider">
-        <span>Total</span>
-        <span>${stay.price}</span>
+        <span className="fs16">Total</span>
+        <span className="fs16">${stay.price}</span>
       </div>
     </section>
   );

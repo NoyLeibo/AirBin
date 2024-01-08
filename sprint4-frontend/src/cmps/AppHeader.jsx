@@ -161,7 +161,6 @@ export function AppHeader() {
             <div className='header-content'>
                 <div className='logo-container flex justify-center align-center right-header'>
                     <NavLink className='flex justify-center align-center' to='/'>
-
                         <img src={LOGO_ICON} alt='logo icon' className='logo-header-img' />
                         <img src={LOGO} alt='logo name' className='logo-header-txt' />
                     </NavLink>
@@ -248,14 +247,14 @@ export function AppHeader() {
                     <span className="splitter"></span>
 
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
-                        <div className='fs12 blacktxt fw600'>check in</div>
+                        <div className='fs12 blacktxt fw600'>Check in</div>
                         {selectedDates.checkIn === null && <div className='fs14 blacktxt fw600'>Add dates</div>}
                         {selectedDates.checkIn && <div className='fs14 blacktxt fw600'>{selectedDates.checkIn.toLocaleDateString()}</div>}                    </div>
                     {isOpenDates && <div>
                         <Calendar />
                     </div>}
                     <div className='form-dates flex column' onClick={toggleCalendarModal}>
-                        <div className='fs12 blacktxt fw600'>check out</div>
+                        <div className='fs12 blacktxt fw600'>Check out</div>
                         {selectedDates.checkOut === null && <div className='fs14 blacktxt fw600'>Add dates</div>}
                         {selectedDates.checkOut && <div className='fs14 blacktxt fw600'>{selectedDates.checkOut.toLocaleDateString()}</div>}
                     </div>

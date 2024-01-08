@@ -2,12 +2,15 @@
 .fs6 {
   font-size: rem(6px);
 }
+
 .fs8 {
   font-size: rem(8px);
 }
+
 .fs10 {
   font-size: rem(10px);
 }
+
 .fs12 {
   font-size: rem(12px);
 }
@@ -27,6 +30,7 @@
 .fs20 {
   font-size: rem(20px);
 }
+
 .fs22 {
   font-size: rem(22px);
 }
@@ -79,6 +83,7 @@
     align-items: center;
   }
 }
+
 .bold {
   font-weight: bold;
 }
@@ -133,7 +138,7 @@
   padding-bottom: 1rem;
 }
 
-.padding24{
+.padding24 {
   padding-block: 24px;
 }
 
@@ -156,4 +161,12 @@
 
 .no-drop {
   cursor: no-drop;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
 }

@@ -68,7 +68,7 @@ export function StayDetails() {
 
       <section className="stay-dets-summary flex row">
         <div className="more-details ">
-          <div className="stay-header divider padding24">
+          <div className="stay-header">
             <h1 className="stay-dets-loc fs22">
               {stay.type} in {stay.loc.city} ,{stay.loc.country}
             </h1>
@@ -78,15 +78,12 @@ export function StayDetails() {
               <span className="fs14">•</span> 1 bath
             </div>
             <div className="stay-dets-rating ">
-              <span className="fs17 fw600">
+              <span className="fs14 fw600">
                 <i className="fa-solid fa-star"></i>
-                {stay.reviews[0].rate}.87{" "}
+                {stay.reviews[0].rate}.00{" "}
+                <span className="fs14">•<span className="bold pointer underline"> {stay.reviews.length} reviews
+                </span></span>
               </span>
-              <span className="fs14">•</span>
-              <a href="#" className="stay-dets-rating-link">
-                {" "}
-                49 reviews
-              </a>
             </div>
           </div>
           <div className="apt-host-details divider flex align-center  padding24">
