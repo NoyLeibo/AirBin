@@ -117,17 +117,67 @@ function _createStays() {
       },
       reviews: [
         {
-          id: "r102",
-          txt: "The view is stunning and the villa is just luxurious...",
+          id: "r212",
+          txt: "Absolutely breathtaking scenery, the villa was beyond our expectations.",
           rate: 5,
           by: {
-            _id: "u106",
-            fullname: "Carlos Ruiz",
-            imgUrl: "/img/carlos.jpg",
+            _id: "u219",
+            fullname: "Anna Thompson",
+            imgUrl: "https://a0.muscache.com/im/pictures/user/223db29f-2507-412c-bba8-510446c3502e.jpg?im_w=240",
+          },
+        },
+        {
+          id: "r213",
+          txt: "Incredible service and luxurious amenities. Felt like royalty!",
+          rate: 5,
+          by: {
+            _id: "u220",
+            fullname: "Mark Evans",
+            imgUrl: "https://a0.muscache.com/im/pictures/user/2460542d-1a13-4bca-b269-53eff2d04c9c.jpg?im_w=240",
+          },
+        },
+        {
+          id: "r214",
+          txt: "A slice of heaven on earth. The private beach access was a dream.",
+          rate: 5,
+          by: {
+            _id: "u221",
+            fullname: "Natalie Young",
+            imgUrl: "https://a0.muscache.com/im/users/12801203/profile_pic/1432018804/original.jpg?im_w=240",
+          },
+        },
+        {
+          id: "r215",
+          txt: "Every detail was perfect, from the stunning interiors to the lush gardens.",
+          rate: 5,
+          by: {
+            _id: "u222",
+            fullname: "Ethan Murphy",
+            imgUrl: "https://a0.muscache.com/im/users/10659131/profile_pic/1402608909/original.jpg?im_w=240",
+          },
+        },
+        {
+          id: "r216",
+          txt: "The best sunset views we've ever seen! Can't wait to return.",
+          rate: 5,
+          by: {
+            _id: "u223",
+            fullname: "Grace Lee",
+            imgUrl: "https://a0.muscache.com/im/pictures/user/44d26f4d-0b4f-4d07-a31c-397abfffce0b.jpg?im_w=240",
+          },
+        },
+        {
+          id: "r217",
+          txt: "Luxury at its best! The staff made our stay unforgettable.",
+          rate: 5,
+          by: {
+            _id: "u224",
+            fullname: "Oliver Martinez",
+            imgUrl: "https://a0.muscache.com/im/pictures/user/37643aad-005b-47c7-ad41-1f478af04816.jpg?im_w=240",
           },
         },
       ],
-      likedByUsers: ["beach-lover"],
+      likedByUsers: ["luxury-seeker", "serenity-lover"],
     },
     {
       _id: "s111",
