@@ -29,13 +29,13 @@ export function Filter({ filterBy, onSetFilter }) {
   }
 
   return (
-    <section className="stay-index-filter">
+    <section className="filter-modal-container">
       <div className="by-type-place">
-        <h2>Type of place</h2>
-        <div>Search rooms, entire homes, or any type of place.</div>
-        <button className="clean-btn">Any type</button>
-        <button className="clean-btn">Room</button>
-        <button className="clean-btn">Entire home</button>
+        <h2>Property type</h2>
+        <button className="clean-btn type">House</button>
+        <button className="clean-btn type">Villa</button>
+        <button className="clean-btn type">Apartment</button>
+        <button className="clean-btn type">Cabin</button>
       </div>
       <div className="by-price-range">
         <h2>Price range</h2>

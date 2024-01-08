@@ -117,7 +117,8 @@ function _createStays() {
           "https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/765e5508-233e-468b-98df-c45e475179b8.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/e02c29bb-30a1-484d-ba58-b4cffa91fc5f.jpeg?im_w=1200",
         ],
-        price: 120.0,
+        price: 1200.0,
+        bedrooms: 4,
         summary: "Beautiful villa with direct access to the beach...",
         capacity: 6,
         amenities: [
