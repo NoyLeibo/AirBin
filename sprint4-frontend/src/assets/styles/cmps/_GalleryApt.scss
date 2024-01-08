@@ -6,14 +6,15 @@
   margin-top: 10px;
   overflow: hidden;
   width: 100%;
+  height: 500px;
 }
 
 .imgs-grid .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
   transition: filter 0.2s ease-in-out;
+
   &:hover {
     filter: brightness(0.8);
   }
@@ -22,6 +23,8 @@
 .img1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+  width: 560px;
+  height: 560px;
 }
 
 @media (max-width: 550px) {
@@ -32,6 +35,7 @@
     overflow: hidden;
     width: 100%;
   }
+
   .img {
     border-radius: 12px;
     overflow: hidden;
@@ -41,10 +45,12 @@
       display: none;
     }
   }
+
   @media (min-width: 550px) {
     .imgs-grid {
       grid-template-columns: 1fr;
     }
+
     .img1 {
       width: 100%;
     }

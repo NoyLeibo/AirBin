@@ -6,7 +6,7 @@
     position: absolute;
     left: 20%;
     top: 18%;
-    margin-top: 12px;
+    // margin-top: 12px;
     border-radius: 32px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.0392156863), 0 8px 16px rgba(0, 0, 0, 0.1490196078);
     cursor: context-menu;
@@ -17,6 +17,8 @@
     width: rem(124px);
     height: rem(150px);
     color: #222222;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
     .region-option-img {
         overflow: hidden;

@@ -9,9 +9,9 @@
   color: $clblack;
 
   @media (min-width: 1300px) {
-    grid-template-columns: 1fr 1120px 1fr;
+    grid-template-columns: 1fr 1000px 1fr;
 
-    > * {
+    >* {
       grid-column: 2;
     }
   }
@@ -27,28 +27,36 @@
       color: $clgrey;
     }
   }
+
   main {
     padding: 0;
   }
+
   h2 {
     font-family: "Circular-Bold";
     color: $clr1;
   }
+
   h3 {
     margin: 0;
   }
+
   .stay-dets-rating-link {
     text-decoration: underline;
     color: $clblack;
   }
+
   .apt-host-info {
     padding-left: 24px;
   }
+
   .apt-dets-light-con {
     display: flex;
+
     .apt-dets-light-icon {
       width: 24px;
     }
+
     .apt-dets-light-info {
       padding-left: 24px;
       margin-bottom: 0.8em;
@@ -58,8 +66,14 @@
       }
     }
   }
+
+  .stay-dets-rating {
+    padding-bottom: 20px;
+
+  }
+
   .stay-dets-summary {
-    padding: 0.5em;
+    // padding: 0.5em;
     padding-block: 2rem;
     // display: grid;
     // grid-template-columns: 1fr 370px;
@@ -97,10 +111,12 @@
 
     .apt-dets-highlights {
       border-bottom: 1px solid #ccc;
+
       h3 {
         font-family: "Circular-Bold";
       }
     }
+
     .apt-extra-dets {
       border-bottom: 1px solid #ccc;
     }
@@ -118,9 +134,11 @@
       .title-rating-det {
         margin-bottom: 2px;
       }
+
       .rating-det {
         margin-bottom: 8px;
       }
+
       .icon-rating-det {
         display: block;
         height: 24px;
@@ -128,18 +146,22 @@
       }
     }
   }
+
   .host-avatar-img {
     height: 56px;
     width: 56px;
     border: 1px solid #717171;
     border-radius: 50%;
   }
+
   .apt-loc-map {
     display: flex;
     flex-direction: column;
+
     .apt-loc-map-title {
       margin-bottom: 10px;
     }
+
     .apt-loc-map-sub-title {
       margin-bottom: 10px;
     }
@@ -149,6 +171,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1em;
+
     .host-info-ext {
       .host-profile-ext {
         .host-avatar-dets {
@@ -156,6 +179,7 @@
           margin-bottom: 1em;
         }
       }
+
       .host-icon-ext {
         margin: auto 0;
         display: grid;
@@ -164,17 +188,20 @@
         margin-bottom: 1em;
       }
     }
+
     .host-ctn-con {
       width: 250px;
       display: flex;
       flex-direction: column;
       align-items: start;
       justify-content: center;
+
       .host-ctn-content {
         p {
           margin-bottom: 8px;
         }
       }
+
       .btn-host-ctn {
         margin-top: 1.5em;
         font-size: 16px;
@@ -185,11 +212,13 @@
         border-radius: 0.5em;
         padding: 13px 24px 13px 23px;
       }
+
       .protect-host {
         p {
           margin: 0;
         }
       }
+
       .protect-host-icon {
         display: flex;
         align-items: center;
@@ -211,11 +240,13 @@
   //     }
   //   }
 }
+
 @media (max-width: 550px) {
   .stay-details-container {
     grid-template-columns: 1fr;
     padding: 0.5em;
     width: 100%;
+
     // width: fit-content;
     .imgs-grid {
       width: 320px !important;
@@ -224,16 +255,21 @@
     .stay-dets-summary {
       width: 100%;
     }
+
     .stay-header {
       width: 320px;
+      padding: 0;
     }
+
     .apt-host-details {
       width: 320px;
     }
+
     .apt-extra-dets {
       width: 320px;
     }
   }
+
   .apt-loc-map {
     width: 320px;
   }
