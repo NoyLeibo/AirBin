@@ -272,16 +272,57 @@ function _createStays() {
       },
       reviews: [
         {
-          id: "r104",
-          txt: "The perfect getaway for outdoor enthusiasts!",
+          id: "r201",
+          txt: "Absolutely stunning views and incredibly cozy rooms.",
+          rate: 5,
+          by: {
+            _id: "u201",
+            fullname: "user10",
+            imgUrl: "/img/img10.jpg",
+          },
+        },
+        {
+          id: "r202",
+          txt: "The host was very welcoming and provided great local tips.",
           rate: 4,
           by: {
-            _id: "u108",
-            fullname: "user9",
-            imgUrl: "/img/img9.jpg",
+            _id: "u202",
+            fullname: "user11",
+            imgUrl: "/img/img11.jpg",
+          },
+        },
+        {
+          id: "r203",
+          txt: "An ideal place for relaxation, surrounded by nature.",
+          rate: 5,
+          by: {
+            _id: "u203",
+            fullname: "user12",
+            imgUrl: "/img/img12.jpg",
+          },
+        },
+        {
+          id: "r204",
+          txt: "Loved the modern amenities mixed with a rustic charm.",
+          rate: 4,
+          by: {
+            _id: "u204",
+            fullname: "user13",
+            imgUrl: "/img/img13.jpg",
+          },
+        },
+        {
+          id: "r205",
+          txt: "A serene retreat - peaceful, quiet, and beautiful.",
+          rate: 5,
+          by: {
+            _id: "u205",
+            fullname: "user14",
+            imgUrl: "/img/img14.jpg",
           },
         },
       ],
+
       likedByUsers: ["user10", "user11"],
     },
     {

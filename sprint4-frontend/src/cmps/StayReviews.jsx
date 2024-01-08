@@ -3,7 +3,7 @@ export function StayReviews({ reviews }) {
   return (
     <section className="reviews-container">
       <h4>⭐ 4.87 • {reviews.length} Reviews</h4>
-      <ul className="reviews-ul flex">
+      <ul className="reviews-ul">
         {reviews.map((review, index) => {
           return (
             <li className="review-li flex column" key={index}>
