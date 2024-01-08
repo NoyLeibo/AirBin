@@ -3,7 +3,6 @@
   grid-auto-flow: row;
   grid-template-columns: 1fr;
 
-  // padding: 3em;
   list-style: none;
   // padding-inline-start: 0px;
   justify-content: center;
@@ -234,6 +233,9 @@
     .apt-extra-dets {
       width: 320px;
     }
+  }
+  .apt-loc-map {
+    width: 320px;
   }
 }
 

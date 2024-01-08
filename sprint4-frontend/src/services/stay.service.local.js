@@ -493,6 +493,3 @@ function _createStays() {
     utilService.saveToStorage(STORAGE_KEY, stays);
   }
 }
-
-// TEST DATA
-// storageService.post(STORAGE_KEY, {vendor: 'Subali Rahok 2', price: 980}).then(x => console.log(x))
