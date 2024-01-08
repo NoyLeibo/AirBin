@@ -22,11 +22,7 @@
     grid-template-columns: 80px minmax(auto, 1fr) 80px;
   }
 
-  @media (max-width: 500px) {
-    .app-header {
-      display: none;
-    }
-  }
+
   //   &.main-stay-index {
   //  grid-column: 1/-1;
 
