@@ -44,7 +44,7 @@ export function ChatWindow() {
                 <div className="chat-body" ref={chatBodyRef}>
                     {chatHistory.map((chat, index) => (
                         <div key={index}>
-                            {chat.user === 'TeicherGPT' && <img src="https://a0.muscache.com/im/pictures/user/2be9ef7f-ef52-493c-a04d-650a7e16300c.jpg?im_w=240" alt="TeicherGPT" className="mini-user-chat" />}
+                            {chat.user === 'TeicherGPT' && <img src="https://ca.slack-edge.com/T05H7RU7LTF-U05UWSQH8AJ-f9c6e9003504-72" alt="TeicherGPT" className="mini-user-chat" />}
                             <span className='fs17 bold underline blacktxt'>{chat.user}</span>: <span className='fs16'>{chat.text}</span>
                         </div>
                     ))}
