@@ -26,23 +26,23 @@
   h3 {
     margin: 0;
   }
-  .stay-dets-rating-link{
+  .stay-dets-rating-link {
     text-decoration: underline;
     color: $clblack;
   }
-  .apt-host-info{
+  .apt-host-info {
     padding-left: 24px;
   }
-  .apt-dets-light-con{
+  .apt-dets-light-con {
     display: flex;
-    .apt-dets-light-icon{
+    .apt-dets-light-icon {
       width: 24px;
     }
-    .apt-dets-light-info{
+    .apt-dets-light-info {
       padding-left: 24px;
       margin-bottom: 0.8em;
 
-      h3{
+      h3 {
         margin-bottom: 0.2rem;
       }
     }
@@ -82,11 +82,6 @@
 
     .apt-host-details {
       border-bottom: 1px solid #ccc;
-      .host-avatar-img {
-        height: 56px;
-        width: 56px;
-        border-radius: 50%;
-      }
     }
 
     .apt-dets-highlights {
@@ -97,6 +92,102 @@
     }
     .apt-extra-dets {
       border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .apt-rating-dets-con {
+    display: grid;
+    grid-auto-flow: column;
+
+    .apt-rating-dets {
+      margin-top: 10px;
+      font-size: 16px;
+      height: 84px;
+
+      .title-rating-det {
+        margin-bottom: 2px;
+      }
+      .rating-det {
+        margin-bottom: 8px;
+      }
+      .icon-rating-det {
+        display: block;
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+  .host-avatar-img {
+    height: 56px;
+    width: 56px;
+    border: 1px solid #717171;
+    border-radius: 50%;
+  }
+  .apt-loc-map {
+    display: flex;
+    flex-direction: column;
+    .apt-loc-map-title {
+      margin-bottom: 10px;
+    }
+    .apt-loc-map-sub-title {
+      margin-bottom: 10px;
+    }
+  }
+
+  .host-apt-det-ext{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     column-gap: 1em ;
+    .host-info-ext{
+      
+      .host-profile-ext{
+        
+        .host-avatar-dets{
+          margin-left: 1em;
+          margin-bottom: 1em;
+        }
+      }
+      .host-icon-ext{
+        margin:auto 0;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(auto-fill,max-content);
+        margin-bottom: 1em;
+      }
+    }
+    .host-ctn-con{
+      width: 250px;
+     display: flex;
+     flex-direction: column;
+     align-items: start;
+     justify-content: center;
+      .host-ctn-content{
+        p{
+          margin-bottom: 8px;
+        }
+        
+      }
+      .btn-host-ctn{
+        margin-top: 1.5em;
+        font-size: 16px;
+        font-weight: 600;
+        color: #222222;
+        background-color: #fff;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        padding:13px 24px 13px 23px ;
+      }
+      .protect-host{
+        p{
+          margin: 0;
+        }
+      }
+      .protect-host-icon{
+        display: flex;
+        align-items: center;
+        justify-items:center ;
+        margin-right: 10px;
+      }
     }
   }
 
