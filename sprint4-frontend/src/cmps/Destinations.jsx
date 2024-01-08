@@ -1,5 +1,5 @@
 export function Destinations(searchInput) {
-    console.log('searchInput.userSearchDestination', searchInput.userSearchDestination)
+    // console.log('searchInput.userSearchDestination', searchInput.userSearchDestination)
 
     if (!searchInput.userSearchDestination) {
         return (
