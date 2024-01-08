@@ -2,6 +2,13 @@
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 32px;
 
+  .reviews-ul {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
   h4 {
     font-family: "Circular-Bold";
     font-size: 1.5rem;
@@ -10,15 +17,18 @@
   .user-avatar {
     align-items: center;
     margin: 0px 0px 12px;
+
     .fullname {
       padding-inline-start: 12px;
     }
+
     .mini-user-img {
       border-radius: 50%;
       height: 40px;
       object-fit: cover;
       width: 40px;
     }
+
     .txt-review {
       margin-left: 5px;
       margin-right: 5px;
