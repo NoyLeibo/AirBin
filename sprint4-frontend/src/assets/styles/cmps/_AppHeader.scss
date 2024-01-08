@@ -1,21 +1,20 @@
 .app-header {
   justify-content: space-between;
   align-items: center;
-  
+
   z-index: 1;
   top: 0;
   background-color: white;
-  
-//   grid-auto-flow: dense;
-//   grid-template-columns: 1fr 1fr 1fr;
+
+  //   grid-auto-flow: dense;
+  //   grid-template-columns: 1fr 1fr 1fr;
   // height: 80px;
   height: 160px;
   // height: 84px; ברגע שגולל למטה
   z-index: 4;
   transition: all 0.3s;
 
-   
-//   breakpoint 950px!!!
+  //   breakpoint 950px!!!
 
   &.header-inserted {
     position: sticky;
@@ -45,33 +44,32 @@
     align-items: center;
     height: 80px;
     .logo-container {
-        grid-column: 1/-1;
-        grid-row: 1;
-        justify-self: self-start;
-        width: 102px;
-        height: 80px;
-        .logo-header-img {
-            width: 100%;
-        }
-        
-        .logo-header-txt {
-            width: 100%;
-        }
+      grid-column: 1/-1;
+      grid-row: 1;
+      justify-self: self-start;
+      width: 102px;
+      height: 80px;
+      .logo-header-img {
+        width: 100%;
+      }
+
+      .logo-header-txt {
+        width: 100%;
+      }
     }
-    
+
     .mid-three-menu {
-        grid-column: 1/-1;
-        grid-row: 1;
+      grid-column: 1/-1;
+      grid-row: 1;
       justify-self: center;
-      
+
       &.mid-three-menu-close {
-          display: none;
-        }
-        
+        display: none;
+      }
     }
     .left-header {
-        grid-column: 1/-1;
-        grid-row: 1;
+      grid-column: 1/-1;
+      grid-row: 1;
       justify-self: end; // ASI
       display: flex;
       align-items: center;
@@ -158,8 +156,8 @@
     cursor: pointer;
 
     transition: all 0.4s;
-    &.small-form-expended{
-        opacity: 1;
+    &.small-form-expended {
+      opacity: 1;
     }
 
     .splitter {
@@ -174,8 +172,8 @@
       background-color: transparent;
       color: #222222;
     }
-    .btn-small-search-grey{
-        color: #717171;
+    .btn-small-search-grey {
+      color: #717171;
     }
     // transition: transform .6s opacity .6s; צריך לעבור לחיפוש הגדול
   }
@@ -267,8 +265,6 @@
 }
 
 .search-form {
-    
-    
   border: 1px solid #dddddd;
   border-radius: 50px;
   font-size: 12px;
@@ -279,9 +275,9 @@
   transition: all 0.4s;
   opacity: 1;
 
-  &.header-search-inserted{
-      transform: translateY(-75px) scaleX(0.4) scaleY(0.7);
-      opacity: 0;
+  &.header-search-inserted {
+    transform: translateY(-75px) scaleX(0.4) scaleY(0.7);
+    opacity: 0;
   }
 
   .header-search-btn {

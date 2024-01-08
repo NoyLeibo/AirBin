@@ -26,12 +26,16 @@ export function PaymentPage() {
   if (!stay) return <div>Loading...</div>;
   return (
     <section className="payment-container">
-      <div className="page-title flex space-between">
-        <button onClick={() => navigate(`/`)} className=".clean-btn">
+      <div className="page-title flex">
+        <button
+          onClick={() => navigate(`/details/${stay._id}`)}
+          className=".clean-btn"
+        >
           back
         </button>
         <h2>Request to book</h2>
       </div>
+
       <div className="order-content flex">
         <div className="details-section">
           <div className="rare-find flex justify-between">
@@ -59,6 +63,7 @@ export function PaymentPage() {
             <LoginSignup />
           </div>
         </div>
+
         <div className="summary-card-section flex">
           <img src={stay.imgUrls[0]} />
           <div className="stay-desc">
