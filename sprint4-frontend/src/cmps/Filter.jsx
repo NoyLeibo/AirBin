@@ -5,9 +5,9 @@ import { useEffectUpdate } from "../customHooks/useEffectUpdate";
 import { utilService } from "../services/util.service";
 import { PriceRange } from "./PriceRange";
 
-export function Filter({ filterBy, onSetFilter }) {
-  const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy });
-  onSetFilter = useRef(utilService.debounce(onSetFilter));
+export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
+  // const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy });
+  // onSetFilter = useRef(utilService.debounce(onSetFilter));
 
   useEffectUpdate(() => {
     onSetFilter.current(filterByToEdit);
@@ -31,11 +31,17 @@ export function Filter({ filterBy, onSetFilter }) {
   return (
     <section className="filter-modal-container">
       <div className="by-type-place">
-        <h2>Property type</h2>
-        <button className="clean-btn type">House</button>
-        <button className="clean-btn type">Villa</button>
-        <button className="clean-btn type">Apartment</button>
-        <button className="clean-btn type">Cabin</button>
+        <h2>Type of place</h2>
+        <div>Search rooms, entire homes, or any type of place.</div>
+        <button type="button" className="clean-btn type">
+          Entire home
+        </button>
+        <button type="button" className="clean-btn type">
+          Room
+        </button>
+        <button type="button" className="clean-btn type">
+          Any type
+        </button>
       </div>
       <div className="by-price-range">
         <h2>Price range</h2>
