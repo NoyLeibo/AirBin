@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import routes from '../routes'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { login, logout, signup } from '../store/user.actions.js'
@@ -9,15 +9,12 @@ import { Calendar } from './Calendar'
 import { Guests } from './Guests'
 import { Destinations } from './Destinations'
 import { DatePicker, Space } from 'antd';
-import { setSelectedDates as setSelectedDatesAction } from '../store/stay.actions';
 
-const { RangePicker } = DatePicker;
 const LOGO = '/img/airbnb.png'
 const LOGO_ICON = '/img/airbnb-icon.png'
 
 
 export function AppHeader() {
-    const dispatch = useDispatch();
 
     const [selectedButton, setSelectedButton] = useState('stays')
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -28,7 +25,7 @@ export function AppHeader() {
     const [isScrolledDown, setIsScrolledDown] = useState(true);
     const [showScreenShadow, setShowScreenShadow] = useState(false);
     const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
-
+    const selectedGuests = useSelector((storeState) => storeState.stayModule.guestsNumber)
     const gRef = useRef(); // global ref use for closing modals by noy
 
     useEffect(() => {
@@ -69,19 +66,16 @@ export function AppHeader() {
     useEffect(() => {
         function handleClickOutside(event) {
             if (isOpenGuests && gRef.current && !gRef.current.contains(event.target)) {
-                console.log('isOpenGuests');
                 setTimeout(() => {
                     setIsOpenGuests(false);
                 }, 150);
             }
             if (isOpenDates && gRef.current && !gRef.current.contains(event.target)) {
-                console.log('isOpenDates');
                 setTimeout(() => {
                     setIsOpenDates(false)
                 }, 150);
             }
             if (isOpenDestinations && gRef.current && !gRef.current.contains(event.target)) {
-                console.log('isOpenDestinations');
                 setTimeout(() => {
                     setIsOpenDestinations(false)
                 }, 150);

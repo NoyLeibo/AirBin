@@ -1,30 +1,28 @@
-import React, { useState } from "react"
-import { useEffect } from "react"
-import { useNavigate, useParams, NavLink } from "react-router-dom"
-import { StickyCard } from "../cmps/StickyCardDets"
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { useNavigate, useParams, NavLink } from "react-router-dom";
+import { StickyCard } from "../cmps/StickyCardDets";
 
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider"
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs"
-import { DateCalendar } from "@mui/x-date-pickers/DateCalendar"
-
-
-import { showErrorMsg } from "../services/event-bus.service"
-import { stayService } from "../services/stay.service.local"
-import { GalleryApt } from "../cmps/GalleryApt"
-import { StayAmenities } from "../cmps/StayAmenities"
-import { StayReviews } from "../cmps/StayReviews"
-import SimpleMap from "../cmps/GoogleMap"
+import { showErrorMsg } from "../services/event-bus.service";
+import { stayService } from "../services/stay.service.local";
+import { GalleryApt } from "../cmps/GalleryApt";
+import { StayAmenities } from "../cmps/StayAmenities";
+import { StayReviews } from "../cmps/StayReviews";
+import SimpleMap from "../cmps/GoogleMap";
 
 export function StayDetails() {
-  const [stay, setStay] = useState(null)
+  const [stay, setStay] = useState(null);
 
-  const { stayId } = useParams()
-  const navigate = useNavigate()
+  const { stayId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    loadStay()
-  })
+    loadStay();
+  });
 
   //  function loadStay() {
   //   stayService
@@ -38,16 +36,16 @@ export function StayDetails() {
 
   async function loadStay() {
     try {
-      const currStay = await stayService.getById(stayId)
-      setStay(currStay)
+      const currStay = await stayService.getById(stayId);
+      setStay(currStay);
     } catch (err) {
-      showErrorMsg("Cant load stay")
-      navigate("/stay")
+      showErrorMsg("Cant load stay");
+      navigate("/stay");
     }
   }
 
   if (!stay) {
-    console.log("no stays")
+    console.log("no stays");
     return (
       <div className="stay-details-container">
         <div className="loader">
@@ -59,7 +57,7 @@ export function StayDetails() {
           ))}
         </div>
       </div>
-    )
+    );
   }
   return (
     <div className="stay-details-container">
@@ -68,9 +66,9 @@ export function StayDetails() {
       </div>
       <GalleryApt imgUrls={stay.imgUrls} />
 
-      <section className="stay-dets-summary flex row ">
+      <section className="stay-dets-summary flex row">
         <div className="more-details ">
-          <div className="divider padding24">
+          <div className="stay-header divider padding24">
             <h1 className="stay-dets-loc fs22">
               {stay.type} in {stay.loc.city} ,{stay.loc.country}
             </h1>
@@ -134,7 +132,7 @@ export function StayDetails() {
             </div>
             <div className="apt-dets-light-con">
               <div className="apt-dets-light-icon">
-              <i class="fa-regular fa-calendar-xmark"></i>
+                <i class="fa-regular fa-calendar-xmark"></i>
               </div>
               <div className="apt-dets-light-info">
                 <h3 className="fs16">Free cancellation</h3>
@@ -252,53 +250,56 @@ export function StayDetails() {
               <span> 49 Reviews</span>
             </div>
             <div>
-            <i className="fa-solid fa-user-shield"></i>
+              <i className="fa-solid fa-user-shield"></i>
               <span> Identity verified</span>
             </div>
             <div>
-            <i className="fa-solid fa-medal"></i>
+              <i className="fa-solid fa-medal"></i>
               <span> Superhost</span>
             </div>
           </div>
           <div className="host-summary-ext fs16">
             {/* {stay.summary} */}
-            <p> Situated in Feteiras, 16 km from Ponta Delgada, Moinho das Feteiras features a garden and free WiFi.</p>
             <p>
-            All air-conditioned units come with a patio, a dining area and a seating area with a cable flat-screen TV.Each unit includes an en-suite bathroom with a shower, a hairdryer and free toiletries.
+              {" "}
+              Situated in Feteiras, 16 km from Ponta Delgada, Moinho das
+              Feteiras features a garden and free WiFi.
             </p>
             <p>
-            There are barbecue facilities and a terrace at this property.Guests can go hiking and cycling nearby.
+              All air-conditioned units come with a patio, a dining area and a
+              seating area with a cable flat-screen TV.Each unit includes an
+              en-suite bathroom with a shower, a hairdryer and free toiletries.
+            </p>
+            <p>
+              There are barbecue facilities and a terrace at this
+              property.Guests can go hiking and cycling nearby.
             </p>
             <div className="fw600">{stay.host.fullname} is a Superhost</div>
             <p>
-            Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.
+              Superhosts are experienced, highly rated hosts who are committed
+              to providing great stays for guests.
             </p>
           </div>
         </div>
         <div className="host-ctn-con">
-         <div className="host-ctn-content fs16">
-          <p>
-          Registration number: Exempt
-          </p>
-          <p>
-          Languages: English, Português
-          </p>
-          <p>
-          Response rate: 100%
-          </p>
-          <p>
-          Response time: within an hour
-          </p>
-         </div>
-         <button className="btn-host-ctn">Contact Host</button>
-         <div className="protect-host fs12 flex">
-          <div className="protect-host-icon fs30">
-          <i class="fa-solid fa-shield-virus"></i>
+          <div className="host-ctn-content fs16">
+            <p>Registration number: Exempt</p>
+            <p>Languages: English, Português</p>
+            <p>Response rate: 100%</p>
+            <p>Response time: within an hour</p>
           </div>
-          <p>To protect your payment, never transfer money or communicate outside of the Airbnb website or app.</p>
-         </div>
+          <button className="btn-host-ctn">Contact Host</button>
+          <div className="protect-host fs12 flex">
+            <div className="protect-host-icon fs30">
+              <i class="fa-solid fa-shield-virus"></i>
+            </div>
+            <p>
+              To protect your payment, never transfer money or communicate
+              outside of the Airbnb website or app.
+            </p>
+          </div>
         </div>
       </section>
     </div>
-  )
+  );
 }

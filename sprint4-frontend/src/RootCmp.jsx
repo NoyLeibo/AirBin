@@ -1,17 +1,19 @@
-import React from "react"
-import { Routes, Route } from "react-router"
+import React from "react";
+import { Routes, Route } from "react-router";
 
-import routes from "./routes"
+import routes from "./routes";
 
-import { AppHeader } from "./cmps/AppHeader"
-import { AppFooter } from "./cmps/AppFooter"
-import { StayDetails } from "./pages/StayDetails"
-import { PaymentPage } from "./pages/PaymentPage"
+import { AppHeader } from "./cmps/AppHeader";
+import { AppFooter } from "./cmps/AppFooter";
+import { StayDetails } from "./pages/StayDetails";
+import { PaymentPage } from "./pages/PaymentPage";
 
 export function RootCmp() {
   return (
     <main className="main-container">
-      <AppHeader />
+      <div className="app-header">
+        <AppHeader />
+      </div>
       <Routes>
         {routes.map((route) => (
           <Route
@@ -26,5 +28,5 @@ export function RootCmp() {
       </Routes>
       <AppFooter />
     </main>
-  )
+  );
 }
