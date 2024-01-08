@@ -172,13 +172,63 @@ function _createStays() {
       },
       reviews: [
         {
-          id: "r105",
-          txt: "An unforgettable experience, with breathtaking views and exceptional hospitality...",
+          id: "r206",
+          txt: "The infinity pool is just amazing - spent most of our time enjoying the view!",
           rate: 5,
           by: {
-            _id: "u112",
-            fullname: "Sarah Lee",
-            imgUrl: "/img/sarah.jpg",
+            _id: "u213",
+            fullname: "James Carter",
+            imgUrl: "/img/james.jpg",
+          },
+        },
+        {
+          id: "r207",
+          txt: "Waking up to the sound of the waves was just what we needed. Truly a piece of paradise.",
+          rate: 5,
+          by: {
+            _id: "u214",
+            fullname: "Emily Harris",
+            imgUrl: "/img/emily.jpg",
+          },
+        },
+        {
+          id: "r208",
+          txt: "The villa is incredible, offering privacy and luxury. Highly recommend the private beach access!",
+          rate: 4,
+          by: {
+            _id: "u215",
+            fullname: "Michael Brown",
+            imgUrl: "/img/michael.jpg",
+          },
+        },
+        {
+          id: "r209",
+          txt: "The best vacation experience! The staff were attentive and the amenities top-notch.",
+          rate: 5,
+          by: {
+            _id: "u216",
+            fullname: "Linda Johnson",
+            imgUrl: "/img/linda.jpg",
+          },
+        },
+        {
+          id: "r210",
+          txt: "Exquisite Thai cuisine from the in-house chef, and the spa treatments were heavenly.",
+          rate: 5,
+          by: {
+            _id: "u217",
+            fullname: "Robert Smith",
+            imgUrl: "/img/robert.jpg",
+          },
+        },
+        {
+          id: "r211",
+          txt: "Perfect for our honeymoon! Romantic setting, beautiful sunsets, and unforgettable experiences.",
+          rate: 5,
+          by: {
+            _id: "u218",
+            fullname: "Sophia Wilson",
+            imgUrl: "/img/sophia.jpg",
           },
         },
       ],
