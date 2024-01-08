@@ -5,9 +5,9 @@ export function ChatWindow() {
     const [message, setMessage] = useState('');
     const [chatHistory, setChatHistory] = useState([
         { user: 'TeicherGPT', text: 'Hey! How can I help you?' },
-        { user: 'Noy', text: 'hey' },
-        { user: 'Iris', text: 'get ready to sprint 4' },
-        { user: 'Boris', text: "we're gonna kill this sprint" },
+        { user: 'Noy', text: 'getting ready' },
+        { user: 'Iris', text: 'get ready to sprint 4...' },
+        { user: 'Boris', text: "Teicher give me a code of this feature" },
     ]);
 
 
@@ -45,7 +45,7 @@ export function ChatWindow() {
                     {chatHistory.map((chat, index) => (
                         <div key={index}>
                             {chat.user === 'TeicherGPT' && <img src="https://a0.muscache.com/im/pictures/user/2be9ef7f-ef52-493c-a04d-650a7e16300c.jpg?im_w=240" alt="TeicherGPT" className="mini-user-chat" />}
-                            <span className='bold underline'>{chat.user}</span>: {chat.text}
+                            <span className='fs17 bold underline blacktxt'>{chat.user}</span>: <span className='fs16'>{chat.text}</span>
                         </div>
                     ))}
                 </div>
