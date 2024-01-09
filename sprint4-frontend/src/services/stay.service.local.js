@@ -401,9 +401,14 @@ function _createStays() {
         name: "Urban Central Studio",
         type: "Apartment",
         imgUrls: [
-          "https://a0.muscache.com/im/pictures/9d11ec4c-664e-4ef6-9461-ae55ff16bfc8.jpg?im_w=720",
-          "https://a0.muscache.com/im/pictures/6978a9e8-4f78-4c50-ae71-48b44083e56c.jpg?im_w=480",
-          // ... more image URLs
+          "https://a0.muscache.com/im/pictures/90bc0d78-c4f9-45e0-bd1a-43d5c5421a0a.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/d3b924c6-d127-4960-bf65-cbfc1822a953.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/0140b41b-45da-49f3-a35f-41fa3983a22a.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/9ff5943f-a53c-4911-a02f-80c9da89f56e.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/1cd00652-4ba5-48f7-afe3-89e15cbba4df.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/8e46bb44-0744-4b1f-bf9e-d54af68ed02a.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/0e436c7f-fc11-4e6d-97ea-a11b1feb8f1c.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/98493977-8d2e-4ed2-8dae-168a139fe3f7.jpg?im_w=720",
         ],
         price: 95.0,
         bedrooms: 2, // added
@@ -412,7 +417,7 @@ function _createStays() {
         summary:
           "Cozy studio apartment in the city center with modern amenities.",
         capacity: 4,
-        amenities: ["Grand pianos", "Trending", "Towers", "OMG", "Beachfront", "Historial homes"],
+        amenities: ["Grand pianos", "Trending", "Towers", "OMG", "Beachfront", "Historial homes", "Rooms", "Riads", "Amazing views"],
         labels: ["City Life", "Business", "Comfort"],
         host: {
           _id: "u103",
