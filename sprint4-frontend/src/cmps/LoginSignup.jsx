@@ -1,24 +1,23 @@
 import { useState, useEffect } from "react";
 import { userService } from "../services/user.service";
 import { ImgUploader } from "./ImgUploader";
+import { useSelector } from "react-redux";
+import { login, signup } from "../store/user.actions";
 
 export function LoginSignup(props) {
-  const [credentials, setCredentials] = useState({
-    username: "",
-    password: "",
-    fullname: "",
-  });
-  const [isSignup, setIsSignup] = useState(false);
-  const [users, setUsers] = useState([]);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [fullname, setFullname] = useState("");
+  const user = useSelector((storeState) => storeState.userModule.user);
 
-  useEffect(() => {
-    loadUsers();
-  }, []);
+  // useEffect(() => {
+  //   loadUsers();
+  // }, []);
 
-  async function loadUsers() {
-    const users = await userService.getUsers();
-    setUsers(users);
-  }
+  // async function loadUsers() {
+  //   const users = await userService.getUsers();
+  //   setUsers(users);
+  // }
 
   function clearState() {
     setCredentials({ username: "", password: "", fullname: "", imgUrl: "" });
@@ -31,11 +30,17 @@ export function LoginSignup(props) {
     setCredentials({ ...credentials, [field]: value });
   }
 
-  function onLogin(ev = null) {
-    if (ev) ev.preventDefault();
-    if (!credentials.username) return;
-    props.onLogin(credentials);
-    clearState();
+  function onLogin(ev) {
+    ev.preventDefault();
+    if (!username || !password) return;
+    login({ username, password });
+    console.log(password);
+    // props.onLogin(credentials);
+    // clearState();
+  }
+  async function demoLogin(ev) {
+    ev.preventDefault();
+    await signup({ username: "Guest", password: "123123" });
   }
 
   function onSignup(ev = null) {
@@ -46,33 +51,43 @@ export function LoginSignup(props) {
     clearState();
   }
 
-  function toggleSignup() {
-    setIsSignup(!isSignup);
+  if (user) {
+    return <></>;
   }
-
-  function onUploaded(imgUrl) {
-    setCredentials({ ...credentials, imgUrl });
-  }
-
   return (
     <div class="card">
       <div class="login-signup">
         <div class="form-container">
+          <h3>Log in or sign up to book</h3>
           <section>
             <div>
               <input
+                value={username}
                 name="username"
                 id="username"
                 type="text"
                 placeholder="Enter username"
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                }}
               />
             </div>
 
             <div>
-              <input type="password" placeholder="Enter password" />
+              <input
+                type="password"
+                placeholder="Enter password"
+                value={password}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+              />
             </div>
-            <button className="login-btn">Login</button>
+            <button className="login-btn" onClick={onLogin}>
+              Login
+            </button>
           </section>
+
           <div
             role="separator"
             class="section-divider--horizontal section-divider"
@@ -80,7 +95,9 @@ export function LoginSignup(props) {
             <div>or</div>
           </div>
           <section className="demo-signup-section">
-            <button className="divider">Demo login</button>
+            <button className="divider" onClick={demoLogin}>
+              Demo login
+            </button>
             <button className="divider">Sign up</button>
           </section>
         </div>

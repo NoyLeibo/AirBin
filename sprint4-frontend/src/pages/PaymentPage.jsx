@@ -4,6 +4,7 @@ import { stayService } from "../services/stay.service.local";
 import { useState, useEffect } from "react";
 import { LoginSignup } from "../cmps/LoginSignup";
 import { useLocation } from "react-router";
+import { LoginModal } from "../cmps/Login";
 
 export function PaymentPage() {
   const location = useLocation();
@@ -81,7 +82,6 @@ export function PaymentPage() {
             </div>
           </div>
           <div className="login-section">
-            <h3>Log in or sign up to book</h3>
             <LoginSignup />
           </div>
         </div>
