@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import { LoginModal } from "./Login";
 import { useSelector } from "react-redux";
+
+import { LoginModal } from "./Login";
 import { logout } from "../store/user.actions";
+
+
 export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
   // const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
