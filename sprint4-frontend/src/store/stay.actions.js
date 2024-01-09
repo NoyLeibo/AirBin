@@ -65,7 +65,7 @@ export async function addStay(stay) {
     try {
         const savedStay = await stayService.save(stay)
         console.log('Added stay', savedStay)
-        store.dispatch(getActionAddstay(savedStay))
+        store.dispatch(getActionAddStay(savedStay))
         return savedStay
     } catch (err) {
         console.log('Cannot add stay', err)

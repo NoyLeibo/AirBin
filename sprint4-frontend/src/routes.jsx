@@ -6,6 +6,7 @@ import { ReviewIndex } from "./pages/ReviewIndex.jsx";
 import { ChatApp } from "./pages/Chat.jsx";
 import { BackOffice } from "./pages/BackOffice.jsx";
 import { PaymentPage } from "./pages/PaymentPage.jsx";
+import { StayEdit } from "./pages/StayEdit.jsx";
 
 // Routes accesible from the main navigation (in AppHeader)
 const routes = [
@@ -45,14 +46,14 @@ const routes = [
     label: "Back Office",
   },
   {
-    path: "BackOffice",
-    component: <BackOffice />,
-    label: "Back Office",
-  },
-  {
     path: "payment/:stayId",
     component: <PaymentPage />,
     label: "logged user only",
+  },
+  {
+    path: "edit/:stayId?",
+    component: <StayEdit />,
+    label: "edit",
   },
 ];
 

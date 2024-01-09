@@ -23,6 +23,7 @@
   .stay-preview {
     display: flex;
     flex-direction: column;
+    line-height: 1.1875rem;
     .stay-card-rating{
       // line-height: 1.1875rem;
       margin-inline-start: 4px;
@@ -30,10 +31,17 @@
 
       
     }
+    .stay-card-area,
+    .stay-card-distance{
+      margin-bottom: 0.1em;
 
+    }
     .stay-card-distance,
     .stay-card-dates{
       color: #717171;
+    }
+    .stay-card-dates{
+      margin-bottom: 0.4em;
     }
   }
 

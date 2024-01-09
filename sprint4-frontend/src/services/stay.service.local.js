@@ -71,10 +71,39 @@ async function addStayMsg(stayId, txt) {
 function getEmptyStay() {
   return {
     name: "",
-    price: utilService.getRandomIntInclusive(100, 1000),
+    price: "",
+    type:"",
+    imgUrls:[],
+    summary:"",
+    stayPlace:"",
+    stayDetail:{
+      capacity:0,
+      beds:0,
+      rooms:0,
+      bathrooms:0,
+    },
+    amenities:[],
+    labels:[],
+    host:{
+      _id: "",
+      fullname: "",
+      imgUrl:
+        "",
+    },
+    loc:{
+      area: "",
+      country: "",
+      countryCode: "",
+      city: "",
+      address: "",
+      lat:0,
+      lng:0,
+    },
+    reviews: [],
+    likedByUsers: [],
+
   };
 }
-
 function _createStays() {
   let stays = utilService.loadFromStorage(STORAGE_KEY);
   if (!stays || !stays.length) {
