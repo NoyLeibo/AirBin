@@ -7,14 +7,15 @@ import { PriceRange } from "./PriceRange";
 
 export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
   // const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy });
+  const [selectedOption, setSelectedOption] = useState(false);
   // onSetFilter = useRef(utilService.debounce(onSetFilter));
 
   useEffectUpdate(() => {
     onSetFilter.current(filterByToEdit);
   }, [filterByToEdit]);
 
-  function handleChange(ev, target, type = "number") {
-    ev.preventDefault()
+  function handleChange(target, type = "number") {
+    // ev.preventDefault()
     let { value, name: field } = target;
     value = type === "number" ? +value : value;
     if (type === "select-multiple")
@@ -51,8 +52,8 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
           <PriceRange handlePriceRangeChange={handlePriceRangeChange} />
         </div>
       </div>
+      <h2>Rooms and beds</h2>
       <div className="by-rooms">
-        <h2>Rooms and beds</h2>
         <div>Bedrooms</div>
         <button
           className="clean-btn"
