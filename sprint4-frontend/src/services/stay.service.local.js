@@ -193,7 +193,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u103",
-              fullname: "user3",
+              fullname: "bigboss3",
               imgUrl: "https://a0.muscache.com/im/pictures/user/96db5a52-52db-42d4-a8bf-fe4d9cb7901d.jpg?im_w=240",
             },
           },
@@ -401,14 +401,14 @@ function _createStays() {
         name: "Urban Central Studio",
         type: "Apartment",
         imgUrls: [
-          "https://a0.muscache.com/im/pictures/90bc0d78-c4f9-45e0-bd1a-43d5c5421a0a.jpg?im_w=720",
-          "https://a0.muscache.com/im/pictures/d3b924c6-d127-4960-bf65-cbfc1822a953.jpg?im_w=720",
-          "https://a0.muscache.com/im/pictures/0140b41b-45da-49f3-a35f-41fa3983a22a.jpg?im_w=720",
-          "https://a0.muscache.com/im/pictures/9ff5943f-a53c-4911-a02f-80c9da89f56e.jpg?im_w=1200",
-          "https://a0.muscache.com/im/pictures/1cd00652-4ba5-48f7-afe3-89e15cbba4df.jpg?im_w=720",
-          "https://a0.muscache.com/im/pictures/8e46bb44-0744-4b1f-bf9e-d54af68ed02a.jpg?im_w=1200",
-          "https://a0.muscache.com/im/pictures/0e436c7f-fc11-4e6d-97ea-a11b1feb8f1c.jpg?im_w=720",
-          "https://a0.muscache.com/im/pictures/98493977-8d2e-4ed2-8dae-168a139fe3f7.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-806863249494914754/original/bb925365-25b6-4769-bfa9-d3a521e14579.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-806863249494914754/original/1abc4140-42bc-44b1-8c04-5799138de9da.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-806863249494914754/original/5fa03abc-2064-4a8b-a1c4-f22cec314c17.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-806863249494914754/original/48481e2f-20d1-4935-b982-0ba2c12f2385.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-806863249494914754/original/2c64b2ed-df22-44eb-9955-0504f6b38a2b.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-806863249494914754/original/46b13b6d-39e3-49fe-ae0a-6f84cfcdd6eb.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-806863249494914754/original/795bb83e-915b-4502-b9ec-d35f49e45273.jpeg?im_w=720",
+
         ],
         price: 95.0,
         bedrooms: 2, // added
@@ -442,7 +442,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u104",
-              fullname: "user3",
+              fullname: "boris",
               imgUrl: "https://a0.muscache.com/im/pictures/user/f793a59f-43cc-4a02-b8f0-eb5a542e68ff.jpg?im_w=240",
             },
           },
@@ -452,8 +452,72 @@ function _createStays() {
             rate: 3,
             by: {
               _id: "u106",
-              fullname: "user6",
+              fullname: "nave",
               imgUrl: "https://a0.muscache.com/im/pictures/user/e6b632f2-03b5-4a26-a4eb-3b520d12a8e7.jpg?im_w=240",
+            },
+          },
+          {
+            id: "coll",
+            txt: "Fantastic location, close to the city center. The room was clean...",
+            rate: 5,
+            by: {
+              _id: "u103",
+              fullname: "shoshi",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/96db5a52-52db-42d4-a8bf-fe4d9cb7901d.jpg?im_w=240",
+            },
+          },
+          {
+            id: "madeId3",
+            txt: "Charming apartment with amazing views. Hosts were very accommodating...",
+            rate: 5,
+            by: {
+              _id: "u104",
+              fullname: "IMYOU",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7e30997b-191c-4f49-bd71-ea57e4fe8d91.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r212",
+            txt: "Absolutely breathtaking scenery, the villa was beyond our expectations.",
+            rate: 5,
+            by: {
+              _id: "u219",
+              fullname: "Anna Thompson",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/223db29f-2507-412c-bba8-510446c3502e.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r213",
+            txt: "Incredible service and luxurious amenities. Felt like royalty!",
+            rate: 5,
+            by: {
+              _id: "u220",
+              fullname: "Mark Evans",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/2460542d-1a13-4bca-b269-53eff2d04c9c.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r214",
+            txt: "A slice of heaven on earth. The private beach access was a dream.",
+            rate: 5,
+            by: {
+              _id: "u221",
+              fullname: "Natalie Young",
+              imgUrl:
+                "https://a0.muscache.com/im/users/12801203/profile_pic/1432018804/original.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r215",
+            txt: "Every detail was perfect, from the stunning interiors to the lush gardens.",
+            rate: 5,
+            by: {
+              _id: "u222",
+              fullname: "Ethan Murphy",
+              imgUrl:
+                "https://a0.muscache.com/im/users/10659131/profile_pic/1402608909/original.jpg?im_w=240",
             },
           },
           {
@@ -484,9 +548,13 @@ function _createStays() {
         name: "Mountain Retreat Lodge",
         type: "Lodge",
         imgUrls: [
-          "https://a0.muscache.com/im/pictures/e287757a-389d-424b-8863-4651b9303a49.jpg?im_w=960",
-          "https://a0.muscache.com/im/pictures/8ccefdd3-d255-48b1-adab-9ffc78f588ce.jpg?im_w=480",
-          // ... more image URLs
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-980616260826796990/original/0ebf9825-97ce-4aa4-8930-018bbfffb420.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-980616260826796990/original/15f920e5-525b-4387-bfd7-7953615739d5.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-980616260826796990/original/20c7635a-3026-4deb-a8d0-41f33fd9b706.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-980616260826796990/original/03fcce74-d11f-4dbf-ac3d-a5ee6ba3d924.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-980616260826796990/original/f38c64dc-a950-4dea-88dc-8675e3292524.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-980616260826796990/original/3cff2b54-3ff8-49b6-a272-caef759927c0.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-980616260826796990/original/03fcce74-d11f-4dbf-ac3d-a5ee6ba3d924.jpeg?im_w=1200"
         ],
         price: 130.0,
         bedrooms: 3, // added
@@ -623,11 +691,13 @@ function _createStays() {
         name: "Ribeira Charming Duplex",
         type: "Arctic",
         imgUrls: [
-          "https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/10d2c21f-84c2-46c5-b20b-b51d1c2c971a.jpeg?im_w=960",
-          "https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/e3beaf52-13ab-44ed-bbfa-56ccf43bab98.jpeg?im_w=480",
-          "https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/bc9fdbba-a126-4357-946b-4d5f5581ca0f.jpeg?im_w=480",
-          "https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/858b29eb-53f3-4707-87a6-444f4375f888.jpeg?im_w=480",
-          "https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/bc9fdbba-a126-4357-946b-4d5f5581ca0f.jpeg?im_w=480",
+          "https://a0.muscache.com/im/pictures/4e1851cb-9614-4634-9dd4-016c1a26d259.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/4309a61d-b60b-4dec-9b17-ffbe3252bd49.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/92a458c5-f684-4931-ab28-707848bb6e33.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/cc97f7ac-8a1f-430e-8d7d-39152e8d7b77.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/efa5c9f5-9b6a-404e-a0c9-09368824ea5e.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/c0c6f791-86da-4815-b789-9cc70ad1d440.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/cec69348-fb6c-4e61-bc2b-5dbc40dc2ae5.jpg?im_w=1200"
         ],
         price: 80.0,
         bedrooms: 4, // added
@@ -635,7 +705,7 @@ function _createStays() {
         baths: 3, // added
         summary: "Fantastic duplex apartment...",
         capacity: 8,
-        amenities: ["Luxe", "Top of the world", "Amazing views", "Riads", "Trending", "Beachfront"],
+        amenities: ["Luxe", "Top of the world", "Amazing views", "Riads", "Trending", "Beachfront", "Trending", "Play"],
         labels: ["Top of the world", "Trending", "Play", "Tropical"],
         host: {
           _id: "u101",
@@ -752,6 +822,56 @@ function _createStays() {
               imgUrl: "https://a0.muscache.com/im/pictures/user/219c0432-1765-43cc-bdb6-3d12087cafa9.jpg?im_w=240",
             },
           },
+          {
+            id: "r201",
+            txt: "Absolutely stunning views and incredibly cozy rooms.",
+            rate: 5,
+            by: {
+              _id: "u201",
+              fullname: "user10",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r202",
+            txt: "The host was very welcoming and provided great local tips.",
+            rate: 4,
+            by: {
+              _id: "u202",
+              fullname: "user11",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r203",
+            txt: "An ideal place for relaxation, surrounded by nature.",
+            rate: 5,
+            by: {
+              _id: "u203",
+              fullname: "user12",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r204",
+            txt: "Loved the modern amenities mixed with a rustic charm.",
+            rate: 4,
+            by: {
+              _id: "u204",
+              fullname: "user13",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r205",
+            txt: "A serene retreat - peaceful, quiet, and beautiful.",
+            rate: 5,
+            by: {
+              _id: "u205",
+              fullname: "user14",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
+            }
+          }
         ],
         likedByUsers: ["nature-enthusiast"],
       },
@@ -760,8 +880,14 @@ function _createStays() {
         name: "Ribeira Charming Duplex",
         type: "House",
         imgUrls: [
-          "https://a0.muscache.com/im/pictures/103406579/d70068da_original.jpg?im_w=720",
-          "https://a0.muscache.com/im/pictures/83cd682a-4ffe-4ed0-a4b2-3f3b0c14d1b2.jpg?im_w=480",
+          "https://a0.muscache.com/im/pictures/90bc0d78-c4f9-45e0-bd1a-43d5c5421a0a.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/d3b924c6-d127-4960-bf65-cbfc1822a953.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/0140b41b-45da-49f3-a35f-41fa3983a22a.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/9ff5943f-a53c-4911-a02f-80c9da89f56e.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/1cd00652-4ba5-48f7-afe3-89e15cbba4df.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/8e46bb44-0744-4b1f-bf9e-d54af68ed02a.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/0e436c7f-fc11-4e6d-97ea-a11b1feb8f1c.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/98493977-8d2e-4ed2-8dae-168a139fe3f7.jpg?im_w=720",
         ],
         price: 80.0,
         summary: "Fantastic duplex apartment...",
@@ -799,9 +925,433 @@ function _createStays() {
               imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
+          {
+            id: "r201",
+            txt: "Absolutely stunning views and incredibly cozy rooms.",
+            rate: 5,
+            by: {
+              _id: "u201",
+              fullname: "user10",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r202",
+            txt: "The host was very welcoming and provided great local tips.",
+            rate: 4,
+            by: {
+              _id: "u202",
+              fullname: "user11",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r203",
+            txt: "An ideal place for relaxation, surrounded by nature.",
+            rate: 5,
+            by: {
+              _id: "u203",
+              fullname: "user12",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r204",
+            txt: "Loved the modern amenities mixed with a rustic charm.",
+            rate: 4,
+            by: {
+              _id: "u204",
+              fullname: "user13",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r205",
+            txt: "A serene retreat - peaceful, quiet, and beautiful.",
+            rate: 5,
+            by: {
+              _id: "u205",
+              fullname: "user14",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
+            }
+          }
         ],
         likedByUsers: ["mini-user"],
       },
+      {
+        _id: "s112",
+        name: "Mountain Retreat",
+        type: "Cabin",
+        imgUrls: [
+          "https://a0.muscache.com/im/pictures/799c603d-8867-40c3-a75e-d9450761d502.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/0fbefb2d-566d-4106-8009-e8eef8804b5f.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/633daf6f-eb69-4418-9d9b-950673806791.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/e0db3e82-4452-4c47-a2cf-61d8c99d793e.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/8143b830-077c-48dd-8897-a44ea84c3a6f.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/ea819af5-f575-491a-bf77-dbf4210afe5c.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/187b2b33-ca3e-4cc3-aabd-d0410cfa3a79.jpg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/101bee97-ac02-4570-b3fc-dab414adcf3d.jpg?im_w=1200"
+        ],
+        price: 850.0,
+        bedrooms: 3,
+        beds: 5,
+        baths: 2,
+        summary: "Cozy cabin in the mountains with stunning views and fresh air...",
+        capacity: 8,
+        amenities: ["Skiling", "Historial homes", "Creative spaces", "Arctic", "Amazing views", "Towers"],
+        labels: ["Mountain", "Adventure", "Nature"],
+        host: {
+          _id: "u106",
+          fullname: "John Doe",
+          imgUrl: "https://a0.muscache.com/im/pictures/user/User-38299422/original/2ab2d42c-80cb-46d8-bb26-232aacc1aef3.jpeg?im_w=240",
+          hostingYears: 4,
+          ownerReview: `This cabin offers the perfect escape from the city. Nestled in the mountains, it provides a serene environment for relaxation and adventure. Enjoy skiing nearby and come back to a cozy fireplace.`
+        },
+        loc: {
+          area: "Rocky Mountains",
+          country: "USA",
+          countryCode: "US",
+          city: "Aspen",
+          address: "456 Mountain View Rd",
+          lat: 39.1911,
+          lng: -106.8175
+        },
+        reviews: [
+          {
+            id: "r201",
+            txt: "Absolutely stunning views and incredibly cozy rooms.",
+            rate: 5,
+            by: {
+              _id: "u201",
+              fullname: "user10",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r202",
+            txt: "The host was very welcoming and provided great local tips.",
+            rate: 4,
+            by: {
+              _id: "u202",
+              fullname: "user11",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r203",
+            txt: "An ideal place for relaxation, surrounded by nature.",
+            rate: 5,
+            by: {
+              _id: "u203",
+              fullname: "user12",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r212",
+            txt: "Absolutely breathtaking scenery, the villa was beyond our expectations.",
+            rate: 5,
+            by: {
+              _id: "u219",
+              fullname: "Anna Thompson",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/223db29f-2507-412c-bba8-510446c3502e.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r213",
+            txt: "Incredible service and luxurious amenities. Felt like royalty!",
+            rate: 5,
+            by: {
+              _id: "u220",
+              fullname: "Mark Evans",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/2460542d-1a13-4bca-b269-53eff2d04c9c.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r214",
+            txt: "A slice of heaven on earth. The private beach access was a dream.",
+            rate: 5,
+            by: {
+              _id: "u221",
+              fullname: "Natalie Young",
+              imgUrl:
+                "https://a0.muscache.com/im/users/12801203/profile_pic/1432018804/original.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r215",
+            txt: "Every detail was perfect, from the stunning interiors to the lush gardens.",
+            rate: 5,
+            by: {
+              _id: "u222",
+              fullname: "Ethan Murphy",
+              imgUrl:
+                "https://a0.muscache.com/im/users/10659131/profile_pic/1402608909/original.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r216",
+            txt: "The best sunset views we've ever seen! Can't wait to return.",
+            rate: 5,
+            by: {
+              _id: "u223",
+              fullname: "Grace Lee",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/44d26f4d-0b4f-4d07-a31c-397abfffce0b.jpg?im_w=240",
+            },
+          },
+        ],
+        likedByUsers: ["nature-lover", "ski-enthusiast"]
+      },
+      {
+        _id: "s113",
+        name: "Urban Penthouse",
+        type: "Apartment",
+        imgUrls: [
+          "https://a0.muscache.com/im/pictures/miso/Hosting-735631981787270205/original/6ba8675a-8cbf-4156-8951-51a4b1aa1171.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-735631981787270205/original/66f7bf0d-e750-4276-8868-3aedd5d203e8.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-735631981787270205/original/7948f5c4-c621-4cc5-8c56-0634402489db.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-735631981787270205/original/c35dc16e-3bb9-4eed-9a84-df9d08eb7fa7.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-735631981787270205/original/02b18587-113b-4745-bcb5-d97b1a6a18e3.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-735631981787270205/original/2ca0decd-13dc-46f4-804a-e98b4fe32458.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-735631981787270205/original/80c172ce-99b6-4e0a-9b9a-d2e3c28b143b.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-735631981787270205/original/c6d3545f-79c6-4d24-81a2-be5c03908723.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-735631981787270205/original/c50f0473-83ef-47f5-be6d-19aac1e9d2ba.jpeg?im_w=1200"
+        ],
+        price: 250.0,
+        bedrooms: 3,
+        beds: 5,
+        baths: 2,
+        summary: "A luxurious penthouse in the heart of the city with stunning skyline views.",
+        capacity: 4,
+        amenities: ["Arctic", "Iconic cities", "Beachfront", "Play", "Chef kitchens", "Amazing pools"],
+        labels: ["City Life", "Luxury", "Modern"],
+        host: {
+          _id: "u106",
+          fullname: "Alice Johnson",
+          imgUrl: "https://a0.muscache.com/im/pictures/user/289cdce3-a2cc-472f-b0a8-c5f0354fb914.jpg?im_w=240",
+          hostingYears: 5,
+          ownerReview: "Enjoy a lavish experience in our centrally located penthouse..."
+        },
+        loc: {
+          area: "Downtown",
+          country: "USA",
+          countryCode: "US",
+          city: "New York",
+          address: "123 Main St, New York, NY",
+          lat: 40.7128,
+          lng: -74.0060
+        },
+        reviews: [
+          {
+            id: "r201",
+            txt: "Absolutely stunning views and incredibly cozy rooms.",
+            rate: 5,
+            by: {
+              _id: "u201",
+              fullname: "user10",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r202",
+            txt: "The host was very welcoming and provided great local tips.",
+            rate: 4,
+            by: {
+              _id: "u202",
+              fullname: "user11",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r203",
+            txt: "An ideal place for relaxation, surrounded by nature.",
+            rate: 5,
+            by: {
+              _id: "u203",
+              fullname: "user12",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r204",
+            txt: "Loved the modern amenities mixed with a rustic charm.",
+            rate: 4,
+            by: {
+              _id: "u204",
+              fullname: "user13",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r206",
+            txt: "The infinity pool is just amazing - spent most of our time enjoying the view!",
+            rate: 5,
+            by: {
+              _id: "u213",
+              fullname: "James Carter",
+              imgUrl:
+                "https://a0.muscache.com/im/users/23331610/profile_pic/1415110296/original.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r207",
+            txt: "Waking up to the sound of the waves was just what we needed. Truly a piece of paradise.",
+            rate: 5,
+            by: {
+              _id: "u214",
+              fullname: "Emily Harris",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/User-26787824/original/362eb154-2928-4d8d-acc3-92f9a1fcd1ab.jpeg?im_w=240",
+            },
+          },
+          {
+            id: "r208",
+            txt: "The villa is incredible, offering privacy and luxury. Highly recommend the private beach access!",
+            rate: 4,
+            by: {
+              _id: "u215",
+              fullname: "Michael Brown",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/87b83be7-edfc-4753-aa2a-89673e8d5f74.jpg?im_w=240",
+            },
+          },
+        ],
+        likedByUsers: ["city-explorer", "luxury-seeker"]
+      },
+      {
+        _id: "s115",
+        name: "Seaside Escape",
+        type: "Villa",
+        imgUrls: [
+          "https://a0.muscache.com/im/pictures/miso/Hosting-904442199486043595/original/5647715b-f31c-4696-a868-e823fa21525f.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-904442199486043595/original/18c0241c-9ac2-41ed-913f-30bb06c2b95d.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-904442199486043595/original/5567ca3f-c206-43cd-93d4-85ffe524cac5.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-904442199486043595/original/da2b710a-3a80-47e6-945a-72b5d158ddea.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-904442199486043595/original/6ea1589e-bc46-4606-a888-beab811f742c.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-904442199486043595/original/d6545fc9-9bb0-4e1e-a788-55dc2b928587.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-904442199486043595/original/18c0241c-9ac2-41ed-913f-30bb06c2b95d.jpeg?im_w=1200"
+        ],
+        price: 350.0,
+        bedrooms: 4,
+        beds: 6,
+        baths: 3,
+        summary: "A beautiful villa by the sea, perfect for a relaxing getaway.",
+        capacity: 6,
+        amenities: ["Beachfront", "Amazing views", "Historial homes", "Luxe", "Grand pianos", "Trending"],
+        labels: ["Beach", "Family", "Relaxation"],
+        host: {
+          _id: "u107",
+          fullname: "Carlos Mendez",
+          imgUrl: "https://a0.muscache.com/im/pictures/user/5e26e89a-2af9-4de8-bb0d-2dafd7dbb7b8.jpg?im_w=240",
+          hostingYears: 3,
+          ownerReview: "This beachfront villa offers a serene and luxurious stay..."
+        },
+        loc: {
+          area: "Seaside",
+          country: "Spain",
+          countryCode: "ES",
+          city: "Barcelona",
+          address: "456 Beach Ave, Barcelona",
+          lat: 41.3851,
+          lng: 2.1734
+        },
+        reviews: [
+          {
+            id: "r201",
+            txt: "Absolutely stunning views and incredibly cozy rooms.",
+            rate: 5,
+            by: {
+              _id: "u201",
+              fullname: "user10",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r202",
+            txt: "The host was very welcoming and provided great local tips.",
+            rate: 4,
+            by: {
+              _id: "u202",
+              fullname: "user11",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r203",
+            txt: "An ideal place for relaxation, surrounded by nature.",
+            rate: 5,
+            by: {
+              _id: "u203",
+              fullname: "user12",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r204",
+            txt: "Loved the modern amenities mixed with a rustic charm.",
+            rate: 4,
+            by: {
+              _id: "u204",
+              fullname: "user13",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r205",
+            txt: "A serene retreat - peaceful, quiet, and beautiful.",
+            rate: 5,
+            by: {
+              _id: "u205",
+              fullname: "user14",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
+            }
+          }
+        ],
+        likedByUsers: ["beach-lover", "sun-seeker"]
+      },
+      {
+        id: "r102",
+        txt: "Great location and fantastic city view!",
+        rate: 5,
+        by: {
+          _id: "u104",
+          fullname: "boris",
+          imgUrl: "https://a0.muscache.com/im/pictures/user/f793a59f-43cc-4a02-b8f0-eb5a542e68ff.jpg?im_w=240",
+        },
+      },
+      {
+        id: "madeId5",
+        txt: "Perfect for a weekend getaway. The host was very responsive and helpful...",
+        rate: 3,
+        by: {
+          _id: "u106",
+          fullname: "nave",
+          imgUrl: "https://a0.muscache.com/im/pictures/user/e6b632f2-03b5-4a26-a4eb-3b520d12a8e7.jpg?im_w=240",
+        },
+      },
+      {
+        id: "coll",
+        txt: "Fantastic location, close to the city center. The room was clean...",
+        rate: 5,
+        by: {
+          _id: "u103",
+          fullname: "shoshi",
+          imgUrl: "https://a0.muscache.com/im/pictures/user/96db5a52-52db-42d4-a8bf-fe4d9cb7901d.jpg?im_w=240",
+        },
+      },
+      {
+        id: "madeId3",
+        txt: "Charming apartment with amazing views. Hosts were very accommodating...",
+        rate: 5,
+        by: {
+          _id: "u104",
+          fullname: "IMYOU",
+          imgUrl: "https://a0.muscache.com/im/pictures/user/7e30997b-191c-4f49-bd71-ea57e4fe8d91.jpg?im_w=240",
+        },
+      }
     ];
 
     utilService.saveToStorage(STORAGE_KEY, stays);
