@@ -22,17 +22,7 @@ export function StayDetails() {
 
   useEffect(() => {
     loadStay();
-  });
-
-  //  function loadStay() {
-  //   stayService
-  //     .getById(stayId)
-  //     .then(setStay)
-  //     .catch((err) => {
-  //       showErrorMsg("Cant load stay")
-  //       navigate("/stay")
-  //     })
-  // }
+  }, []);
 
   async function loadStay() {
     try {
@@ -175,44 +165,44 @@ export function StayDetails() {
           </span>
           <span className="fs14"> • </span>
           <a href="#" className="stay-dets-rating-link fs26">
-            49 reviews
+            {stay.reviews.length} Reviews
           </a>
         </div>
         <div className="apt-rating-dets-con">
           <div className="apt-rating-dets">
             <div className="title-rating-det">Cleanliness</div>
-            <div className="rating-det">4.9</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-solid fa-spray-can-sparkles  fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Accuracy</div>
-            <div className="rating-det">4.9</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-regular fa-circle-check  fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Check-in</div>
-            <div className="rating-det">5.0</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-solid fa-key fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Communication</div>
-            <div className="rating-det">5.0</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-regular fa-message fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Location</div>
-            <div className="rating-det">4.9</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-solid fa-map-location  fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Value</div>
-            <div className="rating-det">4.8</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-solid fa-coins  fs20"></i>
           </div>
         </div>
       </section>
       <div className="reviews-cmp divider padding24">
-        <StayReviews reviews={stay.reviews} />
+        <StayReviews reviews={stay.reviews} stars={stay.reviews[0].rate} />
       </div>
       <div className="apt-loc-map padding24">
         <div className="apt-loc-map-title fs22 fw600">Where you’ll be</div>
@@ -237,8 +227,8 @@ export function StayDetails() {
           </div>
           <div className="host-icon-ext fs16">
             <div>
-              <i className="fa-solid fa-star"></i>
-              <span> 49 Reviews</span>
+              <i class="fa-solid fa-envelope"></i>
+              <span> {stay.reviews.length} Reviews</span>
             </div>
             <div>
               <i className="fa-solid fa-user-shield"></i>
