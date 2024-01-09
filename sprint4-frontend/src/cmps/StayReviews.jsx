@@ -4,21 +4,30 @@ import React, { useState, useEffect } from 'react';
 export function StayReviews({ reviews, stars }) {
   const [showScreenShadow, setShowScreenShadow] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
+  const [showMoreStates, setShowMoreStates] = useState(
+    reviews.map(() => false)
+  )
 
   const openModal = (ev) => {
-    ev.preventDefault();
-    setModalOpen(true);
-    setShowScreenShadow(true);
-    document.body.style.overflow = 'hidden'; // Stop scrolling
-  };
+    ev.preventDefault()
+    setModalOpen(true)
+    setShowScreenShadow(true)
+    document.body.style.overflow = 'hidden'
+  }
 
   const closeModal = () => {
-    setModalOpen(false);
-    setShowScreenShadow(false);
-    document.body.style.overflow = 'unset'; // Resume scrolling
-  };
+    setModalOpen(false)
+    setShowScreenShadow(false)
+    document.body.style.overflow = 'unset'
+  }
 
-  let avgRate = reviews.length > 0 ? (reviews.rate / reviews.length) : 0;
+  const toggleShowMore = (index) => {
+    setShowMoreStates(
+      showMoreStates.map((state, idx) => (idx === index ? !state : state))
+    )
+  }
+
+  let avgRate = reviews.length > 0 ? (reviews.rate / reviews.length) : 0
 
   return (
     <section className="reviews-container">
@@ -28,12 +37,24 @@ export function StayReviews({ reviews, stars }) {
             <div className="user-avatar flex row">
               <img
                 src={review.by.imgUrl}
-                alt={`${review.by.fullname}'s profile`}
                 className="mini-user-img"
-              />
+              ></img>
               <div className="fullname">{review.by.fullname}</div>
             </div>
-            <div className="txt-review fs16">{review.txt}</div>
+            <div className="txt-review fs16">
+              {showMoreStates[index]
+                ? review.txt
+                : (review.txt.length > 150 ? `${review.txt.substring(0, 150)}...` : review.txt)
+              }
+              {review.txt.length > 150 && (
+                <button
+                  className="showmore-btn underline"
+                  onClick={() => toggleShowMore(index)}
+                >
+                  {showMoreStates[index] ? 'Show less' : 'Show more'}
+                </button>
+              )}
+            </div>
           </li>
         ))}
       </div>

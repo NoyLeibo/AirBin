@@ -152,11 +152,11 @@ export function StayDetails() {
               src="https://a0.muscache.com/im/pictures/54e427bb-9cb7-4a81-94cf-78f19156faad.jpg"
               alt="aircover"
             ></img>
-            <div className="padding24">
+            <div className="padding24 fs16">
               Every booking includes free protection from Host cancellations,
               listing inaccuracies, and other issues like trouble checking in.
             </div>
-            <div className="stay-owner-revirew divider padding24">
+            <div className="stay-owner-revirew divider padding24 fs16">
               {stay.host.ownerReview}
             </div>
           </div>
