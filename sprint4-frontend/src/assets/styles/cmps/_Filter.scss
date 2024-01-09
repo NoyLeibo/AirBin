@@ -18,21 +18,64 @@
   cursor: auto;
   z-index: 1;
 
-  .by-type-place {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
+  h2 {
+    color: black;
+  }
 
-    .type {
+  .by-rooms {
+    width: 100%;
+
+    button {
       border: 1px #dddddd solid;
-      padding: 50px;
-      border-radius: 4px;
+      padding: 11px 27px 35px 27px;
+      border-radius: 30px;
       font-size: 1em;
       margin: 0 5px;
-
+      transition: border 0.3s ease;
       &:hover {
         border: 1px black solid;
       }
+    }
+  }
+  .by-beds {
+    width: 100%;
+
+    button {
+      border: 1px #dddddd solid;
+      padding: 11px 27px 35px 27px;
+      border-radius: 30px;
+      font-size: 1em;
+      margin: 0 5px;
+      transition: border 0.3s ease;
+      &:hover {
+        border: 1px black solid;
+      }
+    }
+  }
+  .by-bathrooms {
+    width: 100%;
+
+    button {
+      border: 1px #dddddd solid;
+      padding: 11px 27px 35px 27px;
+      border-radius: 30px;
+      font-size: 1em;
+      margin: 0 5px;
+      transition: border 0.3s ease;
+      &:hover {
+        border: 1px black solid;
+      }
+    }
+  }
+
+  .filter-footer {
+    padding: 16px 24px 16px 24px;
+
+    .show-btn {
+      padding: 14px 24px 14px 24px;
+      background-color: #5a5a5a;
+      color: #ffff;
+      z-index: 999;
     }
   }
 }

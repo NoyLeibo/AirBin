@@ -4,7 +4,7 @@ import Slider from "@mui/material/Slider";
 import { useSelector } from "react-redux";
 
 function valuetext(value) {
-  return `${value}°C`;
+  return `${value}`;
 }
 
 export function PriceRange({ handlePriceRangeChange }) {

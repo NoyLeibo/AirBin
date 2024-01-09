@@ -30,23 +30,25 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
 
   return (
     <section className="filter-modal-container">
-      <div className="by-type-place">
+      {/* <div className="by-type-place">
         <h2>Type of place</h2>
         <div>Search rooms, entire homes, or any type of place.</div>
         <button type="button" className="clean-btn type">
-          Entire home
+          Any type
         </button>
         <button type="button" className="clean-btn type">
           Room
         </button>
         <button type="button" className="clean-btn type">
-          Any type
+          Entire home
         </button>
-      </div>
+      </div> */}
       <div className="by-price-range">
         <h2>Price range</h2>
         <div>Nightly prices including fees and taxes</div>
-        <PriceRange handlePriceRangeChange={handlePriceRangeChange} />
+        <div className="range">
+          <PriceRange handlePriceRangeChange={handlePriceRangeChange} />
+        </div>
       </div>
       <div className="by-rooms">
         <h2>Rooms and beds</h2>
@@ -289,6 +291,10 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
           7+
         </button>
       </div>
+      <footer className="filter-footer flex justify-between divider">
+        <button className="clean-btn">Clear all</button>
+        <button className="show-btn clean-btn">Show places</button>
+      </footer>
     </section>
   );
 }
