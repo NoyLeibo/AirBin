@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { userService } from "../services/user.service";
-import { login, logout } from "../store/user.actions";
+import { login, logout, signup } from "../store/user.actions";
 
 export function LoginModal() {
   const [username, setUsername] = useState("");
@@ -10,10 +10,10 @@ export function LoginModal() {
   const [isRegistering, setIsRegistering] = useState(false);
   const navigate = useNavigate();
 
-  const demoUser = { username: "NoyLeibo", password: "123" };
-  const demoLogin = () => {
-    setUsername(demoUser.username);
-    setPassword(demoUser.password);
+  const demoUser = { username: "NoyLeibo", password: "123456" };
+
+  const demoLogin = async () => {
+    await signup(demoUser);
   };
 
   const handleLoginSubmit = async (event) => {
