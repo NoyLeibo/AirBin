@@ -159,9 +159,9 @@ function _createStays() {
           "https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/e02c29bb-30a1-484d-ba58-b4cffa91fc5f.jpeg?im_w=1200",
         ],
         price: 1200.0,
-        bedrooms: 4,
-        beds: 7,
-        baths: 3,
+        bedrooms: 4, // added
+        beds: 7, // added
+        baths: 3, // added
         summary: "Beautiful villa with direct access to the beach...",
         capacity: 6,
         amenities: ["Breakfasts", "Top of the world", "Mansions", "Rooms", "Historial homes", "Chef kitchens"],
@@ -171,11 +171,11 @@ function _createStays() {
           fullname: "Maria Gonzalez",
           imgUrl:
             "https://a0.muscache.com/im/pictures/user/d7f7361f-9b5d-4780-a3cf-029a10bdcc1e.jpg?im_w=240",
-          hostingYears: 3,
+          hostingYears: 3, // added
           ownerReview: `Amazing luxury apartment, located in a new residential project with luxurious lobby and 24/7 security.
           The apartment overlooks the sea and the entire city of Tel Aviv from it's extra large and shaded balcony on the 27th floor.
-          There are 2 spacious bedrooms, closets, full size tub, pampering living room wits smart TV, fully equipped kitchen: dishwasher, a Nespresso machine, dining area, AC, washing machine, dryer & more!`
-        },
+          There are 2 spacious bedrooms, closets, full size tub, pampering living room wits smart TV, fully equipped kitchen: dishwasher, a Nespresso machine, dining area, AC, washing machine, dryer & more!` // added
+        }, // added
         loc: {
           area: "Caribbean",
           country: "Bahamas",
@@ -186,6 +186,26 @@ function _createStays() {
           lng: 25.03428,
         },
         reviews: [
+          {
+            id: "madeId2",
+            txt: "Fantastic location, close to the city center. The room was clean...",
+            rate: 5,
+            by: {
+              _id: "u103",
+              fullname: "user3",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/96db5a52-52db-42d4-a8bf-fe4d9cb7901d.jpg?im_w=240",
+            },
+          },
+          {
+            id: "madeId3",
+            txt: "Charming apartment with amazing views. Hosts were very accommodating...",
+            rate: 5,
+            by: {
+              _id: "u104",
+              fullname: "user4",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7e30997b-191c-4f49-bd71-ea57e4fe8d91.jpg?im_w=240",
+            },
+          },
           {
             id: "r212",
             txt: "Absolutely breathtaking scenery, the villa was beyond our expectations.",
@@ -265,11 +285,14 @@ function _createStays() {
           "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/76205948-69bb-4ad3-8d84-607fbfb8ee26.jpeg?im_w=1200",
           "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/2a5776e3-5014-4deb-aea1-b8747a4d0103.jpeg?im_w=1200",
           "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/3965820c-e88d-42be-a232-52f5edf333fe.jpeg?im_w=720",
-          // "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/d8ad988e-726d-412a-8d5a-5ce6bdfb80a1.jpeg?im_w=1200",
-          // "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/e98163f6-1b99-4ada-b2e1-710cd743d840.jpeg?im_w=720",
-          // "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/e63a0d1f-336c-4bbe-8e80-548cb7761198.jpeg?im_w=1200"
+          "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/d8ad988e-726d-412a-8d5a-5ce6bdfb80a1.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/e98163f6-1b99-4ada-b2e1-710cd743d840.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-965149645977028534/original/e63a0d1f-336c-4bbe-8e80-548cb7761198.jpeg?im_w=1200"
         ],
         price: 150.0,
+        bedrooms: 2, // added
+        beds: 10, // added
+        baths: 2, //added
         summary:
           "Luxurious villa offering serene beachfront views and lush tropical gardens...",
         capacity: 6,
@@ -280,6 +303,8 @@ function _createStays() {
           fullname: "Achara Boonsri",
           imgUrl:
             "https://a0.muscache.com/im/pictures/user/010358d4-feff-433f-89d2-d3e8560d07a5.jpg?im_w=240",
+          hostingYears: 3,
+          ownerReview: "This stunning penthouse suite offers breathtaking city views. It's elegantly furnished, featuring a modern kitchen with high-end appliances, a cozy living room with a fireplace, and two serene bedrooms. The private rooftop terrace is perfect for evening relaxation.",
         },
         loc: {
           area: "Asia",
@@ -357,6 +382,16 @@ function _createStays() {
                 "https://a0.muscache.com/im/pictures/user/92cafe09-9d5a-4971-9985-48002f0c35ae.jpg?im_w=240",
             },
           },
+          {
+            id: "madeId4",
+            txt: "A cozy retreat in a great neighborhood. Loved the local coffee shops...",
+            rate: 4,
+            by: {
+              _id: "u105",
+              fullname: "user5",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/1451c857-1d7b-4253-b9b3-76c2096026f2.jpg?im_w=240",
+            },
+          },
         ],
         likedByUsers: ["beach-lover", "luxury-traveler"],
       },
@@ -370,6 +405,9 @@ function _createStays() {
           // ... more image URLs
         ],
         price: 95.0,
+        bedrooms: 2, // added
+        beds: 4, // added
+        baths: 2, // added
         summary:
           "Cozy studio apartment in the city center with modern amenities.",
         capacity: 4,
@@ -378,7 +416,9 @@ function _createStays() {
         host: {
           _id: "u103",
           fullname: "Anna Smith",
-          imgUrl: "https://example.com/host2.jpg",
+          imgUrl: "https://a0.muscache.com/im/pictures/user/f59b960b-64c1-443b-99b8-44d5501f53be.jpg?im_w=240",
+          hostingYears: 3, // added
+          ownerReview: "Experience the charm of old-town living in our beautifully restored apartment. It features original hardwood floors, a gourmet kitchen, and a spacious living room with large windows. The bedrooms are quiet and comfortable, providing a peaceful night's sleep.",
         },
         loc: {
           area: "North America",
@@ -397,7 +437,37 @@ function _createStays() {
             by: {
               _id: "u104",
               fullname: "user3",
-              imgUrl: "/img/img3.jpg",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/f793a59f-43cc-4a02-b8f0-eb5a542e68ff.jpg?im_w=240",
+            },
+          },
+          {
+            id: "madeId5",
+            txt: "Perfect for a weekend getaway. The host was very responsive and helpful...",
+            rate: 3,
+            by: {
+              _id: "u106",
+              fullname: "user6",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/e6b632f2-03b5-4a26-a4eb-3b520d12a8e7.jpg?im_w=240",
+            },
+          },
+          {
+            id: "madeId6",
+            txt: "Quiet, clean, and comfortable. Great value for the price...",
+            rate: 4,
+            by: {
+              _id: "u107",
+              fullname: "user7",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/User-169973182/original/f963066e-0a5f-48a4-8f96-ac6e62a035d3.jpeg?im_w=240",
+            },
+          },
+          {
+            id: "madeId7",
+            txt: "Loved the modern design and amenities. The rooftop pool was a bonus...",
+            rate: 5,
+            by: {
+              _id: "u108",
+              fullname: "user8",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/ef5230a8-3dce-4115-8942-38f2a38a0ef7.jpg?im_w=240",
             },
           },
         ],
@@ -413,6 +483,9 @@ function _createStays() {
           // ... more image URLs
         ],
         price: 130.0,
+        bedrooms: 3, // added
+        beds: 5, // added
+        baths: 1, // added
         summary:
           "Cozy mountain lodge in the heart of the Rockies, perfect for adventure seekers.",
         capacity: 5,
@@ -421,7 +494,9 @@ function _createStays() {
         host: {
           _id: "u107",
           fullname: "Emily Johnson",
-          imgUrl: "https://example.com/host4.jpg",
+          imgUrl: "https://a0.muscache.com/im/users/27844976/profile_pic/1424111519/original.jpg?im_w=240",
+          hostingYears: 3, // added
+          ownerReview: "Nestled in the heart of the city, this contemporary apartment boasts an open-plan living space with stylish décor. The kitchen is a chef's dream, and the balcony offers a lovely view of the urban landscape. Each bedroom is equipped with luxurious bedding.", // added
         },
         loc: {
           area: "North America",
@@ -440,7 +515,7 @@ function _createStays() {
             by: {
               _id: "u201",
               fullname: "user10",
-              imgUrl: "/img/img10.jpg",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
           {
@@ -450,7 +525,7 @@ function _createStays() {
             by: {
               _id: "u202",
               fullname: "user11",
-              imgUrl: "/img/img11.jpg",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
             },
           },
           {
@@ -460,7 +535,7 @@ function _createStays() {
             by: {
               _id: "u203",
               fullname: "user12",
-              imgUrl: "/img/img12.jpg",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
             },
           },
           {
@@ -470,7 +545,7 @@ function _createStays() {
             by: {
               _id: "u204",
               fullname: "user13",
-              imgUrl: "/img/img13.jpg",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
             },
           },
           {
@@ -480,7 +555,7 @@ function _createStays() {
             by: {
               _id: "u205",
               fullname: "user14",
-              imgUrl: "/img/img14.jpg",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
             },
           },
         ],
@@ -501,6 +576,9 @@ function _createStays() {
         price: 95.0,
         summary: "Stylish, modern apartment in the city center...",
         capacity: 4,
+        bedrooms: 2, // added
+        beds: 4, // added
+        baths: 1, // added
         amenities: ["Breakfasts", "Riads", "Trending", "Iconic cities", "Arctic", "Play"],
         labels: ["City View", "New", "Luxury"],
         host: {
@@ -508,6 +586,8 @@ function _createStays() {
           fullname: "Alex Johnson",
           imgUrl:
             "https://a0.muscache.com/im/pictures/user/001c1a3b-2596-4308-956a-7b410e6e8605.jpg?im_w=240",
+          hostingYears: 3, // added
+          ownerReview: "Immerse yourself in luxury at our high-rise apartment with panoramic city views. The living space is adorned with designer furniture and artwork. The bedrooms are spacious, and the kitchen is fitted with the latest appliances. It’s an urban oasis."
         },
         loc: {
           area: "North America",
@@ -526,7 +606,7 @@ function _createStays() {
             by: {
               _id: "u104",
               fullname: "Morgan Blake",
-              imgUrl: "/img/morgan.jpg",
+              imgUrl: "https://a0.muscache.com/im/users/30112578/profile_pic/1427484476/original.jpg?im_w=240",
             },
           },
         ],
@@ -544,6 +624,9 @@ function _createStays() {
           "https://a0.muscache.com/im/pictures/miso/Hosting-5264493/original/bc9fdbba-a126-4357-946b-4d5f5581ca0f.jpeg?im_w=480",
         ],
         price: 80.0,
+        bedrooms: 4, // added
+        beds: 7, // added
+        baths: 3, // added
         summary: "Fantastic duplex apartment...",
         capacity: 8,
         amenities: ["Luxe", "Top of the world", "Amazing views", "Riads", "Trending", "Beachfront"],
@@ -552,7 +635,9 @@ function _createStays() {
           _id: "u101",
           fullname: "Davit Pok",
           imgUrl:
-            "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+            "https://a0.muscache.com/im/users/30112578/profile_pic/1427484476/original.jpg?im_w=240",
+          hostingYears: 3, // added
+          ownerReview: "Immerse yourself in luxury at our high-rise apartment with panoramic city views. The living space is adorned with designer furniture and artwork. The bedrooms are spacious, and the kitchen is fitted with the latest appliances. It’s an urban oasis.",
         },
         loc: {
           area: "Europe",
@@ -571,7 +656,37 @@ function _createStays() {
             by: {
               _id: "u102",
               fullname: "user2",
-              imgUrl: "/img/img2.jpg",
+              imgUrl: "https://a0.muscache.com/im/users/4430456/profile_pic/1355792528/original.jpg?im_w=240",
+            },
+          },
+          {
+            id: "madeId8",
+            txt: "Exceptional stay! The host went above and beyond to ensure our comfort...",
+            rate: 5,
+            by: {
+              _id: "u109",
+              fullname: "user9",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/User-443687748/original/f046f60e-6986-4b2a-a32b-db8077edad50.jpeg?im_w=240",
+            },
+          },
+          {
+            id: "madeId9",
+            txt: "Great location for exploring the city. The apartment was spacious and well-equipped...",
+            rate: 4,
+            by: {
+              _id: "u110",
+              fullname: "user10",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/d0e4a04e-7020-4b10-ad37-9b5b1f4a62a9.jpg?im_w=240",
+            },
+          },
+          {
+            id: "madeId10",
+            txt: "The garden was a peaceful retreat. Enjoyed the fresh morning pastries...",
+            rate: 5,
+            by: {
+              _id: "u111",
+              fullname: "user11",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/78319eb1-93a8-4d8a-8ad7-238e6a233baf.jpg?im_w=240",
             },
           },
         ],
@@ -589,6 +704,9 @@ function _createStays() {
           "https://a0.muscache.com/im/pictures/miso/Hosting-53768213/original/85980c60-c503-402e-bec4-9ee312249db8.jpeg?im_w=720",
         ],
         price: 75.0,
+        bedrooms: 2, // added
+        beds: 2, // added
+        baths: 2, // added
         summary: "Cozy cabin in the woods, perfect for a peaceful getaway...",
         capacity: 2,
         amenities: [
@@ -605,6 +723,8 @@ function _createStays() {
           fullname: "Emily Turner",
           imgUrl:
             "https://a0.muscache.com/im/pictures/user/813a53c8-b08f-44e1-8c16-21001b65ac6c.jpg?im_w=240",
+          hostingYears: 3, // added
+          ownerReview: "Discover the perfect blend of comfort and elegance in our apartment. It features a spacious living room with a smart TV, a fully-equipped modern kitchen, and cozy bedrooms. The highlight is the private garden terrace, ideal for morning coffee."
         },
         loc: {
           area: "Europe",
@@ -623,7 +743,7 @@ function _createStays() {
             by: {
               _id: "u108",
               fullname: "Liam Smith",
-              imgUrl: "/img/liam.jpg",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/219c0432-1765-43cc-bdb6-3d12087cafa9.jpg?im_w=240",
             },
           },
         ],
@@ -640,13 +760,18 @@ function _createStays() {
         price: 80.0,
         summary: "Fantastic duplex apartment...",
         capacity: 8,
+        bedrooms: 7, // added
+        beds: 14, // added
+        baths: 5, // added
         amenities: ["Amazing views", "Iconic cities", "Creative spaces", "Towers", "OMG", "Beachfront"],
         labels: ["Top of the world", "Trending", "Play", "Tropical"],
         host: {
           _id: "u101",
           fullname: "Davit Pok",
           imgUrl:
-            "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+            "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
+          hostingYears: 3, // added
+          ownerReview: "Our apartment in the historic district offers a unique blend of classic charm and modern amenities. It includes a well-appointed kitchen, a comfortable living area, and bedrooms with antique furnishings. The location is perfect for exploring the city."
         },
         loc: {
           area: "Asia",
@@ -665,7 +790,7 @@ function _createStays() {
             by: {
               _id: "u102",
               fullname: "user2",
-              imgUrl: "/img/img2.jpg",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
         ],

@@ -78,7 +78,7 @@ export function StayDetails() {
           </div>
           <div className="apt-host-details divider flex align-center  padding24">
             <img
-              src="https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/48.jpg"
+              src={stay.host.imgUrl}
               className="host-avatar-img"
             />
             <div className="apt-host-info ">
