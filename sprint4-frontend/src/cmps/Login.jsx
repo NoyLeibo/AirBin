@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { userService } from "../services/user.service";
+import { login, logout } from "../store/user.actions";
 
 export function LoginModal() {
   const [username, setUsername] = useState("");
@@ -18,8 +19,8 @@ export function LoginModal() {
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
     try {
-      await userService.logout();
-      await userService.login({ username, password });
+      await logout();
+      await login({ username, password });
       navigate("/");
     } catch (err) {
       console.log("err: " + err);
