@@ -68,7 +68,8 @@ export function StayFilter({ filterBy, onSetFilter }) {
       filterContainerRef.current.scrollLeft += 110;
     }
   };
-  const handleEmojiSelect = (key) => {
+  const handleEmojiSelect = (key, ev) => {
+    ev.preventDefault();
     setSelectedEmoji(key);
     addPropertyType(key);
   };
@@ -105,9 +106,9 @@ export function StayFilter({ filterBy, onSetFilter }) {
         {Object.entries(filters[0]).map(([key, value], filterIndex) => (
           <label
             key={key + filterIndex}
-            className={`emoji-container ${selectedEmoji === key ? "selectedEmoji" : ""
-              }`}
-            onClick={() => handleEmojiSelect(key)}
+            className={`emoji-container ${selectedEmoji === key ? "selectedEmoji" : ""}`}
+
+            onClick={() => handleEmojiSelect(key, ev)}
           >
             <img
               className="emoji-filter"
