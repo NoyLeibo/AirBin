@@ -277,6 +277,140 @@ function _createStays() {
         likedByUsers: ["luxury-seeker", "serenity-lover"],
       },
       {
+        _id: "s105",
+        name: "Rustic Farmhouse",
+        type: "House",
+        imgUrls: [
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-813098446617682255/original/4fd02531-0a0f-46b9-b6f1-6b98f183ef80.jpeg?im_w=1200",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-813098446617682255/original/349b74c1-c1d5-473f-b793-98df1c97c914.png?im_w=1200",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-813098446617682255/original/b5e8c42c-392e-4ace-b2f9-863239db73af.png?im_w=720",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-813098446617682255/original/234e6908-2fcd-44fb-af5c-7d3ceb77d740.png?im_w=720",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-813098446617682255/original/df776b30-5d03-4c08-8df1-1ae0aa77dbb0.png?im_w=720",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-813098446617682255/original/c9459814-5fda-4fb4-872d-3f6ed497682a.png?im_w=1200",
+          "https://a0.muscache.com/im/pictures/prohost-api/Hosting-813098446617682255/original/0f3af96b-4ec3-40f5-affb-9def711889d2.png?im_w=1200"
+        ],
+        price: 200.0,
+        bedrooms: 3,
+        beds: 4,
+        baths: 2,
+        summary: "Experience the charm of the countryside in our rustic farmhouse.",
+        capacity: 6,
+        amenities: ["Breakfasts", "Creative spaces", "Rooms", "Amazing pools", "Play", "Earth homes"],
+        labels: ["Country", "Rustic", "Farm"],
+        host: {
+          _id: "u109",
+          fullname: "John Doe",
+          imgUrl: "https://a0.muscache.com/im/pictures/user/5ba88c88-0544-4d2e-9e61-fa1677688e6d.jpg?im_w=240",
+          hostingYears: 2,
+          ownerReview: "Enjoy the peaceful country life and authentic experiences at our farmhouse."
+        },
+        loc: {
+          area: "Countryside",
+          country: "France",
+          countryCode: "FR",
+          city: "Provence",
+          address: "1010 Country Lane, Provence",
+          lat: 43.9352,
+          lng: 5.0510
+        },
+        reviews: [
+          {
+            id: "r206",
+            txt: "The infinity pool is just amazing - spent most of our time enjoying the view!",
+            rate: 5,
+            by: {
+              _id: "u213",
+              fullname: "James Carter",
+              imgUrl:
+                "https://a0.muscache.com/im/users/23331610/profile_pic/1415110296/original.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r207",
+            txt: "Waking up to the sound of the waves was just what we needed. Truly a piece of paradise.",
+            rate: 5,
+            by: {
+              _id: "u214",
+              fullname: "Emily Harris",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/User-26787824/original/362eb154-2928-4d8d-acc3-92f9a1fcd1ab.jpeg?im_w=240",
+            },
+          },
+          {
+            id: "madeId",
+            txt: "Very helpful hosts. Cooked traditional...",
+            rate: 4,
+            by: {
+              _id: "u102",
+              fullname: "user2",
+              imgUrl: "https://a0.muscache.com/im/users/4430456/profile_pic/1355792528/original.jpg?im_w=240",
+            },
+          },
+          {
+            id: "madeId8",
+            txt: "Exceptional stay! The host went above and beyond to ensure our comfort...",
+            rate: 5,
+            by: {
+              _id: "u109",
+              fullname: "user9",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/User-443687748/original/f046f60e-6986-4b2a-a32b-db8077edad50.jpeg?im_w=240",
+            },
+          },
+          {
+            id: "r103",
+            txt: "A beautiful cabin surrounded by nature, very relaxing...",
+            rate: 5,
+            by: {
+              _id: "u108",
+              fullname: "Liam Smith",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/219c0432-1765-43cc-bdb6-3d12087cafa9.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r201",
+            txt: "Absolutely stunning views and incredibly cozy rooms.",
+            rate: 5,
+            by: {
+              _id: "u201",
+              fullname: "user10",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r202",
+            txt: "The host was very welcoming and provided great local tips.",
+            rate: 4,
+            by: {
+              _id: "u202",
+              fullname: "user11",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r203",
+            txt: "An ideal place for relaxation, surrounded by nature.",
+            rate: 5,
+            by: {
+              _id: "u203",
+              fullname: "user12",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
+            },
+          },
+          {
+            id: "r204",
+            txt: "Loved the modern amenities mixed with a rustic charm.",
+            rate: 4,
+            by: {
+              _id: "u204",
+              fullname: "user13",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
+            },
+          },
+        ],
+        likedByUsers: ["wine-lover", "tranquility-seeker"]
+      },
+
+      {
         _id: "s111",
         name: "Tranquil Beachfront Oasis",
         type: "Villa",
