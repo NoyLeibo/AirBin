@@ -81,6 +81,7 @@ export function PaymentPage() {
               <h5>{guests} Guest</h5>
             </div>
           </div>
+          <button className="reserve-btn">Confirm</button>
           <div className="login-section">
             <LoginSignup />
           </div>
