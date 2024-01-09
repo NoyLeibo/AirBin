@@ -309,7 +309,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u104",
-              fullname: "user4",
+              fullname: "Matthew Andreh",
               imgUrl: "https://a0.muscache.com/im/pictures/user/7e30997b-191c-4f49-bd71-ea57e4fe8d91.jpg?im_w=240",
             },
           },
@@ -450,7 +450,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u102",
-              fullname: "user2",
+              fullname: "Andreh",
               imgUrl: "https://a0.muscache.com/im/users/4430456/profile_pic/1355792528/original.jpg?im_w=240",
             },
           },
@@ -460,7 +460,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u109",
-              fullname: "user9",
+              fullname: "Alyssa",
               imgUrl: "https://a0.muscache.com/im/pictures/user/User-443687748/original/f046f60e-6986-4b2a-a32b-db8077edad50.jpeg?im_w=240",
             },
           },
@@ -480,7 +480,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u201",
-              fullname: "user10",
+              fullname: "Kayleigh0",
               imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
@@ -490,7 +490,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u202",
-              fullname: "user11",
+              fullname: "Dannielle1",
               imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
             },
           },
@@ -500,7 +500,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u203",
-              fullname: "user12",
+              fullname: "Jennifer2",
               imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
             },
           },
@@ -510,7 +510,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u204",
-              fullname: "user13",
+              fullname: "Emily3",
               imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
             },
           },
@@ -631,7 +631,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u105",
-              fullname: "user5",
+              fullname: "Rebecca",
               imgUrl: "https://a0.muscache.com/im/pictures/user/1451c857-1d7b-4253-b9b3-76c2096026f2.jpg?im_w=240",
             },
           },
@@ -768,7 +768,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u107",
-              fullname: "user7",
+              fullname: "Rebecca Yusang",
               imgUrl: "https://a0.muscache.com/im/pictures/user/User-169973182/original/f963066e-0a5f-48a4-8f96-ac6e62a035d3.jpeg?im_w=240",
             },
           },
@@ -778,12 +778,12 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u108",
-              fullname: "user8",
+              fullname: "Rachael",
               imgUrl: "https://a0.muscache.com/im/pictures/user/ef5230a8-3dce-4115-8942-38f2a38a0ef7.jpg?im_w=240",
             },
           },
         ],
-        likedByUsers: ["user4", "user5"],
+        likedByUsers: ["Matthew Andreh", "Rebecca"],
       },
       {
         _id: "s106",
@@ -830,7 +830,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u201",
-              fullname: "user10",
+              fullname: "Marissa0",
               imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
@@ -840,7 +840,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u202",
-              fullname: "user11",
+              fullname: "Gabriel1231",
               imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
             },
           },
@@ -850,7 +850,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u203",
-              fullname: "user12",
+              fullname: "AC BnB2",
               imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
             },
           },
@@ -860,7 +860,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u204",
-              fullname: "user13",
+              fullname: "Bree3",
               imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
             },
           },
@@ -870,13 +870,13 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u205",
-              fullname: "user14",
+              fullname: "Michael4",
               imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
             },
           },
         ],
 
-        likedByUsers: ["user10", "user11"],
+        likedByUsers: ["Nicole0", "Mollye1"],
       },
       {
         _id: "s108",
@@ -973,7 +973,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u102",
-              fullname: "user2",
+              fullname: "Andreh",
               imgUrl: "https://a0.muscache.com/im/users/4430456/profile_pic/1355792528/original.jpg?im_w=240",
             },
           },
@@ -983,7 +983,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u109",
-              fullname: "user9",
+              fullname: "Collin",
               imgUrl: "https://a0.muscache.com/im/pictures/user/User-443687748/original/f046f60e-6986-4b2a-a32b-db8077edad50.jpeg?im_w=240",
             },
           },
@@ -993,7 +993,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u110",
-              fullname: "user10",
+              fullname: "Richard0",
               imgUrl: "https://a0.muscache.com/im/pictures/user/d0e4a04e-7020-4b10-ad37-9b5b1f4a62a9.jpg?im_w=240",
             },
           },
@@ -1003,7 +1003,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u111",
-              fullname: "user11",
+              fullname: "Jake1",
               imgUrl: "https://a0.muscache.com/im/pictures/user/78319eb1-93a8-4d8a-8ad7-238e6a233baf.jpg?im_w=240",
             },
           },
@@ -1070,7 +1070,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u201",
-              fullname: "user10",
+              fullname: "Yvette0",
               imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
@@ -1080,7 +1080,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u202",
-              fullname: "user11",
+              fullname: "Andrew1",
               imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
             },
           },
@@ -1090,7 +1090,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u203",
-              fullname: "user12",
+              fullname: "Emily2",
               imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
             },
           },
@@ -1100,7 +1100,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u204",
-              fullname: "user13",
+              fullname: "ERudy3",
               imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
             },
           },
@@ -1110,7 +1110,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u205",
-              fullname: "user14",
+              fullname: "Hannah4",
               imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
             }
           }
@@ -1163,7 +1163,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u102",
-              fullname: "user2",
+              fullname: "Andreh",
               imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
@@ -1173,7 +1173,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u201",
-              fullname: "user10",
+              fullname: "Hannah0",
               imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
@@ -1183,7 +1183,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u202",
-              fullname: "user11",
+              fullname: "Benjamin1",
               imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
             },
           },
@@ -1193,7 +1193,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u203",
-              fullname: "user12",
+              fullname: "Jared2",
               imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
             },
           },
@@ -1203,7 +1203,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u204",
-              fullname: "user13",
+              fullname: "Brittney3",
               imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
             },
           },
@@ -1213,7 +1213,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u205",
-              fullname: "user14",
+              fullname: "Brittney4",
               imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
             }
           }
@@ -1265,7 +1265,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u201",
-              fullname: "user10",
+              fullname: "Zeeshan0",
               imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
@@ -1275,7 +1275,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u202",
-              fullname: "user11",
+              fullname: "Lindsay1",
               imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
             },
           },
@@ -1285,7 +1285,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u203",
-              fullname: "user12",
+              fullname: "LChristina2",
               imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
             },
           },
@@ -1393,7 +1393,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u201",
-              fullname: "user10",
+              fullname: "LChristina0",
               imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
@@ -1403,7 +1403,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u202",
-              fullname: "user11",
+              fullname: "LChristinaCorbin1",
               imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
             },
           },
@@ -1413,7 +1413,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u203",
-              fullname: "user12",
+              fullname: "Jonathan2",
               imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
             },
           },
@@ -1423,7 +1423,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u204",
-              fullname: "user13",
+              fullname: "JonJanet3",
               imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
             },
           },
@@ -1507,7 +1507,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u201",
-              fullname: "user10",
+              fullname: "JonJanet0",
               imgUrl: "https://a0.muscache.com/im/pictures/user/97e7f03e-0b22-484d-864b-ea99aeb092fa.jpg?im_w=240",
             },
           },
@@ -1517,7 +1517,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u202",
-              fullname: "user11",
+              fullname: "JonJanetBen1",
               imgUrl: "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
             },
           },
@@ -1527,7 +1527,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u203",
-              fullname: "user12",
+              fullname: "Michelle2",
               imgUrl: "https://a0.muscache.com/im/pictures/user/7c44e5cf-7dac-46fb-80a1-da1f91a04533.jpg?im_w=240",
             },
           },
@@ -1537,7 +1537,7 @@ function _createStays() {
             rate: 4,
             by: {
               _id: "u204",
-              fullname: "user13",
+              fullname: "Ashleigh3",
               imgUrl: "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
             },
           },
@@ -1547,7 +1547,7 @@ function _createStays() {
             rate: 5,
             by: {
               _id: "u205",
-              fullname: "user14",
+              fullname: "Andreh4",
               imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
             }
           }

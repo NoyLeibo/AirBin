@@ -20,7 +20,7 @@ export function GalleryApt({ imgUrls }) {
   return (
     <div className="imgs-grid">
       {imgUrls.slice(0, 5).map((imgUrl, index) => (
-        <img src={imgUrl} alt={`Image ${index + 1}`} className={`img img${index}`} key={index} />
+        <img src={imgUrl} alt={`Image ${index + 1}`} className={`img img${index + 1}`} key={index} />
       ))}
       {imgUrls.length > 5 && (
         <div className="view-all-container">
