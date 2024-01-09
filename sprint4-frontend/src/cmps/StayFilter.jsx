@@ -144,9 +144,8 @@ export function StayFilter({ filterBy, onSetFilter }) {
         {Object.entries(filters[0]).map(([key, value], filterIndex) => (
           <label
             key={key + filterIndex}
-            className={`emoji-container ${
-              selectedEmoji === key ? "selectedEmoji" : ""
-            }`}
+            className={`emoji-container ${selectedEmoji === key ? "selectedEmoji" : ""
+              }`}
             onClick={() => handleEmojiSelect(key)}
           >
             <img
@@ -170,7 +169,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
       )}
 
       <button
-        className="clean-btn"
+        className="clean-btn flex justify-center align-center"
         onClick={() => setIsOpenFilter((currState) => !currState)}
       >
         Filters

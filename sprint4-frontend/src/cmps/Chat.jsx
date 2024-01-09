@@ -4,10 +4,10 @@ export function ChatWindow() {
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [message, setMessage] = useState('');
     const [chatHistory, setChatHistory] = useState([
-        { user: 'TeicherGPT', text: 'Hey! How can I help you?' },
-        { user: 'Noy', text: 'getting ready' },
-        { user: 'Iris', text: 'get ready to sprint 4...' },
-        { user: 'Boris', text: "Teicher give me a code of this feature" },
+        { user: 'TeicherGPT', text: 'Hey! How can AirBNB help you?' },
+        { user: 'Noy', text: 'Im looking for apartment' },
+        { user: 'Iris', text: 'Exlusive hotel?' },
+        { user: 'Boris', text: "How can I host here?" },
     ]);
 
 
@@ -30,7 +30,7 @@ export function ChatWindow() {
 
     const sendMessage = () => {
         if (message.trim()) {
-            setChatHistory([...chatHistory, { sender: 'You', text: message }]);
+            setChatHistory([...chatHistory, { user: 'You', text: message }]);
             setMessage('');
         }
     };
