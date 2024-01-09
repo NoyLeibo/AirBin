@@ -24,6 +24,16 @@ export function StayDetails() {
     loadStay();
   }, []);
 
+  //  function loadStay() {
+  //   stayService
+  //     .getById(stayId)
+  //     .then(setStay)
+  //     .catch((err) => {
+  //       showErrorMsg("Cant load stay")
+  //       navigate("/stay")
+  //     })
+  // }
+
   async function loadStay() {
     try {
       const currStay = await stayService.getById(stayId);
@@ -63,16 +73,21 @@ export function StayDetails() {
               {stay.type} in {stay.loc.city} ,{stay.loc.country}
             </h1>
             <div className="capacity fs16">
-              {stay.capacity} guests <span className="fs14">•</span> {stay.bedrooms} rooms{" "}
-              <span className="fs14">•</span> {stay.beds} beds{" "}
-              <span className="fs14">•</span> {stay.baths} bath
+              {stay.capacity} guests <span className="fs14">•</span>{" "}
+              {stay.bedrooms} rooms <span className="fs14">•</span> {stay.beds}{" "}
+              beds <span className="fs14">•</span> {stay.baths} bath
             </div>
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
                 <i className="fa-solid fa-star"></i>
                 {stay.reviews[0].rate}.00{" "}
-                <span className="fs14">•<span className="bold pointer underline"> {stay.reviews.length} reviews
-                </span></span>
+                <span className="fs14">
+                  •
+                  <span className="bold pointer underline">
+                    {" "}
+                    {stay.reviews.length} reviews
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -86,7 +101,8 @@ export function StayDetails() {
                 Hosted by {stay.host.fullname}{" "}
               </div>
               <div className="host-exp fs14 graytxt">
-                Superhost <span className="fs14">•</span> {stay.host.hostingYears} years hosting
+                Superhost <span className="fs14">•</span>{" "}
+                {stay.host.hostingYears} years hosting
               </div>
             </div>
             {/* <div>
