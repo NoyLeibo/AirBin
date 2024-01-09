@@ -111,32 +111,32 @@ function getEmptyStay() {
   return {
     name: "",
     price: "",
-    type:"",
-    imgUrls:[],
-    summary:"",
-    stayPlace:"",
-    stayDetail:{
-      capacity:0,
-      beds:0,
-      rooms:0,
-      bathrooms:0,
+    type: "",
+    imgUrls: [],
+    summary: "",
+    stayPlace: "",
+    stayDetail: {
+      capacity: 0,
+      beds: 0,
+      rooms: 0,
+      bathrooms: 0,
     },
-    amenities:[],
-    labels:[],
-    host:{
+    amenities: [],
+    labels: [],
+    host: {
       _id: "",
       fullname: "",
       imgUrl:
         "",
     },
-    loc:{
+    loc: {
       area: "",
       country: "",
       countryCode: "",
       city: "",
       address: "",
-      lat:0,
-      lng:0,
+      lat: 0,
+      lng: 0,
     },
     reviews: [],
     likedByUsers: [],
@@ -160,22 +160,21 @@ function _createStays() {
         ],
         price: 1200.0,
         bedrooms: 4,
+        beds: 7,
+        baths: 3,
         summary: "Beautiful villa with direct access to the beach...",
         capacity: 6,
-        amenities: [
-          "TV",
-          "Wifi",
-          "Air conditioning",
-          "Private beach",
-          "Balcony",
-          "Kitchen",
-        ],
+        amenities: ["Breakfasts", "Top of the world", "Mansions", "Rooms", "Historial homes", "Chef kitchens"],
         labels: ["Beach", "Family", "Sunset View"],
         host: {
           _id: "u105",
           fullname: "Maria Gonzalez",
           imgUrl:
             "https://a0.muscache.com/im/pictures/user/d7f7361f-9b5d-4780-a3cf-029a10bdcc1e.jpg?im_w=240",
+          hostingYears: 3,
+          ownerReview: `Amazing luxury apartment, located in a new residential project with luxurious lobby and 24/7 security.
+          The apartment overlooks the sea and the entire city of Tel Aviv from it's extra large and shaded balcony on the 27th floor.
+          There are 2 spacious bedrooms, closets, full size tub, pampering living room wits smart TV, fully equipped kitchen: dishwasher, a Nespresso machine, dining area, AC, washing machine, dryer & more!`
         },
         loc: {
           area: "Caribbean",
@@ -274,15 +273,7 @@ function _createStays() {
         summary:
           "Luxurious villa offering serene beachfront views and lush tropical gardens...",
         capacity: 6,
-        amenities: [
-          "Infinity pool",
-          "Ocean view",
-          "Spa services",
-          "Wifi",
-          "Full kitchen",
-          "Private beach access",
-          "Outdoor dining area",
-        ],
+        amenities: ["Historial homes", "Play", "Creative spaces", "Beachfront", "Rooms", "Trending"],
         labels: ["Luxury", "Beachfront", "Tropical Paradise"],
         host: {
           _id: "u111",
@@ -382,14 +373,7 @@ function _createStays() {
         summary:
           "Cozy studio apartment in the city center with modern amenities.",
         capacity: 4,
-        amenities: [
-          "Wifi",
-          "Air Conditioning",
-          "Kitchen",
-          "Washer",
-          "Dryer",
-          "Iron",
-        ],
+        amenities: ["Grand pianos", "Trending", "Towers", "OMG", "Beachfront", "Historial homes"],
         labels: ["City Life", "Business", "Comfort"],
         host: {
           _id: "u103",
@@ -432,14 +416,7 @@ function _createStays() {
         summary:
           "Cozy mountain lodge in the heart of the Rockies, perfect for adventure seekers.",
         capacity: 5,
-        amenities: [
-          "Fireplace",
-          "Hot Tub",
-          "Ski Access",
-          "Mountain Bikes",
-          "Hiking Gear",
-          "Panoramic Views",
-        ],
+        amenities: ["Mansions", "Amazing pools", "Luxe", "Earth homes", "Skiling", "Rooms"],
         labels: ["Mountain Adventure", "Rustic", "Nature Lover's Paradise"],
         host: {
           _id: "u107",
@@ -524,14 +501,7 @@ function _createStays() {
         price: 95.0,
         summary: "Stylish, modern apartment in the city center...",
         capacity: 4,
-        amenities: [
-          "TV",
-          "Wifi",
-          "Air conditioning",
-          "Kitchen",
-          "Free parking on premises",
-          "Washer",
-        ],
+        amenities: ["Breakfasts", "Riads", "Trending", "Iconic cities", "Arctic", "Play"],
         labels: ["City View", "New", "Luxury"],
         host: {
           _id: "u103",
@@ -576,14 +546,7 @@ function _createStays() {
         price: 80.0,
         summary: "Fantastic duplex apartment...",
         capacity: 8,
-        amenities: [
-          "TV",
-          "Wifi",
-          "Kitchen",
-          "Smoking allowed",
-          "Pets allowed",
-          "Cooking basics",
-        ],
+        amenities: ["Luxe", "Top of the world", "Amazing views", "Riads", "Trending", "Beachfront"],
         labels: ["Top of the world", "Trending", "Play", "Tropical"],
         host: {
           _id: "u101",
@@ -677,14 +640,7 @@ function _createStays() {
         price: 80.0,
         summary: "Fantastic duplex apartment...",
         capacity: 8,
-        amenities: [
-          "TV",
-          "Wifi",
-          "Kitchen",
-          "Smoking allowed",
-          "Pets allowed",
-          "Cooking basics",
-        ],
+        amenities: ["Amazing views", "Iconic cities", "Creative spaces", "Towers", "OMG", "Beachfront"],
         labels: ["Top of the world", "Trending", "Play", "Tropical"],
         host: {
           _id: "u101",

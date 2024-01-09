@@ -70,20 +70,22 @@
             font-weight: bold;
         }
 
-        .emoji-filter {
-            filter: grayscale(100%);
-            width: 24px;
-            height: 24px;
 
-            &:hover {
-                filter: grayscale(0%);
-            }
+        emoji-filter:hover {
+            filter: grayscale(0%);
         }
+
 
         .emoji-text {
             margin-top: 5px;
         }
     }
+}
+
+.emoji-filter {
+    filter: grayscale(100%);
+    width: 24px;
+    height: 24px;
 }
 
 .previous-filters,

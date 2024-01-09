@@ -13,7 +13,8 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
     onSetFilter.current(filterByToEdit);
   }, [filterByToEdit]);
 
-  function handleChange(target, type = "number") {
+  function handleChange(ev, target, type = "number") {
+    ev.preventDefault()
     let { value, name: field } = target;
     value = type === "number" ? +value : value;
     if (type === "select-multiple")
@@ -59,7 +60,7 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
           name="bedrooms"
           type="button"
           onClick={(e) => {
-            handleChange(e.target, "number");
+            handleChange(event, e.target, "number");
           }}
         >
           1

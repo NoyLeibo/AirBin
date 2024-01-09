@@ -121,37 +121,28 @@ function saveLocalUser(user) {
 function getLoggedinUser() {
   return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER));
 }
-
-// function _setLoggedinUser(user) {
-//   const userToSave = {
-//     _id: user._id,
-//     fullname: user.fullname,
-//     isAdmin: user.isAdmin,
-//   };
-//   sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(userToSave));
-//   return userToSave;
-// }
-// if (!getUsers()) {
-//   (async () => {
-//     await userService.signup({
-//       fullname: "Puki Norma",
-//       username: "puki",
-//       password: "123",
-//       balance: 10000,
-//       isAdmin: false,
-//     });
-//     await userService.signup({
-//       fullname: "Master noy",
-//       username: "NoyLeibo",
-//       password: "123",
-//       balance: 10000,
-//       isAdmin: true,
-//     });
-//     await userService.signup({
-//       fullname: "Muki G",
-//       username: "muki",
-//       password: "123",
-//       balance: 10000,
-//     });
-//   })();
-// }
+console.log(getUsers());
+if (!getUsers()) {
+  (async () => {
+    await userService.signup({
+      fullname: "Puki Norma",
+      username: "puki",
+      password: "123",
+      balance: 10000,
+      isAdmin: false,
+    });
+    await userService.signup({
+      fullname: "Master noy",
+      username: "NoyLeibo",
+      password: "123",
+      balance: 10000,
+      isAdmin: true,
+    });
+    await userService.signup({
+      fullname: "Muki G",
+      username: "muki",
+      password: "123",
+      balance: 10000,
+    });
+  })();
+}
