@@ -7,6 +7,7 @@ import { LoginSignup } from './LoginSignup.jsx'
 import { useState, useEffect, useRef } from 'react'
 import { Calendar } from './Calendar'
 import { Guests } from './Guests'
+import { LoginModal } from './Login'
 import { Destinations } from './Destinations'
 import { DatePicker, Space } from 'antd';
 
@@ -18,6 +19,7 @@ export function AppHeader() {
 
     const [selectedButton, setSelectedButton] = useState('stays')
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isLoginOpen, setIsLoginOpen] = useState(false)
     const [isOpenDates, setIsOpenDates] = useState(false)
     const [isOpenGuests, setIsOpenGuests] = useState(false)
     const [isOpenDestinations, setIsOpenDestinations] = useState(false)
@@ -80,12 +82,22 @@ export function AppHeader() {
                     setIsOpenDestinations(false)
                 }, 150);
             }
+            if (isMenuOpen && gRef.current && !gRef.current.contains(event.target)) {
+                setTimeout(() => {
+                    setIsMenuOpen(false)
+                }, 150);
+            }
+            if (isLoginOpen && gRef.current && !gRef.current.contains(event.target)) {
+                setTimeout(() => {
+                    setIsLoginOpen(false)
+                }, 150);
+            }
         } // לא לשלב בין שלושת התנאים זה יוצר באג!
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [isOpenGuests, isOpenDates, isOpenDestinations]);
+    }, [isOpenGuests, isOpenDates, isOpenDestinations, isMenuOpen, isLoginOpen]);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -155,6 +167,11 @@ export function AppHeader() {
         setUserSearchDestination(value);
     };
 
+    const openLoginModal = () => {
+        setIsLoginOpen(true)
+        setIsMenuOpen(false)
+    }
+
     return (
         <header className={!isScrolledDown ? "app-header grid header-inserted" : "app-header grid"}>
             {/* <div className='header-content flex justify-between align-center'> */}
@@ -167,14 +184,11 @@ export function AppHeader() {
                 </div>
 
                 <div className={!isScrolledDown ? "small-search-form flex align-center small-form-expended" : "small-search-form flex align-center"}>
-
                     <button className='btn-small-search-bar  fs14'>Anywhere</button>
                     <span className="splitter"></span>
                     <button className='btn-small-search-bar  fs14'>Any week</button>
                     <span className="splitter"></span>
                     <button className='btn-small-search-bar btn-small-search-grey fs14 '>Add guests</button>
-
-
                 </div>
 
                 <nav className={!isScrolledDown ? 'mid-three-menu flex column justify-center mid-header mid-three-menu-close' : 'mid-three-menu flex column justify-center mid-header'}>
@@ -217,20 +231,22 @@ export function AppHeader() {
                         </svg>
                     </button>
                     {isMenuOpen && (
-                        <div className="hamburger-menu">
+                        <div ref={gRef} className="hamburger-menu">
                             <div className='manu-one flex column'>
-                                <NavLink to="/login" >Log in</NavLink>
+                                <NavLink to="/" className="bold" onClick={openLoginModal} >Log in</NavLink>
                                 <NavLink to="/signup" >Sign up</NavLink>
                             </div><div className='flex column'>
-                                <a href="#item3">Gift cards</a>
-                                <a href="#item4">Airbnb your home</a>
-                                <a href="#item5">Help center</a>
+                                <NavLink to="/signup" >Gift cards</NavLink>
+                                <NavLink to="/signup" >Airbnb your home</NavLink>
+                                <NavLink to="/signup" >Help center</NavLink>
                             </div>
                         </div>
-                    )} {/* will open the isMenuOpen modal if true */}
+                    )}
                 </div>
             </div>
-
+            {isLoginOpen && <div ref={gRef}>
+                <LoginModal />
+            </div>}
             <div className='flex justify-center'>
                 <form className={!isScrolledDown ? "search-form justify-center flex row header-search-inserted" :
                     "search-form justify-center flex row"}>
@@ -268,7 +284,6 @@ export function AppHeader() {
                     <div className='form-dates flex column' onClick={toggleGuestModal}>
                         <div className='fs12 blacktxt'>Who</div>
                         <div className='fs14 graytxt'>Add guests</div>
-                        {/* {isOpenGuests && <Guests />} */}
                     </div>
                     {isOpenGuests && (
                         <div ref={gRef}>
@@ -281,6 +296,7 @@ export function AppHeader() {
                 </form>
             </div>
 
+            <div className="screen-shadow-login" style={{ display: isLoginOpen ? 'block' : 'none' }}></div>
             <div className="screen-shadow" style={{ display: showScreenShadow ? 'block' : 'none' }}></div>
             {/* 
                 {user &&

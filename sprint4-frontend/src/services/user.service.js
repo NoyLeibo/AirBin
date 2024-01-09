@@ -54,6 +54,7 @@ async function login(userCred) {
     const user = users.find(user => user.username === userCred.username)
     // const user = await httpService.post('auth/login', userCred)
     if (user) return saveLocalUser(user)
+    return Promise.reject('Invalid user')
 }
 
 async function signup(userCred) {
@@ -87,13 +88,13 @@ function saveLocalUser(user) {
 function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER))
 }
-
-
-//  (async ()=>{
-//     await userService.signup({fullname: 'Puki Norma', username: 'puki', password:'123',score: 10000, isAdmin: false})
-//     await userService.signup({fullname: 'Master Adminov', username: 'admin', password:'123', score: 10000, isAdmin: true})
-//     await userService.signup({fullname: 'Muki G', username: 'muki', password:'123', score: 10000})
-// })()
-
+console.log(getUsers())
+if (!getUsers()) {
+    (async () => {
+        await userService.signup({ fullname: 'Puki Norma', username: 'puki', password: '123', balance: 10000, isAdmin: false })
+        await userService.signup({ fullname: 'Master noy', username: 'NoyLeibo', password: '123', balance: 10000, isAdmin: true })
+        await userService.signup({ fullname: 'Muki G', username: 'muki', password: '123', balance: 10000 })
+    })()
+}
 
 

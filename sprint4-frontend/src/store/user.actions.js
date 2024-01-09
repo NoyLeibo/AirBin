@@ -18,6 +18,13 @@ export async function loadUsers() {
     }
 }
 
+// try {
+//     const stays = await userService.getUsers();
+//     store.dispatch({
+//       type: SET_USERS,
+//       stays,
+//     });
+
 export async function removeUser(userId) {
     try {
         await userService.remove(userId)

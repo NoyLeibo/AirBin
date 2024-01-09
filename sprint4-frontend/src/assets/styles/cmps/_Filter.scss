@@ -1,0 +1,38 @@
+.filter-modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  position: absolute;
+  transform: translate(-50%);
+  left: 50%;
+  // top: 16.5%;
+  width: 848px;
+  height: 511px;
+  padding-top: 12px;
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 0 0 1px #0000000a, 0 8px 16px #00000026;
+  padding: 16px 32px;
+  justify-content: space-evenly;
+  cursor: auto;
+  z-index: 1;
+
+  .by-type-place {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+
+    .type {
+      border: 1px #dddddd solid;
+      padding: 50px;
+      border-radius: 4px;
+      font-size: 1em;
+      margin: 0 5px;
+
+      &:hover {
+        border: 1px black solid;
+      }
+    }
+  }
+}

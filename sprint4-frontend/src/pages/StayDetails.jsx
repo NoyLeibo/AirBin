@@ -108,9 +108,9 @@ export function StayDetails() {
               <div className="apt-dets-light-icon">
                 <i className="fa-solid fa-map-location"></i>
               </div>
-              <div className="apt-dets-light-info">
-                <h3 className="fs16">Great location</h3>
-                <div className="fs14 graytxt">
+              <div className="apt-dets-light-info fs14">
+                <div className="bold fs16">Great location</div>
+                <div className="graytxt">
                   100% of recent guests gave the location a 5-star rating.
                 </div>
               </div>
@@ -120,7 +120,7 @@ export function StayDetails() {
                 <i className="fa-solid fa-building-circle-check"></i>
               </div>
               <div className="apt-dets-light-info">
-                <h3 className="fs16">Great check-in experiance</h3>
+                <div className="bold fs16">Great check-in experiance</div>
                 <div className="fs14 graytxt">
                   100% of recent guests gave the check-in process a 5-star
                   rating.
@@ -132,7 +132,7 @@ export function StayDetails() {
                 <i class="fa-regular fa-calendar-xmark"></i>
               </div>
               <div className="apt-dets-light-info">
-                <h3 className="fs16">Free cancellation</h3>
+                <div className="bold fs16">Free cancellation</div>
                 <div className="fs14 graytxt">
                   Free cancellation 7 days before the date.
                 </div>
