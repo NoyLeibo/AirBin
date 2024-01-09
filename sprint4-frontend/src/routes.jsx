@@ -48,7 +48,7 @@ const routes = [
   {
     path: "payment/:stayId",
     component: <PaymentPage />,
-    label: "logged user only",
+    label: "payment page",
   },
   {
     path: "edit/:stayId?",
