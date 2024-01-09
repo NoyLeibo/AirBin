@@ -27,7 +27,6 @@ export function AppHeader() {
     const [isScrolledDown, setIsScrolledDown] = useState(true);
     const [showScreenShadow, setShowScreenShadow] = useState(false);
     const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
-    const selectedGuests = useSelector((storeState) => storeState.stayModule.guestsNumber)
     const gRef = useRef(); // global ref use for closing modals by noy
 
     useEffect(() => {

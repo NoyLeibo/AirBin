@@ -88,7 +88,9 @@ function saveLocalUser(user) {
 function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER))
 }
+
 console.log(getUsers())
+
 if (!getUsers()) {
     (async () => {
         await userService.signup({ fullname: 'Puki Norma', username: 'puki', password: '123', balance: 10000, isAdmin: false })

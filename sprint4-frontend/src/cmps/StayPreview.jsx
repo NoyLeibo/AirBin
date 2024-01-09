@@ -8,7 +8,7 @@ import Carousel from './Carousel';
 
 export function StayPreview({ stay }) {
   function toggleLike(stayid) {
-    console.log("zzzzzzzzz")
+    console.log("StayPreview")
   }
 
   return (

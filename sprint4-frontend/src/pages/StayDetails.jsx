@@ -73,9 +73,9 @@ export function StayDetails() {
               {stay.type} in {stay.loc.city} ,{stay.loc.country}
             </h1>
             <div className="capacity fs16">
-              {stay.capacity} guests <span className="fs14">•</span> 2 rooms{" "}
-              <span className="fs14">•</span> 2 beds{" "}
-              <span className="fs14">•</span> 1 bath
+              {stay.capacity} guests <span className="fs14">•</span> {stay.bedrooms} rooms{" "}
+              <span className="fs14">•</span> {stay.beds} beds{" "}
+              <span className="fs14">•</span> {stay.baths} bath
             </div>
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
@@ -96,7 +96,7 @@ export function StayDetails() {
                 Hosted by {stay.host.fullname}{" "}
               </div>
               <div className="host-exp fs14 graytxt">
-                Superhost <span className="fs14">•</span> 7 years hosting
+                Superhost <span className="fs14">•</span> {stay.host.hostingYears} years hosting
               </div>
             </div>
             {/* <div>
@@ -151,13 +151,7 @@ export function StayDetails() {
               listing inaccuracies, and other issues like trouble checking in.
             </div>
             <div className="stay-owner-revirew divider padding24">
-              Davit house, stays under 7 night $38/res - Inquire about
-              availability, I review then offer/approve if available :) - READ
-              "The Space" for cleaning/etc AND brief explanation about timeshare
-              reservations - Want guaranteed view for additional cost? Must be
-              weekly rental, other restrictions - Wheelchair accessible / ADA,
-              call resort directly to ensure U receive. If U need ADA U MUST
-              inform us BEFORE booking.
+              {stay.host.ownerReview}
             </div>
           </div>
           <div className="amenities-cmp padding24">
@@ -177,7 +171,7 @@ export function StayDetails() {
         <div className="stay-dets-rating ">
           <span className="fs26 fw600">
             <i className="fa-solid fa-star"></i>
-            {stay.reviews[0].rate}.87
+            {stay.reviews[0].rate}.0
           </span>
           <span className="fs14"> • </span>
           <a href="#" className="stay-dets-rating-link fs26">
