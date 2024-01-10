@@ -58,11 +58,12 @@ async function query(
 }
 
 function filterStaysByTags(placeType, stays) {
-  const updatedStayArray = stays.filter((stay) => {
-    // Check if any tag from tagArray is present in the stay's tags
-    return placeType.includes(stay.type);
-  });
-
+  const updatedStayArray = stays.filter(stay => {
+    if (!Array.isArray(stay.amenities)) {
+      return false
+    }
+    return stay.amenities.some(amenity => placeType.includes(amenity))
+  })
   return updatedStayArray;
 }
 
