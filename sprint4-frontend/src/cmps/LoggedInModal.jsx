@@ -5,14 +5,15 @@ import { useSelector } from "react-redux";
 import { LoginModal } from "./Login";
 import { logout } from "../store/user.actions";
 
-
-export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) { //  left-header
+export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
+  //  left-header
   // const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const gRef = useRef();
   const user = useSelector((storeState) => storeState.userModule.user);
 
   const openLoginModal = () => {
+    console.log("OPEN!!!");
     setIsLoginOpen(true);
     // setIsMenuOpen(false);
   };
@@ -44,7 +45,13 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) { //  left-header
     <section>
       <div>
         <div className="flex left-header justify-center align-center">
-          <NavLink to={user ? "/hosting" : "#"} onClick={user ? undefined : openLoginModal} className="moveto-host fs14">{user ? 'Swich to hosting' : 'Airbnb your home'}</NavLink>
+          <NavLink
+            to={user ? "/hosting" : "#"}
+            onClick={user ? undefined : openLoginModal}
+            className="moveto-host fs14"
+          >
+            {user ? "Swich to hosting" : "Airbnb your home"}
+          </NavLink>
 
           {/* <button className="clean-btn moveto-host">Airbnb your home</button> */}
           <div className="lx138ae atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr">
@@ -108,37 +115,79 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) { //  left-header
               {!user && (
                 <>
                   <div className="manu-one flex column">
-                    <NavLink to="/" className="bold" onClick={() => { openLoginModal(); setIsMenuOpen(false); }}>
+                    <NavLink
+                      to="/"
+                      className="bold"
+                      onClick={() => {
+                        openLoginModal();
+                        setIsMenuOpen(false);
+                      }}
+                    >
                       Log in
                     </NavLink>
-                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>Sign up</NavLink>
+                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
+                      Sign up
+                    </NavLink>
                   </div>
                   <div className="flex column">
-                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>Gift cards</NavLink>
-                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>Airbnb your home</NavLink>
-                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>Help center</NavLink>
+                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
+                      Gift cards
+                    </NavLink>
+                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
+                      Airbnb your home
+                    </NavLink>
+                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
+                      Help center
+                    </NavLink>
                   </div>
                 </>
               )}
               {user && (
                 <>
                   <div className="manu-one flex column">
-                    <NavLink to="/" className="bold" onClick={() => setIsMenuOpen(false)}>
+                    <NavLink to="/userTrips" className="bold">
                       Trips
                     </NavLink>
-                    <NavLink to="/wishlist" onClick={() => setIsMenuOpen(false)}>Wishlist</NavLink>
+                    <NavLink
+                      to="/wishlist"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Wishlist
+                    </NavLink>
                   </div>
                   <div className="flex column">
-                    <NavLink to="/messages" onClick={() => setIsMenuOpen(false)}>Messages</NavLink>
-                    <NavLink to="/oreders" onClick={() => setIsMenuOpen(false)}>View orders</NavLink>
-                    <NavLink to="/edit" onClick={() => setIsMenuOpen(false)}>Add another stay</NavLink>
-                    <NavLink to="/edit" onClick={() => { logout(); setIsMenuOpen(false); }}>Log out</NavLink>
+                    <NavLink to="/messages">Messages</NavLink>
+                    <NavLink to="/oreders">View orders</NavLink>
+                    <NavLink to="/edit">Add another stay</NavLink>
+                    <NavLink to="/edit" onClick={logout}>
+                      Log out
+                    </NavLink>
+                    <NavLink
+                      to="/messages"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Messages
+                    </NavLink>
+                    <NavLink to="/oreders" onClick={() => setIsMenuOpen(false)}>
+                      View orders
+                    </NavLink>
+                    <NavLink to="/edit" onClick={() => setIsMenuOpen(false)}>
+                      Add another stay
+                    </NavLink>
+                    <NavLink
+                      to="/edit"
+                      onClick={() => {
+                        logout();
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      Log out
+                    </NavLink>
                   </div>
                 </>
               )}
             </div>
           )}
-
         </div>
       </div>
     </section>

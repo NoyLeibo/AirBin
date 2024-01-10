@@ -12,8 +12,8 @@ export function PaymentPage() {
   const [stay, setStay] = useState(null);
   const { stayId } = useParams();
   const queryParams = new URLSearchParams(location.search);
-  const checkIn = queryParams.get("checkIn");
-  const checkOut = queryParams.get("checkOut");
+  const checkIn = convertDate(queryParams.get("checkIn"));
+  const checkOut = convertDate(queryParams.get("checkOut"));
   const price = queryParams.get("price");
   const days = queryParams.get("days");
   const serviceFee = queryParams.get("serviceFee");
@@ -72,8 +72,7 @@ export function PaymentPage() {
             <div className="flex justify-between">
               <h4>Dates</h4>
               <h5>
-                <span>{convertDate(checkIn)}</span> -{" "}
-                <span>{convertDate(checkOut)}</span>
+                <span>{checkIn}</span> - <span>{checkOut}</span>
               </h5>
             </div>
             <div className="flex justify-between">
