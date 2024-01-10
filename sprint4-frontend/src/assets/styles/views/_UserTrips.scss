@@ -1,0 +1,46 @@
+.user-trips-container {
+  .table-head {
+    // background-image: radial-gradient(
+    //   circle,
+    //   #ff385c 0,
+    //   #e61e4d 27.5%,
+    //   #e31c5f 40%,
+    //   #d70466 57.5%,
+    //   #bd1e59 75%,
+    //   #bd1e59 100%
+    // );
+    // background-size: 200% 200%;
+    // border: none;
+    // border-radius: 8px;
+    // font-family: "Circular-Medium";
+    // // font-size: 0.9rem;
+    // min-width: 200px;
+    // padding: 13px 20px;
+
+    .table-cell {
+      color: darkgray;
+      font-size: 1rem;
+      font-family: "Circular-bold";
+      // border-left: 1px lightgray solid;
+    }
+  }
+  .cancel-btn {
+    background-image: radial-gradient(
+      circle,
+      #ff385c 0,
+      #e61e4d 27.5%,
+      #e31c5f 40%,
+      #d70466 57.5%,
+      #bd1e59 75%,
+      #bd1e59 100%
+    );
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Circular-Medium";
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    text-align: center;
+  }
+}

@@ -6,51 +6,86 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import DeleteIcon from "@mui/icons-material/Delete";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
 import { useSelector } from "react-redux";
+import { userService } from "../services/user.service";
+import { updateUser } from "../store/user.actions";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+async function onRemoveBtn(stayId) {
+  const user = await userService.removeTrip(stayId);
+
+  await updateUser(user);
 }
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
 
 export function UserTrips() {
   const user = useSelector((storeState) => storeState.userModule.user);
-  console.log(user);
+  const tripList = user.trips;
+
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} className="user-trips-container">
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        <TableHead>
+        <TableHead className="table-head">
           <TableRow>
-            <TableCell>Stay</TableCell>
-            <TableCell align="right">Host</TableCell>
-            <TableCell align="right">Dates</TableCell>
-            <TableCell align="right">Total</TableCell>
-            <TableCell align="right">Status</TableCell>
-            <TableCell align="right">Action</TableCell>
+            <TableCell className="table-cell" align="left">
+              Stay
+            </TableCell>
+            <TableCell className="table-cell" align="left">
+              Name
+            </TableCell>
+            <TableCell className="table-cell" align="left">
+              Host
+            </TableCell>
+            <TableCell className="table-cell" align="center">
+              Check-In
+            </TableCell>
+            <TableCell className="table-cell" align="center">
+              Check-Out
+            </TableCell>
+            <TableCell className="table-cell" align="center">
+              Booked
+            </TableCell>
+            <TableCell className="table-cell" align="center">
+              Total
+            </TableCell>
+            <TableCell className="table-cell" align="right">
+              Action
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {tripList.map((trip, index) => (
             <TableRow
-              key={row.name}
+              key={index}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
-                {row.name}
+              <TableCell align="left" component="th" scope="row">
+                <img
+                  className="trip-img"
+                  src={trip.stay.stayImg}
+                  alt="stay image"
+                  style={{ width: "220px", height: "150px" }}
+                />
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="left">{trip.stay.stayName}</TableCell>
+              <TableCell align="left">{trip.stay.host.fullname}</TableCell>
+              <TableCell align="center">{trip.checkIn}</TableCell>
+              <TableCell align="center">{trip.checkOut}</TableCell>
+              <TableCell align="center">{trip.booked}</TableCell>
+              <TableCell align="center">{trip.totalPrice}</TableCell>
               <TableCell align="right">
-                <button>Cancel</button>
+                {/* <Tooltip title="Delete">
+                  <IconButton>
+                    <DeleteIcon />
+                  </IconButton>
+                </Tooltip> */}
+                <button
+                  onClick={() => onRemoveBtn(trip._id)}
+                  className="clean-btn cancel-btn"
+                >
+                  Cancel
+                </button>
               </TableCell>
             </TableRow>
           ))}

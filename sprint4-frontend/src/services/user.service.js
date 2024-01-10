@@ -15,6 +15,7 @@ export const userService = {
   update,
   changeScore,
   updateTripList,
+  removeTrip,
 };
 
 window.userService = userService;
@@ -73,13 +74,22 @@ async function update({ _id, score }) {
 
 async function updateTripList(newTrip) {
   const user = await getLoggedinUser();
+  newTrip._id = storageService.randomId();
   user.trips.push(newTrip);
   await storageService.put("user", user);
 
   // const user = await httpService.put(`user/${_id}`, {_id, score})
-
   // When admin updates other user's details, do not update loggedinUser
   saveLocalUser(user);
+  return user;
+}
+
+async function removeTrip(tripId) {
+  const user = await getLoggedinUser();
+  user.trips = user.trips.filter((trip) => tripId !== trip._id);
+  await storageService.put("user", user);
+  saveLocalUser(user);
+
   return user;
 }
 
