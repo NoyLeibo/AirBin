@@ -11,7 +11,7 @@ import { PaymentPage } from "./pages/PaymentPage";
 export function RootCmp() {
   return (
     <main className="main-container">
-        <AppHeader />
+      <AppHeader />
       <Routes>
         {routes.map((route) => (
           <Route

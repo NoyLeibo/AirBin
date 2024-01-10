@@ -5,15 +5,15 @@ import { useSelector } from "react-redux";
 import { LoginModal } from "./Login";
 import { logout } from "../store/user.actions";
 
-
-export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) { //  left-header
+export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
+  //  left-header
   // const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const gRef = useRef();
   const user = useSelector((storeState) => storeState.userModule.user);
 
   const openLoginModal = () => {
-    console.log('OPEN!!!');
+    console.log("OPEN!!!");
     setIsLoginOpen(true);
     setIsMenuOpen(false);
   };
@@ -45,7 +45,13 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) { //  left-header
     <section>
       <div>
         <div className="flex left-header justify-center align-center">
-          <NavLink to={user ? "/hosting" : "/edit"} onClick={user ? undefined : openLoginModal} className="moveto-host fs14">{user ? 'Swich to hosting' : 'Airbnb your home'}</NavLink>
+          <NavLink
+            to={user ? "/hosting" : "/edit"}
+            onClick={user ? undefined : openLoginModal}
+            className="moveto-host fs14"
+          >
+            {user ? "Swich to hosting" : "Airbnb your home"}
+          </NavLink>
 
           {/* <button className="clean-btn moveto-host">Airbnb your home</button> */}
           <div className="lx138ae atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr">
@@ -126,7 +132,7 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) { //  left-header
                 <>
                   {" "}
                   <div className="manu-one flex column">
-                    <NavLink to="/" className="bold">
+                    <NavLink to="/userTrips" className="bold">
                       Trips
                     </NavLink>
                     <NavLink to="/wishlist">Wishlist</NavLink>
@@ -135,7 +141,9 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) { //  left-header
                     <NavLink to="/messages">Messages</NavLink>
                     <NavLink to="/oreders">View orders</NavLink>
                     <NavLink to="/edit">Add another stay</NavLink>
-                    <NavLink to="/edit" onClick={logout}>Log out</NavLink>
+                    <NavLink to="/edit" onClick={logout}>
+                      Log out
+                    </NavLink>
                   </div>
                 </>
               )}
