@@ -73,7 +73,7 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
     <section>
       <div className="filter-modal-container">
         <header className='flex cloumn bold blacktxt'>
-          <span className='pointer'>X</span><div className='filter-header-title'>Filters</div>
+          <div>X</div><div className='filter-header-title'>Filters</div>
         </header>
 
         <div className='filter-modal-mid divider'>
