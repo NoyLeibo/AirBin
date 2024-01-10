@@ -166,7 +166,10 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
                     >
                       Messages
                     </NavLink>
-                    <NavLink to="/oreders" onClick={() => setIsMenuOpen(false)}>
+                    <NavLink
+                      to="/backOffice"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       View orders
                     </NavLink>
                     <NavLink to="/edit" onClick={() => setIsMenuOpen(false)}>

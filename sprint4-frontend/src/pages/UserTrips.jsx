@@ -13,15 +13,14 @@ import { useSelector } from "react-redux";
 import { userService } from "../services/user.service";
 import { updateUser } from "../store/user.actions";
 
-async function onRemoveBtn(stayId) {
-  const user = await userService.removeTrip(stayId);
-
-  await updateUser(user);
-}
-
 export function UserTrips() {
   const user = useSelector((storeState) => storeState.userModule.user);
   const tripList = user.trips;
+
+  async function onRemoveBtn(stayId) {
+    const user = await userService.removeTrip(stayId);
+    await updateUser(user);
+  }
 
   return (
     <TableContainer component={Paper} className="user-trips-container">

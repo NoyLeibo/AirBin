@@ -47,7 +47,7 @@ const routes = [
     label: "About us",
   },
   {
-    path: "BackOffice",
+    path: "backOffice",
     component: <BackOffice />,
     label: "Back Office",
   },

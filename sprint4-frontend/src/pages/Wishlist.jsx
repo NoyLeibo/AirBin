@@ -4,9 +4,8 @@ export function Wishlist() {
   const stays = useSelector(
     (storeState) => storeState.userModule.user.wishlist
   );
-  console.log(stays);
   return (
-    <main className=" main-stay-index">
+    <main>
       <StayList stays={stays} />
     </main>
   );
