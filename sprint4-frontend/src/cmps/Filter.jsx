@@ -4,7 +4,7 @@ import { useEffectUpdate } from '../customHooks/useEffectUpdate'
 import { PriceRange } from './PriceRange'
 import { stayService } from '../services/stay.service'
 
-export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
+export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit, setIsOpenFilter, isOpenFilter }) {
   const [tempFilter, setTempFilter] = useState(filterByToEdit)
   const [selectedBedrooms, setSelectedBedrooms] = useState(null)
   const [selectedBeds, setSelectedBeds] = useState(null)
@@ -72,11 +72,11 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
   return (
     <section>
       <div className="filter-modal-container">
-        <header className='flex cloumn bold blacktxt'>
-          <div>X</div><div className='filter-header-title'>Filters</div>
+        <header className='filter-modal-header flex cloumn bold blacktxt'>
+          <div className='pointer' onClick={() => { setIsOpenFilter(false); }}>X</div><div className='filter-header-title'>Filters</div>
         </header>
 
-        <div className='filter-modal-mid divider'>
+        <div className='filter-modal-mid flex column align-center divider'>
           <div className='fs22 bold blacktxt'>Price range</div>
           <div className='fs14 blacktxt'>Nightly prices including fees and taxes</div>
           <div className="range">
@@ -84,23 +84,23 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
           </div>
         </div>
         <div className='filter-modal-bottom flex column divider'>
-          <div className='fs22 bold blacktxt'>Rooms and beds</div>
+          <div className='flex align-center fs22 bold blacktxt'>Rooms and beds</div>
           <div className="by-rooms">
-            <div className='fs14 blacktxt'>Bedrooms</div>
+            <div className='fs16 blacktxt'>Bedrooms</div>
             {renderButtons('bedrooms', 7, selectedBedrooms)}
           </div>
           <div className="by-beds">
-            <div className='fs14 blacktxt'>Beds</div>
+            <div className='fs16 blacktxt'>Beds</div>
             {renderButtons('beds', 7, selectedBeds)}
           </div>
           <div className="by-bathrooms">
-            <div className='fs14 blacktxt'>Bathrooms</div>
+            <div className='fs16 blacktxt'>Bathrooms</div>
             {renderButtons('bathrooms', 7, selectedBathrooms)}
           </div>
         </div>
         <footer className="filter-footer flex justify-between divider">
           <button className="clean-btn" onClick={handleClearAll}>Clear all</button>
-          <button className="show-btn clean-btn" onClick={handleApplyFilter}>Show places</button>
+          <button className="show-btn flex align-center clean-btn" onClick={handleApplyFilter}>Show places</button>
         </footer>
       </div>
       <div className="screen-shadow"></div>
