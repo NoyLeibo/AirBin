@@ -1,25 +1,28 @@
 .filter-modal-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
   position: absolute;
   transform: translate(-50%);
   left: 50%;
-  // top: 16.5%;
-  width: 848px;
-  height: 511px;
+  top: 10%;
+  width: rem(780px);
+  height: rem(772px);
   padding-top: 12px;
   background: white;
   border-radius: 32px;
   box-shadow: 0 0 0 1px #0000000a, 0 8px 16px #00000026;
   padding: 16px 32px;
-  justify-content: space-evenly;
   cursor: auto;
-  z-index: 1;
+  z-index: 7;
 
-  h2 {
-    color: black;
+  .screen-shadow {
+    position: fixed;
+    top: -171px;
+    right: -429px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(101, 101, 101, 0.5333333333);
+    z-index: 5;
   }
 
   .by-rooms {
@@ -96,4 +99,14 @@
       z-index: 999;
     }
   }
+}
+
+
+.filter-modal-bottom {
+  grid-area: 3/2/-1/-1;
+}
+
+.filter-header-title {
+  position: absolute;
+  left: 45%
 }
