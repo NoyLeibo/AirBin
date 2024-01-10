@@ -14,6 +14,8 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) { // need to get clo
 
   const demoLogin = async () => {
     await signup(demoUser);
+    setUsername(demoUser.username)
+    setPassword(demoUser.password)
   };
 
   const handleLoginSubmit = async (event) => {

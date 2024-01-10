@@ -15,7 +15,7 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
   const openLoginModal = () => {
     console.log("OPEN!!!");
     setIsLoginOpen(true);
-    setIsMenuOpen(false);
+    // setIsMenuOpen(false);
   };
 
   const toggleMenu = () => {
@@ -46,7 +46,7 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
       <div>
         <div className="flex left-header justify-center align-center">
           <NavLink
-            to={user ? "/hosting" : "/edit"}
+            to={user ? "/hosting" : "#"}
             onClick={user ? undefined : openLoginModal}
             className="moveto-host fs14"
           >
@@ -114,34 +114,73 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
             <div ref={gRef} className="hamburger-menu">
               {!user && (
                 <>
-                  {" "}
                   <div className="manu-one flex column">
-                    <NavLink to="/" className="bold" onClick={openLoginModal}>
+                    <NavLink
+                      to="/"
+                      className="bold"
+                      onClick={() => {
+                        openLoginModal();
+                        setIsMenuOpen(false);
+                      }}
+                    >
                       Log in
                     </NavLink>
-                    <NavLink to="/signup">Sign up</NavLink>
+                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
+                      Sign up
+                    </NavLink>
                   </div>
                   <div className="flex column">
-                    <NavLink to="/signup">Gift cards</NavLink>
-                    <NavLink to="/signup">Airbnb your home</NavLink>
-                    <NavLink to="/signup">Help center</NavLink>
+                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
+                      Gift cards
+                    </NavLink>
+                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
+                      Airbnb your home
+                    </NavLink>
+                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
+                      Help center
+                    </NavLink>
                   </div>
                 </>
               )}
               {user && (
                 <>
-                  {" "}
                   <div className="manu-one flex column">
                     <NavLink to="/userTrips" className="bold">
                       Trips
                     </NavLink>
-                    <NavLink to="/wishlist">Wishlist</NavLink>
+                    <NavLink
+                      to="/wishlist"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Wishlist
+                    </NavLink>
                   </div>
                   <div className="flex column">
                     <NavLink to="/messages">Messages</NavLink>
                     <NavLink to="/oreders">View orders</NavLink>
                     <NavLink to="/edit">Add another stay</NavLink>
                     <NavLink to="/edit" onClick={logout}>
+                      Log out
+                    </NavLink>
+                    <NavLink
+                      to="/messages"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Messages
+                    </NavLink>
+                    <NavLink to="/oreders" onClick={() => setIsMenuOpen(false)}>
+                      View orders
+                    </NavLink>
+                    <NavLink to="/edit" onClick={() => setIsMenuOpen(false)}>
+                      Add another stay
+                    </NavLink>
+                    <NavLink
+                      to="/edit"
+                      onClick={() => {
+                        logout();
+                        setIsMenuOpen(false);
+                      }}
+                    >
                       Log out
                     </NavLink>
                   </div>
