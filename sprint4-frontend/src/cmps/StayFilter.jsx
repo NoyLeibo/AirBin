@@ -131,13 +131,14 @@ export function StayFilter({ filterBy, onSetFilter }) {
           />
         </div>
       )}
-
-      <button
-        className="clean-btn flex justify-center align-center"
-        onClick={() => setIsOpenFilter((currState) => !currState)}
-      >
-        Filters
-      </button>
+      <div className="flex justify-center align-center">
+        <button
+          className="clean-btn "
+          onClick={() => setIsOpenFilter((currState) => !currState)}
+        >
+          Filters
+        </button>
+      </div>
       <div className="filter-modal">
         {isOpenFilter && (
           <Filter

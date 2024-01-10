@@ -1,6 +1,24 @@
 .app-footer {
-    background-color: #111;
-    color: $clr4;
-    padding: 20px;
-    text-align: center;
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    max-height: 50px;
+    height: 47px;
+    background-color: #fff;
+    font-size: .875rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    margin-inline: auto;
+    box-shadow: 0 -0.5px #c5c5c5b0;
+    z-index: 1;
+
+    p {
+        padding-left: 78px;
+        padding-right: 78px;
+        margin-bottom: 0px;
+
+    }
 }
