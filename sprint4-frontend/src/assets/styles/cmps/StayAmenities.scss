@@ -1,9 +1,56 @@
+.modal-reviews {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  position: fixed;
+  min-width: 19em;
+  height: 30em;
+  padding: 20px;
+  box-shadow: #0000001f 0 6px 16px;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  z-index: 6;
+  overflow: auto;
+
+  .reviews-on-modal {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    min-height: 500px;
+  }
+}
+
+.review-li {
+  margin: 5px;
+
+}
+
+
 .amenities-container {
   border-bottom: 1px solid #e1e1e1;
+
+  .amenitie-modal {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    position: fixed;
+    min-width: 29em;
+    height: 30em;
+    padding: 20px;
+    box-shadow: #0000001f 0 6px 16px;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    z-index: 6;
+  }
+
   h4 {
     font-family: "Circular-Bold";
     font-size: 1.5rem;
   }
+
   .amenities-ul {
     align-items: stretch;
     flex-wrap: wrap;
@@ -19,6 +66,7 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     width: 50%;
+
     span {
       padding: 0px 0px 0px 16px;
     }

@@ -76,15 +76,15 @@ export async function removeStay(stayId) {
 }
 
 export async function addStay(stay) {
-    try {
-        const savedStay = await stayService.save(stay)
-        console.log('Added stay', savedStay)
-        store.dispatch(getActionAddStay(savedStay))
-        return savedStay
-    } catch (err) {
-        console.log('Cannot add stay', err)
-        throw err
-    }
+  try {
+    const savedStay = await stayService.save(stay);
+    console.log("Added stay", savedStay);
+    store.dispatch(getActionAddstay(savedStay));
+    return savedStay;
+  } catch (err) {
+    console.log("Cannot add stay", err);
+    throw err;
+  }
 }
 
 export function updateStay(stay) {

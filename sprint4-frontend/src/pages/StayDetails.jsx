@@ -24,7 +24,7 @@ export function StayDetails() {
 
   useEffect(() => {
     loadStay();
-  });
+  }, []);
 
   //  function loadStay() {
   //   stayService
@@ -75,22 +75,27 @@ export function StayDetails() {
               {stay.type} in {stay.loc.city} ,{stay.loc.country}
             </h1>
             <div className="capacity fs16">
-              {stay.capacity} guests <span className="fs14">•</span> 2 rooms{" "}
-              <span className="fs14">•</span> 2 beds{" "}
-              <span className="fs14">•</span> 1 bath
+              {stay.capacity} guests <span className="fs14">•</span>{" "}
+              {stay.bedrooms} rooms <span className="fs14">•</span> {stay.beds}{" "}
+              beds <span className="fs14">•</span> {stay.baths} bath
             </div>
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
                 <i className="fa-solid fa-star"></i>
                 {stay.reviews[0].rate}.00{" "}
-                <span className="fs14">•<span className="bold pointer underline"> {stay.reviews.length} reviews
-                </span></span>
+                <span className="fs14">
+                  •
+                  <span className="bold pointer underline">
+                    {" "}
+                    {stay.reviews.length} reviews
+                  </span>
+                </span>
               </span>
             </div>
           </div>
           <div className="apt-host-details divider flex align-center  padding24">
             <img
-              src="https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/48.jpg"
+              src={stay.host.imgUrl}
               className="host-avatar-img"
             />
             <div className="apt-host-info ">
@@ -98,7 +103,8 @@ export function StayDetails() {
                 Hosted by {stay.host.fullname}{" "}
               </div>
               <div className="host-exp fs14 graytxt">
-                Superhost <span className="fs14">•</span> 7 years hosting
+                Superhost <span className="fs14">•</span>{" "}
+                {stay.host.hostingYears} years hosting
               </div>
             </div>
             {/* <div>
@@ -148,18 +154,12 @@ export function StayDetails() {
               src="https://a0.muscache.com/im/pictures/54e427bb-9cb7-4a81-94cf-78f19156faad.jpg"
               alt="aircover"
             ></img>
-            <div className="padding24">
+            <div className="padding24 fs16">
               Every booking includes free protection from Host cancellations,
               listing inaccuracies, and other issues like trouble checking in.
             </div>
-            <div className="stay-owner-revirew divider padding24">
-              Davit house, stays under 7 night $38/res - Inquire about
-              availability, I review then offer/approve if available :) - READ
-              "The Space" for cleaning/etc AND brief explanation about timeshare
-              reservations - Want guaranteed view for additional cost? Must be
-              weekly rental, other restrictions - Wheelchair accessible / ADA,
-              call resort directly to ensure U receive. If U need ADA U MUST
-              inform us BEFORE booking.
+            <div className="stay-owner-revirew divider padding24 fs16">
+              {stay.host.ownerReview}
             </div>
           </div>
           <div className="amenities-cmp padding24">
@@ -179,48 +179,48 @@ export function StayDetails() {
         <div className="stay-dets-rating ">
           <span className="fs26 fw600">
             <i className="fa-solid fa-star"></i>
-            {stay.reviews[0].rate}.87
+            {stay.reviews[0].rate}.0
           </span>
           <span className="fs14"> • </span>
           <a href="#" className="stay-dets-rating-link fs26">
-            49 reviews
+            {stay.reviews.length} Reviews
           </a>
         </div>
         <div className="apt-rating-dets-con">
           <div className="apt-rating-dets">
             <div className="title-rating-det">Cleanliness</div>
-            <div className="rating-det">4.9</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-solid fa-spray-can-sparkles  fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Accuracy</div>
-            <div className="rating-det">4.9</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-regular fa-circle-check  fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Check-in</div>
-            <div className="rating-det">5.0</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-solid fa-key fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Communication</div>
-            <div className="rating-det">5.0</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-regular fa-message fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Location</div>
-            <div className="rating-det">4.9</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-solid fa-map-location  fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Value</div>
-            <div className="rating-det">4.8</div>
+            <div className="rating-det">{stay.reviews[0].rate}.0</div>
             <i className="fa-solid fa-coins  fs20"></i>
           </div>
         </div>
       </section>
       <div className="reviews-cmp divider padding24">
-        <StayReviews reviews={stay.reviews} />
+        <StayReviews reviews={stay.reviews} stars={stay.reviews[0].rate} />
       </div>
       <div className="apt-loc-map padding24">
         <div className="apt-loc-map-title fs22 fw600">Where you’ll be</div>
@@ -245,8 +245,8 @@ export function StayDetails() {
           </div>
           <div className="host-icon-ext fs16">
             <div>
-              <i className="fa-solid fa-star"></i>
-              <span> 49 Reviews</span>
+              <i class="fa-solid fa-envelope"></i>
+              <span> {stay.reviews.length} Reviews</span>
             </div>
             <div>
               <i className="fa-solid fa-user-shield"></i>

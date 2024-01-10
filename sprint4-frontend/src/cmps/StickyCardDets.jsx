@@ -12,11 +12,29 @@ export function StickyCard({ stay }) {
   const selectedDates = useSelector(
     (storeState) => storeState.stayModule.selectedDates
   );
+  const selectedGuests = useSelector(
+    (storeState) => storeState.stayModule.selectedGuests
+  );
+
+  const days = numOfDays();
+  const priceXdays = stay.price * days;
+  const serviceFee = priceXdays / 10;
+  const totalPrice = priceXdays + serviceFee;
 
   useEffect(() => {
-    if (selectedDates.checkIn != null && selectedDates.checkOut != null)
+    if (selectedDates.checkIn != null && selectedDates.checkOut != null) {
       setIsOpenDates(false);
+    }
   }, [selectedDates]);
+
+  function numOfDays() {
+    if (selectedDates.checkIn != null && selectedDates.checkOut != null) {
+      return (
+        (selectedDates.checkOut - selectedDates.checkIn) / (24 * 60 * 60 * 1000)
+      );
+    }
+    return 1;
+  }
 
   // const toggleCalendarModal = () => {
   //   setIsOpenGuests(false);
@@ -74,25 +92,32 @@ export function StickyCard({ stay }) {
       </div>
       <button
         className="reserve-btn"
-        onClick={() => navigate(`/payment/${stay._id}`)}
+        onClick={() =>
+          navigate(
+            `/payment/${stay._id}?checkIn=${selectedDates.checkIn}&checkOut=${selectedDates.checkOut}&price=${priceXdays}&days=${days}&serviceFee=${serviceFee}&adults=${selectedGuests.Adults}&children=${selectedGuests.Children}&infants=${selectedGuests.Infants}&pets=${selectedGuests.Pets}`
+          )
+        }
       >
         Reserve
       </button>
       <div className="flex justify-center fs14">You won't be charged yet</div>
 
       <div className="reservation-dets flex justify-between graytxt">
-        <div className="fs16 blacktxt">${stay.price} X 1 nights</div>
-        <span className="fs16 blacktxt">${stay.price}</span>
+        <div className="fs16 blacktxt">
+          {" "}
+          ${stay.price} X {numOfDays()} nights
+        </div>
+        <span className="fs16 blacktxt">${stay.price * days}</span>
       </div>
 
       <div className="service-fee flex justify-between graytxt">
-        <div className="fs16 blacktxt">${stay.price} X 1 nights</div>
-        <span className="fs16 blacktxt">${stay.price}</span>
+        <div className="fs16 blacktxt">Airbmb service fee</div>
+        <span className="fs16 blacktxt">${serviceFee}</span>
       </div>
 
       <div className="total-reservation-count flex justify-between divider">
         <span className="fs16">Total</span>
-        <span className="fs16">${stay.price}</span>
+        <span className="fs16">${totalPrice}</span>
       </div>
     </section>
   );
