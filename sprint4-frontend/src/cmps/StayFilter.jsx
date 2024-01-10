@@ -117,7 +117,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
               width="24"
               height="24"
             />
-            <div class="color-overlay"></div>
+            <div className="color-overlay"></div>
             <div className="emoji-text">{key}</div>
           </label>
         ))}

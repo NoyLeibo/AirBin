@@ -28,7 +28,7 @@ export function StayEdit() {
   const [stayToEdit, setStayToEdit] = useState(stayService.getEmptyStay())
   const apiKey = 'AIzaSyB0dUlJsQSAuB636Yc1NGBUaJbwvYjfS1s'
 
-  const [sectionProgress, setSectionProgress] = useState(5)
+  const [sectionProgress, setSectionProgress] = useState(1)
   const [selectedBtn, setSelectedBtn] = useState("")
   const [selectedStayPlace, setSelectedBtnStayPlace] = useState("")
   const [cords, setCords] = useState({lat:32.109333,lng:34.855499})
