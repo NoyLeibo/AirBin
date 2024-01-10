@@ -17,13 +17,9 @@ export function StayFilter({ filterBy, onSetFilter }) {
   const filterContainerRef = useRef(null);
   const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy });
   const filters = useSelector((storeState) => storeState.stayModule.filters)
-
   onSetFilter = useRef(utilService.debounce(onSetFilter));
 
-
-  function onSetFilterEmoji(emoji) {
-    console.log(emoji);
-  }
+  const selectedEmojis = filterBy.placeType
 
   useEffectUpdate(() => {
     onSetFilter.current(filterByToEdit);
@@ -111,8 +107,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
         {Object.entries(filters[0]).map(([key, value], filterIndex) => (
           <label
             key={key + filterIndex}
-            className={`emoji-container ${selectedEmoji === key ? "selectedEmoji" : ""}`}
-
+            className={`emoji-container ${selectedEmojis.includes(key) ? "selectedEmoji" : ""}`}
             onClick={(ev) => handleEmojiSelect(ev, key)}
           >
             <img
@@ -122,10 +117,11 @@ export function StayFilter({ filterBy, onSetFilter }) {
               width="24"
               height="24"
             />
-            <div className="emoji-text" onlclick={() => (onSetFilterEmoji)}>{key}</div>
+            <div className="emoji-text">{key}</div>
           </label>
         ))}
       </div>
+
       {scrolledRight && (
         <div className="flex justify-center align-center">
           <NavigateNextIcon
