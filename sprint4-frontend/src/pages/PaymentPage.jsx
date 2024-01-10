@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { LoginSignup } from "../cmps/LoginSignup";
 import { useLocation } from "react-router";
 import { LoginModal } from "../cmps/Login";
+import { userService } from "../services/user.service";
+import { updateUser } from "../store/user.actions";
 
 export function PaymentPage() {
   const location = useLocation();
@@ -14,14 +16,15 @@ export function PaymentPage() {
   const queryParams = new URLSearchParams(location.search);
   const checkIn = convertDate(queryParams.get("checkIn"));
   const checkOut = convertDate(queryParams.get("checkOut"));
-  const price = queryParams.get("price");
-  const days = queryParams.get("days");
-  const serviceFee = queryParams.get("serviceFee");
-  const adults = queryParams.get("adults");
-  const children = queryParams.get("children");
-  const infants = queryParams.get("infants");
-  const pets = queryParams.get("pets");
-  const guests = +adults + +children + +infants + +pets;
+  const price = +queryParams.get("price");
+  const days = +queryParams.get("days");
+  const serviceFee = +queryParams.get("serviceFee");
+  const adults = +queryParams.get("adults");
+  const children = +queryParams.get("children");
+  const infants = +queryParams.get("infants");
+  const pets = +queryParams.get("pets");
+  const guests = adults + children + infants + pets;
+  const totalPrice = price + serviceFee;
 
   useEffect(() => {
     loadStay();
@@ -41,6 +44,25 @@ export function PaymentPage() {
       showErrorMsg("Cant load stay");
       navigate("/stay");
     }
+  }
+
+  async function onConfirm() {
+    const stayDetails = {
+      stayId: stayId,
+      stayImg: stay.imgUrls[0],
+      stayName: stay.name,
+      host: stay.host,
+    };
+    const newTrip = {
+      stay: stayDetails,
+      checkIn,
+      checkOut,
+      booked: convertDate(Date.now()),
+      totalPrice,
+    };
+    const user = await userService.updateTripList(newTrip);
+    await updateUser(user);
+    navigate("/userTrips");
   }
 
   if (!stay) return <div>Loading...</div>;
@@ -80,7 +102,9 @@ export function PaymentPage() {
               <h5>{guests} Guest</h5>
             </div>
           </div>
-          <button className="reserve-btn">Confirm</button>
+          <button className="reserve-btn" onClick={onConfirm}>
+            Confirm
+          </button>
           <div className="login-section">
             <LoginSignup />
           </div>
@@ -108,7 +132,7 @@ export function PaymentPage() {
 
           <div className="flex justify-between">
             <h4>Total</h4>
-            <h4>${+price + +serviceFee}</h4>
+            <h4>${totalPrice}</h4>
           </div>
         </div>
       </div>
