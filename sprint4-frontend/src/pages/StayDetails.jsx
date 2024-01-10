@@ -14,8 +14,6 @@ import { StayAmenities } from "../cmps/StayAmenities";
 import { StayReviews } from "../cmps/StayReviews";
 import SimpleMap from "../cmps/GoogleMap";
 
-
-
 export function StayDetails() {
   const [stay, setStay] = useState(null);
 
@@ -82,8 +80,8 @@ export function StayDetails() {
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
                 <i className="fa-solid fa-star"></i>
-                {stay.reviews[0].rate}.00{" "}
-                <span className="fs14">
+                <span className="avgRate">{stay.reviews[0].rate}.67 </span>
+                <span className="fs14 dotP">
                   •
                   <span className="bold pointer underline">
                     {" "}
@@ -94,10 +92,7 @@ export function StayDetails() {
             </div>
           </div>
           <div className="apt-host-details divider flex align-center  padding24">
-            <img
-              src={stay.host.imgUrl}
-              className="host-avatar-img"
-            />
+            <img src={stay.host.imgUrl} className="host-avatar-img" />
             <div className="apt-host-info ">
               <div className="host-name fs16 fw600">
                 Hosted by {stay.host.fullname}{" "}
@@ -179,9 +174,9 @@ export function StayDetails() {
         <div className="stay-dets-rating ">
           <span className="fs26 fw600">
             <i className="fa-solid fa-star"></i>
-            {stay.reviews[0].rate}.0
+            <span className="avgRate">{stay.reviews[0].rate}.67</span>
           </span>
-          <span className="fs14"> • </span>
+          <span className="fs14 dotP"> • </span>
           <a href="#" className="stay-dets-rating-link fs26">
             {stay.reviews.length} Reviews
           </a>
