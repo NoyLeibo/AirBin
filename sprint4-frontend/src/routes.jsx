@@ -1,13 +1,17 @@
-import { HomePage } from "./pages/HomePage.jsx";
-import { AboutUs } from "./pages/AboutUs.jsx";
-import { StayIndex } from "./pages/StayIndex.jsx";
-import { StayDetails } from "./pages/StayDetails.jsx";
-import { ReviewIndex } from "./pages/ReviewIndex.jsx";
-import { ChatApp } from "./pages/Chat.jsx";
-import { BackOffice } from "./pages/BackOffice.jsx";
-import { PaymentPage } from "./pages/PaymentPage.jsx";
-import { StayEdit } from "./pages/StayEdit.jsx";
+import { HomePage } from "./pages/HomePage.jsx"
+import { AboutUs } from "./pages/AboutUs.jsx"
+import { StayIndex } from "./pages/StayIndex.jsx"
+import { StayDetails } from "./pages/StayDetails.jsx"
+import { ReviewIndex } from "./pages/ReviewIndex.jsx"
+import { ChatApp } from "./pages/Chat.jsx"
+import { BackOffice } from "./pages/BackOffice.jsx"
+import { PaymentPage } from "./pages/PaymentPage.jsx"
+import { StayEdit } from "./pages/StayEdit.jsx"
 
+export const pageRouteNameMap = {
+  STAY_INDEX: "/",
+  STAY_DETAILS: "details/:stayId",
+}
 // Routes accesible from the main navigation (in AppHeader)
 const routes = [
   // {
@@ -16,7 +20,7 @@ const routes = [
   //   label: "Home 🏠",
   // },
   {
-    path: "/",
+    path: pageRouteNameMap.STAY_INDEX,
     component: <StayIndex />,
     label: "Stays",
   },
@@ -55,6 +59,6 @@ const routes = [
     component: <StayEdit />,
     label: "edit",
   },
-];
+]
 
-export default routes;
+export default routes

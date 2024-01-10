@@ -1,11 +1,11 @@
-import { storageService } from "./async-storage.service.js";
-import { utilService } from "./util.service.js";
-import { userService } from "./user.service.js";
+import { storageService } from "./async-storage.service.js"
+import { utilService } from "./util.service.js"
+import { userService } from "./user.service.js"
 
-import ConnectedTvOutlinedIcon from "@mui/icons-material/ConnectedTvOutlined";
+import ConnectedTvOutlinedIcon from "@mui/icons-material/ConnectedTvOutlined"
 
-const STORAGE_KEY = "stay_db";
-_createStays();
+const STORAGE_KEY = "stay_db"
+_createStays()
 
 export const stayService = {
   query,
@@ -14,8 +14,8 @@ export const stayService = {
   remove,
   getEmptyStay,
   addStayMsg,
-};
-window.cs = stayService;
+}
+window.cs = stayService
 
 async function query(
   filterBy = {
@@ -26,8 +26,8 @@ async function query(
     bathrooms: "",
   }
 ) {
-  console.log(filterBy);
-  var stays = await storageService.query(STORAGE_KEY);
+  console.log(filterBy)
+  var stays = await storageService.query(STORAGE_KEY)
   // if (filterBy.txt) {
   //   const regex = new RegExp(filterBy.txt, "i");
   //   stays = stays.filter(
@@ -39,112 +39,110 @@ async function query(
   //   stays = stays.filter((stay) => stay.price <= filterBy.price);
   // }
   if (filterBy.priceRange.length > 0) {
-    stays = stays.filter((stay) => isInPriceRange(filterBy.priceRange, stay));
+    stays = stays.filter((stay) => isInPriceRange(filterBy.priceRange, stay))
   }
   if (filterBy.bedrooms) {
     stays = stays.filter((stay) => {
-      return stay.bedrooms === filterBy.bedrooms;
-    });
+      return stay.bedrooms === filterBy.bedrooms
+    })
   }
   if (filterBy.placeType.length > 0) {
-    stays = filterStaysByTags(filterBy.placeType, stays);
+    stays = filterStaysByTags(filterBy.placeType, stays)
   }
-  console.log(stays);
-  return stays;
+  console.log(stays)
+  return stays
 }
 
 function filterStaysByTags(placeType, stays) {
   const updatedStayArray = stays.filter((stay) => {
     // Check if any tag from tagArray is present in the stay's tags
-    return placeType.includes(stay.type);
-  });
+    return placeType.includes(stay.type)
+  })
 
-  return updatedStayArray;
+  return updatedStayArray
 }
 
 function isInPriceRange(priceRange, stay) {
-  const price = stay.price;
+  const price = stay.price
   if (price >= priceRange[0] && price <= priceRange[1]) {
-    return true;
+    return true
   }
-  return false;
+  return false
 }
 
 function getById(stayId) {
-  return storageService.get(STORAGE_KEY, stayId);
+  return storageService.get(STORAGE_KEY, stayId)
 }
 
 async function remove(stayId) {
   // throw new Error('Nope')
-  await storageService.remove(STORAGE_KEY, stayId);
+  await storageService.remove(STORAGE_KEY, stayId)
 }
 
 async function save(stay) {
-  var savedStay;
+  var savedStay
   if (stay._id) {
-    savedStay = await storageService.put(STORAGE_KEY, stay);
+    savedStay = await storageService.put(STORAGE_KEY, stay)
   } else {
     // Later, owner is set by the backend
-    stay.owner = userService.getLoggedinUser();
-    savedStay = await storageService.post(STORAGE_KEY, stay);
+    stay.owner = userService.getLoggedinUser()
+    savedStay = await storageService.post(STORAGE_KEY, stay)
   }
-  return savedStay;
+  return savedStay
 }
 
 async function addStayMsg(stayId, txt) {
   // Later, this is all done by the backend
-  const stay = await getById(stayId);
-  if (!stay.msgs) stay.msgs = [];
+  const stay = await getById(stayId)
+  if (!stay.msgs) stay.msgs = []
 
   const msg = {
     id: utilService.makeId(),
     by: userService.getLoggedinUser(),
     txt,
-  };
-  stay.msgs.push(msg);
-  await storageService.put(STORAGE_KEY, stay);
+  }
+  stay.msgs.push(msg)
+  await storageService.put(STORAGE_KEY, stay)
 
-  return msg;
+  return msg
 }
 
 function getEmptyStay() {
   return {
     name: "",
     price: "",
-    type:"",
-    imgUrls:[],
-    summary:"",
-    stayPlace:"",
-    stayDetail:{
-      capacity:0,
-      beds:0,
-      rooms:0,
-      bathrooms:0,
-    },
-    amenities:[],
-    labels:[],
-    host:{
+    type: "",
+    imgUrls: [],
+    summary: "",
+    stayPlace: "",
+    capacity: 0,
+    beds: 0,
+    rooms: 0,
+    bathrooms: 0,
+    amenities: [],
+    labels: [],
+    host: {
       _id: "",
       fullname: "",
-      imgUrl:
-        "",
+      imgUrl: "",
+      hostingYears: 0,
+      ownerReview: "",
     },
-    loc:{
+    loc: {
       area: "",
       country: "",
       countryCode: "",
       city: "",
       address: "",
-      lat:0,
-      lng:0,
+      lat: 0,
+      lng: 0,
     },
     reviews: [],
     likedByUsers: [],
-
-  };
+  }
 }
 function _createStays() {
-  let stays = utilService.loadFromStorage(STORAGE_KEY);
+  let stays = utilService.loadFromStorage(STORAGE_KEY)
   if (!stays || !stays.length) {
     stays = [
       {
@@ -715,8 +713,8 @@ function _createStays() {
         ],
         likedByUsers: ["mini-user"],
       },
-    ];
+    ]
 
-    utilService.saveToStorage(STORAGE_KEY, stays);
+    utilService.saveToStorage(STORAGE_KEY, stays)
   }
 }

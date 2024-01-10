@@ -14,6 +14,8 @@ import { StayAmenities } from "../cmps/StayAmenities";
 import { StayReviews } from "../cmps/StayReviews";
 import SimpleMap from "../cmps/GoogleMap";
 
+
+
 export function StayDetails() {
   const [stay, setStay] = useState(null);
 

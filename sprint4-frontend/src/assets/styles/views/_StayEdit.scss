@@ -1,0 +1,115 @@
+.edit-main-container {
+  justify-self: center;
+  display: grid;
+  flex-direction: column;
+  width: 700px;
+  color: $clblack;
+  .new-stay-container {
+    &.step-1 {
+      .step-1-title {
+        font-size: 2.8rem;
+        font-weight: bolder;
+      }
+      .video-step-container {
+        width: 100%;
+        height: max-content;
+        .video-step {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+    &.step-2 {
+      .step-2-title {
+        margin-top: 0.25em;
+        margin-bottom: 0.5em;
+      }
+      .btns-container-new-stay {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        grid-auto-flow: row;
+        .btn-type-apt {
+          display: flex;
+          flex-direction: column;
+          padding: 16px;
+          background-color: #ffff;
+          border: 1px solid #dddddd;
+          color: $clblack;
+          border-radius: 0.5rem;
+          transition: all 0.5s;
+          .type-title {
+            margin-top: 0.25em;
+            font-size: 18px;
+          }
+        }
+        .btn-type-apt:hover {
+          border: 1px solid $clblack;
+        }
+        .btn-type-selected {
+          border-color: transparent;
+          box-shadow: 0 0 0 2px $clblack;
+          background-color: #e7e7e7;
+        }
+      }
+    }
+
+    &.step-3 {
+      display: flex;
+      color: $clblack;
+      flex-direction: column;
+
+      .step-3-title{
+        margin-bottom: 1em;
+      }
+      .btns-container {
+        .btn-opt {
+          margin: 0;
+          margin-bottom: 1em;
+          padding: 0;
+          background-color: #ffffff;
+          border-radius: 1em;
+          border: 1px solid $clGreyMid;
+          color: $clblack;
+          .btn-describe {
+            text-align: start;
+            padding: 24px;
+            .btn-title {
+              font-size: rem(18px);
+              margin-bottom: 0.3em;
+            }
+            .btn-content {
+              font-size: rem(14px);
+              color: $clgrey;
+            }
+          }
+          svg {
+            margin-right: 24px;
+          }
+          &:hover {
+            border: 1px solid $clblack;
+          }
+        }
+        .btn-type-selected {
+          border-color: transparent;
+          box-shadow: 0 0 0 2px $clblack;
+          // background-color: $clGreyLighter;
+          background-color: #e7e7e7;
+        }
+      }
+    }
+    &.step-4 {
+      display: flex;
+      color: $clblack;
+      flex-direction: column;
+
+      .loc-step-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        gap: 1em;
+      }
+      
+      
+    }
+  }
+}
