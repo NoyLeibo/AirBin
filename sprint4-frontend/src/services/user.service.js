@@ -14,6 +14,7 @@ export const userService = {
   remove,
   update,
   changeScore,
+  updateTripList,
 };
 
 window.userService = userService;
@@ -24,22 +25,23 @@ async function getUsers() {
     await userService.signup({
       fullname: "Puki Norma",
       username: "puki",
-      password: "123",
+      password: "123123",
       balance: 10000,
       isAdmin: false,
     });
     await userService.signup({
       fullname: "Master noy",
       username: "NoyLeibo",
-      password: "123",
+      password: "123123",
       balance: 10000,
       isAdmin: true,
     });
     await userService.signup({
       fullname: "Muki G",
       username: "muki",
-      password: "123",
+      password: "123123",
       balance: 10000,
+      isAdmin: true,
     });
   }
   return users;
@@ -69,6 +71,18 @@ async function update({ _id, score }) {
   return user;
 }
 
+async function updateTripList(newTrip) {
+  const user = await getLoggedinUser();
+  user.trips.push(newTrip);
+  await storageService.put("user", user);
+
+  // const user = await httpService.put(`user/${_id}`, {_id, score})
+
+  // When admin updates other user's details, do not update loggedinUser
+  saveLocalUser(user);
+  return user;
+}
+
 async function login(userCred) {
   const users = await storageService.query("user");
   const user = users.find((user) => checkLogin(userCred, user));
@@ -87,8 +101,10 @@ async function signup(userCred) {
   if (!userCred.imgUrl)
     userCred.imgUrl =
       "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png";
-  userCred.score = 10000;
+  userCred.trips = [];
+
   const user = await storageService.post("user", userCred);
+  console.log(user);
   // const user = await httpService.post('auth/signup', userCred)
   return saveLocalUser(user);
 }
@@ -113,6 +129,7 @@ function saveLocalUser(user) {
     imgUrl: user.imgUrl,
     username: user.username,
     password: user.password,
+    trips: user.trips,
   };
   sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user));
   return user;
@@ -120,29 +137,4 @@ function saveLocalUser(user) {
 
 function getLoggedinUser() {
   return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER));
-}
-console.log(getUsers());
-if (!getUsers()) {
-  (async () => {
-    await userService.signup({
-      fullname: "Puki Norma",
-      username: "puki",
-      password: "123",
-      balance: 10000,
-      isAdmin: false,
-    });
-    await userService.signup({
-      fullname: "Master noy",
-      username: "NoyLeibo",
-      password: "123",
-      balance: 10000,
-      isAdmin: true,
-    });
-    await userService.signup({
-      fullname: "Muki G",
-      username: "muki",
-      password: "123",
-      balance: 10000,
-    });
-  })();
 }

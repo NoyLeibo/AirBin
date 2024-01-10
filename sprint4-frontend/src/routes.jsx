@@ -1,17 +1,18 @@
-import { HomePage } from "./pages/HomePage.jsx"
-import { AboutUs } from "./pages/AboutUs.jsx"
-import { StayIndex } from "./pages/StayIndex.jsx"
-import { StayDetails } from "./pages/StayDetails.jsx"
-import { ReviewIndex } from "./pages/ReviewIndex.jsx"
-import { ChatApp } from "./pages/Chat.jsx"
-import { BackOffice } from "./pages/BackOffice.jsx"
-import { PaymentPage } from "./pages/PaymentPage.jsx"
-import { StayEdit } from "./pages/StayEdit.jsx"
+import { HomePage } from "./pages/HomePage.jsx";
+import { AboutUs } from "./pages/AboutUs.jsx";
+import { StayIndex } from "./pages/StayIndex.jsx";
+import { StayDetails } from "./pages/StayDetails.jsx";
+import { ReviewIndex } from "./pages/ReviewIndex.jsx";
+import { ChatApp } from "./pages/Chat.jsx";
+import { BackOffice } from "./pages/BackOffice.jsx";
+import { PaymentPage } from "./pages/PaymentPage.jsx";
+import { StayEdit } from "./pages/StayEdit.jsx";
+import { UserTrips } from "./pages/UserTrips.jsx";
 
 export const pageRouteNameMap = {
   STAY_INDEX: "/",
   STAY_DETAILS: "details/:stayId",
-}
+};
 // Routes accesible from the main navigation (in AppHeader)
 const routes = [
   // {
@@ -59,6 +60,11 @@ const routes = [
     component: <StayEdit />,
     label: "edit",
   },
-]
+  {
+    path: "userTrips",
+    component: <UserTrips />,
+    label: "trips",
+  },
+];
 
-export default routes
+export default routes;

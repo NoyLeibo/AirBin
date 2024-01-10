@@ -36,6 +36,28 @@ export function StickyCard({ stay }) {
     return 1;
   }
 
+  function onReserveValidaton() {
+    if (
+      !selectedDates.checkIn ||
+      !selectedDates.checkOut ||
+      !selectedGuests.Adults
+    ) {
+      return false;
+    }
+    return true;
+  }
+
+  function onReserveNavigate() {
+    if (onReserveValidaton() === false) {
+      alert("Please enter trip dates or guests");
+      return;
+    } else {
+      navigate(
+        `/payment/${stay._id}?checkIn=${selectedDates.checkIn}&checkOut=${selectedDates.checkOut}&price=${priceXdays}&days=${days}&serviceFee=${serviceFee}&adults=${selectedGuests.Adults}&children=${selectedGuests.Children}&infants=${selectedGuests.Infants}&pets=${selectedGuests.Pets}`
+      );
+    }
+  }
+
   // const toggleCalendarModal = () => {
   //   setIsOpenGuests(false);
   //   setIsOpenDates(!isOpenDates);
@@ -90,14 +112,7 @@ export function StickyCard({ stay }) {
           <div className="guests-modal">{isOpenGuests && <Guests />}</div>
         </section>
       </div>
-      <button
-        className="reserve-btn"
-        onClick={() =>
-          navigate(
-            `/payment/${stay._id}?checkIn=${selectedDates.checkIn}&checkOut=${selectedDates.checkOut}&price=${priceXdays}&days=${days}&serviceFee=${serviceFee}&adults=${selectedGuests.Adults}&children=${selectedGuests.Children}&infants=${selectedGuests.Infants}&pets=${selectedGuests.Pets}`
-          )
-        }
-      >
+      <button className="reserve-btn" onClick={onReserveNavigate}>
         Reserve
       </button>
       <div className="flex justify-center fs14">You won't be charged yet</div>

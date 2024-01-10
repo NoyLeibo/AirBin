@@ -55,9 +55,9 @@ export function LoginSignup(props) {
     return <></>;
   }
   return (
-    <div class="card">
-      <div class="login-signup">
-        <div class="form-container">
+    <div className="card">
+      <div className="login-signup">
+        <div className="form-container">
           <h3>Log in or sign up to book</h3>
           <section>
             <div>
@@ -90,7 +90,7 @@ export function LoginSignup(props) {
 
           <div
             role="separator"
-            class="section-divider--horizontal section-divider"
+            className="section-divider--horizontal section-divider"
           >
             <div>or</div>
           </div>

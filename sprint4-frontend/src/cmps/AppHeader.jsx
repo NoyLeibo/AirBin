@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import routes from "../routes";
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service";
@@ -25,10 +25,11 @@ export function AppHeader() {
   const [userSearchDestination, setUserSearchDestination] = useState("");
   const [isScrolledDown, setIsScrolledDown] = useState(true);
   const [showScreenShadow, setShowScreenShadow] = useState(false);
-  const selectedDates = useSelector(
-    (storeState) => storeState.stayModule.selectedDates
-  );
+
+  const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
+  const selectedGuests = useSelector((storeState) => storeState.stayModule.selectedGuests)
   const gRef = useRef(); // global ref use for closing modals by noy
+  const location = useLocation();
 
   useEffect(() => {
     if (selectedDates.checkIn != null && selectedDates.checkOut != null)
@@ -106,6 +107,14 @@ export function AppHeader() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpenGuests, isOpenDates, isOpenDestinations, isMenuOpen, isLoginOpen]);
+
+  const totalGuests = Object.values(selectedGuests).reduce((total, currentValue) => total + currentValue, 0);
+
+  function refreshPage() {
+    if (location.pathname === '/') {
+      window.location.reload();
+    }
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -188,7 +197,7 @@ export function AppHeader() {
       {/* <div className='header-content flex justify-between align-center'> */}
       <div className="header-content">
         <div className="logo-container flex justify-center align-center right-header">
-          <NavLink className="flex justify-center align-center" to="/">
+          <NavLink className="flex justify-center align-center" to="/" onClick={refreshPage}>
             <img src={LOGO_ICON} alt="logo icon" className="logo-header-img" />
             <img src={LOGO} alt="logo name" className="logo-header-txt" />
           </NavLink>
@@ -219,25 +228,22 @@ export function AppHeader() {
         >
           <div className="header-btns-container">
             <button
-              className={`header-btns clean-btn ${
-                selectedButton === "stays" ? "selected" : ""
-              }`}
+              className={`header-btns clean-btn ${selectedButton === "stays" ? "selected" : ""
+                }`}
               onClick={() => handleButtonClick("stays")}
             >
               Stays
             </button>
             <button
-              className={`header-btns clean-btn ${
-                selectedButton === "experiences" ? "selected" : ""
-              }`}
+              className={`header-btns clean-btn ${selectedButton === "experiences" ? "selected" : ""
+                }`}
               onClick={() => handleButtonClick("experiences")}
             >
               Experiences
             </button>
             <button
-              className={`header-btns clean-btn ${
-                selectedButton === "onlineExperiences" ? "selected" : ""
-              }`}
+              className={`header-btns clean-btn ${selectedButton === "onlineExperiences" ? "selected" : ""
+                }`}
               onClick={() => handleButtonClick("onlineExperiences")}
             >
               Online Experiences
@@ -325,7 +331,7 @@ export function AppHeader() {
       </div>
       {isLoginOpen && (
         <div ref={gRef}>
-          <LoginModal />
+          <LoginModal isLoginOpen={isLoginOpen} setIsLoginOpen={setIsLoginOpen} />
         </div>
       )}
       <div className="flex justify-center">
@@ -392,7 +398,7 @@ export function AppHeader() {
 
           <div className="form-dates flex column" onClick={toggleGuestModal}>
             <div className="fs12 blacktxt">Who</div>
-            <div className="fs14 graytxt">Add guests</div>
+            <div className="fs14 graytxt">{totalGuests ? `${totalGuests} guests` : 'Add guests'}</div>
           </div>
           {isOpenGuests && (
             <div ref={gRef}>

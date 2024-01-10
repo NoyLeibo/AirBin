@@ -137,7 +137,7 @@ export function StayDetails() {
             </div>
             <div className="apt-dets-light-con">
               <div className="apt-dets-light-icon">
-                <i class="fa-regular fa-calendar-xmark"></i>
+                <i className="fa-regular fa-calendar-xmark"></i>
               </div>
               <div className="apt-dets-light-info">
                 <div className="bold fs16">Free cancellation</div>
@@ -245,7 +245,7 @@ export function StayDetails() {
           </div>
           <div className="host-icon-ext fs16">
             <div>
-              <i class="fa-solid fa-envelope"></i>
+              <i className="fa-solid fa-envelope"></i>
               <span> {stay.reviews.length} Reviews</span>
             </div>
             <div>
@@ -290,7 +290,7 @@ export function StayDetails() {
           <button className="btn-host-ctn">Contact Host</button>
           <div className="protect-host fs12 flex">
             <div className="protect-host-icon fs30">
-              <i class="fa-solid fa-shield-virus"></i>
+              <i className="fa-solid fa-shield-virus"></i>
             </div>
             <p>
               To protect your payment, never transfer money or communicate
