@@ -54,7 +54,7 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
           </NavLink>
 
           {/* <button className="clean-btn moveto-host">Airbnb your home</button> */}
-          <div className="lx138ae atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr">
+          <div className="word-icon lx138ae atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr">
             <div className="_z5mecy" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

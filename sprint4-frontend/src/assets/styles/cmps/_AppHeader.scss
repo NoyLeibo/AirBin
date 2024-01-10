@@ -12,10 +12,11 @@
   transition: all 0.3s;
 
   //   breakpoint 950px!!!
-
-  &.header-inserted {
+  &.header-sticky{
     position: sticky;
     top: 0;
+  }
+  &.header-inserted {
     height: 80px;
   }
 
@@ -76,7 +77,10 @@
       align-items: center;
       justify-content: center;
       position: relative;
-
+      .word-icon{
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+      }
       .moveto-host {
         color: #222222;
         border-radius: 10px;
@@ -155,10 +159,11 @@
       0 1px 2px rgba(0, 0, 0, 0.0784313725);
     cursor: pointer;
 
-    transition: all 0.4s;
+    transition: all 0.3s;
 
     &.small-form-expended {
       opacity: 1;
+      
     }
 
     .splitter {
@@ -183,6 +188,7 @@
   }
 
   .burger-menu {
+    margin: 0;
     border: 1px solid #dddddd;
     border-radius: 30px;
     padding: 0;
@@ -279,6 +285,9 @@
   &.header-search-inserted {
     transform: translateY(-75px) scaleX(0.4) scaleY(0.7);
     opacity: 0;
+  }
+  &.close-header{
+    display: none;
   }
 
   .header-search-btn {
