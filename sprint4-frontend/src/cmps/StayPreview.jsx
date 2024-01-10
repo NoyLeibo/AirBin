@@ -7,6 +7,7 @@ import Carousel from './Carousel';
 // import { Tooltip, Toast, Popover } from 'bootstrap';
 
 export function StayPreview({ stay }) {
+
   function toggleLike(stayid) {
     console.log("StayPreview")
   }

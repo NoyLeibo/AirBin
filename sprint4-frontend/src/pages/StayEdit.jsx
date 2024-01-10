@@ -28,13 +28,18 @@ export function StayEdit() {
   const [stayToEdit, setStayToEdit] = useState(stayService.getEmptyStay())
   const apiKey = 'AIzaSyB0dUlJsQSAuB636Yc1NGBUaJbwvYjfS1s'
 
-  const [sectionProgress, setSectionProgress] = useState(3)
+  const [sectionProgress, setSectionProgress] = useState(5)
   const [selectedBtn, setSelectedBtn] = useState("")
   const [selectedStayPlace, setSelectedBtnStayPlace] = useState("")
+  const [cords, setCords] = useState({lat:32.109333,lng:34.855499})
+  const [valueGuests, setValueGuests] = useState(stayToEdit.capacity)
+  const [valueBedrooms, setValueBedrooms] = useState(stayToEdit.rooms)
+  const [valueBeds, setValueBeds] = useState(stayToEdit.beds)
+  const [valueBathrooms, setValueBathrooms] = useState(stayToEdit.bathrooms)
 
   const { stayId } = useParams()
   const navigate = useNavigate()
-  console.log(stayToEdit)
+  console.log(stayToEdit , cords ,valueGuests ,'startttt')
 
   useEffect(() => {
     if (!stayId) return
@@ -97,7 +102,7 @@ export function StayEdit() {
       }))
     }
     if(stayToEdit.loc.country && stayToEdit.loc.city &&stayToEdit.loc.address ){
-      let stayAddress= stayToEdit.loc.country+","+stayToEdit.loc.city+","+stayToEdit.loc.address
+      let stayAddress= stayToEdit.loc.country+" "+stayToEdit.loc.city+" "+stayToEdit.loc.address
       getLatLngFromAddress(stayAddress)
     }
     console.log(ev.target, field, newValue)
@@ -151,9 +156,59 @@ export function StayEdit() {
       setSelectedBtnStayPlace(stayPlace)
     }
   }
+
+  function setBasic(type,diff){
+    if(type==='guests'){
+      if(stayToEdit.capacity>=0 && diff===1){
+
+        stayToEdit.capacity=stayToEdit.capacity+diff
+        setValueGuests(stayToEdit.capacity)
+        setStayToEdit(stayToEdit)
+      }else if(stayToEdit.capacity>0){
+        stayToEdit.capacity=stayToEdit.capacity+diff
+        setValueGuests(stayToEdit.capacity)
+        setStayToEdit(stayToEdit)
+      }
+    }
+    if(type==='bedrooms'){
+      if(stayToEdit.rooms>=0 && diff===1){
+
+        stayToEdit.rooms=stayToEdit.rooms+diff
+        setValueBedrooms(stayToEdit.rooms)
+        setStayToEdit(stayToEdit)
+      }else if(stayToEdit.rooms>0){
+        stayToEdit.rooms=stayToEdit.rooms+diff
+        setValueBedrooms(stayToEdit.rooms)
+        setStayToEdit(stayToEdit)
+      }
+    }
+    if(type==='beds'){
+      if(stayToEdit.beds>=0 && diff===1){
+        stayToEdit.beds=stayToEdit.beds+diff
+        setValueBeds(stayToEdit.beds)
+        setStayToEdit(stayToEdit)
+      }else if(stayToEdit.beds>0){
+        stayToEdit.beds=stayToEdit.beds+diff
+        setValueBeds(stayToEdit.beds)
+        setStayToEdit(stayToEdit)
+      }
+    }
+    if(type==='bathrooms'){
+      if(stayToEdit.bathrooms>=0 && diff===1){
+        stayToEdit.bathrooms=stayToEdit.bathrooms+diff
+        setValueBathrooms(stayToEdit.bathrooms)
+        setStayToEdit(stayToEdit)
+      }else if(stayToEdit.bathrooms>0){
+        stayToEdit.bathrooms=stayToEdit.bathrooms+diff
+        setValueBathrooms(stayToEdit.bathrooms)
+        setStayToEdit(stayToEdit)
+      }
+    }
+  }
   console.log(sectionProgress)
 
   const getLatLngFromAddress = (address) => {
+    // console.log(address);
     const encodedAddress = encodeURIComponent(address);
     const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${apiKey}`;
   
@@ -170,7 +225,10 @@ export function StayEdit() {
           console.log(`Latitude: ${lat}, Longitude: ${lng}`)
           stayToEdit.loc.lat=lat
           stayToEdit.loc.lng=lng
-          return {lat ,lng}
+          // setStayToEdit(stayToEdit)
+          cords.lat=lat
+          cords.lng=lng
+          setCords(cords)
         } else {
           console.log('No results found')
         }
@@ -180,8 +238,6 @@ export function StayEdit() {
       })
   }
 
-  // let cords=getLatLngFromAddress('israel haifa leon blum 46')
-  //  console.log(cords ,cords);
   if (isLoading) {
     console.log("no stay to edit")
     return (
@@ -217,7 +273,7 @@ export function StayEdit() {
               muted
               autoPlay
             >
-              <source src="../../../public/img/step1.mp4" type="video/mp4" />
+              <source src="https://stream.media.muscache.com/zFaydEaihX6LP01x8TSCl76WHblb01Z01RrFELxyCXoNek.mp4?v_q=high" type="video/mp4" />
             </video>
           </div>
         </section>
@@ -1018,7 +1074,7 @@ export function StayEdit() {
 
                 <LuDoorOpen size="2rem" />
               </button>
-              <button onClick={()=> setStayPlace('An entire place')} className={
+              <button onClick={()=> setStayPlace('A shared room')} className={
                 (selectedStayPlace === "A shared room"?"btn-type-selected":" ") +" btn-opt flex justify-between align-center"}>
                 <div className="btn-describe flex column">
                   <div className="btn-title ">A shared room</div>
@@ -1056,7 +1112,7 @@ export function StayEdit() {
               <span>Continent :</span>
               <input
                 className="edit-input name-input"
-                value={stayToEdit.loc.area.value}
+                value={stayToEdit.loc.area}
                 onChange={handleChange}
                 type="text"
                 name="area"
@@ -1067,7 +1123,7 @@ export function StayEdit() {
               <span>Country :</span>
               <input
                 className="edit-input name-input"
-                value={stayToEdit.loc.country.value}
+                value={stayToEdit.loc.country}
                 onChange={handleChange}
                 type="text"
                 name="country"
@@ -1078,7 +1134,7 @@ export function StayEdit() {
               <span>City :</span>
               <input
                 className="edit-input name-input"
-                value={stayToEdit.loc.city.value}
+                value={stayToEdit.loc.city}
                 onChange={handleChange}
                 type="text"
                 name="city"
@@ -1089,7 +1145,7 @@ export function StayEdit() {
               <span>Address :</span>
               <input
                 className="edit-input name-input"
-                value={stayToEdit.loc.address.value}
+                value={stayToEdit.loc.address}
                 onChange={handleChange}
                 type="text"
                 name="address"
@@ -1098,7 +1154,84 @@ export function StayEdit() {
             </label>
           </div>
           <div className="map-new-stay">
-          <SimpleMap lan={stayToEdit.loc.lat} lng={stayToEdit.loc.lng} marker={"Your Stay"} />
+          <SimpleMap lat={cords.lat} lng={cords.lng} marker={"Your Stay"} />
+          </div>
+        </section>
+      )}
+      {sectionProgress === 5 && (
+        <section className="new-stay-container step-5">
+          <div className="fw600 fs22"> Step 5</div>
+          <div className="step-5-title fs28 fw600">Share some basics about your place</div>
+          <p className="fs18">
+          You'll add more details later, like bed types.
+          </p>
+          <div className="basics-step-container">
+            <div className="basic flex justify-between align-center fs18">
+              <div className="basic-title ">Guests</div>
+              <div className="basic-btns flex align-center">
+                <button className={`btn-basic ${valueGuests===0?"basic-not-allowed":""}`} onClick={()=>setBasic('guests', -1)}><i className="fa-solid fa-minus"></i></button>
+                <div className="basic-value">{valueGuests}</div>
+                <button className="btn-basic" onClick={()=>setBasic('guests', 1)}><i className="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+            <div className="basic flex justify-between align-center fs18">
+              <div className="basic-title ">Bedrooms</div>
+              <div className="basic-btns flex align-center">
+                <button className={`btn-basic ${valueBedrooms===0?"basic-not-allowed":""}`} onClick={()=>setBasic('bedrooms', -1)}><i className="fa-solid fa-minus"></i></button>
+                <div className="basic-value">{valueBedrooms}</div>
+                <button className="btn-basic" onClick={()=>setBasic('bedrooms', 1)}><i className="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+            <div className="basic flex justify-between align-center fs18">
+              <div className="basic-title ">Beds</div>
+              <div className="basic-btns flex align-center">
+                <button className={`btn-basic ${valueBeds===0?"basic-not-allowed":""}`} onClick={()=>setBasic('beds', -1)}><i className="fa-solid fa-minus"></i></button>
+                <div className="basic-value">{valueBeds}</div>
+                <button className="btn-basic" onClick={()=>setBasic('beds', 1)}><i className="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+            <div className="basic basic-last flex justify-between align-center fs18">
+              <div className="basic-title ">Bathrooms</div>
+              <div className="basic-btns flex align-center">
+                <button className={`btn-basic ${valueBathrooms===0?"basic-not-allowed":""}`} onClick={()=>setBasic('bathrooms', -1)}><i className="fa-solid fa-minus"></i></button>
+                <div className="basic-value">{valueBathrooms}</div>
+                <button className="btn-basic" onClick={()=>setBasic('bathrooms', 1)}><i className="fa-solid fa-plus"></i></button>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+      )}
+      {sectionProgress === 6 && (
+        <section className="new-stay-container step-1">
+          <div className="fw600 fs22"> Step 6</div>
+          <div className="step-6-title fs30 fw600">Make your place stand out</div>
+          <p className="fs18">
+          In this step, you’ll add some of the amenities your place offers, plus 5 or more photos. Then, you’ll create a title and description.
+          </p>
+          <div className="video-step-container">
+            <video
+              className="video-step"
+              crossOrigin="anonymous"
+              playsInline
+              preload="auto"
+              muted
+              autoPlay
+            >
+              <source src="https://stream.media.muscache.com/H0101WTUG2qWbyFhy02jlOggSkpsM9H02VOWN52g02oxhDVM.mp4?v_q=high" type="video/mp4" />
+            </video>
+          </div>
+        </section>
+      )}
+      {sectionProgress === 7 && (
+        <section className="new-stay-container step-7">
+          <div className="fw600 fs22"> Step 7</div>
+          <div className="step-6-title fs30 fw600">Tell guests what your place has to offer</div>
+          <p className="fs18">
+          You can add more amenities after you publish your listing.
+          </p>
+          <div className="video-step-container">
+            
           </div>
         </section>
       )}

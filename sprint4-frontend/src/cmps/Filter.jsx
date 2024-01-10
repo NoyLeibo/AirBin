@@ -70,31 +70,40 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit }) {
   }
 
   return (
-    <section className="filter-modal-container">
-      <div className="by-price-range">
-        <h2>Price range</h2>
-        <div>Nightly prices including fees and taxes</div>
-        <div className="range">
-          <PriceRange handlePriceRangeChange={handlePriceRangeChange} />
+    <section>
+      <div className="filter-modal-container">
+        <header className='flex cloumn bold blacktxt'>
+          <div>X</div><div className='filter-header-title'>Filters</div>
+        </header>
+
+        <div className='filter-modal-mid divider'>
+          <div className='fs22 bold blacktxt'>Price range</div>
+          <div className='fs14 blacktxt'>Nightly prices including fees and taxes</div>
+          <div className="range">
+            <PriceRange handlePriceRangeChange={handlePriceRangeChange} />
+          </div>
         </div>
+        <div className='filter-modal-bottom flex column divider'>
+          <div className='fs22 bold blacktxt'>Rooms and beds</div>
+          <div className="by-rooms">
+            <div className='fs14 blacktxt'>Bedrooms</div>
+            {renderButtons('bedrooms', 7, selectedBedrooms)}
+          </div>
+          <div className="by-beds">
+            <div className='fs14 blacktxt'>Beds</div>
+            {renderButtons('beds', 7, selectedBeds)}
+          </div>
+          <div className="by-bathrooms">
+            <div className='fs14 blacktxt'>Bathrooms</div>
+            {renderButtons('bathrooms', 7, selectedBathrooms)}
+          </div>
+        </div>
+        <footer className="filter-footer flex justify-between divider">
+          <button className="clean-btn" onClick={handleClearAll}>Clear all</button>
+          <button className="show-btn clean-btn" onClick={handleApplyFilter}>Show places</button>
+        </footer>
       </div>
-      <h2>Rooms and beds</h2>
-      <div className="by-rooms">
-        <div>Bedrooms</div>
-        {renderButtons('bedrooms', 7, selectedBedrooms)}
-      </div>
-      <div className="by-beds">
-        <div>Beds</div>
-        {renderButtons('beds', 7, selectedBeds)}
-      </div>
-      <div className="by-bathrooms">
-        <div>Bathrooms</div>
-        {renderButtons('bathrooms', 7, selectedBathrooms)}
-      </div>
-      <footer className="filter-footer flex justify-between divider">
-        <button className="clean-btn" onClick={handleClearAll}>Clear all</button>
-        <button className="show-btn clean-btn" onClick={handleApplyFilter}>Show places</button>
-      </footer>
+      <div className="screen-shadow"></div>
     </section>
   )
 }
