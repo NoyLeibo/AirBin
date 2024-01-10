@@ -7,12 +7,14 @@ import { useLocation } from "react-router";
 import { LoginModal } from "../cmps/Login";
 import { userService } from "../services/user.service";
 import { updateUser } from "../store/user.actions";
+import { useSelector } from "react-redux";
 
 export function PaymentPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [stay, setStay] = useState(null);
   const { stayId } = useParams();
+  const user = useSelector((storeState) => storeState.userModule.user);
   const queryParams = new URLSearchParams(location.search);
   const checkIn = convertDate(queryParams.get("checkIn"));
   const checkOut = convertDate(queryParams.get("checkOut"));
@@ -51,17 +53,26 @@ export function PaymentPage() {
       stayId: stayId,
       stayImg: stay.imgUrls[0],
       stayName: stay.name,
-      host: stay.host,
+    };
+    const host = stay.host;
+    const guest = {
+      _id: user._id,
+      username: user.username,
+      imgUrl: user.imgUrl,
+      fullname: user.fullname,
     };
     const newTrip = {
       stay: stayDetails,
       checkIn,
       checkOut,
       booked: convertDate(Date.now()),
+      host,
+      guest,
       totalPrice,
+      status: "pending",
     };
-    const user = await userService.updateTripList(newTrip);
-    await updateUser(user);
+    const updatedUser = await userService.updateTripList(newTrip);
+    await updateUser(updatedUser);
     navigate("/userTrips");
   }
 

@@ -68,7 +68,7 @@ export function UserTrips() {
                 />
               </TableCell>
               <TableCell align="left">{trip.stay.stayName}</TableCell>
-              <TableCell align="left">{trip.stay.host.fullname}</TableCell>
+              <TableCell align="left">{trip.host.fullname}</TableCell>
               <TableCell align="center">{trip.checkIn}</TableCell>
               <TableCell align="center">{trip.checkOut}</TableCell>
               <TableCell align="center">{trip.booked}</TableCell>

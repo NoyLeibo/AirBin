@@ -10,6 +10,7 @@ import Paper from "@mui/material/Paper";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { loadUsers, removeUser } from "../store/user.actions";
+import { userService } from "../services/user.service";
 
 // export function DashboardResarvation() {
 //   const users = useSelector((storeState) => storeState.userModule.users);
@@ -64,12 +65,19 @@ const rows = [
 ];
 
 export function DashboardResarvation() {
-  const users = useSelector((storeState) => storeState.userModule.users);
   const user = useSelector((storeState) => storeState.userModule.user);
+  const reservations = user.guestsReservations;
+  console.log(reservations);
   const isLoading = useSelector(
     (storeState) => storeState.userModule.isLoading
   );
   const tripList = user.trips;
+
+  function onActionClicked(reservation, status) {
+    reservation.status = status;
+    userService.updateReservationGuest(reservation);
+    userService.updateReservationHost(reservation);
+  }
 
   useEffect(() => {
     loadUsers();
@@ -89,16 +97,26 @@ export function DashboardResarvation() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+          {reservations.map((reservation, index) => (
+            <StyledTableRow key={reservation._id}>
               <StyledTableCell component="th" scope="row">
-                {row.name}
+                {reservation.guest.fullname}
               </StyledTableCell>
-              <StyledTableCell align="left">{row.calories}</StyledTableCell>
-              <StyledTableCell align="left">{row.fat}</StyledTableCell>
-              <StyledTableCell align="left">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="left">{row.protein}</StyledTableCell>
-              <StyledTableCell align="center">{row.protein}</StyledTableCell>
+              <StyledTableCell align="left">
+                {reservation.checkIn}
+              </StyledTableCell>
+              <StyledTableCell align="left">
+                {reservation.checkOut}
+              </StyledTableCell>
+              <StyledTableCell align="left">
+                {reservation.booked}
+              </StyledTableCell>
+              <StyledTableCell align="left">
+                {reservation.totalPrice}
+              </StyledTableCell>
+              <StyledTableCell align="center">
+                {reservation.status}
+              </StyledTableCell>
               <StyledTableCell align="center">
                 {/* <Stack spacing={2}>
                   <Button variant="contained" color="success">
@@ -109,14 +127,18 @@ export function DashboardResarvation() {
                   </Button>
                 </Stack> */}
                 <button
-                  onClick={() => onRemoveBtn(trip._id)}
+                  onClick={() => {
+                    onActionClicked(reservation, "Accept");
+                  }}
                   className="clean-btn cancel-btn"
                 >
                   Accept
                 </button>
                 <button
-                  onClick={() => onRemoveBtn(trip._id)}
                   className="clean-btn cancel-btn"
+                  onClick={() => {
+                    onActionClicked(reservation, "Reject");
+                  }}
                 >
                   Reject
                 </button>
