@@ -14,6 +14,7 @@ export const userService = {
   remove,
   update,
   changeScore,
+  updateTripList,
 };
 
 window.userService = userService;
@@ -103,6 +104,7 @@ async function signup(userCred) {
   userCred.trips = [];
 
   const user = await storageService.post("user", userCred);
+  console.log(user);
   // const user = await httpService.post('auth/signup', userCred)
   return saveLocalUser(user);
 }
@@ -127,6 +129,7 @@ function saveLocalUser(user) {
     imgUrl: user.imgUrl,
     username: user.username,
     password: user.password,
+    trips: user.trips,
   };
   sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user));
   return user;
