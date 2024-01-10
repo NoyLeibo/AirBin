@@ -24,22 +24,24 @@ async function getUsers() {
     await userService.signup({
       fullname: "Puki Norma",
       username: "puki",
-      password: "123",
+      password: "123123",
       balance: 10000,
       isAdmin: false,
     });
     await userService.signup({
       fullname: "Master noy",
       username: "NoyLeibo",
-      password: "123",
+      password: "123123",
       balance: 10000,
       isAdmin: true,
     });
     await userService.signup({
       fullname: "Muki G",
       username: "muki",
-      password: "123",
+      password: "123123",
       balance: 10000,
+      isAdmin: true,
+
     });
   }
   return users;
@@ -120,29 +122,4 @@ function saveLocalUser(user) {
 
 function getLoggedinUser() {
   return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER));
-}
-console.log(getUsers());
-if (!getUsers()) {
-  (async () => {
-    await userService.signup({
-      fullname: "Puki Norma",
-      username: "puki",
-      password: "123",
-      balance: 10000,
-      isAdmin: false,
-    });
-    await userService.signup({
-      fullname: "Master noy",
-      username: "NoyLeibo",
-      password: "123",
-      balance: 10000,
-      isAdmin: true,
-    });
-    await userService.signup({
-      fullname: "Muki G",
-      username: "muki",
-      password: "123",
-      balance: 10000,
-    });
-  })();
 }

@@ -219,25 +219,22 @@ export function AppHeader() {
         >
           <div className="header-btns-container">
             <button
-              className={`header-btns clean-btn ${
-                selectedButton === "stays" ? "selected" : ""
-              }`}
+              className={`header-btns clean-btn ${selectedButton === "stays" ? "selected" : ""
+                }`}
               onClick={() => handleButtonClick("stays")}
             >
               Stays
             </button>
             <button
-              className={`header-btns clean-btn ${
-                selectedButton === "experiences" ? "selected" : ""
-              }`}
+              className={`header-btns clean-btn ${selectedButton === "experiences" ? "selected" : ""
+                }`}
               onClick={() => handleButtonClick("experiences")}
             >
               Experiences
             </button>
             <button
-              className={`header-btns clean-btn ${
-                selectedButton === "onlineExperiences" ? "selected" : ""
-              }`}
+              className={`header-btns clean-btn ${selectedButton === "onlineExperiences" ? "selected" : ""
+                }`}
               onClick={() => handleButtonClick("onlineExperiences")}
             >
               Online Experiences
@@ -325,7 +322,7 @@ export function AppHeader() {
       </div>
       {isLoginOpen && (
         <div ref={gRef}>
-          <LoginModal />
+          <LoginModal isLoginOpen={isLoginOpen} setIsLoginOpen={setIsLoginOpen} />
         </div>
       )}
       <div className="flex justify-center">

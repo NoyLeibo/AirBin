@@ -6,13 +6,14 @@ import { LoginModal } from "./Login";
 import { logout } from "../store/user.actions";
 
 
-export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
+export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) { //  left-header
   // const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const gRef = useRef();
   const user = useSelector((storeState) => storeState.userModule.user);
 
   const openLoginModal = () => {
+    console.log('OPEN!!!');
     setIsLoginOpen(true);
     setIsMenuOpen(false);
   };
@@ -44,7 +45,9 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
     <section>
       <div>
         <div className="flex left-header justify-center align-center">
-          <button className="clean-btn moveto-host">Airbnb your home</button>
+          <NavLink to={user ? "/hosting" : "/edit"} onClick={user ? undefined : openLoginModal} className="moveto-host fs14">{user ? 'Swich to hosting' : 'Airbnb your home'}</NavLink>
+
+          {/* <button className="clean-btn moveto-host">Airbnb your home</button> */}
           <div className="lx138ae atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr">
             <div className="_z5mecy" aria-hidden="true">
               <svg
@@ -126,15 +129,13 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
                     <NavLink to="/" className="bold">
                       Trips
                     </NavLink>
-                    <NavLink to="/signup">Wishlist</NavLink>
+                    <NavLink to="/wishlist">Wishlist</NavLink>
                   </div>
                   <div className="flex column">
-                    <NavLink to="/signup">Messages</NavLink>
-                    <NavLink to="/signup">View orders</NavLink>
-                    <NavLink to="/signup">Add another stay</NavLink>
-                    <button className="clean-btn" onClick={logout}>
-                      Log out
-                    </button>
+                    <NavLink to="/messages">Messages</NavLink>
+                    <NavLink to="/oreders">View orders</NavLink>
+                    <NavLink to="/edit">Add another stay</NavLink>
+                    <NavLink to="/edit" onClick={logout}>Log out</NavLink>
                   </div>
                 </>
               )}
