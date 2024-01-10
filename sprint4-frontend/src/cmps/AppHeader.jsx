@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import routes from "../routes";
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service";
@@ -29,6 +29,7 @@ export function AppHeader() {
   const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
   const selectedGuests = useSelector((storeState) => storeState.stayModule.selectedGuests)
   const gRef = useRef(); // global ref use for closing modals by noy
+  const location = useLocation();
 
   useEffect(() => {
     if (selectedDates.checkIn != null && selectedDates.checkOut != null)
@@ -106,8 +107,14 @@ export function AppHeader() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpenGuests, isOpenDates, isOpenDestinations, isMenuOpen, isLoginOpen]);
-  // console.log(selectedGuests);
+
   const totalGuests = Object.values(selectedGuests).reduce((total, currentValue) => total + currentValue, 0);
+
+  function refreshPage() {
+    if (location.pathname === '/') {
+      window.location.reload();
+    }
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -190,7 +197,7 @@ export function AppHeader() {
       {/* <div className='header-content flex justify-between align-center'> */}
       <div className="header-content">
         <div className="logo-container flex justify-center align-center right-header">
-          <NavLink className="flex justify-center align-center" to="/">
+          <NavLink className="flex justify-center align-center" to="/" onClick={refreshPage}>
             <img src={LOGO_ICON} alt="logo icon" className="logo-header-img" />
             <img src={LOGO} alt="logo name" className="logo-header-txt" />
           </NavLink>
