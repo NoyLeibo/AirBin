@@ -78,6 +78,7 @@
   &.justify-between {
     justify-content: space-between;
   }
+
   &.justify-around {
     justify-content: space-around;
   }
@@ -180,4 +181,13 @@
 
 .red {
   color: #FF0000;
+}
+
+.hovunderline:hover {
+  text-decoration: underline;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
 }
