@@ -111,12 +111,13 @@ export function StayFilter({ filterBy, onSetFilter }) {
             onClick={(ev) => handleEmojiSelect(ev, key)}
           >
             <img
-              className="emoji-filter"
+              className={`emoji-filter ${selectedEmojis.includes(key) ? "selectedEmoji" : ""}`}
               src={value}
               alt={key}
               width="24"
               height="24"
             />
+            <div class="color-overlay"></div>
             <div className="emoji-text">{key}</div>
           </label>
         ))}
