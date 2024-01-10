@@ -25,6 +25,10 @@
   .by-rooms {
     width: 100%;
 
+    .selected-option {
+      border: 1px solid black;
+    }
+
     button {
       border: 1px #dddddd solid;
       padding: 11px 27px 35px 27px;
@@ -32,28 +36,20 @@
       font-size: 1em;
       margin: 0 5px;
       transition: border 0.3s ease;
+
+
       &:hover {
         border: 1px black solid;
       }
     }
   }
+
   .by-beds {
     width: 100%;
 
-    button {
-      border: 1px #dddddd solid;
-      padding: 11px 27px 35px 27px;
-      border-radius: 30px;
-      font-size: 1em;
-      margin: 0 5px;
-      transition: border 0.3s ease;
-      &:hover {
-        border: 1px black solid;
-      }
+    .selected-option {
+      border: 1px solid black;
     }
-  }
-  .by-bathrooms {
-    width: 100%;
 
     button {
       border: 1px #dddddd solid;
@@ -62,6 +58,28 @@
       font-size: 1em;
       margin: 0 5px;
       transition: border 0.3s ease;
+
+      &:hover {
+        border: 1px black solid;
+      }
+    }
+  }
+
+  .by-bathrooms {
+    width: 100%;
+
+    .selected-option {
+      border: 1px solid black;
+    }
+
+    button {
+      border: 1px #dddddd solid;
+      padding: 11px 27px 35px 27px;
+      border-radius: 30px;
+      font-size: 1em;
+      margin: 0 5px;
+      transition: border 0.3s ease;
+
       &:hover {
         border: 1px black solid;
       }

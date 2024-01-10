@@ -16,6 +16,7 @@
     object-fit: cover;
     transition: filter 0.2s ease-in-out;
     max-height: 260px;
+    height: 260px;
 
     &:hover {
       filter: brightness(0.8);
@@ -24,6 +25,7 @@
 
   .img1 {
     max-height: rem(520px);
+    height: 520px;
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
   }
@@ -54,9 +56,9 @@
   transform: translate(-50%, -50%);
   left: 50%;
   position: fixed;
-  min-width: 40em;
-  height: 40em;
-  padding: 20px;
+  width: 50em;
+  height: 47em;
+  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.1215686275) 0 6px 16px;
   background-color: #ffffff;
   border: 2px solid #878585;
@@ -82,14 +84,14 @@
   .imgs-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr); // Two columns
-    gap: 8px; // Adjust as needed
+    gap: 1px; // Adjust as needed
 
     .img-container {
       position: relative;
       margin: 8px;
 
       &:nth-child(3n) {
-        grid-column: span 2;
+        // grid-column: span 2;
         grid-row: span 2;
       }
 

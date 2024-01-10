@@ -20,6 +20,11 @@ export function StayFilter({ filterBy, onSetFilter }) {
 
   onSetFilter = useRef(utilService.debounce(onSetFilter));
 
+
+  function onSetFilterEmoji(emoji) {
+    console.log(emoji);
+  }
+
   useEffectUpdate(() => {
     onSetFilter.current(filterByToEdit);
   }, [filterByToEdit]);
@@ -68,7 +73,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
       filterContainerRef.current.scrollLeft += 110;
     }
   };
-  const handleEmojiSelect = (key, ev) => {
+  const handleEmojiSelect = (ev, key) => {
     ev.preventDefault();
     setSelectedEmoji(key);
     addPropertyType(key);
@@ -108,7 +113,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
             key={key + filterIndex}
             className={`emoji-container ${selectedEmoji === key ? "selectedEmoji" : ""}`}
 
-            onClick={() => handleEmojiSelect(key, ev)}
+            onClick={(ev) => handleEmojiSelect(ev, key)}
           >
             <img
               className="emoji-filter"
@@ -117,7 +122,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
               width="24"
               height="24"
             />
-            <div className="emoji-text">{key}</div>
+            <div className="emoji-text" onlclick={() => (onSetFilterEmoji)}>{key}</div>
           </label>
         ))}
       </div>

@@ -18,15 +18,8 @@ export const stayService = {
 window.cs = stayService;
 
 async function query(
-  filterBy = {
-    placeType: [],
-    priceRange: [0, 2000],
-    bedrooms: "",
-    beds: "",
-    bathrooms: "",
-  }
+  filterBy = getDefaultFilter()
 ) {
-  console.log(filterBy);
   var stays = await storageService.query(STORAGE_KEY);
   // if (filterBy.txt) {
   //   const regex = new RegExp(filterBy.txt, "i");
@@ -38,29 +31,43 @@ async function query(
   // if (filterBy.price) {
   //   stays = stays.filter((stay) => stay.price <= filterBy.price);
   // }
+  console.log(filterBy);
   if (filterBy.priceRange.length > 0) {
     stays = stays.filter((stay) => isInPriceRange(filterBy.priceRange, stay));
   }
   if (filterBy.bedrooms) {
     stays = stays.filter((stay) => {
-      return stay.bedrooms === filterBy.bedrooms;
+      return stay.bedrooms >= filterBy.bedrooms;
     });
   }
-  if (filterBy.placeType.length > 0) {
+  if (filterBy.beds) {
+    stays = stays.filter((stay) => {
+      return stay.beds >= filterBy.beds;
+    });
+  }
+  if (filterBy.bathrooms) {
+    stays = stays.filter((stay) => {
+      console.log(stay.baths, ' >= ', filterBy.bathrooms);
+      return stay.baths >= filterBy.bathrooms;
+    });
+  }
+  if (filterBy.placeType.length) {
     stays = filterStaysByTags(filterBy.placeType, stays);
   }
-  console.log(stays);
   return stays;
 }
 
 function filterStaysByTags(placeType, stays) {
-  const updatedStayArray = stays.filter((stay) => {
-    // Check if any tag from tagArray is present in the stay's tags
-    return placeType.includes(stay.type);
+  const updatedStayArray = stays.filter(stay => {
+    // Check if any amenity of the stay is included in the placeType array
+    return stay.amenities.some(amenity => placeType.includes(amenity));
   });
-
+  console.log('tags to filter by:', placeType);
+  console.log('updatedStayArray after filter by tag:', updatedStayArray);
   return updatedStayArray;
 }
+
+
 
 function isInPriceRange(priceRange, stay) {
   const price = stay.price;
@@ -162,7 +169,7 @@ function _createStays() {
           "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/69da724d-683d-427b-839d-9d95b67a8dcf.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/86ea0910-9c6b-4387-b412-f0ccc5285760.jpeg?im_w=720",
         ],
-        price: 180.0,
+        price: 1980.0,
         bedrooms: 1,
         beds: 2,
         baths: 1,
