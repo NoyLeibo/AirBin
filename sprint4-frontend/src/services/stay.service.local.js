@@ -793,7 +793,7 @@ function _createStays() {
         likedByUsers: ["Matthew Andreh", "Rebecca"],
       },
       {
-        _id: "s106",
+        _id: "s126",
         name: "Mountain Retreat Lodge",
         type: "Lodge",
         imgUrls: [
@@ -1557,51 +1557,51 @@ function _createStays() {
               fullname: "Andreh4",
               imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
             }
+          },
+          {
+            id: "r102",
+            txt: "Great location and fantastic city view!",
+            rate: 5,
+            by: {
+              _id: "u104",
+              fullname: "boris",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/f793a59f-43cc-4a02-b8f0-eb5a542e68ff.jpg?im_w=240",
+            },
+          },
+          {
+            id: "madeId5",
+            txt: "Perfect for a weekend getaway. The host was very responsive and helpful...",
+            rate: 3,
+            by: {
+              _id: "u106",
+              fullname: "nave",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/e6b632f2-03b5-4a26-a4eb-3b520d12a8e7.jpg?im_w=240",
+            },
+          },
+          {
+            id: "coll",
+            txt: "Fantastic location, close to the city center. The room was clean...",
+            rate: 5,
+            by: {
+              _id: "u103",
+              fullname: "shoshi",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/96db5a52-52db-42d4-a8bf-fe4d9cb7901d.jpg?im_w=240",
+            },
+          },
+          {
+            id: "madeId3",
+            txt: "Charming apartment with amazing views. Hosts were very accommodating...",
+            rate: 5,
+            by: {
+              _id: "u104",
+              fullname: "IMYOU",
+              imgUrl: "https://a0.muscache.com/im/pictures/user/7e30997b-191c-4f49-bd71-ea57e4fe8d91.jpg?im_w=240",
+            },
           }
         ],
         likedByUsers: ["beach-lover", "sun-seeker"]
-      },
-      {
-        id: "r102",
-        txt: "Great location and fantastic city view!",
-        rate: 5,
-        by: {
-          _id: "u104",
-          fullname: "boris",
-          imgUrl: "https://a0.muscache.com/im/pictures/user/f793a59f-43cc-4a02-b8f0-eb5a542e68ff.jpg?im_w=240",
-        },
-      },
-      {
-        id: "madeId5",
-        txt: "Perfect for a weekend getaway. The host was very responsive and helpful...",
-        rate: 3,
-        by: {
-          _id: "u106",
-          fullname: "nave",
-          imgUrl: "https://a0.muscache.com/im/pictures/user/e6b632f2-03b5-4a26-a4eb-3b520d12a8e7.jpg?im_w=240",
-        },
-      },
-      {
-        id: "coll",
-        txt: "Fantastic location, close to the city center. The room was clean...",
-        rate: 5,
-        by: {
-          _id: "u103",
-          fullname: "shoshi",
-          imgUrl: "https://a0.muscache.com/im/pictures/user/96db5a52-52db-42d4-a8bf-fe4d9cb7901d.jpg?im_w=240",
-        },
-      },
-      {
-        id: "madeId3",
-        txt: "Charming apartment with amazing views. Hosts were very accommodating...",
-        rate: 5,
-        by: {
-          _id: "u104",
-          fullname: "IMYOU",
-          imgUrl: "https://a0.muscache.com/im/pictures/user/7e30997b-191c-4f49-bd71-ea57e4fe8d91.jpg?im_w=240",
-        },
       }
-    ];
+    ]
 
     utilService.saveToStorage(STORAGE_KEY, stays)
   }

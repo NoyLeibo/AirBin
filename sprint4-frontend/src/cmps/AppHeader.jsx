@@ -25,9 +25,9 @@ export function AppHeader() {
   const [userSearchDestination, setUserSearchDestination] = useState("");
   const [isScrolledDown, setIsScrolledDown] = useState(true);
   const [showScreenShadow, setShowScreenShadow] = useState(false);
-  const selectedDates = useSelector(
-    (storeState) => storeState.stayModule.selectedDates
-  );
+
+  const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
+  const selectedGuests = useSelector((storeState) => storeState.stayModule.selectedGuests)
   const gRef = useRef(); // global ref use for closing modals by noy
 
   useEffect(() => {
@@ -106,6 +106,8 @@ export function AppHeader() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpenGuests, isOpenDates, isOpenDestinations, isMenuOpen, isLoginOpen]);
+  // console.log(selectedGuests);
+  const totalGuests = Object.values(selectedGuests).reduce((total, currentValue) => total + currentValue, 0);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -389,7 +391,7 @@ export function AppHeader() {
 
           <div className="form-dates flex column" onClick={toggleGuestModal}>
             <div className="fs12 blacktxt">Who</div>
-            <div className="fs14 graytxt">Add guests</div>
+            <div className="fs14 graytxt">{totalGuests ? `${totalGuests} guests` : 'Add guests'}</div>
           </div>
           {isOpenGuests && (
             <div ref={gRef}>

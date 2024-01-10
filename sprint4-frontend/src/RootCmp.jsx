@@ -11,7 +11,7 @@ import { PaymentPage } from "./pages/PaymentPage";
 export function RootCmp() {
   return (
     <main className="main-container">
-        <AppHeader />
+      <AppHeader />
       <Routes>
         {routes.map((route) => (
           <Route
@@ -24,7 +24,7 @@ export function RootCmp() {
         <Route path="user/:id" element={<StayDetails />} />
         <Route path="user/:id" element={<PaymentPage />} />
       </Routes>
-      <AppFooter />
+      {/* <AppFooter /> */}
     </main>
   );
 }
