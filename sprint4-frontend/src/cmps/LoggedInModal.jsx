@@ -145,7 +145,11 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
               {user && (
                 <>
                   <div className="manu-one flex column">
-                    <NavLink to="/userTrips" className="bold">
+                    <NavLink
+                      to="/userTrips"
+                      className="bold"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
                       Trips
                     </NavLink>
                     <NavLink
@@ -156,12 +160,6 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
                     </NavLink>
                   </div>
                   <div className="flex column">
-                    <NavLink to="/messages">Messages</NavLink>
-                    <NavLink to="/oreders">View orders</NavLink>
-                    <NavLink to="/edit">Add another stay</NavLink>
-                    <NavLink to="/edit" onClick={logout}>
-                      Log out
-                    </NavLink>
                     <NavLink
                       to="/messages"
                       onClick={() => setIsMenuOpen(false)}
@@ -175,7 +173,7 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
                       Add another stay
                     </NavLink>
                     <NavLink
-                      to="/edit"
+                      to="/"
                       onClick={() => {
                         logout();
                         setIsMenuOpen(false);

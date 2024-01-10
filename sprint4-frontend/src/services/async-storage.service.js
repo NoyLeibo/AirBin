@@ -4,6 +4,7 @@ export const storageService = {
   post,
   put,
   remove,
+  randomId,
 };
 
 async function query(entityType, delay = 900) {
@@ -59,6 +60,10 @@ function remove(entityType, entityId) {
     entities.splice(idx, 1);
     _save(entityType, entities);
   });
+}
+
+function randomId() {
+  return _makeId();
 }
 
 // Private functions

@@ -8,6 +8,7 @@ import { BackOffice } from "./pages/BackOffice.jsx";
 import { PaymentPage } from "./pages/PaymentPage.jsx";
 import { StayEdit } from "./pages/StayEdit.jsx";
 import { UserTrips } from "./pages/UserTrips.jsx";
+import { Wishlist } from "./pages/Wishlist.jsx";
 
 export const pageRouteNameMap = {
   STAY_INDEX: "/",
@@ -64,6 +65,11 @@ const routes = [
     path: "userTrips",
     component: <UserTrips />,
     label: "trips",
+  },
+  {
+    path: "wishlist",
+    component: <Wishlist />,
+    label: "wishlist",
   },
 ];
 

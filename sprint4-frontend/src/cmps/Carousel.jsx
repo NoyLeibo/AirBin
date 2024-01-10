@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { userService } from "../services/user.service";
+import { updateUser } from "../store/user.actions";
 
-const Carousel = ({ stay }) => {
+const Carousel = ({ stay, isLiked }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [favoriteStay, setFavorite] = useState(false);
+  const [favoriteStay, setFavorite] = useState(isLiked);
   const goToSlide = (index) => {
     setActiveIndex(index);
   };
@@ -18,9 +20,10 @@ const Carousel = ({ stay }) => {
     goToSlide(index);
   };
 
-  function toggleLike() {
+  async function toggleLike() {
     setFavorite(!favoriteStay);
-    console.log(isLike);
+    const user = await userService.updateWishlist(stay);
+    await updateUser(user);
   }
   const renderIndicators = () => {
     const totalButtons = Math.min(5, stay.imgUrls.length); // Maximum 5 buttons

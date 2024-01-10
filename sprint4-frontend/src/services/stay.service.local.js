@@ -1,11 +1,11 @@
-import { storageService } from "./async-storage.service.js"
-import { utilService } from "./util.service.js"
-import { userService } from "./user.service.js"
+import { storageService } from "./async-storage.service.js";
+import { utilService } from "./util.service.js";
+import { userService } from "./user.service.js";
 
-import ConnectedTvOutlinedIcon from "@mui/icons-material/ConnectedTvOutlined"
+import ConnectedTvOutlinedIcon from "@mui/icons-material/ConnectedTvOutlined";
 
-const STORAGE_KEY = "stay_db"
-_createStays()
+const STORAGE_KEY = "stay_db";
+_createStays();
 
 export const stayService = {
   query,
@@ -14,11 +14,11 @@ export const stayService = {
   remove,
   getEmptyStay,
   addStayMsg,
-}
-window.cs = stayService
+};
+window.cs = stayService;
 
 async function query(filterBy = getDefaultFilter()) {
-  var stays = await storageService.query(STORAGE_KEY)
+  var stays = await storageService.query(STORAGE_KEY);
   // if (filterBy.txt) {
   //   const regex = new RegExp(filterBy.txt, "i");
   //   stays = stays.filter(
@@ -29,85 +29,84 @@ async function query(filterBy = getDefaultFilter()) {
   // if (filterBy.price) {
   //   stays = stays.filter((stay) => stay.price <= filterBy.price);
   // }
-  console.log(filterBy)
   if (filterBy.priceRange.length > 0) {
-    stays = stays.filter((stay) => isInPriceRange(filterBy.priceRange, stay))
+    stays = stays.filter((stay) => isInPriceRange(filterBy.priceRange, stay));
   }
   if (filterBy.bedrooms) {
     stays = stays.filter((stay) => {
-      return stay.bedrooms >= filterBy.bedrooms
-    })
+      return stay.bedrooms >= filterBy.bedrooms;
+    });
   }
   if (filterBy.beds) {
     stays = stays.filter((stay) => {
-      return stay.beds >= filterBy.beds
-    })
+      return stay.beds >= filterBy.beds;
+    });
   }
   if (filterBy.bathrooms) {
     stays = stays.filter((stay) => {
-      console.log(stay.baths, " >= ", filterBy.bathrooms)
-      return stay.baths >= filterBy.bathrooms
-    })
+      console.log(stay.baths, " >= ", filterBy.bathrooms);
+      return stay.baths >= filterBy.bathrooms;
+    });
   }
   if (filterBy.placeType.length) {
-    stays = filterStaysByTags(filterBy.placeType, stays)
+    stays = filterStaysByTags(filterBy.placeType, stays);
   }
-  return stays
+  return stays;
 }
 
 function filterStaysByTags(placeType, stays) {
-  const updatedStayArray = stays.filter(stay => {
+  const updatedStayArray = stays.filter((stay) => {
     if (!Array.isArray(stay.amenities)) {
-      return false
+      return false;
     }
-    return stay.amenities.some(amenity => placeType.includes(amenity))
-  })
+    return stay.amenities.some((amenity) => placeType.includes(amenity));
+  });
   return updatedStayArray;
 }
 
 function isInPriceRange(priceRange, stay) {
-  const price = stay.price
+  const price = stay.price;
   if (price >= priceRange[0] && price <= priceRange[1]) {
-    return true
+    return true;
   }
-  return false
+  return false;
 }
 
 function getById(stayId) {
-  return storageService.get(STORAGE_KEY, stayId)
+  return storageService.get(STORAGE_KEY, stayId);
 }
 
 async function remove(stayId) {
   // throw new Error('Nope')
-  await storageService.remove(STORAGE_KEY, stayId)
+  await storageService.remove(STORAGE_KEY, stayId);
 }
 
 async function save(stay) {
-  var savedStay
+  var savedStay;
   if (stay._id) {
-    savedStay = await storageService.put(STORAGE_KEY, stay)
+    savedStay = await storageService.put(STORAGE_KEY, stay);
   } else {
     // Later, owner is set by the backend
-    stay.owner = userService.getLoggedinUser()
-    savedStay = await storageService.post(STORAGE_KEY, stay)
+    stay.owner = userService.getLoggedinUser();
+    savedStay = await storageService.post(STORAGE_KEY, stay);
   }
-  return savedStay
+  return savedStay;
 }
 
 async function addStayMsg(stayId, txt) {
   // Later, this is all done by the backend
-  const stay = await getById(stayId)
-  if (!stay.msgs) stay.msgs = []
+  const stay = await getById(stayId);
+  if (!stay.msgs) stay.msgs = [];
 
   const msg = {
     id: utilService.makeId(),
     by: userService.getLoggedinUser(),
     txt,
-  }
-  stay.msgs.push(msg)
-  await storageService.put(STORAGE_KEY, stay)
+  };
+  stay.msgs.push(msg);
+  await storageService.put(STORAGE_KEY, stay);
 
-  return msg
+  return msg;
 }
 
 function getEmptyStay() {
@@ -142,10 +141,10 @@ function getEmptyStay() {
     },
     reviews: [],
     likedByUsers: [],
-  }
+  };
 }
 function _createStays() {
-  let stays = utilService.loadFromStorage(STORAGE_KEY)
+  let stays = utilService.loadFromStorage(STORAGE_KEY);
   if (!stays || !stays.length) {
     stays = [
       {
@@ -1710,8 +1709,9 @@ function _createStays() {
             by: {
               _id: "u205",
               fullname: "Andreh4",
-              imgUrl: "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
-            }
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/316da211-0401-4d85-93a1-4a21bde0795c.jpg?im_w=240",
+            },
           },
           {
             id: "r102",
@@ -1720,7 +1720,8 @@ function _createStays() {
             by: {
               _id: "u104",
               fullname: "boris",
-              imgUrl: "https://a0.muscache.com/im/pictures/user/f793a59f-43cc-4a02-b8f0-eb5a542e68ff.jpg?im_w=240",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/f793a59f-43cc-4a02-b8f0-eb5a542e68ff.jpg?im_w=240",
             },
           },
           {
@@ -1730,7 +1731,8 @@ function _createStays() {
             by: {
               _id: "u106",
               fullname: "nave",
-              imgUrl: "https://a0.muscache.com/im/pictures/user/e6b632f2-03b5-4a26-a4eb-3b520d12a8e7.jpg?im_w=240",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/e6b632f2-03b5-4a26-a4eb-3b520d12a8e7.jpg?im_w=240",
             },
           },
           {
@@ -1740,7 +1742,8 @@ function _createStays() {
             by: {
               _id: "u103",
               fullname: "shoshi",
-              imgUrl: "https://a0.muscache.com/im/pictures/user/96db5a52-52db-42d4-a8bf-fe4d9cb7901d.jpg?im_w=240",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/96db5a52-52db-42d4-a8bf-fe4d9cb7901d.jpg?im_w=240",
             },
           },
           {
@@ -1750,14 +1753,15 @@ function _createStays() {
             by: {
               _id: "u104",
               fullname: "IMYOU",
-              imgUrl: "https://a0.muscache.com/im/pictures/user/7e30997b-191c-4f49-bd71-ea57e4fe8d91.jpg?im_w=240",
+              imgUrl:
+                "https://a0.muscache.com/im/pictures/user/7e30997b-191c-4f49-bd71-ea57e4fe8d91.jpg?im_w=240",
             },
-          }
+          },
         ],
-        likedByUsers: ["beach-lover", "sun-seeker"]
-      }
-    ]
+        likedByUsers: ["beach-lover", "sun-seeker"],
+      },
+    ];
 
-    utilService.saveToStorage(STORAGE_KEY, stays)
+    utilService.saveToStorage(STORAGE_KEY, stays);
   }
 }

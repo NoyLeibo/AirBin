@@ -15,6 +15,8 @@ export const userService = {
   update,
   changeScore,
   updateTripList,
+  removeTrip,
+  updateWishlist,
 };
 
 window.userService = userService;
@@ -73,13 +75,41 @@ async function update({ _id, score }) {
 
 async function updateTripList(newTrip) {
   const user = await getLoggedinUser();
+  newTrip._id = storageService.randomId();
   user.trips.push(newTrip);
   await storageService.put("user", user);
 
   // const user = await httpService.put(`user/${_id}`, {_id, score})
-
   // When admin updates other user's details, do not update loggedinUser
   saveLocalUser(user);
+  return user;
+}
+
+async function removeTrip(tripId) {
+  const user = await getLoggedinUser();
+  user.trips = user.trips.filter((trip) => tripId !== trip._id);
+  await storageService.put("user", user);
+  saveLocalUser(user);
+
+  return user;
+}
+
+async function updateWishlist(wishStay) {
+  const user = await getLoggedinUser();
+  const isAlreadyInWishlist = user.wishlist.some(
+    (currStay) => currStay._id === wishStay._id
+  );
+
+  if (isAlreadyInWishlist) {
+    user.wishlist = user.wishlist.filter(
+      (currStay) => currStay._id !== wishStay._id
+    );
+  } else {
+    user.wishlist.push(wishStay);
+  }
+  await storageService.put("user", user);
+  saveLocalUser(user);
+
   return user;
 }
 
@@ -102,6 +132,7 @@ async function signup(userCred) {
     userCred.imgUrl =
       "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png";
   userCred.trips = [];
+  userCred.wishlist = [];
 
   const user = await storageService.post("user", userCred);
   console.log(user);
@@ -130,6 +161,7 @@ function saveLocalUser(user) {
     username: user.username,
     password: user.password,
     trips: user.trips,
+    wishlist: user.wishlist,
   };
   sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user));
   return user;
