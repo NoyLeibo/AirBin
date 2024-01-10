@@ -202,7 +202,6 @@ export function AppHeader() {
             <img src={LOGO} alt="logo name" className="logo-header-txt" />
           </NavLink>
         </div>
-
         <div
           className={
             !isScrolledDown
