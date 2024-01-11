@@ -60,7 +60,7 @@ export function DashboardResarvation() {
     (storeState) => storeState.userModule.isLoading
   );
 
-  async function onActionClicked(reservation, status) {
+  async function onActionClicked(reservation, status, color) {
     console.log(reservation);
     reservation.status = status;
     const guest = await userService.updateReservationGuest(reservation);
@@ -72,7 +72,10 @@ export function DashboardResarvation() {
     loadUsers();
   }, []);
   return (
-    <TableContainer component={Paper}>
+    <TableContainer
+      component={Paper}
+      className="dashboard-resarvation-container"
+    >
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -117,16 +120,16 @@ export function DashboardResarvation() {
                 </Stack> */}
                 <button
                   onClick={() => {
-                    onActionClicked(reservation, "Accepted");
+                    onActionClicked(reservation, "Accepted", "#67c23a");
                   }}
-                  className="clean-btn cancel-btn"
+                  className="clean-btn accept-btn"
                 >
                   Accept
                 </button>
                 <button
-                  className="clean-btn cancel-btn"
+                  className="clean-btn reject-btn"
                   onClick={() => {
-                    onActionClicked(reservation, "Rejected");
+                    onActionClicked(reservation, "Rejected", "#f56c6c");
                   }}
                 >
                   Reject
