@@ -2,7 +2,7 @@ import { dbService } from "../../services/db.service.js";
 import { loggerService } from "../../services/logger.service.js";
 
 import mongodb from "mongodb";
-// const { ObjectId } = mongodb;
+const { ObjectId } = mongodb;
 
 export const userService = {
   query,
@@ -24,7 +24,7 @@ async function query(filterBy = {}) {
     users = users.map((user) => {
       delete user.password;
       user.isHappy = true;
-      // user.createdAt = ObjectId(user._id).getTimestamp();
+      user.createdAt = ObjectId(user._id).getTimestamp();
       // Returning fake fresh data
       // user.createdAt = Date.now() - (1000 * 60 * 60 * 24 * 3) // 3 days ago
       return user;
@@ -39,7 +39,7 @@ async function query(filterBy = {}) {
 async function getById(userId) {
   try {
     const collection = await dbService.getCollection("user");
-    const user = await collection.findOne({ _id: userId });
+    const user = await collection.findOne({ _id: ObjectId(userId) });
     delete user.password;
     return user;
   } catch (err) {
@@ -61,7 +61,7 @@ async function getByUsername(username) {
 async function remove(userId) {
   try {
     const collection = await dbService.getCollection("user");
-    await collection.deleteOne({ _id: userId });
+    await collection.deleteOne({ _id: ObjectId(userId) });
   } catch (err) {
     loggerService.error(`cannot remove user ${userId}`, err);
     throw err;
@@ -72,7 +72,7 @@ async function update(user) {
   try {
     // peek only updatable fields!
     const userToSave = {
-      _id: user._id,
+      _id: ObjectId(user._id),
       username: user.username,
       fullname: user.fullname,
     };
