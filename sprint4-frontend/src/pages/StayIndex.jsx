@@ -22,6 +22,7 @@ export function StayIndex() {
   const isLoading = useSelector(
     (storeState) => storeState.stayModule.isLoading
   );
+  userService.addDemoUser();
 
   useEffect(() => {
     document.documentElement.style.setProperty('--main-layout-width', '2360px')
@@ -105,7 +106,6 @@ export function StayIndex() {
       <StayFilter filterBy={filterBy} onSetFilter={onSetFilter} />
       <StayList stays={stays} />
       <ChatWindow />
-
     </main>
   );
 }

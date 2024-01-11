@@ -3,20 +3,11 @@
   
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 1fr;
-
+  grid-template-columns: minmax(20px, 1fr) minmax(auto, 1000px) minmax(20px, 1fr);
   list-style: none;
-  // padding-inline-start: 0px;
   justify-content: center;
   color: $clblack;
 
-  // @media (min-width: 1300px) {
-  //   grid-template-columns: 1fr 1000px 1fr;
-
-  //   > * {
-  //     grid-column: 2;
-  //   }
-  // }
 
   .title {
     font-size: 1.625rem;
@@ -71,9 +62,11 @@
 
   .stay-dets-rating {
     padding-bottom: 20px;
+
     .avgRate {
       margin-left: 6px;
     }
+
     .dotP {
       margin-right: 5px;
     }
@@ -84,7 +77,11 @@
     padding-block: 2rem;
     // display: grid;
     // grid-template-columns: 1fr 370px;
-    display: flex;
+    display: grid;
+    // grid-template-columns: 1fr auto;
+    gap: 30px;
+    grid-template-columns: 1fr 340px;
+
     justify-content: space-between;
     // .stay-dets-highlight {
     //   grid-row: 2;
@@ -102,7 +99,7 @@
     }
 
     .more-details {
-      width: 60%;
+      width: 96%;
     }
 
     .aircover {
@@ -159,6 +156,7 @@
     width: 56px;
     border: 1px solid #717171;
     border-radius: 50%;
+    object-fit: cover;
   }
 
   .apt-loc-map {
@@ -178,6 +176,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1em;
+    justify-items: end;
 
     .host-info-ext {
       .host-profile-ext {

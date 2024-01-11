@@ -9,7 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { loadUsers, removeUser } from "../store/user.actions";
+import { loadUsers, removeUser, updateUser } from "../store/user.actions";
 import { userService } from "../services/user.service";
 
 // export function DashboardResarvation() {
@@ -52,38 +52,30 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
-
 export function DashboardResarvation() {
   const user = useSelector((storeState) => storeState.userModule.user);
+
   const reservations = user.guestsReservations;
-  console.log(reservations);
   const isLoading = useSelector(
     (storeState) => storeState.userModule.isLoading
   );
-  const tripList = user.trips;
 
-  function onActionClicked(reservation, status) {
+  async function onActionClicked(reservation, status, color) {
+    console.log(reservation);
     reservation.status = status;
-    userService.updateReservationGuest(reservation);
-    userService.updateReservationHost(reservation);
+    const guest = await userService.updateReservationGuest(reservation);
+    const host = await userService.updateReservationHost(reservation);
+    await updateUser(host);
   }
 
   useEffect(() => {
     loadUsers();
   }, []);
   return (
-    <TableContainer component={Paper}>
+    <TableContainer
+      component={Paper}
+      className="dashboard-resarvation-container"
+    >
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -128,16 +120,16 @@ export function DashboardResarvation() {
                 </Stack> */}
                 <button
                   onClick={() => {
-                    onActionClicked(reservation, "Accept");
+                    onActionClicked(reservation, "Accepted", "#67c23a");
                   }}
-                  className="clean-btn cancel-btn"
+                  className="clean-btn accept-btn"
                 >
                   Accept
                 </button>
                 <button
-                  className="clean-btn cancel-btn"
+                  className="clean-btn reject-btn"
                   onClick={() => {
-                    onActionClicked(reservation, "Reject");
+                    onActionClicked(reservation, "Rejected", "#f56c6c");
                   }}
                 >
                   Reject

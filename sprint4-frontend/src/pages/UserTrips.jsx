@@ -53,6 +53,9 @@ export function UserTrips() {
             <TableCell className="table-cell" align="center">
               Total
             </TableCell>
+            <TableCell className="table-cell" align="center">
+              Status
+            </TableCell>
             <TableCell className="table-cell" align="right">
               Action
             </TableCell>
@@ -78,6 +81,7 @@ export function UserTrips() {
               <TableCell align="center">{trip.checkOut}</TableCell>
               <TableCell align="center">{trip.booked}</TableCell>
               <TableCell align="center">{trip.totalPrice}</TableCell>
+              <TableCell align="center">{trip.status}</TableCell>
               <TableCell align="right">
                 {/* <Tooltip title="Delete">
                   <IconButton>

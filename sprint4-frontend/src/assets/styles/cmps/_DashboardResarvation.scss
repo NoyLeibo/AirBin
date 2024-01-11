@@ -1,6 +1,28 @@
-// .dashboard-resarvation-container{
-
-//   .graphs-container{
-
-//   }
-// }
+.dashboard-resarvation-container {
+  .reject-btn {
+    padding: 7px 20px;
+    background-color: #fef0f0;
+    color: #f56c6c;
+    border: 1px solid #f56c6c;
+    border-radius: 4px;
+    &:hover {
+      transition: 0.3s ease-out;
+      background-color: #f56c6c;
+      color: #fef0f0;
+      border: 1px solid #fef0f0;
+    }
+  }
+  .accept-btn {
+    padding: 7px 20px;
+    background-color: #f0f9eb;
+    color: #67c23a;
+    border: 1px solid #67c23a;
+    border-radius: 4px;
+    &:hover {
+      transition: 0.3s linear;
+      color: #f0f9eb;
+      background-color: #67c23a;
+      border: 1px solid #f0f9eb;
+    }
+  }
+}
