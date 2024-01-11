@@ -21,8 +21,6 @@ export function RootCmp() {
             path={route.path}
           />
         ))}
-        {/* <Route path="user/:id" element={<StayDetails />} />
-        <Route path="user/:id" element={<PaymentPage />} /> */}
       </Routes>
       <AppFooter />
     </main>

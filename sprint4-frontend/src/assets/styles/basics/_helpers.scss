@@ -119,6 +119,9 @@
   /* Text alignment is inherited from the parent element */
   cursor: pointer;
 }
+.text-center{
+  text-align: center;
+}
 
 .divider {
   border-top: 1px solid #ccc;
