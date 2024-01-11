@@ -4,11 +4,27 @@ import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service"
 
 import { removeFromCart, checkout } from "../store/stay.actions"
 import { UserMsg } from "./UserMsg.jsx"
+import { Link, NavLink, useLocation } from "react-router-dom"
 
 export function AppFooter() {
-
+  const location = useLocation()
+  const currentPath = location.pathname
+  let editPath
+  if (currentPath.startsWith('/edit/')) {
+    console.log('Current path is a edit page');
+    editPath='/edit/'
+  }
+  if (currentPath.startsWith('/edit')) {
+    console.log('Current path is a edit page');
+    editPath='/edit'
+  }
   return (
-    <footer className="app-footer flex blacktxt">
+    <footer className={`app-footer  flex blacktxt
+    ${currentPath==="/"?" footer-fixed ":" "}
+    ${editPath==="/edit"?" footer-close ":" "}
+    ${editPath==="/edit/"?" footer-close ":" "}`}>
+
+
       <p>@ 2024 AirbMb, inc •
         <a className='pointer hovunderline'> Terms</a> •
         <a className='pointer hovunderline'> Sitemap</a> •
