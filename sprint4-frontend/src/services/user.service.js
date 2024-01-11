@@ -19,35 +19,16 @@ export const userService = {
   updateWishlist,
   updateReservationGuest,
   updateReservationHost,
+  addDemoUser,
 };
 
 window.userService = userService;
 
 async function getUsers() {
-  const users = await storageService.query("user");
-  if (users.length === 0) {
-    await userService.signup({
-      fullname: "Puki Norma",
-      username: "puki",
-      password: "123123",
-      balance: 10000,
-      isAdmin: false,
-    });
-    await userService.signup({
-      fullname: "Master noy",
-      username: "NoyLeibo",
-      password: "123123",
-      balance: 10000,
-      isAdmin: true,
-    });
-    await userService.signup({
-      fullname: "Muki G",
-      username: "muki",
-      password: "123123",
-      balance: 10000,
-      isAdmin: true,
-    });
-  }
+  const users = (await storageService.query("user")) || [];
+  // if (users.length === 0) {
+  //   users.push(await addDemoUser());
+  // }
   return users;
   // return httpService.get(`user`)
 }
@@ -76,17 +57,14 @@ async function update({ _id, score }) {
 }
 
 async function updateTripList(newTrip) {
-  const user = await getLoggedinUser();
   newTrip._id = storageService.randomId();
-  user.trips.push(newTrip);
+  const user = await getById(newTrip.guest._id);
   const host = await getById(newTrip.host._id);
-  if (!host) {
-    return;
-  }
+  console.log(user);
+  user.trips.push(newTrip);
   host.guestsReservations.push(newTrip);
-  await storageService.put("user", host);
   await storageService.put("user", user);
-
+  await storageService.put("user", host);
   // const user = await httpService.put(`user/${_id}`, {_id, score})
   // When admin updates other user's details, do not update loggedinUser
   saveLocalUser(user);
@@ -95,20 +73,23 @@ async function updateTripList(newTrip) {
 
 async function updateReservationHost(reservation) {
   const host = await getById(reservation.host._id);
+
   const updatedReservations = host.guestsReservations.map((currRes) =>
     currRes._id === reservation._id ? reservation : currRes
   );
   host.guestsReservations = updatedReservations;
   await storageService.put("user", host);
+  return host;
 }
 
 async function updateReservationGuest(reservation) {
-  const guest = await getById(reservation.host._id);
+  const guest = await getById(reservation.guest._id);
   const updatedTrips = guest.trips.map((currRes) =>
     currRes._id === reservation._id ? reservation : currRes
   );
   guest.trips = updatedTrips;
   await storageService.put("user", guest);
+  return guest;
 }
 
 async function removeTrip(tripId) {
@@ -151,6 +132,27 @@ function checkLogin(userCred, user) {
   return (
     userCred.username === user.username && userCred.password === user.password
   );
+}
+
+async function addDemoUser() {
+  const users = await getUsers();
+  let demo = users.find((currUser) => currUser._id === "demo123");
+  if (demo) {
+    return demo;
+  }
+  demo = {
+    username: "demoUser",
+    password: "123456",
+    fullname: "Demo User",
+    imgUrl:
+      "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
+    trips: [],
+    _id: "demo123",
+    wishlist: [],
+    myStays: [],
+    guestsReservations: [],
+  };
+  return await storageService.demoUser("user", demo);
 }
 
 async function signup(userCred) {

@@ -5,6 +5,7 @@ export const storageService = {
   put,
   remove,
   randomId,
+  demoUser,
 };
 
 async function query(entityType, delay = 900) {
@@ -34,8 +35,16 @@ function post(entityType, newEntity) {
   });
 }
 
+async function demoUser(entityType, user) {
+  const entities = await query(entityType);
+  entities.push(user);
+  _save(entityType, entities);
+  return user;
+}
+
 function put(entityType, updatedEntity) {
   updatedEntity = JSON.parse(JSON.stringify(updatedEntity));
+  // console.log(updatedEntity);
   return query(entityType).then((entities) => {
     const idx = entities.findIndex(
       (entity) => entity._id === updatedEntity._id
@@ -46,6 +55,7 @@ function put(entityType, updatedEntity) {
       );
     entities.splice(idx, 1, updatedEntity);
     _save(entityType, entities);
+
     return updatedEntity;
   });
 }
