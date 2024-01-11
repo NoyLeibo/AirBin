@@ -38,6 +38,8 @@ export function AppHeader() {
   const location = useLocation()
   const currentPath = location.pathname
   let detailPath=location.pathname
+  let tripPath=location.pathname
+  let hostPath=location.pathname
   if (currentPath.startsWith('/details/')) {
     console.log('Current path is a details page');
     detailPath='/details/'
@@ -293,7 +295,7 @@ export function AppHeader() {
             </button>
           </div>
         </nav>
-        {(currentPath=== "/" || detailPath==='/details/')&&<div className="flex left-header justify-center align-center">
+        {(currentPath=== "/" || currentPath=== "/messages" || currentPath=== "/backOffice" || currentPath=== "/wishlist" ||currentPath=== "/userTrips" || detailPath==='/details/' )&&<div className="flex left-header justify-center align-center">
           <LoggedInModal
             isLoginOpen={isLoginOpen}
             setIsLoginOpen={setIsLoginOpen}
