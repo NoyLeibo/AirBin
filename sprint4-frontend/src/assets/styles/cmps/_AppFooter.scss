@@ -1,7 +1,5 @@
 .app-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    
     width: 100%;
     max-height: max-content;
     // height: 47px;
@@ -14,11 +12,21 @@
     margin-inline: auto;
     box-shadow: 0 -0.5px #c5c5c5b0;
     z-index: 10;
-
+    &.footer-close{
+        display: none;
+    }
+    &.footer-fixed{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
     p {
         padding-left: 40px;
         padding-right: 40px;
         margin-bottom: 0px;
 
+    }
+    a{
+        margin-left: 0.5rem;
     }
 }

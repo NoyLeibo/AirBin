@@ -64,7 +64,10 @@ const initialState = {
         "https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg",
       OMG: "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg",
     },
-  ]
+  ],
+  types:[{
+   
+  }]
 }
 
 export function stayReducer(state = initialState, action) {
