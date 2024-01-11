@@ -68,72 +68,76 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
       <div className="login-modal-title flex align-center justify-center bold">
         {isRegistering ? "Signup" : "Login"}
       </div>
-      <div>Welcome to Airbmb</div>
-      <form
-        className="flex column"
-        onSubmit={isRegistering ? handleRegisterSubmit : handleLoginSubmit}
-      >
-        {isRegistering && (
+      <div className="modal-divider"></div>
+
+      <div className="flex column padding24">
+        <div>Welcome to Airbmb</div>
+        <form
+          className="flex column"
+          onSubmit={isRegistering ? handleRegisterSubmit : handleLoginSubmit}
+        >
+          {isRegistering && (
+            <div className="input-group">
+              <label htmlFor="Fullname">
+                <span className="red">*</span> Fullname
+              </label>
+              <input
+                type="text"
+                id="Fullname"
+                name="Fullname"
+                required
+                minLength="3"
+                maxLength="20"
+                value={fullname}
+                onChange={(e) => setFullname(e.target.value)}
+              />
+            </div>
+          )}
           <div className="input-group">
-            <label htmlFor="Fullname">
-              <span className="red">*</span> Fullname
+            <label htmlFor="username">
+              <span className="red">*</span> Username
             </label>
             <input
               type="text"
-              id="Fullname"
-              name="Fullname"
+              id="username"
+              name="username"
               required
               minLength="3"
               maxLength="20"
-              value={fullname}
-              onChange={(e) => setFullname(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-        )}
-        <div className="input-group">
-          <label htmlFor="username">
-            <span className="red">*</span> Username
-          </label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            required
-            minLength="3"
-            maxLength="20"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div className="input-group">
-          <label htmlFor="password">
-            <span className="red">*</span> Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            minLength="6"
-            maxLength="20"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button className="secondary-button" type="button" onClick={toggleForm}>
-          {isRegistering ? "Already a member? Login" : "Not a member? Register"}
-        </button>
-        <button type="submit">{isRegistering ? "Register" : "Log In"}</button>
-        {!isRegistering && (
-          <button
-            type="button"
-            className="demo-login-button"
-            onClick={demoLogin}
-          >
-            Demo Login
+          <div className="input-group">
+            <label htmlFor="password">
+              <span className="red">*</span> Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minLength="6"
+              maxLength="20"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button className="secondary-button" type="button" onClick={toggleForm}>
+            {isRegistering ? "Already a member? Login" : "Not a member? Register"}
           </button>
-        )}
-      </form>
+          <button className="secondary-button" type="submit">{isRegistering ? "Register" : "Log In"}</button>
+          {!isRegistering && (
+            <button
+              type="button"
+              className="demo-login-button"
+              onClick={demoLogin}
+            >
+              Demo Login
+            </button>
+          )}
+        </form>
+      </div>
     </div>
   );
 }
