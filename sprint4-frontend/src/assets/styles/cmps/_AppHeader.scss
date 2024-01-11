@@ -1,6 +1,8 @@
 .app-header {
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+
 
   background-color: white;
 
@@ -9,11 +11,14 @@
   height: 160px;
   // height: 84px; ברגע שגולל למטה
   z-index: 5;
-  transition: all 0.3s;
+  transition: position 0.3s;
+  
 
   //   breakpoint 950px!!!
   &.header-sticky{
-    position: sticky;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: fixed;
     top: 0;
   }
   &.header-inserted {

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect ,useState } from "react";
 import { useSelector } from "react-redux";
 import {
   loadStay,
@@ -17,6 +17,7 @@ import { StayFilter } from "../cmps/StayFilter.jsx";
 import { setFilterBy } from "../store/stay.actions.js";
 
 export function StayIndex() {
+  const [isScrolledDown, setIsScrolledDown] = useState(true)
   const stays = useSelector((storeState) => storeState.stayModule.stays);
   const filterBy = useSelector((storeState) => storeState.stayModule.filterBy);
   const isLoading = useSelector(
@@ -27,6 +28,20 @@ export function StayIndex() {
   useEffect(() => {
     document.documentElement.style.setProperty('--main-layout-width', '2360px')
     loadStay();
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsScrolledDown(true)
+      }
+      if (window.scrollY > 0) {
+        setIsScrolledDown(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [filterBy]);
 
   function onSetFilter(filterBy) {
@@ -102,7 +117,7 @@ export function StayIndex() {
   }
 
   return (
-    <main className=" main-stay-index">
+    <main className={`" main-stay-index " ${!isScrolledDown?'scroll-down':''}`}>
       <StayFilter filterBy={filterBy} onSetFilter={onSetFilter} />
       <StayList stays={stays} />
       <ChatWindow />

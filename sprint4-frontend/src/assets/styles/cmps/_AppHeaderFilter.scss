@@ -60,13 +60,13 @@
         }
 
         &:hover {
-            border-bottom: 1px solid #a9a6a6;
+            border-bottom: 2px solid #a9a6a6;
             color: #000;
             font-weight: bold;
         }
 
         &.selectedEmoji {
-            border-bottom: 1px solid #000;
+            border-bottom: 2px solid #000;
             color: #000;
             font-weight: bold;
         }
