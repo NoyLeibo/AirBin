@@ -1,10 +1,10 @@
 .app-footer {
     position: fixed;
-    bottom: -1px;
+    bottom: 0;
     left: 0;
     width: 100%;
-    max-height: 50px;
-    height: 47px;
+    max-height: max-content;
+    // height: 47px;
     background-color: #fff;
     font-size: .875rem;
     display: flex;
@@ -16,8 +16,8 @@
     z-index: 10;
 
     p {
-        padding-left: 78px;
-        padding-right: 78px;
+        padding-left: 40px;
+        padding-right: 40px;
         margin-bottom: 0px;
 
     }
