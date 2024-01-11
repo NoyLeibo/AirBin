@@ -10,13 +10,57 @@ export const stayService = {
   getById,
   add,
   update,
-  // addToyMsg,
-  // removeToyMsg,
+  addReviewMsg,
+  // removeReviewMsg,
 };
 
 async function query(filterBy = {}) {
   const stays = await dbService.getDbArr("stay");
+  // add filter funcs
   return stays;
+}
+
+async function filterStays(filterBy) {
+  if (filterBy.priceRange?.length > 0) {
+    stays = stays.filter((stay) => isInPriceRange(filterBy.priceRange, stay));
+  }
+  if (filterBy.bedrooms) {
+    stays = stays.filter((stay) => {
+      return stay.bedrooms >= filterBy.bedrooms;
+    });
+  }
+  if (filterBy.beds) {
+    stays = stays.filter((stay) => {
+      return stay.beds >= filterBy.beds;
+    });
+  }
+  if (filterBy.bathrooms) {
+    stays = stays.filter((stay) => {
+      console.log(stay.baths, " >= ", filterBy.bathrooms);
+      return stay.baths >= filterBy.bathrooms;
+    });
+  }
+  if (filterBy.placeType.length) {
+    stays = filterStaysByTags(filterBy.placeType, stays);
+  }
+}
+
+function filterStaysByTags(placeType, stays) {
+  const updatedStayArray = stays.filter((stay) => {
+    if (!Array.isArray(stay.amenities)) {
+      return false;
+    }
+    return stay.amenities.some((amenity) => placeType.includes(amenity));
+  });
+  return updatedStayArray;
+}
+
+function isInPriceRange(priceRange, stay) {
+  const price = stay.price;
+  if (price >= priceRange[0] && price <= priceRange[1]) {
+    return true;
+  }
+  return false;
 }
 
 async function remove(stayId) {
@@ -42,6 +86,7 @@ async function getById(stayId) {
 
 async function add(stay) {
   try {
+    //later add all the needed fields of stays
     const collection = await dbService.getCollection("stay");
     await collection.insertOne(stay);
     return stay;
@@ -70,6 +115,21 @@ async function update(stay) {
     return stay;
   } catch (err) {
     loggerService.error(`cannot update stay ${stay._id}`, err);
+    throw err;
+  }
+}
+
+async function addReviewMsg(stayId, review) {
+  try {
+    review.id = utilService.makeId();
+    const collection = await dbService.getCollection("stay");
+    await collection.updateOne(
+      { _id: new ObjectId(stayId) },
+      { $push: { reviews: review } }
+    );
+    return review;
+  } catch (err) {
+    loggerService.error(`cannot add stay msg ${stayId}`, err);
     throw err;
   }
 }
