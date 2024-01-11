@@ -29,6 +29,7 @@ export function PaymentPage() {
   const totalPrice = price + serviceFee;
 
   useEffect(() => {
+    document.documentElement.style.setProperty('--main-layout-width', '1280px')
     loadStay();
   }, []);
 

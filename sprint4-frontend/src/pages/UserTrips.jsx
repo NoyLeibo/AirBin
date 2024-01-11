@@ -1,4 +1,5 @@
-import * as React from "react";
+// import * as React from "react";
+import React, { useEffect} from "react"
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -16,6 +17,10 @@ import { updateUser } from "../store/user.actions";
 export function UserTrips() {
   const user = useSelector((storeState) => storeState.userModule.user);
   const tripList = user.trips;
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--main-layout-width', '1280px')
+  }, [])
 
   async function onRemoveBtn(stayId) {
     const user = await userService.removeTrip(stayId);

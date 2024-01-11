@@ -1,8 +1,9 @@
 .edit-main-container {
-  justify-self: center;
+  // justify-self: center;
   display: grid;
+  justify-content: center;
   flex-direction: column;
-  width: 700px;
+  width: 100%;
   color: $clblack;
   .new-stay-container {
     &.step-1 {
@@ -20,6 +21,7 @@
       }
     }
     &.step-2 {
+      max-width: 630px;
       .step-2-title {
         margin-top: 0.25em;
         margin-bottom: 0.5em;
@@ -38,6 +40,7 @@
           color: $clblack;
           border-radius: 0.5rem;
           transition: all 0.5s;
+          margin: 0;
           .type-title {
             margin-top: 0.25em;
             font-size: 18px;

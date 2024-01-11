@@ -24,6 +24,7 @@ export function StayIndex() {
   );
 
   useEffect(() => {
+    document.documentElement.style.setProperty('--main-layout-width', '2360px')
     loadStay();
   }, [filterBy]);
 
