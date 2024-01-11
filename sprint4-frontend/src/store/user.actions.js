@@ -68,6 +68,9 @@ export async function signup(credentials) {
     throw err;
   }
 }
+function refreshPage() {
+  window.location.reload(false);
+}
 
 export async function logout() {
   try {
@@ -77,6 +80,7 @@ export async function logout() {
       user: null,
     });
     socketService.logout();
+    refreshPage()
   } catch (err) {
     console.log("Cannot logout", err);
     throw err;

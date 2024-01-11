@@ -16,17 +16,22 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
   const demoLogin = async () => {
     const users = await userService.getUsers();
 
-    login(demoUser);
+    // login(demoUser);
     setUsername(demoUser.username);
     setPassword(demoUser.password);
   };
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
     try {
       await logout();
       await login({ username, password });
-      navigate("/");
+      // navigate("/");
+      refreshPage()
       setIsLoginOpen(false);
     } catch (err) {
       console.log("err: " + err);
@@ -47,7 +52,8 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
         balance: 10000,
         isAdmin: false,
       });
-      navigate("/");
+      // navigate("/")
+      refreshPage()
     } catch (err) {
       console.log("Registration failed:", err);
     }
