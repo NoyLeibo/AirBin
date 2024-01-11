@@ -3,19 +3,22 @@ import { useNavigate } from "react-router-dom";
 import { userService } from "../services/user.service";
 import { login, logout, signup } from "../store/user.actions";
 
-export function LoginModal({ isLoginOpen, setIsLoginOpen }) { // need to get close function
+export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
+  // need to get close function
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [fullname, setFullname] = useState("");
   const [isRegistering, setIsRegistering] = useState(false);
   const navigate = useNavigate();
 
-  const demoUser = { username: "NoyLeibo", password: "123456" };
+  const demoUser = { username: "demoUser", password: "123456" };
 
   const demoLogin = async () => {
-    await signup(demoUser);
-    setUsername(demoUser.username)
-    setPassword(demoUser.password)
+    const users = await userService.getUsers();
+
+    login(demoUser);
+    setUsername(demoUser.username);
+    setPassword(demoUser.password);
   };
 
   const handleLoginSubmit = async (event) => {
@@ -24,7 +27,7 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) { // need to get clo
       await logout();
       await login({ username, password });
       navigate("/");
-      setIsLoginOpen(false)
+      setIsLoginOpen(false);
     } catch (err) {
       console.log("err: " + err);
     } finally {
