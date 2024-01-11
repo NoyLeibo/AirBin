@@ -31,7 +31,6 @@ export async function signup(req, res) {
 
     const user = await authService.login(username, password);
     const loginToken = authService.getLoginToken(user);
-
     res.cookie("loginToken", loginToken);
     res.json(user);
   } catch (err) {
