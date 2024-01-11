@@ -101,7 +101,7 @@
     }
 
     .more-details {
-      width: 60%;
+      width: 96%;
     }
 
     .aircover {
@@ -178,6 +178,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1em;
+    justify-items: end;
 
     .host-info-ext {
       .host-profile-ext {
