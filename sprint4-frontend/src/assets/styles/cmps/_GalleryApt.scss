@@ -16,9 +16,10 @@
     height: 100%;
     object-fit: cover;
 
-    &:hover {
-      filter: brightness(0.8);
-    }
+  }
+
+  img:hover {
+    filter: brightness(0.8);
   }
 
   .img1 {
