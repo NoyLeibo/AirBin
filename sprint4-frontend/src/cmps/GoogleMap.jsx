@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 import GoogleMapReact from 'google-map-react'
+import { BsHouseFill } from "react-icons/bs";
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>
+const AnyReactComponent = ({ text }) => <div className="flex column align-center"><BsHouseFill size="22" className="map-house-icon" /><div className="flex column text-center  fs12">{text}</div></div>
 const API_KEY='AIzaSyB0dUlJsQSAuB636Yc1NGBUaJbwvYjfS1s'
 export default function SimpleMap({lat=32.109333,lng=34.855499,marker}){
   const [mapCenter, setMapCenter] = useState({ lat: lat, lng: lng })
@@ -26,7 +27,7 @@ export default function SimpleMap({lat=32.109333,lng=34.855499,marker}){
         <AnyReactComponent
           lat={mapCenter.lat}
           lng={mapCenter.lng}
-          text={"🚩" + marker}
+          text={marker}
         />
       </GoogleMapReact>
     </div>
