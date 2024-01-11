@@ -2,9 +2,9 @@
   min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: minmax(40px, 1fr) minmax(auto, 1200px) minmax(40px, 1fr);
-
-  >* {
+  grid-template-columns: minmax(40px, 1fr) minmax(auto,  var(--main-layout-width)) minmax(40px, 1fr);
+  // grid-template-columns: 24px 1fr 24px;
+  > * {
     grid-column: 2;
 
     &.full {
@@ -12,17 +12,18 @@
     }
   }
 
-  @include for-narrow-layout {
-    grid-template-columns: 40px minmax(auto, 1fr) 40px;
-  }
 
-  @include for-normal-layout {
-    grid-template-columns: 40px minmax(auto, 1fr) 40px;
-  }
+  // @include for-narrow-layout {
+  //   grid-template-columns: 40px minmax(auto, 1fr) 40px;
+  // }
 
-  @include for-wide-layout {
-    grid-template-columns: 80px minmax(auto, 1fr) 80px;
-  }
+  // @include for-normal-layout {
+  //   grid-template-columns: 40px minmax(auto, 1fr) 40px;
+  // }
+
+  // @include for-wide-layout {
+  //   grid-template-columns: 80px minmax(auto, 1fr) 80px;
+  // }
 
 
   //   &.main-stay-index {

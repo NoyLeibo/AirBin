@@ -8,8 +8,8 @@ export function BackOffice() {
   const isLoading = useSelector(
     (storeState) => storeState.userModule.isLoading
   );
-
   useEffect(() => {
+    document.documentElement.style.setProperty('--main-layout-width', '1280px')
     loadUsers();
   }, []);
 

@@ -1,15 +1,17 @@
+
 .stay-details-container {
+  // grid-column: 2;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: minmax(20px, 1fr) minmax(auto, 1000px) minmax(20px, 1fr);
+  // grid-template-columns: minmax(20px, 1fr) minmax(auto, 1000px) minmax(20px, 1fr);
+  grid-template-columns: 1fr;
   list-style: none;
   justify-content: center;
   color: $clblack;
-
-  >* {
+  >*{
     grid-column: 2;
-
   }
+ 
 
   .title {
     font-size: 1.625rem;

@@ -19,8 +19,9 @@ export function StayDetails() {
 
   const { stayId } = useParams();
   const navigate = useNavigate();
-
+  
   useEffect(() => {
+    document.documentElement.style.setProperty('--main-layout-width', '1000px')
     loadStay();
   }, []);
 

@@ -42,6 +42,7 @@ export function StayEdit() {
   console.log(stayToEdit , cords ,valueGuests ,'startttt')
 
   useEffect(() => {
+    document.documentElement.style.setProperty('--main-layout-width', '1500px')
     if (!stayId) return
     stayService.getById(stayId).then((stay) => {
       setStayToEdit(stay)
