@@ -5,6 +5,7 @@ import { loggerService } from "./logger.service.js";
 
 export const dbService = {
   getCollection,
+  getDbArr,
 };
 
 var dbConn = null;
@@ -18,6 +19,10 @@ async function getCollection(collectionName) {
     loggerService.error("Failed to get Mongo collection", err);
     throw err;
   }
+}
+async function getDbArr(collectionName) {
+  const collection = await getCollection(collectionName);
+  return await collection.find({}).toArray();
 }
 
 async function _connect() {
