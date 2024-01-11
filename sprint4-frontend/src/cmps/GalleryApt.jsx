@@ -24,7 +24,7 @@ export function GalleryApt({ imgUrls }) {
       ))}
       {imgUrls.length > 5 && (
         <div className="view-all-container">
-          <button className="all-details-imgs" onClick={openModal}>View All</button>
+          <button className="all-details-imgs" onClick={openModal}>Show all photos</button>
         </div>
       )}
 
