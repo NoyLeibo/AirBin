@@ -71,3 +71,9 @@
 11.1.2024, 19:59:07 - DEBUG - auth.service - login with username: N12 
 11.1.2024, 20:58:58 - INFO - Req was made | / 
 11.1.2024, 20:58:58 - DEBUG - Getting Stays | {"txt":"","price":0,"inStock":"All","sortBy":"name","amentities":[]} 
+11.1.2024, 22:33:53 - DEBUG - auth.service - login with username: N12 
+11.1.2024, 22:33:53 - INFO - User login:  | {"_id":"65a02c6b8afeb028433b3b58","username":"N12","fullname":"Nadav Izhak"} 
+11.1.2024, 22:35:16 - INFO - Req was made | / 
+11.1.2024, 22:35:16 - DEBUG - Getting Stays | {"txt":"","price":0,"inStock":"All","sortBy":"name","amentities":[]} 
+11.1.2024, 22:56:30 - INFO - Req was made | / 
+11.1.2024, 22:56:30 - DEBUG - Getting Stays | {"txt":"","price":0,"inStock":"All","sortBy":"name","amentities":[]} 
