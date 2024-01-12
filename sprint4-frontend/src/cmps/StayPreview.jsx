@@ -22,11 +22,11 @@ export function StayPreview({ stay, isLiked }) {
             <i className="fa-solid fa-star fs12 "></i>
             <span className="fw300 stay-card-rating">
               {" "}
-              {stay.reviews[0].rate}.00
+              {stay.reviews[0].rate}.0
             </span>
           </div>
         </div>
-        <div className="stay-card-distance fs16">3,231 kilometer away</div>
+        <div className="stay-card-distance fs16">{stay.type}</div>
         <div className="stay-card-dates fs16">Apr 15-20</div>
         <div className="stay-card-price-container fs16">
           <span className="stay-card-price fw600">
