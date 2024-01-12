@@ -6,13 +6,13 @@ export function StayList({ stays }) {
 
   function isLiked(stay) {
     return (
-      user?.wishlist.some((currWish) => currWish._id === stay._id) || false
+      user?.wishlist?.some((currWish) => currWish._id === stay._id) || false
     );
   }
 
   return (
     <ul className="stay-list">
-      {stays.map((stay) => (
+      {stays?.map((stay) => (
         <div key={stay._id}>
           <StayPreview stay={stay} isLiked={isLiked(stay)} />
         </div>

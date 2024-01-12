@@ -89,7 +89,7 @@ export function DashboardResarvation() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {reservations.map((reservation, index) => (
+          {reservations?.map((reservation, index) => (
             <StyledTableRow key={reservation._id}>
               <StyledTableCell component="th" scope="row">
                 {reservation.guest.fullname}
