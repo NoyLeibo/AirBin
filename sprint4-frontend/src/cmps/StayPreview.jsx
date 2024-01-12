@@ -8,6 +8,8 @@ import Carousel from "./Carousel";
 // import { Tooltip, Toast, Popover } from 'bootstrap';
 
 export function StayPreview({ stay, isLiked }) {
+
+  // console.log(stay);
   return (
     <li className="stay-preview" key={stay._id}>
       <div className="stay-img-card">
