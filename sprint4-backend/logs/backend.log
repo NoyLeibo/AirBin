@@ -121,3 +121,61 @@
 12.1.2024, 13:51:49 - DEBUG - auth.service - login with username: iris 
 12.1.2024, 14:11:29 - DEBUG - auth.service - login with username: iris 
 12.1.2024, 14:11:29 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 14:19:54 - DEBUG - auth.service - signup with username: , fullname:  
+12.1.2024, 14:19:54 - ERROR - Failed to signup Error: Missing details 
+12.1.2024, 14:19:56 - DEBUG - auth.service - signup with username: , fullname:  
+12.1.2024, 14:19:56 - ERROR - Failed to signup Error: Missing details 
+12.1.2024, 14:20:26 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 14:20:26 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 15:42:38 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 15:42:38 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 15:43:24 - DEBUG - auth.service - login with username: puki1 
+12.1.2024, 15:43:24 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:50:50 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 15:50:50 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:52:38 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 15:52:38 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:52:50 - DEBUG - auth.service - login with username: hjuhj 
+12.1.2024, 15:52:50 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:53:19 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 15:53:19 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:54:05 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 15:54:05 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:54:28 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 15:54:28 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:58:12 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 15:58:12 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:06:35 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 16:06:35 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:07:26 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 16:07:26 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:08:36 - DEBUG - auth.service - login with username: hfdjcbjdf 
+12.1.2024, 16:08:36 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:08:55 - DEBUG - auth.service - login with username: gbfgfgfgg 
+12.1.2024, 16:08:55 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:09:16 - DEBUG - auth.service - login with username: hghhgfgh 
+12.1.2024, 16:09:16 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:09:45 - DEBUG - auth.service - login with username: fdghfgfg 
+12.1.2024, 16:09:45 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:11:54 - DEBUG - auth.service - login with username: fhgfhgfhghg 
+12.1.2024, 16:11:54 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:12:16 - DEBUG - auth.service - login with username: gyujgyjghjg 
+12.1.2024, 16:12:16 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:14:02 - DEBUG - auth.service - login with username: asdsdsdsd 
+12.1.2024, 16:14:02 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:15:39 - DEBUG - auth.service - login with username: sdfdsfsdfsdf 
+12.1.2024, 16:15:39 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:16:15 - DEBUG - auth.service - login with username: sdfdsfsdfsd 
+12.1.2024, 16:16:15 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:28:35 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 16:28:35 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:28:39 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 16:28:39 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:39:31 - DEBUG - auth.service - login with username: jhjh 
+12.1.2024, 16:39:31 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:41:55 - DEBUG - auth.service - login with username: fgvbfg 
+12.1.2024, 16:41:55 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:49:46 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 16:49:46 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 16:59:10 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 16:59:10 - ERROR - Failed to Login Error: Invalid username or password 

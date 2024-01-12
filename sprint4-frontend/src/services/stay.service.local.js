@@ -19,6 +19,7 @@ window.cs = stayService;
 
 async function query(filterBy = getDefaultFilter()) {
   var stays = await storageService.query(STORAGE_KEY);
+
   // if (filterBy.txt) {
   //   const regex = new RegExp(filterBy.txt, "i");
   //   stays = stays.filter(

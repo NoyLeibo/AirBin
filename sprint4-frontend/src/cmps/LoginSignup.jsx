@@ -30,25 +30,38 @@ export function LoginSignup(props) {
     setCredentials({ ...credentials, [field]: value });
   }
 
-  function onLogin(ev) {
+  async function onLogin(ev) {
     ev.preventDefault();
-    if (!username || !password) return;
-    login({ username, password });
-    console.log(password);
-    // props.onLogin(credentials);
-    // clearState();
+    try {
+      await login({ username, password });
+    } catch (err) {
+      console.log("err: " + err);
+    } finally {
+      if (!userService.getLoggedinUser()) {
+        alert("Wrong username or password");
+      }
+    }
   }
   async function demoLogin(ev) {
     ev.preventDefault();
     await signup({ username: "Guest", password: "123123" });
   }
 
-  function onSignup(ev = null) {
+  async function onSignup(ev = null) {
     if (ev) ev.preventDefault();
-    if (!credentials.username || !credentials.password || !credentials.fullname)
-      return;
-    props.onSignup(credentials);
-    clearState();
+    console.log("register");
+    try {
+      await userService.signup({
+        fullname,
+        username,
+        password,
+        // imgUrl,
+      });
+    } catch (err) {
+      console.log("Registration failed:", err);
+    } finally {
+      clearState();
+    }
   }
 
   if (user) {
@@ -98,7 +111,9 @@ export function LoginSignup(props) {
             <button className="divider" onClick={demoLogin}>
               Demo login
             </button>
-            <button className="divider">Sign up</button>
+            <button className="divider" onClick={onSignup}>
+              Sign up
+            </button>
           </section>
         </div>
       </div>

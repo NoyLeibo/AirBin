@@ -34,11 +34,12 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
       setIsLoginOpen(false);
     } catch (err) {
       console.log("err: " + err);
-    } finally {
-      if (!userService.getLoggedinUser()) {
-        alert("Wrong username or password");
-      }
     }
+    // finally {
+    //   if (!userService.getLoggedinUser()) {
+    //     alert("Wrong username or password");
+    //   }
+    // }
   };
 
   const handleRegisterSubmit = async (event) => {
