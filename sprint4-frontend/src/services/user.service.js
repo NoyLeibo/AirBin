@@ -34,6 +34,10 @@ async function getUsers() {
   // return httpService.get(`user`)
 }
 
+// async function getUsers() {
+//   return httpService.get(`user`) || [];
+// }
+
 async function getById(userId) {
   const user = await storageService.get("user", userId);
   // const user = await httpService.get(`user/${userId}`)

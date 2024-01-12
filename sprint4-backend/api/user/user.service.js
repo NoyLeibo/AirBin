@@ -11,6 +11,7 @@ export const userService = {
   remove,
   update,
   add,
+  demoUser,
 };
 
 async function query(filterBy = {}) {
@@ -23,7 +24,6 @@ async function query(filterBy = {}) {
       .toArray();
     users = users.map((user) => {
       delete user.password;
-      user.isHappy = true;
       user.createdAt = ObjectId(user._id).getTimestamp();
       // Returning fake fresh data
       // user.createdAt = Date.now() - (1000 * 60 * 60 * 24 * 3) // 3 days ago
@@ -108,6 +108,33 @@ async function add(user) {
     const collection = await dbService.getCollection("user");
     await collection.insertOne(userToAdd);
     return userToAdd;
+  } catch (err) {
+    loggerService.error("cannot insert user", err);
+    throw err;
+  }
+}
+
+async function demoUser() {
+  try {
+    const username = "demo_user";
+    const collection = await dbService.getCollection("user");
+    let user = await collection.findOne({ username });
+    if (!user) {
+      user = {
+        username: "demo_user",
+        password: "123456",
+        fullname: "Demo User",
+        imgUrl:
+          "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
+        trips: [],
+        wishlist: [],
+        myStays: [],
+        guestsReservations: [],
+      };
+      const collection = await dbService.getCollection("user");
+      await collection.insertOne(user);
+    }
+    return user;
   } catch (err) {
     loggerService.error("cannot insert user", err);
     throw err;
