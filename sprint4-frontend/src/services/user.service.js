@@ -129,17 +129,35 @@ async function updateWishlist(wishStay) {
 //   return Promise.reject("Invalid user");
 // }
 
+// function checkLogin(userCred, user) {
+//   return (
+//     userCred.username === user.username && userCred.password === user.password
+//   );
+// }
+
 async function login(userCred) {
-  console.log(1);
   const user = await httpService.post("auth/login", userCred);
   if (user) return saveLocalUser(user);
   return Promise.reject("Invalid user");
 }
 
-function checkLogin(userCred, user) {
-  return (
-    userCred.username === user.username && userCred.password === user.password
-  );
+// async function signup(userCred) {
+//   if (!userCred.imgUrl)
+//     userCred.imgUrl =
+//       "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png";
+//   userCred.trips = [];
+//   userCred.wishlist = [];
+//   userCred.myStays = [];
+//   userCred.guestsReservations = [];
+
+//   const user = await storageService.post("user", userCred);
+//   // const user = await httpService.post('auth/signup', userCred)
+//   return saveLocalUser(user);
+// }
+
+async function signup(userCred) {
+  const user = await httpService.post("auth/signup", userCred);
+  return saveLocalUser(user);
 }
 
 async function addDemoUser() {
@@ -163,23 +181,9 @@ async function addDemoUser() {
   return await storageService.demoUser("user", demo);
 }
 
-async function signup(userCred) {
-  if (!userCred.imgUrl)
-    userCred.imgUrl =
-      "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png";
-  userCred.trips = [];
-  userCred.wishlist = [];
-  userCred.myStays = [];
-  userCred.guestsReservations = [];
-
-  const user = await storageService.post("user", userCred);
-  // const user = await httpService.post('auth/signup', userCred)
-  return saveLocalUser(user);
-}
-
 async function logout() {
   sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER);
-  // return await httpService.post('auth/logout')
+  return await httpService.post("auth/logout");
 }
 
 async function changeScore(by) {

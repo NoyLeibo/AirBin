@@ -90,12 +90,16 @@ async function add(user) {
     // Validate that there are no such user:
     const existUser = await getByUsername(user.username);
     if (existUser) throw new Error("Username taken");
+    if (!user.imgUrl)
+      user.imgUrl =
+        "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png";
 
     // peek only updatable fields!
     const userToAdd = {
       username: user.username,
       password: user.password,
       fullname: user.fullname,
+      imgUrl: user.imgUrl,
       trips: [],
       wishlist: [],
       myStays: [],

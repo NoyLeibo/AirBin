@@ -27,11 +27,9 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
 
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
-
     try {
       // await logout();
       await login({ username, password });
-      // navigate("/");
       refreshPage();
       setIsLoginOpen(false);
     } catch (err) {
@@ -47,14 +45,12 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
     event.preventDefault();
     console.log("register");
     try {
-      const user = await userService.signup({
-        fullname: username,
+      await userService.signup({
+        fullname,
         username,
         password,
-        balance: 10000,
-        isAdmin: false,
+        // imgUrl,
       });
-      // navigate("/")
       refreshPage();
     } catch (err) {
       console.log("Registration failed:", err);
@@ -139,7 +135,7 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
             <button
               type="button"
               className="demo-login-button"
-              onClick={handleLoginSubmit}
+              onClick={handleRegisterSubmit}
             >
               Register
             </button>

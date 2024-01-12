@@ -108,3 +108,16 @@
 12.1.2024, 13:28:02 - DEBUG - auth.service - login with username: muki 
 12.1.2024, 13:29:05 - DEBUG - auth.service - login with username: muki 
 12.1.2024, 13:29:05 - INFO - User login:  | {"_id":"65a122427279781c557ec951","username":"muki","fullname":"muki ja","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 13:46:37 - DEBUG - auth.service - signup with username: sinpol, fullname: Simba Polo 
+12.1.2024, 13:46:37 - DEBUG - auth.route - new account created: {"username":"sinpol","password":"$2b$10$Fs4niz//f0qti/x0LNYnbOz.g0f3O/DHcGbCp9Qgr8YQcXqCL9Ipe","fullname":"Simba Polo","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[],"_id":"65a1269d1cd27b4cddf5cc5c"} 
+12.1.2024, 13:46:37 - DEBUG - auth.service - login with username: sinpol 
+12.1.2024, 13:49:13 - DEBUG - auth.service - login with username: nadi 
+12.1.2024, 13:49:13 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 13:50:22 - DEBUG - auth.service - signup with username: nadi, fullname: Nadav b 
+12.1.2024, 13:50:22 - DEBUG - auth.route - new account created: {"username":"nadi","password":"$2b$10$1XR9veK7iJ6lFwgdMb6KzedIozpK99ij2qmXTn0q9BmSwTl/tST1m","fullname":"Nadav b","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[],"_id":"65a1277e1cd27b4cddf5cc5d"} 
+12.1.2024, 13:50:22 - DEBUG - auth.service - login with username: nadi 
+12.1.2024, 13:51:49 - DEBUG - auth.service - signup with username: iris, fullname: Iris y 
+12.1.2024, 13:51:49 - DEBUG - auth.route - new account created: {"username":"iris","password":"$2b$10$B5tYv3xYXogQZol1esKR8OO.YxZHWVSIWk77eF/l16VdiWerRWjkO","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[],"_id":"65a127d51cd27b4cddf5cc5e"} 
+12.1.2024, 13:51:49 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 14:11:29 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 14:11:29 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 

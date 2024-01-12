@@ -13,7 +13,6 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
   const user = useSelector((storeState) => storeState.userModule.user);
 
   const openLoginModal = () => {
-    console.log("OPEN!!!");
     setIsLoginOpen(true);
     // setIsMenuOpen(false);
   };
@@ -40,6 +39,18 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMenuOpen, isLoginOpen]);
+
+  async function handleLogout() {
+    try {
+      await logout();
+      refreshPage();
+      setIsLoginOpen(false);
+    } catch (err) {
+      console.log("err: " + err);
+    } finally {
+      setIsMenuOpen(false);
+    }
+  }
 
   return (
     <section>
@@ -175,13 +186,7 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
                     <NavLink to="/edit" onClick={() => setIsMenuOpen(false)}>
                       Add another stay
                     </NavLink>
-                    <NavLink
-                      to="/"
-                      onClick={() => {
-                        logout();
-                        setIsMenuOpen(false);
-                      }}
-                    >
+                    <NavLink to="/" onClick={handleLogout}>
                       Log out
                     </NavLink>
                   </div>
