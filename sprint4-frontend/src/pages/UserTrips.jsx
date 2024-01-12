@@ -1,5 +1,5 @@
 // import * as React from "react";
-import React, { useEffect} from "react"
+import React, { useEffect } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -19,8 +19,8 @@ export function UserTrips() {
   const tripList = user.trips;
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--main-layout-width', '1280px')
-  }, [])
+    document.documentElement.style.setProperty("--main-layout-width", "1280px");
+  }, []);
 
   async function onRemoveBtn(stayId) {
     const user = await userService.removeTrip(stayId);
@@ -62,7 +62,7 @@ export function UserTrips() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {tripList.map((trip, index) => (
+          {tripList?.map((trip, index) => (
             <TableRow
               key={index}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

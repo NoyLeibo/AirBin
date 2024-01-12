@@ -77,3 +77,34 @@
 11.1.2024, 22:35:16 - DEBUG - Getting Stays | {"txt":"","price":0,"inStock":"All","sortBy":"name","amentities":[]} 
 11.1.2024, 22:56:30 - INFO - Req was made | / 
 11.1.2024, 22:56:30 - DEBUG - Getting Stays | {"txt":"","price":0,"inStock":"All","sortBy":"name","amentities":[]} 
+12.1.2024, 12:49:46 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 12:49:46 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 12:51:52 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 12:51:52 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 12:55:15 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 12:55:15 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 12:56:19 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 12:56:19 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 12:58:37 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 12:58:37 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 13:00:25 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 13:00:25 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 13:00:42 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 13:00:42 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 13:01:32 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 13:01:32 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 13:01:56 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 13:01:56 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 13:05:33 - DEBUG - auth.service - login with username: puki 
+12.1.2024, 13:05:33 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 13:06:30 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 13:06:30 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 13:07:51 - DEBUG - auth.service - login with username: Nadrot 
+12.1.2024, 13:07:51 - INFO - User login:  | {"_id":"65a0293cd8c52d178982f197","username":"Nadrot","fullname":"Nadav Izhak"} 
+12.1.2024, 13:14:47 - DEBUG - auth.service - login with username: Nadrot 
+12.1.2024, 13:14:47 - INFO - User login:  | {"_id":"65a0293cd8c52d178982f197","username":"Nadrot","fullname":"Nadav Izhak"} 
+12.1.2024, 13:28:02 - DEBUG - auth.service - signup with username: muki, fullname: muki ja 
+12.1.2024, 13:28:02 - DEBUG - auth.route - new account created: {"username":"muki","password":"$2b$10$fJZXzAvn9iENV/kFMymul.vhQX4lMIxoH/7EMO.OnEzEWS1mr4KKO","fullname":"muki ja","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[],"_id":"65a122427279781c557ec951"} 
+12.1.2024, 13:28:02 - DEBUG - auth.service - login with username: muki 
+12.1.2024, 13:29:05 - DEBUG - auth.service - login with username: muki 
+12.1.2024, 13:29:05 - INFO - User login:  | {"_id":"65a122427279781c557ec951","username":"muki","fullname":"muki ja","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 

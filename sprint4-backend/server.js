@@ -6,18 +6,16 @@ import { userRoutes } from "./api/user/user.routes.js";
 import { stayRoutes } from "./api/stay/stay.routes.js";
 
 const app = express();
-const port = 3031;
+const port = 3030;
 
 const corsOptions = {
   origin: [
-    // "http://127.0.0.1:8080",
     // "http://localhost:8080",
     // "http://127.0.0.1:5175",
     // "http://localhost:5175",
-    // "http://127.0.0.1:5173",
-    // "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:5173",
     // "http://127.0.0.1:5174",
-    // "http://localhost:5174",
   ],
   credentials: true,
 };

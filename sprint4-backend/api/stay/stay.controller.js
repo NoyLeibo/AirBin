@@ -4,10 +4,11 @@ import { stayService } from "./stay.service.js";
 export async function getStay(req, res) {
   try {
     const filterBy = {
-      txt: req.query.txt || "",
-      price: +req.query.price || 0,
-      inStock: req.query.inStock || "All",
-      sortBy: req.query.sortBy || "name",
+      // placeType: req.query.placeType || "",
+      priceRange: +req.query.priceRange || 0,
+      bedrooms: req.query.bedrooms || 1,
+      beds: req.query.beds || 1,
+      bathrooms: req.query.bathrooms || 1,
       amentities: req.query.amentities || [],
     };
 

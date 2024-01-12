@@ -80,7 +80,7 @@ export async function logout() {
       user: null,
     });
     socketService.logout();
-    refreshPage()
+    refreshPage();
   } catch (err) {
     console.log("Cannot logout", err);
     throw err;

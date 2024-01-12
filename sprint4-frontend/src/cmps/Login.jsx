@@ -16,7 +16,7 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
   const demoLogin = async () => {
     const users = await userService.getUsers();
 
-    // login(demoUser);
+    login(demoUser);
     setUsername(demoUser.username);
     setPassword(demoUser.password);
   };
@@ -27,11 +27,12 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
 
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      await logout();
+      // await logout();
       await login({ username, password });
       // navigate("/");
-      refreshPage()
+      refreshPage();
       setIsLoginOpen(false);
     } catch (err) {
       console.log("err: " + err);
@@ -44,6 +45,7 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
 
   const handleRegisterSubmit = async (event) => {
     event.preventDefault();
+    console.log("register");
     try {
       const user = await userService.signup({
         fullname: username,
@@ -53,7 +55,7 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
         isAdmin: false,
       });
       // navigate("/")
-      refreshPage()
+      refreshPage();
     } catch (err) {
       console.log("Registration failed:", err);
     }
@@ -123,15 +125,40 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button className="secondary-button" type="button" onClick={toggleForm}>
-            {isRegistering ? "Already a member? Login" : "Not a member? Register"}
+          <button
+            className="secondary-button"
+            type="button"
+            onClick={toggleForm}
+          >
+            {isRegistering
+              ? "Already a member? Login"
+              : "Not a member? Register"}
           </button>
-          <button className="secondary-button" type="submit">{isRegistering ? "Register" : "Log In"}</button>
+
+          {isRegistering && (
+            <button
+              type="button"
+              className="demo-login-button"
+              onClick={handleLoginSubmit}
+            >
+              Register
+            </button>
+          )}
+
           {!isRegistering && (
             <button
               type="button"
               className="demo-login-button"
-              onClick={demoLogin}
+              onClick={handleLoginSubmit}
+            >
+              Log In
+            </button>
+          )}
+          {!isRegistering && (
+            <button
+              type="button"
+              className="demo-login-button"
+              onClick={handleLoginSubmit}
             >
               Demo Login
             </button>
