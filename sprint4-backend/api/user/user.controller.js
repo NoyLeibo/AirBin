@@ -1,5 +1,6 @@
 import { userService } from "./user.service.js";
 import { loggerService } from "../../services/logger.service.js";
+import { log } from "../../middlewares/logger.middleware.js";
 
 export async function getUser(req, res) {
   try {
@@ -11,13 +12,14 @@ export async function getUser(req, res) {
   }
 }
 
+// CHECK FUNCTION
 export async function getUsers(req, res) {
   try {
     // const filterBy = {
     //   txt: req.query?.txt || "",
     //   minBalance: +req.query?.minBalance || 0,
     // };
-    const users = await userService.query(filterBy);
+    const users = await userService.query();
     res.send(users);
   } catch (err) {
     loggerService.error("Failed to get users", err);

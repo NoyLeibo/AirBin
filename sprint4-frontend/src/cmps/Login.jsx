@@ -11,11 +11,16 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
   const [isRegistering, setIsRegistering] = useState(false);
   const navigate = useNavigate();
 
-  const demoUser = { username: "demoUser", password: "123456" };
+  const demoUser = { username: "demo_user", password: "123456" };
 
   const demoLogin = async () => {
-    setUsername(demoUser.username);
-    setPassword(demoUser.password);
+    try {
+      await login({ username: "demo_user", password: "123456" });
+      refreshPage();
+      setIsLoginOpen(false);
+    } catch (err) {
+      console.log("err: " + err);
+    }
   };
 
   function refreshPage() {
@@ -23,7 +28,6 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
   }
 
   const handleLoginSubmit = async (event) => {
-    event.preventDefault();
     try {
       // await logout();
       await login({ username, password });
