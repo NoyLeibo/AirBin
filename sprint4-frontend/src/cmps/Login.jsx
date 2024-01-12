@@ -14,9 +14,6 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
   const demoUser = { username: "demoUser", password: "123456" };
 
   const demoLogin = async () => {
-    const users = await userService.getUsers();
-
-    login(demoUser);
     setUsername(demoUser.username);
     setPassword(demoUser.password);
   };
@@ -34,12 +31,11 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
       setIsLoginOpen(false);
     } catch (err) {
       console.log("err: " + err);
+    } finally {
+      if (!userService.getLoggedinUser()) {
+        alert("Wrong username or password");
+      }
     }
-    // finally {
-    //   if (!userService.getLoggedinUser()) {
-    //     alert("Wrong username or password");
-    //   }
-    // }
   };
 
   const handleRegisterSubmit = async (event) => {
@@ -155,7 +151,7 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
             <button
               type="button"
               className="demo-login-button"
-              onClick={handleLoginSubmit}
+              onClick={demoLogin}
             >
               Demo Login
             </button>

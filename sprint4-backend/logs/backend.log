@@ -121,6 +121,127 @@
 12.1.2024, 13:51:49 - DEBUG - auth.service - login with username: iris 
 12.1.2024, 14:11:29 - DEBUG - auth.service - login with username: iris 
 12.1.2024, 14:11:29 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 14:22:57 - DEBUG - auth.service - login with username:  
+12.1.2024, 14:22:57 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:36:54 - DEBUG - auth.service - login with username:  
+12.1.2024, 15:36:54 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:37:10 - DEBUG - auth.service - signup with username: כע, fullname: עכ 
+12.1.2024, 15:37:10 - DEBUG - auth.route - new account created: {"username":"כע","password":"$2b$10$2ztnutt1wjZ4wX5NRPj0LuJGTolGzWwCJ96FZzbuyoLDCouTmpwey","fullname":"עכ","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[],"_id":"65a14086943751659523df37"} 
+12.1.2024, 15:37:10 - DEBUG - auth.service - login with username: כע 
+12.1.2024, 15:39:57 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:39:57 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:40:03 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:40:03 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:40:19 - DEBUG - auth.service - login with username: asd 
+12.1.2024, 15:40:19 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:41:21 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:41:21 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:41:57 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:41:57 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:42:05 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:42:05 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:42:13 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:42:13 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:44:53 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:44:53 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:45:57 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:45:57 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:46:06 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:46:06 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:46:20 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:46:20 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:46:47 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:46:47 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:46:56 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:46:56 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:47:09 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:47:09 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:47:27 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:47:27 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:55:09 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:55:09 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:55:23 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:55:23 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:56:56 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:56:56 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:56:56 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:56:56 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:56:56 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:56:56 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:56:56 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:56:56 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:56:57 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:56:57 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:56:57 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:56:57 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:56:57 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:56:57 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:56:57 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:56:57 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:56:57 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:56:57 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:57:04 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:57:04 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:57:05 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:57:05 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:57:05 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:57:05 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:57:05 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:57:05 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:57:12 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:57:12 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:57:48 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:57:48 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:58:07 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 15:58:07 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:00:53 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:00:53 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:03:21 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:03:21 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:03:34 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:03:34 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:04:28 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:04:28 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:05:02 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:05:02 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:05:29 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:05:29 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:05:59 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:05:59 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:06:24 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:06:24 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:06:43 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:06:43 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:07:04 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:07:04 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:07:40 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:07:40 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:08:06 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:08:06 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:08:10 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:08:10 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:17:00 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:17:00 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:19:03 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:19:03 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:19:11 - DEBUG - auth.service - login with username: asdsd 
+12.1.2024, 16:19:11 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:19:23 - DEBUG - auth.service - login with username: hgfhgghgh 
+12.1.2024, 16:19:23 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:19:47 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:19:48 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:19:55 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:19:55 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:20:15 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:20:15 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:25:09 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:25:09 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:27:02 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:27:02 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:27:59 - DEBUG - auth.service - login with username: demoUseras 
+12.1.2024, 16:27:59 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:29:52 - DEBUG - auth.service - login with username: demoUser 
+12.1.2024, 16:29:52 - ERROR - Failed to Login Error: Invalid username or password 
 12.1.2024, 14:19:54 - DEBUG - auth.service - signup with username: , fullname:  
 12.1.2024, 14:19:54 - ERROR - Failed to signup Error: Missing details 
 12.1.2024, 14:19:56 - DEBUG - auth.service - signup with username: , fullname:  
