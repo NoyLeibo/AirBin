@@ -42,6 +42,7 @@ export async function removeUser(userId) {
 export async function login(credentials) {
   try {
     const user = await userService.login(credentials);
+    if (!user) return;
     store.dispatch({
       type: SET_USER,
       user,
