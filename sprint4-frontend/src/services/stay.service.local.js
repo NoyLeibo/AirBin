@@ -116,7 +116,7 @@ function getEmptyStay() {
     type: "",
     imgUrls: [],
     summary: "",
-    stayPlace: "",
+    roomType: "",
     capacity: 0,
     beds: 0,
     rooms: 0,

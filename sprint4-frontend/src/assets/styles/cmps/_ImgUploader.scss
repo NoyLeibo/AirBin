@@ -1,0 +1,53 @@
+.upload-preview{
+   width: 100%;
+   label{
+    font-size: 18px;
+    font-weight: 600;
+   }
+   input{
+    border-radius: 15px;
+    background-color: $clGreyLighter;
+   }
+   input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: $clr1;
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+    box-shadow: 1px 4px 14px -1.5px rgba(0,0,0,0.53);
+-webkit-box-shadow: 1px 4px 14px -1.5px rgba(0,0,0,0.53);
+-moz-box-shadow: 1px 4px 14px -1.5px rgba(0,0,0,0.53);
+  }
+  input[type=file]::file-selector-button:hover {
+    background: #b6295f;
+  }
+   .imgs-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    // overflow: hidden;
+    gap: 10px;
+    .img:not(:first-child) {
+      transition: filter 0.2s ease-in-out;
+      // max-height: 300px;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+  
+    img:hover {
+      filter: brightness(0.8);
+    }
+  
+    .img1 {
+      grid-area: span 2 / span 2;
+      // aspect-ratio: 1 / 1;
+      object-fit: cover;
+      max-height: 400px;
+    }
+  }
+}
