@@ -300,3 +300,25 @@
 12.1.2024, 16:49:46 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
 12.1.2024, 16:59:10 - DEBUG - auth.service - login with username: iris 
 12.1.2024, 16:59:10 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 17:03:14 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 17:03:14 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 17:04:46 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 17:04:46 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 17:05:24 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 17:05:24 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 17:05:33 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 17:05:33 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 17:06:48 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 17:06:48 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 17:07:00 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 17:07:01 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 17:08:12 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 17:08:12 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 17:11:30 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 17:11:30 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 17:12:45 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 17:12:45 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 17:15:28 - DEBUG - auth.service - login with username: iris 
+12.1.2024, 17:15:29 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 17:16:01 - DEBUG - auth.service - login with username: nadav 
+12.1.2024, 17:16:01 - ERROR - Failed to Login Error: Invalid username or password 
