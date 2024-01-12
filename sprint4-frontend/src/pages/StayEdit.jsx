@@ -6,10 +6,15 @@ import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js"
 import SimpleMap from "../cmps/GoogleMap"
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import {ImgUploader} from '../cmps/ImgUploader.jsx'
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
 
 import { FaPeopleGroup } from "react-icons/fa6"
 import { LuDoorOpen } from "react-icons/lu"
 import { GiCampfire } from "react-icons/gi"
+import { CiCalendar } from "react-icons/ci"
+import { GoChecklist } from "react-icons/go"
+import { GoPencil } from "react-icons/go"
 import { GiHouse } from "react-icons/gi"
 import { GiCastle } from "react-icons/gi"
 import { GiBarn } from "react-icons/gi"
@@ -31,7 +36,7 @@ export function StayEdit() {
   const [stayToEdit, setStayToEdit] = useState(stayService.getEmptyStay())
   const apiKey = "AIzaSyB0dUlJsQSAuB636Yc1NGBUaJbwvYjfS1s"
 
-  const [sectionProgress, setSectionProgress] = useState(8)
+  const [sectionProgress, setSectionProgress] = useState(1)
   const [selectedBtn, setSelectedBtn] = useState("")
   const [selectedBtnAment, setSelectedBtnAment] = useState(stayToEdit.amenities)
   const [selectedRoomType, setSelectedBtnRoomType] = useState("")
@@ -109,19 +114,25 @@ export function StayEdit() {
     console.log(ev.target, field, newValue)
   }
 
-  function onSave(ev) {
+  function handlePriceRangeChange(priceRange){
+    console.log(priceRange)
+  }
+  function valuetext(value) {
+    return `${value}`
+  }
+
+  async function onSave(ev) {
     ev.preventDefault()
-
+  
     const newStay = { ...stayToEdit }
-
-    saveStay(newStay)
-      .then(() => {
-        showSuccessMsg("Stay saved successfully")
-        navigate("/")
-      })
-      .catch((err) => {
-        showErrorMsg("Can not save Stay, please try again")
-      })
+  
+    try {
+      await saveStay(newStay)
+      showSuccessMsg("Stay saved successfully")
+      navigate("/")
+    } catch (err) {
+      showErrorMsg("Cannot save Stay, please try again")
+    }
   }
   function addImgStay(imgUrl) {
     stayToEdit.imgUrls.push(imgUrl)
@@ -376,24 +387,24 @@ export function StayEdit() {
                   d="M25 13.999H19L18.883 14.006C18.386 14.063 18 14.486 18 14.999V19.999L18.007 20.116C18.065 20.613 18.487 20.999 19 20.999H25L25.117 20.992C25.614 20.934 26 20.512 26 19.999V14.999L25.993 14.882C25.935 14.385 25.513 13.999 25 13.999ZM24 18.999H20V15.999H24V18.999Z"
                   fill="#222222"
                 />
-                <path d="M16 24.125V35" stroke="#222222" stroke-width="2" />
+                <path d="M16 24.125V35" stroke="#222222" strokeWidth="2" />
                 <path
                   d="M28.004 35.996H27.269H15.998V24.016H28.004V34.63V35.996Z"
                   stroke="#222222"
-                  stroke-width="1.998"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.998"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M15.998 24.017L28.004 35.997"
                   stroke="#222222"
-                  stroke-width="1.998"
+                  strokeWidth="1.998"
                   stroke-miterlimit="10"
                 />
                 <path
                   d="M28.004 24.017L15.998 35.997"
                   stroke="#222222"
-                  stroke-width="1.998"
+                  strokeWidth="1.998"
                   stroke-miterlimit="10"
                 />
               </svg>
@@ -524,16 +535,16 @@ export function StayEdit() {
                 <path
                   d="M22.25 16.25V8.562"
                   stroke="#222222"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M27.385 12.504H22.375V8.498H27.385V12.504Z"
                   stroke="#222222"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
               <div className="type-title ">Castle</div>
@@ -998,35 +1009,35 @@ export function StayEdit() {
                 <path
                   d="M9 39.997H37"
                   stroke="#222222"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke-miterlimit="10"
                 />
                 <path
                   d="M14.875 39.5373L19.184 22"
                   stroke="#222222"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M30.733 39.762L26.426 22.1151L26.4427 22.1833"
                   stroke="#222222"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M16.0811 34.4861H29.1381"
                   stroke="#222222"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke-miterlimit="10"
                 />
                 <path
                   d="M31.675 8.83L28.845 6L22.776 12.069L16.705 6L13.875 8.83L19.944 14.899L13.875 20.97L16.705 23.8L22.776 17.729L28.845 23.8L31.675 20.97L25.606 14.899L31.675 8.83Z"
                   stroke="#222222"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
               <div className="type-title ">Windmill</div>
@@ -1282,7 +1293,7 @@ export function StayEdit() {
         </section>
       )}
       {sectionProgress === 6 && (
-        <section className="new-stay-container step-1">
+        <section className="new-stay-container step-6">
           <div className="fw600 fs22"> Step 6</div>
           <div className="step-6-title fs30 fw600">
             Make your place stand out
@@ -2104,7 +2115,86 @@ export function StayEdit() {
           You can change it anytime.
           </p>
           <div className="price-step-container">
-            
+          <div className="price-step-show flex">
+            <input className="fs30" type="number" name="price" value={stayToEdit.price|| 0}  onChange={handleChange}/> 
+          </div>
+          <Box sx={{ width: 300 }}>
+      <Slider
+        className="slider-color"
+        getAriaLabel={() => "Temperature range"}
+        value={stayToEdit.price}
+        onChange={handleChange}
+        name="price"
+        valueLabelDisplay="auto"
+        max={2000}
+      />
+    </Box>
+          </div>
+        </section>
+      )}
+       {sectionProgress === 13 && (
+        <section className="new-stay-container step-13">
+          <div className="step-13-title fs32 fw600">Review your listing</div>
+          <p className="fs18">
+          Here's what we'll show to guests. Make sure everything looks good.
+          </p>
+          <div className="review-step-container">
+            <div className="card-prev-edit">
+              <img src={stayToEdit.imgUrls[0]}/>
+              <div className="prev-title-container flex justify-between algin-center">
+              <div className="prev-title fs18">{stayToEdit.name}</div>
+              <div className="prev-rating flex align-center ">
+              <span className="rating-content">New </span> <i className="fa-solid fa-star fs12 "></i>
+              </div>
+
+              </div>
+              <div className="prev-price-container fs18">
+                <span className="price fw600">${stayToEdit.price}</span> night</div>
+            </div>
+              <div className="dis-titels-container">
+                <div className="fs24 fw600" > What's next?</div>
+                <div className="card-titles flex">
+                <div className="icon-card">
+                <GoChecklist size="28" /> 
+                </div>
+                <div className="card-content">
+                  <div className="card-title fs18 fw600">Confirm a few details and publish</div>
+                  <div className="fs16 graytxt">We’ll let you know if you need to verify your identity or register with the local government.</div>
+                </div>
+                </div>
+                <div className="card-titles flex">
+                  <div className="icon-card">
+                <CiCalendar size="28" /> 
+                  </div>
+                <div className="card-content">
+                  <div className="card-title fs18 fw600">Set up your calendar</div>
+                  <div className="fs16 graytxt">Choose which dates your listing is available. It will be visible 24 hours after you publish.</div>
+                </div>
+                </div>
+                <div className="card-titles flex">
+                <div className="icon-card">
+                <GoPencil size="28" />
+                </div>
+                 <div className="card-content">
+                  <div className="card-title fs18 fw600">Adjust your settings</div>
+                  <div className="fs16 graytxt">Set house rules, select a cancellation policy, choose how guests book, and more.</div>
+                </div>
+                </div>
+              </div>
+          </div>
+        </section>
+      )}
+       {sectionProgress === 14 && (
+        <section className="new-stay-container step-14">
+          <div className="step-14-title fs32 fw600">Congratulations, {stayToEdit.host.fullname}!</div>
+          <p className="fs18">
+          From one Host to another—welcome aboard. Thank you for sharing your home and helping to create incredible experiences for our guests.
+          </p>
+          <div className="img-container">
+          <img src="https://res.cloudinary.com/dlscarx4f/image/upload/v1705077322/bajtpsugscmuikptweve.png"/>
+          <p className="fs12">
+            Boris Kho, CEO
+          </p>
           </div>
         </section>
       )}
@@ -2125,268 +2215,19 @@ export function StayEdit() {
           <div className={`bar-progress  ${sectionProgress>12?"step-done":" "}`}></div>
           <div className={`bar-progress  ${sectionProgress>13?"step-done":" "}`}></div>
           <div className={`bar-progress  ${sectionProgress>14?"step-done":" "}`}></div>
-          <div className={`bar-progress  ${sectionProgress>15?"step-done":" "}`}></div>
         </div>
        <div className="btns-footer-edit">
-        {sectionProgress !== 1 && (
+        {sectionProgress !== 0 && sectionProgress !== 14&& (
           <button className="btn-footer-edit btn-back-level" onClick={() => changeSection(-1)}>
             Back
           </button>
         )}
-        <button className="btn-footer-edit btn-next-level" onClick={() => changeSection(1)}>
-          Next
+        <button className="btn-footer-edit btn-next-level" onClick={sectionProgress !== 14?(() => changeSection(1)):(() => onSave())}>
+          {sectionProgress !== 14?'Next':'Cheack your list'}
         </button>
         </div>
       </section>
     </section>
   )
-  return (
-    <section className="edit-main-container">
-      <h1>Edit / Add Stay</h1>
-
-      <form className="edit-form-container">
-        <section className="flex column">
-          <div className="flex justify-between">
-            <label className="flex column">
-              <span>Title :</span>
-              <input
-                className="edit-input name-input"
-                value={stayToEdit.name}
-                onChange={handleChange}
-                type="text"
-                name="name"
-                placeholder="The Island House"
-              />
-            </label>
-            <label className="flex column">
-              <span>Discount :</span>
-              <select onChange={handleChange} type="number" name="discount">
-                <option value="0">No discount</option>
-                <option value="10">10%</option>
-                <option value="15">15%</option>
-                <option value="20">20%</option>
-              </select>
-            </label>
-            <label onChange={handleChange} className="flex column">
-              <span>Type of place :</span>
-              <select name="stayPlace">
-                <option value="An entire place">An entire place</option>
-                <option value="private room">A private room</option>
-                <option value="shared room">A shared room</option>
-              </select>
-            </label>
-
-            <label onChange={handleChange} className="flex column">
-              <span>Price per night:</span>
-              <input
-                className="edit-input price-input"
-                value={stayToEdit.price}
-                min="0"
-                onChange={handleChange}
-                type="number"
-                name="price"
-                placeholder="300"
-              />
-            </label>
-          </div>
-        </section>
-        <section className="flex column">
-          <div className="flex justify-between">
-            <label className="flex column">
-              <span>Type :</span>
-              <select onChange={handleChange} name="type">
-                <option value="House">House</option>
-                <option value="Apartment">Apartment</option>
-                <option value="Barn">Barn</option>
-                <option value="Bed & breakfast">Bed & breakfast</option>
-                <option value="Boat">Boat</option>
-                <option value="Cabin">Cabin</option>
-                <option value="Camper/RV">Camper/RV</option>
-                <option value="Casa particular">Casa particular</option>
-                <option value="Castle">Castle</option>
-                <option value="Cave">Cave</option>
-                <option value="Container">Container</option>
-                <option value="Cycladic home">Cycladic home</option>
-                <option value="Dammuso">Dammuso</option>
-                <option value="Dome">Dome</option>
-                <option value="Earth home">Earth home</option>
-                <option value="Farm">Farm</option>
-                <option value="Guesthouse">Guesthouse</option>
-                <option value="Hotel">Hotel</option>
-                <option value="Houseboat">Houseboat</option>
-                <option value="Kezhan">Kezhan</option>
-                <option value="Minsu">Minsu</option>
-                <option value="Raid">Raid</option>
-                <option value="Ryokan">Ryokan</option>
-                <option value="Shepherd's hut">Shepherd's hut</option>
-                <option value="Tent">Tent</option>
-                <option value="Tiny home">Tiny home</option>
-                <option value="Tower">Tower</option>
-                <option value="Treehouse">Treehouse</option>
-                <option value="Trullo">Trullo</option>
-                <option value="Windmill">Windmill</option>
-                <option value="Yurt">Yurt</option>
-              </select>
-            </label>
-            <label className="flex column">
-              <span>Amenities :</span>
-              <select onChange={handleChange} name="amenities" multiple>
-                <option value="Wifi">Wifi</option>
-                <option value="TV">TV</option>
-                <option value="Kitchen">Kitchen</option>
-                <option value="Washer">Washer</option>
-                <option value="Free parking on premises">
-                  Free parking on premises
-                </option>
-                <option value="Paid parking on premises">
-                  Paid parking on premises
-                </option>
-                <option value="Air conditioning">Air conditioning</option>
-                <option value="Dedicated workspace">Dedicated workspace</option>
-                <option value="Pool">Pool</option>
-                <option value="Hot tub">Hot tub</option>
-                <option value="Patio">Patio</option>
-                <option value="BBQ grill">BBQ grill</option>
-                <option value="Outdoor dining area">Outdoor dining area</option>
-                <option value="Fire pit">Fire pit</option>
-                <option value="Pool table">Pool table</option>
-                <option value="Indoor fireplace">Indoor fireplace</option>
-                <option value="Piano">Piano</option>
-                <option value="Exercise equipment">Exercise equipment</option>
-                <option value="Lake access">Lake access</option>
-                <option value="Beach access">Beach access</option>
-                <option value="Ski-in/Ski-out">Ski-in/Ski-out</option>
-                <option value="Outdoor shower">Outdoor shower</option>
-                <option value="Smoke alarm">Smoke alarm</option>
-                <option value="First aid kit">First aid kit</option>
-                <option value="Fire extinguisher">Fire extinguisher</option>
-                <option value="Carbon monoxide alarm">
-                  Carbon monoxide alarm
-                </option>
-                <option value="Smoke allowed">Smoke allowed</option>
-              </select>
-            </label>
-
-            <label className="flex column">
-              <span>Highlights </span>
-              <select onChange={handleChange} name="highlights" multiple>
-                <option value="Peaceful">Peaceful</option>
-                <option value="Unique">Unique</option>
-                <option value="Family-friendly">Family-friendly</option>
-                <option value="Stylish">Stylish</option>
-                <option value="Central">Central</option>
-                <option value="Spacious">Spacious</option>
-              </select>
-            </label>
-          </div>
-        </section>
-        <section className="flex column">
-          <span>Location</span>
-          <div className="flex justify-between">
-            <label className="flex column">
-              <span>Continent :</span>
-              <input
-                className="edit-input name-input"
-                value={stayToEdit.loc.area.value}
-                onChange={handleChange}
-                type="text"
-                name="area"
-                placeholder="Europe"
-              />
-            </label>
-            <label className="flex column">
-              <span>Country :</span>
-              <input
-                className="edit-input name-input"
-                value={stayToEdit.loc.country.value}
-                onChange={handleChange}
-                type="text"
-                name="country"
-                placeholder="Italy"
-              />
-            </label>
-            <label className="flex column">
-              <span>City :</span>
-              <input
-                className="edit-input name-input"
-                value={stayToEdit.loc.city.value}
-                onChange={handleChange}
-                type="text"
-                name="city"
-                placeholder="Milano"
-              />
-            </label>
-            <label className="flex column">
-              <span>Address :</span>
-              <input
-                className="edit-input name-input"
-                value={stayToEdit.loc.address.value}
-                onChange={handleChange}
-                type="text"
-                name="address"
-                placeholder="Via Brera 74"
-              />
-            </label>
-          </div>
-        </section>
-
-        <section className="flex column">
-          <span>Stay Details</span>
-          <div className="flex justify-between">
-            <label className="flex column">
-              <span>Capacity :</span>
-              <input
-                className="edit-input price-input"
-                value={stayToEdit.stayDetail.capacity.value}
-                min="0"
-                onChange={handleChange}
-                type="number"
-                name="capacity"
-                placeholder="2"
-              />
-            </label>
-            <label className="flex column">
-              <span>Rooms :</span>
-              <input
-                className="edit-input price-input"
-                value={stayToEdit.stayDetail.rooms.value}
-                min="0"
-                onChange={handleChange}
-                type="number"
-                name="rooms"
-                placeholder="1"
-              />
-            </label>
-            <label className="flex column">
-              <span>Beds :</span>
-              <input
-                className="edit-input price-input"
-                value={stayToEdit.stayDetail.beds.value}
-                min="0"
-                onChange={handleChange}
-                type="number"
-                name="beds"
-                placeholder="1"
-              />
-            </label>
-            <label className="flex column">
-              <span>Bathrooms :</span>
-              <input
-                className="edit-input price-input"
-                value={stayToEdit.stayDetail.bathrooms.value}
-                min="0"
-                onChange={handleChange}
-                type="number"
-                name="bathrooms"
-                placeholder="1"
-              />
-            </label>
-          </div>
-        </section>
-        <section></section>
-
-        <button onClick={onSave}>Save</button>
-      </form>
-    </section>
-  )
 }
+  

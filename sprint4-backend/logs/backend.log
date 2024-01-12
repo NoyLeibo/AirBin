@@ -121,3 +121,56 @@
 12.1.2024, 13:51:49 - DEBUG - auth.service - login with username: iris 
 12.1.2024, 14:11:29 - DEBUG - auth.service - login with username: iris 
 12.1.2024, 14:11:29 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 15:46:22 - DEBUG - auth.service - login with username: admin 
+12.1.2024, 15:46:22 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:46:27 - DEBUG - auth.service - login with username: admin 
+12.1.2024, 15:46:27 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:46:56 - DEBUG - auth.service - signup with username: admin, fullname: admin 
+12.1.2024, 15:46:56 - DEBUG - auth.route - new account created: {"username":"admin","password":"$2b$10$QmA3u6HEotYAmGIyABKeS.L5fb2FhFWy3TNA95uA2ADvxGuCvVani","fullname":"admin","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[],"_id":"65a142d02d36065c09eb4f48"} 
+12.1.2024, 15:46:56 - DEBUG - auth.service - login with username: admin 
+12.1.2024, 15:49:22 - DEBUG - auth.service - login with username: admin 
+12.1.2024, 15:49:22 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:52:29 - DEBUG - auth.service - login with username: adms 
+12.1.2024, 15:52:29 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:52:56 - DEBUG - auth.service - login with username: admins 
+12.1.2024, 15:52:56 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:53:06 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 15:53:06 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:53:29 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 15:53:29 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:53:41 - DEBUG - auth.service - login with username: adfd 
+12.1.2024, 15:53:41 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:54:47 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 15:54:47 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:55:06 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 15:55:06 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 15:55:31 - DEBUG - auth.service - login with username: adssss 
+12.1.2024, 15:55:31 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:07:44 - DEBUG - auth.service - login with username: admin 
+12.1.2024, 16:07:44 - INFO - User login:  | {"_id":"65a142d02d36065c09eb4f48","username":"admin","fullname":"admin","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 16:07:46 - DEBUG - auth.service - login with username: admin 
+12.1.2024, 16:07:46 - INFO - User login:  | {"_id":"65a142d02d36065c09eb4f48","username":"admin","fullname":"admin","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 16:07:48 - DEBUG - auth.service - login with username: admin 
+12.1.2024, 16:07:48 - INFO - User login:  | {"_id":"65a142d02d36065c09eb4f48","username":"admin","fullname":"admin","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+12.1.2024, 16:07:56 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 16:07:56 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:08:07 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 16:08:07 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:08:32 - DEBUG - auth.service - login with username: ad1 
+12.1.2024, 16:08:32 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:12:48 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 16:12:48 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:13:06 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 16:13:06 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:13:53 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 16:13:53 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:14:05 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 16:14:05 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:14:24 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 16:14:24 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:41:45 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 16:41:45 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 16:44:04 - DEBUG - auth.service - login with username: ads 
+12.1.2024, 16:44:04 - ERROR - Failed to Login Error: Invalid username or password 
+12.1.2024, 17:14:54 - DEBUG - auth.service - login with username: admin 
+12.1.2024, 17:14:54 - INFO - User login:  | {"_id":"65a142d02d36065c09eb4f48","username":"admin","fullname":"admin","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
