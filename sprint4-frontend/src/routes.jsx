@@ -31,6 +31,11 @@ const routes = [
     component: <StayDetails />,
     label: "Details",
   },
+  // {
+  //   path: "stay?location=:locationPlace&checkIn=:checkInDate&checkOut=:checkOutDate",
+  //   component: <StayFilterBy />,
+  //   label: "Filter",
+  // },
   {
     path: "review",
     component: <ReviewIndex />,
