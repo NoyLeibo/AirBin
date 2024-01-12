@@ -56,5 +56,12 @@ function getDefaultFilter() {
     bedrooms: "",
     beds: "",
     bathrooms: "",
+    guests: {
+      Adults: 0,
+      Children: 0,
+      Infants: 0,
+      Pets: 0
+    },
+    destination: ""
   };
 }
