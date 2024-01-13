@@ -450,3 +450,13 @@
 13.1.2024, 14:37:13 - ERROR - Failed to Login Error: Invalid username or password 
 13.1.2024, 14:37:17 - DEBUG - auth.service - login with username: demo_user 
 13.1.2024, 14:37:18 - INFO - User login:  | {"_id":"65a283ef22cf2f5287f1763b","username":"demo_user","password":"123456","fullname":"Demo User","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+13.1.2024, 18:23:18 - INFO - Req was made | / 
+13.1.2024, 18:23:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 18:23:18 - INFO - Req was made | / 
+13.1.2024, 18:23:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 18:23:22 - INFO - Req was made | / 
+13.1.2024, 18:23:22 - DEBUG - Getting Stays | {"placeType":["Arctic"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 18:23:23 - INFO - Req was made | / 
+13.1.2024, 18:23:23 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 18:23:25 - INFO - Req was made | / 
+13.1.2024, 18:23:25 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
