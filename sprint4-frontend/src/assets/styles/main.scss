@@ -21,7 +21,10 @@
 @import "views/PaymentPage";
 @import "views/BackOffice";
 @import "views/StayEdit";
-@import "views/UserTrips"; // Components
+@import "views/UserTrips"; 
+@import "views/Wishlist";
+
+// Components
 @import "cmps/AppHeader";
 @import "cmps/AppHeaderFilter";
 @import "cmps/Calendar";
@@ -42,3 +45,4 @@
 @import "cmps/StayReviews";
 @import "cmps/Filter";
 @import "cmps/Chat";
+

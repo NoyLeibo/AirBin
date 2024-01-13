@@ -5,8 +5,9 @@ export function Wishlist() {
     (storeState) => storeState.userModule.user.wishlist
   );
   return (
-    <main>
+    <section className="whislist-container">
+      
       <StayList stays={stays} />
-    </main>
+    </section>
   );
 }
