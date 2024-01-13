@@ -436,3 +436,11 @@
 12.1.2024, 16:44:04 - ERROR - Failed to Login Error: Invalid username or password 
 12.1.2024, 17:14:54 - DEBUG - auth.service - login with username: admin 
 12.1.2024, 17:14:54 - INFO - User login:  | {"_id":"65a142d02d36065c09eb4f48","username":"admin","fullname":"admin","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+13.1.2024, 13:35:32 - ERROR - cannot update user 65a127d51cd27b4cddf5cc5e | TypeError: Cannot read properties of undefined (reading 'status') 
+13.1.2024, 13:35:32 - ERROR - Failed to update user | TypeError: Cannot read properties of undefined (reading 'status') 
+13.1.2024, 13:35:42 - ERROR - cannot update user 65a127d51cd27b4cddf5cc5e | TypeError: Cannot read properties of undefined (reading 'status') 
+13.1.2024, 13:35:42 - ERROR - Failed to update user | TypeError: Cannot read properties of undefined (reading 'status') 
+13.1.2024, 13:35:43 - ERROR - cannot update user 65a127d51cd27b4cddf5cc5e | TypeError: Cannot read properties of undefined (reading 'status') 
+13.1.2024, 13:35:43 - ERROR - Failed to update user | TypeError: Cannot read properties of undefined (reading 'status') 
+13.1.2024, 13:35:50 - ERROR - Failed to update user | TypeError: Cannot read properties of undefined (reading 'status') 
+13.1.2024, 13:35:50 - ERROR - cannot update user 65a127d51cd27b4cddf5cc5e | TypeError: Cannot read properties of undefined (reading 'status') 

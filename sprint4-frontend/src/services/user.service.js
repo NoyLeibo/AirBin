@@ -21,6 +21,7 @@ export const userService = {
   updateWishlist,
   updateReservationGuest,
   updateHostReservation,
+  removeTripHost,
   // addDemoUser,
 };
 
@@ -107,10 +108,23 @@ async function updateReservationGuest(reservation) {
   return guest;
 }
 
-async function removeTrip(tripId) {
-  const user = await getLoggedinUser();
-  user.trips = user.trips.filter((trip) => tripId !== trip._id);
-  await storageService.put("user", user);
+async function removeTrip(reservation) {
+  const user = await getById(getLoggedinUser()._id);
+  user.trips = user.trips.filter(
+    (currReservation) => reservation._id !== currReservation._id
+  );
+  await update(user._id, user);
+  saveLocalUser(user);
+
+  return user;
+}
+
+async function removeTripHost(reservation) {
+  const user = await getById(reservation.host._id);
+  user.guestsReservations = user.guestsReservations.filter(
+    (currReservation) => reservation._id !== currReservation._id
+  );
+  await update(user._id, user);
   saveLocalUser(user);
 
   return user;

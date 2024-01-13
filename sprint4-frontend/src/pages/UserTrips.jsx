@@ -22,8 +22,9 @@ export function UserTrips() {
     document.documentElement.style.setProperty("--main-layout-width", "1280px");
   }, []);
 
-  async function onRemoveBtn(stayId) {
-    const user = await userService.removeTrip(stayId);
+  async function onRemoveBtn(reservation) {
+    const user = await userService.removeTrip(reservation);
+    const host = await userService.removeTripHost(reservation);
     await updateUser(user);
   }
 
@@ -62,7 +63,7 @@ export function UserTrips() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {tripList?.map((trip, index) => (
+          {tripList?.map((reservation, index) => (
             <TableRow
               key={index}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -70,18 +71,18 @@ export function UserTrips() {
               <TableCell align="left" component="th" scope="row">
                 <img
                   className="trip-img"
-                  src={trip.stay.stayImg}
+                  src={reservation.stay.stayImg}
                   alt="stay image"
                   style={{ width: "220px", height: "150px" }}
                 />
               </TableCell>
-              <TableCell align="left">{trip.stay.stayName}</TableCell>
-              <TableCell align="left">{trip.host.fullname}</TableCell>
-              <TableCell align="center">{trip.checkIn}</TableCell>
-              <TableCell align="center">{trip.checkOut}</TableCell>
-              <TableCell align="center">{trip.booked}</TableCell>
-              <TableCell align="center">{trip.totalPrice}</TableCell>
-              <TableCell align="center">{trip.status}</TableCell>
+              <TableCell align="left">{reservation.stay.stayName}</TableCell>
+              <TableCell align="left">{reservation.host.fullname}</TableCell>
+              <TableCell align="center">{reservation.checkIn}</TableCell>
+              <TableCell align="center">{reservation.checkOut}</TableCell>
+              <TableCell align="center">{reservation.booked}</TableCell>
+              <TableCell align="center">{reservation.totalPrice}</TableCell>
+              <TableCell align="center">{reservation.status}</TableCell>
               <TableCell align="right">
                 {/* <Tooltip title="Delete">
                   <IconButton>
@@ -89,7 +90,7 @@ export function UserTrips() {
                   </IconButton>
                 </Tooltip> */}
                 <button
-                  onClick={() => onRemoveBtn(trip._id)}
+                  onClick={() => onRemoveBtn(reservation)}
                   className="clean-btn cancel-btn"
                 >
                   Cancel
