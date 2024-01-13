@@ -717,3 +717,10 @@
 14.1.2024, 0:31:38 - INFO - Setting socket.userId = 65a30f23d732231c8c507092 for socket [id: c8YVnaydPX6jg60mAAAL] 
 14.1.2024, 0:31:38 - INFO - Setting socket.userId = NadavTheKing for socket [id: c8YVnaydPX6jg60mAAAL] 
 14.1.2024, 0:31:52 - INFO - Emiting event: Hello world to user: demo_user data: [object Object] 
+14.1.2024, 0:38:43 - INFO - Setting socket.userId = NadavTheKing for socket [id: c8YVnaydPX6jg60mAAAL] 
+14.1.2024, 0:38:44 - INFO - Setting socket.userId = demo_user for socket [id: h1p2PW1t-86i74t8AAAD] 
+14.1.2024, 0:39:03 - INFO - Emiting event: message-recived to user: demo_user data: [object Object] 
+14.1.2024, 0:41:01 - INFO - Setting socket.userId = demo_user for socket [id: h1p2PW1t-86i74t8AAAD] 
+14.1.2024, 0:41:02 - INFO - Setting socket.userId = NadavTheKing for socket [id: c8YVnaydPX6jg60mAAAL] 
+14.1.2024, 0:41:35 - INFO - Req was made | / 
+14.1.2024, 0:41:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 

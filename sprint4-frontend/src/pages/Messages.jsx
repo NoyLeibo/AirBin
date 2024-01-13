@@ -16,6 +16,7 @@ export function Messages() {
 
   useEffect(() => {
     socketService.on(SOCKET_EVENT_ADD_MSG, addMsg);
+    socketService.on("message-recived", (data) => console.log(data));
     socketService.emit("set-user-socket-username", loggedInUser.username);
 
     return () => {
@@ -43,7 +44,7 @@ export function Messages() {
     const from = loggedInUser?.fullname || "Guest";
     const newMsg = { from, txt: msg.txt };
     socketService.emit("chat-send-msg-username", {
-      type: "Hello world",
+      type: "message-recived",
       data: newMsg,
       username: "demo_user",
     });
