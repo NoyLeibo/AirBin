@@ -450,3 +450,41 @@
 13.1.2024, 14:37:13 - ERROR - Failed to Login Error: Invalid username or password 
 13.1.2024, 14:37:17 - DEBUG - auth.service - login with username: demo_user 
 13.1.2024, 14:37:18 - INFO - User login:  | {"_id":"65a283ef22cf2f5287f1763b","username":"demo_user","password":"123456","fullname":"Demo User","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+13.1.2024, 18:21:55 - INFO - Req was made | / 
+13.1.2024, 18:21:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 18:30:41 - INFO - Req was made | / 
+13.1.2024, 18:30:41 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 18:30:48 - INFO - Req was made | / 
+13.1.2024, 18:30:48 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 18:31:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 18:31:05 - INFO - Req was made | / 
+13.1.2024, 18:32:13 - INFO - Req was made | / 
+13.1.2024, 18:32:13 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 18:32:39 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:32:39 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:33:26 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:33:26 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:34:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 18:34:33 - INFO - Req was made | / 
+13.1.2024, 18:35:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 18:35:18 - INFO - Req was made | / 
+13.1.2024, 18:35:26 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:35:26 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:35:58 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:35:58 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:35:59 - INFO - Req was made | / 
+13.1.2024, 18:35:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 18:36:14 - INFO - Req was made | / 
+13.1.2024, 18:36:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 18:38:20 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:20 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:21 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:21 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:31 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:31 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:32 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:32 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:34 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:34 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+13.1.2024, 18:38:43 - INFO - Req was made | / 
+13.1.2024, 18:38:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 

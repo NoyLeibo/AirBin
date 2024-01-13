@@ -1,6 +1,6 @@
 import { StickyCard } from "../cmps/StickyCardDets";
 import { useNavigate, useParams } from "react-router";
-import { stayService } from "../services/stay.service.local";
+import { stayService } from "../services/stay.service";
 import { useState, useEffect } from "react";
 import { LoginSignup } from "../cmps/LoginSignup";
 import { useLocation } from "react-router";
@@ -44,8 +44,9 @@ export function PaymentPage() {
       const currStay = await stayService.getById(stayId);
       setStay(currStay);
     } catch (err) {
-      showErrorMsg("Cant load stay");
-      navigate("/stay");
+      alert(err);
+      // showErrorMsg("Cant load stay");
+      navigate("/");
     }
   }
 
@@ -77,6 +78,7 @@ export function PaymentPage() {
 
   async function onConfirm() {
     const newTrip = createTrip();
+    console.log(newTrip);
     const updatedUser = await userService.updateTripList(newTrip);
     await updateUser(updatedUser);
     navigate("/userTrips");
