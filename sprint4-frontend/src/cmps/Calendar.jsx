@@ -8,7 +8,8 @@ export function Calendar() {
   const dispatch = useDispatch();
   const [leftMonth, setLeftMonth] = useState(new Date());
   const [rightMonth, setRightMonth] = useState(new Date(new Date().getFullYear(), new Date().getMonth() + 1, 1));
-  const selectedDates = useSelector((storeState) => storeState.stayModule.selectedDates)
+  const filterBy = useSelector((storeState) => storeState.stayModule.filterBy)
+  const selectedDates = filterBy.selectedDates
 
   const isCheckInDay = (day) => {
     return day?.getTime() === selectedDates.checkIn?.getTime();
@@ -90,7 +91,7 @@ export function Calendar() {
   };
 
   const isInRange = (day) => {
-    const { checkIn, checkOut } = selectedDates;
+    const { checkIn, checkOut } = filterBy.selectedDates;
     return day > checkIn && day < checkOut;
   };
 

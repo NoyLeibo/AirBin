@@ -12,8 +12,8 @@ import {
   UNDO_REMOVE_STAY,
   UPDATE_STAY,
   SET_IS_LOADING,
-  SET_SELECTED_DATES,
-  SET_GUESTS_NUMBER,
+  // SET_SELECTED_DATES,
+  // SET_GUESTS_NUMBER,
 } from "./stay.reducer.js";
 import { SET_SCORE, SET_USERS } from "./user.reducer.js";
 import { SET_FILTER_BY } from "./stay.reducer.js";
@@ -58,11 +58,24 @@ export async function loadStay() {
 }
 
 export function setSelectedDates(selectedDates) {
-  store.dispatch({ type: SET_SELECTED_DATES, selectedDates });
+  return {
+    type: SET_FILTER_BY,
+    filterBy: { selectedDates: selectedDates }
+  };
+}
+
+export function setSelectedDestination(selectedDestination) {
+  return {
+    type: SET_FILTER_BY,
+    filterBy: { selectedDestination: selectedDestination }
+  }
 }
 
 export function setSelectedGuests(selectedGuests) {
-  return { type: SET_GUESTS_NUMBER, selectedGuests };
+  return {
+    type: SET_FILTER_BY,
+    filterBy: { selectedGuests: selectedGuests }
+  };
 }
 
 export async function removeStay(stayId) {

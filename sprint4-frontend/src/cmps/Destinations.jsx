@@ -1,23 +1,25 @@
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { setSelectedDestination } from "../store/stay.actions";
 
 
-export function Destinations(searchInput) {
-    const selectedRegion = useSelector(
-        (storeState) => storeState.stayModule.selectedDates
-    )
+export function Destinations({ setUserSearchDestination }) {
+    const dispatch = useDispatch()
 
-    console.log('searchInput.userSearchDestination', searchInput.userSearchDestination)
-    const onSetRegion = ((destination) => {
-        console.log(destination);
-    })
-
+    const onSetRegion = (destination) => {
+        dispatch(setSelectedDestination(destination));
+        if (!destination) {
+            setUserSearchDestination("I'm flexible! find a destination!")
+            return
+        }
+        setUserSearchDestination(destination)
+    }
 
     return (
         <div className="destination-container flex column">
             <div className="destination-header fs14 blacktxt bold">Search by region</div>
             <div className="regions grid">
                 <div className="region-option flex column fs14">
-                    <div className="region-option-img"><img src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" /></div>
+                    <div className="region-option-img" onClick={(() => onSetRegion(''))}><img src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg" /></div>
                     I'm flexible
                 </div>
                 <div className="region-option flex column fs14">

@@ -10,10 +10,10 @@ export function StickyCard({ stay }) {
   const [isOpenDates, setIsOpenDates] = useState(false);
   const [isOpenGuests, setIsOpenGuests] = useState(false);
   const selectedDates = useSelector(
-    (storeState) => storeState.stayModule.selectedDates
+    (storeState) => storeState.stayModule.filterBy.selectedDates
   );
   const selectedGuests = useSelector(
-    (storeState) => storeState.stayModule.selectedGuests
+    (storeState) => storeState.stayModule.filterBy.selectedGuests
   );
 
   const days = numOfDays();
