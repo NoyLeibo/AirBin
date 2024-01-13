@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 export function Guests() {
     const selectedGuests = useSelector((storeState) => storeState.stayModule.filterBy.selectedGuests)
     const dispatch = useDispatch();
-    console.log(selectedGuests);
+    // console.log(selectedGuests);
 
     const handleAdultsChange = (increment, event) => {
         event.preventDefault();

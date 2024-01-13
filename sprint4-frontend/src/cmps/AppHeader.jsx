@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom"
+import { Link, NavLink, Navigate, useLocation, useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 import routes from "../routes"
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service"
@@ -16,6 +16,8 @@ const LOGO = "/img/airbnb.png"
 const LOGO_ICON = "/img/airbnb-icon.png"
 
 export function AppHeader() {
+  const navigate = useNavigate();
+
   const [selectedButton, setSelectedButton] = useState("stays")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLoginOpen, setIsLoginOpen] = useState(false)
@@ -137,6 +139,11 @@ export function AppHeader() {
     (total, currentValue) => total + currentValue,
     0
   )
+
+  function searchFilterBy() {
+    navigate(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn}&checkOut=${filterBy.selectedDates.checkOut}&selectedGuests=${totalGuests}`);
+  }
+
 
   function refreshPage() {
     if (location.pathname === "/") {
@@ -381,7 +388,7 @@ export function AppHeader() {
               <Guests />
             </div>
           )}
-          <button className="header-search-btn">
+          <button className="header-search-btn" onClick={(() => searchFilterBy())}>
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
