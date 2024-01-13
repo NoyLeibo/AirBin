@@ -490,3 +490,5 @@
 13.1.2024, 18:38:34 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
 13.1.2024, 18:38:43 - INFO - Req was made | / 
 13.1.2024, 18:38:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 22:23:07 - INFO - Req was made | / 
+13.1.2024, 22:23:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
