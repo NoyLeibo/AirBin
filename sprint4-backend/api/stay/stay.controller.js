@@ -1,16 +1,10 @@
+import { log } from "../../middlewares/logger.middleware.js";
 import { loggerService } from "../../services/logger.service.js";
 import { stayService } from "./stay.service.js";
 
 export async function getStay(req, res) {
   try {
-    const filterBy = {
-      // placeType: req.query.placeType || "",
-      priceRange: +req.query.priceRange || 0,
-      bedrooms: req.query.bedrooms || 1,
-      beds: req.query.beds || 1,
-      bathrooms: req.query.bathrooms || 1,
-      amentities: req.query.amentities || [],
-    };
+    const filterBy = req.query;
 
     loggerService.debug("Getting Stays", filterBy);
     const stays = await stayService.query(filterBy);
@@ -81,6 +75,7 @@ export async function addStayReview(req, res) {
       },
       txt: req.body.txt,
     };
+    console.log(review.txt);
     const savedReview = await stayService.addReviewMsg(stayId, review);
     res.json(savedReview);
   } catch (err) {

@@ -15,12 +15,13 @@ export const stayService = {
 };
 
 async function query(filterBy = {}) {
-  const stays = await dbService.getDbArr("stay");
+  let stays = await dbService.getDbArr("stay");
+  stays = filterStays(filterBy, stays);
   // add filter funcs
   return stays;
 }
 
-async function filterStays(filterBy) {
+async function filterStays(filterBy, stays) {
   if (filterBy.priceRange?.length > 0) {
     stays = stays.filter((stay) => isInPriceRange(filterBy.priceRange, stay));
   }
@@ -31,18 +32,18 @@ async function filterStays(filterBy) {
   }
   if (filterBy.beds) {
     stays = stays.filter((stay) => {
-      return stay.beds >= filterBy.beds;
+      return stay.bedrooms >= filterBy.beds;
     });
   }
   if (filterBy.bathrooms) {
     stays = stays.filter((stay) => {
-      console.log(stay.baths, " >= ", filterBy.bathrooms);
       return stay.baths >= filterBy.bathrooms;
     });
   }
-  if (filterBy.placeType.length) {
+  if (filterBy.placeType?.length) {
     stays = filterStaysByTags(filterBy.placeType, stays);
   }
+  return stays;
 }
 
 function filterStaysByTags(placeType, stays) {
@@ -57,7 +58,7 @@ function filterStaysByTags(placeType, stays) {
 
 function isInPriceRange(priceRange, stay) {
   const price = stay.price;
-  if (price >= priceRange[0] && price <= priceRange[1]) {
+  if (price >= +priceRange[0] && price <= +priceRange[1]) {
     return true;
   }
   return false;

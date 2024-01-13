@@ -15,7 +15,6 @@ export const userService = {
   getById,
   remove,
   update,
-  changeScore,
   updateTripList,
   removeTrip,
   updateWishlist,
@@ -212,14 +211,6 @@ async function signup(userCred) {
 async function logout() {
   sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER);
   return await httpService.post("auth/logout");
-}
-
-async function changeScore(by) {
-  const user = getLoggedinUser();
-  if (!user) throw new Error("Not loggedin");
-  user.score = user.score + by || by;
-  await update(user);
-  return user.score;
 }
 
 function saveLocalUser(user) {

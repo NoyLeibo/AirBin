@@ -1,4 +1,4 @@
-import { stayService } from "../services/stay.service.local.js";
+import { stayService } from "../services/stay.service.js";
 import { userService } from "../services/user.service.js";
 import { store } from "./store.js";
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
@@ -20,7 +20,7 @@ import { SET_FILTER_BY } from "./stay.reducer.js";
 
 // Action Creators:
 export function getActionRemoveStay(stayId) {
-  const filterBy = store.getState().toyModule.filterBy;
+  const filterBy = store.getState().stayModule.filterBy;
 
   return {
     type: REMOVE_STAY,
