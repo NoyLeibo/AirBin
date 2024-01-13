@@ -131,7 +131,7 @@ async function removeTripHost(reservation) {
 }
 
 async function updateWishlist(wishStay) {
-  const user = await getLoggedinUser();
+  const user = await getById(getLoggedinUser()._id);
   const isAlreadyInWishlist = user.wishlist.some(
     (currStay) => currStay._id === wishStay._id
   );
@@ -143,7 +143,7 @@ async function updateWishlist(wishStay) {
   } else {
     user.wishlist.push(wishStay);
   }
-  await storageService.put("user", user);
+  await update(user._id, user);
   saveLocalUser(user);
 
   return user;
