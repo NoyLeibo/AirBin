@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
 import { stayService } from "../services/stay.service.local.js"
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js"
+import { addStay,updateStay, } from "../store/stay.actions.js"
 import SimpleMap from "../cmps/GoogleMap"
 import "@fortawesome/fontawesome-free/css/all.min.css"
 import {ImgUploader} from '../cmps/ImgUploader.jsx'
@@ -15,28 +16,14 @@ import { GiCampfire } from "react-icons/gi"
 import { CiCalendar } from "react-icons/ci"
 import { GoChecklist } from "react-icons/go"
 import { GoPencil } from "react-icons/go"
-import { GiHouse } from "react-icons/gi"
-import { GiCastle } from "react-icons/gi"
-import { GiBarn } from "react-icons/gi"
-import { GiCaveEntrance } from "react-icons/gi"
-import { GiWoodCabin } from "react-icons/gi"
-import { GiCargoCrate } from "react-icons/gi"
-
-import { FaCaravan } from "react-icons/fa"
-import { FaRegBuilding } from "react-icons/fa"
-import { FaHotel } from "react-icons/fa"
-
 import { IoCafeOutline } from "react-icons/io5"
-import { TbSailboat } from "react-icons/tb"
-import { PiWarehouseDuotone } from "react-icons/pi"
 
 export function StayEdit() {
-  const labels = useSelector((storeState) => storeState.stayModule.lables)
   const isLoading = useSelector((storeState) => storeState.stayModule.isLoading)
   const [stayToEdit, setStayToEdit] = useState(stayService.getEmptyStay())
   const apiKey = "AIzaSyB0dUlJsQSAuB636Yc1NGBUaJbwvYjfS1s"
 
-  const [sectionProgress, setSectionProgress] = useState(1)
+  const [sectionProgress, setSectionProgress] = useState(0)
   const [selectedBtn, setSelectedBtn] = useState("")
   const [selectedBtnAment, setSelectedBtnAment] = useState(stayToEdit.amenities)
   const [selectedRoomType, setSelectedBtnRoomType] = useState("")
@@ -45,18 +32,29 @@ export function StayEdit() {
   const [valueBedrooms, setValueBedrooms] = useState(stayToEdit.rooms)
   const [valueBeds, setValueBeds] = useState(stayToEdit.beds|| 0)
   const [valueBathrooms, setValueBathrooms] = useState(stayToEdit.bathrooms)
-
+  
   const { stayId } = useParams()
   const navigate = useNavigate()
+  const user = useSelector((storeState) => storeState.userModule.user)
   console.log(stayToEdit, cords, valueGuests, "startttt")
 
   useEffect(() => {
     document.documentElement.style.setProperty("--main-layout-width", "1500px")
-    if (!stayId) return
+    if (!stayId){
+      setHost()
+      return 
+    } 
     stayService.getById(stayId).then((stay) => {
       setStayToEdit(stay)
     })
   }, [])
+
+  function setHost(){
+    stayToEdit.host._id=user._id
+    stayToEdit.host.fullname=user.fullname
+    stayToEdit.host.imgUrl=user.imgUrl
+    setStayToEdit(stayToEdit)
+  }
 
   function handleChange(ev) {
     const { name, value, type, options } = ev.target
@@ -114,23 +112,22 @@ export function StayEdit() {
     console.log(ev.target, field, newValue)
   }
 
-  function handlePriceRangeChange(priceRange){
-    console.log(priceRange)
-  }
-  function valuetext(value) {
-    return `${value}`
-  }
-
-  async function onSave(ev) {
-    ev.preventDefault()
-  
+  async function onSave() {
+    
     const newStay = { ...stayToEdit }
+    console.log(newStay);
   
     try {
-      await saveStay(newStay)
+      if(newStay._id){
+        await updateStay(newStay)
+      }else{
+        await addStay(newStay)
+      }
+      console.log('success');
       showSuccessMsg("Stay saved successfully")
       navigate("/")
     } catch (err) {
+      console.log('err',err);
       showErrorMsg("Cannot save Stay, please try again")
     }
   }
@@ -287,6 +284,50 @@ export function StayEdit() {
   }
   return (
     <section className="edit-main-container">
+      {sectionProgress === 0 && (
+        <section className="new-stay-container step-0">
+          <div className="step-0-title fs32 fw600">It’s easy to get started on Airbnb</div>
+          <div className="steps-container">
+            <div className="level-container flex">
+              <div className="fs22 fw600 ">1</div>
+              <div className="level-content">
+                <div className="level-title fs22 fw600">
+                     Tell us about your place 
+                </div>
+                <div className="level-txt graytxt fs18">
+                Share some basic info, like where it is and how many guests can stay.
+                </div>
+              </div>
+              <img src="https://a0.muscache.com/4ea/air/v2/pictures/da2e1a40-a92b-449e-8575-d8208cc5d409.jpg"/>
+            </div>
+            <div className="level-container flex">
+              <div className="fs22 fw600 ">2</div>
+              <div className="level-content">
+                <div className="level-title fs22 fw600">
+                Make it stand out 
+                </div>
+                <div className="level-txt graytxt fs18">
+                Add 5 or more photos plus a title and description we’ll help you out.
+                </div>
+              </div>
+              <img src="https://a0.muscache.com/4ea/air/v2/pictures/bfc0bc89-58cb-4525-a26e-7b23b750ee00.jpg"/>
+            </div>
+            <div className="level-container last flex">
+              <div className="fs22 fw600 ">3</div>
+              <div className="level-content">
+                <div className="level-title fs22 fw600">
+                Finish up and publish
+                </div>
+                <div className="level-txt graytxt fs18">
+                Choose if you'd like to start with an experienced guest, set a starting price, and publish your listing.
+                </div>
+              </div>
+              <img src="https://a0.muscache.com/4ea/air/v2/pictures/c0634c73-9109-4710-8968-3e927df1191c.jpg"/>
+            </div>
+          </div>
+
+        </section>
+      )}
       {sectionProgress === 1 && (
         <section className="new-stay-container step-1">
           <div className="fw600 fs22"> Step 1</div>
@@ -399,13 +440,13 @@ export function StayEdit() {
                   d="M15.998 24.017L28.004 35.997"
                   stroke="#222222"
                   strokeWidth="1.998"
-                  stroke-miterlimit="10"
+                  strokeMiterlimit="10"
                 />
                 <path
                   d="M28.004 24.017L15.998 35.997"
                   stroke="#222222"
                   strokeWidth="1.998"
-                  stroke-miterlimit="10"
+                  strokeMiterlimit="10"
                 />
               </svg>
               <div className="type-title ">Barn</div>
@@ -1010,7 +1051,7 @@ export function StayEdit() {
                   d="M9 39.997H37"
                   stroke="#222222"
                   strokeWidth="2"
-                  stroke-miterlimit="10"
+                  strokeMiterlimit="10"
                 />
                 <path
                   d="M14.875 39.5373L19.184 22"
@@ -1030,7 +1071,7 @@ export function StayEdit() {
                   d="M16.0811 34.4861H29.1381"
                   stroke="#222222"
                   strokeWidth="2"
-                  stroke-miterlimit="10"
+                  strokeMiterlimit="10"
                 />
                 <path
                   d="M31.675 8.83L28.845 6L22.776 12.069L16.705 6L13.875 8.83L19.944 14.899L13.875 20.97L16.705 23.8L22.776 17.729L28.845 23.8L31.675 20.97L25.606 14.899L31.675 8.83Z"
@@ -1596,7 +1637,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M23.0261 7.548V11.578L27.0521 9.253L28.0521 10.986L23.0261 13.887V20.815L29.0261 17.351V11.548H31.0261V16.196L34.5171 14.182L35.5171 15.914L32.0261 17.929L36.0521 20.253L35.0521 21.986L30.0261 19.083L24.0261 22.547L30.0271 26.012L35.0521 23.11L36.0521 24.842L32.0261 27.166L35.5171 29.182L34.5171 30.914L31.0261 28.899V33.548H29.0261V27.744L23.0261 24.279V31.208L28.0521 34.11L27.0521 35.842L23.0261 33.517V37.548H21.0261V33.517L17.0001 35.842L16.0001 34.11L21.0261 31.208V24.279L15.0261 27.743V33.548H13.0261V28.898L9.53606 30.914L8.53606 29.182L12.0251 27.166L8.00006 24.842L9.00006 23.11L14.0251 26.011L20.0251 22.547L14.0261 19.083L9.00006 21.986L8.00006 20.253L12.0261 17.929L8.53606 15.914L9.53606 14.182L13.0261 16.196V11.548H15.0261V17.351L21.0261 20.815V13.887L16.0001 10.986L17.0001 9.253L21.0261 11.578V7.548H23.0261Z" fill="#222222"/>
             </svg>
               <div className="type-title ">Air conditioning</div>
@@ -1610,7 +1652,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 22.375H38" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
             <path d="M11 36.375V22.375" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
             <path d="M35 36.375V22.375" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
@@ -1658,7 +1701,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_2_1362)">
             <path d="M11 20.5H35V35.5C35 36.052 34.552 36.5 34 36.5H12C11.448 36.5 11 36.052 11 35.5V20.5Z" stroke="#222222" strokeWidth="2"/>
             <path d="M38 20.5H35" stroke="#222222" strokeWidth="2"/>
@@ -1686,7 +1730,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.917 18.926H31M23 8V10.801V26.926M23 8.926C27.418 8.926 31 12.508 31 16.926V26.926H23C23 26.926 23 12.051 23 8.926Z" stroke="#222222" strokeWidth="2"/>
             <path d="M23.083 18.926H15M23 8V10.801V26.926M23 8.926C18.582 8.926 15 12.508 15 16.926V26.926H23C23 26.926 23 12.051 23 8.926Z" stroke="#222222" strokeWidth="2"/>
             <path d="M33 26.926V36.926" stroke="#222222" strokeWidth="2"/>
@@ -1709,7 +1754,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_2_1364)">
             <path d="M19 25.875L14 36.875" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
             <path d="M27 25.875L32 36.875" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
@@ -1739,7 +1785,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.653 8C28.238 8 33.059 11.27 35.306 16H10C12.247 11.27 17.068 8 22.653 8Z" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
             <path d="M22.653 16V37" stroke="#222222" strokeWidth="2"/>
             <path d="M34.653 37V21" stroke="#222222" strokeWidth="2"/>
@@ -1771,7 +1818,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M34.875 12.5C36.049 12.5 37 13.451 37 14.625C37 15.799 36.049 16.75 34.875 16.75C33.701 16.75 32.75 15.799 32.75 14.625C32.75 13.451 33.701 12.5 34.875 12.5Z" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
             <path d="M34.875 28.25C36.049 28.25 37 29.201 37 30.375C37 31.549 36.049 32.5 34.875 32.5C33.701 32.5 32.75 31.549 32.75 30.375C32.75 29.201 33.701 28.25 34.875 28.25Z" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
             <path d="M11.312 27.875C12.589 27.875 13.625 28.911 13.625 30.188C13.625 31.465 12.589 32.5 11.312 32.5C10.035 32.5 9 31.465 9 30.188C9 28.911 10.035 27.875 11.312 27.875Z" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
@@ -1793,7 +1841,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 20V35H11V13H35V35H31V20C31 19.448 30.552 19 30 19H16C15.448 19 15 19.448 15 20Z" stroke="#222222" strokeWidth="2"/>
             <path d="M8 13H38" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
             <path d="M8 9H38" stroke="#222222" strokeWidth="2" strokeLinejoin="round"/>
@@ -1811,7 +1860,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 14.5C8 12.685 8.705 10.941 9.966 9.636C11.227 8.331 12.946 7.566 14.76 7.504L15 7.5H17C18.773 7.501 20.479 8.174 21.775 9.383C23.071 10.593 23.86 12.249 23.983 14.017L23.996 14.257L24.006 14.677C24.049 15.41 24.36 16.102 24.88 16.622C25.399 17.141 26.091 17.452 26.824 17.495L27 17.5H30C32.078 17.5 34.075 18.309 35.568 19.755C37.06 21.202 37.931 23.173 37.996 25.25L38 25.5V33.5C38 33.745 37.91 33.981 37.747 34.164C37.585 34.347 37.36 34.464 37.117 34.493L37 34.5H36V37.5H34V34.5H12V37.5H10V34.5H9C8.755 34.5 8.519 34.41 8.336 34.247C8.153 34.085 8.036 33.86 8.007 33.617L8 33.5V14.5ZM12 26.5H10V32.5H36V26.5H34M16 26.5H14H16ZM20 26.5H18H20ZM24 26.5H22H24ZM28 26.5H26H28ZM32 26.5H30H32ZM17 9.5H15C13.712 9.5 12.473 9.998 11.542 10.889C10.612 11.78 10.061 12.996 10.005 14.283L10 14.5V24.5H35.915L35.899 24.398C35.656 23.102 34.994 21.921 34.013 21.039C33.033 20.157 31.789 19.622 30.474 19.518L30.224 19.504L30 19.5H27C24.311 19.5 22.118 17.378 22.005 14.734L21.997 14.312C21.948 13.019 21.401 11.796 20.469 10.898C19.537 10.001 18.294 9.5 17 9.5Z" fill="#222222"/>
             <path d="M14 30.5H11.994V24.934H14V30.5Z" fill="#222222"/>
             <path d="M18 30.5H15.994V24.934H18V30.5Z" fill="#222222"/>
@@ -1831,7 +1881,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M33 16.5H35C35.552 16.5 36 16.948 36 17.5V27.5C36 28.052 35.552 28.5 35 28.5H33C32.448 28.5 32 28.052 32 27.5V17.5C32 16.948 32.448 16.5 33 16.5Z" stroke="#222222" strokeWidth="2"/>
             <path d="M29 12.5H31C31.552 12.5 32 12.948 32 13.5V31.5C32 32.052 31.552 32.5 31 32.5H29C28.448 32.5 28 32.052 28 31.5V13.5C28 12.948 28.448 12.5 29 12.5Z" stroke="#222222" strokeWidth="2"/>
             <path d="M15 12.5H17C17.552 12.5 18 12.948 18 13.5V31.5C18 32.052 17.552 32.5 17 32.5H15C14.448 32.5 14 32.052 14 31.5V13.5C14 12.948 14.448 12.5 15 12.5Z" stroke="#222222" strokeWidth="2"/>
@@ -1851,7 +1902,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_2_1367)">
             <path d="M37 23.501V25.501H9V15.501C9 15.251 9.094 15.01 9.26 14.827L9.35 14.74L15.704 9.29901C16.409 8.69501 17.429 8.66001 18.171 9.19301L18.307 9.29901L24.651 14.741C24.841 14.904 24.962 15.131 24.992 15.376L25 15.501V23.501M17.005 10.818L11 15.96V23.501H14V18.501C14 17.988 14.386 17.565 14.883 17.508L15 17.501H19C19.513 17.501 19.936 17.886 19.993 18.383L20 18.501V23.501H23V15.96L17.005 10.818ZM18 19.501H16V23.501H18V19.501Z" fill="#222222"/>
             <path d="M31.011 25.037H33.038L33.026 8.5H30.998L31.011 25.037Z" fill="#222222"/>
@@ -1937,7 +1989,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M26.2409 33.633L31.3639 35.498C33.0209 36.101 34.8379 35.375 35.6459 33.864L36.5919 34.209C35.6189 36.177 33.3389 37.17 31.2169 36.504L31.0169 36.436L24.2609 33.978L24.2519 33.974L24.2429 33.97L7.99988 28.058L8.34188 27.118L26.2409 33.633Z" fill="#222222"/>
             <path d="M26.2409 33.633L31.3639 35.498C33.0209 36.101 34.8379 35.375 35.6459 33.864L36.5919 34.209C35.6189 36.177 33.3389 37.17 31.2169 36.504L31.0169 36.436L24.2609 33.978L24.2519 33.974L24.2429 33.97L7.99988 28.058L8.34188 27.118L26.2409 33.633Z" stroke="#222222"/>
             <path d="M24.8639 32.733L29.2689 26.781C29.6909 26.212 29.6519 25.434 29.2009 24.91L29.1899 24.897L29.1789 24.886L29.0899 24.796L29.0789 24.785L29.0679 24.774L26.3989 22.371C26.2339 22.221 26.1889 21.984 26.2809 21.787L26.3259 21.71L29.0999 17.546L30.2979 18.345V18.356L30.3019 18.388L30.3339 18.634L30.3349 18.647C30.3479 18.726 30.3609 18.801 30.3759 18.867C30.6079 19.873 31.1419 20.663 32.0179 21.196C32.8339 21.691 33.9089 21.941 35.2339 21.99V22.99C32.2709 22.883 30.4319 21.806 29.6609 19.916L29.3049 19.044L28.7819 19.828L27.6299 21.557L27.3899 21.916L27.7109 22.207L29.7369 24.031C30.6519 24.855 30.8249 26.216 30.1689 27.238L30.0689 27.382L25.6179 33.294M20.6019 31.208L23.8249 26.992L24.1149 26.613L23.7499 26.307L20.7489 23.774C20.2659 23.366 19.9949 22.788 19.9649 22.19L21.0829 22.61C21.1299 22.705 21.1889 22.796 21.2599 22.878L21.2729 22.893L21.2869 22.906L21.3659 22.983L21.3799 22.998L21.3939 23.009L25.1239 26.158C25.3089 26.313 25.3529 26.575 25.2389 26.781L25.1899 26.854L21.3149 31.759M17.6749 16.692L18.0579 16.835L18.2739 16.49L19.1509 15.089C19.3119 14.832 19.4899 14.586 19.6849 14.354C21.5839 12.092 24.6969 11.449 27.2719 12.578L28.1049 12.944L27.9679 12.046C27.8489 11.269 27.9909 10.449 28.4269 9.72199C29.4229 8.06499 31.5729 7.52899 33.2299 8.52399C34.8869 9.51999 35.4229 11.669 34.4279 13.326C33.9679 14.09 33.2649 14.615 32.4759 14.863L32.3149 14.914L32.2179 15.052L31.7529 15.709L30.9089 15.147L31.6679 14.013C32.4279 13.939 33.1459 13.517 33.5699 12.811C34.2809 11.628 33.8989 10.093 32.7149 9.38199C31.5319 8.66999 29.9959 9.05299 29.2849 10.237C28.8629 10.938 28.8259 11.763 29.1109 12.466L28.0629 14.21C25.7389 12.381 22.3659 12.717 20.4509 14.998C20.3409 15.129 20.2369 15.264 20.1399 15.404L20.1329 15.414L20.0049 15.61L19.9989 15.619L19.3379 16.677L19.0129 17.194L19.5859 17.41" fill="#222222"/>
@@ -1976,7 +2029,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M30 14.75C30.552 14.75 31 15.198 31 15.75C31 16.302 30.552 16.75 30 16.75C29.448 16.75 29 16.302 29 15.75C29 15.198 29.448 14.75 30 14.75Z" fill="#222222"/>
             <path d="M23 8.75C30.732 8.75 37 15.018 37 22.75C37 30.482 30.732 36.75 23 36.75C15.268 36.75 9 30.482 9 22.75C9 15.018 15.268 8.75 23 8.75Z" stroke="#222222" strokeWidth="2"/>
             <path d="M27.889 23.75C27.491 25.703 25.957 27.246 24 27.644V29.672C24.089 29.659 24.178 29.651 24.266 29.635C27.146 29.109 29.411 26.816 29.901 23.929C29.911 23.87 29.908 23.809 29.916 23.75H27.889Z" fill="#222222"/>
@@ -1996,7 +2050,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 10.5H33C35.209 10.5 37 12.291 37 14.5V30.5C37 32.709 35.209 34.5 33 34.5H13C10.791 34.5 9 32.709 9 30.5V14.5C9 12.291 10.791 10.5 13 10.5Z" stroke="#222222" strokeWidth="2"/>
             <path d="M21 24.5C20.938 25.375 21 28.5 21 28.5H25V24.5H29V20.5H25V16.5H21V20.5H17V24.5C17 24.5 20 24.438 21 24.5Z" stroke="#222222" strokeWidth="2"/>
             </svg>
@@ -2011,7 +2066,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            >
+              <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M24 15.25C27.314 15.25 30 17.936 30 21.25V36.25C30 36.802 29.552 37.25 29 37.25H19C18.448 37.25 18 36.802 18 36.25V21.25L18.004 21.025C18.122 17.816 20.762 15.25 24 15.25Z" stroke="#222222" strokeWidth="2"/>
             <path d="M15 29.25H19H15Z" stroke="#222222" strokeWidth="2"/>
             <path d="M24 11.25V15.25V11.25Z" stroke="#222222" strokeWidth="2"/>
@@ -2031,7 +2087,8 @@ export function StayEdit() {
                     : ""
                 }
               `}
-            ><div className="carbon-alarm"><svg width="24px" height="24px" viewBox="6 5 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            ><div className="carbon-alarm">
+              <svg width="24px" height="24px" viewBox="6 5 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M30 14.75C30.552 14.75 31 15.198 31 15.75C31 16.302 30.552 16.75 30 16.75C29.448 16.75 29 16.302 29 15.75C29 15.198 29.448 14.75 30 14.75Z" fill="#222222"/>
             <path d="M23 8.75C30.732 8.75 37 15.018 37 22.75C37 30.482 30.732 36.75 23 36.75C15.268 36.75 9 30.482 9 22.75C9 15.018 15.268 8.75 23 8.75Z" stroke="#222222" strokeWidth="2"/>
             <path d="M27.889 23.75C27.491 25.703 25.957 27.246 24 27.644V29.672C24.089 29.659 24.178 29.651 24.266 29.635C27.146 29.109 29.411 26.816 29.901 23.929C29.911 23.87 29.908 23.809 29.916 23.75H27.889Z" fill="#222222"/>
@@ -2222,9 +2279,12 @@ export function StayEdit() {
             Back
           </button>
         )}
-        <button className="btn-footer-edit btn-next-level" onClick={sectionProgress !== 14?(() => changeSection(1)):(() => onSave())}>
+       {sectionProgress ===0 &&  <button className="btn-footer-edit btn-get-started" onClick={(() => changeSection(1))}>
+        Get started
+        </button>}
+       {sectionProgress !==0 &&  <button className="btn-footer-edit btn-next-level" onClick={sectionProgress !== 14?(() => changeSection(1)):(() => onSave())}>
           {sectionProgress !== 14?'Next':'Cheack your list'}
-        </button>
+        </button>}
         </div>
       </section>
     </section>
