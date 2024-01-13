@@ -7,6 +7,7 @@ import { authRoutes } from "./api/auth/auth.routes.js";
 import { userRoutes } from "./api/user/user.routes.js";
 import { stayRoutes } from "./api/stay/stay.routes.js";
 import { setupSocketAPI } from "./services/socket.services.js";
+import { logger } from "./services/logger.service.js";
 
 const app = express();
 // const port = 3030;
@@ -44,7 +45,6 @@ if (process.env.NODE_ENV === "production") {
   };
   app.use(cors(corsOptions));
 }
-import { logger } from "./services/logger.service.js";
 const port = process.env.PORT || 3030;
 server.listen(port, () => {
   logger.info("Server is running on port: " + port);

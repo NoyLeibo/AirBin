@@ -1,10 +1,3 @@
-// export function Messages() {
-//   return (
-//     <section>
-//       <h1>Your messages!</h1>
-//     </section>
-//   );
-// }
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 
@@ -70,42 +63,7 @@ export function Messages() {
 
   return (
     <section className="chat">
-      <h2>Lets Chat about {topic}</h2>
-
-      <label>
-        <input
-          type="checkbox"
-          name="isBotMode"
-          checked={isBotMode}
-          onChange={({ target }) => setIsBotMode(target.checked)}
-        />
-        Bot Mode
-      </label>
-
-      <div>
-        <label>
-          <input
-            type="radio"
-            name="topic"
-            value="Love"
-            checked={topic === "Love"}
-            onChange={({ target }) => setTopic(target.value)}
-          />
-          Love
-        </label>
-
-        <label>
-          <input
-            type="radio"
-            name="topic"
-            value="Politics"
-            checked={topic === "Politics"}
-            onChange={({ target }) => setTopic(target.value)}
-          />
-          Politics
-        </label>
-      </div>
-
+      <h1>Your messages!</h1>
       <form onSubmit={sendMsg}>
         <input
           type="text"
