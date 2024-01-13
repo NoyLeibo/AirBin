@@ -4,6 +4,7 @@ import { Server } from "socket.io";
 var gIo = null;
 
 export function setupSocketAPI(server) {
+  var userMap = new Map();
   gIo = new Server(server, {
     cors: {
       origin: "*",
@@ -28,19 +29,30 @@ export function setupSocketAPI(server) {
     });
 
     socket.on("chat-send-msg", (msg) => {
-      logger.info(
-        `New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`
-      );
+      logger.info(`New chat msg from socket [id: ${socket.id}] ${msg.txt}`);
       // emits to all sockets:
       // gIo.emit('chat addMsg', msg)
       // emits only to sockets in the same room except the sender!
       socket.broadcast.to(socket.myTopic).emit("chat-add-msg", msg);
     });
 
+    socket.on("chat-send-msg-username", (data) => {
+      emitToUserByUsername(data);
+    });
+
+    socket.on("set-user-socket-username", (username) => {
+      logger.info(
+        `Setting socket.userId = ${username} for socket [id: ${socket.id}]`
+      );
+      socket.username = username;
+    });
+
     socket.on("user-watch", (userId) => {
       logger.info(
         `user-watch from socket [id: ${socket.id}], on user ${userId}`
       );
+      userArr.push(userId);
+      console.log(userArr);
       socket.join("watching:" + userId);
     });
 
@@ -78,6 +90,18 @@ async function emitToUser({ type, data, userId }) {
   }
 }
 
+async function emitToUserByUsername({ type, data, username }) {
+  const socket = await _getUserSocketUsername(username);
+
+  if (socket) {
+    logger.info(`Emiting event: ${type} to user: ${username} data: ${data}`);
+    socket.emit(type, data);
+  } else {
+    logger.info(`No active socket for user: ${username}`);
+    // _printSockets()
+  }
+}
+
 // If possible, send to all sockets BUT not the current socket
 // Optionally, broadcast to a room / to all
 async function broadcast({ type, data, room = null, userId }) {
@@ -103,6 +127,12 @@ async function broadcast({ type, data, room = null, userId }) {
 async function _getUserSocket(userId) {
   const sockets = await _getAllSockets();
   const socket = sockets.find((s) => s.userId === userId);
+  return socket;
+}
+
+async function _getUserSocketUsername(username) {
+  const sockets = await _getAllSockets();
+  const socket = sockets.find((s) => s.username === username);
   return socket;
 }
 async function _getAllSockets() {

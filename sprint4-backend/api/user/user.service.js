@@ -108,6 +108,7 @@ async function add(user) {
       wishlist: [],
       myStays: [],
       guestsReservations: [],
+      chats: [],
     };
     const collection = await dbService.getCollection("user");
     await collection.insertOne(userToAdd);

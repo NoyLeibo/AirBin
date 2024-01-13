@@ -36,7 +36,6 @@ export function StayDetails() {
   // }
   // /stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn}&checkOut=${filterBy.selectedDates.checkOut}&selectedGuests=${totalGuests}
 
-
   async function loadStay() {
     try {
       const currStay = await stayService.getById(stayId);
@@ -94,7 +93,9 @@ export function StayDetails() {
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
                 <i className="fa-solid fa-star"></i>
-                {stay.reviews.length!==0&&<span className="avgRate">{stay.reviews[0].rate}.67 </span>}
+                {stay.reviews.length !== 0 && (
+                  <span className="avgRate">{stay.reviews[0].rate}.67 </span>
+                )}
                 <span className="fs14 dotP">
                   •
                   <span className="bold pointer underline">
@@ -188,55 +189,72 @@ export function StayDetails() {
         <div className="stay-dets-rating ">
           <span className="fs26 fw600">
             <i className="fa-solid fa-star"></i>
-            {stay.reviews.length!==0&&<span className="avgRate">{stay.reviews[0].rate}.67</span>}
-            {stay.reviews.length===0&&<span className="avgRate">New</span>}
+            {stay.reviews.length !== 0 && (
+              <span className="avgRate">{stay.reviews[0].rate}.67</span>
+            )}
+            {stay.reviews.length === 0 && <span className="avgRate">New</span>}
           </span>
           <span className="fs14 dotP"> • </span>
           <a href="#" className="stay-dets-rating-link fs26">
-            {stay.reviews.length} {stay.reviews.length!==0?"Reviews":"Review"}
+            {stay.reviews.length}{" "}
+            {stay.reviews.length !== 0 ? "Reviews" : "Review"}
           </a>
         </div>
         <div className="apt-rating-dets-con">
           <div className="apt-rating-dets">
             <div className="title-rating-det">Cleanliness</div>
-            {stay.reviews.length!==0&&<div className="rating-det">{stay.reviews[0].rate}.0</div>}
-            {stay.reviews.length===0&&<div className="rating-det">0</div>}
+            {stay.reviews.length !== 0 && (
+              <div className="rating-det">{stay.reviews[0].rate}.0</div>
+            )}
+            {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-solid fa-spray-can-sparkles  fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Accuracy</div>
-            {stay.reviews.length!==0&&<div className="rating-det">{stay.reviews[0].rate}.0</div>}
-            {stay.reviews.length===0&&<div className="rating-det">0</div>}
+            {stay.reviews.length !== 0 && (
+              <div className="rating-det">{stay.reviews[0].rate}.0</div>
+            )}
+            {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-regular fa-circle-check  fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Check-in</div>
-            {stay.reviews.length!==0&&<div className="rating-det">{stay.reviews[0].rate}.0</div>}
-            {stay.reviews.length===0&&<div className="rating-det">0</div>}
+            {stay.reviews.length !== 0 && (
+              <div className="rating-det">{stay.reviews[0].rate}.0</div>
+            )}
+            {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-solid fa-key fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Communication</div>
-            {stay.reviews.length!==0&&<div className="rating-det">{stay.reviews[0].rate}.0</div>}
-            {stay.reviews.length===0&&<div className="rating-det">0</div>}
+            {stay.reviews.length !== 0 && (
+              <div className="rating-det">{stay.reviews[0].rate}.0</div>
+            )}
+            {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-regular fa-message fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Location</div>
-            {stay.reviews.length!==0&&<div className="rating-det">{stay.reviews[0].rate}.0</div>}
-            {stay.reviews.length===0&&<div className="rating-det">0</div>}
+            {stay.reviews.length !== 0 && (
+              <div className="rating-det">{stay.reviews[0].rate}.0</div>
+            )}
+            {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-solid fa-map-location  fs20"></i>
           </div>
           <div className="apt-rating-dets">
             <div className="title-rating-det">Value</div>
-            {stay.reviews.length!==0&&<div className="rating-det">{stay.reviews[0].rate}.0</div>}
-            {stay.reviews.length===0&&<div className="rating-det">0</div>}
+            {stay.reviews.length !== 0 && (
+              <div className="rating-det">{stay.reviews[0].rate}.0</div>
+            )}
+            {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-solid fa-coins  fs20"></i>
           </div>
         </div>
       </section>
       <div className="reviews-cmp divider padding24">
-        {stay.reviews.length!==0&&<StayReviews reviews={stay.reviews} stars={stay.reviews[0].rate} />}
+        {stay.reviews.length !== 0 && (
+          <StayReviews reviews={stay.reviews} stars={stay.reviews[0].rate} />
+        )}
       </div>
       <div className="apt-loc-map padding24">
         <div className="apt-loc-map-title fs22 fw600">Where you’ll be</div>

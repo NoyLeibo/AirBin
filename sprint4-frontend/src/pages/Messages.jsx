@@ -13,36 +13,18 @@ export function Messages() {
 
   const [msg, setMsg] = useState({ txt: "" });
   const [msgs, setMsgs] = useState([]);
-  const [topic, setTopic] = useState("Love");
-  const [isBotMode, setIsBotMode] = useState(false);
-
-  const botTimeoutRef = useRef();
 
   useEffect(() => {
     socketService.on(SOCKET_EVENT_ADD_MSG, addMsg);
+    socketService.emit("set-user-socket-username", loggedInUser.username);
+
     return () => {
       socketService.off(SOCKET_EVENT_ADD_MSG, addMsg);
-      botTimeoutRef.current && clearTimeout(botTimeoutRef.current);
     };
   }, []);
 
-  useEffect(() => {
-    socketService.emit(SOCKET_EMIT_SET_TOPIC, topic);
-  }, [topic]);
-
   function addMsg(newMsg) {
     setMsgs((prevMsgs) => [...prevMsgs, newMsg]);
-  }
-
-  function sendBotResponse() {
-    // Handle case: send single bot response (debounce).
-    botTimeoutRef.current && clearTimeout(botTimeoutRef.current);
-    botTimeoutRef.current = setTimeout(() => {
-      setMsgs((prevMsgs) => [
-        ...prevMsgs,
-        { from: "Bot", txt: "You are amazing!" },
-      ]);
-    }, 1250);
   }
 
   function sendMsg(ev) {
@@ -50,8 +32,21 @@ export function Messages() {
     const from = loggedInUser?.fullname || "Guest";
     const newMsg = { from, txt: msg.txt };
     socketService.emit(SOCKET_EMIT_SEND_MSG, newMsg);
-    if (isBotMode) sendBotResponse();
+
     // We add the msg ourself to our own state
+    addMsg(newMsg);
+    setMsg({ txt: "" });
+  }
+
+  function sendMsgTo(ev) {
+    ev.preventDefault();
+    const from = loggedInUser?.fullname || "Guest";
+    const newMsg = { from, txt: msg.txt };
+    socketService.emit("chat-send-msg-username", {
+      type: "Hello world",
+      data: newMsg,
+      username: "demo_user",
+    });
     addMsg(newMsg);
     setMsg({ txt: "" });
   }
@@ -64,7 +59,8 @@ export function Messages() {
   return (
     <section className="chat">
       <h1>Your messages!</h1>
-      <form onSubmit={sendMsg}>
+      <form onSubmit={sendMsgTo}>
+        <h3>sent to: ${}</h3>
         <input
           type="text"
           value={msg.txt}
