@@ -488,3 +488,62 @@
 13.1.2024, 18:38:34 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
 13.1.2024, 18:38:43 - INFO - Req was made | / 
 13.1.2024, 18:38:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 19:05:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 19:05:24 - INFO - Req was made | / 
+13.1.2024, 19:05:40 - INFO - Req was made | / 
+13.1.2024, 19:05:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 19:26:28 - INFO - Req was made | / 
+13.1.2024, 19:26:28 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 20:04:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 20:04:37 - INFO - Req was made | / 
+13.1.2024, 20:06:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 20:06:49 - INFO - Req was made | / 
+13.1.2024, 20:24:26 - INFO - Req was made | / 
+13.1.2024, 20:24:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:27 - INFO - Req was made | / 
+13.1.2024, 20:24:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:33 - INFO - Req was made | / 
+13.1.2024, 20:24:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:33 - INFO - Req was made | / 
+13.1.2024, 20:24:33 - INFO - Req was made | / 
+13.1.2024, 20:24:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"3","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:34 - INFO - Req was made | / 
+13.1.2024, 20:24:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:34 - INFO - Req was made | / 
+13.1.2024, 20:24:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:35 - INFO - Req was made | / 
+13.1.2024, 20:24:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"6","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:36 - INFO - Req was made | / 
+13.1.2024, 20:24:36 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"7","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"8","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"9","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"10","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"11","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"12","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:38 - INFO - Req was made | / 
+13.1.2024, 20:24:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"13","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:38 - INFO - Req was made | / 
+13.1.2024, 20:24:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"14","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:38 - INFO - Req was made | / 
+13.1.2024, 20:24:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:43 - INFO - Req was made | / 
+13.1.2024, 20:24:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Israel"} 
+13.1.2024, 20:24:44 - INFO - Req was made | / 
+13.1.2024, 20:24:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 20:28:49 - INFO - Req was made | / 
+13.1.2024, 20:28:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 20:29:45 - INFO - Req was made | / 
+13.1.2024, 20:29:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 20:29:47 - INFO - Req was made | / 
+13.1.2024, 20:29:47 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 20:37:09 - INFO - Req was made | / 
+13.1.2024, 20:37:09 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 21:03:12 - INFO - Req was made | / 
+13.1.2024, 21:03:12 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 21:55:40 - INFO - Server is running on port: 3030 

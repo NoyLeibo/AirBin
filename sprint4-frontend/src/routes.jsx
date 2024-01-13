@@ -9,7 +9,7 @@ import { PaymentPage } from "./pages/PaymentPage.jsx";
 import { StayEdit } from "./pages/StayEdit.jsx";
 import { UserTrips } from "./pages/UserTrips.jsx";
 import { Wishlist } from "./pages/Wishlist.jsx";
-
+import { Messages } from "./pages/Messages.jsx";
 export const pageRouteNameMap = {
   STAY_INDEX: "/",
   STAY_DETAILS: "details/:stayId",
@@ -75,6 +75,11 @@ const routes = [
     path: "wishlist",
     component: <Wishlist />,
     label: "wishlist",
+  },
+  {
+    path: "messages",
+    component: <Messages />,
+    label: "messages",
   },
 ];
 

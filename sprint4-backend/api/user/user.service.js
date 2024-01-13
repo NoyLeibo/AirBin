@@ -1,5 +1,5 @@
 import { dbService } from "../../services/db.service.js";
-import { loggerService } from "../../services/logger.service.js";
+import { loggerService } from "../../services/logger.service.older.js";
 import { utilService } from "../../services/util.service.js";
 
 import mongodb from "mongodb";
