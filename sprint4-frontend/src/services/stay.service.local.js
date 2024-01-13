@@ -113,7 +113,7 @@ async function addStayMsg(stayId, txt) {
 function getEmptyStay() {
   return {
     name: "",
-    price: "",
+    price: 0,
     type: "",
     imgUrls: [],
     summary: "",

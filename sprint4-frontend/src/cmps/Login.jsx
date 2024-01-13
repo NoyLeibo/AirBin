@@ -35,10 +35,10 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
       setIsLoginOpen(false);
     } catch (err) {
       console.log("err: " + err);
-    } finally {
       if (!userService.getLoggedinUser()) {
         alert("Wrong username or password, please try again!");
       }
+    } finally {
     }
   };
 
