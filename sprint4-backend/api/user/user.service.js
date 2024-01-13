@@ -1,5 +1,6 @@
 import { dbService } from "../../services/db.service.js";
 import { loggerService } from "../../services/logger.service.js";
+import { utilService } from "../../services/util.service.js";
 
 import mongodb from "mongodb";
 const { ObjectId } = mongodb;
@@ -39,7 +40,7 @@ async function query(filterBy = {}) {
 async function getById(userId) {
   try {
     const collection = await dbService.getCollection("user");
-    const user = await collection.findOne({ _id: ObjectId(userId) });
+    const user = await collection.findOne({ _id: new ObjectId(userId) });
     delete user.password;
     return user;
   } catch (err) {
@@ -72,13 +73,16 @@ async function update(user) {
   try {
     // peek only updatable fields!
     const userToSave = {
-      _id: ObjectId(user._id),
-      username: user.username,
-      fullname: user.fullname,
+      _id: new ObjectId(user._id),
+      trips: user.trips,
+      wishlist: user.wishlist,
+      myStays: user.myStays,
+      guestsReservations: user.guestsReservations,
     };
+
     const collection = await dbService.getCollection("user");
     await collection.updateOne({ _id: userToSave._id }, { $set: userToSave });
-    return userToSave;
+    return user;
   } catch (err) {
     loggerService.error(`cannot update user ${user._id}`, err);
     throw err;
@@ -140,6 +144,33 @@ async function demoUser() {
     throw err;
   }
 }
+
+// async function updateTrips(newTrip) {
+//   newTrip._id = utilService.makeId();
+//   console.log(newTrip.guest._id);
+//   const guest = await getById(newTrip.guest._id);
+//   //IMPORTENT CHANGE TO HOST
+//   const host = await getById(newTrip.guest._id);
+//   guest.trips.push(newTrip);
+//   host.guestsReservations.push(newTrip);
+//   await update(guest);
+//   await update(host);
+//   // const user = await httpService.put(`user/${_id}`, {_id, score})
+//   // When admin updates other user's details, do not update loggedinUser
+
+//   return guest;
+// }
+
+// async function updateReservationHost(reservation) {
+//   const host = await getById(reservation.host._id);
+
+//   const updatedReservations = host.guestsReservations.map((currRes) =>
+//     currRes._id === reservation._id ? reservation : currRes
+//   );
+//   host.guestsReservations = updatedReservations;
+//   await update(host);
+//   return host;
+// }
 
 function _buildCriteria(filterBy) {
   const criteria = {};

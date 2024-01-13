@@ -37,9 +37,30 @@ export async function deleteUser(req, res) {
   }
 }
 
+// export async function addUserTrip(req, res) {
+//   try {
+//     const newTrip = req.body;
+//     const savedUser = await userService.updateTrips(newTrip);
+//     res.send(savedUser);
+//   } catch (err) {
+//     loggerService.error("Failed to update user", err);
+//     res.status(500).send({ err: "Failed to update user" });
+//   }
+// }
+
+// export async function addHostReservation(req, res) {
+//   try {
+//     const reservation = req.body;
+//     const savedUser = await userService.updateReservationHost(reservation);
+//     res.send(savedUser);
+//   } catch {
+//     loggerService.error("Failed to update user", err);
+//     res.status(500).send({ err: "Failed to update user" });
+//   }
+// }
+
 export async function updateUser(req, res) {
   try {
-    console.log(req.body);
     const user = req.body;
     const savedUser = await userService.update(user);
     res.send(savedUser);

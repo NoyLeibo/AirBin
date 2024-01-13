@@ -383,3 +383,34 @@
 12.1.2024, 19:24:59 - INFO - User login:  | {"_id":"65a1751d198fe3b6e2b51006","username":"demo_user","password":"123456","fullname":"Demo User","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
 12.1.2024, 19:25:48 - DEBUG - auth.service - login with username: demo_user 
 12.1.2024, 19:25:48 - INFO - User login:  | {"username":"demo_user","password":"123456","fullname":"Demo User","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[],"_id":"65a1761c7170c4376b3325ef"} 
+12.1.2024, 19:28:48 - DEBUG - auth.service - login with username: demo_user 
+12.1.2024, 19:28:48 - INFO - User login:  | {"_id":"65a1761c7170c4376b3325ef","username":"demo_user","password":"123456","fullname":"Demo User","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+13.1.2024, 11:28:48 - DEBUG - auth.service - login with username:  
+13.1.2024, 11:28:48 - ERROR - Failed to Login Error: Invalid username or password 
+13.1.2024, 11:29:04 - DEBUG - auth.service - login with username: iris 
+13.1.2024, 11:29:04 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+13.1.2024, 11:33:41 - ERROR - while finding user 65a127d51cd27b4cddf5cc5e | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 11:33:41 - ERROR - Failed to update user | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 11:36:01 - ERROR - while finding user 65a127d51cd27b4cddf5cc5e | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 11:36:01 - ERROR - Failed to update user | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 11:36:27 - ERROR - Failed to update user | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 11:36:27 - ERROR - while finding user 65a127d51cd27b4cddf5cc5e | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 11:37:15 - ERROR - Failed to update user | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 11:37:15 - ERROR - while finding user 65a127d51cd27b4cddf5cc5e | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 11:39:11 - ERROR - while finding user demo123 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+13.1.2024, 11:39:11 - ERROR - Failed to update user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+13.1.2024, 11:39:52 - ERROR - while finding user demo123 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+13.1.2024, 11:39:52 - ERROR - Failed to update user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+13.1.2024, 11:40:53 - ERROR - cannot update user 65a127d51cd27b4cddf5cc5e | ReferenceError: userToSave is not defined 
+13.1.2024, 11:40:53 - ERROR - Failed to update user | ReferenceError: userToSave is not defined 
+13.1.2024, 11:42:13 - ERROR - Failed to update user | ReferenceError: user is not defined 
+13.1.2024, 11:42:36 - ERROR - Failed to update user | ReferenceError: user is not defined 
+13.1.2024, 11:44:13 - ERROR - Failed to update user | ReferenceError: user is not defined 
+13.1.2024, 12:31:06 - ERROR - while finding user demo123 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+13.1.2024, 12:31:06 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+13.1.2024, 12:57:28 - ERROR - cannot update user 65a127d51cd27b4cddf5cc5e | ReferenceError: user_id is not defined 
+13.1.2024, 12:57:28 - ERROR - Failed to update user | ReferenceError: user_id is not defined 
+13.1.2024, 13:02:16 - ERROR - cannot update user 65a127d51cd27b4cddf5cc5e | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 13:02:16 - ERROR - Failed to update user | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 13:02:17 - ERROR - cannot update user 65a127d51cd27b4cddf5cc5e | TypeError: Class constructor ObjectId cannot be invoked without 'new' 
+13.1.2024, 13:02:17 - ERROR - Failed to update user | TypeError: Class constructor ObjectId cannot be invoked without 'new' 

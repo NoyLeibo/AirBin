@@ -99,6 +99,7 @@ export async function updateUser(user) {
     throw err;
   }
 }
+
 export async function loadUser(userId) {
   try {
     const user = await userService.getById(userId);

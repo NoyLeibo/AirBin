@@ -179,7 +179,7 @@ function _createStays() {
         ],
         labels: ["Urban", "Modern", "City"],
         host: {
-          _id: "demo123",
+          _id: "65a127d51cd27b4cddf5cc5e",
           fullname: "Sophia Turner",
           imgUrl:
             "https://a0.muscache.com/im/pictures/user/21446f54-4214-40f4-813b-6d6c0113d7f3.jpg?im_w=240",

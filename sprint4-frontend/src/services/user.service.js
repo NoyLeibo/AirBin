@@ -1,5 +1,6 @@
 import { storageService } from "./async-storage.service";
 import { httpService } from "./http.service";
+import { utilService } from "./util.service";
 
 const STORAGE_KEY_LOGGEDIN_USER = "loggedinUser";
 const BASE_URL = "auth/";
@@ -19,8 +20,8 @@ export const userService = {
   removeTrip,
   updateWishlist,
   updateReservationGuest,
-  updateReservationHost,
-  addDemoUser,
+  updateHostReservation,
+  // addDemoUser,
 };
 
 window.userService = userService;
@@ -39,8 +40,7 @@ async function getUsers() {
 // }
 
 async function getById(userId) {
-  const user = await storageService.get("user", userId);
-  // const user = await httpService.get(`user/${userId}`)
+  const user = await httpService.get(`user/${userId}`);
   return user;
 }
 
@@ -49,43 +49,53 @@ function remove(userId) {
   // return httpService.delete(`user/${userId}`)
 }
 
-async function update({ _id, score }) {
-  const user = await storageService.get("user", _id);
-  user.score = score;
-  await storageService.put("user", user);
-
-  // const user = await httpService.put(`user/${_id}`, {_id, score})
-
+async function update(userId, user) {
+  const savedUser = await httpService.put(`user/${userId}`, user);
   // When admin updates other user's details, do not update loggedinUser
-  if (getLoggedinUser()._id === user._id) saveLocalUser(user);
-  return user;
+  if (getLoggedinUser()._id === user._id) saveLocalUser(savedUser);
+  return savedUser;
 }
 
 async function updateTripList(newTrip) {
-  newTrip._id = storageService.randomId();
-  const user = await getById(newTrip.guest._id);
-  const host = await getById(newTrip.host._id);
-  console.log(user);
-  user.trips.push(newTrip);
-  host.guestsReservations.push(newTrip);
-  await storageService.put("user", user);
-  await storageService.put("user", host);
-  // const user = await httpService.put(`user/${_id}`, {_id, score})
-  // When admin updates other user's details, do not update loggedinUser
-  saveLocalUser(user);
-  return user;
+  newTrip._id = utilService.makeId();
+  const guest = await addTripToGuest(newTrip);
+  const host = await addTripToHost(newTrip);
+  return guest;
 }
 
-async function updateReservationHost(reservation) {
-  const host = await getById(reservation.host._id);
+async function addTripToGuest(newTrip) {
+  const guest = await getById(newTrip.guest._id);
+  guest.trips.push(newTrip);
+  return await update(guest._id, guest);
+}
 
+async function addTripToHost(newTrip) {
+  const host = await getById(newTrip.host._id);
+  host.guestsReservations.push(newTrip);
+  return await update(host._id, host);
+}
+
+async function updateHostReservation(reservation) {
+  const host = await getById(reservation.host._id);
   const updatedReservations = host.guestsReservations.map((currRes) =>
     currRes._id === reservation._id ? reservation : currRes
   );
   host.guestsReservations = updatedReservations;
-  await storageService.put("user", host);
+  await update(host._id, host);
+  saveLocalUser(host);
   return host;
 }
+
+// async function updateReservationHost(reservation) {
+//   const host = await getById(reservation.host._id);
+
+//   const updatedReservations = host.guestsReservations.map((currRes) =>
+//     currRes._id === reservation._id ? reservation : currRes
+//   );
+//   host.guestsReservations = updatedReservations;
+//   await storageService.put("user", host);
+//   return host;
+// }
 
 async function updateReservationGuest(reservation) {
   const guest = await getById(reservation.guest._id);
@@ -93,7 +103,7 @@ async function updateReservationGuest(reservation) {
     currRes._id === reservation._id ? reservation : currRes
   );
   guest.trips = updatedTrips;
-  await storageService.put("user", guest);
+  await update(guest._id, guest);
   return guest;
 }
 
@@ -164,26 +174,26 @@ async function signup(userCred) {
   return saveLocalUser(user);
 }
 
-async function addDemoUser() {
-  const users = await getUsers();
-  let demo = users.find((currUser) => currUser._id === "demo123");
-  if (demo) {
-    return demo;
-  }
-  demo = {
-    username: "demoUser",
-    password: "123456",
-    fullname: "Demo User",
-    imgUrl:
-      "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
-    trips: [],
-    _id: "demo123",
-    wishlist: [],
-    myStays: [],
-    guestsReservations: [],
-  };
-  return await storageService.demoUser("user", demo);
-}
+// async function addDemoUser() {
+//   const users = await getUsers();
+//   let demo = users.find((currUser) => currUser._id === "demo123");
+//   if (demo) {
+//     return demo;
+//   }
+//   demo = {
+//     username: "demoUser",
+//     password: "123456",
+//     fullname: "Demo User",
+//     imgUrl:
+//       "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
+//     trips: [],
+//     _id: "demo123",
+//     wishlist: [],
+//     myStays: [],
+//     guestsReservations: [],
+//   };
+//   return await storageService.demoUser("user", demo);
+// }
 
 async function logout() {
   sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER);

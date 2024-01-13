@@ -9,14 +9,7 @@ const app = express();
 const port = 3030;
 
 const corsOptions = {
-  origin: [
-    // "http://localhost:8080",
-    // "http://127.0.0.1:5175",
-    // "http://localhost:5175",
-    "http://127.0.0.1:5173",
-    "http://localhost:5173",
-    // "http://127.0.0.1:5174",
-  ],
+  origin: ["http://127.0.0.1:5173", "http://localhost:5173"],
   credentials: true,
 };
 app.use(cors(corsOptions));

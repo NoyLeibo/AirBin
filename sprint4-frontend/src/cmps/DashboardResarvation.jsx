@@ -63,8 +63,8 @@ export function DashboardResarvation() {
   async function onActionClicked(reservation, status, color) {
     console.log(reservation);
     reservation.status = status;
-    const guest = await userService.updateReservationGuest(reservation);
-    const host = await userService.updateReservationHost(reservation);
+    const guest = await userService.updateHostReservation(reservation);
+    const host = await userService.updateHostReservation(reservation);
     await updateUser(host);
   }
 

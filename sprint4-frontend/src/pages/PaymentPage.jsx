@@ -29,7 +29,7 @@ export function PaymentPage() {
   const totalPrice = price + serviceFee;
 
   useEffect(() => {
-    document.documentElement.style.setProperty('--main-layout-width', '1280px')
+    document.documentElement.style.setProperty("--main-layout-width", "1280px");
     loadStay();
   }, []);
 
@@ -49,7 +49,7 @@ export function PaymentPage() {
     }
   }
 
-  async function onConfirm() {
+  function createTrip() {
     const stayDetails = {
       stayId: stayId,
       stayImg: stay.imgUrls[0],
@@ -72,6 +72,11 @@ export function PaymentPage() {
       totalPrice,
       status: "pending",
     };
+    return newTrip;
+  }
+
+  async function onConfirm() {
+    const newTrip = createTrip();
     const updatedUser = await userService.updateTripList(newTrip);
     await updateUser(updatedUser);
     navigate("/userTrips");
