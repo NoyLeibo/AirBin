@@ -1,4 +1,4 @@
-import { stayService } from "../services/stay.service.local.js";
+import { stayService } from "../services/stay.service.js";
 import { userService } from "../services/user.service.js";
 import { store } from "./store.js";
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
@@ -12,15 +12,15 @@ import {
   UNDO_REMOVE_STAY,
   UPDATE_STAY,
   SET_IS_LOADING,
-  SET_SELECTED_DATES,
-  SET_GUESTS_NUMBER,
+  // SET_SELECTED_DATES,
+  // SET_GUESTS_NUMBER,
 } from "./stay.reducer.js";
 import { SET_SCORE, SET_USERS } from "./user.reducer.js";
 import { SET_FILTER_BY } from "./stay.reducer.js";
 
 // Action Creators:
 export function getActionRemoveStay(stayId) {
-  const filterBy = store.getState().toyModule.filterBy;
+  const filterBy = store.getState().stayModule.filterBy;
 
   return {
     type: REMOVE_STAY,
@@ -58,11 +58,24 @@ export async function loadStay() {
 }
 
 export function setSelectedDates(selectedDates) {
-  store.dispatch({ type: SET_SELECTED_DATES, selectedDates });
+  return {
+    type: SET_FILTER_BY,
+    filterBy: { selectedDates: selectedDates }
+  };
+}
+
+export function setSelectedDestination(selectedDestination) {
+  return {
+    type: SET_FILTER_BY,
+    filterBy: { selectedDestination: selectedDestination }
+  }
 }
 
 export function setSelectedGuests(selectedGuests) {
-  return { type: SET_GUESTS_NUMBER, selectedGuests };
+  return {
+    type: SET_FILTER_BY,
+    filterBy: { selectedGuests: selectedGuests }
+  };
 }
 
 export async function removeStay(stayId) {

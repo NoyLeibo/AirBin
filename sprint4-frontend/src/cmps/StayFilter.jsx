@@ -20,7 +20,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
   onSetFilter = useRef(utilService.debounce(onSetFilter));
 
   const selectedEmojis = filterBy.placeType
-  console.log('isOpenFilter', isOpenFilter);
+  // console.log('isOpenFilter', isOpenFilter);
   useEffectUpdate(() => {
     onSetFilter.current(filterByToEdit);
   }, [filterByToEdit]);

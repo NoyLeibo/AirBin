@@ -4,6 +4,7 @@ import { utilService } from "./util.service.js";
 import { userService } from "./user.service.js";
 
 const STORAGE_KEY = "stay";
+const BASE_URL = "stay/";
 
 export const stayService = {
   query,
@@ -11,13 +12,15 @@ export const stayService = {
   save,
   remove,
   getEmptyStay,
-  addStayMsg,
+  // addStay,
+  // addStayMsg,
+  addStayReview,
   getDefaultFilter,
 };
 window.cs = stayService;
 
-async function query(filterBy = { txt: "", price: 0 }) {
-  return httpService.get(STORAGE_KEY, filterBy);
+async function query(filterBy = {}) {
+  return httpService.get(BASE_URL, filterBy);
 }
 
 function getById(stayId) {
@@ -27,6 +30,11 @@ function getById(stayId) {
 async function remove(stayId) {
   return httpService.delete(`stay/${stayId}`);
 }
+
+// async function addStay(stay) {
+//   await httpService.post(`stay/`, stay);
+// }
+
 async function save(stay) {
   var savedStay;
   if (stay._id) {
@@ -37,15 +45,29 @@ async function save(stay) {
   return savedStay;
 }
 
-async function addStayMsg(stayId, txt) {
-  const savedMsg = await httpService.post(`stay/${stayId}/msg`, { txt });
-  return savedMsg;
+async function addStayReview(stayId, review) {
+  const savedReview = await httpService.post(`stay/${stayId}/review`, {
+    txt: review,
+  });
+  return savedReview;
 }
 
 function getEmptyStay() {
   return {
     name: "",
-    price: utilService.getRandomIntInclusive(100, 1000),
+    type: "",
+    imgUrls: [],
+    price: 40,
+    summary: "",
+    capacity: 1,
+    amentities: [],
+    bathrooms: 1,
+    bedrooms: 1,
+    roomType: "",
+    host: {},
+    loc: {},
+    reviews: [],
+    likedByUsers: [],
   };
 }
 
@@ -56,12 +78,14 @@ function getDefaultFilter() {
     bedrooms: "",
     beds: "",
     bathrooms: "",
-    guests: {
+    selectedGuests: {
       Adults: 0,
       Children: 0,
       Infants: 0,
-      Pets: 0
+      Pets: 0,
     },
-    destination: ""
+    destination: "",
+    selectedDates: { checkIn: null, checkOut: null },
+    selectedDestination: "",
   };
 }

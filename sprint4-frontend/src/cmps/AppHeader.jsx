@@ -25,16 +25,15 @@ export function AppHeader() {
   const [userSearchDestination, setUserSearchDestination] = useState("")
   const [isScrolledDown, setIsScrolledDown] = useState(true)
   const [showScreenShadow, setShowScreenShadow] = useState(false)
-
-  const selectedDates = useSelector(
-    (storeState) => storeState.stayModule.selectedDates
-  )
-  const selectedGuests = useSelector(
-    (storeState) => storeState.stayModule.selectedGuests
-  )
-  const gRef = useRef() // global ref use for closing modals by noy
-
   const [isClassAdded, setIsClassAdded] = useState(false)
+
+  const filterBy = useSelector(
+    (storeState) => storeState.stayModule.filterBy
+  )
+
+
+  const gRef = useRef() // global use ref for closing modals by noy
+
   const location = useLocation()
   const currentPath = location.pathname
   let detailPath = location.pathname
@@ -47,9 +46,9 @@ export function AppHeader() {
 
   // console.log("Current page path:", currentPath)
   useEffect(() => {
-    if (selectedDates.checkIn != null && selectedDates.checkOut != null)
+    if (filterBy.selectedDates.checkIn != null && filterBy.selectedDates.checkOut != null)
       setIsOpenDates(false)
-  }, [selectedDates])
+  }, [filterBy])
 
   useEffect(() => {
     if (!isScrolledDown) {
@@ -134,7 +133,7 @@ export function AppHeader() {
     }
   }, [isOpenGuests, isOpenDates, isOpenDestinations, isMenuOpen, isLoginOpen])
 
-  const totalGuests = Object.values(selectedGuests).reduce(
+  const totalGuests = Object.values(filterBy.selectedGuests).reduce(
     (total, currentValue) => total + currentValue,
     0
   )
@@ -327,24 +326,24 @@ export function AppHeader() {
               value={userSearchDestination}
               onInput={handleInputChange}
               placeholder="Search destinations"
-              className="destination-input"
+              className="destination-input fs12"
             ></input>
           </div>
           {isOpenDestinations && (
             <div ref={gRef}>
-              <Destinations userSearchDestination={userSearchDestination} />
+              <Destinations setUserSearchDestination={setUserSearchDestination} />
             </div>
           )}
           <span className="splitter"></span>
 
           <div className="form-dates flex column" onClick={toggleCalendarModal}>
             <div className="fs12 blacktxt fw600">Check in</div>
-            {selectedDates.checkIn === null && (
+            {filterBy.selectedDates.checkIn === null && (
               <div className="fs14 blacktxt fw600">Add dates</div>
             )}
-            {selectedDates.checkIn && (
+            {filterBy.selectedDates.checkIn && (
               <div className="fs14 blacktxt fw600">
-                {selectedDates.checkIn.toLocaleDateString()}
+                {filterBy.selectedDates.checkIn.toLocaleDateString()}
               </div>
             )}{" "}
           </div>
@@ -355,12 +354,12 @@ export function AppHeader() {
           )}
           <div className="form-dates flex column" onClick={toggleCalendarModal}>
             <div className="fs12 blacktxt fw600">Check out</div>
-            {selectedDates.checkOut === null && (
+            {filterBy.selectedDates.checkOut === null && (
               <div className="fs14 blacktxt fw600">Add dates</div>
             )}
-            {selectedDates.checkOut && (
+            {filterBy.selectedDates.checkOut && (
               <div className="fs14 blacktxt fw600">
-                {selectedDates.checkOut.toLocaleDateString()}
+                {filterBy.selectedDates.checkOut.toLocaleDateString()}
               </div>
             )}
           </div>

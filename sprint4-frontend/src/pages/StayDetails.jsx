@@ -8,7 +8,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 
 import { showErrorMsg } from "../services/event-bus.service";
-import { stayService } from "../services/stay.service.local";
+import { stayService } from "../services/stay.service";
 import { GalleryApt } from "../cmps/GalleryApt";
 import { StayAmenities } from "../cmps/StayAmenities";
 import { StayReviews } from "../cmps/StayReviews";
@@ -19,9 +19,9 @@ export function StayDetails() {
 
   const { stayId } = useParams();
   const navigate = useNavigate();
-  
+
   useEffect(() => {
-    document.documentElement.style.setProperty('--main-layout-width', '1000px')
+    document.documentElement.style.setProperty("--main-layout-width", "1000px");
     loadStay();
   }, []);
 
@@ -44,6 +44,17 @@ export function StayDetails() {
     } catch (err) {
       showErrorMsg("Cant load stay");
       navigate("/stay");
+    }
+  }
+
+  async function onAddReview() {
+    try {
+      const review = prompt("Enter your review");
+      const toAddReview = await stayService.addStayReview(stayId, review);
+      loadStay();
+    } catch (err) {
+      showErrorMsg("Cant add review");
+      navigate(`/details/${stayId}`);
     }
   }
 
@@ -78,7 +89,7 @@ export function StayDetails() {
             <div className="capacity fs16">
               {stay.capacity} guests <span className="fs14">•</span>{" "}
               {stay.bedrooms} rooms <span className="fs14">•</span> {stay.beds}{" "}
-              beds <span className="fs14">•</span> {stay.baths} bath
+              beds <span className="fs14">•</span> {stay.bedrooms} bath
             </div>
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
@@ -95,7 +106,7 @@ export function StayDetails() {
             </div>
           </div>
           <div className="apt-host-details divider flex align-center  padding24">
-            <img src={stay.host.imgUrl} className="host-avatar-img" />
+            <img src={stay.host.pictureUrl} className="host-avatar-img" />
             <div className="apt-host-info ">
               <div className="host-name fs16 fw600">
                 Hosted by {stay.host.fullname}{" "}
@@ -303,6 +314,7 @@ export function StayDetails() {
             </p>
           </div>
         </div>
+        <button onClick={onAddReview}>Add Review</button>
       </section>
     </div>
   );

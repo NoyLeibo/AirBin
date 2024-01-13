@@ -12,15 +12,16 @@
   // height: 84px; ברגע שגולל למטה
   z-index: 5;
   transition: position 0.3s;
-  
+
 
   //   breakpoint 950px!!!
-  &.header-sticky{
+  &.header-sticky {
     padding-left: 40px;
     padding-right: 40px;
     position: fixed;
     top: 0;
   }
+
   &.header-inserted {
     height: 80px;
   }
@@ -82,10 +83,12 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      .word-icon{
+
+      .word-icon {
         margin-left: 0.5em;
         margin-right: 0.5em;
       }
+
       .moveto-host {
         color: #222222;
         border-radius: 10px;
@@ -168,7 +171,7 @@
 
     &.small-form-expended {
       opacity: 1;
-      
+
     }
 
     .splitter {
@@ -291,7 +294,8 @@
     transform: translateY(-75px) scaleX(0.4) scaleY(0.7);
     opacity: 0;
   }
-  &.close-header{
+
+  &.close-header {
     display: none;
   }
 
@@ -334,6 +338,7 @@
       height: 30px;
       border: 0;
       cursor: pointer;
+      font-size: 13px;
 
       &:focus {
         outline: none;
