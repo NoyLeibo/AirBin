@@ -56,12 +56,13 @@ function getDefaultFilter() {
     bedrooms: "",
     beds: "",
     bathrooms: "",
-    guests: {
+    selectedGuests: {
       Adults: 0,
       Children: 0,
       Infants: 0,
       Pets: 0
     },
-    destination: ""
+    selectedDates: { checkIn: null, checkOut: null },
+    selectedDestination: ""
   };
 }

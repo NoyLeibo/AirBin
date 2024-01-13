@@ -9,8 +9,8 @@ export const CLEAR_CART = "CLEAR_CART";
 export const UNDO_REMOVE_STAY = "UNDO_REMOVE_STAY";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const SET_IS_LOADING = "SET_IS_LOADING";
-export const SET_SELECTED_DATES = "SET_SELECTED_DATES";
-export const SET_GUESTS_NUMBER = "SET_GUESTS_NUMBER";
+// export const SET_SELECTED_DATES = "SET_SELECTED_DATES";
+// export const SET_GUESTS_NUMBER = "SET_GUESTS_NUMBER";
 export const SET_FILTER_BY = "SET_FILTER_BY";
 
 const initialState = {
@@ -18,8 +18,8 @@ const initialState = {
   cart: [],
   lastRemovedStay: null,
   isLoading: false,
-  selectedDates: { checkIn: null, checkOut: null },
-  selectedGuests: { Adults: 0, Children: 0, Infants: 0, Pets: 0 },
+  // selectedDates: { checkIn: null, checkOut: null },
+  // selectedGuests: { Adults: 0, Children: 0, Infants: 0, Pets: 0 },
   filterBy: stayService.getDefaultFilter(),
   // selectedPriceRange: [0, 2000]
   filters: [
@@ -65,8 +65,8 @@ const initialState = {
       OMG: "https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg",
     },
   ],
-  types:[{
-   
+  types: [{
+
   }]
 }
 
@@ -106,10 +106,6 @@ export function stayReducer(state = initialState, action) {
       break;
     case SET_IS_LOADING:
       return { ...state, isLoading: action.isLoading };
-    case SET_SELECTED_DATES:
-      return { ...state, selectedDates: action.selectedDates };
-    case SET_GUESTS_NUMBER:
-      return { ...state, selectedGuests: action.selectedGuests };
     case UNDO_REMOVE_STAY:
       if (state.lastRemovedStay) {
         newState = {
@@ -118,10 +114,16 @@ export function stayReducer(state = initialState, action) {
           lastRemovedStay: null,
         };
       }
-    case SET_FILTER_BY:
-      return { ...state, filterBy: { ...state.filterBy, ...action.filterBy } };
       break;
+
+    case SET_FILTER_BY:
+      return {
+        ...state,
+        filterBy: { ...state.filterBy, ...action.filterBy }
+      };
+
     default:
+      break;
   }
   return newState;
 }

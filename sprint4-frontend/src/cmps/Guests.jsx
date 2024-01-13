@@ -3,9 +3,9 @@ import { setSelectedGuests } from '../store/stay.actions';
 import { useSelector, useDispatch } from "react-redux";
 
 export function Guests() {
-    const selectedGuests = useSelector((storeState) => storeState.stayModule.selectedGuests)
+    const selectedGuests = useSelector((storeState) => storeState.stayModule.filterBy.selectedGuests)
     const dispatch = useDispatch();
-
+    console.log(selectedGuests);
 
     const handleAdultsChange = (increment, event) => {
         event.preventDefault();
@@ -75,7 +75,7 @@ export function Guests() {
                     </div>
                     <div className='change-guests flex row align-center justify-between'>
                         {
-                            (selectedGuests.Adults === 0 || (selectedGuests.Adults === 1 && selectedGuests.Children === 1) || (selectedGuests.Adults === 1 && selectedGuests.Infants === 1) || (selectedGuests.Adults === 1 && selectedGuests.Pets === 1)) ?
+                            (selectedGuests.Adults === 0 || (selectedGuests.Adults === 1 && selectedGuests.Children >= 1) || (selectedGuests.Adults === 1 && selectedGuests.Infants >= 1) || (selectedGuests.Adults === 1 && selectedGuests.Pets >= 1)) ?
                                 <div className='clean-btn change-guest-btn no-drop empty-guest-btn-bgc'><i className="fa-solid fa-minus fa-l"></i></div> :
                                 <button className='clean-btn change-guest-btn' onClick={(e) => handleAdultsChange(-1, e)}><i className="fa-solid fa-minus fa-l"></i></button>
                         }
