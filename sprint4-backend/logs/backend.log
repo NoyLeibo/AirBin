@@ -885,3 +885,15 @@
 14.1.2024, 0:41:02 - INFO - Setting socket.userId = NadavTheKing for socket [id: c8YVnaydPX6jg60mAAAL] 
 14.1.2024, 0:41:35 - INFO - Req was made | / 
 14.1.2024, 0:41:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 7:27:17 - INFO - Server is running on port: 3030 
+14.1.2024, 7:27:20 - INFO - New connected socket [id: _o9Uz8WY8iSNX3vgAAAB] 
+14.1.2024, 7:27:20 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: _o9Uz8WY8iSNX3vgAAAB] 
+14.1.2024, 7:27:39 - INFO - New connected socket [id: AhDke_pb6tvM9WaLAAAD] 
+14.1.2024, 7:27:39 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: AhDke_pb6tvM9WaLAAAD] 
+14.1.2024, 7:27:39 - INFO - Req was made | / 
+14.1.2024, 7:27:39 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 7:39:43 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 7:39:44 - INFO - New connected socket [id: fXQHb8xBv4heuYzUAAAF] 
+14.1.2024, 7:39:44 - INFO - Req was made | / 
+14.1.2024, 7:39:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 7:39:44 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: fXQHb8xBv4heuYzUAAAF] 

@@ -314,14 +314,12 @@ export function StayDetails() {
           </div>
         )}
       </div>
-      <div className="apt-loc-map padding24">
+      <div className="apt-loc-map padding24" id="mapDetails">
         <div className="apt-loc-map-title fs22 fw600">Where you’ll be</div>
         <div className="apt-loc-map-sub-title fs16">
           {stay.name} ,{stay.loc.city} ,{stay.loc.country}
         </div>
-        <div id="mapDetails">
         <SimpleMap lat={stay.loc.lat} lng={stay.loc.lng} marker={stay.name} />
-        </div>
       </div>
       <section className="host-apt-det-ext divider padding24">
         <div className="host-info-ext">
