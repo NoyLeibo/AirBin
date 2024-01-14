@@ -1,6 +1,22 @@
 import { useSelector } from "react-redux"
 import React, { useState, useEffect } from 'react'
 import { GiCampfire } from "react-icons/gi"
+import { LuCigarette } from "react-icons/lu"
+import { RiSunLine } from "react-icons/ri"
+import { GiLockedDoor } from "react-icons/gi"
+import { GiSpiralBottle } from "react-icons/gi"
+import { PiTShirt } from "react-icons/pi"
+import { PiCoatHangerBold } from "react-icons/pi"
+import { AiFillChrome } from "react-icons/ai"
+import { MdOutlineCable } from "react-icons/md"
+import { FaWheelchair } from "react-icons/fa"
+import { GiMovementSensor } from "react-icons/gi"
+import { MdFamilyRestroom } from "react-icons/md"
+import { PiElevatorDuotone } from "react-icons/pi"
+import { FaIntercom } from "react-icons/fa6"
+import { IoManOutline } from "react-icons/io5"
+import { MdOutlineHealthAndSafety } from "react-icons/md"
+
 
 export function StayAmenities({ amenities }) {
   const filters = useSelector((storeState) => storeState.stayModule.filters[0]);
@@ -33,16 +49,8 @@ export function StayAmenities({ amenities }) {
       <div className="amenities-ul flex">
         {amenities.slice(0, 6).map((amenitie, index) => (
           <li className="amenities-li flex row align-center" key={index}>
-            {amenitie==="Carbon monoxide alarm"&&
-             <svg width="24px" height="24px" viewBox="6 5 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path d="M30 14.75C30.552 14.75 31 15.198 31 15.75C31 16.302 30.552 16.75 30 16.75C29.448 16.75 29 16.302 29 15.75C29 15.198 29.448 14.75 30 14.75Z" fill="#222222"/>
-             <path d="M23 8.75C30.732 8.75 37 15.018 37 22.75C37 30.482 30.732 36.75 23 36.75C15.268 36.75 9 30.482 9 22.75C9 15.018 15.268 8.75 23 8.75Z" stroke="#222222" strokeWidth="2"/>
-             <path d="M27.889 23.75C27.491 25.703 25.957 27.246 24 27.644V29.672C24.089 29.659 24.178 29.651 24.266 29.635C27.146 29.109 29.411 26.816 29.901 23.929C29.911 23.87 29.908 23.809 29.916 23.75H27.889Z" fill="#222222"/>
-             <path d="M29.904 21.581C29.408 18.635 27.094 16.329 24.147 15.843C24.099 15.835 24.048 15.839 24 15.832V17.861C25.961 18.259 27.492 19.788 27.89 21.75H29.918C29.91 21.694 29.913 21.636 29.904 21.581Z" fill="#222222"/>
-             <path d="M22 27.639C20.041 27.24 18.508 25.712 18.11 23.75H16.086C16.095 23.815 16.092 23.882 16.103 23.947C16.608 26.875 18.916 29.169 21.846 29.655C21.896 29.663 21.949 29.661 22 29.668V27.639Z" fill="#222222"/>
-             <path d="M18.113 21.75C18.511 19.795 20.036 18.255 22 17.856V15.84C21.908 15.853 21.811 15.85 21.72 15.867C18.802 16.407 16.537 18.739 16.082 21.673C16.078 21.698 16.08 21.724 16.076 21.75H18.113Z" fill="#222222"/>
-             <path d="M23 20.75C24.105 20.75 25 21.645 25 22.75C25 23.855 24.105 24.75 23 24.75C21.895 24.75 21 23.855 21 22.75C21 21.645 21.895 20.75 23 20.75Z" stroke="#222222" strokeWidth="2"/>
-             </svg>
+            {amenitie==="Carbon monoxide alarm"||amenitie==="Carbon monoxide detector"&&
+             <GiMovementSensor size="28"/>
             }
             {amenitie==="Fire extinguisher"&&
                <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +69,7 @@ export function StayAmenities({ amenities }) {
               <path d="M21 24.5C20.938 25.375 21 28.5 21 28.5H25V24.5H29V20.5H25V16.5H21V20.5H17V24.5C17 24.5 20 24.438 21 24.5Z" stroke="#222222" strokeWidth="2"/>
               </svg>
             }
-            {amenitie==="Smoke alarm"&&
+            {amenitie==="Smoke alarm"||amenitie==="Smoke detector"&&
               <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M30 14.75C30.552 14.75 31 15.198 31 15.75C31 16.302 30.552 16.75 30 16.75C29.448 16.75 29 16.302 29 15.75C29 15.198 29.448 14.75 30 14.75Z" fill="#222222"/>
               <path d="M23 8.75C30.732 8.75 37 15.018 37 22.75C37 30.482 30.732 36.75 23 36.75C15.268 36.75 9 30.482 9 22.75C9 15.018 15.268 8.75 23 8.75Z" stroke="#222222" strokeWidth="2"/>
@@ -158,7 +166,7 @@ export function StayAmenities({ amenities }) {
               </defs>
               </svg>
             }
-            {amenitie==="Exercise equipment"&&
+            {amenitie==="Exercise equipment"||amenitie==="Gym"&&
               <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M33 16.5H35C35.552 16.5 36 16.948 36 17.5V27.5C36 28.052 35.552 28.5 35 28.5H33C32.448 28.5 32 28.052 32 27.5V17.5C32 16.948 32.448 16.5 33 16.5Z" stroke="#222222" strokeWidth="2"/>
               <path d="M29 12.5H31C31.552 12.5 32 12.948 32 13.5V31.5C32 32.052 31.552 32.5 31 32.5H29C28.448 32.5 28 32.052 28 31.5V13.5C28 12.948 28.448 12.5 29 12.5Z" stroke="#222222" strokeWidth="2"/>
@@ -302,7 +310,7 @@ export function StayAmenities({ amenities }) {
              <path d="M23.0261 7.548V11.578L27.0521 9.253L28.0521 10.986L23.0261 13.887V20.815L29.0261 17.351V11.548H31.0261V16.196L34.5171 14.182L35.5171 15.914L32.0261 17.929L36.0521 20.253L35.0521 21.986L30.0261 19.083L24.0261 22.547L30.0271 26.012L35.0521 23.11L36.0521 24.842L32.0261 27.166L35.5171 29.182L34.5171 30.914L31.0261 28.899V33.548H29.0261V27.744L23.0261 24.279V31.208L28.0521 34.11L27.0521 35.842L23.0261 33.517V37.548H21.0261V33.517L17.0001 35.842L16.0001 34.11L21.0261 31.208V24.279L15.0261 27.743V33.548H13.0261V28.898L9.53606 30.914L8.53606 29.182L12.0251 27.166L8.00006 24.842L9.00006 23.11L14.0251 26.011L20.0251 22.547L14.0261 19.083L9.00006 21.986L8.00006 20.253L12.0261 17.929L8.53606 15.914L9.53606 14.182L13.0261 16.196V11.548H15.0261V17.351L21.0261 20.815V13.887L16.0001 10.986L17.0001 9.253L21.0261 11.578V7.548H23.0261Z" fill="#222222"/>
              </svg>
             }
-            {amenitie==="Paid parking on premises"&&
+            {amenitie==="Paid parking on premises"||amenitie==="Paid parking off premises"&&
             <svg
             width="28px"
             height="28px"
@@ -338,7 +346,7 @@ export function StayAmenities({ amenities }) {
             />
           </svg>
             }
-            {amenitie==="Free parking on premises"&&
+            {amenitie==="Free parking on premises"||amenitie==="Free street parking"&&
                  <svg
                  width="28px"
                  height="28px"
@@ -452,7 +460,7 @@ export function StayAmenities({ amenities }) {
                 />
                 <path d="M36 17.5H10" stroke="#222222" strokeWidth="2" />
               </svg>}
-           {amenitie==="Tv"&&<svg
+           {amenitie==="Tv"||amenitie==="TV"&&<svg
                 width="28px"
                 height="28px"
                 viewBox="7 7 31 31"
@@ -492,6 +500,48 @@ export function StayAmenities({ amenities }) {
                   fill="#222222"
                 />
               </svg>}
+              {amenitie==="Smoking allowed"&&
+              <LuCigarette size="28"/>
+              }
+              {amenitie==="Safety card"&&
+              <MdOutlineHealthAndSafety size="28"/>
+              }
+              {amenitie==="Heating"&&
+              <RiSunLine size="28"/>
+              }
+              {amenitie==="Lock on bedroom door"&&
+              <GiLockedDoor size="28"/>
+              }
+              {amenitie==="Shampoo"&&
+              <GiSpiralBottle size="28"/>
+              }
+              {amenitie==="Essentials"&&
+              <PiTShirt size="28"/>
+              }
+              {amenitie==="Hangers"&&
+              <PiCoatHangerBold size="28"/>
+              }
+              {amenitie==="Internet"&&
+              <AiFillChrome size="28"/>
+              }
+              {amenitie==="Wheelchair accessible"&&
+              <FaWheelchair size="28"/>
+              }
+              {amenitie==="Cable TV"&&
+              <MdOutlineCable size="28"/>
+              }
+              {amenitie==="Family/kid friendly"&&
+              <MdFamilyRestroom size="28"/>
+              }
+              {amenitie==="Elevator"&&
+              <PiElevatorDuotone size="28"/>
+              }
+              {amenitie==="Buzzer/wireless intercom"&&
+              <FaIntercom size="28"/>
+              }
+              {amenitie==="Doorman"&&
+              <IoManOutline size="28"/>
+              }
               <span >{amenitie}</span>
           </li>
         ))}
@@ -507,16 +557,50 @@ export function StayAmenities({ amenities }) {
           <div className="amenitie-items">
             {amenities.map((amenitie, index) => (
              <li className="amenities-li flex row align-center" key={index}>
-             {amenitie==="Carbon monoxide alarm"&&
-              <svg width="24px" height="24px" viewBox="6 5 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M30 14.75C30.552 14.75 31 15.198 31 15.75C31 16.302 30.552 16.75 30 16.75C29.448 16.75 29 16.302 29 15.75C29 15.198 29.448 14.75 30 14.75Z" fill="#222222"/>
-              <path d="M23 8.75C30.732 8.75 37 15.018 37 22.75C37 30.482 30.732 36.75 23 36.75C15.268 36.75 9 30.482 9 22.75C9 15.018 15.268 8.75 23 8.75Z" stroke="#222222" strokeWidth="2"/>
-              <path d="M27.889 23.75C27.491 25.703 25.957 27.246 24 27.644V29.672C24.089 29.659 24.178 29.651 24.266 29.635C27.146 29.109 29.411 26.816 29.901 23.929C29.911 23.87 29.908 23.809 29.916 23.75H27.889Z" fill="#222222"/>
-              <path d="M29.904 21.581C29.408 18.635 27.094 16.329 24.147 15.843C24.099 15.835 24.048 15.839 24 15.832V17.861C25.961 18.259 27.492 19.788 27.89 21.75H29.918C29.91 21.694 29.913 21.636 29.904 21.581Z" fill="#222222"/>
-              <path d="M22 27.639C20.041 27.24 18.508 25.712 18.11 23.75H16.086C16.095 23.815 16.092 23.882 16.103 23.947C16.608 26.875 18.916 29.169 21.846 29.655C21.896 29.663 21.949 29.661 22 29.668V27.639Z" fill="#222222"/>
-              <path d="M18.113 21.75C18.511 19.795 20.036 18.255 22 17.856V15.84C21.908 15.853 21.811 15.85 21.72 15.867C18.802 16.407 16.537 18.739 16.082 21.673C16.078 21.698 16.08 21.724 16.076 21.75H18.113Z" fill="#222222"/>
-              <path d="M23 20.75C24.105 20.75 25 21.645 25 22.75C25 23.855 24.105 24.75 23 24.75C21.895 24.75 21 23.855 21 22.75C21 21.645 21.895 20.75 23 20.75Z" stroke="#222222" strokeWidth="2"/>
-              </svg>
+              {amenitie==="Smoking allowed"&&
+              <LuCigarette size="28"/>
+              }
+              {amenitie==="Doorman"&&
+              <IoManOutline size="28"/>
+              }
+              {amenitie==="Safety card"&&
+              <MdOutlineHealthAndSafety size="28"/>
+              }
+              {amenitie==="Elevator"&&
+              <PiElevatorDuotone size="28"/>
+              }
+              {amenitie==="Buzzer/wireless intercom"&&
+              <FaIntercom size="28"/>
+              }
+              {amenitie==="Heating"&&
+              <RiSunLine size="28"/>
+              }
+              {amenitie==="Lock on bedroom door"&&
+              <GiLockedDoor size="28"/>
+              }
+              {amenitie==="Shampoo"&&
+              <GiSpiralBottle size="28"/>
+              }
+              {amenitie==="Essentials"&&
+              <PiTShirt size="28"/>
+              }
+              {amenitie==="Hangers"&&
+              <PiCoatHangerBold size="28"/>
+              }
+              {amenitie==="Internet"&&
+              <AiFillChrome size="28"/>
+              }
+               {amenitie==="Wheelchair accessible"&&
+              <FaWheelchair size="28"/>
+              }
+               {amenitie==="Cable TV"&&
+              <MdOutlineCable size="28"/>
+              }
+               {amenitie==="Family/kid friendly"&&
+              <MdFamilyRestroom size="28"/>
+              }
+             {amenitie==="Carbon monoxide alarm"||amenitie==="Carbon monoxide detector"&&
+              <GiMovementSensor size="28"/>
              }
              {amenitie==="Fire extinguisher"&&
                 <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -535,7 +619,7 @@ export function StayAmenities({ amenities }) {
                <path d="M21 24.5C20.938 25.375 21 28.5 21 28.5H25V24.5H29V20.5H25V16.5H21V20.5H17V24.5C17 24.5 20 24.438 21 24.5Z" stroke="#222222" strokeWidth="2"/>
                </svg>
              }
-             {amenitie==="Smoke alarm"&&
+             {amenitie==="Smoke alarm"||amenitie==="Smoke detector"&&
                <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M30 14.75C30.552 14.75 31 15.198 31 15.75C31 16.302 30.552 16.75 30 16.75C29.448 16.75 29 16.302 29 15.75C29 15.198 29.448 14.75 30 14.75Z" fill="#222222"/>
                <path d="M23 8.75C30.732 8.75 37 15.018 37 22.75C37 30.482 30.732 36.75 23 36.75C15.268 36.75 9 30.482 9 22.75C9 15.018 15.268 8.75 23 8.75Z" stroke="#222222" strokeWidth="2"/>
@@ -632,7 +716,7 @@ export function StayAmenities({ amenities }) {
                </defs>
                </svg>
              }
-             {amenitie==="Exercise equipment"&&
+             {amenitie==="Exercise equipment"||amenitie==="Gym"&&
                <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M33 16.5H35C35.552 16.5 36 16.948 36 17.5V27.5C36 28.052 35.552 28.5 35 28.5H33C32.448 28.5 32 28.052 32 27.5V17.5C32 16.948 32.448 16.5 33 16.5Z" stroke="#222222" strokeWidth="2"/>
                <path d="M29 12.5H31C31.552 12.5 32 12.948 32 13.5V31.5C32 32.052 31.552 32.5 31 32.5H29C28.448 32.5 28 32.052 28 31.5V13.5C28 12.948 28.448 12.5 29 12.5Z" stroke="#222222" strokeWidth="2"/>
@@ -776,7 +860,7 @@ export function StayAmenities({ amenities }) {
               <path d="M23.0261 7.548V11.578L27.0521 9.253L28.0521 10.986L23.0261 13.887V20.815L29.0261 17.351V11.548H31.0261V16.196L34.5171 14.182L35.5171 15.914L32.0261 17.929L36.0521 20.253L35.0521 21.986L30.0261 19.083L24.0261 22.547L30.0271 26.012L35.0521 23.11L36.0521 24.842L32.0261 27.166L35.5171 29.182L34.5171 30.914L31.0261 28.899V33.548H29.0261V27.744L23.0261 24.279V31.208L28.0521 34.11L27.0521 35.842L23.0261 33.517V37.548H21.0261V33.517L17.0001 35.842L16.0001 34.11L21.0261 31.208V24.279L15.0261 27.743V33.548H13.0261V28.898L9.53606 30.914L8.53606 29.182L12.0251 27.166L8.00006 24.842L9.00006 23.11L14.0251 26.011L20.0251 22.547L14.0261 19.083L9.00006 21.986L8.00006 20.253L12.0261 17.929L8.53606 15.914L9.53606 14.182L13.0261 16.196V11.548H15.0261V17.351L21.0261 20.815V13.887L16.0001 10.986L17.0001 9.253L21.0261 11.578V7.548H23.0261Z" fill="#222222"/>
               </svg>
              }
-             {amenitie==="Paid parking on premises"&&
+             {amenitie==="Paid parking on premises"||amenitie==="Paid parking off premises"&&
              <svg
              width="28px"
              height="28px"
@@ -812,7 +896,7 @@ export function StayAmenities({ amenities }) {
              />
            </svg>
              }
-             {amenitie==="Free parking on premises"&&
+             {amenitie==="Free parking on premises"||amenitie==="Free street parking"&&
                   <svg
                   width="28px"
                   height="28px"
@@ -926,7 +1010,7 @@ export function StayAmenities({ amenities }) {
                  />
                  <path d="M36 17.5H10" stroke="#222222" strokeWidth="2" />
                </svg>}
-            {amenitie==="Tv"&&<svg
+            {amenitie==="Tv"||amenitie==="TV"&&<svg
                  width="28px"
                  height="28px"
                  viewBox="7 7 31 31"

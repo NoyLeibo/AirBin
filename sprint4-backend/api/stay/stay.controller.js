@@ -1,5 +1,5 @@
 import { log } from "../../middlewares/logger.middleware.js";
-import { loggerService } from "../../services/logger.service.js";
+import { loggerService } from "../../services/logger.service.older.js";
 import { stayService } from "./stay.service.js";
 
 export async function getStay(req, res) {

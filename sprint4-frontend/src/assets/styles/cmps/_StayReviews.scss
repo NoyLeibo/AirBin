@@ -1,7 +1,7 @@
 .reviews-container {
-  border-bottom: 1px solid #e1e1e1;
+  // border-bottom: 1px solid #e1e1e1;
   padding-bottom: 32px;
-
+   
   .reviews-ul {
     display: grid;
     grid-template-columns: repeat(2, 3fr);
@@ -24,6 +24,7 @@
     }
 
   }
+  
 
   h4 {
     font-family: "Circular-Bold";

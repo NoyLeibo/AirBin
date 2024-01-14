@@ -24,7 +24,7 @@ export function StayPreview({ stay, isLiked }) {
             <i className="fa-solid fa-star fs12 "></i>
             {stay.reviews.length!==0&&<span className="fw300 stay-card-rating">
               {" "}
-              {stay.reviews[0].rate}.0
+              5
             </span>}
             {stay.reviews.length===0&& <span className="fw300 stay-card-rating">
               {" "}

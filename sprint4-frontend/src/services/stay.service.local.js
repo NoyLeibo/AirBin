@@ -129,7 +129,7 @@ function getEmptyStay() {
       fullname: "",
       imgUrl: "",
       hostingYears: 0,
-      ownerReview: "",
+      about: "",
     },
     loc: {
       area: "",
