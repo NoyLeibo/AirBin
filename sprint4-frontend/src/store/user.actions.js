@@ -10,7 +10,6 @@ import {
   SET_USERS,
   SET_WATCHED_USER,
 } from "./user.reducer.js";
-import { socketInit } from "../services/socketInit.js";
 
 export async function loadUsers() {
   try {
@@ -49,8 +48,6 @@ export async function login(credentials) {
       user,
     });
     socketService.login(user);
-    socketInit();
-
     return user;
   } catch (err) {
     console.log("Cannot login", err);
@@ -66,7 +63,6 @@ export async function signup(credentials) {
       user,
     });
     socketService.login(user);
-    socketInit();
     return user;
   } catch (err) {
     console.log("Cannot signup", err);
