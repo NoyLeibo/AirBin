@@ -1694,3 +1694,134 @@
 14.1.2024, 19:29:13 - INFO - New connected socket [id: DGAlo00oXxcFoe30AAAV] 
 14.1.2024, 19:29:13 - INFO - Req was made | / 
 14.1.2024, 19:29:13 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:29:24 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:29:25 - INFO - New connected socket [id: IC6tmovGl7jwlxieAAAX] 
+14.1.2024, 19:29:25 - INFO - Req was made | / 
+14.1.2024, 19:29:25 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:30:14 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:30:15 - INFO - New connected socket [id: xGf71VjwTKEA4X0qAAAZ] 
+14.1.2024, 19:30:16 - INFO - Req was made | / 
+14.1.2024, 19:30:16 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:30:17 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:30:17 - INFO - New connected socket [id: GCC5s4yDhVPl4R8UAAAb] 
+14.1.2024, 19:30:18 - INFO - Req was made | / 
+14.1.2024, 19:30:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:30:18 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:30:18 - INFO - New connected socket [id: QcSy7ilUfwNNCYE2AAAd] 
+14.1.2024, 19:30:18 - INFO - Req was made | / 
+14.1.2024, 19:30:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:30:32 - INFO - Server is running on port: 3030 
+14.1.2024, 19:30:33 - INFO - New connected socket [id: d5vfu6JdDobCgRyaAAAB] 
+14.1.2024, 19:30:35 - INFO - New connected socket [id: M4qc4a9cQcBFf1YMAAAD] 
+14.1.2024, 19:30:35 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:30:36 - INFO - New connected socket [id: irrqGaasyeCDSWTTAAAF] 
+14.1.2024, 19:30:36 - INFO - Req was made | / 
+14.1.2024, 19:30:36 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:35:03 - INFO - Req was made | / 
+14.1.2024, 19:35:03 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:35:12 - INFO - Req was made | / 
+14.1.2024, 19:35:12 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:35:27 - INFO - Req was made | / 
+14.1.2024, 19:35:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:40:49 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:40:49 - INFO - New connected socket [id: Dv_Shh6WwB5yXUx7AAAH] 
+14.1.2024, 19:40:50 - INFO - Req was made | / 
+14.1.2024, 19:40:50 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:40:53 - INFO - Req was made | / 
+14.1.2024, 19:40:53 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:40:55 - INFO - Req was made | / 
+14.1.2024, 19:40:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 19:40:55 - INFO - Req was made | / 
+14.1.2024, 19:40:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-11T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 19:40:57 - INFO - Req was made | / 
+14.1.2024, 19:40:57 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-11T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 19:40:57 - INFO - Req was made | / 
+14.1.2024, 19:40:57 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-11T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 19:41:10 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:41:11 - INFO - New connected socket [id: 9L2hz9u7tSrZJPYBAAAJ] 
+14.1.2024, 19:41:40 - INFO - Req was made | / 
+14.1.2024, 19:41:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:41:42 - INFO - Req was made | / 
+14.1.2024, 19:41:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":"Israel"} 
+14.1.2024, 19:41:44 - INFO - Req was made | / 
+14.1.2024, 19:41:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:41:44 - INFO - Req was made | / 
+14.1.2024, 19:41:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-19T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:41:46 - INFO - Req was made | / 
+14.1.2024, 19:41:46 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-19T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:41:46 - INFO - Req was made | / 
+14.1.2024, 19:41:46 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-19T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:49:01 - INFO - Req was made | / 
+14.1.2024, 19:49:01 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-19T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:49:15 - INFO - Req was made | / 
+14.1.2024, 19:49:15 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-19T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:49:17 - INFO - Req was made | / 
+14.1.2024, 19:49:17 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"3","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-04T22:00:00.000Z","checkOut":"2024-02-19T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:49:54 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:49:54 - INFO - New connected socket [id: Vjw0iQIu_uNjxToxAAAL] 
+14.1.2024, 19:49:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:49:55 - INFO - Req was made | / 
+14.1.2024, 19:49:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:49:58 - INFO - Req was made | / 
+14.1.2024, 19:49:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:49:58 - INFO - Req was made | / 
+14.1.2024, 19:49:58 - INFO - Req was made | / 
+14.1.2024, 19:49:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"1","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:50:00 - INFO - Req was made | / 
+14.1.2024, 19:50:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"1","Pets":"1"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:50:01 - INFO - Req was made | / 
+14.1.2024, 19:50:01 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"1","Pets":"1"},"destination":"","selectedDestination":"Israel"} 
+14.1.2024, 19:50:02 - INFO - Req was made | / 
+14.1.2024, 19:50:02 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"1","Pets":"1"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:50:03 - INFO - Req was made | / 
+14.1.2024, 19:50:03 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"1","Pets":"1"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-06T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:50:31 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:50:31 - INFO - New connected socket [id: ZCTnE8EBQNZr3yRYAAAN] 
+14.1.2024, 19:51:00 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:51:01 - INFO - New connected socket [id: bUpwT893l-_YMMshAAAP] 
+14.1.2024, 19:51:04 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:51:04 - INFO - New connected socket [id: 3H5MTbtY7dY8R0UkAAAR] 
+14.1.2024, 19:52:55 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:52:55 - INFO - New connected socket [id: Cc5cxUkNoQY5TC8xAAAT] 
+14.1.2024, 19:52:56 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:52:56 - INFO - Req was made | / 
+14.1.2024, 19:53:00 - INFO - Req was made | / 
+14.1.2024, 19:53:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":"Israel"} 
+14.1.2024, 19:53:01 - INFO - Req was made | / 
+14.1.2024, 19:53:01 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:53:01 - INFO - Req was made | / 
+14.1.2024, 19:53:01 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:53:03 - INFO - Req was made | / 
+14.1.2024, 19:53:03 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:53:03 - INFO - Req was made | / 
+14.1.2024, 19:53:03 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:53:04 - INFO - Req was made | / 
+14.1.2024, 19:53:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"1","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:53:04 - INFO - Req was made | / 
+14.1.2024, 19:53:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"2","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:53:04 - INFO - Req was made | / 
+14.1.2024, 19:53:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"2","Infants":"2","Pets":"1"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:53:26 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:53:27 - INFO - New connected socket [id: s_dZCNklg3JAmJcOAAAV] 
+14.1.2024, 19:55:27 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:55:27 - INFO - New connected socket [id: MxsbVK0Q27WAMmzLAAAX] 
+14.1.2024, 19:55:56 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:55:57 - INFO - New connected socket [id: wfFyyIQeJbmtCRfSAAAZ] 
+14.1.2024, 19:56:42 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:57:03 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:57:10 - INFO - New connected socket [id: k5D8UAt7fGz5w62WAAAb] 
+14.1.2024, 19:57:17 - INFO - New connected socket [id: 0X8xI8euttXzo101AAAd] 
+14.1.2024, 19:57:17 - INFO - Req was made | / 
+14.1.2024, 19:57:17 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:57:20 - INFO - New connected socket [id: ge6WIpdysy01ni6BAAAf] 
+14.1.2024, 19:57:55 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:58:05 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:59:05 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:59:22 - INFO - New connected socket [id: 7v02y9ERoDFbow-8AAAh] 
+14.1.2024, 19:59:31 - INFO - New connected socket [id: Zrg9mhent7Itn_nYAAAj] 
+14.1.2024, 19:59:31 - INFO - Req was made | / 
+14.1.2024, 19:59:31 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:59:59 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 20:00:00 - INFO - New connected socket [id: 9xlLcFE6lTvwBzaVAAAl] 
+14.1.2024, 20:02:32 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 20:02:33 - INFO - New connected socket [id: NzY7jwqSScCCBmopAAAn] 
