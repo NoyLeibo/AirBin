@@ -242,8 +242,6 @@ export function StayDetails() {
           <a href="#" className="stay-dets-rating-link fs26">
             {stay.reviews.length}{" "}
             {stay.reviews.length !== 0 ? "Reviews" : "Review"}
-            {stay.reviews.length}{" "}
-            {stay.reviews.length !== 0 ? "Reviews" : "Review"}
           </a>
         </div>
         <div className="apt-rating-dets-con">
