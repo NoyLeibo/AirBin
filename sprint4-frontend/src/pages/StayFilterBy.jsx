@@ -1,8 +1,13 @@
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 export function StayFilterBy() {
-    const params = useParams();
-    const { selectedDestination, checkInDate, checkOutDate, totalGuests } = params;
+    const location = useLocation();
+
+    const queryParams = new URLSearchParams(location.search);
+    const selectedDestination = queryParams.get('location');
+    const checkInDate = queryParams.get('checkIn');
+    const checkOutDate = queryParams.get('checkOut');
+    const totalGuests = queryParams.get('selectedGuests');
 
     console.log(selectedDestination);
     console.log(checkOutDate);

@@ -33,7 +33,7 @@ const routes = [
     label: "Details",
   },
   {
-    path: "stay/location=selectedDestination&checkIn=checkInDate&checkOut=checkOutDate&selectedGuests=:totalGuests",
+    path: "/stay",
     component: <StayFilterBy />,
     label: "Filter",
   },

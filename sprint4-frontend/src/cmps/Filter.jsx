@@ -73,7 +73,7 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit, setIsOp
     <section>
       <div className="filter-modal-container">
         <header className='filter-modal-header flex cloumn bold blacktxt'>
-          <div className='pointer' onClick={() => { setIsOpenFilter(false); }}>X</div><div className='filter-header-title'>Filters</div>
+          <div className='pointer' onClick={() => { setIsOpenFilter(false); }}><i className="fa-solid fa-x"></i></div><div className='filter-header-title'>Filters</div>
         </header>
 
         <div className='filter-modal-mid flex column align-center divider'>

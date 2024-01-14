@@ -2,17 +2,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
-
   background-color: white;
-
-  //   grid-auto-flow: dense;
-  //   grid-template-columns: 1fr 1fr 1fr;
   height: 160px;
-  // height: 84px; ברגע שגולל למטה
-  z-index: 5;
+  z-index: 3;
   transition: position 0.3s;
-
 
   //   breakpoint 950px!!!
   &.header-sticky {
@@ -265,15 +258,15 @@
   }
 }
 
-.screen-shadow {
-  position: fixed;
-  top: 153px;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #00000068;
-  z-index: 1;
-}
+// .screen-shadow {
+//   position: fixed;
+//   top: 153px;
+//   right: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: #00000068;
+//   z-index: 6;
+// }
 
 .screen-shadow-visible {
   display: block;
