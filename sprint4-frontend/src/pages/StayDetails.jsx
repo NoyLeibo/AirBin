@@ -139,7 +139,7 @@ export function StayDetails() {
               <span className="fs14 fw600">
                 <i className="fa-solid fa-star"></i>
                 {stay.reviews.length !== 0 && (
-                  <span className="avgRate">{stay.reviews.length%4<4?'4.5':'5'} </span>
+                  <span className="avgRate">{stay.reviews.length % 4 < 4 ? '4.5' : '5'} </span>
                 )}
                 <span className="fs14 dotP">
                   •
@@ -152,7 +152,11 @@ export function StayDetails() {
             </div>
           </div>
           <div className="apt-host-details divider flex align-center  padding24">
-            <img src={stay.host.pictureUrl} className="host-avatar-img" />
+            <img src={
+              stay.host.thumbnailUrl
+                ? `${stay.host.thumbnailUrl}`
+                : "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/48.jpg"
+            } className="host-avatar-img" />
             <div className="apt-host-info ">
               <div className="host-name fs16 fw600">
                 Hosted by {stay.host.fullname}{" "}
@@ -230,7 +234,7 @@ export function StayDetails() {
           <span className="fs26 fw600">
             <i className="fa-solid fa-star"></i>
             {stay.reviews.length !== 0 && (
-              <span className="avgRate">{stay.reviews.length%5<3?4.25:5}</span>
+              <span className="avgRate">{stay.reviews.length % 5 < 3 ? 4.25 : 5}</span>
             )}
             {stay.reviews.length === 0 && <span className="avgRate">New</span>}
           </span>
@@ -246,7 +250,7 @@ export function StayDetails() {
           <div className="apt-rating-dets">
             <div className="title-rating-det">Cleanliness</div>
             {stay.reviews.length !== 0 && (
-              <div className="rating-det">{stay.reviews.length%5<3?4.5:5}</div>
+              <div className="rating-det">{stay.reviews.length % 5 < 3 ? 4.5 : 5}</div>
             )}
             {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-solid fa-spray-can-sparkles  fs20"></i>
@@ -254,7 +258,7 @@ export function StayDetails() {
           <div className="apt-rating-dets">
             <div className="title-rating-det">Accuracy</div>
             {stay.reviews.length !== 0 && (
-              <div className="rating-det">{stay.reviews.length%5<3?4.15:5}</div>
+              <div className="rating-det">{stay.reviews.length % 5 < 3 ? 4.15 : 5}</div>
             )}
             {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-regular fa-circle-check  fs20"></i>
@@ -262,7 +266,7 @@ export function StayDetails() {
           <div className="apt-rating-dets">
             <div className="title-rating-det">Check-in</div>
             {stay.reviews.length !== 0 && (
-              <div className="rating-det">{stay.reviews.length%5<3?4:5}</div>
+              <div className="rating-det">{stay.reviews.length % 5 < 3 ? 4 : 5}</div>
             )}
             {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-solid fa-key fs20"></i>
@@ -270,7 +274,7 @@ export function StayDetails() {
           <div className="apt-rating-dets">
             <div className="title-rating-det">Communication</div>
             {stay.reviews.length !== 0 && (
-              <div className="rating-det">{stay.reviews.length%5<3?3.75:5}</div>
+              <div className="rating-det">{stay.reviews.length % 5 < 3 ? 3.75 : 5}</div>
             )}
             {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-regular fa-message fs20"></i>
@@ -278,7 +282,7 @@ export function StayDetails() {
           <div className="apt-rating-dets">
             <div className="title-rating-det">Location</div>
             {stay.reviews.length !== 0 && (
-              <div className="rating-det">{stay.reviews.length%5<3?4.2:5}</div>
+              <div className="rating-det">{stay.reviews.length % 5 < 3 ? 4.2 : 5}</div>
             )}
             {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-solid fa-map-location  fs20"></i>
@@ -286,7 +290,7 @@ export function StayDetails() {
           <div className="apt-rating-dets">
             <div className="title-rating-det">Value</div>
             {stay.reviews.length !== 0 && (
-              <div className="rating-det">{stay.reviews.length%5<3?4.5:5}</div>
+              <div className="rating-det">{stay.reviews.length % 5 < 3 ? 4.5 : 5}</div>
             )}
             {stay.reviews.length === 0 && <div className="rating-det">0</div>}
             <i className="fa-solid fa-coins  fs20"></i>
