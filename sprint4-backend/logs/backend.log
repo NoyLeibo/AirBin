@@ -651,3 +651,237 @@
 14.1.2024, 6:51:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
 14.1.2024, 7:16:29 - INFO - Req was made | / 
 14.1.2024, 7:16:29 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 22:23:07 - INFO - Req was made | / 
+13.1.2024, 22:23:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 19:05:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 19:05:24 - INFO - Req was made | / 
+13.1.2024, 19:05:40 - INFO - Req was made | / 
+13.1.2024, 19:05:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 19:26:28 - INFO - Req was made | / 
+13.1.2024, 19:26:28 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 20:04:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 20:04:37 - INFO - Req was made | / 
+13.1.2024, 20:06:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 20:06:49 - INFO - Req was made | / 
+13.1.2024, 20:24:26 - INFO - Req was made | / 
+13.1.2024, 20:24:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:27 - INFO - Req was made | / 
+13.1.2024, 20:24:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:33 - INFO - Req was made | / 
+13.1.2024, 20:24:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:33 - INFO - Req was made | / 
+13.1.2024, 20:24:33 - INFO - Req was made | / 
+13.1.2024, 20:24:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"3","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:34 - INFO - Req was made | / 
+13.1.2024, 20:24:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:34 - INFO - Req was made | / 
+13.1.2024, 20:24:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:35 - INFO - Req was made | / 
+13.1.2024, 20:24:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"6","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:36 - INFO - Req was made | / 
+13.1.2024, 20:24:36 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"7","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"8","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"9","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"10","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"11","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:37 - INFO - Req was made | / 
+13.1.2024, 20:24:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"12","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:38 - INFO - Req was made | / 
+13.1.2024, 20:24:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"13","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:38 - INFO - Req was made | / 
+13.1.2024, 20:24:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"14","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:38 - INFO - Req was made | / 
+13.1.2024, 20:24:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":""} 
+13.1.2024, 20:24:43 - INFO - Req was made | / 
+13.1.2024, 20:24:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Israel"} 
+13.1.2024, 20:24:44 - INFO - Req was made | / 
+13.1.2024, 20:24:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 20:28:49 - INFO - Req was made | / 
+13.1.2024, 20:28:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 20:29:45 - INFO - Req was made | / 
+13.1.2024, 20:29:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 20:29:47 - INFO - Req was made | / 
+13.1.2024, 20:29:47 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 20:37:09 - INFO - Req was made | / 
+13.1.2024, 20:37:09 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"15","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-13T22:00:00.000Z"},"selectedDestination":"Greece"} 
+13.1.2024, 21:03:12 - INFO - Req was made | / 
+13.1.2024, 21:03:12 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 21:55:40 - INFO - Server is running on port: 3030 
+13.1.2024, 23:15:27 - INFO - Server is running on port: 3030 
+13.1.2024, 23:17:24 - INFO - Req was made | / 
+13.1.2024, 23:17:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 23:17:30 - DEBUG - auth.service - login with username: demo_user 
+13.1.2024, 23:17:30 - INFO - User login:  | {"_id":"65a1761c7170c4376b3325ef","username":"demo_user","password":"123456","fullname":"Demo User","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+13.1.2024, 23:17:31 - INFO - Req was made | / 
+13.1.2024, 23:17:31 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 23:21:08 - INFO - Server is running on port: 3030 
+13.1.2024, 23:24:40 - INFO - New connected socket [id: xsMaY1i2gY7mu-0CAAAB] 
+13.1.2024, 23:24:40 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: xsMaY1i2gY7mu-0CAAAB] 
+13.1.2024, 23:24:58 - INFO - New chat msg from socket [id: xsMaY1i2gY7mu-0CAAAB], emitting to topic Love 
+13.1.2024, 23:27:45 - INFO - Socket disconnected [id: undefined] 
+13.1.2024, 23:27:45 - INFO - New connected socket [id: c_x1TTrQJavxX6ppAAAD] 
+13.1.2024, 23:27:45 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: c_x1TTrQJavxX6ppAAAD] 
+13.1.2024, 23:28:53 - INFO - New chat msg from socket [id: c_x1TTrQJavxX6ppAAAD], emitting to topic undefined 
+13.1.2024, 23:29:09 - INFO - New chat msg from socket [id: c_x1TTrQJavxX6ppAAAD], emitting to topic undefined 
+13.1.2024, 23:30:12 - INFO - Server is running on port: 3030 
+13.1.2024, 23:30:12 - INFO - New connected socket [id: YGFs1GkE2zrxiWfKAAAB] 
+13.1.2024, 23:30:16 - INFO - New chat msg from socket [id: YGFs1GkE2zrxiWfKAAAB] [object Object] 
+13.1.2024, 23:30:41 - INFO - Server is running on port: 3030 
+13.1.2024, 23:30:42 - INFO - New connected socket [id: RApgndjlT51qfvrCAAAB] 
+13.1.2024, 23:30:45 - INFO - New chat msg from socket [id: RApgndjlT51qfvrCAAAB] hello 
+13.1.2024, 23:32:01 - INFO - Server is running on port: 3030 
+13.1.2024, 23:32:02 - INFO - New connected socket [id: NArV5U3aw-lJ7ZILAAAB] 
+13.1.2024, 23:33:55 - INFO - Socket disconnected [id: undefined] 
+13.1.2024, 23:33:55 - INFO - New connected socket [id: hLsp7SMzU6DizYQVAAAD] 
+13.1.2024, 23:33:55 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: hLsp7SMzU6DizYQVAAAD] 
+13.1.2024, 23:36:59 - INFO - Req was made | / 
+13.1.2024, 23:36:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 23:36:59 - INFO - Removing socket.userId for socket [id: hLsp7SMzU6DizYQVAAAD] 
+13.1.2024, 23:36:59 - INFO - Socket disconnected [id: undefined] 
+13.1.2024, 23:36:59 - INFO - New connected socket [id: GFGIeDnvFp9AApk-AAAF] 
+13.1.2024, 23:36:59 - INFO - Req was made | / 
+13.1.2024, 23:36:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 23:37:10 - DEBUG - auth.service - login with username: iris 
+13.1.2024, 23:37:10 - INFO - User login:  | {"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","fullname":"Iris y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[{"stay":{"stayId":"65a03a59476e7e044b1f6731","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 5","checkOut":"Feb 14","booked":"Jan 13","host":{"_id":"65a127d51cd27b4cddf5cc5e","fullname":"Patty And Beckett","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410"},"guest":{"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Iris y"},"totalPrice":5890.5,"status":"Rejected","_id":"3c40VX"}],"wishlist":[{"_id":"8D34k","name":"City Loft","type":"Loft","imgUrls":["https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/b2abe806-b60f-4c0b-b4e6-46808024e5b6.jpeg?im_w=1200","https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/f69d24ed-c089-4a43-ba1d-fb98cba37afd.jpeg?im_w=1200","https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/c4031456-dc24-4683-ba84-6cdac0c2cb65.jpeg?im_w=1200","https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/04aacd17-ad9c-4f70-8bf3-24e573508d39.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/e0ed8801-5276-49f2-80e3-b6537681ecf8.jpeg?im_w=1200","https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/6dd08b81-7b42-42f5-8aee-4d26edd482bd.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/c1e73adc-959e-44e4-ab1d-86892824d262.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/69da724d-683d-427b-839d-9d95b67a8dcf.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/86ea0910-9c6b-4387-b412-f0ccc5285760.jpeg?im_w=720"],"price":1980,"bedrooms":1,"beds":2,"baths":1,"summary":"A modern loft located in the bustling city center.","capacity":2,"amenities":["Iconic cities","Top of the world","Trending","Play","Amazing views","Luxe"],"labels":["Urban","Modern","City"],"host":{"_id":"65a127d51cd27b4cddf5cc5e","fullname":"Sophia Turner","imgUrl":"https://a0.muscache.com/im/pictures/user/21446f54-4214-40f4-813b-6d6c0113d7f3.jpg?im_w=240","hostingYears":3,"ownerReview":"The Treeframe is a modern a-frame treehouse that offers an unforgettable short-term rental experience. Located in the heart of the forest and surrounded by nature, our treehouse is the perfect spot for travelers looking for a one-of-a-kind getaway. Our treehouse is fully equipped with all the amenities you need for a relaxing stay, and Nick is always available to answer any questions you may have. Come discover the beauty of nature and escape the hustle and bustle of city life at The Treeframe!"},"loc":{"area":"Downtown","country":"UK","countryCode":"GB","city":"London","address":"1111 Urban St, London","lat":51.5074,"lng":-0.1278},"reviews":[{"id":"r202","txt":"This was one of the best rentals I’ve ever had. We used it as a recovery retreat and will definitely be back for a fun time. 10/10 would recommend","rate":4,"by":{"_id":"u202","fullname":"Roi-bnb","imgUrl":"https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240"}},{"id":"r203","txt":"We recently hosted an Administrative retreat at the Windsor Mansion Inn and the experience was beyond anything we expected. Andy was so kind and accommodating. He even surprised us with warm chocolate chip cookies during our meeting! I would absolutely recommend a visit to the Inn, whether its for a relaxing evening away, or to host an event overlooking the beautiful mountains. You will not be disappointed with Andy and his team!","rate":5,"by":{"_id":"u203","fullname":"Martin","imgUrl":"https://a0.muscache.com/im/pictures/user/1e793581-0ed6-4c96-9d2b-5ceabb948075.jpg?im_w=240"}},{"id":"r204","txt":"I enjoyed my vacation, great view, good parking place, very silent, relaxed from city noise, become friend with very fat cat, definitely will come back","rate":4,"by":{"_id":"u204","fullname":"Demet","imgUrl":"https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240"}},{"id":"r206","txt":"Our stay was great! The host was super friendly and highly responsive. And he made us a delicious breakfast. The only minor issue was some repair work next to the villa, but it didn't really bother us. Overall, it was a wonderful experience, and we'd consider coming back.","rate":5,"by":{"_id":"u213","fullname":"James Carter","imgUrl":"https://a0.muscache.com/im/users/23331610/profile_pic/1415110296/original.jpg?im_w=240"}},{"id":"r207","txt":"Ridvan was an amazing host, was very helpful and friendly. Place had an amazing view and very clean.","rate":5,"by":{"_id":"u214","fullname":"Emily Harris","imgUrl":"https://a0.muscache.com/im/pictures/user/User-26787824/original/362eb154-2928-4d8d-acc3-92f9a1fcd1ab.jpeg?im_w=240"}},{"id":"r208","txt":"The villa is incredible, offering privacy and luxury. Highly recommend the private beach access!","rate":4,"by":{"_id":"u215","fullname":"Michael Brown","imgUrl":"https://a0.muscache.com/im/pictures/user/87b83be7-edfc-4753-aa2a-89673e8d5f74.jpg?im_w=240"}}],"likedByUsers":["city-explorer","business-traveler"]},{"_id":"s101","name":"Beachfront Villa","type":"Villa","imgUrls":["https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/06e6395b-a488-49d5-ad6d-43e17331dc15.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/d74b1bc2-bf0a-4b89-b19a-fd3bb6690d79.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/d02f9742-9ceb-4736-95f9-3dfc601f3a7c.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/765e5508-233e-468b-98df-c45e475179b8.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/e02c29bb-30a1-484d-ba58-b4cffa91fc5f.jpeg?im_w=1200","https://a0.muscache.com/im/pictures/98274276/1cdeef84_original.jpg?im_w=1200"],"price":1200,"bedrooms":4,"beds":7,"baths":3,"summary":"Beautiful villa with direct access to the beach...","capacity":6,"amenities":["Breakfasts","Top of the world","Mansions","Rooms","Historial homes","Chef kitchens"],"labels":["Beach","Family","Sunset View"],"host":{"_id":"u105","fullname":"Maria Gonzalez","imgUrl":"https://a0.muscache.com/im/pictures/user/d7f7361f-9b5d-4780-a3cf-029a10bdcc1e.jpg?im_w=240","hostingYears":3,"ownerReview":"Amazing luxury apartment, located in a new residential project with luxurious lobby and 24/7 security.\n          The apartment overlooks the sea and the entire city of Tel Aviv from it's extra large and shaded balcony on the 27th floor.\n          There are 2 spacious bedrooms, closets, full size tub, pampering living room wits smart TV, fully equipped kitchen: dishwasher, a Nespresso machine, dining area, AC, washing machine, dryer & more!"},"loc":{"area":"Caribbean","country":"Bahamas","countryCode":"BS","city":"Nassau","address":"22 Ocean Breeze Ave","lat":-77.39628,"lng":25.03428},"reviews":[{"id":"madeId2","txt":"Fantastic location, close to the city center. The room was clean...","rate":5,"by":{"_id":"u103","fullname":"bigboss3","imgUrl":"https://a0.muscache.com/im/pictures/user/96db5a52-52db-42d4-a8bf-fe4d9cb7901d.jpg?im_w=240"}},{"id":"madeId3","txt":"Charming apartment with amazing views. Hosts were very accommodating...","rate":5,"by":{"_id":"u104","fullname":"Matthew Andreh","imgUrl":"https://a0.muscache.com/im/pictures/user/7e30997b-191c-4f49-bd71-ea57e4fe8d91.jpg?im_w=240"}},{"id":"r212","txt":"Absolutely breathtaking scenery, the villa was beyond our expectations.","rate":5,"by":{"_id":"u219","fullname":"Anna Thompson","imgUrl":"https://a0.muscache.com/im/pictures/user/223db29f-2507-412c-bba8-510446c3502e.jpg?im_w=240"}},{"id":"r213","txt":"Incredible service and luxurious amenities. Felt like royalty!","rate":5,"by":{"_id":"u220","fullname":"Mark Evans","imgUrl":"https://a0.muscache.com/im/pictures/user/2460542d-1a13-4bca-b269-53eff2d04c9c.jpg?im_w=240"}},{"id":"r214","txt":"A slice of heaven on earth. The private beach access was a dream.","rate":5,"by":{"_id":"u221","fullname":"Natalie Young","imgUrl":"https://a0.muscache.com/im/users/12801203/profile_pic/1432018804/original.jpg?im_w=240"}},{"id":"r215","txt":"Every detail was perfect, from the stunning interiors to the lush gardens.","rate":5,"by":{"_id":"u222","fullname":"Ethan Murphy","imgUrl":"https://a0.muscache.com/im/users/10659131/profile_pic/1402608909/original.jpg?im_w=240"}},{"id":"r216","txt":"The best sunset views we've ever seen! Can't wait to return.","rate":5,"by":{"_id":"u223","fullname":"Grace Lee","imgUrl":"https://a0.muscache.com/im/pictures/user/44d26f4d-0b4f-4d07-a31c-397abfffce0b.jpg?im_w=240"}},{"id":"r217","txt":"Luxury at its best! The staff made our stay unforgettable.","rate":5,"by":{"_id":"u224","fullname":"Oliver Martinez","imgUrl":"https://a0.muscache.com/im/pictures/user/37643aad-005b-47c7-ad41-1f478af04816.jpg?im_w=240"}}],"likedByUsers":["luxury-seeker","serenity-lover"]}],"myStays":[],"guestsReservations":[{"stay":{"stayId":"65a03a59476e7e044b1f6731","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 5","checkOut":"Feb 14","booked":"Jan 13","host":{"_id":"65a127d51cd27b4cddf5cc5e","fullname":"Patty And Beckett","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410"},"guest":{"_id":"65a127d51cd27b4cddf5cc5e","username":"iris","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Iris y"},"totalPrice":5890.5,"status":"Rejected","_id":"3c40VX"}]} 
+13.1.2024, 23:37:10 - INFO - Setting socket.userId = [object Object] for socket [id: GFGIeDnvFp9AApk-AAAF] 
+13.1.2024, 23:37:10 - INFO - Socket disconnected [id: undefined] 
+13.1.2024, 23:37:10 - INFO - New connected socket [id: i-yqNeqn-JAouI7qAAAH] 
+13.1.2024, 23:37:11 - INFO - Req was made | / 
+13.1.2024, 23:37:11 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 23:37:11 - INFO - Setting socket.userId = 65a127d51cd27b4cddf5cc5e for socket [id: i-yqNeqn-JAouI7qAAAH] 
+13.1.2024, 23:37:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 23:37:21 - INFO - Req was made | / 
+13.1.2024, 23:37:21 - INFO - Removing socket.userId for socket [id: i-yqNeqn-JAouI7qAAAH] 
+13.1.2024, 23:37:22 - INFO - Socket disconnected [id: undefined] 
+13.1.2024, 23:37:22 - INFO - New connected socket [id: okt7V7OWd6o-7U-5AAAJ] 
+13.1.2024, 23:37:22 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 23:37:22 - INFO - Req was made | / 
+13.1.2024, 23:37:27 - DEBUG - auth.service - login with username: demo_user 
+13.1.2024, 23:37:27 - INFO - User login:  | {"_id":"65a1761c7170c4376b3325ef","username":"demo_user","password":"123456","fullname":"Demo User","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[]} 
+13.1.2024, 23:37:27 - INFO - Setting socket.userId = [object Object] for socket [id: okt7V7OWd6o-7U-5AAAJ] 
+13.1.2024, 23:37:27 - INFO - Socket disconnected [id: undefined] 
+13.1.2024, 23:37:28 - INFO - New connected socket [id: hx3Yeqf2dFJa5HP8AAAL] 
+13.1.2024, 23:37:28 - INFO - Req was made | / 
+13.1.2024, 23:37:28 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 23:37:28 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: hx3Yeqf2dFJa5HP8AAAL] 
+13.1.2024, 23:41:41 - INFO - New chat msg from socket [id: hx3Yeqf2dFJa5HP8AAAL] hello 
+13.1.2024, 23:41:41 - INFO - user-watch from socket [id: hx3Yeqf2dFJa5HP8AAAL], on user 123 
+13.1.2024, 23:42:08 - INFO - Req was made | / 
+13.1.2024, 23:42:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+13.1.2024, 23:49:22 - INFO - Server is running on port: 3030 
+13.1.2024, 23:49:23 - INFO - New connected socket [id: ThgJ8A9AvF-wmjplAAAB] 
+13.1.2024, 23:49:54 - INFO - New chat msg from socket [id: ThgJ8A9AvF-wmjplAAAB] hello 
+13.1.2024, 23:49:54 - INFO - user-watch from socket [id: ThgJ8A9AvF-wmjplAAAB], on user 123 
+13.1.2024, 23:49:59 - INFO - New chat msg from socket [id: ThgJ8A9AvF-wmjplAAAB] hi 
+13.1.2024, 23:49:59 - INFO - user-watch from socket [id: ThgJ8A9AvF-wmjplAAAB], on user 123 
+13.1.2024, 23:50:03 - INFO - New chat msg from socket [id: ThgJ8A9AvF-wmjplAAAB] 0[ijjjpio[j 
+13.1.2024, 23:50:03 - INFO - user-watch from socket [id: ThgJ8A9AvF-wmjplAAAB], on user 123 
+13.1.2024, 23:50:07 - INFO - Socket disconnected [id: undefined] 
+13.1.2024, 23:50:07 - INFO - New connected socket [id: 6hY3hDi8Di5r55B8AAAD] 
+13.1.2024, 23:50:08 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: 6hY3hDi8Di5r55B8AAAD] 
+13.1.2024, 23:50:11 - INFO - New chat msg from socket [id: 6hY3hDi8Di5r55B8AAAD] oikmjjkoi 
+13.1.2024, 23:50:11 - INFO - user-watch from socket [id: 6hY3hDi8Di5r55B8AAAD], on user 123 
+13.1.2024, 23:52:58 - INFO - Server is running on port: 3030 
+13.1.2024, 23:52:59 - INFO - New connected socket [id: Qv3mNzrSZlytQL3bAAAB] 
+13.1.2024, 23:55:44 - INFO - Server is running on port: 3030 
+13.1.2024, 23:55:45 - INFO - New connected socket [id: czjBtmxOenvfilmzAAAB] 
+13.1.2024, 23:55:57 - INFO - Server is running on port: 3030 
+13.1.2024, 23:55:59 - INFO - New connected socket [id: Y3zbV60w0GzCJHD9AAAB] 
+13.1.2024, 23:56:16 - INFO - Socket disconnected [id: undefined] 
+13.1.2024, 23:56:16 - INFO - New connected socket [id: WpQ_lorsREg3Yu89AAAD] 
+13.1.2024, 23:56:16 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: WpQ_lorsREg3Yu89AAAD] 
+13.1.2024, 23:57:21 - INFO - Socket disconnected [id: undefined] 
+13.1.2024, 23:57:21 - INFO - New connected socket [id: nycN4Sqq2r8SYrPEAAAF] 
+13.1.2024, 23:57:21 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: nycN4Sqq2r8SYrPEAAAF] 
+14.1.2024, 0:00:23 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 0:00:23 - INFO - Req was made | / 
+14.1.2024, 0:04:02 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:04:02 - INFO - New connected socket [id: 6fc-8NwA6qbYfOxdAAAH] 
+14.1.2024, 0:04:02 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: 6fc-8NwA6qbYfOxdAAAH] 
+14.1.2024, 0:06:33 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:06:34 - INFO - New connected socket [id: KCoEkIiPmG8XRKTPAAAJ] 
+14.1.2024, 0:06:34 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: KCoEkIiPmG8XRKTPAAAJ] 
+14.1.2024, 0:07:28 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:07:29 - INFO - New connected socket [id: fCDJXAzsDM3PVhX_AAAL] 
+14.1.2024, 0:07:29 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: fCDJXAzsDM3PVhX_AAAL] 
+14.1.2024, 0:11:38 - INFO - Server is running on port: 3030 
+14.1.2024, 0:11:39 - INFO - New connected socket [id: L4JjJbmgydGHiAP2AAAB] 
+14.1.2024, 0:13:15 - INFO - Server is running on port: 3030 
+14.1.2024, 0:13:16 - INFO - New connected socket [id: DF3wASVK6A3xiH1hAAAB] 
+14.1.2024, 0:14:06 - INFO - Server is running on port: 3030 
+14.1.2024, 0:14:07 - INFO - New connected socket [id: yNxMe00kWC12KPIMAAAB] 
+14.1.2024, 0:14:11 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:14:12 - INFO - New connected socket [id: sBYX_0mb0_DoubzvAAAD] 
+14.1.2024, 0:14:12 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: sBYX_0mb0_DoubzvAAAD] 
+14.1.2024, 0:14:12 - INFO - Setting socket.userId = demo_user for socket [id: sBYX_0mb0_DoubzvAAAD] 
+14.1.2024, 0:14:17 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:14:18 - INFO - New connected socket [id: OmxmnjELX6KaY1lpAAAF] 
+14.1.2024, 0:14:18 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: OmxmnjELX6KaY1lpAAAF] 
+14.1.2024, 0:14:18 - INFO - Setting socket.userId = demo_user for socket [id: OmxmnjELX6KaY1lpAAAF] 
+14.1.2024, 0:15:50 - INFO - Server is running on port: 3030 
+14.1.2024, 0:15:50 - INFO - New connected socket [id: HIzAFCU8VmaH6GLhAAAB] 
+14.1.2024, 0:15:54 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:15:54 - INFO - New connected socket [id: FlCE77cV3VoOf6n_AAAD] 
+14.1.2024, 0:15:54 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: FlCE77cV3VoOf6n_AAAD] 
+14.1.2024, 0:15:54 - INFO - Setting socket.userId = demo_user for socket [id: FlCE77cV3VoOf6n_AAAD] 
+14.1.2024, 0:20:30 - INFO - Server is running on port: 3030 
+14.1.2024, 0:20:30 - INFO - New connected socket [id: VB7r7YSChzfqMwGtAAAB] 
+14.1.2024, 0:20:48 - INFO - Setting socket.userId = demo_user for socket [id: VB7r7YSChzfqMwGtAAAB] 
+14.1.2024, 0:23:19 - INFO - Setting socket.userId = demo_user for socket [id: VB7r7YSChzfqMwGtAAAB] 
+14.1.2024, 0:25:13 - INFO - Setting socket.userId = demo_user for socket [id: VB7r7YSChzfqMwGtAAAB] 
+14.1.2024, 0:25:16 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:25:17 - INFO - New connected socket [id: YFAFviY_AuH89e0RAAAD] 
+14.1.2024, 0:25:17 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: YFAFviY_AuH89e0RAAAD] 
+14.1.2024, 0:25:17 - INFO - Setting socket.userId = demo_user for socket [id: YFAFviY_AuH89e0RAAAD] 
+14.1.2024, 0:26:28 - INFO - Server is running on port: 3030 
+14.1.2024, 0:26:33 - INFO - New connected socket [id: dMfxQB2GugeCSyQXAAAB] 
+14.1.2024, 0:26:33 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: dMfxQB2GugeCSyQXAAAB] 
+14.1.2024, 0:26:33 - INFO - Setting socket.userId = demo_user for socket [id: dMfxQB2GugeCSyQXAAAB] 
+14.1.2024, 0:26:36 - INFO - Emiting event: Hello world to user: demo_user socket [id: dMfxQB2GugeCSyQXAAAB] 
+14.1.2024, 0:27:26 - INFO - Setting socket.userId = demo_user for socket [id: dMfxQB2GugeCSyQXAAAB] 
+14.1.2024, 0:28:22 - INFO - Server is running on port: 3030 
+14.1.2024, 0:28:22 - INFO - New connected socket [id: W1_u2Fcx8JqAE7bnAAAB] 
+14.1.2024, 0:28:24 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:28:24 - INFO - New connected socket [id: h1p2PW1t-86i74t8AAAD] 
+14.1.2024, 0:28:24 - INFO - Setting socket.userId = 65a1761c7170c4376b3325ef for socket [id: h1p2PW1t-86i74t8AAAD] 
+14.1.2024, 0:28:24 - INFO - Setting socket.userId = demo_user for socket [id: h1p2PW1t-86i74t8AAAD] 
+14.1.2024, 0:28:26 - INFO - Emiting event: Hello world to user: demo_user data: Test 
+14.1.2024, 0:29:34 - INFO - Setting socket.userId = demo_user for socket [id: h1p2PW1t-86i74t8AAAD] 
+14.1.2024, 0:29:39 - INFO - Emiting event: Hello world to user: demo_user data: [object Object] 
+14.1.2024, 0:30:07 - INFO - New connected socket [id: 4OXQjLqE001F9hL4AAAF] 
+14.1.2024, 0:30:07 - INFO - Req was made | / 
+14.1.2024, 0:30:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 0:30:17 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:30:28 - INFO - New connected socket [id: 2uEsOEBQgA6UyFCXAAAH] 
+14.1.2024, 0:30:28 - INFO - Req was made | / 
+14.1.2024, 0:30:28 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 0:30:37 - INFO - Req was made | / 
+14.1.2024, 0:30:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 0:30:59 - DEBUG - auth.service - signup with username: NadavTheKing, fullname: nadav 
+14.1.2024, 0:30:59 - DEBUG - auth.route - new account created: {"username":"NadavTheKing","password":"$2b$10$qgOsc95l8tNScxLe2ZgwQeYi5h9By5cULramAYSNOtmhnRMB7tZh6","fullname":"nadav","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[],"chats":[],"_id":"65a30f23d732231c8c507092"} 
+14.1.2024, 0:30:59 - DEBUG - auth.service - login with username: NadavTheKing 
+14.1.2024, 0:30:59 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:31:00 - INFO - New connected socket [id: dzpQbo6qqZ7_pYX1AAAJ] 
+14.1.2024, 0:31:00 - INFO - Req was made | / 
+14.1.2024, 0:31:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 0:31:00 - INFO - Setting socket.userId = 65a30f23d732231c8c507092 for socket [id: dzpQbo6qqZ7_pYX1AAAJ] 
+14.1.2024, 0:31:07 - INFO - Setting socket.userId = NadavTheKing for socket [id: dzpQbo6qqZ7_pYX1AAAJ] 
+14.1.2024, 0:31:34 - INFO - Setting socket.userId = NadavTheKing for socket [id: dzpQbo6qqZ7_pYX1AAAJ] 
+14.1.2024, 0:31:34 - INFO - Setting socket.userId = demo_user for socket [id: h1p2PW1t-86i74t8AAAD] 
+14.1.2024, 0:31:37 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 0:31:38 - INFO - New connected socket [id: c8YVnaydPX6jg60mAAAL] 
+14.1.2024, 0:31:38 - INFO - Setting socket.userId = 65a30f23d732231c8c507092 for socket [id: c8YVnaydPX6jg60mAAAL] 
+14.1.2024, 0:31:38 - INFO - Setting socket.userId = NadavTheKing for socket [id: c8YVnaydPX6jg60mAAAL] 
+14.1.2024, 0:31:52 - INFO - Emiting event: Hello world to user: demo_user data: [object Object] 
+14.1.2024, 0:38:43 - INFO - Setting socket.userId = NadavTheKing for socket [id: c8YVnaydPX6jg60mAAAL] 
+14.1.2024, 0:38:44 - INFO - Setting socket.userId = demo_user for socket [id: h1p2PW1t-86i74t8AAAD] 
+14.1.2024, 0:39:03 - INFO - Emiting event: message-recived to user: demo_user data: [object Object] 
+14.1.2024, 0:41:01 - INFO - Setting socket.userId = demo_user for socket [id: h1p2PW1t-86i74t8AAAD] 
+14.1.2024, 0:41:02 - INFO - Setting socket.userId = NadavTheKing for socket [id: c8YVnaydPX6jg60mAAAL] 
+14.1.2024, 0:41:35 - INFO - Req was made | / 
+14.1.2024, 0:41:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 

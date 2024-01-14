@@ -72,7 +72,6 @@ export function StayDetails() {
   //     })
   // }
   // /stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn}&checkOut=${filterBy.selectedDates.checkOut}&selectedGuests=${totalGuests}
-
   // console.log(user)
   async function loadStay() {
     try {
@@ -237,6 +236,8 @@ export function StayDetails() {
           </span>
           <span className="fs14 dotP"> • </span>
           <a href="#" className="stay-dets-rating-link fs26">
+            {stay.reviews.length}{" "}
+            {stay.reviews.length !== 0 ? "Reviews" : "Review"}
             {stay.reviews.length}{" "}
             {stay.reviews.length !== 0 ? "Reviews" : "Review"}
           </a>

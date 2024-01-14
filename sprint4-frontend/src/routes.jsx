@@ -1,6 +1,7 @@
 import { HomePage } from "./pages/HomePage.jsx";
 import { AboutUs } from "./pages/AboutUs.jsx";
 import { StayIndex } from "./pages/StayIndex.jsx";
+import { StayFilterBy } from "./pages/StayFilterBy.jsx";
 import { StayDetails } from "./pages/StayDetails.jsx";
 import { ReviewIndex } from "./pages/ReviewIndex.jsx";
 import { ChatApp } from "./pages/Chat.jsx";
@@ -9,7 +10,7 @@ import { PaymentPage } from "./pages/PaymentPage.jsx";
 import { StayEdit } from "./pages/StayEdit.jsx";
 import { UserTrips } from "./pages/UserTrips.jsx";
 import { Wishlist } from "./pages/Wishlist.jsx";
-
+import { Messages } from "./pages/Messages.jsx";
 export const pageRouteNameMap = {
   STAY_INDEX: "/",
   STAY_DETAILS: "details/:stayId",
@@ -31,11 +32,11 @@ const routes = [
     component: <StayDetails />,
     label: "Details",
   },
-  // {
-  //   path: "stay?location=:locationPlace&checkIn=:checkInDate&checkOut=:checkOutDate",
-  //   component: <StayFilterBy />,
-  //   label: "Filter",
-  // },
+  {
+    path: "stay/location=selectedDestination&checkIn=checkInDate&checkOut=checkOutDate&selectedGuests=:totalGuests",
+    component: <StayFilterBy />,
+    label: "Filter",
+  },
   {
     path: "review",
     component: <ReviewIndex />,
@@ -75,6 +76,11 @@ const routes = [
     path: "wishlist",
     component: <Wishlist />,
     label: "wishlist",
+  },
+  {
+    path: "messages",
+    component: <Messages />,
+    label: "messages",
   },
 ];
 

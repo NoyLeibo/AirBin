@@ -1,5 +1,5 @@
 import { userService } from "./user.service.js";
-import { loggerService } from "../../services/logger.service.js";
+import { loggerService } from "../../services/logger.service.older.js";
 import { log } from "../../middlewares/logger.middleware.js";
 
 export async function getUser(req, res) {
