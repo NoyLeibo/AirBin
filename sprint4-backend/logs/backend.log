@@ -899,3 +899,5 @@
 14.1.2024, 7:39:44 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: fXQHb8xBv4heuYzUAAAF] 
 14.1.2024, 7:44:41 - INFO - Req was made | / 
 14.1.2024, 7:44:41 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 12:41:19 - INFO - Req was made | / 
+14.1.2024, 12:41:19 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
