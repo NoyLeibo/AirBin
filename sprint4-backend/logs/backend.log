@@ -1642,3 +1642,6 @@
 14.1.2024, 18:09:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
 14.1.2024, 18:09:48 - INFO - Req was made | / 
 14.1.2024, 18:09:48 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 18:55:58 - INFO - New connected socket [id: rHtkk9yNNO1d86uPAAAF] 
+14.1.2024, 18:55:58 - INFO - Req was made | / 
+14.1.2024, 18:55:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
