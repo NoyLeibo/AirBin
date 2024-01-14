@@ -1,10 +1,10 @@
 import { logger } from "./logger.service.js";
 import { Server } from "socket.io";
+import { userService } from "../api/user/user.service.js";
 
 var gIo = null;
 
 export function setupSocketAPI(server) {
-  var userMap = new Map();
   gIo = new Server(server, {
     cors: {
       origin: "*",
@@ -37,6 +37,11 @@ export function setupSocketAPI(server) {
     });
 
     socket.on("chat-send-msg-username", (data) => {
+      const from = data.from;
+      const to = data.to;
+      const txt = data.txt;
+      //FINISH THE FUNC TO PUSH NEW MSGS TO USER.CHATS ARR
+      // userService.pushToUsers(from,to,txt)
       emitToUserByUsername(data);
     });
 
@@ -92,6 +97,7 @@ async function emitToUser({ type, data, userId }) {
 
 async function emitToUserByUsername({ type, data, username }) {
   const socket = await _getUserSocketUsername(username);
+  data.username = username;
 
   if (socket) {
     logger.info(`Emiting event: ${type} to user: ${username} data: ${data}`);
