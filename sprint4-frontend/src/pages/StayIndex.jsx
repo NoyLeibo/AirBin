@@ -15,6 +15,7 @@ import { StayList } from "../cmps/StayList.jsx";
 import { ChatWindow } from "../cmps/Chat.jsx";
 import { StayFilter } from "../cmps/StayFilter.jsx";
 import { setFilterBy } from "../store/stay.actions.js";
+import { socketInit } from "../services/socketInit.js";
 
 export function StayIndex() {
   const [isScrolledDown, setIsScrolledDown] = useState(true);
@@ -43,6 +44,10 @@ export function StayIndex() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [filterBy]);
+
+  useEffect(() => {
+    socketInit();
+  }, []);
 
   function onSetFilter(filterBy) {
     setFilterBy(filterBy);
