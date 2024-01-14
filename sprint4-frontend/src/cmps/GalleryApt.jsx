@@ -32,7 +32,7 @@ export function GalleryApt({ imgUrls }) {
       {isModalOpen && (
         <div className="modal-imgs-container">
           <div className="modal-header">
-            <button onClick={closeModal}>X</button>
+            <button onClick={closeModal}><i class="fa-solid fa-x"></i></button>
           </div>
           <div className="imgs-list">
             {imgUrls.map((imgUrl, index) => (

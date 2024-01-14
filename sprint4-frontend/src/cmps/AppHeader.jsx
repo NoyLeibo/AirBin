@@ -140,8 +140,10 @@ export function AppHeader() {
     0
   )
 
-  function searchFilterBy() {
-    navigate(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn}&checkOut=${filterBy.selectedDates.checkOut}&selectedGuests=${totalGuests}`);
+  function searchFilterBy(ev) {
+    event.preventDefault()
+    console.log(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn.toLocaleDateString('en-US')}&checkOut=${filterBy.selectedDates.checkOut.toLocaleDateString('en-US')}&selectedGuests=${totalGuests}`);
+    navigate(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn.toLocaleDateString('en-US')}&checkOut=${filterBy.selectedDates.checkOut.toLocaleDateString('en-US')}&selectedGuests=${totalGuests}`);
   }
 
 

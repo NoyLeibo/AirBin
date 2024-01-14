@@ -63,7 +63,7 @@ export function StayReviews({ reviews, stars }) {
       {showScreenShadow && <div className="screen-shadow-login"></div>}
       {isModalOpen &&
         <div className="modal-reviews">
-          <button onClick={closeModal}>Close</button>
+          <button onClick={closeModal}><i class="fa-solid fa-x"></i></button>
           <div className="reviews-on-modal">
             {reviews.map((review, index) => (
               <li className="review-li flex column" key={index}>
