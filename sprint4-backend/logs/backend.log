@@ -1642,3 +1642,51 @@
 14.1.2024, 18:09:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
 14.1.2024, 18:09:48 - INFO - Req was made | / 
 14.1.2024, 18:09:48 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-03T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Israel"} 
+14.1.2024, 19:22:01 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:22:01 - INFO - New connected socket [id: jp83vd5WTGKG3_piAAAN] 
+14.1.2024, 19:22:01 - INFO - Req was made | / 
+14.1.2024, 19:22:01 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:22:01 - ERROR - Failed to get stays | TypeError: Cannot read properties of undefined (reading 'startsWith') 
+14.1.2024, 19:22:01 - ERROR - Failed to get Mongo collection | TypeError: Cannot read properties of undefined (reading 'startsWith') 
+14.1.2024, 19:22:01 - ERROR - Cannot Connect to DB | TypeError: Cannot read properties of undefined (reading 'startsWith') 
+14.1.2024, 19:22:51 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:22:51 - INFO - New connected socket [id: k7rA7agqk9GarTpMAAAP] 
+14.1.2024, 19:22:52 - INFO - Req was made | / 
+14.1.2024, 19:22:52 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:22:52 - ERROR - Failed to get stays | TypeError: Cannot read properties of undefined (reading 'startsWith') 
+14.1.2024, 19:22:52 - ERROR - Failed to get Mongo collection | TypeError: Cannot read properties of undefined (reading 'startsWith') 
+14.1.2024, 19:22:52 - ERROR - Cannot Connect to DB | TypeError: Cannot read properties of undefined (reading 'startsWith') 
+14.1.2024, 19:23:24 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:23:25 - INFO - New connected socket [id: SWzL3G-tF_1Wb3LDAAAR] 
+14.1.2024, 19:23:25 - INFO - Req was made | / 
+14.1.2024, 19:23:25 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:23:25 - ERROR - Failed to get stays | TypeError: Cannot read properties of undefined (reading 'startsWith') 
+14.1.2024, 19:23:25 - ERROR - Cannot Connect to DB | TypeError: Cannot read properties of undefined (reading 'startsWith') 
+14.1.2024, 19:23:25 - ERROR - Failed to get Mongo collection | TypeError: Cannot read properties of undefined (reading 'startsWith') 
+14.1.2024, 19:23:34 - INFO - Server is running on port: 3030 
+14.1.2024, 19:23:34 - INFO - New connected socket [id: LCthTOqvBFYtKdFIAAAB] 
+14.1.2024, 19:23:37 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:23:37 - INFO - New connected socket [id: AytwF_h4hLX4HJwCAAAD] 
+14.1.2024, 19:23:37 - INFO - Req was made | / 
+14.1.2024, 19:23:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:24:19 - INFO - Server is running on port: 3030 
+14.1.2024, 19:24:19 - INFO - New connected socket [id: uCw2BNIBwOnJgyeAAAAB] 
+14.1.2024, 19:24:31 - INFO - Server is running on port: 3030 
+14.1.2024, 19:24:34 - INFO - New connected socket [id: Klw95mll_VJdL29FAAAB] 
+14.1.2024, 19:24:34 - INFO - Req was made | / 
+14.1.2024, 19:24:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:24:48 - INFO - Server is running on port: 3030 
+14.1.2024, 19:24:48 - INFO - New connected socket [id: N1o7ylxiszkZ2ZoQAAAB] 
+14.1.2024, 19:26:29 - INFO - Server is running on port: 3030 
+14.1.2024, 19:26:30 - INFO - New connected socket [id: D9_aMevMYe_ZMqE_AAAB] 
+14.1.2024, 19:26:31 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:26:31 - INFO - New connected socket [id: asUXv3nA44TKFqqyAAAD] 
+14.1.2024, 19:26:31 - INFO - Req was made | / 
+14.1.2024, 19:26:31 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:26:41 - INFO - Server is running on port: 3030 
+14.1.2024, 19:26:41 - INFO - New connected socket [id: dgK8mkVB8O0cQODGAAAB] 
+14.1.2024, 19:26:53 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:26:54 - INFO - Server is running on port: 3030 
+14.1.2024, 19:26:54 - INFO - New connected socket [id: mSeXiBfkxKTfZuVuAAAB] 
+14.1.2024, 19:26:54 - INFO - Req was made | / 
+14.1.2024, 19:26:54 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
