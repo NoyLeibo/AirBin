@@ -53,6 +53,9 @@ input {
   padding: 13px 23px;
   text-align: center;
   width: 100%;
+  transition: background-image 0.3s;
+  // font-size: 36px;
+  // padding: 0.5em;
 }
 
 .section-divider {
@@ -65,10 +68,6 @@ input {
     width: 100%;
   }
 
-  .login-btn {
-    font-size: 36px;
-    padding: 0.5em;
-  }
 
   .demo-signup-section {
     button {

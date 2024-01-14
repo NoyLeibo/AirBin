@@ -66,14 +66,6 @@
   }
 
   .reserve-btn {
-    background-image: radial-gradient(circle,
-        #ff385c 0,
-        #e61e4d 27.5%,
-        #e31c5f 40%,
-        #d70466 57.5%,
-        #bd1e59 75%,
-        #bd1e59 100%);
-    background-size: 200% 200%;
     border: none;
     border-radius: 8px;
     color: #fff;
@@ -83,7 +75,9 @@
     padding: 13px 23px;
     text-align: center;
     width: 100%;
+    transition: background-image 0.3s;
   }
+
 }
 
 .reservation-dets {

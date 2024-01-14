@@ -143,7 +143,7 @@ export function AppHeader() {
   function searchFilterBy(ev) {
     event.preventDefault()
     console.log(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn}&checkOut=${filterBy.selectedDates.checkOut}&selectedGuests=${totalGuests}`);
-    navigate(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn}&checkOut=${filterBy.selectedDates.checkOut}&adults=${filterBy.selectedGuests.Adults}&children=${filterBy.selectedGuests.Children}&infants=${filterBy.selectedGuests.Infants}&pets=${filterBy.selectedGuests.Pets}`);
+    navigate(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn?.toLocaleDateString('en-US')}&checkOut=${filterBy.selectedDates.checkOut?.toLocaleDateString('en-US')}&adults=${filterBy.selectedGuests.Adults}&children=${filterBy.selectedGuests.Children}&infants=${filterBy.selectedGuests.Infants}&pets=${filterBy.selectedGuests.Pets}`);
   }
 
 
@@ -352,7 +352,7 @@ export function AppHeader() {
             )}
             {filterBy.selectedDates.checkIn && (
               <div className="fs14 blacktxt fw600">
-                {filterBy.selectedDates.checkIn}
+                {filterBy.selectedDates.checkOut != null && filterBy.selectedDates.checkIn.toLocaleDateString()}
               </div>
             )}{" "}
           </div>
@@ -368,7 +368,7 @@ export function AppHeader() {
             )}
             {filterBy.selectedDates.checkOut && (
               <div className="fs14 blacktxt fw600">
-                {filterBy.selectedDates.checkOut}
+                {filterBy.selectedDates.checkOut != null && filterBy.selectedDates.checkOut.toLocaleDateString()}
               </div>
             )}
           </div>

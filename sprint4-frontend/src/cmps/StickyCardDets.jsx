@@ -6,18 +6,20 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-export function StickyCard({ stay ,onToggleReserve}) {
+export function StickyCard({ stay, onToggleReserve }) {
   const btnReserve = useRef(false);
   const navigate = useNavigate();
   const [isOpenDates, setIsOpenDates] = useState(false);
   const [isOpenGuests, setIsOpenGuests] = useState(false);
+  const [gradientPosition, setGradientPosition] = useState('center');
+
   const selectedDates = useSelector(
     (storeState) => storeState.stayModule.filterBy.selectedDates
   );
   const selectedGuests = useSelector(
     (storeState) => storeState.stayModule.filterBy.selectedGuests
   );
-  
+
   const days = numOfDays();
   const priceXdays = stay.price * days;
   const serviceFee = priceXdays / 10;
@@ -65,15 +67,15 @@ export function StickyCard({ stay ,onToggleReserve}) {
         if (entry.isIntersecting) {
           console.log("Target element is in the viewport")
           onToggleReserve(false)
-          
+
         } else {
           console.log("Target element is out of the viewport")
           onToggleReserve(true)
-          
+
         }
       })
     }
-    
+
     const options = {
       rootMargin: "-80px",
       threshold: 0.2,
@@ -88,7 +90,15 @@ export function StickyCard({ stay ,onToggleReserve}) {
     }
   }, [])
 
-  
+
+  const handleMouseMove = (e) => {
+    const rect = e.target.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+
+    setGradientPosition(`${x}px ${y}px`)
+  }
+
 
   // const toggleCalendarModal = () => {
   //   setIsOpenGuests(false);
@@ -144,7 +154,12 @@ export function StickyCard({ stay ,onToggleReserve}) {
           <div className="guests-modal">{isOpenGuests && <Guests />}</div>
         </section>
       </div>
-      <button ref={btnReserve} className="reserve-btn" onClick={onReserveNavigate}>
+      <button
+        style={{ backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)` }}
+        className="reserve-btn"
+        onMouseMove={handleMouseMove}
+        onClick={onReserveNavigate}
+      >
         Reserve
       </button>
       <div className="flex justify-center fs14">You won't be charged yet</div>

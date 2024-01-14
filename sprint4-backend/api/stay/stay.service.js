@@ -43,7 +43,20 @@ async function filterStays(filterBy, stays) {
   if (filterBy.placeType?.length) {
     stays = filterStaysByTags(filterBy.placeType, stays);
   }
-  return stays;
+  if (filterBy.selectedGuests.Adults.length) {
+    stays = stays.filter((stay) => {
+      return (
+        stay.capacity -
+        filterBy.selectedGuests.Adults -
+        filterBy.selectedGuests.Children -
+        filterBy.selectedGuests.Infants -
+        filterBy.selectedGuests.Pets > 0
+      )
+    })
+    // filterStaysByTags(filterBy.selectedGuests.Adults, stays);
+  }
+
+  return stays
 }
 
 function filterStaysByTags(placeType, stays) {
