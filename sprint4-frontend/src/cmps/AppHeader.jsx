@@ -397,7 +397,7 @@ export function AppHeader() {
       </div>
 
       <div
-        className="screen-shadow-login"
+        className="screen-shadow"
         style={{ display: isLoginOpen ? "block" : "none" }}
       ></div>
       <div
