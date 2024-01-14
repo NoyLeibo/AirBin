@@ -1,7 +1,9 @@
+import { useSelector } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom';
 
 export function StayFilterBy() {
     const location = useLocation();
+    const stays = useSelector((storeState) => storeState.stayModule.stays);
 
     const queryParams = new URLSearchParams(location.search);
     const selectedDestination = queryParams.get('location');

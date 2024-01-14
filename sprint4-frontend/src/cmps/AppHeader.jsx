@@ -246,7 +246,7 @@ export function AppHeader() {
             <img src={LOGO} alt="logo name" className="logo-header-txt" />
           </NavLink>
         </div>
-        {(currentPath === "/" || detailPath === '/details/') && <div
+        {(currentPath === "/" || detailPath === '/details/' || detailPath === '/stay') && <div
           className={`
           small-search-form flex align-center
             ${(!isScrolledDown || currentPath !== "/")

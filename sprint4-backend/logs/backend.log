@@ -1690,3 +1690,7 @@
 14.1.2024, 19:26:54 - INFO - New connected socket [id: mSeXiBfkxKTfZuVuAAAB] 
 14.1.2024, 19:26:54 - INFO - Req was made | / 
 14.1.2024, 19:26:54 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 19:29:12 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 19:29:13 - INFO - New connected socket [id: DGAlo00oXxcFoe30AAAV] 
+14.1.2024, 19:29:13 - INFO - Req was made | / 
+14.1.2024, 19:29:13 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
