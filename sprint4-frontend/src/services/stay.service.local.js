@@ -113,7 +113,7 @@ async function addStayMsg(stayId, txt) {
 function getEmptyStay() {
   return {
     name: "",
-    price: 0,
+    price: "",
     type: "",
     imgUrls: [],
     summary: "",
@@ -129,7 +129,7 @@ function getEmptyStay() {
       fullname: "",
       imgUrl: "",
       hostingYears: 0,
-      about: "",
+      ownerReview: "",
     },
     loc: {
       area: "",
@@ -179,12 +179,12 @@ function _createStays() {
         ],
         labels: ["Urban", "Modern", "City"],
         host: {
-          _id: "65a127d51cd27b4cddf5cc5e",
+          _id: "demo123",
           fullname: "Sophia Turner",
           imgUrl:
             "https://a0.muscache.com/im/pictures/user/21446f54-4214-40f4-813b-6d6c0113d7f3.jpg?im_w=240",
           hostingYears: 3,
-          about:
+          ownerReview:
             "The Treeframe is a modern a-frame treehouse that offers an unforgettable short-term rental experience. Located in the heart of the forest and surrounded by nature, our treehouse is the perfect spot for travelers looking for a one-of-a-kind getaway. Our treehouse is fully equipped with all the amenities you need for a relaxing stay, and Nick is always available to answer any questions you may have. Come discover the beauty of nature and escape the hustle and bustle of city life at The Treeframe!",
         },
         loc: {

@@ -899,6 +899,117 @@
 14.1.2024, 7:39:44 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: fXQHb8xBv4heuYzUAAAF] 
 14.1.2024, 7:44:41 - INFO - Req was made | / 
 14.1.2024, 7:44:41 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 12:41:19 - INFO - Req was made | / 
+14.1.2024, 12:41:19 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:09:53 - INFO - Req was made | / 
+14.1.2024, 13:09:53 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:10:07 - ERROR - while finding user u105 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:07 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:49 - ERROR - while finding user u105 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:49 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:49 - ERROR - while finding user u105 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:49 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:50 - ERROR - while finding user u105 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:50 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:50 - ERROR - while finding user u105 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:50 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:50 - ERROR - while finding user u105 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:10:50 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:13:07 - INFO - Req was made | / 
+14.1.2024, 13:13:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-24T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:15:15 - INFO - Req was made | / 
+14.1.2024, 13:15:15 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-24T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:15:16 - ERROR - while finding stay s105 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:15:16 - ERROR - Failed to get stay | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:15:18 - INFO - Req was made | / 
+14.1.2024, 13:15:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-24T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:15:18 - ERROR - while finding stay s105 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:15:18 - ERROR - Failed to get stay | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:15:19 - INFO - Req was made | / 
+14.1.2024, 13:15:19 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-24T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:15:21 - INFO - Req was made | / 
+14.1.2024, 13:15:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-24T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:15:22 - ERROR - Failed to get stay | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:15:22 - ERROR - while finding stay s105 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:15:24 - INFO - Req was made | / 
+14.1.2024, 13:15:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-24T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:15:26 - INFO - Req was made | / 
+14.1.2024, 13:15:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-24T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:17:11 - INFO - Req was made | / 
+14.1.2024, 13:17:11 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:17:52 - ERROR - while finding user u109 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:52 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:52 - ERROR - while finding user u109 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:52 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - while finding user u109 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - while finding user u109 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - while finding user u109 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - while finding user u109 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - while finding user u109 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:17:53 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:18:03 - ERROR - while finding user u109 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:18:03 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:18:37 - INFO - Req was made | / 
+14.1.2024, 13:18:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"1","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-24T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:18:38 - INFO - Req was made | / 
+14.1.2024, 13:18:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:19:07 - DEBUG - auth.service - signup with username: NoyL, fullname: Noy l 
+14.1.2024, 13:19:07 - DEBUG - auth.route - new account created: {"username":"NoyL","password":"$2b$10$1tCGOVt1.8CxkHvoSxsVPeSkO/qIIFvyOJy0PB2ef16Padad29ZiG","fullname":"Noy l","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[],"wishlist":[],"myStays":[],"guestsReservations":[],"_id":"65a3c32b088035f499703427"} 
+14.1.2024, 13:19:07 - DEBUG - auth.service - login with username: NoyL 
+14.1.2024, 13:19:08 - INFO - Req was made | / 
+14.1.2024, 13:19:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:19:56 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:19:56 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:19:56 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:19:56 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:19:57 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:19:57 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:20:23 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:20:23 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:20:24 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:20:24 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:24:42 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:24:42 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:24:51 - INFO - Req was made | / 
+14.1.2024, 13:24:51 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:25:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:25:05 - INFO - Req was made | / 
+14.1.2024, 13:25:07 - INFO - Req was made | / 
+14.1.2024, 13:25:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:25:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:25:21 - INFO - Req was made | / 
+14.1.2024, 13:25:25 - INFO - Req was made | / 
+14.1.2024, 13:25:25 - DEBUG - Getting Stays | {"placeType":["Play"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:25:27 - INFO - Req was made | / 
+14.1.2024, 13:25:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:25:28 - INFO - Req was made | / 
+14.1.2024, 13:25:28 - DEBUG - Getting Stays | {"placeType":["Rooms"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:25:29 - INFO - Req was made | / 
+14.1.2024, 13:25:29 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:25:33 - INFO - Req was made | / 
+14.1.2024, 13:25:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:26:07 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:26:07 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:26:08 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:26:08 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:26:20 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:26:20 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:26:20 - ERROR - while finding user u111 | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:26:20 - ERROR - Failed to get user | BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer 
+14.1.2024, 13:26:45 - INFO - Req was made | / 
+14.1.2024, 13:26:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:26:57 - INFO - Req was made | / 
+14.1.2024, 13:26:57 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-01-16T22:00:00.000Z","checkOut":"2024-01-23T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:27:57 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:27:57 - INFO - Req was made | / 
+14.1.2024, 13:31:10 - INFO - Req was made | / 
+14.1.2024, 13:31:10 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:36:47 - INFO - Req was made | / 
+14.1.2024, 13:36:47 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
 14.1.2024, 8:02:33 - INFO - Socket disconnected [id: undefined] 
 14.1.2024, 8:02:34 - INFO - New connected socket [id: 1JyGdIihtfACgFDjAAAH] 
 14.1.2024, 8:02:34 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: 1JyGdIihtfACgFDjAAAH] 
