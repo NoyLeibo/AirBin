@@ -21,9 +21,9 @@
 @import "views/PaymentPage";
 @import "views/BackOffice";
 @import "views/StayEdit";
-@import "views/UserTrips"; 
+@import "views/UserTrips";
 @import "views/Wishlist";
-
+@import "views/_Messages.scss";
 // Components
 @import "cmps/AppHeader";
 @import "cmps/AppHeaderFilter";
@@ -45,4 +45,3 @@
 @import "cmps/StayReviews";
 @import "cmps/Filter";
 @import "cmps/Chat";
-

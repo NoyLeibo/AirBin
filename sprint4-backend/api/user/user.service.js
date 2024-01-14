@@ -13,6 +13,7 @@ export const userService = {
   update,
   add,
   demoUser,
+  pushToUsers,
 };
 
 async function query(filterBy = {}) {
@@ -87,6 +88,12 @@ async function update(user) {
     loggerService.error(`cannot update user ${user._id}`, err);
     throw err;
   }
+}
+
+async function pushToUsers(from, to, txt) {
+  // make the txt -> msg
+  //save to from(msg)
+  // save to to(msg)
 }
 
 async function add(user) {
