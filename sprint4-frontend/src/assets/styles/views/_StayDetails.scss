@@ -8,11 +8,42 @@
   list-style: none;
   justify-content: center;
   color: $clblack;
+  
   >*{
     grid-column: 2;
   }
+  .reviews-cmp{
+    .btn-add-review{
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #222;
+      border-radius: 8px;
+      color: #222;
+      display: flex;
+      font-family: cereal-Medium;
+      font-size: 1rem;
+      gap: 8px;
+      justify-content: center;
+      line-height: 20px;
+      padding: 13px 23px;
+      text-align: center;
+  
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+     }
+  }
  
+  .review-none-container{
+    .review-none-title{
+      margin-bottom: 0.25em;
+    }
+    .review-none-content{
+      margin-left: 15px;
+      margin-bottom: 0.25em;
+    }
 
+  }
   .title {
     font-size: 1.625rem;
     line-height: 1.875rem;
@@ -200,11 +231,14 @@
     }
 
     .host-ctn-con {
+      align-self: center;
+      height: max-content;
       width: 250px;
       display: flex;
       flex-direction: column;
       align-items: start;
       justify-content: center;
+      
 
       .host-ctn-content {
         p {
@@ -236,6 +270,8 @@
         margin-right: 10px;
       }
     }
+    
+    
   }
 
   //   @media (max-width: 550px) {

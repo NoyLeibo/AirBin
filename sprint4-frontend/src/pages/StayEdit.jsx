@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
-import { stayService } from "../services/stay.service.local.js"
+import { stayService } from "../services/stay.service.js"
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js"
 import { addStay,updateStay, } from "../store/stay.actions.js"
 import SimpleMap from "../cmps/GoogleMap"
@@ -36,7 +36,7 @@ export function StayEdit() {
   const { stayId } = useParams()
   const navigate = useNavigate()
   const user = useSelector((storeState) => storeState.userModule.user)
-  console.log(stayToEdit, cords, valueGuests, "startttt")
+  // console.log(stayToEdit, cords, valueGuests, "startttt")
 
   useEffect(() => {
     document.documentElement.style.setProperty("--main-layout-width", "1500px")
@@ -109,13 +109,13 @@ export function StayEdit() {
         stayToEdit.loc.address
       getLatLngFromAddress(stayAddress)
     }
-    console.log(ev.target, field, newValue)
+    // console.log(ev.target, field, newValue)
   }
 
   async function onSave() {
     
     const newStay = { ...stayToEdit }
-    console.log(newStay);
+    // console.log(newStay);
   
     try {
       if(newStay._id){
@@ -123,11 +123,11 @@ export function StayEdit() {
       }else{
         await addStay(newStay)
       }
-      console.log('success');
+      // console.log('success');
       showSuccessMsg("Stay saved successfully")
       navigate("/")
     } catch (err) {
-      console.log('err',err);
+      // console.log('err',err);
       showErrorMsg("Cannot save Stay, please try again")
     }
   }
@@ -141,14 +141,14 @@ export function StayEdit() {
   }
 
   function setType(type) {
-    console.log(stayToEdit.type, type, selectedBtn)
+    // console.log(stayToEdit.type, type, selectedBtn)
     if (stayToEdit.type === type) {
-      console.log("unset")
+      // console.log("unset")
       stayToEdit.type = ""
       setStayToEdit(stayToEdit)
       setSelectedBtn("")
     } else {
-      console.log("set")
+      // console.log("set")
       stayToEdit.type = type
       setStayToEdit(stayToEdit)
       setSelectedBtn(type)
@@ -156,33 +156,33 @@ export function StayEdit() {
   }
 
   function setAmenities(Amenitie) {
-    console.log(stayToEdit.amenities, Amenitie, selectedBtnAment)
+    // console.log(stayToEdit.amenities, Amenitie, selectedBtnAment)
 
     const isAmenitieSelected = stayToEdit.amenities.includes(Amenitie)
 
     if (isAmenitieSelected) {
       const idxAmen = stayToEdit.amenities.findIndex((amt) => amt === Amenitie)
       stayToEdit.amenities.splice(idxAmen, 1)
-      console.log("unset", selectedBtnAment, idxAmen, stayToEdit.amenities)
+      // console.log("unset", selectedBtnAment, idxAmen, stayToEdit.amenities)
     } else {
       stayToEdit.amenities.push(Amenitie)
-      console.log("set", selectedBtnAment, stayToEdit.amenities)
+      // console.log("set", selectedBtnAment, stayToEdit.amenities)
     }
     setStayToEdit({ ...stayToEdit, amenities: stayToEdit.amenities })
     setSelectedBtnAment(stayToEdit.amenities)
 
-    console.log(selectedBtnAment.includes("Wifi"))
+    // console.log(selectedBtnAment.includes("Wifi"))
   }
 
   function setRoomType(roomType) {
-    console.log(stayToEdit.roomType, roomType, selectedBtn)
+    // console.log(stayToEdit.roomType, roomType, selectedBtn)
     if (stayToEdit.roomType === roomType) {
-      console.log("unset")
+      // console.log("unset")
       stayToEdit.roomType = ""
       setStayToEdit(stayToEdit)
       setSelectedBtnRoomType("")
     } else {
-      console.log("set")
+      // console.log("set")
       stayToEdit.roomType = roomType
       setStayToEdit(stayToEdit)
       setSelectedBtnRoomType(roomType)
@@ -251,7 +251,7 @@ export function StayEdit() {
       .then((data) => {
         if (data.results && data.results.length > 0) {
           const { lat, lng } = data.results[0].geometry.location
-          console.log(`Latitude: ${lat}, Longitude: ${lng}`)
+          // console.log(`Latitude: ${lat}, Longitude: ${lng}`)
           stayToEdit.loc.lat = lat
           stayToEdit.loc.lng = lng
           // setStayToEdit(stayToEdit)
@@ -259,7 +259,7 @@ export function StayEdit() {
           cords.lng = lng
           setCords(cords)
         } else {
-          console.log("No results found")
+          // console.log("No results found")
         }
       })
       .catch((error) => {
@@ -268,7 +268,7 @@ export function StayEdit() {
   }
 
   if (isLoading) {
-    console.log("no stay to edit")
+    // console.log("no stay to edit")
     return (
       <section className="edit-main-container">
         <div className="loader">
