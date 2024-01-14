@@ -1037,3 +1037,45 @@
 14.1.2024, 13:58:10 - INFO - Req was made | / 
 14.1.2024, 13:58:22 - INFO - Req was made | / 
 14.1.2024, 13:58:22 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"1","Infants":"1","Pets":"1"},"destination":"","selectedDates":{"checkIn":"2024-02-06T22:00:00.000Z","checkOut":"2024-02-22T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 15:40:05 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 15:40:07 - INFO - New connected socket [id: Yup9TCt9suVeitLtAAAL] 
+14.1.2024, 15:40:07 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: Yup9TCt9suVeitLtAAAL] 
+14.1.2024, 15:40:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:40:08 - INFO - Req was made | / 
+14.1.2024, 15:41:42 - INFO - Req was made | / 
+14.1.2024, 15:41:42 - DEBUG - Getting Stays | {"placeType":["Iconic cities"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:41:43 - INFO - Req was made | / 
+14.1.2024, 15:41:43 - DEBUG - Getting Stays | {"placeType":["Iconic cities","Beachfront"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:41:44 - INFO - Req was made | / 
+14.1.2024, 15:41:44 - DEBUG - Getting Stays | {"placeType":["Iconic cities","Beachfront","Trending"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:41:45 - INFO - Req was made | / 
+14.1.2024, 15:41:45 - DEBUG - Getting Stays | {"placeType":["Iconic cities","Beachfront","Trending","Rooms"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:41:46 - INFO - Req was made | / 
+14.1.2024, 15:41:46 - DEBUG - Getting Stays | {"placeType":["Iconic cities","Beachfront","Rooms"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:41:47 - INFO - Req was made | / 
+14.1.2024, 15:41:47 - DEBUG - Getting Stays | {"placeType":["Iconic cities","Rooms"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:41:49 - INFO - Req was made | / 
+14.1.2024, 15:41:49 - DEBUG - Getting Stays | {"placeType":["Iconic cities"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:41:51 - INFO - Req was made | / 
+14.1.2024, 15:41:51 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:41:51 - INFO - Req was made | / 
+14.1.2024, 15:41:51 - DEBUG - Getting Stays | {"placeType":["Beachfront"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:42:05 - INFO - Req was made | / 
+14.1.2024, 15:42:05 - DEBUG - Getting Stays | {"placeType":["Beachfront"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:42:12 - INFO - Req was made | / 
+14.1.2024, 15:42:12 - DEBUG - Getting Stays | {"placeType":["Beachfront"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:42:18 - DEBUG - Getting Stays | {"placeType":["Beachfront","OMG"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:42:18 - INFO - Req was made | / 
+14.1.2024, 15:42:24 - DEBUG - Getting Stays | {"placeType":["Beachfront"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:42:24 - INFO - Req was made | / 
+14.1.2024, 15:42:26 - INFO - Req was made | / 
+14.1.2024, 15:42:26 - DEBUG - Getting Stays | {"placeType":["Beachfront","Arctic"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:42:27 - INFO - Req was made | / 
+14.1.2024, 15:42:27 - DEBUG - Getting Stays | {"placeType":["Arctic"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:42:33 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 15:42:34 - INFO - New connected socket [id: 3-ds4ZeX_vXaD6uWAAAN] 
+14.1.2024, 15:42:35 - INFO - Req was made | / 
+14.1.2024, 15:42:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 15:42:35 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: 3-ds4ZeX_vXaD6uWAAAN] 
+14.1.2024, 15:51:36 - INFO - Req was made | / 
+14.1.2024, 15:51:36 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
