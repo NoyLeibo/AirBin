@@ -8,6 +8,13 @@ import { LoginModal } from "../cmps/Login";
 import { userService } from "../services/user.service";
 import { updateUser } from "../store/user.actions";
 import { useSelector } from "react-redux";
+import {
+  socketService,
+  SOCKET_EMIT_SEND_MSG,
+  SOCKET_EVENT_ADD_MSG,
+  SOCKET_EMIT_SET_TOPIC,
+} from "../services/socket.service";
+import { showSuccessMsg } from "../services/event-bus.service";
 
 export function PaymentPage() {
   const location = useLocation();
@@ -37,6 +44,19 @@ export function PaymentPage() {
     const options = { month: "short", day: "numeric" };
     const date = new Date(timestamp);
     return date.toLocaleDateString("en-US", options);
+  }
+
+  function orderRecived() {
+    const data = {
+      from: user.username,
+      to: `stay.host.username`,
+    };
+    const type = "order-recieved";
+    socketService.emit("direct-emit", {
+      type,
+      data,
+      userId: user._id,
+    });
   }
 
   async function loadStay() {
@@ -78,9 +98,9 @@ export function PaymentPage() {
 
   async function onConfirm() {
     const newTrip = createTrip();
-    console.log(newTrip);
     const updatedUser = await userService.updateTripList(newTrip);
     await updateUser(updatedUser);
+    orderRecived();
     navigate("/userTrips");
   }
 

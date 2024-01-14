@@ -7,6 +7,7 @@ import {
   SOCKET_EVENT_ADD_MSG,
   SOCKET_EMIT_SET_TOPIC,
 } from "../services/socket.service";
+import { showSuccessMsg } from "../services/event-bus.service";
 
 export function Messages() {
   const loggedInUser = useSelector((storeState) => storeState.userModule.user);
@@ -16,21 +17,25 @@ export function Messages() {
   const [receivedMessage, setReceivedMessage] = useState("");
   const [targetUsername, setTargetUsername] = useState("");
 
-  useEffect(() => {
-    socketService.on(SOCKET_EVENT_ADD_MSG, addMsg);
-    socketService.on("message-recived", (data) => {
-      const newMsg = {
-        from: data.from,
-        txt: data.txt,
-      };
-      addMsg(newMsg);
-    });
-    socketService.emit("set-user-socket-username", loggedInUser.username);
+  // useEffect(() => {
+  //   // socketService.on("order-recieved", (data) => {
+  //   //   console.log("hi");
+  //   //   showSuccessMsg("Wonderful");
+  //   // });
+  //   socketService.on(SOCKET_EVENT_ADD_MSG, addMsg);
+  //   socketService.on("message-recived", (data) => {
+  //     const newMsg = {
+  //       from: data.from,
+  //       txt: data.txt,
+  //     };
+  //     addMsg(newMsg);
+  //   });
+  //   socketService.emit("set-user-socket-username", loggedInUser.username);
 
-    return () => {
-      socketService.off(SOCKET_EVENT_ADD_MSG, addMsg);
-    };
-  }, []);
+  //   return () => {
+  //     socketService.off(SOCKET_EVENT_ADD_MSG, addMsg);
+  //   };
+  // }, []);
 
   function addMsg(newMsg) {
     setMsgs((prevMsgs) => [...prevMsgs, newMsg]);
@@ -52,7 +57,7 @@ export function Messages() {
     const from = loggedInUser?.fullname || "Guest";
     const to = targetUsername;
     const newMsg = { to, from, txt: msg.txt };
-    socketService.emit("chat-send-msg-username", {
+    socketService.emit("direct-emit", {
       type: "message-recived",
       data: newMsg,
       username: targetUsername,
