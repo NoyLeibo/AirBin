@@ -142,8 +142,8 @@ export function AppHeader() {
 
   function searchFilterBy(ev) {
     event.preventDefault()
-    console.log(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn.toLocaleDateString('en-US')}&checkOut=${filterBy.selectedDates.checkOut.toLocaleDateString('en-US')}&selectedGuests=${totalGuests}`);
-    navigate(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn.toLocaleDateString('en-US')}&checkOut=${filterBy.selectedDates.checkOut.toLocaleDateString('en-US')}&selectedGuests=${totalGuests}`);
+    console.log(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn}&checkOut=${filterBy.selectedDates.checkOut}&selectedGuests=${totalGuests}`);
+    navigate(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn}&checkOut=${filterBy.selectedDates.checkOut}&adults=${filterBy.selectedGuests.Adults}&children=${filterBy.selectedGuests.Children}&infants=${filterBy.selectedGuests.Infants}&pets=${filterBy.selectedGuests.Pets}`);
   }
 
 
@@ -246,7 +246,7 @@ export function AppHeader() {
             <img src={LOGO} alt="logo name" className="logo-header-txt" />
           </NavLink>
         </div>
-        {(currentPath === "/" || detailPath === '/details/') && <div
+        {(currentPath === "/" || detailPath === '/details/' || detailPath === '/stay') && <div
           className={`
           small-search-form flex align-center
             ${(!isScrolledDown || currentPath !== "/")
@@ -352,7 +352,7 @@ export function AppHeader() {
             )}
             {filterBy.selectedDates.checkIn && (
               <div className="fs14 blacktxt fw600">
-                {filterBy.selectedDates.checkIn.toLocaleDateString()}
+                {filterBy.selectedDates.checkIn}
               </div>
             )}{" "}
           </div>
@@ -368,7 +368,7 @@ export function AppHeader() {
             )}
             {filterBy.selectedDates.checkOut && (
               <div className="fs14 blacktxt fw600">
-                {filterBy.selectedDates.checkOut.toLocaleDateString()}
+                {filterBy.selectedDates.checkOut}
               </div>
             )}
           </div>

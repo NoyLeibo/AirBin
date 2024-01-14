@@ -84,9 +84,9 @@ export function Calendar() {
     }
 
     if (!checkIn || (checkIn && checkOut)) {
-      dispatch(setSelectedDatesAction({ checkIn: day, checkOut: null }));
+      dispatch(setSelectedDatesAction({ checkIn: day.toLocaleDateString('en-US'), checkOut: null }));
     } else if (day > checkIn) {
-      dispatch(setSelectedDatesAction({ ...selectedDates, checkOut: day }))
+      dispatch(setSelectedDatesAction({ ...selectedDates, checkOut: day.toLocaleDateString('en-US') }))
     }
   };
 
