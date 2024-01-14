@@ -899,3 +899,30 @@
 14.1.2024, 7:39:44 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: fXQHb8xBv4heuYzUAAAF] 
 14.1.2024, 7:44:41 - INFO - Req was made | / 
 14.1.2024, 7:44:41 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 8:02:33 - INFO - Socket disconnected [id: undefined] 
+14.1.2024, 8:02:34 - INFO - New connected socket [id: 1JyGdIihtfACgFDjAAAH] 
+14.1.2024, 8:02:34 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: 1JyGdIihtfACgFDjAAAH] 
+14.1.2024, 8:02:34 - INFO - Req was made | / 
+14.1.2024, 8:02:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:26:23 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:26:23 - INFO - Req was made | / 
+14.1.2024, 13:26:40 - INFO - Req was made | / 
+14.1.2024, 13:26:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+14.1.2024, 13:26:57 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+14.1.2024, 13:26:57 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+14.1.2024, 13:26:58 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+14.1.2024, 13:26:58 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+14.1.2024, 13:27:03 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+14.1.2024, 13:27:03 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+14.1.2024, 13:27:09 - ERROR - while finding user 622f3403e36c59e6164faf93 | TypeError: Cannot convert undefined or null to object 
+14.1.2024, 13:27:09 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+14.1.2024, 13:28:19 - INFO - Req was made | / 
+14.1.2024, 13:28:19 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"1","Infants":"1","Pets":"1"},"destination":"","selectedDates":{"checkIn":"2024-02-06T22:00:00.000Z","checkOut":"2024-02-22T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:28:53 - INFO - Req was made | / 
+14.1.2024, 13:28:53 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"1","Infants":"1","Pets":"1"},"destination":"","selectedDates":{"checkIn":"2024-02-06T22:00:00.000Z","checkOut":"2024-02-22T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:58:08 - DEBUG - Getting Stays | {"placeType":["Rooms"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"1","Infants":"1","Pets":"1"},"destination":"","selectedDates":{"checkIn":"2024-02-06T22:00:00.000Z","checkOut":"2024-02-22T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:58:08 - INFO - Req was made | / 
+14.1.2024, 13:58:10 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"1","Infants":"1","Pets":"1"},"destination":"","selectedDates":{"checkIn":"2024-02-06T22:00:00.000Z","checkOut":"2024-02-22T22:00:00.000Z"},"selectedDestination":""} 
+14.1.2024, 13:58:10 - INFO - Req was made | / 
+14.1.2024, 13:58:22 - INFO - Req was made | / 
+14.1.2024, 13:58:22 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"1","Infants":"1","Pets":"1"},"destination":"","selectedDates":{"checkIn":"2024-02-06T22:00:00.000Z","checkOut":"2024-02-22T22:00:00.000Z"},"selectedDestination":""} 
