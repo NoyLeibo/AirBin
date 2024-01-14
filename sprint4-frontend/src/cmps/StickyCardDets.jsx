@@ -2,10 +2,12 @@ import { useNavigate } from "react-router";
 import { Calendar } from "./Calendar.jsx";
 import { Guests } from "./Guests.jsx";
 import { useState } from "react";
+import { useRef } from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-export function StickyCard({ stay }) {
+export function StickyCard({ stay ,onToggleReserve}) {
+  const btnReserve = useRef(false);
   const navigate = useNavigate();
   const [isOpenDates, setIsOpenDates] = useState(false);
   const [isOpenGuests, setIsOpenGuests] = useState(false);
@@ -15,7 +17,7 @@ export function StickyCard({ stay }) {
   const selectedGuests = useSelector(
     (storeState) => storeState.stayModule.filterBy.selectedGuests
   );
-
+  
   const days = numOfDays();
   const priceXdays = stay.price * days;
   const serviceFee = priceXdays / 10;
@@ -57,6 +59,36 @@ export function StickyCard({ stay }) {
       );
     }
   }
+  useEffect(() => {
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("Target element is in the viewport")
+          onToggleReserve(false)
+          
+        } else {
+          console.log("Target element is out of the viewport")
+          onToggleReserve(true)
+          
+        }
+      })
+    }
+    
+    const options = {
+      rootMargin: "-80px",
+      threshold: 0.2,
+    }
+    const observer = new IntersectionObserver(handleIntersection, options)
+
+    if (btnReserve.current) {
+      observer.observe(btnReserve.current)
+    }
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
+
+  
 
   // const toggleCalendarModal = () => {
   //   setIsOpenGuests(false);
@@ -68,7 +100,7 @@ export function StickyCard({ stay }) {
   // };
 
   return (
-    <section className="stay-details-sticky-card">
+    <section className="stay-details-sticky-card" id="detailsStickyCard">
       <h1 className="flex align-center">
         ₪{stay.price} <span>night</span>
       </h1>
@@ -112,7 +144,7 @@ export function StickyCard({ stay }) {
           <div className="guests-modal">{isOpenGuests && <Guests />}</div>
         </section>
       </div>
-      <button className="reserve-btn" onClick={onReserveNavigate}>
+      <button ref={btnReserve} className="reserve-btn" onClick={onReserveNavigate}>
         Reserve
       </button>
       <div className="flex justify-center fs14">You won't be charged yet</div>

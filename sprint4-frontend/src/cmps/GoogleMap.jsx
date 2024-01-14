@@ -5,8 +5,10 @@ import { BsHouseFill } from "react-icons/bs";
 const AnyReactComponent = ({ text }) => <div className="flex column align-center"><BsHouseFill size="22" className="map-house-icon" /><div className="flex column text-center  fs12">{text}</div></div>
 const API_KEY='AIzaSyB0dUlJsQSAuB636Yc1NGBUaJbwvYjfS1s'
 export default function SimpleMap({lat=32.109333,lng=34.855499,marker}){
+  if(lat<-90||lat>90){
+    lat=0
+  }
   const [mapCenter, setMapCenter] = useState({ lat: lat, lng: lng })
-
   useEffect(() => {
     // Simulate changing coordinates every 3 seconds (you can replace this with your data updating logic)
     const interval = setInterval(() => {
@@ -15,7 +17,6 @@ export default function SimpleMap({lat=32.109333,lng=34.855499,marker}){
 
     return () => clearInterval(interval)
   }, [lat, lng])
-
   return (
     <div style={{ height: '500px', width: '100%' }}>
       <GoogleMapReact

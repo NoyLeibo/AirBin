@@ -129,7 +129,7 @@ function getEmptyStay() {
       fullname: "",
       imgUrl: "",
       hostingYears: 0,
-      ownerReview: "",
+      about: "",
     },
     loc: {
       area: "",
@@ -184,7 +184,7 @@ function _createStays() {
           imgUrl:
             "https://a0.muscache.com/im/pictures/user/21446f54-4214-40f4-813b-6d6c0113d7f3.jpg?im_w=240",
           hostingYears: 3,
-          ownerReview:
+          about:
             "The Treeframe is a modern a-frame treehouse that offers an unforgettable short-term rental experience. Located in the heart of the forest and surrounded by nature, our treehouse is the perfect spot for travelers looking for a one-of-a-kind getaway. Our treehouse is fully equipped with all the amenities you need for a relaxing stay, and Nick is always available to answer any questions you may have. Come discover the beauty of nature and escape the hustle and bustle of city life at The Treeframe!",
         },
         loc: {
