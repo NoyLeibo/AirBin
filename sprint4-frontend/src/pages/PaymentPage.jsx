@@ -8,6 +8,14 @@ import { LoginModal } from "../cmps/Login";
 import { userService } from "../services/user.service";
 import { updateUser } from "../store/user.actions";
 import { useSelector } from "react-redux";
+import {
+  socketService,
+  SOCKET_EMIT_SEND_MSG,
+  SOCKET_EVENT_ADD_MSG,
+  SOCKET_EMIT_SET_TOPIC,
+} from "../services/socket.service";
+import { showSuccessMsg } from "../services/event-bus.service";
+import { ToastifyNotification } from "../cmps/ToastifyNotification";
 
 export function PaymentPage() {
   const location = useLocation();
@@ -18,7 +26,7 @@ export function PaymentPage() {
   const queryParams = new URLSearchParams(location.search);
   const checkIn = convertDate(queryParams.get("checkIn"));
   const checkOut = convertDate(queryParams.get("checkOut"));
-  const [gradientPosition, setGradientPosition] = useState('center');
+  const [gradientPosition, setGradientPosition] = useState("center");
   const price = +queryParams.get("price");
   const days = +queryParams.get("days");
   const serviceFee = +queryParams.get("serviceFee");
@@ -52,12 +60,12 @@ export function PaymentPage() {
   }
 
   const handleMouseMove = (e) => {
-    const rect = e.target.getBoundingClientRect()
-    const x = e.clientX - rect.left
+    const rect = e.target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    setGradientPosition(`${x}px ${y}px`)
-  }
+    setGradientPosition(`${x}px ${y}px`);
+  };
 
   function createTrip() {
     const stayDetails = {
@@ -85,24 +93,41 @@ export function PaymentPage() {
     return newTrip;
   }
 
+  function orderRecived() {
+    const data = {
+      from: user.username,
+      to: `stay.host.username`,
+    };
+    const type = "order-recieved";
+    socketService.emit("direct-emit", {
+      type,
+      data,
+      userId: user._id,
+    });
+  }
+
   async function onConfirm() {
     const newTrip = createTrip();
     console.log(newTrip);
     const updatedUser = await userService.updateTripList(newTrip);
     await updateUser(updatedUser);
+    orderRecived();
     navigate("/userTrips");
   }
 
   if (!stay) return <div>Loading...</div>;
+
   return (
     <section className="payment-container">
       <div className="page-title flex">
         <button
           onClick={() => navigate(`/details/${stay._id}`)}
-          className=".clean-btn">
+          className=".clean-btn"
+        >
           back
         </button>
         <h2>Request to book</h2>
+        <div>{ToastifyNotification()}</div>
       </div>
 
       <div className="order-content flex">
@@ -129,9 +154,14 @@ export function PaymentPage() {
               <h5>{guests} Guest</h5>
             </div>
           </div>
-          <button className="reserve-btn" style={{ backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)` }}
+          <button
+            className="reserve-btn"
+            style={{
+              backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)`,
+            }}
             onMouseMove={handleMouseMove}
-            onClick={onConfirm}>
+            onClick={onConfirm}
+          >
             Confirm
           </button>
           <div className="login-section">
