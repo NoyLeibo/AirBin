@@ -75,12 +75,7 @@ export function StayIndex() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [filterBy]); // need to be filterBy.amenities
-
-
-  useEffect(() => {
-    socketInit();
-  }, []);
+  }, [filterBy])
 
   function onSetFilter(filterBy) {
     setFilterBy(filterBy);

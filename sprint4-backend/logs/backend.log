@@ -6467,3 +6467,11 @@
 15.1.2024, 21:35:24 - INFO - Req was made | / 
 15.1.2024, 21:35:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
 15.1.2024, 21:35:24 - INFO - New connected socket [id: Z8Vi4ORqFjZ0NrJxAAAD] 
+15.1.2024, 21:36:57 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 21:36:57 - INFO - New connected socket [id: YVst1Q4oww4k2OfdAAAF] 
+15.1.2024, 21:36:58 - INFO - Req was made | / 
+15.1.2024, 21:36:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 21:37:31 - INFO - Req was made | / 
+15.1.2024, 21:37:31 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 21:37:35 - INFO - Req was made | / 
+15.1.2024, 21:37:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
