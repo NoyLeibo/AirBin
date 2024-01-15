@@ -8,36 +8,19 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
+import Tooltip from "@mui/material/Tooltip";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { loadUsers, removeUser, updateUser } from "../store/user.actions";
+import { loadUsers, updateUser } from "../store/user.actions";
 import { userService } from "../services/user.service";
 import { SOCKET_EVENT_HOST_ANSWER } from "../services/socket.service";
-// export function DashboardResarvation() {
-//   const users = useSelector((storeState) => storeState.userModule.users);
-//   const isLoading = useSelector(
-//     (storeState) => storeState.userModule.isLoading
-//   );
-
-//   useEffect(() => {
-//     loadUsers();
-//   }, []);
-
-//   return (
-//     <section className="dashboard-resarvation-container">
-//       {isLoading && "Loading..."}
-//       <div className="graphs-container">
-
-//       </div>
-//     </section>
-//   );
-// }
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
+    // backgroundColor: theme.palette.common.black,
+    backgroundColor: theme.palette.action.hover,
+    color: theme.palette.common.black,
+    fontSize: 17,
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
@@ -45,9 +28,9 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
+  // "&:nth-of-type(odd)": {
+  //   backgroundColor: theme.palette.action.hover,
+  // },
 
   "&:last-child td, &:last-child th": {
     border: 0,
@@ -57,11 +40,12 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 export function DashboardResarvation() {
   const user = useSelector((storeState) => storeState.userModule.user);
   const reservations = user.guestsReservations;
+  console.log(reservations.length);
   const isLoading = useSelector(
     (storeState) => storeState.userModule.isLoading
   );
 
-  async function onActionClicked(reservation, status, color) {
+  async function onActionClicked(reservation, status) {
     reservation.status = status;
     await userService.updateReservationGuest(reservation);
     const host = await userService.updateHostReservation(reservation);
@@ -80,15 +64,27 @@ export function DashboardResarvation() {
     });
   }
 
-  useEffect(() => {
-    loadUsers();
-  }, []);
+  function changeFontColor(status) {
+    if (status === "pending") {
+      return "pendingStatus";
+    }
+    if (status === "Accepted") {
+      return "acceptedStatus";
+    }
+    if (status === "Rejected") {
+      return "rejectedStatus";
+    }
+  }
+
+  // useEffect(() => {
+  //   loadUsers();
+  // }, []);
   return (
     <TableContainer
       component={Paper}
       className="dashboard-resarvation-container"
     >
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <Table sx={{ minWidth: 700 }}>
         <TableHead>
           <TableRow>
             <StyledTableCell>Guest</StyledTableCell>
@@ -96,7 +92,7 @@ export function DashboardResarvation() {
             <StyledTableCell align="left">Check-Out</StyledTableCell>
             <StyledTableCell align="left">Booked</StyledTableCell>
             <StyledTableCell align="left">Total</StyledTableCell>
-            <StyledTableCell align="center">Status</StyledTableCell>
+            <StyledTableCell align="left">Status</StyledTableCell>
             <StyledTableCell align="center">Actions</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -118,28 +114,36 @@ export function DashboardResarvation() {
               <StyledTableCell align="left">
                 {reservation.totalPrice}
               </StyledTableCell>
-              <StyledTableCell align="center">
-                {reservation.status}
+              <StyledTableCell align="left">
+                <span className={changeFontColor(reservation.status)}>
+                  {reservation.status}
+                </span>
               </StyledTableCell>
               <StyledTableCell align="center">
-                <>
-                  <button
-                    onClick={() =>
-                      onActionClicked(reservation, "Accepted", "#67c23a")
-                    }
-                    className="clean-btn accept-btn actionBtn"
-                  >
-                    Accept
-                  </button>
-                  <button
-                    onClick={() =>
-                      onActionClicked(reservation, "Rejected", "#f56c6c")
-                    }
-                    className="clean-btn reject-btn actionBtn"
-                  >
-                    Reject
-                  </button>
-                </>
+                {reservation.status === "pending" ? (
+                  <>
+                    <button
+                      onClick={() => onActionClicked(reservation, "Accepted")}
+                      className="clean-btn accept-btn actionBtn"
+                    >
+                      Accept
+                    </button>
+                    <button
+                      onClick={() => onActionClicked(reservation, "Rejected")}
+                      className="clean-btn reject-btn actionBtn"
+                    >
+                      Reject
+                    </button>
+                  </>
+                ) : (
+                  // "Action has been sent to client"
+
+                  <Tooltip title="Action has already been sent to client">
+                    <span>
+                      <Button disabled>Disabled Button</Button>
+                    </span>
+                  </Tooltip>
+                )}
               </StyledTableCell>
             </StyledTableRow>
           ))}

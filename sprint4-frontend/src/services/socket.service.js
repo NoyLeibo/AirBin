@@ -37,18 +37,21 @@ function createSocketService() {
       socket.on(SOCKET_EVENT_ORDER_RECIEVED, async (data) => {
         toast("A new reservation has been recieved from " + data.from);
         const updatedHost = await userService.getById(data.to);
-        updateUser(updatedHost);
+        await updateUser(updatedHost);
       });
       socket.on(SOCKET_EVENT_REMOVE_ORDER, async (data) => {
         const updatedHost = await userService.getById(data.to);
-        updateUser(updatedHost);
+        console.log(
+          updatedHost.username + updatedHost.guestsReservations.length
+        );
+        await updateUser(updatedHost);
       });
       socket.on(SOCKET_EVENT_HOST_ANSWER, async (data) => {
         toast(
           "Your reservation from " + data.from + " has been " + data.status
         );
         const updatedGuest = await userService.getById(data.to);
-        updateUser(updatedGuest);
+        await updateUser(updatedGuest);
       });
     },
     on(eventName, cb) {

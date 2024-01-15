@@ -25,12 +25,12 @@ export function UserTrips() {
 
   async function onRemoveBtn(reservation) {
     const user = await userService.removeTrip(reservation);
-    const host = await userService.removeTripHost(reservation);
+    await userService.removeTripHost(reservation);
 
     await updateUser(user);
     const data = {
       from: user.username,
-      to: reservation.guest._id,
+      to: reservation.host._id,
     };
     const type = SOCKET_EVENT_REMOVE_ORDER;
     socketService.emit("direct-emit", {
