@@ -106,7 +106,6 @@ export function PaymentPage() {
       data,
       userId: stay.host._id,
     });
-  
   }
 
   async function onConfirm() {

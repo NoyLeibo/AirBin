@@ -124,8 +124,6 @@ async function removeTripHost(reservation) {
     (currReservation) => reservation._id !== currReservation._id
   );
   await update(user._id, user);
-  saveLocalUser(user);
-
   return user;
 }
 

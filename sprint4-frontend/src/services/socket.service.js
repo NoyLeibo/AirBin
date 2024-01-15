@@ -1,6 +1,7 @@
 import io from "socket.io-client";
 import { userService } from "./user.service";
 import { toast } from "react-toastify";
+import { updateUser } from "../store/user.actions";
 
 export const SOCKET_EVENT_ADD_MSG = "chat-add-msg";
 export const SOCKET_EMIT_SEND_MSG = "chat-send-msg";
@@ -11,6 +12,7 @@ export const SOCKET_EVENT_REVIEW_ABOUT_YOU = "review-about-you";
 export const SOCKET_EVENT_REVIEW_ADDED = "review-added";
 export const SOCKET_EVENT_ORDER_RECIEVED = "order-recieved";
 export const SOCKET_EVENT_HOST_ANSWER = "host-order-answer";
+export const SOCKET_EVENT_REMOVE_ORDER = "remove_order_from_host";
 
 const SOCKET_EMIT_LOGIN = "set-user-socket";
 const SOCKET_EMIT_LOGOUT = "unset-user-socket";
@@ -32,11 +34,21 @@ function createSocketService() {
       const user = userService.getLoggedinUser();
       if (user) this.login(user._id);
 
-      socket.on(SOCKET_EVENT_ORDER_RECIEVED, (data) => {
-        toast("A new order has been recieved from " + data.from);
+      socket.on(SOCKET_EVENT_ORDER_RECIEVED, async (data) => {
+        toast("A new reservation has been recieved from " + data.from);
+        const updatedHost = await userService.getById(data.to);
+        updateUser(updatedHost);
       });
-      socket.on(SOCKET_EVENT_HOST_ANSWER, (data) => {
-        toast("Your reservation has been " + data.status);
+      socket.on(SOCKET_EVENT_REMOVE_ORDER, async (data) => {
+        const updatedHost = await userService.getById(data.to);
+        updateUser(updatedHost);
+      });
+      socket.on(SOCKET_EVENT_HOST_ANSWER, async (data) => {
+        toast(
+          "Your reservation from " + data.from + " has been " + data.status
+        );
+        const updatedGuest = await userService.getById(data.to);
+        updateUser(updatedGuest);
       });
     },
     on(eventName, cb) {
