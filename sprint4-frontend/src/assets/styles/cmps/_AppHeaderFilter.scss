@@ -23,6 +23,15 @@
         position: sticky;
         top: 80px;
     }
+    .btn-filters{
+        display: flex;
+        align-items: center;
+        padding: 20px 10px;
+        font-size: 16px;
+        &:hover{
+          background-color: $clGreyLighter;
+        }
+    }
 }
 
 .emojis-filters {

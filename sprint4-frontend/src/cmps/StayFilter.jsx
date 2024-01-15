@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { useEffectUpdate } from "../customHooks/useEffectUpdate";
-
+import { GiSettingsKnobs } from "react-icons/gi"
 import { Filter } from "./Filter";
 import { utilService } from "../services/util.service";
 
@@ -133,9 +133,10 @@ export function StayFilter({ filterBy, onSetFilter }) {
       )}
       <div className="flex justify-center align-center">
         <button
-          className="clean-btn "
+          className="clean-btn btn-filters"
           onClick={() => setIsOpenFilter((currState) => !currState)}
         >
+          <GiSettingsKnobs size="22"/>
           Filters
         </button>
       </div>

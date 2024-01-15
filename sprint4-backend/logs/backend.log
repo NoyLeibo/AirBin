@@ -2432,3 +2432,34 @@
 15.1.2024, 2:58:00 - INFO - Socket disconnected [id: undefined] 
 15.1.2024, 2:58:01 - INFO - New connected socket [id: SkOch5ak9iLN2PMGAAAF] 
 15.1.2024, 2:58:01 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: SkOch5ak9iLN2PMGAAAF] 
+15.1.2024, 3:18:02 - INFO - Req was made | / 
+15.1.2024, 3:18:02 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:24:28 - INFO - Req was made | / 
+15.1.2024, 3:24:28 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:24:32 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:24:32 - INFO - Req was made | / 
+15.1.2024, 3:24:46 - INFO - Req was made | / 
+15.1.2024, 3:24:46 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:24:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:24:55 - INFO - Req was made | / 
+15.1.2024, 3:25:02 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:25:02 - INFO - Req was made | / 
+15.1.2024, 3:25:07 - INFO - Req was made | / 
+15.1.2024, 3:25:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:25:15 - INFO - Req was made | / 
+15.1.2024, 3:25:15 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:25:17 - INFO - Req was made | / 
+15.1.2024, 3:25:17 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:25:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:25:24 - INFO - Req was made | / 
+15.1.2024, 3:25:39 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:25:39 - INFO - Req was made | / 
+15.1.2024, 3:25:51 - INFO - Req was made | / 
+15.1.2024, 3:25:51 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:28:17 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 3:28:18 - INFO - New connected socket [id: RBqxFXOLJiaA6uBnAAAH] 
+15.1.2024, 3:28:18 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: RBqxFXOLJiaA6uBnAAAH] 
+15.1.2024, 3:28:18 - INFO - Req was made | / 
+15.1.2024, 3:28:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:31:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 3:31:18 - INFO - Req was made | / 
