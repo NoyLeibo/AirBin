@@ -53,7 +53,7 @@ export function StayEdit() {
   function setHost(){
     stayToEdit.host._id=user._id
     stayToEdit.host.fullname=user.fullname
-    stayToEdit.host.imgUrl=user.imgUrl
+    stayToEdit.host.thumbnailUrl=user.imgUrl
     setStayToEdit(stayToEdit)
   }
 

@@ -69,9 +69,10 @@ function getEmptyStay() {
     host: {
       _id: "",
       fullname: "",
-      imgUrl: "",
+      thumbnailUrl: "",
       hostingYears: 0,
       about: "",
+      isSuperhost:false,
     },
     loc: {
       area: "",
