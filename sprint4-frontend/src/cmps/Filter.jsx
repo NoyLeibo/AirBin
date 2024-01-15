@@ -13,7 +13,6 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit, setIsOp
   const [selectedPriceMax, setSelectedPriceMax] = useState(2000)
 
   useEffectUpdate(() => {
-    console.log(filterByToEdit);
     onSetFilter.current(filterByToEdit)
   }, [filterByToEdit])
 
@@ -28,20 +27,20 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit, setIsOp
     if (category === 'bathrooms') setSelectedBathrooms(value)
   }
 
-  function handlePriceMinMaxChange (ev){
-    const { name, value} = ev.target
-   if(name==='min'){
-    setSelectedPriceMin(+value)
-  }else{
-    setSelectedPriceMax(+value)
-   }
+  function handlePriceMinMaxChange(ev) {
+    const { name, value } = ev.target
+    if (name === 'min') {
+      setSelectedPriceMin(+value)
+    } else {
+      setSelectedPriceMax(+value)
+    }
     //  console.log(selectedPriceMin ,selectedPriceMax ,'selected');
-   const priceRange=[selectedPriceMin,selectedPriceMax]
-  //  console.log(priceRange);
-   setTempFilter(prevFilter => ({
-    ...prevFilter,
-    priceRange: priceRange,
-  }))
+    const priceRange = [selectedPriceMin, selectedPriceMax]
+    //  console.log(priceRange);
+    setTempFilter(prevFilter => ({
+      ...prevFilter,
+      priceRange: priceRange,
+    }))
   }
 
   const handlePriceRangeChange = priceRange => {
@@ -104,17 +103,17 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit, setIsOp
           <div className='price-min-max flex align-center'>
             <label className='min-price'>
               <span>Min price</span>
-            <input name="min" type='number' onChange={handlePriceMinMaxChange} 
-            value={selectedPriceMin||0} min="0" max="2000"
-            />
+              <input name="min" type='number' onChange={handlePriceMinMaxChange}
+                value={selectedPriceMin || 0} min="0" max="2000"
+              />
             </label>
             <div className="range ">
-            <PriceRange handlePriceRangeChange={handlePriceRangeChange} selectedPriceMin={selectedPriceMin} selectedPriceMax={selectedPriceMax}/>
-          </div>
+              <PriceRange handlePriceRangeChange={handlePriceRangeChange} selectedPriceMin={selectedPriceMin} selectedPriceMax={selectedPriceMax} />
+            </div>
             <label className='max-price' >
               <span>Max price</span>
-            <input name="max" type='number' onChange={handlePriceMinMaxChange} 
-            value={selectedPriceMax||0} min="0" max="2000"/>
+              <input name="max" type='number' onChange={handlePriceMinMaxChange}
+                value={selectedPriceMax || 0} min="0" max="2000" />
 
             </label>
           </div>

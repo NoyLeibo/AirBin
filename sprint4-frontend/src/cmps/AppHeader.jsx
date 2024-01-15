@@ -1,5 +1,5 @@
 import { Link, NavLink, Navigate, useLocation, useNavigate } from "react-router-dom"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import routes from "../routes"
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service"
 import { login, logout, signup } from "../store/user.actions.js"
@@ -11,12 +11,15 @@ import { LoginModal } from "./Login"
 import { Destinations } from "./Destinations"
 import { DatePicker, Space } from "antd"
 import { LoggedInModal } from "./LoggedInModal.jsx"
+import { stayService } from "../services/stay.service.js"
+import { setSelectedDates, setSelectedDestination, setSelectedGuests } from "../store/stay.actions.js"
 
 const LOGO = "/img/airbnb.png"
 const LOGO_ICON = "/img/airbnb-icon.png"
 
 export function AppHeader() {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const [selectedButton, setSelectedButton] = useState("stays")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,14 +27,14 @@ export function AppHeader() {
   const [isOpenDates, setIsOpenDates] = useState(false)
   const [isOpenGuests, setIsOpenGuests] = useState(false)
   const [isOpenDestinations, setIsOpenDestinations] = useState(false)
-  const [userSearchDestination, setUserSearchDestination] = useState("")
   const [isScrolledDown, setIsScrolledDown] = useState(true)
   const [showScreenShadow, setShowScreenShadow] = useState(false)
   const [isClassAdded, setIsClassAdded] = useState(false)
+  const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
 
-  const filterBy = useSelector(
-    (storeState) => storeState.stayModule.filterBy
-  )
+  // const filterBy = useSelector(
+  //   (storeState) => storeState.stayModule.filterBy
+  // )
 
 
   const gRef = useRef() // global use ref for closing modals by noy
@@ -136,18 +139,22 @@ export function AppHeader() {
   }, [isOpenGuests, isOpenDates, isOpenDestinations, isMenuOpen, isLoginOpen])
 
   const totalGuests = Object.values(filterBy.selectedGuests).reduce(
-    (total, currentValue) => total + currentValue,
+    (total, currentValue) => parseInt(total) + parseInt(currentValue),
     0
   )
 
   function searchFilterBy(ev) {
-    event.preventDefault()
+    ev.preventDefault()
     console.log(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn}&checkOut=${filterBy.selectedDates.checkOut}&selectedGuests=${totalGuests}`);
+    dispatch(setSelectedDates(filterBy.selectedDates))
+    dispatch(setSelectedDestination(filterBy.selectedDestination))
+    dispatch(setSelectedGuests(filterBy.selectedGuests))
     navigate(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn?.toLocaleDateString('en-US')}&checkOut=${filterBy.selectedDates.checkOut?.toLocaleDateString('en-US')}&adults=${filterBy.selectedGuests.Adults}&children=${filterBy.selectedGuests.Children}&infants=${filterBy.selectedGuests.Infants}&pets=${filterBy.selectedGuests.Pets}`);
   }
 
 
   function refreshPage() {
+    setFilterBy(stayService.getDefaultFilter())
     if (location.pathname === "/") {
       window.location.reload()
     }
@@ -217,7 +224,7 @@ export function AppHeader() {
 
   const handleInputChange = (e) => {
     const value = e.target.value
-    setUserSearchDestination(value)
+    setFilterBy(prevFilter => ({ ...prevFilter, selectedDestination: value }))
   }
 
   const openLoginModal = () => {
@@ -332,7 +339,7 @@ export function AppHeader() {
             <div className="destination-title fs12 blacktxt fw600">Where</div>
             <input
               type="text"
-              value={userSearchDestination}
+              value={filterBy.selectedDestination}
               onInput={handleInputChange}
               placeholder="Search destinations"
               className="destination-input fs12"
@@ -340,7 +347,7 @@ export function AppHeader() {
           </div>
           {isOpenDestinations && (
             <div ref={gRef}>
-              <Destinations setUserSearchDestination={setUserSearchDestination} />
+              <Destinations setFilterBy={setFilterBy} />
             </div>
           )}
           <span className="splitter"></span>
@@ -352,13 +359,13 @@ export function AppHeader() {
             )}
             {filterBy.selectedDates.checkIn && (
               <div className="fs14 blacktxt fw600">
-                {filterBy.selectedDates.checkOut != null && filterBy.selectedDates.checkIn.toLocaleDateString()}
+                {filterBy.selectedDates.checkIn.toLocaleDateString()}
               </div>
             )}{" "}
           </div>
           {isOpenDates && (
             <div>
-              <Calendar />
+              <Calendar filterBy={filterBy} setFilterBy={setFilterBy} />
             </div>
           )}
           <div className="form-dates flex column" onClick={toggleCalendarModal}>
@@ -368,13 +375,14 @@ export function AppHeader() {
             )}
             {filterBy.selectedDates.checkOut && (
               <div className="fs14 blacktxt fw600">
-                {filterBy.selectedDates.checkOut != null && filterBy.selectedDates.checkOut.toLocaleDateString()}
+                {filterBy.selectedDates.checkOut.toLocaleDateString()}
               </div>
             )}
+
           </div>
           {isOpenDates && (
             <div ref={gRef}>
-              <Calendar />
+              <Calendar setFilterBy={setFilterBy} filterBy={filterBy} />
             </div>
           )}
           <span className="splitter"></span>
@@ -387,10 +395,10 @@ export function AppHeader() {
           </div>
           {isOpenGuests && (
             <div ref={gRef}>
-              <Guests />
+              <Guests setFilterBy={setFilterBy} filterBy={filterBy} />
             </div>
           )}
-          <button className="header-search-btn" onClick={(() => searchFilterBy())}>
+          <button className="header-search-btn" onClick={((event) => searchFilterBy(event))}>
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>

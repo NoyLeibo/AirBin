@@ -22,6 +22,7 @@ async function query(filterBy = {}) {
 }
 
 async function filterStays(filterBy, stays) {
+  let isGuestsNumValid
   if (filterBy.priceRange?.length > 0) {
     stays = stays.filter((stay) => isInPriceRange(filterBy.priceRange, stay));
   }
@@ -43,22 +44,39 @@ async function filterStays(filterBy, stays) {
   if (filterBy.placeType?.length) {
     stays = filterStaysByTags(filterBy.placeType, stays);
   }
-  if (filterBy.selectedGuests.Adults.length) {
+
+  if (filterBy.selectedDestination.length > 0 && filterBy.selectedDestination !== 'Flexible' && filterBy.selectedGuests.Adults > 0) {
     stays = stays.filter((stay) => {
+      const guestsTotal = +filterBy.selectedGuests.Adults + +filterBy.selectedGuests.Children + +filterBy.selectedGuests.Infants + +filterBy.selectedGuests.Pets;
+      const isDestinationMatch = Array.isArray(filterBy.selectedDestination) ? filterBy.selectedDestination.includes(stay.loc.country) : stay.loc.country === filterBy.selectedDestination;
+      return stay.capacity >= guestsTotal && isDestinationMatch;
+    });
+  }
+
+  else if (filterBy.selectedGuests.Adults.length) {
+    stays = stays.filter((stay) => {
+
       return (
-        stay.capacity -
+        stay.capacity - // כמות אורחים
         filterBy.selectedGuests.Adults -
         filterBy.selectedGuests.Children -
         filterBy.selectedGuests.Infants -
-        filterBy.selectedGuests.Pets >
-        0
-      );
-    });
-    // filterStaysByTags(filterBy.selectedGuests.Adults, stays);
+        filterBy.selectedGuests.Pets >= 0
+      )
+    })
   }
 
+  else if (filterBy.selectedDestination !== '' && filterBy.selectedDestination !== undefined) {
+    if (Array.isArray(filterBy.selectedDestination)) {
+      stays = stays.filter(stay => filterBy.selectedDestination.includes(stay.loc.country));
+    } else {
+      stays = stays.filter(stay => stay.loc.country === filterBy.selectedDestination);
+    }
+  }
   return stays;
+
 }
+
 
 function filterStaysByTags(placeType, stays) {
   const updatedStayArray = stays.filter((stay) => {
