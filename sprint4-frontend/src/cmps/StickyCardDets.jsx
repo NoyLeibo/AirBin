@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { stayService } from "../services/stay.service.js";
 
 export function StickyCard({ stay, onToggleReserve }) {
   const btnReserve = useRef(false);
@@ -12,6 +13,7 @@ export function StickyCard({ stay, onToggleReserve }) {
   const [isOpenDates, setIsOpenDates] = useState(false);
   const [isOpenGuests, setIsOpenGuests] = useState(false);
   const [gradientPosition, setGradientPosition] = useState('center');
+  const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
 
   const selectedDates = useSelector(
     (storeState) => storeState.stayModule.filterBy.selectedDates
@@ -90,6 +92,10 @@ export function StickyCard({ stay, onToggleReserve }) {
     }
   }, [])
 
+  const totalGuests = Object.values(filterBy.selectedGuests).reduce(
+    (total, currentValue) => parseInt(total) + parseInt(currentValue),
+    0
+  )
 
   const handleMouseMove = (e) => {
     const rect = e.target.getBoundingClientRect()
@@ -120,11 +126,12 @@ export function StickyCard({ stay, onToggleReserve }) {
             className="clean-btn"
             onClick={() => setIsOpenDates((currState) => !currState)}
           >
-            <div className="flex">CHECK-IN</div>
+            <div className="flex blacktxt">CHECK-IN</div>
             <div className="flex">
-              {selectedDates.checkIn === null && <div>Add dates</div>}
-              {selectedDates.checkIn && (
-                <div>{selectedDates.checkIn.toLocaleDateString()}</div>
+              {filterBy.selectedDates.checkIn === null && (
+                <div className="fs14">Add dates</div>)}
+              {filterBy.selectedDates.checkIn && (
+                <div className="blacktxt fs14 bold">{filterBy.selectedDates.checkIn.toLocaleDateString()}</div>
               )}
             </div>
           </button>
@@ -132,15 +139,18 @@ export function StickyCard({ stay, onToggleReserve }) {
             className="check-out clean-btn"
             onClick={() => setIsOpenDates((currState) => !currState)}
           >
-            <div className="flex">CHECK-OUT</div>
+            <div className="flex blacktxt">CHECK-OUT</div>
             <div className="flex">
-              {selectedDates.checkOut === null && <div>Add dates</div>}
-              {selectedDates.checkOut && (
-                <div>{selectedDates.checkOut.toLocaleDateString()}</div>
+              {filterBy.selectedDates.checkOut === null && (
+                <div className="fs14">Add dates</div>)}
+              {filterBy.selectedDates.checkOut && (
+                <div className="blacktxt fs14 bold">{filterBy.selectedDates.checkOut.toLocaleDateString()}</div>
               )}
             </div>
           </button>
-          <div className="calendar-modal">{isOpenDates && <Calendar />}</div>
+          <div className="calendar-modal">
+            {isOpenDates && <Calendar filterBy={filterBy} setFilterBy={setFilterBy} />}
+          </div>
         </section>
 
         <section className="guest-picker flex">
@@ -148,10 +158,14 @@ export function StickyCard({ stay, onToggleReserve }) {
             className="clean-btn"
             onClick={() => setIsOpenGuests((currState) => !currState)}
           >
-            <div>Who</div>
-            <div>Add guests</div>
+            <div className="fs12 blacktxt">Who</div>
+            <div className="fs14 graytxt">
+              {totalGuests ? `${totalGuests} guests` : "Add guests"}
+            </div>
           </button>
-          <div className="guests-modal">{isOpenGuests && <Guests />}</div>
+          <div className="guests-modal">{isOpenGuests &&
+            <Guests setFilterBy={setFilterBy} filterBy={filterBy} />
+          }</div>
         </section>
       </div>
       <button
