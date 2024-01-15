@@ -7,7 +7,9 @@ import Carousel from "./Carousel";
 // or, specify which plugins you need:
 // import { Tooltip, Toast, Popover } from 'bootstrap';
 
-export function StayPreview({ stay, isLiked }) {
+export function StayPreview({ stay, isLiked ,getRandomDateRangeString}) {
+
+  const date=getRandomDateRangeString()
 
   // console.log(stay);
   return (
@@ -33,7 +35,7 @@ export function StayPreview({ stay, isLiked }) {
           </div>
         </div>
         <div className="stay-card-distance fs16">{stay.type}</div>
-        <div className="stay-card-dates fs16">Apr 15-20</div>
+        <div className="stay-card-dates fs16">{date}</div>
         <div className="stay-card-price-container fs16">
           <span className="stay-card-price fw600">
             ${stay.price.toLocaleString()}{" "}

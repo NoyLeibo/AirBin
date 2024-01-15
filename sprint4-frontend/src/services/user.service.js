@@ -120,7 +120,7 @@ async function removeTrip(reservation) {
 
 async function removeTripHost(reservation) {
   const user = await getById(reservation.host._id);
-  user.guestsReservations = user.guestsReservations.filter(
+  user.guestsReservations = await user.guestsReservations.filter(
     (currReservation) => reservation._id !== currReservation._id
   );
   await update(user._id, user);

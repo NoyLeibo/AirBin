@@ -25,12 +25,12 @@ export function UserTrips() {
 
   async function onRemoveBtn(reservation) {
     const user = await userService.removeTrip(reservation);
-    const host = await userService.removeTripHost(reservation);
+    await userService.removeTripHost(reservation);
 
     await updateUser(user);
     const data = {
       from: user.username,
-      to: reservation.guest._id,
+      to: reservation.host._id,
     };
     const type = SOCKET_EVENT_REMOVE_ORDER;
     socketService.emit("direct-emit", {
@@ -38,6 +38,18 @@ export function UserTrips() {
       data,
       userId: reservation.host._id,
     });
+  }
+
+  function changeFontColor(status) {
+    if (status === "pending") {
+      return "pendingStatus";
+    }
+    if (status === "Accepted") {
+      return "acceptedStatus";
+    }
+    if (status === "Rejected") {
+      return "rejectedStatus";
+    }
   }
 
   return (
@@ -62,7 +74,9 @@ export function UserTrips() {
                   {reservation.stay.stayName}
                 </Typography>
                 <Typography gutterBottom component="div">
-                  {reservation.status}
+                  <span className={changeFontColor(reservation.status)}>
+                    {reservation.status}
+                  </span>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Hosted by {reservation.host.fullname}
