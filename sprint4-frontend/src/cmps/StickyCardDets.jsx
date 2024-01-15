@@ -131,7 +131,7 @@ export function StickyCard({ stay, onToggleReserve }) {
               {filterBy.selectedDates.checkIn === null && (
                 <div className="fs14">Add dates</div>)}
               {filterBy.selectedDates.checkIn && (
-                <div className="blacktxt fs14">{filterBy.selectedDates.checkIn.toLocaleDateString()}</div>
+                <div className="blacktxt fs14 bold">{filterBy.selectedDates.checkIn.toLocaleDateString()}</div>
               )}
             </div>
           </button>
@@ -144,7 +144,7 @@ export function StickyCard({ stay, onToggleReserve }) {
               {filterBy.selectedDates.checkOut === null && (
                 <div className="fs14">Add dates</div>)}
               {filterBy.selectedDates.checkOut && (
-                <div className="blacktxt fs14">{filterBy.selectedDates.checkOut.toLocaleDateString()}</div>
+                <div className="blacktxt fs14 bold">{filterBy.selectedDates.checkOut.toLocaleDateString()}</div>
               )}
             </div>
           </button>
