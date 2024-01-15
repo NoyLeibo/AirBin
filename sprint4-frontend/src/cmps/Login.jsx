@@ -28,6 +28,8 @@ export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
   }
 
   const handleLoginSubmit = async (event) => {
+    event.preventDefault();
+
     try {
       // await logout();
       await login({ username, password });

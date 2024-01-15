@@ -258,15 +258,15 @@
   }
 }
 
-// .screen-shadow {
-//   position: fixed;
-//   top: 153px;
-//   right: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: #00000068;
-//   z-index: 6;
-// }
+.screen-shadow {
+  position: fixed;
+  top: 153px;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000068;
+  z-index: 6;
+}
 
 .screen-shadow-visible {
   display: block;

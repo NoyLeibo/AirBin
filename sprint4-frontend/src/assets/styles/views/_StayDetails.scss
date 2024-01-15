@@ -1,4 +1,3 @@
-
 .stay-details-container {
   // grid-column: 2;
   display: grid;
@@ -8,12 +7,13 @@
   list-style: none;
   justify-content: center;
   color: $clblack;
-  
-  >*{
+
+  >* {
     grid-column: 2;
   }
-  .reviews-cmp{
-    .btn-add-review{
+
+  .reviews-cmp {
+    .btn-add-review {
       align-items: center;
       background-color: #fff;
       border: 1px solid #222;
@@ -27,27 +27,28 @@
       line-height: 20px;
       padding: 13px 23px;
       text-align: center;
-  
+
       &:hover {
         background-color: rgba(0, 0, 0, 0.1);
       }
-     }
-  }
- 
-  .review-none-container{
-    .review-none-title{
-      margin-bottom: 0.25em;
     }
-    .review-none-content{
-      margin-left: 15px;
+  }
+
+  .review-none-container {
+    .review-none-title {
       margin-bottom: 0.25em;
     }
 
+    .review-none-content {
+      margin-left: 15px;
+      margin-bottom: 0.25em;
+    }
   }
+
   .title {
-    font-size: 1.625rem;
+    // font-size: 1.625rem;
     line-height: 1.875rem;
-    margin-bottom: 0.4375rem;
+    margin-bottom: 0.3rem;
 
     h4 {
       font-family: "Circular";
@@ -238,7 +239,7 @@
       flex-direction: column;
       align-items: start;
       justify-content: center;
-      
+
 
       .host-ctn-content {
         p {
@@ -270,8 +271,8 @@
         margin-right: 10px;
       }
     }
-    
-    
+
+
   }
 
   //   @media (max-width: 550px) {
