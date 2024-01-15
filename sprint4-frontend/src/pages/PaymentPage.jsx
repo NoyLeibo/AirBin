@@ -13,9 +13,11 @@ import {
   SOCKET_EMIT_SEND_MSG,
   SOCKET_EVENT_ADD_MSG,
   SOCKET_EMIT_SET_TOPIC,
+  SOCKET_EVENT_ORDER_RECIEVED,
 } from "../services/socket.service";
-import { showSuccessMsg } from "../services/event-bus.service";
-import { ToastifyNotification } from "../cmps/ToastifyNotification";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export function PaymentPage() {
   const location = useLocation();
@@ -93,25 +95,24 @@ export function PaymentPage() {
     return newTrip;
   }
 
-  function orderRecived() {
+  function orderSend() {
     const data = {
       from: user.username,
-      to: `stay.host.username`,
+      to: stay.host._id,
     };
-    const type = "order-recieved";
+    const type = SOCKET_EVENT_ORDER_RECIEVED;
     socketService.emit("direct-emit", {
       type,
       data,
-      userId: user._id,
+      userId: stay.host._id,
     });
   }
 
   async function onConfirm() {
     const newTrip = createTrip();
-    console.log(newTrip);
     const updatedUser = await userService.updateTripList(newTrip);
     await updateUser(updatedUser);
-    orderRecived();
+    orderSend();
     navigate("/userTrips");
   }
 
@@ -127,7 +128,6 @@ export function PaymentPage() {
           back
         </button>
         <h2>Request to book</h2>
-        <div>{ToastifyNotification()}</div>
       </div>
 
       <div className="order-content ">

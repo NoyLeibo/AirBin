@@ -5,8 +5,9 @@ import routes from "./routes";
 
 import { AppHeader } from "./cmps/AppHeader";
 import { AppFooter } from "./cmps/AppFooter";
-import { StayDetails } from "./pages/StayDetails";
-import { PaymentPage } from "./pages/PaymentPage";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export function RootCmp() {
   return (
@@ -22,6 +23,7 @@ export function RootCmp() {
           />
         ))}
       </Routes>
+      <ToastContainer theme="dark" />
       <AppFooter />
     </main>
   );

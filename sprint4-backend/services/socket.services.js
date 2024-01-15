@@ -1,6 +1,6 @@
+// -------------------------------------------
 import { logger } from "./logger.service.js";
 import { Server } from "socket.io";
-import { userService } from "../api/user/user.service.js";
 
 var gIo = null;
 
@@ -16,6 +16,11 @@ export function setupSocketAPI(server) {
       logger.info(`Socket disconnected [id: ${socket.id}]`);
     });
 
+    socket.on("direct-emit", (data) => {
+      emitToUser(data);
+    });
+
+    // ------------------------------------------
     socket.on("chat-set-topic", (topic) => {
       if (socket.myTopic === topic) return;
       if (socket.myTopic) {
@@ -39,9 +44,6 @@ export function setupSocketAPI(server) {
     socket.on("direct-emit-username", (data) => {
       emitToUserByUsername(data);
     });
-    socket.on("direct-emit", (data) => {
-      emitToUser(data);
-    });
 
     socket.on("set-user-socket-username", (username) => {
       logger.info(
@@ -60,7 +62,7 @@ export function setupSocketAPI(server) {
       socket.join("watching:" + userId);
     });
 
-    // socket.on("order-recived", data);
+    // ------------------------------------------------
 
     socket.on("set-user-socket", (userId) => {
       logger.info(
@@ -76,15 +78,9 @@ export function setupSocketAPI(server) {
   });
 }
 
-function emitTo({ type, data, label }) {
-  if (label) gIo.to("watching:" + label.toString()).emit(type, data);
-  else gIo.emit(type, data);
-}
-
 async function emitToUser({ type, data, userId }) {
   userId = userId.toString();
   const socket = await _getUserSocket(userId);
-  console.log(data);
 
   if (socket) {
     logger.info(
@@ -93,8 +89,12 @@ async function emitToUser({ type, data, userId }) {
     socket.emit(type, data);
   } else {
     logger.info(`No active socket for user: ${userId}`);
-    // _printSockets()
   }
+}
+// ------------------------------------------------
+function emitTo({ type, data, label }) {
+  if (label) gIo.to("watching:" + label.toString()).emit(type, data);
+  else gIo.emit(type, data);
 }
 
 async function emitToUserByUsername({ type, data, username }) {
@@ -131,13 +131,13 @@ async function broadcast({ type, data, room = null, userId }) {
     gIo.emit(type, data);
   }
 }
-
+// -----------------------------------
 async function _getUserSocket(userId) {
   const sockets = await _getAllSockets();
   const socket = sockets.find((s) => s.userId === userId);
   return socket;
 }
-
+// -----------------------------------
 async function _getUserSocketUsername(username) {
   const sockets = await _getAllSockets();
   const socket = sockets.find((s) => s.username === username);
