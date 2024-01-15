@@ -5,7 +5,6 @@ import { stayService } from "./stay.service.js";
 export async function getStay(req, res) {
   try {
     const filterBy = req.query;
-
     loggerService.debug("Getting Stays", filterBy);
     const stays = await stayService.query(filterBy);
     res.json(stays);

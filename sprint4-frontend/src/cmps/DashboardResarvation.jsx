@@ -11,7 +11,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { loadUsers, removeUser, updateUser } from "../store/user.actions";
 import { userService } from "../services/user.service";
-
+import { SOCKET_EVENT_HOST_ANSWER } from "../services/socket.service";
 // export function DashboardResarvation() {
 //   const users = useSelector((storeState) => storeState.userModule.users);
 //   const isLoading = useSelector(
@@ -65,6 +65,18 @@ export function DashboardResarvation() {
     const guest = await userService.updateReservationGuest(reservation);
     const host = await userService.updateHostReservation(reservation);
     await updateUser(host);
+
+    const data = {
+      from: user.username,
+      to: reservation.guest._id,
+      status,
+    };
+    const type = SOCKET_EVENT_HOST_ANSWER;
+    socketService.emit("direct-emit", {
+      type,
+      data,
+      userId: reservation.guest._id,
+    });
   }
 
   useEffect(() => {
