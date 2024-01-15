@@ -100,7 +100,6 @@ function getDefaultFilter() {
       Infants: 0,
       Pets: 0,
     },
-    destination: "",
     selectedDates: { checkIn: null, checkOut: null },
     selectedDestination: "",
   };
