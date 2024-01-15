@@ -155,6 +155,7 @@ export function AppHeader() {
 
   function refreshPage() {
     setFilterBy(stayService.getDefaultFilter())
+    console.log(filterBy);
     if (location.pathname === "/") {
       window.location.reload()
     }

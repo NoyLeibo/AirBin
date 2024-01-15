@@ -6589,3 +6589,49 @@
 15.1.2024, 21:40:38 - INFO - New connected socket [id: EStk7GQHBbz1T8X6AAAd] 
 15.1.2024, 21:40:38 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: EStk7GQHBbz1T8X6AAAd] 
 >>>>>>> d078ed7e31bd3a6ec7ae93ee3894320e67910861
+15.1.2024, 22:11:49 - INFO - Req was made | / 
+15.1.2024, 22:11:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 22:11:58 - INFO - Req was made | / 
+15.1.2024, 22:11:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"8","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Flexible"} 
+15.1.2024, 22:12:27 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 22:12:27 - INFO - New connected socket [id: 1eNiDsEP81xlMUH7AAAR] 
+15.1.2024, 22:12:27 - INFO - Req was made | / 
+15.1.2024, 22:12:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 22:12:34 - INFO - Req was made | / 
+15.1.2024, 22:12:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"8","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Flexible"} 
+15.1.2024, 22:12:55 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 22:12:55 - INFO - New connected socket [id: JkbP8s9oqovHkZ0oAAAT] 
+15.1.2024, 22:12:55 - INFO - Req was made | / 
+15.1.2024, 22:12:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 22:12:56 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 22:12:57 - INFO - New connected socket [id: XSnu7mHVm88EbYgHAAAV] 
+15.1.2024, 22:12:57 - INFO - Req was made | / 
+15.1.2024, 22:12:57 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 22:13:02 - INFO - Req was made | / 
+15.1.2024, 22:13:02 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"8","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Flexible"} 
+15.1.2024, 22:13:49 - INFO - Req was made | / 
+15.1.2024, 22:13:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 22:13:56 - INFO - Req was made | / 
+15.1.2024, 22:13:56 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 22:15:20 - INFO - Req was made | / 
+15.1.2024, 22:15:20 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 22:15:23 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 22:15:23 - INFO - New connected socket [id: GkZ1cmzsnBdmlaLEAAAX] 
+15.1.2024, 22:15:23 - INFO - Req was made | / 
+15.1.2024, 22:15:23 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 22:15:23 - INFO - Req was made | / 
+15.1.2024, 22:15:23 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 22:48:35 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 22:48:35 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 0:44:16 - INFO - New connected socket [id: IOzuREWMrVHt_cB-AAAa] 
+16.1.2024, 0:44:18 - INFO - New connected socket [id: 9nJbsL7WgOdKMypgAAAb] 
+16.1.2024, 0:45:37 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 0:45:38 - INFO - New connected socket [id: GFlYRr1Ygm6ao2BQAAAd] 
+16.1.2024, 0:45:38 - INFO - Req was made | / 
+16.1.2024, 0:45:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 0:45:38 - INFO - Req was made | / 
+16.1.2024, 0:45:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 0:45:47 - INFO - Req was made | / 
+16.1.2024, 0:45:47 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"5","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 0:45:47 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 0:45:48 - INFO - New connected socket [id: RfH2JwexQ1jYByDiAAAf] 
