@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useLocation } from "react-router-dom"
+
 import {
   loadStay,
   addStay,
   updateStay,
   removeStay,
   addToCart,
+  setSelectedDestination,
+  setSelectedDates,
+  setSelectedGuests,
 } from "../store/stay.actions.js";
 
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
@@ -24,11 +29,39 @@ export function StayIndex() {
   const isLoading = useSelector(
     (storeState) => storeState.stayModule.isLoading
   );
+
+  const location = useLocation()
+  const currentPath = location.pathname
+  const queryParams = new URLSearchParams(location.search)
+  const dispatch = useDispatch()
+
   // userService.addDemoUser();
+  useEffect(() => {
+    if (currentPath.startsWith('/stay')) {
+      const selectedDestination = queryParams.get('location')
+      const checkInDate = queryParams.get('checkIn')
+      const checkOutDate = queryParams.get('checkOut')
+      const adults = queryParams.get('adults')
+      const children = queryParams.get('children')
+      const infants = queryParams.get('infants')
+      const pets = queryParams.get('pets')
+      const totalGuests = { Adults: adults, Children: children, Infants: infants, Pets: pets }
+
+      if (checkInDate instanceof Date && checkOutDate instanceof Date) {
+        console.log('checkInDate', checkInDate);
+        dispatch(setSelectedDates({ checkIn: new Date(checkInDate), checkOut: new Date(checkOutDate) }));
+      }
+      if (selectedDestination) {
+        dispatch(setSelectedDestination(selectedDestination));
+      }
+      dispatch(setSelectedGuests(totalGuests));
+    }
+  }, [])
 
   useEffect(() => {
     document.documentElement.style.setProperty("--main-layout-width", "2360px");
     loadStay();
+
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsScrolledDown(true);
@@ -37,13 +70,12 @@ export function StayIndex() {
         setIsScrolledDown(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [filterBy]);
+  }, [filterBy])
 
   function onSetFilter(filterBy) {
     setFilterBy(filterBy);

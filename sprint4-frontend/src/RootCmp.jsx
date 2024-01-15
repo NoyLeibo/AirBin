@@ -13,7 +13,6 @@ export function RootCmp() {
   return (
     <main className="main-container">
       <AppHeader />
-      <ToastContainer />
       <Routes>
         {routes.map((route) => (
           <Route
@@ -24,6 +23,7 @@ export function RootCmp() {
           />
         ))}
       </Routes>
+      <ToastContainer theme="dark" />
       <AppFooter />
     </main>
   );

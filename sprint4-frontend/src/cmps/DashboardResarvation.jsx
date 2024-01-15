@@ -7,7 +7,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { useEffect } from "react";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { loadUsers, removeUser, updateUser } from "../store/user.actions";
 import { userService } from "../services/user.service";
@@ -54,7 +56,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export function DashboardResarvation() {
   const user = useSelector((storeState) => storeState.userModule.user);
-
   const reservations = user.guestsReservations;
   const isLoading = useSelector(
     (storeState) => storeState.userModule.isLoading
@@ -62,7 +63,7 @@ export function DashboardResarvation() {
 
   async function onActionClicked(reservation, status, color) {
     reservation.status = status;
-    const guest = await userService.updateReservationGuest(reservation);
+    await userService.updateReservationGuest(reservation);
     const host = await userService.updateHostReservation(reservation);
     await updateUser(host);
 
@@ -100,7 +101,7 @@ export function DashboardResarvation() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {reservations?.map((reservation, index) => (
+          {reservations?.map((reservation) => (
             <StyledTableRow key={reservation._id}>
               <StyledTableCell component="th" scope="row">
                 {reservation.guest.fullname}
@@ -121,30 +122,24 @@ export function DashboardResarvation() {
                 {reservation.status}
               </StyledTableCell>
               <StyledTableCell align="center">
-                {/* <Stack spacing={2}>
-                  <Button variant="contained" color="success">
+                <>
+                  <button
+                    onClick={() =>
+                      onActionClicked(reservation, "Accepted", "#67c23a")
+                    }
+                    className="clean-btn accept-btn actionBtn"
+                  >
                     Accept
-                  </Button>
-                  <Button variant="outlined" color="error">
+                  </button>
+                  <button
+                    onClick={() =>
+                      onActionClicked(reservation, "Rejected", "#f56c6c")
+                    }
+                    className="clean-btn reject-btn actionBtn"
+                  >
                     Reject
-                  </Button>
-                </Stack> */}
-                <button
-                  onClick={() => {
-                    onActionClicked(reservation, "Accepted", "#67c23a");
-                  }}
-                  className="clean-btn accept-btn"
-                >
-                  Accept
-                </button>
-                <button
-                  className="clean-btn reject-btn"
-                  onClick={() => {
-                    onActionClicked(reservation, "Rejected", "#f56c6c");
-                  }}
-                >
-                  Reject
-                </button>
+                  </button>
+                </>
               </StyledTableCell>
             </StyledTableRow>
           ))}

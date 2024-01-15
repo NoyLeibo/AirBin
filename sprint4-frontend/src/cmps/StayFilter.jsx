@@ -5,7 +5,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { useEffectUpdate } from "../customHooks/useEffectUpdate";
 import { GiSettingsKnobs } from "react-icons/gi"
-import { Filter } from "./Filter";
+import { Filter } from "./Filter"
 import { utilService } from "../services/util.service";
 
 export function StayFilter({ filterBy, onSetFilter }) {
@@ -40,6 +40,8 @@ export function StayFilter({ filterBy, onSetFilter }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
   useEffect(() => {
     const updateScrollState = () => {
       const container = filterContainerRef.current;
@@ -93,7 +95,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
         ` filters-layout divider ${!isScrolledDown
           ? " filter-sticky"
           : ""}
-          ${isOpenFilter?"modal-filter-open":""}`
+          ${isOpenFilter ? "modal-filter-open" : ""}`
       }
     >
       {scrolledLeft && (
@@ -137,7 +139,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
           className="clean-btn btn-filters"
           onClick={() => setIsOpenFilter((currState) => !currState)}
         >
-          <GiSettingsKnobs size="22"/>
+          <GiSettingsKnobs size="22" />
           Filters
         </button>
       </div>

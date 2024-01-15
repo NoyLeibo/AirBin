@@ -60,21 +60,21 @@ export async function loadStay() {
 export function setSelectedDates(selectedDates) {
   return {
     type: SET_FILTER_BY,
-    filterBy: { selectedDates: selectedDates }
+    filterBy: { selectedDates }
   };
 }
 
 export function setSelectedDestination(selectedDestination) {
   return {
     type: SET_FILTER_BY,
-    filterBy: { selectedDestination: selectedDestination }
+    filterBy: { selectedDestination }
   }
 }
 
 export function setSelectedGuests(selectedGuests) {
   return {
     type: SET_FILTER_BY,
-    filterBy: { selectedGuests: selectedGuests }
+    filterBy: { selectedGuests }
   };
 }
 
