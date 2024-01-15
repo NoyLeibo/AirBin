@@ -16,6 +16,12 @@ import { PiElevatorDuotone } from "react-icons/pi"
 import { FaIntercom } from "react-icons/fa6"
 import { IoManOutline } from "react-icons/io5"
 import { MdOutlineHealthAndSafety } from "react-icons/md"
+import { MdOutlineIron } from "react-icons/md"
+import { BiSolidUserCheck } from "react-icons/bi"
+import { BiSolidBlanket } from "react-icons/bi"
+import { Tb24Hours } from "react-icons/tb"
+import { PiThermometerHotBold } from "react-icons/pi"
+import { MdRollerShades } from "react-icons/md"
 
 
 export function StayAmenities({ amenities }) {
@@ -293,7 +299,7 @@ export function StayAmenities({ amenities }) {
                 </g>
               </svg>
             }
-            {amenitie === "Dedicated workspace" &&
+            {amenitie === "Dedicated workspace"|| amenitie==="Laptop friendly workspace" &&
               <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 22.375H38" stroke="#222222" strokeWidth="2" strokeLinejoin="round" />
                 <path d="M11 36.375V22.375" stroke="#222222" strokeWidth="2" strokeLinejoin="round" />
@@ -476,7 +482,7 @@ export function StayAmenities({ amenities }) {
                 fill="#222222"
               />
             </svg>}
-            {amenitie === "Wifi" && <svg
+            {amenitie === "Wifi"&& <svg
               width="28px"
               height="28px"
               viewBox="7 7 31 31"
@@ -524,7 +530,7 @@ export function StayAmenities({ amenities }) {
             {amenitie === "Internet" &&
               <AiFillChrome size="28" />
             }
-            {amenitie === "Wheelchair accessible" &&
+            {(amenitie === "Wheelchair accessible"||amenitie==="Disabled parking spot") &&
               <FaWheelchair size="28" />
             }
             {amenitie === "Cable TV" &&
@@ -542,6 +548,24 @@ export function StayAmenities({ amenities }) {
             {amenitie === "Doorman" &&
               <IoManOutline size="28" />
             }
+            {amenitie === "Iron" &&
+                  <MdOutlineIron size="28" />
+                }
+            {amenitie === "Self check-in" &&
+                  <BiSolidUserCheck  size="28" />
+                }
+            {(amenitie === "Extra pillows and blankets" ||amenitie==="Bed linens")&&
+                  <BiSolidBlanket  size="28" />
+                }
+            {amenitie === "24-hour check-in" &&
+                  <Tb24Hours size="28" />
+                }
+            {amenitie === "Hot water" &&
+                  <PiThermometerHotBold size="28" />
+                }
+            {amenitie === "Room-darkening shades" &&
+                  <MdRollerShades size="28" />
+                }
             <span >{amenitie}</span>
           </li>
         ))}
@@ -553,56 +577,117 @@ export function StayAmenities({ amenities }) {
       {showScreenShadow && <div className="screen-shadow-login"></div>}
       {isModalOpen &&
         <div className="amenitie-modal">
-          <button onClick={closeModal}><i class="fa-solid fa-x"></i></button>
+          <button onClick={closeModal}><i className="fa-solid fa-x"></i></button>
           <div className="amenitie-items">
             {amenities.map((amenitie, index) => (
               <li className="amenities-li flex row align-center" key={index}>
+                {amenitie === "Room-darkening shades" &&
+                <div>
+                 <MdRollerShades  size="28" />
+                </div>
+                }
+                {amenitie === "Hot water" &&
+                <div>
+                 <PiThermometerHotBold  size="28" />
+                </div>
+                }
+                {amenitie === "24-hour check-in" &&
+                <div>
+                 <Tb24Hours  size="28" />
+                </div>
+                }
+                {(amenitie === "Extra pillows and blankets"||amenitie==="Bed linens") &&
+                <div>
+                 <BiSolidBlanket  size="28" />
+                </div>
+                }
+                {amenitie === "Self check-in" &&
+                <div>
+                 <BiSolidUserCheck  size="28" />
+                </div>
+                }
+                {amenitie === "Iron" &&
+                <div>
+                  <MdOutlineIron size="28" />
+                </div>
+                }
                 {amenitie === "Smoking allowed" &&
+                <div>
                   <LuCigarette size="28" />
+                </div>
                 }
                 {amenitie === "Doorman" &&
+                <div>
                   <IoManOutline size="28" />
+                </div>
                 }
                 {amenitie === "Safety card" &&
+                <div>
                   <MdOutlineHealthAndSafety size="28" />
+                </div>
                 }
                 {amenitie === "Elevator" &&
+                <div>
                   <PiElevatorDuotone size="28" />
+                </div>
                 }
                 {amenitie === "Buzzer/wireless intercom" &&
+                <div>
                   <FaIntercom size="28" />
+                </div>
                 }
                 {amenitie === "Heating" &&
+                <div>
                   <RiSunLine size="28" />
+                </div>
                 }
                 {amenitie === "Lock on bedroom door" &&
+                <div>
                   <GiLockedDoor size="28" />
+                </div>
                 }
                 {amenitie === "Shampoo" &&
+                <div>
                   <GiSpiralBottle size="28" />
+                </div>
                 }
                 {amenitie === "Essentials" &&
+                <div>
                   <PiTShirt size="28" />
+                </div>
                 }
                 {amenitie === "Hangers" &&
+                <div>
                   <PiCoatHangerBold size="28" />
+                </div>
                 }
-                {amenitie === "Internet" &&
+                {(amenitie === "Internet" || amenitie==="Ethernet connection" )&&
+                <div>
                   <AiFillChrome size="28" />
+                </div>
                 }
-                {amenitie === "Wheelchair accessible" &&
+                {(amenitie === "Wheelchair accessible"||amenitie==="Disabled parking spot") &&
+                <div>
                   <FaWheelchair size="28" />
+                </div>
                 }
                 {amenitie === "Cable TV" &&
+                <div>
                   <MdOutlineCable size="28" />
+                </div>
                 }
                 {amenitie === "Family/kid friendly" &&
+                <div>
                   <MdFamilyRestroom size="28" />
+                </div>
                 }
-                {amenitie === "Carbon monoxide alarm" || amenitie === "Carbon monoxide detector" &&
+                {(amenitie === "Carbon monoxide alarm" || amenitie === "Carbon monoxide detector") &&
+                <div>
                   <GiMovementSensor size="28" />
+                  </div>
                 }
                 {amenitie === "Fire extinguisher" &&
+                <div>
                   <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 15.25C27.314 15.25 30 17.936 30 21.25V36.25C30 36.802 29.552 37.25 29 37.25H19C18.448 37.25 18 36.802 18 36.25V21.25L18.004 21.025C18.122 17.816 20.762 15.25 24 15.25Z" stroke="#222222" strokeWidth="2" />
                     <path d="M15 29.25H19H15Z" stroke="#222222" strokeWidth="2" />
@@ -612,6 +697,7 @@ export function StayAmenities({ amenities }) {
                     <path d="M24 13.25C25.105 13.25 26 12.355 26 11.25C26 10.145 25.105 9.25 24 9.25C22.895 9.25 22 10.145 22 11.25C22 12.355 22.895 13.25 24 13.25Z" fill="white" />
                     <path d="M24 13.25C25.105 13.25 26 12.355 26 11.25C26 10.145 25.105 9.25 24 9.25C22.895 9.25 22 10.145 22 11.25C22 12.355 22.895 13.25 24 13.25Z" stroke="#222222" strokeWidth="2" />
                   </svg>
+                  </div>
                 }
                 {amenitie === "First aid kit" &&
                   <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -620,6 +706,7 @@ export function StayAmenities({ amenities }) {
                   </svg>
                 }
                 {amenitie === "Smoke alarm" || amenitie === "Smoke detector" &&
+                <div>
                   <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M30 14.75C30.552 14.75 31 15.198 31 15.75C31 16.302 30.552 16.75 30 16.75C29.448 16.75 29 16.302 29 15.75C29 15.198 29.448 14.75 30 14.75Z" fill="#222222" />
                     <path d="M23 8.75C30.732 8.75 37 15.018 37 22.75C37 30.482 30.732 36.75 23 36.75C15.268 36.75 9 30.482 9 22.75C9 15.018 15.268 8.75 23 8.75Z" stroke="#222222" strokeWidth="2" />
@@ -629,6 +716,7 @@ export function StayAmenities({ amenities }) {
                     <path d="M18.113 21.75C18.511 19.795 20.036 18.255 22 17.856V15.84C21.908 15.853 21.811 15.85 21.72 15.867C18.802 16.407 16.537 18.739 16.082 21.673C16.078 21.698 16.08 21.724 16.076 21.75H18.113Z" fill="#222222" />
                     <path d="M23 20.75C24.105 20.75 25 21.645 25 22.75C25 23.855 24.105 24.75 23 24.75C21.895 24.75 21 23.855 21 22.75C21 21.645 21.895 20.75 23 20.75Z" stroke="#222222" strokeWidth="2" />
                   </svg>
+                  </div>
                 }
                 {amenitie === "Outdoor shower" &&
                   <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -843,7 +931,8 @@ export function StayAmenities({ amenities }) {
                     </g>
                   </svg>
                 }
-                {amenitie === "Dedicated workspace" &&
+                {(amenitie === "Dedicated workspace"||amenitie==="Laptop friendly workspace") &&
+                <div>
                   <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 22.375H38" stroke="#222222" strokeWidth="2" strokeLinejoin="round" />
                     <path d="M11 36.375V22.375" stroke="#222222" strokeWidth="2" strokeLinejoin="round" />
@@ -854,11 +943,14 @@ export function StayAmenities({ amenities }) {
                     <path d="M14 17.375H19V22.375H14V17.375Z" stroke="#222222" strokeWidth="2" strokeLinejoin="round" />
                     <path d="M15.792 17.403L14 13.375" stroke="#222222" strokeWidth="2" strokeLinejoin="round" />
                   </svg>
+                  </div>
                 }
                 {amenitie === "Air conditioning" &&
+                <div>
                   <svg width="28px" height="28px" viewBox="7 7 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M23.0261 7.548V11.578L27.0521 9.253L28.0521 10.986L23.0261 13.887V20.815L29.0261 17.351V11.548H31.0261V16.196L34.5171 14.182L35.5171 15.914L32.0261 17.929L36.0521 20.253L35.0521 21.986L30.0261 19.083L24.0261 22.547L30.0271 26.012L35.0521 23.11L36.0521 24.842L32.0261 27.166L35.5171 29.182L34.5171 30.914L31.0261 28.899V33.548H29.0261V27.744L23.0261 24.279V31.208L28.0521 34.11L27.0521 35.842L23.0261 33.517V37.548H21.0261V33.517L17.0001 35.842L16.0001 34.11L21.0261 31.208V24.279L15.0261 27.743V33.548H13.0261V28.898L9.53606 30.914L8.53606 29.182L12.0251 27.166L8.00006 24.842L9.00006 23.11L14.0251 26.011L20.0251 22.547L14.0261 19.083L9.00006 21.986L8.00006 20.253L12.0261 17.929L8.53606 15.914L9.53606 14.182L13.0261 16.196V11.548H15.0261V17.351L21.0261 20.815V13.887L16.0001 10.986L17.0001 9.253L21.0261 11.578V7.548H23.0261Z" fill="#222222" />
                   </svg>
+                  </div>
                 }
                 {amenitie === "Paid parking on premises" || amenitie === "Paid parking off premises" &&
                   <svg
@@ -896,7 +988,8 @@ export function StayAmenities({ amenities }) {
                     />
                   </svg>
                 }
-                {amenitie === "Free parking on premises" || amenitie === "Free street parking" &&
+                {(amenitie === "Free parking on premises" || amenitie === "Free street parking")&&
+                <div>
                   <svg
                     width="28px"
                     height="28px"
@@ -937,6 +1030,7 @@ export function StayAmenities({ amenities }) {
                     <path d="M34 16.6256H37V18.6256H34V16.6256Z" fill="#222222" />
                     <path d="M17 24.6256H29" strokeWidth="2" />
                   </svg>
+                  </div>
                 }
                 {amenitie === "Washer" && <svg
                   width="28px"
