@@ -18,6 +18,7 @@ export function setupSocketAPI(server) {
     socket.on("direct-emit", (data) => {
       emitToUser(data);
     });
+
     // ------------------------------------------
     socket.on("chat-set-topic", (topic) => {
       if (socket.myTopic === topic) return;

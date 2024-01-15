@@ -1,14 +1,14 @@
 import io from "socket.io-client";
 import { userService } from "./user.service";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 export const SOCKET_EVENT_ADD_MSG = "chat-add-msg";
 export const SOCKET_EMIT_SEND_MSG = "chat-send-msg";
 export const SOCKET_EMIT_SET_TOPIC = "chat-set-topic";
 export const SOCKET_EMIT_USER_WATCH = "user-watch";
 export const SOCKET_EVENT_USER_UPDATED = "user-updated";
-export const SOCKET_EVENT_REVIEW_ADDED = "review-added";
 export const SOCKET_EVENT_REVIEW_ABOUT_YOU = "review-about-you";
+export const SOCKET_EVENT_REVIEW_ADDED = "review-added";
 export const SOCKET_EVENT_ORDER_RECIEVED = "order-recieved";
 export const SOCKET_EVENT_HOST_ANSWER = "host-order-answer";
 
@@ -34,6 +34,9 @@ function createSocketService() {
 
       socket.on(SOCKET_EVENT_ORDER_RECIEVED, (data) => {
         toast("A new order has been recieved from " + data.from);
+      });
+      socket.on(SOCKET_EVENT_HOST_ANSWER, (data) => {
+        toast("Your reservation has been " + data.status);
       });
     },
     on(eventName, cb) {
