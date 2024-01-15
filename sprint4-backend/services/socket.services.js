@@ -1,6 +1,5 @@
 import { logger } from "./logger.service.js";
 import { Server } from "socket.io";
-import { userService } from "../api/user/user.service.js";
 
 var gIo = null;
 
@@ -16,6 +15,10 @@ export function setupSocketAPI(server) {
       logger.info(`Socket disconnected [id: ${socket.id}]`);
     });
 
+    socket.on("direct-emit", (data) => {
+      emitToUser(data);
+    });
+    // ------------------------------------------
     socket.on("chat-set-topic", (topic) => {
       if (socket.myTopic === topic) return;
       if (socket.myTopic) {
@@ -38,9 +41,6 @@ export function setupSocketAPI(server) {
 
     socket.on("direct-emit-username", (data) => {
       emitToUserByUsername(data);
-    });
-    socket.on("direct-emit", (data) => {
-      emitToUser(data);
     });
 
     socket.on("set-user-socket-username", (username) => {
