@@ -105,7 +105,7 @@ export function PaymentPage() {
         <h2>Request to book</h2>
       </div>
 
-      <div className="order-content flex">
+      <div className="order-content ">
         <div className="details-section">
           <div className="rare-find flex justify-between">
             <div>

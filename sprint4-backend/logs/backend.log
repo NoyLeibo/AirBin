@@ -2651,3 +2651,61 @@
 15.1.2024, 11:05:51 - INFO - Socket disconnected [id: undefined] 
 15.1.2024, 11:05:52 - INFO - New connected socket [id: pFPd3D6WzZrcYQz8AAAv] 
 15.1.2024, 11:05:52 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: pFPd3D6WzZrcYQz8AAAv] 
+15.1.2024, 11:09:45 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:45 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:48 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:48 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:49 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:49 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:49 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:49 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:49 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:49 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:49 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:49 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:50 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:51 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:09:51 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:10 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:10 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:10 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:10 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:10 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:10 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:11 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:11 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:11 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:11 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:11 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:11 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:12 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 11:10:53 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 11:10:54 - INFO - New connected socket [id: elI3RPDaUYHNEPrQAAAx] 
+15.1.2024, 11:10:54 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: elI3RPDaUYHNEPrQAAAx] 
+15.1.2024, 11:56:21 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 11:56:22 - INFO - New connected socket [id: RVhAZr9NYeWwoXO3AAAz] 
+15.1.2024, 11:56:22 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: RVhAZr9NYeWwoXO3AAAz] 
+15.1.2024, 12:38:43 - INFO - New connected socket [id: O4bkq713RFNlS58lAAA1] 
+15.1.2024, 12:38:43 - INFO - Req was made | / 
+15.1.2024, 12:38:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 12:38:43 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: O4bkq713RFNlS58lAAA1] 
