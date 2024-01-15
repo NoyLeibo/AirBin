@@ -9,6 +9,7 @@ export function LoginSignup(props) {
   const [password, setPassword] = useState("");
   const [fullname, setFullname] = useState("");
   const user = useSelector((storeState) => storeState.userModule.user);
+  const [gradientPosition, setGradientPosition] = useState('center');
 
   // useEffect(() => {
   //   loadUsers();
@@ -64,6 +65,14 @@ export function LoginSignup(props) {
     }
   }
 
+  const handleMouseMove = (e) => {
+    const rect = e.target.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top;
+
+    setGradientPosition(`${x}px ${y}px`)
+  }
+
   if (user) {
     return <></>;
   }
@@ -96,7 +105,9 @@ export function LoginSignup(props) {
                 }}
               />
             </div>
-            <button className="login-btn" onClick={onLogin}>
+            <button className="login-btn" style={{ backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)` }}
+              onMouseMove={handleMouseMove}
+              onClick={onLogin}>
               Login
             </button>
           </section>

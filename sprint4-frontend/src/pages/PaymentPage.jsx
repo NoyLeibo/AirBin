@@ -18,6 +18,7 @@ export function PaymentPage() {
   const queryParams = new URLSearchParams(location.search);
   const checkIn = convertDate(queryParams.get("checkIn"));
   const checkOut = convertDate(queryParams.get("checkOut"));
+  const [gradientPosition, setGradientPosition] = useState('center');
   const price = +queryParams.get("price");
   const days = +queryParams.get("days");
   const serviceFee = +queryParams.get("serviceFee");
@@ -26,8 +27,8 @@ export function PaymentPage() {
   const infants = +queryParams.get("infants");
   const pets = +queryParams.get("pets");
   const guests = adults + children + infants + pets;
-  const totalPrice = price + serviceFee;
 
+  const totalPrice = price + serviceFee;
   useEffect(() => {
     document.documentElement.style.setProperty("--main-layout-width", "1280px");
     loadStay();
@@ -48,6 +49,14 @@ export function PaymentPage() {
       // showErrorMsg("Cant load stay");
       navigate("/");
     }
+  }
+
+  const handleMouseMove = (e) => {
+    const rect = e.target.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top;
+
+    setGradientPosition(`${x}px ${y}px`)
   }
 
   function createTrip() {
@@ -90,8 +99,7 @@ export function PaymentPage() {
       <div className="page-title flex">
         <button
           onClick={() => navigate(`/details/${stay._id}`)}
-          className=".clean-btn"
-        >
+          className=".clean-btn">
           back
         </button>
         <h2>Request to book</h2>
@@ -121,7 +129,9 @@ export function PaymentPage() {
               <h5>{guests} Guest</h5>
             </div>
           </div>
-          <button className="reserve-btn" onClick={onConfirm}>
+          <button className="reserve-btn" style={{ backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)` }}
+            onMouseMove={handleMouseMove}
+            onClick={onConfirm}>
             Confirm
           </button>
           <div className="login-section">

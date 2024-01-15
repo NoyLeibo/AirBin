@@ -18,18 +18,17 @@
     grid-template-columns: repeat(2, 3fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    min-height: 500px;
+    min-height: 330px;
   }
 }
 
 .review-li {
   margin: 5px;
-
+  border-bottom: 1px solid #e1e1e1;
 }
 
 
 .amenities-container {
-  // border-bottom: 1px solid #e1e1e1;
 
   .amenitie-modal {
     top: 50%;
@@ -44,6 +43,13 @@
     border: 1px solid #e1e1e1;
     border-radius: 8px;
     z-index: 6;
+    overflow: auto;
+
+    .amenitie-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+    }
   }
 
   h4 {

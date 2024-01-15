@@ -28,15 +28,20 @@ const routes = [
     label: "Stays",
   },
   {
+    path: "/stay",
+    component: <StayIndex />,
+    label: "Stays",
+  },
+  {
     path: "details/:stayId",
     component: <StayDetails />,
     label: "Details",
   },
-  {
-    path: "stay/location=selectedDestination&checkIn=checkInDate&checkOut=checkOutDate&selectedGuests=:totalGuests",
-    component: <StayFilterBy />,
-    label: "Filter",
-  },
+  // {
+  //   path: "/stay",
+  //   component: <StayFilterBy />,
+  //   label: "Filter",
+  // },
   {
     path: "review",
     component: <ReviewIndex />,
