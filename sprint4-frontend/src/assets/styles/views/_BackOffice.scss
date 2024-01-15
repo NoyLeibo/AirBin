@@ -1,3 +1,13 @@
-.back-office-container{
+.main-back-office-container{
+   display: flex;
+   width: 100%;
+   flex-direction: column;
    color: #222222;
+   .charts-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: row;
+      border-bottom: 1px solid $clGreyMid;
+      margin-bottom: 50px;
+   }
 }

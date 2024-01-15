@@ -2114,7 +2114,7 @@ export function StayEdit() {
           <div className="fw600 fs22"> Step 8</div>
           <div className="step-8-title fs24 fw600">Ta-da! How does this look?</div>
           <p className="fs18">
-          Click to reorder
+          Click to upload images
           </p>
           <div className="imges-step-container">
             <ImgUploader stay={stayToEdit} addImgStay={addImgStay} deleteImgStay={deleteImgStay}/>

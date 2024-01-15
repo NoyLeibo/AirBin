@@ -90,9 +90,10 @@ export function StayFilter({ filterBy, onSetFilter }) {
   return (
     <div
       className={
-        !isScrolledDown
-          ? "filters-layout divider filter-sticy"
-          : "filters-layout divider"
+        ` filters-layout divider ${!isScrolledDown
+          ? " filter-sticky"
+          : ""}
+          ${isOpenFilter?"modal-filter-open":""}`
       }
     >
       {scrolledLeft && (
