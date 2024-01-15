@@ -47,10 +47,10 @@ async function filterStays(filterBy, stays) {
     stays = stays.filter((stay) => {
       return (
         stay.capacity -
-          filterBy.selectedGuests.Adults -
-          filterBy.selectedGuests.Children -
-          filterBy.selectedGuests.Infants -
-          filterBy.selectedGuests.Pets >
+        filterBy.selectedGuests.Adults -
+        filterBy.selectedGuests.Children -
+        filterBy.selectedGuests.Infants -
+        filterBy.selectedGuests.Pets >
         0
       );
     });
