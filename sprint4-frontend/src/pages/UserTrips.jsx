@@ -40,6 +40,18 @@ export function UserTrips() {
     });
   }
 
+  function changeFontColor(status) {
+    if (status === "pending") {
+      return "pendingStatus";
+    }
+    if (status === "Accepted") {
+      return "acceptedStatus";
+    }
+    if (status === "Rejected") {
+      return "rejectedStatus";
+    }
+  }
+
   return (
     <Grid
       container
@@ -62,7 +74,9 @@ export function UserTrips() {
                   {reservation.stay.stayName}
                 </Typography>
                 <Typography gutterBottom component="div">
-                  {reservation.status}
+                  <span className={changeFontColor(reservation.status)}>
+                    {reservation.status}
+                  </span>
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Hosted by {reservation.host.fullname}
