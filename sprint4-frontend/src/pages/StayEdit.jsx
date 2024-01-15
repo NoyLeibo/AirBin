@@ -37,6 +37,7 @@ export function StayEdit() {
   const navigate = useNavigate()
   const user = useSelector((storeState) => storeState.userModule.user)
   // console.log(stayToEdit, cords, valueGuests, "startttt")
+  // console.log(stayToEdit.imgUrls)
 
   useEffect(() => {
     document.documentElement.style.setProperty("--main-layout-width", "1500px")
@@ -134,6 +135,12 @@ export function StayEdit() {
   function addImgStay(imgUrl) {
     stayToEdit.imgUrls.push(imgUrl)
     setStayToEdit(stayToEdit)
+  }
+
+  function deleteImgStay(idmImg){
+
+    stayToEdit.imgUrls.splice(idmImg, 1)
+    setStayToEdit({ ...stayToEdit, imgUrls: stayToEdit.imgUrls })
   }
   function changeSection(diff) {
     const step = diff + sectionProgress
@@ -1193,7 +1200,7 @@ export function StayEdit() {
           </p>
           <div className="loc-step-container">
             <label className="flex column">
-              <span>Continent :</span>
+              <span>Continent</span>
               <input
                 className="edit-input name-input"
                 value={stayToEdit.loc.area}
@@ -1204,7 +1211,7 @@ export function StayEdit() {
               />
             </label>
             <label className="flex column">
-              <span>Country :</span>
+              <span>Country</span>
               <input
                 className="edit-input name-input"
                 value={stayToEdit.loc.country}
@@ -1215,7 +1222,7 @@ export function StayEdit() {
               />
             </label>
             <label className="flex column">
-              <span>City :</span>
+              <span>City</span>
               <input
                 className="edit-input name-input"
                 value={stayToEdit.loc.city}
@@ -1226,7 +1233,7 @@ export function StayEdit() {
               />
             </label>
             <label className="flex column">
-              <span>Address :</span>
+              <span>Address</span>
               <input
                 className="edit-input name-input"
                 value={stayToEdit.loc.address}
@@ -2110,7 +2117,7 @@ export function StayEdit() {
           Click to reorder
           </p>
           <div className="imges-step-container">
-            <ImgUploader stay={stayToEdit} addImgStay={addImgStay}/>
+            <ImgUploader stay={stayToEdit} addImgStay={addImgStay} deleteImgStay={deleteImgStay}/>
           </div>
         </section>
       )}
