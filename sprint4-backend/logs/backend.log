@@ -2785,3 +2785,8 @@
 15.1.2024, 14:19:05 - ERROR - Failed to get stays | TypeError: Cannot read properties of undefined (reading 'Adults') 
 15.1.2024, 14:20:10 - INFO - Server is running on port: 3030 
 15.1.2024, 14:20:45 - INFO - Server is running on port: 3030 
+15.1.2024, 14:36:43 - INFO - Req was made | / 
+15.1.2024, 14:36:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 14:36:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 14:36:43 - INFO - Req was made | / 
+15.1.2024, 14:36:50 - INFO - Socket disconnected [id: undefined] 
