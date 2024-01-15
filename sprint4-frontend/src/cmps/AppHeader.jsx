@@ -137,6 +137,7 @@ export function AppHeader() {
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [isOpenGuests, isOpenDates, isOpenDestinations, isMenuOpen, isLoginOpen])
+
   const totalGuests = Object.values(filterBy.selectedGuests).reduce(
     (total, currentValue) => parseInt(total) + parseInt(currentValue),
     0

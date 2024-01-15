@@ -6475,3 +6475,19 @@
 15.1.2024, 21:37:31 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
 15.1.2024, 21:37:35 - INFO - Req was made | / 
 15.1.2024, 21:37:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 21:37:50 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 21:37:51 - INFO - New connected socket [id: 3B429cpXd-L_5Ej-AAAH] 
+15.1.2024, 21:37:51 - INFO - Req was made | / 
+15.1.2024, 21:37:51 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+15.1.2024, 21:38:14 - INFO - Req was made | / 
+15.1.2024, 21:38:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Israel"} 
+15.1.2024, 21:38:20 - INFO - Req was made | / 
+15.1.2024, 21:38:20 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Flexible"} 
+15.1.2024, 21:39:29 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 21:39:30 - INFO - New connected socket [id: 8A8G2B0ltB-k1GzTAAAJ] 
+15.1.2024, 21:39:34 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 21:39:34 - INFO - New connected socket [id: RxhFLuYS4yUYERM0AAAL] 
+15.1.2024, 21:44:49 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 21:44:49 - INFO - New connected socket [id: ykzXlGxQj0P5wgsNAAAN] 
+15.1.2024, 21:49:37 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 21:49:38 - INFO - New connected socket [id: Z6IcmbcOKxd4JX1gAAAP] 
