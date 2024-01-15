@@ -2643,3 +2643,11 @@
 15.1.2024, 10:54:24 - INFO - Req was made | / 
 15.1.2024, 10:56:35 - INFO - Req was made | / 
 15.1.2024, 10:56:35 - DEBUG - Getting Stays | {"priceRange":["500","60"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 11:02:59 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 11:03:00 - INFO - New connected socket [id: h7JcxW7s720aQfXBAAAt] 
+15.1.2024, 11:03:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
+15.1.2024, 11:03:00 - INFO - Req was made | / 
+15.1.2024, 11:03:00 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: h7JcxW7s720aQfXBAAAt] 
+15.1.2024, 11:05:51 - INFO - Socket disconnected [id: undefined] 
+15.1.2024, 11:05:52 - INFO - New connected socket [id: pFPd3D6WzZrcYQz8AAAv] 
+15.1.2024, 11:05:52 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: pFPd3D6WzZrcYQz8AAAv] 
