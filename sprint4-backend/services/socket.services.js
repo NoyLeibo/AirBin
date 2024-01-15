@@ -36,19 +36,18 @@ export function setupSocketAPI(server) {
       socket.broadcast.to(socket.myTopic).emit("chat-add-msg", msg);
     });
 
-    socket.on("chat-send-msg-username", (data) => {
-      const from = data.from;
-      const to = data.to;
-      const txt = data.txt;
-      //FINISH THE FUNC TO PUSH NEW MSGS TO USER.CHATS ARR
-      // userService.pushToUsers(from,to,txt)
+    socket.on("direct-emit-username", (data) => {
       emitToUserByUsername(data);
+    });
+    socket.on("direct-emit", (data) => {
+      emitToUser(data);
     });
 
     socket.on("set-user-socket-username", (username) => {
       logger.info(
         `Setting socket.userId = ${username} for socket [id: ${socket.id}]`
       );
+      console.log(username);
       socket.username = username;
     });
 
@@ -60,6 +59,8 @@ export function setupSocketAPI(server) {
       console.log(userArr);
       socket.join("watching:" + userId);
     });
+
+    // socket.on("order-recived", data);
 
     socket.on("set-user-socket", (userId) => {
       logger.info(
@@ -83,6 +84,7 @@ function emitTo({ type, data, label }) {
 async function emitToUser({ type, data, userId }) {
   userId = userId.toString();
   const socket = await _getUserSocket(userId);
+  console.log(data);
 
   if (socket) {
     logger.info(

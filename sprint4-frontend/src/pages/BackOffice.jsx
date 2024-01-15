@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { loadUsers, removeUser } from "../store/user.actions.js";
 import { DashboardResarvation } from "../cmps/DashboardResarvation";
+import ChartPie from "../cmps/ChartPie.jsx";
+import ChartBar from "../cmps/ChartBar.jsx";
 
 export function BackOffice() {
   const users = useSelector((storeState) => storeState.userModule.users);
@@ -23,6 +25,20 @@ export function BackOffice() {
           <button className="btn-dashboard">Reservation</button>
         </div>
       </div>
+      <section className="charts-container ">
+        <div className="chart-container flex column align-center">
+        <div className="chart-title fw600 fs24">Orders By Stay </div>
+        <ChartPie/>
+        </div>
+        <div className="chart-container flex column align-center">
+        <div className="chart-title fw600 fs24">Orders Today</div>
+        <ChartPie/>
+        </div>
+        <div className="chart-container flex column align-center">
+        <div className="chart-title fw600 fs24">Income Last Year</div>
+        <ChartBar/>
+        </div>
+      </section>
       <section>
         <DashboardResarvation />
       </section>

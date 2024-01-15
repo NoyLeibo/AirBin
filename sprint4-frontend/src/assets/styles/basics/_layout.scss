@@ -12,6 +12,10 @@
     }
   }
 
+  @media (max-width: 550px){
+
+    grid-template-columns: 1fr ;
+  }
 
   // @include for-narrow-layout {
   //   grid-template-columns: 40px minmax(auto, 1fr) 40px;

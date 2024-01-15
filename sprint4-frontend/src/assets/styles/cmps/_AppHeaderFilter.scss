@@ -7,7 +7,7 @@
     background-color: #fff;
     grid-column: 1 / -1;
     box-shadow: 0 0 #ccc;
-    transition: all 0.8s;
+    transition: position 0.8s;
     align-items: center;
 
     button {
@@ -19,9 +19,21 @@
         // min-height: 78px;
     }
 
-    &.filter-sticy {
+    &.filter-sticky {
         position: sticky;
         top: 80px;
+    }
+    &.modal-filter-open {
+        z-index: 6;
+    }
+    .btn-filters{
+        display: flex;
+        align-items: center;
+        padding: 20px 10px;
+        font-size: 16px;
+        &:hover{
+          background-color: $clGreyLighter;
+        }
     }
 }
 
