@@ -1,39 +1,39 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { userService } from "../services/user.service";
-import { updateUser } from "../store/user.actions";
+import React, { useState } from "react"
+import { NavLink } from "react-router-dom"
+import { userService } from "../services/user.service"
+import { updateUser } from "../store/user.actions"
 
-const Carousel = ({ stay, isLiked }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [favoriteStay, setFavorite] = useState(isLiked);
+export function Carousel({ stay, isLiked }) {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [favoriteStay, setFavorite] = useState(isLiked)
   const goToSlide = (index) => {
-    setActiveIndex(index);
-  };
+    setActiveIndex(index)
+  }
 
   const goToPrevSlide = () => {
-    const index = (activeIndex - 1 + stay.imgUrls.length) % stay.imgUrls.length;
-    goToSlide(index);
-  };
+    const index = (activeIndex - 1 + stay.imgUrls.length) % stay.imgUrls.length
+    goToSlide(index)
+  }
 
   const goToNextSlide = () => {
-    const index = (activeIndex + 1) % stay.imgUrls.length;
-    goToSlide(index);
-  };
+    const index = (activeIndex + 1) % stay.imgUrls.length
+    goToSlide(index)
+  }
 
   async function toggleLike() {
-    setFavorite(!favoriteStay);
-    const user = await userService.updateWishlist(stay);
-    await updateUser(user);
+    setFavorite(!favoriteStay)
+    const user = await userService.updateWishlist(stay)
+    await updateUser(user)
   }
   const renderIndicators = () => {
-    const totalButtons = Math.min(5, stay.imgUrls.length); // Maximum 5 buttons
-    let firstIndex = 0;
+    const totalButtons = Math.min(5, stay.imgUrls.length)
+    let firstIndex = 0
 
     if (stay.imgUrls.length > totalButtons) {
       if (activeIndex >= 2 && activeIndex <= stay.imgUrls.length - 3) {
-        firstIndex = activeIndex - 2;
+        firstIndex = activeIndex - 2
       } else if (activeIndex > stay.imgUrls.length - 3) {
-        firstIndex = stay.imgUrls.length - totalButtons;
+        firstIndex = stay.imgUrls.length - totalButtons
       }
     }
 
@@ -43,15 +43,13 @@ const Carousel = ({ stay, isLiked }) => {
         <div
           key={firstIndex + index}
           onClick={() => goToSlide(firstIndex + index)}
-          className={
-            firstIndex + index === activeIndex
-              ? "carousel-indicators-nav active"
-              : "carousel-indicators-nav"
-          }
+          className={`carousel-indicators-nav ${
+            firstIndex + index === activeIndex ? "active" : ""
+          }`}
         />
-      ));
-  };
-  const isLike = favoriteStay ? "heart-icon favorite" : "heart-icon";
+      ))
+  }
+  const isLike = `heart-icon ${favoriteStay ? "favorite" : ""}`
   return (
     <div className="carousel">
       <div
@@ -90,9 +88,11 @@ const Carousel = ({ stay, isLiked }) => {
           <path d="M16 28c7-4.73 14-10 14-17a6.98 6.98 0 0 0-7-7c-1.8 0-3.58.68-4.95 2.05L16 8.1l-2.05-2.05a6.98 6.98 0 0 0-9.9 0A6.98 6.98 0 0 0 2 11c0 7 7 12.27 14 17z"></path>
         </svg>
       </button>
-      {stay.host.isSuperhost&& <NavLink to={`/details/${stay._id}`}><div className="super-host-tag">Guest favorite</div></NavLink>}
+      {stay.host.isSuperhost && (
+        <NavLink to={`/details/${stay._id}`}>
+          <div className="super-host-tag">Guest favorite</div>
+        </NavLink>
+      )}
     </div>
-  );
-};
-
-export default Carousel;
+  )
+}

@@ -2709,3 +2709,25 @@
 15.1.2024, 12:38:43 - INFO - Req was made | / 
 15.1.2024, 12:38:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDestination":""} 
 15.1.2024, 12:38:43 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: O4bkq713RFNlS58lAAA1] 
+15.1.2024, 13:50:12 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:50:12 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:50:13 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:50:13 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:50:14 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:50:14 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:50:14 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:50:14 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:50:14 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:50:14 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:54:04 - INFO - Req was made | / 
+15.1.2024, 13:54:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-05T22:00:00.000Z","checkOut":"2024-02-07T22:00:00.000Z"},"selectedDestination":""} 
+15.1.2024, 13:54:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"destination":"","selectedDates":{"checkIn":"2024-02-05T22:00:00.000Z","checkOut":"2024-02-07T22:00:00.000Z"},"selectedDestination":""} 
+15.1.2024, 13:54:40 - INFO - Req was made | / 
+15.1.2024, 13:57:01 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:57:01 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:57:02 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:57:02 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:59:02 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:59:02 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:59:03 - ERROR - while finding user 65a142d02d36065c09eb4f48 | TypeError: Cannot convert undefined or null to object 
+15.1.2024, 13:59:03 - ERROR - Failed to get user | TypeError: Cannot convert undefined or null to object 
