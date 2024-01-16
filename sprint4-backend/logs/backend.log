@@ -7444,6 +7444,12 @@
 16.1.2024, 8:07:01 - INFO - Socket disconnected [id: undefined] 
 16.1.2024, 8:56:42 - INFO - Req was made | / 
 16.1.2024, 8:56:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 9:58:44 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 9:58:44 - INFO - New connected socket [id: r89LAoTxJLOCQdzYAABl] 
+16.1.2024, 9:58:44 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: r89LAoTxJLOCQdzYAABl] 
+16.1.2024, 10:07:20 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 10:07:21 - INFO - New connected socket [id: 05hMPyUhNdJ3SQmzAABn] 
+16.1.2024, 10:07:21 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: 05hMPyUhNdJ3SQmzAABn] 
 16.1.2024, 9:22:17 - INFO - Socket disconnected [id: undefined] 
 16.1.2024, 9:22:17 - INFO - Socket disconnected [id: undefined] 
 16.1.2024, 9:22:18 - INFO - New connected socket [id: Yo9bQVDDLp07W-GgAADN] 

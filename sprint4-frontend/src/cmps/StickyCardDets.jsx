@@ -4,11 +4,13 @@ import { Guests } from "./Guests.jsx";
 import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { stayService } from "../services/stay.service.js";
+import { setSelectedDates, setSelectedGuests } from "../store/stay.actions.js";
 
 export function StickyCard({ stay, onToggleReserve }) {
   const btnReserve = useRef(false);
+  const dispatch = useDispatch()
   const navigate = useNavigate();
   const [isOpenDates, setIsOpenDates] = useState(false);
   const [isOpenGuests, setIsOpenGuests] = useState(false);
@@ -43,15 +45,19 @@ export function StickyCard({ stay, onToggleReserve }) {
   }
 
   const datesToggle = () => {
-    setIsOpenDates(!isOpenDates);
-    setIsOpenGuests(false);
+    setIsOpenDates(!isOpenDates)
+    setIsOpenGuests(false)
+    console.log('filterBy.selectedDates', filterBy.selectedDates)
   };
   const guestsToggle = () => {
-    setIsOpenGuests(!isOpenGuests);
-    setIsOpenDates(false);
-  };
+    setIsOpenGuests(!isOpenGuests)
+    setIsOpenDates(false)
+  }
 
   function onReserveValidaton() {
+    dispatch(setSelectedDates(filterBy.selectedDates))
+    dispatch(setSelectedGuests(filterBy.selectedGuests))
+
     if (
       !selectedDates.checkIn ||
       !selectedDates.checkOut ||
