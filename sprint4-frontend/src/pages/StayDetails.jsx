@@ -17,7 +17,7 @@ export function StayDetails() {
 
   const [stay, setStay] = useState(null)
   const [isOpenHeader, setIsOpenHeader] = useState(false)
-  const [isOpenReserve, setIsReserve] = useState(true)
+  const [isOpenReserve, setIsReserve] = useState(false)
   useEffect(() => {
     // Callback function to be executed when the target element enters or exits the viewport
     const handleIntersection = (entries, observer) => {
