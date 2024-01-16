@@ -7483,3 +7483,5 @@
 16.1.2024, 10:09:23 - INFO - New connected socket [id: NidC39hYFeo7lSk2AADd] 
 16.1.2024, 10:09:23 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: m3p2nV0Uwx3dnET6AADc] 
 16.1.2024, 10:09:23 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: NidC39hYFeo7lSk2AADd] 
+16.1.2024, 10:30:15 - INFO - New connected socket [id: 8wVlBVtBojB0DB3TAADf] 
+16.1.2024, 12:03:25 - INFO - Socket disconnected [id: undefined] 
