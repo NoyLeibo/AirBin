@@ -7112,3 +7112,31 @@
 16.1.2024, 1:55:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
 16.1.2024, 1:57:29 - INFO - Req was made | / 
 16.1.2024, 1:57:29 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 1:59:09 - INFO - Req was made | / 
+16.1.2024, 1:59:09 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 2:04:40 - INFO - Req was made | / 
+16.1.2024, 2:04:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 2:14:59 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 2:15:00 - INFO - New connected socket [id: L6AAkrfVV9XRKAElAABX] 
+16.1.2024, 2:15:00 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: L6AAkrfVV9XRKAElAABX] 
+16.1.2024, 2:15:05 - INFO - Req was made | / 
+16.1.2024, 2:15:05 - DEBUG - Getting Stays | {} 
+16.1.2024, 2:15:05 - ERROR - Failed to get stays | TypeError: Cannot read properties of undefined (reading 'length') 
+16.1.2024, 2:15:47 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 2:15:47 - INFO - New connected socket [id: EZa8q76CiKRaiNUMAABZ] 
+16.1.2024, 2:15:47 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: EZa8q76CiKRaiNUMAABZ] 
+16.1.2024, 2:20:04 - INFO - Req was made | / 
+16.1.2024, 2:20:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 2:20:08 - INFO - Req was made | / 
+16.1.2024, 2:20:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 2:20:11 - INFO - Req was made | / 
+16.1.2024, 2:20:11 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 2:20:14 - INFO - Req was made | / 
+16.1.2024, 2:20:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 2:21:13 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 2:21:14 - INFO - New connected socket [id: CQhBAAjH--jVUPN-AABb] 
+16.1.2024, 2:21:14 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: CQhBAAjH--jVUPN-AABb] 
+16.1.2024, 2:21:16 - INFO - Req was made | / 
+16.1.2024, 2:21:16 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 2:21:23 - INFO - Req was made | / 
+16.1.2024, 2:21:23 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 

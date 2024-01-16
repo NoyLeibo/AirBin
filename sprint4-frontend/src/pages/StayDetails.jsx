@@ -132,8 +132,8 @@ export function StayDetails() {
             </h1>
             <div className="capacity fs16">
               {stay.capacity} guests <span className="fs14">•</span>{" "}
-              {stay.bedrooms} rooms <span className="fs14">•</span> {stay.beds}{" "}
-              beds <span className="fs14">•</span> {stay.bedrooms} bath
+              {stay.bedrooms ? stay.bedrooms : stay.rooms} rooms <span className="fs14">•</span> {stay.beds}{" "}
+              beds <span className="fs14">•</span> {stay.bathrooms} bath
             </div>
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
