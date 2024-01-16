@@ -19,7 +19,7 @@ export function AppFooter() {
     editPath='/edit'
   }
   return (
-    <footer className={`app-footer  flex blacktxt
+    <footer className={`app-footer  flex blacktxt full
     ${currentPath==="/"?" footer-fixed ":" "}
     ${editPath==="/edit"?" footer-close ":" "}
     ${editPath==="/edit/"?" footer-close ":" "}`}>
