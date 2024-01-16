@@ -139,9 +139,7 @@ export function AppHeader() {
   }, [isOpenGuests, isOpenDates, isOpenDestinations, isMenuOpen, isLoginOpen])
 
   const totalGuests = Object.values(filterBy.selectedGuests).reduce(
-    (total, currentValue) => parseInt(total) + parseInt(currentValue),
-    0
-  )
+    (total, currentValue) => parseInt(total) + parseInt(currentValue), 0)
 
   function searchFilterBy(ev) {
     ev.preventDefault()
@@ -152,9 +150,12 @@ export function AppHeader() {
     navigate(`/stay?location=${filterBy.selectedDestination}&checkIn=${filterBy.selectedDates.checkIn?.toLocaleDateString('en-US')}&checkOut=${filterBy.selectedDates.checkOut?.toLocaleDateString('en-US')}&adults=${filterBy.selectedGuests.Adults}&children=${filterBy.selectedGuests.Children}&infants=${filterBy.selectedGuests.Infants}&pets=${filterBy.selectedGuests.Pets}`);
   }
 
-
   function refreshPage() {
     setFilterBy(stayService.getDefaultFilter())
+    dispatch(setSelectedDates(filterBy.selectedDates))
+    dispatch(setSelectedDestination(filterBy.selectedDestination))
+    dispatch(setSelectedGuests(filterBy.selectedGuests))
+    // console.log(filterBy);
     if (location.pathname === "/") {
       window.location.reload()
     }

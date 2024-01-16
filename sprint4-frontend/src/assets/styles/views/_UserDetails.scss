@@ -5,3 +5,51 @@
         background-size: contain;
     }
 }
+
+.stay-dates {
+    .calendar-modal {
+        .airbnb-calendar {
+            user-select: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: nowrap;
+            position: absolute;
+            transform: translate(-50%);
+            left: 50%;
+            top: 92px;
+            width: 848px;
+            height: 511px;
+            // margin-top: 12px;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 0 0 1px #0000000a, 0 8px 16px #00000026;
+            padding: 16px 32px;
+            justify-content: space-evenly;
+            cursor: auto;
+            z-index: 5;
+        }
+    }
+}
+
+.guest-picker {
+
+    .guests-modal {
+        .guest-modal {
+            position: absolute;
+            left: 49.5%;
+            top: 176px;
+            background-color: white;
+            border-radius: 32px;
+            width: 406px;
+            height: 395px;
+            cursor: auto;
+            box-shadow: 0 0 0 1px #0000000a, 0 8px 16px #00000026;
+            padding-bottom: 16px;
+            padding-top: 16px;
+            padding-right: 32px;
+            padding-left: 32px;
+            // margin-top: 12px;
+        }
+    }
+}

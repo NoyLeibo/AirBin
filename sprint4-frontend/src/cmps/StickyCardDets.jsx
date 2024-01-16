@@ -42,6 +42,15 @@ export function StickyCard({ stay, onToggleReserve }) {
     return 1;
   }
 
+  const datesToggle = () => {
+    setIsOpenDates(!isOpenDates);
+    setIsOpenGuests(false);
+  };
+  const guestsToggle = () => {
+    setIsOpenGuests(!isOpenGuests);
+    setIsOpenDates(false);
+  };
+
   function onReserveValidaton() {
     if (
       !selectedDates.checkIn ||
@@ -124,8 +133,7 @@ export function StickyCard({ stay, onToggleReserve }) {
         <section className="stay-dates flex row">
           <button
             className="clean-btn"
-            onClick={() => setIsOpenDates((currState) => !currState)}
-          >
+            onClick={() => datesToggle()}>
             <div className="flex blacktxt">CHECK-IN</div>
             <div className="flex">
               {filterBy.selectedDates.checkIn === null && (
@@ -137,8 +145,7 @@ export function StickyCard({ stay, onToggleReserve }) {
           </button>
           <button
             className="check-out clean-btn"
-            onClick={() => setIsOpenDates((currState) => !currState)}
-          >
+            onClick={() => datesToggle()}>
             <div className="flex blacktxt">CHECK-OUT</div>
             <div className="flex">
               {filterBy.selectedDates.checkOut === null && (
@@ -153,10 +160,9 @@ export function StickyCard({ stay, onToggleReserve }) {
           </div>
         </section>
 
-        <section className="guest-picker flex">
+        <section className="guest-picker flex pointer" onClick={() => guestsToggle()}>
           <button
             className="clean-btn"
-            onClick={() => setIsOpenGuests((currState) => !currState)}
           >
             <div className="fs12 blacktxt">Who</div>
             <div className="fs14 graytxt">
