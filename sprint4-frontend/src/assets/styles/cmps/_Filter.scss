@@ -93,6 +93,13 @@
   }
 }
 
+.stay-list-on-filter {
+  list-style: none;
+  padding-inline-start: 0px;
+  display: grid;
+  justify-content: center;
+
+}
 
 .filter-modal-bottom {
   grid-area: 2/1/-1/2;
@@ -109,31 +116,38 @@
   justify-content: space-between;
   align-items: start;
   padding-top: 1.2em;
-  .price-min-max{
+
+  .price-min-max {
     // width: 100%;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 1.75em;
+
     // width: 400px;
-    .min-price{
+    .min-price {
       margin-right: 1.5em;
     }
-    .max-price{
+
+    .max-price {
       margin-left: 1.5em;
     }
-    .range{
+
+    .range {
       padding-top: 2.5em;
     }
-    label{
+
+    label {
       display: flex;
       flex-direction: column;
-      
-      
+
+
     }
-    input{
+
+    input {
       width: 100px;
     }
-    .slider-color{
+
+    .slider-color {
       // margin-top: 0.5em;
       // margin-bottom: 0.5em;
       color: $clr1;

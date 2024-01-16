@@ -24,18 +24,11 @@ export function StayPreview({ stay, isLiked, getRandomDateRangeString }) {
           </div>
           <div className="stay-card-rating-container fs16 flex align-center">
             <i className="fa-solid fa-star fs12 "></i>
-            {stay.reviews.length > 0 && stay.reviews.length < 5 && <span className="fw300 stay-card-rating">
-              {" "}
-              {stay.reviews.length}
-            </span>}
-            {stay.reviews.length > 5 && <span className="fw300 stay-card-rating">
-              {" "}
-              2
-            </span>}
-            {stay.reviews.length === 0 && <span className="fw300 stay-card-rating">
-              {" "}
-              New
-            </span>}
+
+            {stay.rate ? <span className="fw300 stay-card-rating">{" "} {stay.rate}</span>
+              :
+              <span className="fw300 stay-card-rating">{" "} New</span>
+            }
           </div>
         </div>
         <div className="stay-card-distance fs16">{stay.type}</div>

@@ -132,24 +132,16 @@ export function StayDetails() {
             </h1>
             <div className="capacity fs16">
               {stay.capacity} guests <span className="fs14">•</span>{" "}
-              {stay.bedrooms ? stay.bedrooms : stay.rooms} rooms <span className="fs14">•</span> {stay.beds}{" "}
+              {stay.bedrooms ? stay.bedrooms : stay.rooms} rooms <span className="fs14">•</span> {stay.beds ? stay.beds : stay.capacity}{" "}
               beds <span className="fs14">•</span> {stay.bathrooms} bath
             </div>
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
                 <i className="fa-solid fa-star"></i>
-                {stay.reviews.length > 0 && stay.reviews.length < 5 && <span className="fw300 stay-card-rating">
-                  {" "}
-                  {stay.reviews.length}
-                </span>}
-                {stay.reviews.length > 5 && <span className="fw300 stay-card-rating">
-                  {" "}
-                  2
-                </span>}
-                {stay.reviews.length === 0 && <span className="fw300 stay-card-rating">
-                  {" "}
-                  New
-                </span>}
+                {stay.rate ? <span>{stay.rate}</span>
+                  :
+                  <span> New</span>
+                }
                 <span className="fs14 dotP">
                   •
                   <span className="bold pointer underline">
@@ -242,18 +234,10 @@ export function StayDetails() {
         <div className="stay-dets-rating ">
           <span className="fs26 fw600">
             <i className="fa-solid fa-star"></i>
-            {stay.reviews.length > 0 && stay.reviews.length < 5 && <span className="fw300 stay-card-rating">
-              {" "}
-              {stay.reviews.length}
-            </span>}
-            {stay.reviews.length > 5 && <span className="fw300 stay-card-rating">
-              {" "}
-              2
-            </span>}
-            {stay.reviews.length === 0 && <span className="fw300 stay-card-rating">
-              {" "}
-              New
-            </span>}
+            {stay.rate ? <span>{stay.rate}</span>
+              :
+              <span> {stay.reviews.length} Reviews</span>
+            }
           </span>
           <span className="fs14 dotP"> • </span>
           <a href="#" className="stay-dets-rating-link fs26">
