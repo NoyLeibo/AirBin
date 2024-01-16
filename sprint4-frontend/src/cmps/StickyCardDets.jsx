@@ -57,14 +57,17 @@ export function StickyCard({ stay, onToggleReserve }) {
   function onReserveValidaton() {
     dispatch(setSelectedDates(filterBy.selectedDates))
     dispatch(setSelectedGuests(filterBy.selectedGuests))
-    if (
-      !selectedDates.checkIn ||
-      !selectedDates.checkOut ||
-      !selectedGuests.Adults
-    ) {
-      return false;
-    }
-    return true;
+    setTimeout(() => {
+      if (
+        !selectedDates.checkIn ||
+        !selectedDates.checkOut ||
+        !selectedGuests.Adults
+      ) {
+        return false;
+      }
+      return true;
+    }, 100);
+
   }
 
   function onReserveNavigate() {

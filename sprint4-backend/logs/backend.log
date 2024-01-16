@@ -4786,3 +4786,20 @@
 16.1.2024, 10:09:23 - INFO - New connected socket [id: NidC39hYFeo7lSk2AADd] 
 16.1.2024, 10:09:23 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: m3p2nV0Uwx3dnET6AADc] 
 16.1.2024, 10:09:23 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: NidC39hYFeo7lSk2AADd] 
+16.1.2024, 10:26:48 - INFO - Req was made | / 
+16.1.2024, 10:26:48 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 10:29:34 - INFO - Req was made | / 
+16.1.2024, 10:29:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 10:30:58 - INFO - Emiting event: order-recieved to user: 65a5c318c0bb8d5af786f9fd socket [id: 05hMPyUhNdJ3SQmzAABn] 
+16.1.2024, 10:31:16 - INFO - Emiting event: host-order-answer to user: 65a5c318c0bb8d5af786f9fd socket [id: 05hMPyUhNdJ3SQmzAABn] 
+16.1.2024, 10:37:31 - INFO - Req was made | / 
+16.1.2024, 10:37:31 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 10:47:52 - INFO - Req was made | / 
+16.1.2024, 10:47:52 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 10:50:15 - INFO - Req was made | / 
+16.1.2024, 10:50:15 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 11:00:30 - INFO - Req was made | / 
+16.1.2024, 11:00:30 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 11:01:25 - INFO - No active socket for user: 65a42221f7cfe3ae31df43cc 
+16.1.2024, 11:08:55 - INFO - Req was made | / 
+16.1.2024, 11:08:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
