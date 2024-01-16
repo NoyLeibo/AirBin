@@ -186,7 +186,7 @@ export function StickyCard({ stay, onToggleReserve }) {
         style={{ backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)` }}
         className="reserve-btn"
         onMouseMove={handleMouseMove}
-        onClick={onReserveNavigate}>
+        onClick={onReserveNavigate} ref={btnReserve}>
         Reserve
       </button>
       <div className="flex justify-center fs14">You won't be charged yet</div>

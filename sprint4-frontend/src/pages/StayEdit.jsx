@@ -2290,7 +2290,7 @@ export function StayEdit() {
         Get started
         </button>}
        {sectionProgress !==0 &&  <button className="btn-footer-edit btn-next-level" onClick={sectionProgress !== 14?(() => changeSection(1)):(() => onSave())}>
-          {sectionProgress !== 14?'Next':'Cheack your list'}
+          {sectionProgress !== 14?'Next':'Check your list'}
         </button>}
         </div>
       </section>
