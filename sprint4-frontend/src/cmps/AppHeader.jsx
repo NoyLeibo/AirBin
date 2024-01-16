@@ -154,11 +154,15 @@ export function AppHeader() {
   }
 
   function refreshPage() {
+
     setFilterBy(stayService.getDefaultFilter())
     dispatch(setSelectedDates(filterBy.selectedDates))
     dispatch(setSelectedDestination(filterBy.selectedDestination))
     dispatch(setSelectedGuests(filterBy.selectedGuests))
-    // console.log(filterBy);
+    setTimeout(() => {
+      navigate('/')
+      window.location.reload()
+    }, 100);
     if (location.pathname === "/") {
       window.location.reload()
     }
@@ -207,7 +211,7 @@ export function AppHeader() {
     setIsOpenGuests(true)
   }
 
-  const toggleBottomHeader = (isOpen) =>{
+  const toggleBottomHeader = (isOpen) => {
     setBottomHeader(isOpen)
   }
 
@@ -249,8 +253,8 @@ export function AppHeader() {
   return (
     <header
       className={`app-header grid 
-        ${((!isScrolledDown&&!bottomHeader)|| currentPath !== "/"&&!bottomHeader) ? " header-inserted " : ""
-        } ${((!isScrolledDown && currentPath === "/")||bottomHeader)
+        ${((!isScrolledDown && !bottomHeader) || currentPath !== "/" && !bottomHeader) ? " header-inserted " : ""
+        } ${((!isScrolledDown && currentPath === "/") || bottomHeader)
           ? " header-sticky " : ' '}
         
       `}
@@ -260,7 +264,6 @@ export function AppHeader() {
         <div className="logo-container flex justify-center align-center right-header">
           <NavLink
             className="flex justify-center align-center"
-            to="/"
             onClick={refreshPage}
           >
             <img src={LOGO_ICON} alt="logo icon" className="logo-header-img" />
@@ -339,11 +342,11 @@ export function AppHeader() {
           search-form justify-center flex row 
           
         }
-           ${((!isScrolledDown&&!bottomHeader )||( currentPath !== "/"&&!bottomHeader))
+           ${((!isScrolledDown && !bottomHeader) || (currentPath !== "/" && !bottomHeader))
               ? " header-search-inserted "
               : " "
             }    
-              ${((currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
+              ${((currentPath !== "/" && !bottomHeader) || (isClassAdded && !bottomHeader)) ? " close-header" : ""}
               `}
         >
           <div

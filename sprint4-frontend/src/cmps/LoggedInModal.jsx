@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { NavLink ,useLocation} from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { LoginModal } from "./Login";
@@ -8,12 +8,17 @@ import { logout } from "../store/user.actions";
 export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
   //  left-header
   // const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const onlineUser = useSelector(
+    (storeState) => storeState.userModule.user
+  )
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const gRef = useRef();
   const user = useSelector((storeState) => storeState.userModule.user);
-
   const location = useLocation()
   const currentPath = location.pathname
+
+  console.log(onlineUser);
+
 
   const openLoginModal = () => {
     setIsLoginOpen(true);
@@ -59,7 +64,7 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
     <section>
       <div>
         <div className="flex left-header justify-center align-center">
-         {currentPath!=='/backOffice'&& <NavLink
+          {currentPath !== '/backOffice' && <NavLink
             to={user ? "/hosting" : "#"}
             onClick={user ? undefined : openLoginModal}
             className="moveto-host fs14"
@@ -68,7 +73,7 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
           </NavLink>}
 
           {/* <button className="clean-btn moveto-host">Airbnb your home</button> */}
-          {currentPath!=='/backOffice'&& <div className="word-icon lx138ae atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr">
+          {currentPath !== '/backOffice' && <div className="word-icon lx138ae atm_h_1h6ojuz atm_9s_1txwivl atm_e2_1osqo2v atm_mk_h2mmj6 atm_wq_kb7nvz dir dir-ltr">
             <div className="_z5mecy" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,17 +117,13 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
               </g>
             </svg>
 
-            <svg
-              className="avatar"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 32 32"
-              aria-hidden="true"
-              role="presentation"
-              focusable="false"
-              style={{ fill: "currentColor" }}
-            >
-              <path d="M16 .7C7.56.7.7 7.56.7 16S7.56 31.3 16 31.3 31.3 24.44 31.3 16 24.44.7 16 .7zm0 28c-4.02 0-7.6-1.88-9.93-4.81a12.43 12.43 0 0 1 6.45-4.4A6.5 6.5 0 0 1 9.5 14a6.5 6.5 0 0 1 13 0 6.51 6.51 0 0 1-3.02 5.5 12.42 12.42 0 0 1 6.45 4.4A12.67 12.67 0 0 1 16 28.7z"></path>
-            </svg>
+            {onlineUser ?
+              <img src={onlineUser.imgUrl} alt="User Avatar" className="avatar" />
+              :
+              <svg className="avatar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false"
+                style={{ fill: "currentColor" }}>
+                <path d="M16 .7C7.56.7.7 7.56.7 16S7.56 31.3 16 31.3 31.3 24.44 31.3 16 24.44.7 16 .7zm0 28c-4.02 0-7.6-1.88-9.93-4.81a12.43 12.43 0 0 1 6.45-4.4A6.5 6.5 0 0 1 9.5 14a6.5 6.5 0 0 1 13 0 6.51 6.51 0 0 1-3.02 5.5 12.42 12.42 0 0 1 6.45 4.4A12.67 12.67 0 0 1 16 28.7z"></path>
+              </svg>}
           </button>
           {isMenuOpen && (
             <div ref={gRef} className="hamburger-menu">

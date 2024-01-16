@@ -112,7 +112,7 @@ export function DashboardResarvation() {
                 {reservation.booked}
               </StyledTableCell>
               <StyledTableCell align="left">
-                {reservation.totalPrice}
+                {reservation.totalPrice}$
               </StyledTableCell>
               <StyledTableCell align="left">
                 <span className={changeFontColor(reservation.status)}>

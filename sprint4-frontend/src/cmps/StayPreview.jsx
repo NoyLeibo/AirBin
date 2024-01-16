@@ -7,9 +7,9 @@ import Carousel from "./Carousel";
 // or, specify which plugins you need:
 // import { Tooltip, Toast, Popover } from 'bootstrap';
 
-export function StayPreview({ stay, isLiked ,getRandomDateRangeString}) {
+export function StayPreview({ stay, isLiked, getRandomDateRangeString }) {
 
-  const date=getRandomDateRangeString()
+  const date = getRandomDateRangeString()
 
   // console.log(stay);
   return (
@@ -24,11 +24,15 @@ export function StayPreview({ stay, isLiked ,getRandomDateRangeString}) {
           </div>
           <div className="stay-card-rating-container fs16 flex align-center">
             <i className="fa-solid fa-star fs12 "></i>
-            {stay.reviews.length!==0&&<span className="fw300 stay-card-rating">
+            {stay.reviews.length > 0 && stay.reviews.length < 5 && <span className="fw300 stay-card-rating">
               {" "}
               {stay.reviews.length}
             </span>}
-            {stay.reviews.length===0&& <span className="fw300 stay-card-rating">
+            {stay.reviews.length > 5 && <span className="fw300 stay-card-rating">
+              {" "}
+              2
+            </span>}
+            {stay.reviews.length === 0 && <span className="fw300 stay-card-rating">
               {" "}
               New
             </span>}

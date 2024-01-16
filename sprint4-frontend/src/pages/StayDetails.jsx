@@ -138,9 +138,18 @@ export function StayDetails() {
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
                 <i className="fa-solid fa-star"></i>
-                {stay.reviews.length !== 0 && (
-                  <span className="avgRate">{stay.reviews.length % 4 < 4 ? '4.5' : '5'} </span>
-                )}
+                {stay.reviews.length > 0 && stay.reviews.length < 5 && <span className="fw300 stay-card-rating">
+                  {" "}
+                  {stay.reviews.length}
+                </span>}
+                {stay.reviews.length > 5 && <span className="fw300 stay-card-rating">
+                  {" "}
+                  2
+                </span>}
+                {stay.reviews.length === 0 && <span className="fw300 stay-card-rating">
+                  {" "}
+                  New
+                </span>}
                 <span className="fs14 dotP">
                   •
                   <span className="bold pointer underline">
@@ -233,10 +242,18 @@ export function StayDetails() {
         <div className="stay-dets-rating ">
           <span className="fs26 fw600">
             <i className="fa-solid fa-star"></i>
-            {stay.reviews.length !== 0 && (
-              <span className="avgRate">{stay.reviews.length % 5 < 3 ? 4.25 : 5}</span>
-            )}
-            {stay.reviews.length === 0 && <span className="avgRate">New</span>}
+            {stay.reviews.length > 0 && stay.reviews.length < 5 && <span className="fw300 stay-card-rating">
+              {" "}
+              {stay.reviews.length}
+            </span>}
+            {stay.reviews.length > 5 && <span className="fw300 stay-card-rating">
+              {" "}
+              2
+            </span>}
+            {stay.reviews.length === 0 && <span className="fw300 stay-card-rating">
+              {" "}
+              New
+            </span>}
           </span>
           <span className="fs14 dotP"> • </span>
           <a href="#" className="stay-dets-rating-link fs26">
