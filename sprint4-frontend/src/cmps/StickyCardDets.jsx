@@ -47,9 +47,9 @@ export function StickyCard({ stay, onToggleReserve }) {
   const datesToggle = () => {
     setIsOpenDates(!isOpenDates)
     setIsOpenGuests(false)
-    console.log('filterBy.selectedDates', filterBy.selectedDates)
   };
   const guestsToggle = () => {
+    console.log('GUESTS');
     setIsOpenGuests(!isOpenGuests)
     setIsOpenDates(false)
   }
@@ -57,7 +57,6 @@ export function StickyCard({ stay, onToggleReserve }) {
   function onReserveValidaton() {
     dispatch(setSelectedDates(filterBy.selectedDates))
     dispatch(setSelectedGuests(filterBy.selectedGuests))
-
     if (
       !selectedDates.checkIn ||
       !selectedDates.checkOut ||
@@ -175,17 +174,16 @@ export function StickyCard({ stay, onToggleReserve }) {
               {totalGuests ? `${totalGuests} guests` : "Add guests"}
             </div>
           </button>
-          <div className="guests-modal">{isOpenGuests &&
-            <Guests setFilterBy={setFilterBy} filterBy={filterBy} />
-          }</div>
         </section>
+        <div className="guestsyy-modal">{isOpenGuests &&
+          <Guests setFilterBy={setFilterBy} filterBy={filterBy} />
+        }</div>
       </div>
       <button
         style={{ backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)` }}
         className="reserve-btn"
         onMouseMove={handleMouseMove}
-        onClick={onReserveNavigate}
-      >
+        onClick={onReserveNavigate}>
         Reserve
       </button>
       <div className="flex justify-center fs14">You won't be charged yet</div>
