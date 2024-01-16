@@ -31,6 +31,7 @@ export function AppHeader() {
   const [showScreenShadow, setShowScreenShadow] = useState(false)
   const [isClassAdded, setIsClassAdded] = useState(false)
   const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
+  const [bottomHeader, setBottomHeader] = useState(false)
 
   // const filterBy = useSelector(
   //   (storeState) => storeState.stayModule.filterBy
@@ -57,6 +58,7 @@ export function AppHeader() {
 
   useEffect(() => {
     if (!isScrolledDown) {
+      toggleBottomHeader(false)
       const timer = setTimeout(() => {
         setIsClassAdded(true)
       }, 300)
@@ -72,6 +74,7 @@ export function AppHeader() {
         setIsScrolledDown(true)
       }
       if (window.scrollY > 0) {
+        toggleBottomHeader(false)
         setIsScrolledDown(false)
         setIsOpenDates(false)
         setIsOpenGuests(false)
@@ -170,32 +173,42 @@ export function AppHeader() {
   }
 
   const toggleCalendarModal = () => {
+    toggleBottomHeader(true)
     setIsOpenDestinations(false)
     setIsOpenGuests(false)
     if (isOpenDates) {
       setIsOpenDates(false)
+      toggleBottomHeader(false)
       return
     }
     setIsOpenDates(true)
   }
   const toggleDestinationsModal = () => {
     // ---- DESTINATIONS
+    toggleBottomHeader(true)
     setIsOpenDates(false)
     setIsOpenGuests(false)
     if (isOpenDestinations) {
       setIsOpenDestinations(false)
+      toggleBottomHeader(false)
       return
     }
     setIsOpenDestinations(true)
   }
   const toggleGuestModal = () => {
+    toggleBottomHeader(true)
     setIsOpenDestinations(false)
     setIsOpenDates(false)
     if (isOpenGuests) {
       setIsOpenGuests(false)
+      toggleBottomHeader(false)
       return
     }
     setIsOpenGuests(true)
+  }
+
+  const toggleBottomHeader = (isOpen) =>{
+    setBottomHeader(isOpen)
   }
 
   async function onLogin(credentials) {
@@ -236,8 +249,8 @@ export function AppHeader() {
   return (
     <header
       className={`app-header grid 
-        ${!isScrolledDown || currentPath !== "/" ? " header-inserted " : ""
-        } ${(!isScrolledDown && currentPath === "/")
+        ${((!isScrolledDown&&!bottomHeader)|| currentPath !== "/"&&!bottomHeader) ? " header-inserted " : ""
+        } ${((!isScrolledDown && currentPath === "/")||bottomHeader)
           ? " header-sticky " : ' '}
         
       `}
@@ -263,11 +276,11 @@ export function AppHeader() {
             }
           `}
         >
-          <button className="btn-small-search-bar  fs14">Anywhere</button>
+          <button onClick={toggleDestinationsModal} className="btn-small-search-bar  fs14">Anywhere</button>
           <span className="splitter"></span>
-          <button className="btn-small-search-bar  fs14">Any week</button>
+          <button onClick={toggleCalendarModal} className="btn-small-search-bar  fs14">Any week</button>
           <span className="splitter"></span>
-          <button className="btn-small-search-bar btn-small-search-grey fs14 ">
+          <button onClick={toggleGuestModal} className="btn-small-search-bar btn-small-search-grey fs14 ">
             Add guests
           </button>
         </div>}
@@ -326,11 +339,11 @@ export function AppHeader() {
           search-form justify-center flex row 
           
         }
-           ${(!isScrolledDown || currentPath !== "/")
+           ${((!isScrolledDown&&!bottomHeader )||( currentPath !== "/"&&!bottomHeader))
               ? " header-search-inserted "
               : " "
             }    
-              ${(currentPath !== "/" || isClassAdded) ? " close-header" : ""}
+              ${((currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
               `}
         >
           <div

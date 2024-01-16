@@ -7439,3 +7439,8 @@
 16.1.2024, 6:09:38 - INFO - Setting socket.userId = demo_user for socket [id: zxtteyyIbSK1Zd2CAADB] 
 16.1.2024, 6:09:51 - INFO - Req was made | / 
 16.1.2024, 6:09:51 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 6:12:06 - INFO - Req was made | / 
+16.1.2024, 6:12:06 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 8:07:01 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 8:56:42 - INFO - Req was made | / 
+16.1.2024, 8:56:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
