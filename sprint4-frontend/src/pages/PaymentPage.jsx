@@ -119,18 +119,13 @@ export function PaymentPage() {
   if (!stay) return <div>Loading...</div>;
 
   return (
-    <section className="payment-container">
+    <section className="enhanced-payment-container">
       <div className="page-title flex">
-        <button
-          onClick={() => navigate(`/details/${stay._id}`)}
-          className=".clean-btn"
-        >
-          back
-        </button>
+        <button onClick={() => navigate(`/details/${stay._id}`)} className="clean-btn back-navigate-btn">Back</button>
         <h2>Request to book</h2>
       </div>
 
-      <div className="order-content ">
+      <div className="order-content">
         <div className="details-section">
           <div className="rare-find flex justify-between">
             <div>
@@ -154,16 +149,10 @@ export function PaymentPage() {
               <h5>{guests} Guest</h5>
             </div>
           </div>
-          <button
+          <button style={{ backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)` }}
             className="reserve-btn"
-            style={{
-              backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)`,
-            }}
             onMouseMove={handleMouseMove}
-            onClick={onConfirm}
-          >
-            Confirm
-          </button>
+            onClick={onConfirm}>Confirm</button>
           <div className="login-section">
             <LoginSignup />
           </div>
