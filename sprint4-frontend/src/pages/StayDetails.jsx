@@ -23,10 +23,10 @@ export function StayDetails() {
     const handleIntersection = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("Target element is in the viewport")
+          // console.log("Target element is in the viewport")
           onToggleHeadr(false)
         } else {
-          console.log("Target element is out of the viewport")
+          // console.log("Target element is out of the viewport")
           onToggleHeadr(true)
         }
       })
@@ -76,7 +76,7 @@ export function StayDetails() {
   async function loadStay() {
     try {
       const currStay = await stayService.getById(stayId)
-      console.log(currStay)
+      // console.log(currStay)
       setStay(currStay)
     } catch (err) {
       showErrorMsg("Cant load stay")
@@ -96,7 +96,7 @@ export function StayDetails() {
   }
 
   if (!stay) {
-    console.log("no stays")
+    // console.log("no stays")
     return (
       <div>
         <div className="loader">
