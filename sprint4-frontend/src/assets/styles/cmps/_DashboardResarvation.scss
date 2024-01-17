@@ -26,6 +26,12 @@
     }
   }
 }
+@media (max-width: 750px){
+  .main-container{
+    grid-template-columns: 1fr;
+  }  
+}
+
 .acceptedStatus {
   color: #67c23a;
 }

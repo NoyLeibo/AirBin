@@ -4805,3 +4805,145 @@
 16.1.2024, 11:08:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
 16.1.2024, 10:30:15 - INFO - New connected socket [id: 8wVlBVtBojB0DB3TAADf] 
 16.1.2024, 12:03:25 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 13:22:18 - INFO - Req was made | / 
+16.1.2024, 13:22:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 13:25:43 - DEBUG - auth.service - login with username: demo_user 
+16.1.2024, 13:25:43 - INFO - User login:  | {"_id":"65a41ab1316378825516e565","username":"demo_user","password":"123456","fullname":"Demo User","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","trips":[{"stay":{"stayId":"65a5b653a57dc34cac57f3de","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437017/gjyzgdjngyrhfrj2loxz.jpg","stayName":"➳ Logement  4 1/2 Rosemont ❤️"},"checkIn":"Feb 1","checkOut":"Feb 3","booked":"Jan 16","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Rebekah","location":"Montreal, Quebec, Canada","about":"","thumbnailUrl":"https://a0.muscache.com/im/pictures/367d4387-064d-46f6-b03c-fabe661180e3.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/367d4387-064d-46f6-b03c-fabe661180e3.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"84813481"},"guest":{"_id":"65a41ab1316378825516e565","username":"demo_user","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Demo User"},"totalPrice":899.8,"status":"Accepted","_id":"0U4ir5"},{"stay":{"stayId":"65a5b653a57dc34cac57f3e3","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436523/ptcgbydjsamgf67a0npw.jpg","stayName":"Mezzos Studio in Sydney CBD"},"checkIn":"Feb 1","checkOut":"Feb 10","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Larisa SSP","location":"Melbourne, Victoria, Australia","about":"Your trusted international host across major cities. Feel at home wherever you are! LIVE · LOVE · EXPLORE\r\n\r\n- Melbourne\r\n- Sydney\r\n- Gold Coast\r\n- Auckland\r\n- London\r\n- Kuala Lumpur\r\n- George Town\r\n- Johor Bahru\r\n\r\nI speak fluent English, Cantonese (广东话), Mandarin (普通话), Bahasa Melayu, Bahasa Indonesia & Tagalog.\r\n\r\nIf the dates you're after are available on my calendars, you may proceed to \"INSTANT-BOOK\" em'.\r\n\r\nMy calendars on AirBnb are always up to date, so if they're blocked and you can't select them, it pretty much means someone else has already booked em'.\r\n\r\nHappy stays & safe travels :)\r\n\r\nView more properties HERE (JL1) > https://www.airbnb.com.au/users/8530753/listings\r\n \r\nOR HERE (JL1) > https://www.airbnb.com.au/s/homes?host_id=8530753\r\n \r\nOR HERE (JL3) > https://www.airbnb.com.au/s/homes?host_id=114384153\r\n \r\nOR HERE (JLMY) > https://www.airbnb.com.au/s/homes?host_id=177114776\r\n\r\nOR HERE (JLMY2) > https://www.airbnb.com.au/s/homes?host_id=217495299\r\n\r\nOR HERE (JLMY3) > https://www.airbnb.com.au/s/homes?host_id=228789871","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/user/c7020809-2d2d-4e64-a38b-3acc7924b1d6.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/user/c7020809-2d2d-4e64-a38b-3acc7924b1d6.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"8530753"},"guest":{"_id":"65a41ab1316378825516e565","username":"demo_user","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Demo User"},"totalPrice":1475.1,"status":"Accepted","_id":"tmydq6"},{"stay":{"stayId":"65a4142d0f466e5567f5a47c","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 2","checkOut":"Feb 3","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Nave David","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://ca.slack-edge.com/T05H7RU7LTF-U060EFHM8NM-0017ca0cacfa-512","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410","hostingYears":8},"guest":{"_id":"65a41ab1316378825516e565","username":"demo_user","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Demo User"},"totalPrice":654.5,"status":"pending","_id":"0mrr4q"}],"wishlist":[],"myStays":[],"guestsReservations":[{"stay":{"stayId":"65a4142d0f466e5567f5a47c","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 5","checkOut":"Feb 6","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Nadav Barda","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410"},"guest":{"_id":"65a42221f7cfe3ae31df43cc","username":"iris","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Iris Y"},"totalPrice":654.5,"status":"Accepted","_id":"iFXy5V"},{"stay":{"stayId":"65a5b653a57dc34cac57f3e3","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436523/ptcgbydjsamgf67a0npw.jpg","stayName":"Mezzos Studio in Sydney CBD"},"checkIn":"Feb 1","checkOut":"Feb 10","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Larisa SSP","location":"Melbourne, Victoria, Australia","about":"Your trusted international host across major cities. Feel at home wherever you are! LIVE · LOVE · EXPLORE\r\n\r\n- Melbourne\r\n- Sydney\r\n- Gold Coast\r\n- Auckland\r\n- London\r\n- Kuala Lumpur\r\n- George Town\r\n- Johor Bahru\r\n\r\nI speak fluent English, Cantonese (广东话), Mandarin (普通话), Bahasa Melayu, Bahasa Indonesia & Tagalog.\r\n\r\nIf the dates you're after are available on my calendars, you may proceed to \"INSTANT-BOOK\" em'.\r\n\r\nMy calendars on AirBnb are always up to date, so if they're blocked and you can't select them, it pretty much means someone else has already booked em'.\r\n\r\nHappy stays & safe travels :)\r\n\r\nView more properties HERE (JL1) > https://www.airbnb.com.au/users/8530753/listings\r\n \r\nOR HERE (JL1) > https://www.airbnb.com.au/s/homes?host_id=8530753\r\n \r\nOR HERE (JL3) > https://www.airbnb.com.au/s/homes?host_id=114384153\r\n \r\nOR HERE (JLMY) > https://www.airbnb.com.au/s/homes?host_id=177114776\r\n\r\nOR HERE (JLMY2) > https://www.airbnb.com.au/s/homes?host_id=217495299\r\n\r\nOR HERE (JLMY3) > https://www.airbnb.com.au/s/homes?host_id=228789871","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/user/c7020809-2d2d-4e64-a38b-3acc7924b1d6.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/user/c7020809-2d2d-4e64-a38b-3acc7924b1d6.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"8530753"},"guest":{"_id":"65a41ab1316378825516e565","username":"demo_user","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Demo User"},"totalPrice":1475.1,"status":"Accepted","_id":"tmydq6"},{"stay":{"stayId":"65a4142d0f466e5567f5a47c","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 5","checkOut":"Feb 8","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Nave David","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://ca.slack-edge.com/T05H7RU7LTF-U060EFHM8NM-0017ca0cacfa-512","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410","hostingYears":8},"guest":{"_id":"65a42221f7cfe3ae31df43cc","username":"iris","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Iris Y"},"totalPrice":1963.5,"status":"Accepted","_id":"amKpKv"},{"stay":{"stayId":"65a4142d0f466e5567f5a47c","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 2","checkOut":"Feb 3","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Nave David","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://ca.slack-edge.com/T05H7RU7LTF-U060EFHM8NM-0017ca0cacfa-512","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410","hostingYears":8},"guest":{"_id":"65a41ab1316378825516e565","username":"demo_user","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Demo User"},"totalPrice":654.5,"status":"pending","_id":"0mrr4q"}]} 
+16.1.2024, 13:25:43 - INFO - Setting socket.userId = [object Object] for socket [id: 8wVlBVtBojB0DB3TAADf] 
+16.1.2024, 13:25:43 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 13:25:44 - INFO - New connected socket [id: kuKga9jlr3ezdBy9AADh] 
+16.1.2024, 13:25:44 - INFO - Req was made | / 
+16.1.2024, 13:25:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 13:25:44 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: kuKga9jlr3ezdBy9AADh] 
+16.1.2024, 13:31:01 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 13:31:01 - INFO - New connected socket [id: h2VxknP7XLk_r-EFAADj] 
+16.1.2024, 13:31:02 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: h2VxknP7XLk_r-EFAADj] 
+16.1.2024, 13:43:14 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 13:43:15 - INFO - New connected socket [id: E-mlIrQlKzUr2NRXAADl] 
+16.1.2024, 13:43:15 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: E-mlIrQlKzUr2NRXAADl] 
+16.1.2024, 13:47:23 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 13:47:24 - INFO - New connected socket [id: fpBWDWj3lF-LaPYjAADn] 
+16.1.2024, 13:47:24 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: fpBWDWj3lF-LaPYjAADn] 
+16.1.2024, 13:58:23 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 13:58:24 - INFO - New connected socket [id: q3pz2CQFDgOuQuiwAADp] 
+16.1.2024, 13:58:24 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: q3pz2CQFDgOuQuiwAADp] 
+16.1.2024, 14:01:01 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 14:01:01 - INFO - New connected socket [id: UYPuvYNUMJ3-Bb__AADr] 
+16.1.2024, 14:01:02 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: UYPuvYNUMJ3-Bb__AADr] 
+16.1.2024, 16:55:27 - INFO - New connected socket [id: RBLFebJIImRuXIcOAADt] 
+16.1.2024, 16:55:27 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: RBLFebJIImRuXIcOAADt] 
+16.1.2024, 17:17:59 - INFO - Req was made | / 
+16.1.2024, 17:17:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 17:26:06 - INFO - Req was made | / 
+16.1.2024, 17:26:06 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 17:26:14 - INFO - Socket disconnected [id: undefined] 
+16.1.2024, 17:26:15 - INFO - New connected socket [id: Koaw6F5Jkm7tZyW5AADv] 
+16.1.2024, 17:26:15 - INFO - Req was made | / 
+16.1.2024, 17:26:15 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 17:26:15 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: Koaw6F5Jkm7tZyW5AADv] 
+16.1.2024, 18:09:36 - INFO - New connected socket [id: JBUHI-Y5cXp6Cr1eAADx] 
+16.1.2024, 18:09:36 - INFO - Req was made | / 
+16.1.2024, 18:09:36 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+16.1.2024, 18:09:36 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: JBUHI-Y5cXp6Cr1eAADx] 
+16.1.2024, 20:09:38 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 0:28:34 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 0:28:35 - INFO - New connected socket [id: JOH0r6KVwSrWrk35AADz] 
+17.1.2024, 0:28:35 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: JOH0r6KVwSrWrk35AADz] 
+17.1.2024, 0:39:56 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 0:39:57 - INFO - New connected socket [id: YcOcS_fF-TN4gDG5AAD1] 
+17.1.2024, 0:39:57 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: YcOcS_fF-TN4gDG5AAD1] 
+17.1.2024, 0:48:42 - INFO - New connected socket [id: nQRfS-Y6LZdHsDxCAAD3] 
+17.1.2024, 0:48:42 - INFO - Req was made | / 
+17.1.2024, 0:48:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 0:48:42 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: nQRfS-Y6LZdHsDxCAAD3] 
+17.1.2024, 0:50:41 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 0:50:42 - INFO - New connected socket [id: AgIj2DNgDYtUtoBcAAD5] 
+17.1.2024, 0:50:42 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: AgIj2DNgDYtUtoBcAAD5] 
+17.1.2024, 0:54:28 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 0:54:29 - INFO - New connected socket [id: o-wH6AjHy-pTF1aWAAD7] 
+17.1.2024, 0:54:29 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: o-wH6AjHy-pTF1aWAAD7] 
+17.1.2024, 0:58:45 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 0:58:46 - INFO - New connected socket [id: 899x2SSF8VUUmTdIAAD9] 
+17.1.2024, 0:58:46 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: 899x2SSF8VUUmTdIAAD9] 
+17.1.2024, 1:07:30 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 1:07:30 - INFO - New connected socket [id: MBdd2wqT0EphGeOfAAD_] 
+17.1.2024, 1:07:31 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: MBdd2wqT0EphGeOfAAD_] 
+17.1.2024, 1:09:02 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 1:09:03 - INFO - New connected socket [id: g7N3fJvHCt0pUYvVAAEB] 
+17.1.2024, 1:09:03 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: g7N3fJvHCt0pUYvVAAEB] 
+17.1.2024, 1:11:26 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 1:11:27 - INFO - New connected socket [id: nWRqDzx1V89IfBwBAAED] 
+17.1.2024, 1:11:27 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: nWRqDzx1V89IfBwBAAED] 
+17.1.2024, 1:21:32 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 1:21:33 - INFO - New connected socket [id: AgZpKDl8ZT70_assAAEF] 
+17.1.2024, 1:21:33 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: AgZpKDl8ZT70_assAAEF] 
+17.1.2024, 1:30:29 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 1:30:29 - INFO - New connected socket [id: Qa-rGB5q4OKEXh05AAEH] 
+17.1.2024, 1:30:30 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: Qa-rGB5q4OKEXh05AAEH] 
+17.1.2024, 1:39:43 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 1:39:44 - INFO - New connected socket [id: 3i2qr3YKrEfYOykxAAEJ] 
+17.1.2024, 1:39:44 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: 3i2qr3YKrEfYOykxAAEJ] 
+17.1.2024, 1:39:44 - INFO - Req was made | / 
+17.1.2024, 1:39:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 1:46:10 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 1:46:10 - INFO - New connected socket [id: NWhX88dheieW7HC9AAEL] 
+17.1.2024, 1:46:11 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: NWhX88dheieW7HC9AAEL] 
+17.1.2024, 1:47:24 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 1:47:25 - INFO - New connected socket [id: LwFOqSMRyKDtn2jFAAEN] 
+17.1.2024, 1:47:25 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: LwFOqSMRyKDtn2jFAAEN] 
+17.1.2024, 2:10:50 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 2:10:50 - INFO - New connected socket [id: 2nn-S3ISpBiLSpWWAAEP] 
+17.1.2024, 2:10:51 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: 2nn-S3ISpBiLSpWWAAEP] 
+17.1.2024, 2:11:41 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 2:11:42 - INFO - New connected socket [id: bFlArmWjO-J3sGU5AAER] 
+17.1.2024, 2:11:42 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: bFlArmWjO-J3sGU5AAER] 
+17.1.2024, 2:11:50 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 2:11:51 - INFO - New connected socket [id: ARCYcAIfc2Mzh6TQAAET] 
+17.1.2024, 2:11:51 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: ARCYcAIfc2Mzh6TQAAET] 
+17.1.2024, 2:22:33 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 2:22:33 - INFO - New connected socket [id: A8Pd8i9JzFk5kv0DAAEV] 
+17.1.2024, 2:22:34 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: A8Pd8i9JzFk5kv0DAAEV] 
+17.1.2024, 2:24:35 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 2:24:36 - INFO - New connected socket [id: u7aenzdy1msTc3S-AAEX] 
+17.1.2024, 2:24:36 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: u7aenzdy1msTc3S-AAEX] 
+17.1.2024, 2:28:11 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 2:28:12 - INFO - New connected socket [id: xVSXHTYq_z7iz_3-AAEZ] 
+17.1.2024, 2:28:12 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: xVSXHTYq_z7iz_3-AAEZ] 
+17.1.2024, 2:28:33 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 2:28:34 - INFO - New connected socket [id: dMtD2EW6vL-a-xcdAAEb] 
+17.1.2024, 2:28:35 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: dMtD2EW6vL-a-xcdAAEb] 
+17.1.2024, 2:29:45 - INFO - Req was made | / 
+17.1.2024, 2:29:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 2:29:52 - INFO - Req was made | / 
+17.1.2024, 2:29:52 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDates":{"checkIn":"2024-01-17T22:00:00.000Z","checkOut":"2024-01-25T22:00:00.000Z"},"selectedDestination":"Flexible"} 
+17.1.2024, 2:37:49 - INFO - Req was made | / 
+17.1.2024, 2:37:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDates":{"checkIn":"2024-01-17T22:00:00.000Z","checkOut":"2024-01-25T22:00:00.000Z"},"selectedDestination":"Flexible"} 
+17.1.2024, 2:39:07 - INFO - Req was made | / 
+17.1.2024, 2:39:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDates":{"checkIn":"2024-02-06T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Flexible"} 
+17.1.2024, 2:41:34 - INFO - Req was made | / 
+17.1.2024, 2:41:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDates":{"checkIn":"2024-02-06T22:00:00.000Z","checkOut":"2024-02-12T22:00:00.000Z"},"selectedDestination":"Flexible"} 
+17.1.2024, 2:46:05 - INFO - New connected socket [id: mWrYIlACTZZUQWDaAAEd] 
+17.1.2024, 2:46:05 - INFO - Req was made | / 
+17.1.2024, 2:46:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 2:47:42 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 2:47:43 - INFO - New connected socket [id: OtfdLKnF7PuSiaYpAAEf] 
+17.1.2024, 2:47:43 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: OtfdLKnF7PuSiaYpAAEf] 
+17.1.2024, 2:47:43 - INFO - Req was made | / 
+17.1.2024, 2:47:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Flexible"} 
+17.1.2024, 2:47:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Flexible"} 
+17.1.2024, 2:47:43 - INFO - Req was made | / 
+17.1.2024, 2:48:01 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 2:48:02 - INFO - New connected socket [id: qC2lWWLtnoW5ukTnAAEh] 
+17.1.2024, 2:48:02 - INFO - Req was made | / 
+17.1.2024, 2:48:02 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 3:17:05 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 3:17:06 - INFO - New connected socket [id: rknp05_x4yvdmlVmAAEj] 
+17.1.2024, 3:17:06 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: rknp05_x4yvdmlVmAAEj] 
+17.1.2024, 3:17:06 - INFO - Req was made | / 
+17.1.2024, 3:17:06 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Flexible"} 
+17.1.2024, 3:17:07 - INFO - Req was made | / 
+17.1.2024, 3:17:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Flexible"} 
+17.1.2024, 3:17:12 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 3:17:12 - INFO - New connected socket [id: VEB0uI0DRAPDX5zUAAEl] 
+17.1.2024, 3:17:12 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 3:17:12 - INFO - Req was made | / 

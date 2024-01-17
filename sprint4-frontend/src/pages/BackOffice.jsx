@@ -35,8 +35,8 @@ export function BackOffice() {
     const statusPen= orders.filter(order=>order.status==="pending").length
     const statusRej= orders.filter(order=>order.status==="Rejected").length
     setOrdersStatusApr(statusApr)
-    setOrdersStatusRej(statusPen)
-    setOrdersStatusPen(statusRej)
+    setOrdersStatusRej(statusRej)
+    setOrdersStatusPen(statusPen)
   }
   function onSetDataOrders(){
     const resultArray = calculateMonthlyIncome(orders)

@@ -29,4 +29,8 @@
     a{
         margin-left: 0.5rem;
     }
+
+    @media (max-width: 550px){
+        display: none;
+    }
 }

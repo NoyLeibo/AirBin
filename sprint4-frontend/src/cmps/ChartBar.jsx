@@ -8,7 +8,7 @@ const chartSetting = {
       label: '',
     },
   ],
-  width: 400,
+  minWidth: 300,
   height: 250,
   sx: {
     [`.${axisClasses.left} .${axisClasses.label}`]: {
@@ -45,12 +45,12 @@ const valueFormatter = (value) => `${value}$`;
 export default function ChartBar({data}) {
   return (
     <BarChart
-      dataset={data}
-      xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-      series={[
-        { dataKey: 'income',  valueFormatter ,color: '#ce2e6c' },
-      ]}
-      {...chartSetting}
+    dataset={data}
+    xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
+    series={[
+      { dataKey: 'income',  valueFormatter ,color: '#ce2e6c' },
+    ]}
+    {...chartSetting}
     />
   );
 }

@@ -80,11 +80,13 @@ export function DashboardResarvation() {
   //   loadUsers();
   // }, []);
   return (
-    <TableContainer
-      component={Paper}
-      className="dashboard-resarvation-container"
-    >
-      <Table sx={{ minWidth: 700 }}>
+        <TableContainer component={Paper} className="dashboard-resarvation-container"
+        sx={{ overflowX: 'scroll',minWidth: 350 }}
+        
+        >
+      <Table 
+      sx={{minWidth: 350,tableLayout: 'fixed', } }
+      >
         <TableHead>
           <TableRow>
             <StyledTableCell>Guest</StyledTableCell>

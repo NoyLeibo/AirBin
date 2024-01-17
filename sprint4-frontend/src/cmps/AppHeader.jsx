@@ -43,7 +43,7 @@ export function AppHeader() {
   const location = useLocation()
   const currentPath = location.pathname
   let detailPath = location.pathname
-  let tripPath = location.pathname
+  let stayPath ="/stay"
   let hostPath = location.pathname
   if (currentPath.startsWith('/details/')) {
     // console.log('Current path is a details page');
@@ -249,8 +249,9 @@ export function AppHeader() {
   return (
     <header
       className={`app-header grid 
-        ${((!isScrolledDown&&!bottomHeader)|| currentPath !== "/"&&!bottomHeader) ? " header-inserted " : ""
-        } ${((!isScrolledDown && currentPath === "/")||bottomHeader)
+        ${((!isScrolledDown&&!bottomHeader)||
+          (stayPath!=='/stay'&&currentPath !== "/"&&!bottomHeader)) ? " header-inserted " : ""
+        } ${((!isScrolledDown && currentPath === "/")||(!isScrolledDown && stayPath==='/stay')||bottomHeader)
           ? " header-sticky " : ' '}
         
       `}
@@ -267,10 +268,10 @@ export function AppHeader() {
             <img src={LOGO} alt="logo name" className="logo-header-txt" />
           </NavLink>
         </div>
-        {(currentPath === "/" || detailPath === '/details/' || detailPath === '/stay') && <div
+        {(currentPath === "/" || detailPath === '/details/' || stayPath === "/stay") && <div
           className={`
           small-search-form flex align-center
-            ${(!isScrolledDown || currentPath !== "/")
+            ${(!isScrolledDown || ((stayPath==="/"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")))
               ? " small-form-expended "
               : " "
             }
@@ -288,7 +289,7 @@ export function AppHeader() {
         <nav
           className={`
           mid-three-menu flex column justify-center mid-header
-            ${!isScrolledDown || currentPath !== "/"
+            ${(!isScrolledDown || ((stayPath==="/"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")))
               ? " mid-three-menu-close "
               : " "
             }  
@@ -318,7 +319,7 @@ export function AppHeader() {
             </button>
           </div>
         </nav>
-        {(currentPath === "/" || currentPath === "/messages" || currentPath === "/backOffice" || currentPath === "/wishlist" || currentPath === "/userTrips" || detailPath === '/details/') && <div className="flex left-header justify-center align-center">
+        {(currentPath === "/" || currentPath === "/messages" || currentPath === "/backOffice" || currentPath === "/wishlist" || currentPath === "/userTrips" || detailPath === '/details/'||currentPath === "/stay") && <div className="flex left-header justify-center align-center">
           <LoggedInModal
             isLoginOpen={isLoginOpen}
             setIsLoginOpen={setIsLoginOpen}
@@ -339,11 +340,12 @@ export function AppHeader() {
           search-form justify-center flex row 
           
         }
-           ${((!isScrolledDown&&!bottomHeader )||( currentPath !== "/"&&!bottomHeader))
+           ${((!isScrolledDown&&!bottomHeader )||
+            ((stayPath!=="/stay"&&currentPath !== "/"&&!bottomHeader)||(stayPath!=="/stay"&&currentPath !== "/stay"&&!bottomHeader)))
               ? " header-search-inserted "
               : " "
             }    
-              ${((currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
+              ${((stayPath!=="/stay"&&currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
               `}
         >
           <div
