@@ -17,12 +17,8 @@ export function StickyCard({ stay, onToggleReserve }) {
   const [gradientPosition, setGradientPosition] = useState('center');
   const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
 
-  const selectedDates = useSelector(
-    (storeState) => storeState.stayModule.filterBy.selectedDates
-  );
-  const selectedGuests = useSelector(
-    (storeState) => storeState.stayModule.filterBy.selectedGuests
-  );
+  const selectedDates = filterBy.selectedDates
+  const selectedGuests = filterBy.selectedGuests
 
   const days = numOfDays();
   const priceXdays = stay.price * days;
@@ -49,25 +45,22 @@ export function StickyCard({ stay, onToggleReserve }) {
     setIsOpenGuests(false)
   };
   const guestsToggle = () => {
-    console.log('GUESTS');
+    // console.log('GUESTS');
     setIsOpenGuests(!isOpenGuests)
     setIsOpenDates(false)
   }
 
   function onReserveValidaton() {
+    if (
+      !selectedDates.checkIn ||
+      !selectedDates.checkOut ||
+      !selectedGuests.Adults
+    ) {
+      return false
+    }
     dispatch(setSelectedDates(filterBy.selectedDates))
     dispatch(setSelectedGuests(filterBy.selectedGuests))
-    setTimeout(() => {
-      if (
-        !selectedDates.checkIn ||
-        !selectedDates.checkOut ||
-        !selectedGuests.Adults
-      ) {
-        return false;
-      }
-      return true;
-    }, 100);
-
+    return true;
   }
 
   function onReserveNavigate() {
@@ -84,11 +77,11 @@ export function StickyCard({ stay, onToggleReserve }) {
     const handleIntersection = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("Target element is in the viewport")
+          // console.log("Target element is in the viewport")
           onToggleReserve(false)
 
         } else {
-          console.log("Target element is out of the viewport")
+          // console.log("Target element is out of the viewport")
           onToggleReserve(true)
 
         }
@@ -122,7 +115,6 @@ export function StickyCard({ stay, onToggleReserve }) {
     setGradientPosition(`${x}px ${y}px`)
   }
 
-
   // const toggleCalendarModal = () => {
   //   setIsOpenGuests(false);
   //   setIsOpenDates(!isOpenDates);
@@ -135,7 +127,7 @@ export function StickyCard({ stay, onToggleReserve }) {
   return (
     <section className="stay-details-sticky-card" id="detailsStickyCard">
       <h1 className="flex align-center">
-        ₪{stay.price} <span>night</span>
+        ${stay.price} <span>per night</span>
       </h1>
       <div className="picker-container">
         <section className="stay-dates flex row">

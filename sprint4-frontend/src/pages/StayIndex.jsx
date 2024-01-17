@@ -24,20 +24,24 @@ import { socketService } from "../services/socket.service.js";
 
 export function StayIndex() {
   const [isScrolledDown, setIsScrolledDown] = useState(true);
+  const [isOnFilter, setIsOnFilter] = useState(false);
   const stays = useSelector((storeState) => storeState.stayModule.stays);
   const filterBy = useSelector((storeState) => storeState.stayModule.filterBy);
   const isLoading = useSelector(
     (storeState) => storeState.stayModule.isLoading
   );
 
-  const location = useLocation()
-  const currentPath = location.pathname
-  const queryParams = new URLSearchParams(location.search)
   const dispatch = useDispatch()
+  const location = useLocation()
+  const queryParams = new URLSearchParams(location.search)
 
   // userService.addDemoUser();
+  const currentPath = location.pathname
   useEffect(() => {
-    if (currentPath.startsWith('/stay')) {
+    setIsOnFilter(false)
+    if (currentPath.startsWith('/s')) {
+      console.log('/sssssssssssssssssss');
+      setIsOnFilter(true)
       const selectedDestination = queryParams.get('location')
       const checkInDate = queryParams.get('checkIn')
       const checkOutDate = queryParams.get('checkOut')
@@ -151,10 +155,9 @@ export function StayIndex() {
 
   return (
     <main
-      className={`" main-stay-index " ${!isScrolledDown ? "scroll-down" : ""}`}
-    >
+      className={`" main-stay-index " ${!isScrolledDown ? "scroll-down" : ""}`}>
       <StayFilter filterBy={filterBy} onSetFilter={onSetFilter} />
-      <StayList stays={stays} />
+      <StayList stays={stays} isOnFilter={isOnFilter} />
       <ChatWindow />
     </main>
   );

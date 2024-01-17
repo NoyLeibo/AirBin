@@ -149,10 +149,9 @@ function _createStays() {
   if (!stays || !stays.length) {
     stays = [
       {
-        _id: "8D34k",
-        name: "City Loft",
-        type: "Loft",
-        imgUrls: [
+        "name": "City Loft",
+        "type": "Loft",
+        "imgUrls": [
           "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/b2abe806-b60f-4c0b-b4e6-46808024e5b6.jpeg?im_w=1200",
           "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/f69d24ed-c089-4a43-ba1d-fb98cba37afd.jpeg?im_w=1200",
           "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/c4031456-dc24-4683-ba84-6cdac0c2cb65.jpeg?im_w=1200",
@@ -161,110 +160,96 @@ function _createStays() {
           "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/6dd08b81-7b42-42f5-8aee-4d26edd482bd.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/c1e73adc-959e-44e4-ab1d-86892824d262.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/69da724d-683d-427b-839d-9d95b67a8dcf.jpeg?im_w=720",
-          "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/86ea0910-9c6b-4387-b412-f0ccc5285760.jpeg?im_w=720",
+          "https://a0.muscache.com/im/pictures/miso/Hosting-813949239894880001/original/86ea0910-9c6b-4387-b412-f0ccc5285760.jpeg?im_w=720"
         ],
-        price: 1980.0,
-        bedrooms: 1,
-        beds: 2,
-        baths: 1,
-        summary: "A modern loft located in the bustling city center.",
-        capacity: 2,
-        amenities: [
+        "price": 1980.0,
+        "bedrooms": 1,
+        "beds": 2,
+        "bathrooms": 1,
+        "summary": "A modern loft located in the bustling city center.",
+        "capacity": 2,
+        "amenities": [
           "Iconic cities",
           "Top of the world",
           "Trending",
           "Play",
           "Amazing views",
-          "Luxe",
+          "Luxe"
         ],
-        labels: ["Urban", "Modern", "City"],
-        host: {
-          _id: "demo123",
-          fullname: "Sophia Turner",
-          imgUrl:
-            "https://a0.muscache.com/im/pictures/user/21446f54-4214-40f4-813b-6d6c0113d7f3.jpg?im_w=240",
-          hostingYears: 3,
-          ownerReview:
-            "The Treeframe is a modern a-frame treehouse that offers an unforgettable short-term rental experience. Located in the heart of the forest and surrounded by nature, our treehouse is the perfect spot for travelers looking for a one-of-a-kind getaway. Our treehouse is fully equipped with all the amenities you need for a relaxing stay, and Nick is always available to answer any questions you may have. Come discover the beauty of nature and escape the hustle and bustle of city life at The Treeframe!",
+        "labels": ["Urban", "Modern", "City"],
+        "host": {
+          "fullname": "Sophia Turner",
+          "thumbnailUrl": "https://a0.muscache.com/im/pictures/user/21446f54-4214-40f4-813b-6d6c0113d7f3.jpg?im_w=240",
+          "hostingYears": 3,
+          "about": "The Treeframe is a modern a-frame treehouse that offers an unforgettable short-term rental experience. Located in the heart of the forest and surrounded by nature, our treehouse is the perfect spot for travelers looking for a one-of-a-kind getaway. Our treehouse is fully equipped with all the amenities you need for a relaxing stay, and Nick is always available to answer any questions you may have. Come discover the beauty of nature and escape the hustle and bustle of city life at The Treeframe!"
         },
-        loc: {
-          area: "Downtown",
-          country: "UK",
-          countryCode: "GB",
-          city: "London",
-          address: "1111 Urban St, London",
-          lat: 51.5074,
-          lng: -0.1278,
+        "loc": {
+          "country": "UK",
+          "countryCode": "GB",
+          "city": "London",
+          "address": "1111 Urban St, London",
+          "lat": 51.5074,
+          "lan": -0.1278
         },
-        reviews: [
+        "reviews": [
           {
-            id: "r202",
-            txt: "This was one of the best rentals I’ve ever had. We used it as a recovery retreat and will definitely be back for a fun time. 10/10 would recommend",
-            rate: 4,
-            by: {
-              _id: "u202",
-              fullname: "Roi-bnb",
-              imgUrl:
+            "txt": "This was one of the best rentals I’ve ever had. We used it as a recovery retreat and will definitely be back for a fun time. 10/10 would recommend",
+            "rate": 4,
+            "by": {
+              "fullname": "Roi-bnb",
+              "imgUrl":
                 "https://a0.muscache.com/im/pictures/user/0874f182-cdb8-4093-825b-770631235773.jpg?im_w=240",
             },
           },
           {
-            id: "r203",
-            txt: "We recently hosted an Administrative retreat at the Windsor Mansion Inn and the experience was beyond anything we expected. Andy was so kind and accommodating. He even surprised us with warm chocolate chip cookies during our meeting! I would absolutely recommend a visit to the Inn, whether its for a relaxing evening away, or to host an event overlooking the beautiful mountains. You will not be disappointed with Andy and his team!",
-            rate: 5,
-            by: {
-              _id: "u203",
-              fullname: "Martin",
-              imgUrl:
+            "txt": "We recently hosted an Administrative retreat at the Windsor Mansion Inn and the experience was beyond anything we expected. Andy was so kind and accommodating. He even surprised us with warm chocolate chip cookies during our meeting! I would absolutely recommend a visit to the Inn, whether its for a relaxing evening away, or to host an event overlooking the beautiful mountains. You will not be disappointed with Andy and his team!",
+            "rate": 5,
+            "by": {
+              "fullname": "Martin",
+              "imgUrl":
                 "https://a0.muscache.com/im/pictures/user/1e793581-0ed6-4c96-9d2b-5ceabb948075.jpg?im_w=240",
             },
           },
           {
-            id: "r204",
-            txt: "I enjoyed my vacation, great view, good parking place, very silent, relaxed from city noise, become friend with very fat cat, definitely will come back",
-            rate: 4,
-            by: {
-              _id: "u204",
-              fullname: "Demet",
-              imgUrl:
+            "txt": "I enjoyed my vacation, great view, good parking place, very silent, relaxed from city noise, become friend with very fat cat, definitely will come back",
+            "rate": 4,
+            "by": {
+              "fullname": "Demet",
+              "imgUrl":
                 "https://a0.muscache.com/im/pictures/user/f7deaebe-6e45-4a7a-844c-b562fb8ba1a1.jpg?im_w=240",
             },
           },
           {
-            id: "r206",
-            txt: "Our stay was great! The host was super friendly and highly responsive. And he made us a delicious breakfast. The only minor issue was some repair work next to the villa, but it didn't really bother us. Overall, it was a wonderful experience, and we'd consider coming back.",
-            rate: 5,
-            by: {
-              _id: "u213",
-              fullname: "James Carter",
-              imgUrl:
+            "txt": "Our stay was great! The host was super friendly and highly responsive. And he made us a delicious breakfast. The only minor issue was some repair work next to the villa, but it didn't really bother us. Overall, it was a wonderful experience, and we'd consider coming back.",
+            "rate": 5,
+            "by": {
+              "fullname": "James Carter",
+              "imgUrl":
                 "https://a0.muscache.com/im/users/23331610/profile_pic/1415110296/original.jpg?im_w=240",
             },
           },
           {
-            id: "r207",
-            txt: "Ridvan was an amazing host, was very helpful and friendly. Place had an amazing view and very clean.",
-            rate: 5,
-            by: {
-              _id: "u214",
-              fullname: "Emily Harris",
-              imgUrl:
+            "txt": "Ridvan was an amazing host, was very helpful and friendly. Place had an amazing view and very clean.",
+            "rate": 5,
+            "by": {
+              "fullname": "Emily Harris",
+              "imgUrl":
                 "https://a0.muscache.com/im/pictures/user/User-26787824/original/362eb154-2928-4d8d-acc3-92f9a1fcd1ab.jpeg?im_w=240",
             },
           },
           {
-            id: "r208",
-            txt: "The villa is incredible, offering privacy and luxury. Highly recommend the private beach access!",
-            rate: 4,
-            by: {
-              _id: "u215",
-              fullname: "Michael Brown",
-              imgUrl:
+            "txt": "The villa is incredible, offering privacy and luxury. Highly recommend the private beach access!",
+            "rate": 4,
+            "by": {
+              "_id": "u215",
+              "fullname": "Michael Brown",
+              "imgUrl":
                 "https://a0.muscache.com/im/pictures/user/87b83be7-edfc-4753-aa2a-89673e8d5f74.jpg?im_w=240",
             },
           },
         ],
-        likedByUsers: ["city-explorer", "business-traveler"],
+        "likedByUsers": ["city-explorer", "business-traveler"],
+        "rate": "5.0"
       },
       {
         _id: "s101",
@@ -1231,7 +1216,7 @@ function _createStays() {
         type: "House",
         imgUrls: [
           "https://a0.muscache.com/im/pictures/90bc0d78-c4f9-45e0-bd1a-43d5c5421a0a.jpg?im_w=720",
-          "https://a0.muscache.com/im/pictures/d3b924c6-d127-4960-bf65-cbfc1822a953.jpg?im_w=720",
+          "https://a0.muscache.com/im/pictures/d3b924c6-d127-4960-bf65-cbfc1822a953.jpg?`im_w=720",
           "https://a0.muscache.com/im/pictures/0140b41b-45da-49f3-a35f-41fa3983a22a.jpg?im_w=720",
           "https://a0.muscache.com/im/pictures/9ff5943f-a53c-4911-a02f-80c9da89f56e.jpg?im_w=1200",
           "https://a0.muscache.com/im/pictures/1cd00652-4ba5-48f7-afe3-89e15cbba4df.jpg?im_w=720",

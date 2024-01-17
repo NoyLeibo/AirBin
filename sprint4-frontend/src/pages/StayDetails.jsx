@@ -23,10 +23,10 @@ export function StayDetails() {
     const handleIntersection = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("Target element is in the viewport")
+          // console.log("Target element is in the viewport")
           onToggleHeadr(false)
         } else {
-          console.log("Target element is out of the viewport")
+          // console.log("Target element is out of the viewport")
           onToggleHeadr(true)
         }
       })
@@ -76,7 +76,7 @@ export function StayDetails() {
   async function loadStay() {
     try {
       const currStay = await stayService.getById(stayId)
-      console.log(currStay)
+      // console.log(currStay)
       setStay(currStay)
     } catch (err) {
       showErrorMsg("Cant load stay")
@@ -96,7 +96,7 @@ export function StayDetails() {
   }
 
   if (!stay) {
-    console.log("no stays")
+    // console.log("no stays")
     return (
       <div>
         <div className="loader">
@@ -132,15 +132,16 @@ export function StayDetails() {
             </h1>
             <div className="capacity fs16">
               {stay.capacity} guests <span className="fs14">•</span>{" "}
-              {stay.bedrooms ? stay.bedrooms : stay.rooms} rooms <span className="fs14">•</span> {stay.beds}{" "}
+              {stay.bedrooms ? stay.bedrooms : stay.rooms} rooms <span className="fs14">•</span> {stay.beds ? stay.beds : stay.capacity}{" "}
               beds <span className="fs14">•</span> {stay.bathrooms} bath
             </div>
             <div className="stay-dets-rating ">
               <span className="fs14 fw600">
                 <i className="fa-solid fa-star"></i>
-                {stay.reviews.length !== 0 && (
-                  <span className="avgRate">{stay.reviews.length % 4 < 4 ? '4.5' : '5'} </span>
-                )}
+                {stay.rate ? <span>{stay.rate}</span>
+                  :
+                  <span> New</span>
+                }
                 <span className="fs14 dotP">
                   •
                   <span className="bold pointer underline">
@@ -233,10 +234,10 @@ export function StayDetails() {
         <div className="stay-dets-rating ">
           <span className="fs26 fw600">
             <i className="fa-solid fa-star"></i>
-            {stay.reviews.length !== 0 && (
-              <span className="avgRate">{stay.reviews.length % 5 < 3 ? 4.25 : 5}</span>
-            )}
-            {stay.reviews.length === 0 && <span className="avgRate">New</span>}
+            {stay.rate ? <span>{stay.rate}</span>
+              :
+              <span> {stay.reviews.length} Reviews</span>
+            }
           </span>
           <span className="fs14 dotP"> • </span>
           <a href="#" className="stay-dets-rating-link fs26">
