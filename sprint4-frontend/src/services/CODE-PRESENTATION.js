@@ -24,6 +24,13 @@ socket.on(SOCKET_EVENT_ORDER_RECIEVED, async (data) => {
 });
 
 // COMPONENT ORDER
+async function onConfirm() {
+  const newTrip = createTrip();
+  const updatedUser = await userService.updateTripList(newTrip);
+  await updateUser(updatedUser);
+  orderSend();
+}
+
 function orderSend() {
   const data = {
     from: user.username,
@@ -35,12 +42,4 @@ function orderSend() {
     data,
     userId: stay.host._id,
   });
-}
-
-async function onConfirm() {
-  const newTrip = createTrip();
-  const updatedUser = await userService.updateTripList(newTrip);
-  await updateUser(updatedUser);
-  orderSend();
-  navigate("/userTrips");
 }
