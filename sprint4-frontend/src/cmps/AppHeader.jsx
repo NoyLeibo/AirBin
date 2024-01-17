@@ -32,6 +32,7 @@ export function AppHeader() {
   const [isClassAdded, setIsClassAdded] = useState(false)
   const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
   const [bottomHeader, setBottomHeader] = useState(false)
+  const [signUp, setSignUp] = useState(false)
   const gRef = useRef() // global use ref for closing modals by noy
 
   const location = useLocation()
@@ -319,6 +320,7 @@ export function AppHeader() {
           <LoggedInModal
             isLoginOpen={isLoginOpen}
             setIsLoginOpen={setIsLoginOpen}
+            setSignUp={setSignUp}
           />
         </div>}
       </div>
@@ -327,6 +329,8 @@ export function AppHeader() {
           <LoginModal
             isLoginOpen={isLoginOpen}
             setIsLoginOpen={setIsLoginOpen}
+            signUp={signUp}
+
           />
         </div>
       )}
