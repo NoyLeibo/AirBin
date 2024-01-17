@@ -4805,6 +4805,7 @@
 16.1.2024, 11:08:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
 16.1.2024, 10:30:15 - INFO - New connected socket [id: 8wVlBVtBojB0DB3TAADf] 
 16.1.2024, 12:03:25 - INFO - Socket disconnected [id: undefined] 
+<<<<<<< HEAD
 17.1.2024, 12:41:44 - INFO - Socket disconnected [id: undefined] 
 17.1.2024, 12:41:45 - INFO - New connected socket [id: 5b89NRpNOND4v1pgAACR] 
 17.1.2024, 12:41:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
@@ -5750,3 +5751,10 @@
 17.1.2024, 17:34:15 - INFO - Req was made | / 
 17.1.2024, 17:34:15 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
 17.1.2024, 17:34:15 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: izFGMSfrvBRIRVdAAAAX] 
+=======
+17.1.2024, 17:25:52 - INFO - New connected socket [id: 3DZpe80t9qUuE0amAAAF] 
+17.1.2024, 17:25:52 - INFO - New connected socket [id: 03r1Jm-_E-CekSPCAAAG] 
+17.1.2024, 17:25:53 - INFO - New connected socket [id: Hh2NWdESxMK0Lp0fAAAH] 
+17.1.2024, 17:25:53 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: Hh2NWdESxMK0Lp0fAAAH] 
+17.1.2024, 17:25:53 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: 3DZpe80t9qUuE0amAAAF] 
+>>>>>>> 1c04a21191e358e0e42cf46c5589c21738a88448
