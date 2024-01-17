@@ -1,138 +1,136 @@
-import io from "socket.io-client";
-import { userService } from "./user.service";
-import { toast } from "react-toastify";
-import { updateUser } from "../store/user.actions";
+import io from "socket.io-client"
+import { userService } from "./user.service"
+import { toast } from "react-toastify"
+import { updateUser } from "../store/user.actions"
 
-export const SOCKET_EVENT_ADD_MSG = "chat-add-msg";
-export const SOCKET_EMIT_SEND_MSG = "chat-send-msg";
-export const SOCKET_EMIT_SET_TOPIC = "chat-set-topic";
-export const SOCKET_EMIT_USER_WATCH = "user-watch";
-export const SOCKET_EVENT_USER_UPDATED = "user-updated";
-export const SOCKET_EVENT_REVIEW_ABOUT_YOU = "review-about-you";
-export const SOCKET_EVENT_REVIEW_ADDED = "review-added";
-export const SOCKET_EVENT_ORDER_RECIEVED = "order-recieved";
-export const SOCKET_EVENT_HOST_ANSWER = "host-order-answer";
-export const SOCKET_EVENT_REMOVE_ORDER = "remove_order_from_host";
+export const SOCKET_EVENT_ADD_MSG = "chat-add-msg"
+export const SOCKET_EMIT_SEND_MSG = "chat-send-msg"
+export const SOCKET_EMIT_SET_TOPIC = "chat-set-topic"
+export const SOCKET_EMIT_USER_WATCH = "user-watch"
+export const SOCKET_EVENT_USER_UPDATED = "user-updated"
+export const SOCKET_EVENT_REVIEW_ABOUT_YOU = "review-about-you"
+export const SOCKET_EVENT_REVIEW_ADDED = "review-added"
+export const SOCKET_EVENT_ORDER_RECIEVED = "order-recieved"
+export const SOCKET_EVENT_HOST_ANSWER = "host-order-answer"
+export const SOCKET_EVENT_REMOVE_ORDER = "remove_order_from_host"
 
-const SOCKET_EMIT_LOGIN = "set-user-socket";
-const SOCKET_EMIT_LOGOUT = "unset-user-socket";
+const SOCKET_EMIT_LOGIN = "set-user-socket"
+const SOCKET_EMIT_LOGOUT = "unset-user-socket"
 
-const baseUrl = process.env.NODE_ENV === "production" ? "" : "//localhost:3030";
+const baseUrl = process.env.NODE_ENV === "production" ? "" : "//localhost:3030"
 // export const socketService = createSocketService()
-export const socketService = createSocketService();
+export const socketService = createSocketService()
 
 // for debugging from console
-window.socketService = socketService;
+window.socketService = socketService
 
-socketService.setup();
+socketService.setup()
 
 function createSocketService() {
-  var socket = null;
+  let socket = null
   const socketService = {
     setup() {
-      socket = io(baseUrl);
-      const user = userService.getLoggedinUser();
-      if (user) this.login(user._id);
+      socket = io(baseUrl)
+      const user = userService.getLoggedinUser()
+      if (user) this.login(user._id)
 
       socket.on(SOCKET_EVENT_ORDER_RECIEVED, async (data) => {
-        toast("A new reservation has been recieved from " + data.from);
-        const updatedHost = await userService.getById(data.to);
-        await updateUser(updatedHost);
-      });
+        toast("A new reservation has been recieved from " + data.from)
+        const updatedHost = await userService.getById(data.to)
+        await updateUser(updatedHost)
+      })
       socket.on(SOCKET_EVENT_REMOVE_ORDER, async (data) => {
-        const updatedHost = await userService.getById(data.to);
-        console.log(
-          updatedHost.username + updatedHost.guestsReservations.length
-        );
-        await updateUser(updatedHost);
-      });
+        const updatedHost = await userService.getById(data.to)
+        console.log(updatedHost.username + updatedHost.guestsReservations.length)
+        await updateUser(updatedHost)
+      })
       socket.on(SOCKET_EVENT_HOST_ANSWER, async (data) => {
         toast(
           "Your reservation from " + data.from + " has been " + data.status
-        );
-        const updatedGuest = await userService.getById(data.to);
-        await updateUser(updatedGuest);
-      });
+        )
+        const updatedGuest = await userService.getById(data.to)
+        await updateUser(updatedGuest)
+      })
     },
     on(eventName, cb) {
-      socket.on(eventName, cb);
+      socket.on(eventName, cb)
     },
     off(eventName, cb = null) {
-      if (!socket) return;
-      if (!cb) socket.removeAllListeners(eventName);
-      else socket.off(eventName, cb);
+      if (!socket) return
+      if (!cb) socket.removeAllListeners(eventName)
+      else socket.off(eventName, cb)
     },
     emit(eventName, data) {
-      socket.emit(eventName, data);
+      socket.emit(eventName, data)
     },
     login(userId) {
-      socket.emit(SOCKET_EMIT_LOGIN, userId);
+      socket.emit(SOCKET_EMIT_LOGIN, userId)
     },
     logout() {
-      socket.emit(SOCKET_EMIT_LOGOUT);
+      socket.emit(SOCKET_EMIT_LOGOUT)
     },
     terminate() {
-      socket = null;
+      socket = null
     },
-  };
-  return socketService;
+  }
+  return socketService
 }
 
 // function createDummySocketService() {
-//   var listenersMap = {};
+//   var listenersMap = {}
 //   const socketService = {
 //     listenersMap,
 //     setup() {
-//       listenersMap = {};
+//       listenersMap = {}
 //     },
 //     terminate() {
-//       this.setup();
+//       this.setup()
 //     },
 //     login() {
-//       console.log("Dummy socket service here, login - got it");
+//       console.log("Dummy socket service here, login - got it")
 //     },
 //     logout() {
-//       console.log("Dummy socket service here, logout - got it");
+//       console.log("Dummy socket service here, logout - got it")
 //     },
 //     on(eventName, cb) {
-//       listenersMap[eventName] = [...(listenersMap[eventName] || []), cb];
+//       listenersMap[eventName] = [...(listenersMap[eventName] || []), cb]
 //     },
 //     off(eventName, cb) {
-//       if (!listenersMap[eventName]) return;
-//       if (!cb) delete listenersMap[eventName];
+//       if (!listenersMap[eventName]) return
+//       if (!cb) delete listenersMap[eventName]
 //       else
 //         listenersMap[eventName] = listenersMap[eventName].filter(
 //           (l) => l !== cb
-//         );
+//         )
 //     },
 //     emit(eventName, data) {
-//       var listeners = listenersMap[eventName];
+//       var listeners = listenersMap[eventName]
 //       if (eventName === SOCKET_EMIT_SEND_MSG) {
-//         listeners = listenersMap[SOCKET_EVENT_ADD_MSG];
+//         listeners = listenersMap[SOCKET_EVENT_ADD_MSG]
 //       }
 
-//       if (!listeners) return;
+//       if (!listeners) return
 
 //       listeners.forEach((listener) => {
-//         listener(data);
-//       });
+//         listener(data)
+//       })
 //     },
 //     // Functions for easy testing of pushed data
 //     testChatMsg() {
 //       this.emit(SOCKET_EVENT_ADD_MSG, {
 //         from: "Someone",
 //         txt: "Aha it worked!",
-//       });
+//       })
 //     },
 //     testUserUpdate() {
 //       this.emit(SOCKET_EVENT_USER_UPDATED, {
 //         ...userService.getLoggedinUser(),
 //         score: 555,
-//       });
+//       })
 //     },
-//   };
-//   window.listenersMap = listenersMap;
-//   return socketService;
+//   }
+//   window.listenersMap = listenersMap
+//   return socketService
 // }
 
 // Basic Tests

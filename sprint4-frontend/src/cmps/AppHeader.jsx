@@ -32,12 +32,7 @@ export function AppHeader() {
   const [isClassAdded, setIsClassAdded] = useState(false)
   const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
   const [bottomHeader, setBottomHeader] = useState(false)
-
-  // const filterBy = useSelector(
-  //   (storeState) => storeState.stayModule.filterBy
-  // )
-
-
+  const [signUp, setSignUp] = useState(false)
   const gRef = useRef() // global use ref for closing modals by noy
 
   const location = useLocation()
@@ -46,7 +41,6 @@ export function AppHeader() {
   let stayPath =location.pathname
   let hostPath = location.pathname
   if (currentPath.startsWith('/details/')) {
-    // console.log('Current path is a details page');
     detailPath = '/details/'
   }
   if (currentPath.startsWith("/stay")) {
@@ -257,9 +251,9 @@ export function AppHeader() {
   return (
     <header
       className={`app-header grid 
-        ${((!isScrolledDown&&!bottomHeader)||
-          (stayPath!=='/stay'&&currentPath !== "/"&&!bottomHeader)) ? " header-inserted " : ""
-        } ${((!isScrolledDown && currentPath === "/")||(!isScrolledDown && stayPath==='/stay')||bottomHeader)
+        ${((!isScrolledDown && !bottomHeader) ||
+          (stayPath !== '/stay' && currentPath !== "/" && !bottomHeader)) ? " header-inserted " : ""
+        } ${((!isScrolledDown && currentPath === "/") || (!isScrolledDown && stayPath === '/stay') || bottomHeader)
           ? " header-sticky " : ' '}
         
       `}
@@ -326,10 +320,11 @@ export function AppHeader() {
             </button>
           </div>
         </nav>
-        {(currentPath === "/" || currentPath === "/messages" || currentPath === "/backOffice" || currentPath === "/wishlist" || currentPath === "/userTrips" || detailPath === '/details/'||currentPath === "/stay") && <div className="flex left-header justify-center align-center">
+        {(currentPath === "/" || currentPath === "/messages" || currentPath === "/backOffice" || currentPath === "/wishlist" || currentPath === "/userTrips" || detailPath === '/details/' || currentPath === "/stay") && <div className="flex left-header justify-center align-center">
           <LoggedInModal
             isLoginOpen={isLoginOpen}
             setIsLoginOpen={setIsLoginOpen}
+            setSignUp={setSignUp}
           />
         </div>}
       </div>
@@ -338,6 +333,8 @@ export function AppHeader() {
           <LoginModal
             isLoginOpen={isLoginOpen}
             setIsLoginOpen={setIsLoginOpen}
+            signUp={signUp}
+
           />
         </div>
       )}
