@@ -3,15 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { userService } from "../services/user.service";
 import { login, logout, signup } from "../store/user.actions";
 
-export function LoginModal({ isLoginOpen, setIsLoginOpen }) {
-  // need to get close function
+export function LoginModal({ isLoginOpen, setIsLoginOpen, signUp }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [fullname, setFullname] = useState("");
-  const [isRegistering, setIsRegistering] = useState(false);
-  const navigate = useNavigate();
-
-  const demoUser = { username: "demo_user", password: "123456" };
+  const [isRegistering, setIsRegistering] = useState(signUp);
 
   const demoLogin = async () => {
     try {

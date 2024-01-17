@@ -126,38 +126,40 @@ export function PaymentPage() {
       </div>
 
       <div className="order-content">
-        <div className="details-section">
-          <div className="rare-find flex justify-between">
-            <div>
-              <h4>This is a rare find</h4>
-              <h5>Cristina's place is usually booked.</h5>
+
+        {user ?
+          <div className="details-section">
+            <div className="rare-find flex justify-between">
+              <div>
+                <h4>This is a rare find</h4>
+                <h5>Cristina's place is usually booked.</h5>
+              </div>
+              <div>
+                <section className="icon-svg">💎</section>
+              </div>
             </div>
-            <div>
-              <section className="icon-svg">💎</section>
+            <div className="trip-details">
+              <h3>Your trip</h3>
+              <div className="flex justify-between">
+                <h4>Dates</h4>
+                <h5>
+                  <span>{checkIn}</span> - <span>{checkOut}</span>
+                </h5>
+              </div>
+              <div className="flex justify-between">
+                <h4>Guests</h4>
+                <h5>{guests} Guest</h5>
+              </div>
             </div>
+            <button style={{ backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)` }}
+              className="reserve-btn"
+              onMouseMove={handleMouseMove}
+              onClick={onConfirm}>Confirm</button>
           </div>
-          <div className="trip-details">
-            <h3>Your trip</h3>
-            <div className="flex justify-between">
-              <h4>Dates</h4>
-              <h5>
-                <span>{checkIn}</span> - <span>{checkOut}</span>
-              </h5>
-            </div>
-            <div className="flex justify-between">
-              <h4>Guests</h4>
-              <h5>{guests} Guest</h5>
-            </div>
-          </div>
-          <button style={{ backgroundImage: `radial-gradient(circle at ${gradientPosition}, #ff385c 0, #bd1e59 100%)` }}
-            className="reserve-btn"
-            onMouseMove={handleMouseMove}
-            onClick={onConfirm}>Confirm</button>
+          :
           <div className="login-section">
             <LoginSignup />
-          </div>
-        </div>
-
+          </div>}
         <div className="summary-card-section flex">
           <img src={stay.imgUrls[0]} />
           <div className="stay-desc">

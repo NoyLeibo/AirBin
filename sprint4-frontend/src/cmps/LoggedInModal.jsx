@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { LoginModal } from "./Login";
 import { logout } from "../store/user.actions";
 
-export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
+export function LoggedInModal({ isLoginOpen, setIsLoginOpen, setSignUp }) {
   //  left-header
   // const [isLoginOpen, setIsLoginOpen] = useState(false);
   const onlineUser = useSelector(
@@ -140,7 +140,15 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen }) {
                     >
                       Log in
                     </NavLink>
-                    <NavLink to="/signup" onClick={() => setIsMenuOpen(false)}>
+                    <NavLink
+                      to="/"
+                      className="bold"
+                      onClick={() => {
+                        openLoginModal();
+                        setIsMenuOpen(false);
+                        setSignUp(true)
+                      }}
+                    >
                       Sign up
                     </NavLink>
                   </div>
