@@ -121,7 +121,7 @@ export function StayFilter({ filterBy, onSetFilter }) {
             key={key + filterIndex}
             className={`emoji-container ${selectedEmojis.includes(key) ? "selectedEmoji" : ""}`}
             onClick={(ev) => handleEmojiSelect(ev, key)}>
-            <FilterAmenities amenitie={key} className={`emoji-filter ${selectedEmojis.includes(key) ? "selectedEmoji" : ""}`} />
+            <FilterAmenities amenitie={key} selectedEmojis={selectedEmojis} />
             {/* {getCmpFromString(value)} */}
             {/* <StayAmenities amenities={filters} /> */}
             {/* <img

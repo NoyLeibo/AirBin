@@ -24,13 +24,13 @@ import { PiThermometerHotBold } from "react-icons/pi"
 import { MdRollerShades } from "react-icons/md"
 
 
-export function FilterAmenities({ amenitie }) {
+export function FilterAmenities({ amenitie, selectedEmojis }) {
 
 
 
     return (
 
-        <div>
+        <div className={`emoji-filter ${selectedEmojis.includes(amenitie) ? "selectedEmoji" : ""}`}>
             {amenitie === "Carbon monoxide alarm" || amenitie === "Carbon monoxide detector" &&
                 <GiMovementSensor size="28" />
             }
