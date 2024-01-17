@@ -32,21 +32,14 @@ export function AppHeader() {
   const [isClassAdded, setIsClassAdded] = useState(false)
   const [filterBy, setFilterBy] = useState(stayService.getDefaultFilter())
   const [bottomHeader, setBottomHeader] = useState(false)
-
-  // const filterBy = useSelector(
-  //   (storeState) => storeState.stayModule.filterBy
-  // )
-
-
   const gRef = useRef() // global use ref for closing modals by noy
 
   const location = useLocation()
   const currentPath = location.pathname
   let detailPath = location.pathname
-  let stayPath ="/stay"
+  let stayPath = "/stay"
   let hostPath = location.pathname
   if (currentPath.startsWith('/details/')) {
-    // console.log('Current path is a details page');
     detailPath = '/details/'
   }
 
@@ -253,9 +246,9 @@ export function AppHeader() {
   return (
     <header
       className={`app-header grid 
-        ${((!isScrolledDown&&!bottomHeader)||
-          (stayPath!=='/stay'&&currentPath !== "/"&&!bottomHeader)) ? " header-inserted " : ""
-        } ${((!isScrolledDown && currentPath === "/")||(!isScrolledDown && stayPath==='/stay')||bottomHeader)
+        ${((!isScrolledDown && !bottomHeader) ||
+          (stayPath !== '/stay' && currentPath !== "/" && !bottomHeader)) ? " header-inserted " : ""
+        } ${((!isScrolledDown && currentPath === "/") || (!isScrolledDown && stayPath === '/stay') || bottomHeader)
           ? " header-sticky " : ' '}
         
       `}
@@ -274,7 +267,7 @@ export function AppHeader() {
         {(currentPath === "/" || detailPath === '/details/' || stayPath === "/stay") && <div
           className={`
           small-search-form flex align-center
-            ${(!isScrolledDown || ((stayPath==="/"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")))
+            ${(!isScrolledDown || ((stayPath === "/" && currentPath !== "/") || (stayPath !== "/stay" && currentPath === "/stay")))
               ? " small-form-expended "
               : " "
             }
@@ -292,7 +285,7 @@ export function AppHeader() {
         <nav
           className={`
           mid-three-menu flex column justify-center mid-header
-            ${(!isScrolledDown || ((stayPath==="/"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")))
+            ${(!isScrolledDown || ((stayPath === "/" && currentPath !== "/") || (stayPath !== "/stay" && currentPath === "/stay")))
               ? " mid-three-menu-close "
               : " "
             }  
@@ -322,7 +315,7 @@ export function AppHeader() {
             </button>
           </div>
         </nav>
-        {(currentPath === "/" || currentPath === "/messages" || currentPath === "/backOffice" || currentPath === "/wishlist" || currentPath === "/userTrips" || detailPath === '/details/'||currentPath === "/stay") && <div className="flex left-header justify-center align-center">
+        {(currentPath === "/" || currentPath === "/messages" || currentPath === "/backOffice" || currentPath === "/wishlist" || currentPath === "/userTrips" || detailPath === '/details/' || currentPath === "/stay") && <div className="flex left-header justify-center align-center">
           <LoggedInModal
             isLoginOpen={isLoginOpen}
             setIsLoginOpen={setIsLoginOpen}
@@ -343,12 +336,12 @@ export function AppHeader() {
           search-form justify-center flex row 
           
         }
-           ${((!isScrolledDown&&!bottomHeader )||
-            ((stayPath!=="/stay"&&currentPath !== "/"&&!bottomHeader)||(stayPath!=="/stay"&&currentPath !== "/stay"&&!bottomHeader)))
+           ${((!isScrolledDown && !bottomHeader) ||
+              ((stayPath !== "/stay" && currentPath !== "/" && !bottomHeader) || (stayPath !== "/stay" && currentPath !== "/stay" && !bottomHeader)))
               ? " header-search-inserted "
               : " "
             }    
-              ${((stayPath!=="/stay"&&currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
+              ${((stayPath !== "/stay" && currentPath !== "/" && !bottomHeader) || (isClassAdded && !bottomHeader)) ? " close-header" : ""}
               `}
         >
           <div
