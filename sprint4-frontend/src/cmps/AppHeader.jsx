@@ -43,11 +43,15 @@ export function AppHeader() {
   const location = useLocation()
   const currentPath = location.pathname
   let detailPath = location.pathname
-  let stayPath ="/stay"
+  let stayPath =location.pathname
   let hostPath = location.pathname
   if (currentPath.startsWith('/details/')) {
     // console.log('Current path is a details page');
     detailPath = '/details/'
+  }
+  if (currentPath.startsWith("/stay")) {
+    // console.log('Current path is a stay page');
+    stayPath = "/stay"
   }
 
   // console.log("Current page path:", currentPath)
@@ -274,7 +278,7 @@ export function AppHeader() {
         {(currentPath === "/" || detailPath === '/details/' || stayPath === "/stay") && <div
           className={`
           small-search-form flex align-center
-            ${(!isScrolledDown || ((stayPath==="/"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")))
+            ${(!isScrolledDown || ((stayPath!=="/stay"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")))
               ? " small-form-expended "
               : " "
             }
@@ -292,7 +296,7 @@ export function AppHeader() {
         <nav
           className={`
           mid-three-menu flex column justify-center mid-header
-            ${(!isScrolledDown || ((stayPath==="/"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")))
+            ${(!isScrolledDown || ((stayPath!=="/stay"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")||(stayPath!=="/stay"&&currentPath !== "/")))
               ? " mid-three-menu-close "
               : " "
             }  
@@ -344,13 +348,14 @@ export function AppHeader() {
           
         }
            ${((!isScrolledDown&&!bottomHeader )||
-            ((stayPath!=="/stay"&&currentPath !== "/"&&!bottomHeader)||(stayPath!=="/stay"&&currentPath !== "/stay"&&!bottomHeader)))
+            (stayPath!=="/stay"&&currentPath !== "/"&&bottomHeader))
               ? " header-search-inserted "
               : " "
             }    
-              ${((stayPath!=="/stay"&&currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
+              ${((currentPath !== "/stay"&&currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
               `}
         >
+          {/* (stayPath!=="/stay"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay") */}
           <div
             className="form-control flex column"
             onClick={toggleDestinationsModal}
