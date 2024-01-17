@@ -22,7 +22,9 @@ async function getCollection(collectionName) {
 }
 async function getDbArr(collectionName) {
   const collection = await getCollection(collectionName);
+  if (collectionName === 'stay') return await collection.find({}).sort({ rate: -1 }).toArray();
   return await collection.find({}).toArray();
+
 }
 
 async function _connect() {
