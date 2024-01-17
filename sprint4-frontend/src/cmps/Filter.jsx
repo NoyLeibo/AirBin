@@ -20,12 +20,21 @@ export function Filter({ onSetFilter, setFilterByToEdit, filterByToEdit, setIsOp
     e.preventDefault()
     let { value, name: field } = target
     value = type === 'number' ? +value : value
-    setTempFilter(prevFilter => ({ ...prevFilter, [field]: value }))
 
-    if (category === 'bedrooms') setSelectedBedrooms(value)
-    if (category === 'beds') setSelectedBeds(value)
-    if (category === 'bathrooms') setSelectedBathrooms(value)
+    let newValue = value;
+    if ((category === 'bedrooms' && selectedBedrooms === value) ||
+      (category === 'beds' && selectedBeds === value) ||
+      (category === 'bathrooms' && selectedBathrooms === value)) {
+      newValue = null;
+    }
+
+    setTempFilter(prevFilter => ({ ...prevFilter, [field]: newValue }))
+
+    if (category === 'bedrooms') setSelectedBedrooms(newValue)
+    if (category === 'beds') setSelectedBeds(newValue)
+    if (category === 'bathrooms') setSelectedBathrooms(newValue)
   }
+
 
   function handlePriceMinMaxChange(ev) {
     const { name, value } = ev.target
