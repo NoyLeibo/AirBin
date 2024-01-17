@@ -28,32 +28,38 @@ async function filterStays(filterBy, stays) {
   }
   if (filterBy.bedrooms) {
     stays = stays.filter((stay) => {
-      return stay.bedrooms >= filterBy.bedrooms;
+      return stay.rooms >= filterBy.bedrooms;
     });
   }
   if (filterBy.beds) {
     stays = stays.filter((stay) => {
-      return stay.bedrooms >= filterBy.beds;
+      return stay.beds >= filterBy.beds;
     });
   }
   if (filterBy.bathrooms) {
     stays = stays.filter((stay) => {
-      return stay.baths >= filterBy.bathrooms;
+      return stay.bathrooms >= filterBy.bathrooms;
     });
   }
   if (filterBy.placeType?.length) {
     stays = filterStaysByTags(filterBy.placeType, stays);
   }
-
   if (filterBy.selectedDestination.length > 0 && filterBy.selectedDestination !== 'Flexible' && filterBy.selectedGuests.Adults > 0) {
+    console.log('IM HERE 1');
     stays = stays.filter((stay) => {
-      const guestsTotal = +filterBy.selectedGuests.Adults + +filterBy.selectedGuests.Children + +filterBy.selectedGuests.Infants + +filterBy.selectedGuests.Pets;
-      const isDestinationMatch = Array.isArray(filterBy.selectedDestination) ? filterBy.selectedDestination.includes(stay.loc.country) : stay.loc.country === filterBy.selectedDestination;
-      return stay.capacity >= guestsTotal && isDestinationMatch;
+      const guestsTotal = +(filterBy.selectedGuests.Adults) + +(filterBy.selectedGuests.Children) + +(filterBy.selectedGuests.Infants) + +(filterBy.selectedGuests.Pets);
+      // const selectedDestination = filterBy.selectedDestination.split(',')
+      // filterBy.selectedDestination = 'Israel'
+      // filterBy.selectedDestination = 'Japan', 'Tokyo', 'Thailand'
+      const selectedDestinationStr = filterBy.selectedDestination
+      const isDestinationMatch = selectedDestinationStr.includes(',') ? (selectedDestinationStr.split(',')).includes(stay.loc.country) : stay.loc.country === selectedDestinationStr;
+      // const isDestinationMatch = Array.isArray(filterBy.selectedDestination) ? filterBy.selectedDestination.includes(stay.loc.country) : stay.loc.country === filterBy.selectedDestination;
+      return (stay.capacity >= guestsTotal) && isDestinationMatch;
     });
   }
 
-  else if (filterBy.selectedGuests.Adults.length) {
+  else if (parseInt(filterBy.selectedGuests.Adults)) {
+    console.log('IM HERE 2');
     stays = stays.filter((stay) => {
 
       return (
@@ -66,15 +72,15 @@ async function filterStays(filterBy, stays) {
     })
   }
 
-  else if (filterBy.selectedDestination !== '' && filterBy.selectedDestination !== undefined) {
-    if (Array.isArray(filterBy.selectedDestination)) {
-      stays = stays.filter(stay => filterBy.selectedDestination.includes(stay.loc.country));
-    } else {
-      stays = stays.filter(stay => stay.loc.country === filterBy.selectedDestination);
-    }
+  else if (filterBy.selectedDestination !== '' && filterBy.selectedDestination !== 'Flexible') {
+    console.log('IM HERE 3');
+    stays = stays.filter((stay) => {
+      const selectedDestinationStr = filterBy.selectedDestination
+      const isDestinationMatch = selectedDestinationStr.includes(',') ? (selectedDestinationStr.split(',')).includes(stay.loc.country) : stay.loc.country === selectedDestinationStr;
+      return isDestinationMatch
+    })
   }
   return stays;
-
 }
 
 
