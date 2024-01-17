@@ -4805,11 +4805,959 @@
 16.1.2024, 11:08:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
 16.1.2024, 10:30:15 - INFO - New connected socket [id: 8wVlBVtBojB0DB3TAADf] 
 16.1.2024, 12:03:25 - INFO - Socket disconnected [id: undefined] 
+<<<<<<< HEAD
+17.1.2024, 12:41:44 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 12:41:45 - INFO - New connected socket [id: 5b89NRpNOND4v1pgAACR] 
+17.1.2024, 12:41:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:41:45 - INFO - Req was made | / 
+17.1.2024, 12:41:45 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: 5b89NRpNOND4v1pgAACR] 
+17.1.2024, 12:41:52 - INFO - Req was made | / 
+17.1.2024, 12:41:52 - DEBUG - Getting Stays | {"placeType":["Play"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:41:55 - INFO - Req was made | / 
+17.1.2024, 12:41:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:41:56 - INFO - Req was made | / 
+17.1.2024, 12:41:56 - DEBUG - Getting Stays | {"placeType":["Amazing pools"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:41:58 - INFO - Req was made | / 
+17.1.2024, 12:41:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:44:33 - INFO - Req was made | / 
+17.1.2024, 12:44:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:44:33 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 12:44:34 - INFO - New connected socket [id: aIHj-6ACrq7RecC_AACT] 
+17.1.2024, 12:44:34 - INFO - Req was made | / 
+17.1.2024, 12:44:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:44:34 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: aIHj-6ACrq7RecC_AACT] 
+17.1.2024, 12:51:50 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 12:51:51 - INFO - New connected socket [id: zMLYegolXQz3bDPuAACV] 
+17.1.2024, 12:51:51 - INFO - Req was made | / 
+17.1.2024, 12:51:51 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:51:51 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: zMLYegolXQz3bDPuAACV] 
+17.1.2024, 12:52:03 - INFO - Req was made | / 
+17.1.2024, 12:52:03 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:52:03 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 12:52:03 - INFO - New connected socket [id: 4SIuW0S7a0-vhevEAACX] 
+17.1.2024, 12:52:03 - INFO - Req was made | / 
+17.1.2024, 12:52:03 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 12:52:03 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: 4SIuW0S7a0-vhevEAACX] 
+17.1.2024, 12:57:40 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 12:57:40 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:07:02 - INFO - New connected socket [id: m-HZKiCzLfD76N9hAACa] 
+17.1.2024, 13:07:02 - INFO - New connected socket [id: VTqB55bBQr1GfdwuAACb] 
+17.1.2024, 13:08:13 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:08:13 - INFO - New connected socket [id: HBZiDeUmIG1I02H8AACd] 
+17.1.2024, 13:08:13 - INFO - Req was made | / 
+17.1.2024, 13:08:13 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:08:13 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: HBZiDeUmIG1I02H8AACd] 
+17.1.2024, 13:28:12 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:28:12 - INFO - New connected socket [id: hJXwSk3ISMaYLCZUAACf] 
+17.1.2024, 13:28:12 - INFO - Req was made | / 
+17.1.2024, 13:28:12 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:28:12 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: hJXwSk3ISMaYLCZUAACf] 
+17.1.2024, 13:37:25 - INFO - Req was made | / 
+17.1.2024, 13:37:25 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:37:25 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:37:25 - INFO - New connected socket [id: nv6WGfqs7BULCjA-AACh] 
+17.1.2024, 13:37:25 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:37:25 - INFO - Req was made | / 
+17.1.2024, 13:37:25 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: nv6WGfqs7BULCjA-AACh] 
+17.1.2024, 13:39:05 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:39:06 - INFO - New connected socket [id: Ztn8DB0S8jXTZ1S6AACj] 
+17.1.2024, 13:39:06 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:39:06 - INFO - Req was made | / 
+17.1.2024, 13:39:06 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: Ztn8DB0S8jXTZ1S6AACj] 
+17.1.2024, 13:39:22 - INFO - Req was made | / 
+17.1.2024, 13:39:22 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:41:20 - INFO - Req was made | / 
+17.1.2024, 13:41:20 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:41:20 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:41:20 - INFO - New connected socket [id: KsCpjhRkecnkS2OpAACl] 
+17.1.2024, 13:41:20 - INFO - Req was made | / 
+17.1.2024, 13:41:20 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:41:20 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: KsCpjhRkecnkS2OpAACl] 
+17.1.2024, 13:41:51 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:41:52 - INFO - New connected socket [id: -D6AE7dq2w-wgHdcAACn] 
+17.1.2024, 13:41:52 - INFO - Req was made | / 
+17.1.2024, 13:41:52 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:41:52 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: -D6AE7dq2w-wgHdcAACn] 
+17.1.2024, 13:44:28 - INFO - Server is running on port: 3030 
+17.1.2024, 13:44:29 - INFO - New connected socket [id: 2Q0ek_jDyz_meKkTAAAC] 
+17.1.2024, 13:44:29 - INFO - New connected socket [id: CaNkAXsxIN_50BNbAAAD] 
+17.1.2024, 13:46:37 - INFO - Server is running on port: 3030 
+17.1.2024, 13:46:38 - INFO - New connected socket [id: rBVe71eW2GhLKiv5AAAB] 
+17.1.2024, 13:46:39 - INFO - New connected socket [id: o7G33Uc5G-X1HNy8AAAD] 
+17.1.2024, 13:46:40 - INFO - Server is running on port: 3030 
+17.1.2024, 13:46:41 - INFO - New connected socket [id: Ohvt9hvvt3rdcV7qAAAC] 
+17.1.2024, 13:46:41 - INFO - New connected socket [id: dvgdrICeA8HpZxz0AAAD] 
+17.1.2024, 13:46:52 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:46:52 - INFO - New connected socket [id: BkuSEJyLzm5TMUxhAAAF] 
+17.1.2024, 13:46:52 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:46:52 - INFO - Req was made | / 
+17.1.2024, 13:46:52 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: BkuSEJyLzm5TMUxhAAAF] 
+17.1.2024, 13:49:03 - INFO - Removing socket.userId for socket [id: dvgdrICeA8HpZxz0AAAD] 
+17.1.2024, 13:49:04 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:49:04 - INFO - New connected socket [id: ndL2CxzU2fc3hRyEAAAH] 
+17.1.2024, 13:49:04 - INFO - Req was made | / 
+17.1.2024, 13:49:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:49:13 - DEBUG - auth.service - login with username: iris 
+17.1.2024, 13:49:13 - INFO - User login:  | {"_id":"65a42221f7cfe3ae31df43cc","username":"iris","fullname":"Iris Y","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","wishlist":[{"_id":"65a4142d0f466e5567f5a47c","name":"Westin Kaanapali KORVN 2BR","type":"National parks","imgUrls":["http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"],"price":595,"summary":"Westin Kaanapali Ocean Resort Villas North timeshare - Pay resort: $14-20/day, stays under 7 night $38/res - Inquire about availability, I review then offer/approve if available :) - READ \"The Space\" for cleaning/etc AND brief explanation about timeshare reservations - Want guaranteed view for additional cost? Must be weekly rental, other restrictions - Wheelchair accessible / ADA, call resort directly to ensure U receive. If U need ADA U MUST inform us BEFORE booking.","capacity":8,"amenities":["TV","Cable TV","Internet","Wifi","Air conditioning","Wheelchair accessible","Pool","Kitchen","Free parking on premises","Doorman","Gym","Elevator","Hot tub","Heating","Family/kid friendly","Suitable for events","Washer","Dryer","Smoke detector","Carbon monoxide detector","First aid kit","Safety card","Fire extinguisher","Essentials","Shampoo","24-hour check-in","Hangers","Hair dryer","Iron","Laptop friendly workspace","Self check-in","Building staff","Private entrance","Room-darkening shades","Hot water","Bed linens","Extra pillows and blankets","Ethernet connection","Luggage dropoff allowed","Long term stays allowed","Ground floor access","Wide hallway clearance","Step-free access","Wide doorway","Flat path to front door","Well-lit path to entrance","Disabled parking spot","Step-free access","Wide doorway","Wide clearance to bed","Step-free access","Wide doorway","Step-free access","Wide entryway","Waterfront","Beachfront"],"bathrooms":2,"bedrooms":2,"roomType":"Entire home/apt","host":{"_id":"65a41ab1316378825516e565","fullname":"Patty And Beckett","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410"},"loc":{"country":"United States","countryCode":"US","city":"Maui","address":"Lahaina, HI, United States","lat":-156.6917,"lan":20.93792},"reviews":[{"at":"2016-06-12T04:00:00.000Z","by":{"_id":"622f3407e36c59e6164fc004","fullname":"Kiesha","imgUrl":"https://robohash.org/10711825?set=set1","id":"10711825"},"txt":"I had a great experience working with Patty and Peter.  Both were very attentive in sorting out the booking details and following up directly when I had questions.  I rented a 2 bedroom unit at the Westin Villas  in Maui and both the unit and property was absolutely amazing.  I think we had the best unit on the resort complete with 2 outdoor patios with direct access  to  the  beach.  I would HIGHLY recommend renting with Patty and Peter."},{"at":"2016-07-28T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb204","fullname":"Chris","imgUrl":"https://robohash.org/70072865?set=set1","id":"70072865"},"txt":"Peter quickly responded to any questions I had before, and during the trip. Will use again, highly recommend. "},{"at":"2016-09-11T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb703","fullname":"Kim","imgUrl":"https://robohash.org/71179725?set=set1","id":"71179725"},"txt":"We had the perfect location for a room, first floor right in front of the pool. The resort is beautiful, and the staff is so friendly! I enjoyed it so much, we talked about buying a timeshare ourselves."},{"at":"2017-01-07T05:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb37f","fullname":"Tracy","imgUrl":"https://robohash.org/65593239?set=set1","id":"65593239"},"txt":"Beautiful location. Patty & Peter were super helpful and easy to work with!"},{"at":"2017-04-07T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb105","fullname":"Duyen","imgUrl":"https://robohash.org/26215688?set=set1","id":"26215688"},"txt":"Great spot for the kids and family and close to beach and everything at the resort. We will definitely be back."},{"at":"2017-05-09T04:00:00.000Z","by":{"_id":"622f3402e36c59e6164fabbe","fullname":"Binh","imgUrl":"https://robohash.org/117390236?set=set1","id":"117390236"},"txt":"The unit and the Westin offer variety of amenities you can possibly ask for. Sofa beds are very comfortable to sleep in. But there is charge for ocean view upgrade. Overall, I highly recommend to book with Patty and Peter. "},{"at":"2018-02-24T05:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb4af","fullname":"Samy","imgUrl":"https://robohash.org/15143517?set=set1","id":"15143517"},"txt":"We spent a great week at Patty and Peter's place. The place was exactly as shown in the pictures, very comfortable, nice view, with all amenities. The resort is great with several pools, a long beach, many restaurants, and of course a lot of great activities all around."},{"at":"2018-06-16T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb87b","fullname":"Breanne","imgUrl":"https://robohash.org/78173091?set=set1","id":"78173091"},"txt":"This place was perfect for my family. We had plenty of room to spread out and the service could not have been any better"},{"at":"2018-06-29T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb713","fullname":"Kimberly","imgUrl":"https://robohash.org/100535039?set=set1","id":"100535039"},"txt":"We love Westin Kaanapalli"}],"likedByUsers":[]},{"_id":"65a5b653a57dc34cac57f3e2","name":"sunny 2 bedroom close to Bosphorus","type":"Shared homes","imgUrls":["http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437040/oarfkdxx7gyyvcynvwko.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436261/hwqt72njlhf9hkqou9ka.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437021/cw6mtrxza5fzmmgxen4j.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437344/r4w6s3af55tdt5y1lrcc.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436406/id1oo8krwgxvdf9s02qp.jpg"],"price":100,"summary":"The apartment is located at the very best location in Arnavutköy, not so close to the noise on the seaside but a bit inside. The building has a terrace for many uses.","capacity":1,"amenities":["TV","Cable TV","Internet","Wifi","Air conditioning","Kitchen","Free parking on premises","Heating","Family/kid friendly","Washer","Essentials","Shampoo","Lock on bedroom door","24-hour check-in","Hangers","Hair dryer","Iron","Laptop friendly workspace","Host greets you"],"bathrooms":1,"bedrooms":1,"roomType":"Private room","host":{"_id":"65a41ab1316378825516e565","fullname":"Alice Don","location":"Ankara, Ankara, Turkey","about":"Başar Family\r\n\r\nGülder (mother): Owner of ARBA Food. Ltd. Co., Ankara. Graduate: Management, Middle East Technical University\r\nArda (son): Unemployed. Graduate: Civil Engineering, Boğaziçi University\r\nAras (son): Works at The Princeton Review, Ankara. Graduate: Civil Engineering, İstanbul Technical University-State University of New York\r\nFırat (father): Co-owner of ARBA Food Co. Ltd. Graduate: English Language and Literature, Hacettepe University\r\n\r\n\r\nWe have together and individually traveled to a lot of countries all around the world. We love interacting with locals for local foods, traditions, music etc. to further understand ourselves and import new meanings to our own lives, which, in turn, enriches everybody around us.\r\n\r\nWe have hosted wonderful people. None caused big issues, and none had issues with us. We are more prone to sharing experiences, rather than doing business, because, I guess we are early adopters of Airbnb. Our house is not like an hotel room. With us generally around, you will make the most out of the neighborhood, perhaps İstanbul and maybe even Turkey.\r\n\r\nWe are also very understanding guests with usually basic needs; but with the taste of certain sociocultural rules, mixed with a certain amount of humor. We basically expect what is written on your page to be correct; because then, we will be aware of the shortcomings as well, and act accordingly.","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/users/78838/profile_pic/1436962626/original.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/users/78838/profile_pic/1436962626/original.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"78838"},"loc":{"country":"Turkey","countryCode":"TR","city":"Istanbul","address":"Beşiktaş, İstanbul, Turkey","lat":29.04246,"lan":41.06944},"reviews":[{"at":"2015-09-28T04:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb521","fullname":"Onur","imgUrl":"https://robohash.org/33819297?set=set1","id":"33819297"},"txt":"The district was very calm, and there were two supermarkets within a minute of walking which can provide whatever you lack. Arda was very kind and helpful, and the house has everything you may need during your accomodation. My only concern was the cat, but she ignores you unless you call her :)"},{"at":"2015-10-01T04:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb521","fullname":"Onur","imgUrl":"https://robohash.org/33819297?set=set1","id":"33819297"},"txt":"Tek kelimeyle mükemmel diyebilirim, evin toplu taşımaya ve sahile yakın oluşu çok büyük bir avantaj."},{"at":"2018-09-21T04:00:00.000Z","by":{"_id":"622f3407e36c59e6164fbee4","fullname":"Erdinc","imgUrl":"https://robohash.org/54215329?set=set1","id":"54215329"},"txt":"A silent room near the Bosphorus. Aras very helpful person. Thank you Aras."}],"likedByUsers":[]},{"_id":"65a5b653a57dc34cac57f3de","name":"➳ Logement  4 1/2 Rosemont ❤️","type":"Islands","imgUrls":["http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437017/gjyzgdjngyrhfrj2loxz.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436907/abikktroqknzhch6b9ly.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436525/wdod0zfzsipkigajueda.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436306/be2v9wssznxs4hebudb4.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437168/vbmfmdmwrxt7xfwbsw7c.jpg"],"price":409,"summary":"Chers Glob-trotteurs, travailleurs, vacanciers ou qui que vous soyez :)  Notre demeure est au dernier étage d’un petit immeuble (3 étages), situé à 20 min du centre ville.   L’appartement possède un salon double avec chambre ,balcon donnant sur une rue passante, deux chambres dont une fermée, une salle de bain ainsi qu’une cuisine avec un second balcon donnant cette fois sur une vue panoramique.  Les rues Beaubien et Masson regorgent de petits cafés, restaurants et commerces en tout genre !","capacity":1,"amenities":["TV","Internet","Wifi","Kitchen","Free parking on premises","Breakfast","Heating","Family/kid friendly","Suitable for events","Washer","Dryer","Smoke detector","Essentials","24-hour check-in","Hangers","Hair dryer","Laptop friendly workspace","Private entrance","Hot water"],"bathrooms":1,"bedrooms":1,"roomType":"Private room","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Rebekah","location":"Montreal, Quebec, Canada","about":"","thumbnailUrl":"https://a0.muscache.com/im/pictures/367d4387-064d-46f6-b03c-fabe661180e3.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/367d4387-064d-46f6-b03c-fabe661180e3.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"84813481"},"loc":{"country":"Canada","countryCode":"CA","city":"Montreal","address":"Montréal, Québec, Canada","lat":-73.58889,"lan":45.54424},"reviews":[{"at":"2016-09-21T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb0fa","fullname":"Hélène","imgUrl":"https://robohash.org/89982100?set=set1","id":"89982100"},"txt":"Nous n'avons pas rencontré Rebekah, c'est un ami à elle qui nous a donné et repris les clés. Nous étions une famille de 4 (un bébé et un enfant de 4 ans).\r\nNous avons aimé : la proximité des commerces (supermarché, pharmacie, fruiterie, le chaleureux Rose Café), le bus au pied de l'immeuble, la taille de l'appartement confortable pour 4, \r\nNous avons moins aimé : l'appartement pas très propre (odeur de cigarette, cendrier pas vidé, mégot dans la chambre - pour un logement non fumeur !!- le parquet qui noircit les genoux de notre fille à quatre pattes, le frigo pas vidé, la poussière sous les coussins des canapés ... et j'en passe), le manque d'équipement (balai, aspirateur, vaisselle pour préparer à manger), la machine à laver défectueuse (elle est tombée en panne après 2 utilisations, nous avons du aller en laverie), les lumières cassées dans les 2 chambres (que nous avons réparées), la TV qui est en fait un écran pour regarder des DVD, le couchage pour la 3e personne dans la petite chambre fermée est en fait un canapé non convertible de 1 mètre de long (notre fils de 4 ans ne pouvait pas dormir dessus ...). Rebekah nous a donc fait passer un matelas gonflable.\r\nC'est un appartement à moindre cout, certes, mais pas conforme à la description. Bien pour un couple qui aime manger à l’extérieur."}],"likedByUsers":[]},{"_id":"65a5b653a57dc34cac57f3e7","name":"B. Arts IV","type":"Caves","imgUrls":["http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436414/trl4n8noogyun10qmds8.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436410/shdfxkcohvm8beh5rkar.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436852/y3scgbn8d6evumdpwdp4.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437352/wejdxpvadcm8d7svkxqq.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436559/sbtoepvxxobkogznuiw4.jpg"],"price":50,"summary":"Located where lived the bourgeoisie in the 19th century.  A rehabilitation project made by young architects from Porto, in a historic building.  A Queen size bed and all the amenities to enjoy the city with pleasure. We expect you to enjoy your stay with us to the fullest, making sure that you'll be provided with all of the modern amenities and supplies necessary for a wonderful stay. If you need any more information please let me know, I will be glad to help you.","capacity":2,"amenities":["TV","Wifi","Kitchen","Paid parking off premises","Smoking allowed","Pets allowed","Heating","Essentials","Hangers","Hair dryer","Pack ’n Play/travel crib","Hot water","Long term stays allowed","Other"],"bathrooms":2,"bedrooms":1,"roomType":"Entire home/apt","host":{"_id":"65a41ab1316378825516e565","fullname":"Boris Kho","location":"Porto, Porto District, Portugal","about":"Love travel and meet people!","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/user/c588fa99-48ed-4883-a433-e6532bfb2e23.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/user/c588fa99-48ed-4883-a433-e6532bfb2e23.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"4656501"},"loc":{"country":"Portugal","countryCode":"PT","city":"Porto","address":"Porto, Porto, Portugal","lat":-8.60033,"lan":41.14543},"reviews":[{"at":"2016-08-05T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb229","fullname":"Reto","imgUrl":"https://robohash.org/72253479?set=set1","id":"72253479"},"txt":"Klein aber sehr fein! Sehr gut gelegen mitten in der alten \"Oberstadt\" von Porto. Pedro wie Laura waren sehr hilfsbereit bei kleinen Fragen und waren sehr nett und hilfreich mit kleinen Tipps wo es gute Restaurants und Sehenswürdigkeiten gibt. Sehr zu empfehlen diese Unterkunft!! Reto"},{"at":"2017-02-17T05:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb14f","fullname":"Marta","imgUrl":"https://robohash.org/6601025?set=set1","id":"6601025"},"txt":"El sitio es perfecto para pasar unos días en Porto!! Es un apartamento muy bien posicionado, desde el que puedes llegar andando a cualquier punto de interés de Porto. El apartamento es precioso, con lo básico para cocinar y comer allí y con cama muy cómoda, muy tranquilo para descansar por la noche... \nY la terraza comunitaria es preciosa y perfecta para desayunar en los días con primaverales con sol.\nLa única pega es el pequeño ruido que hace la calefacción por la noche que, por otro lado, se arregla apagándola.\nHemos disfrutado de nuestra estancia al máximo, sin duda volveríamos al mismo apartamento!! "},{"at":"2017-07-16T04:00:00.000Z","by":{"_id":"622f3402e36c59e6164fae13","fullname":"Elen","imgUrl":"https://robohash.org/13764683?set=set1","id":"13764683"},"txt":"We loved this place, very central to everything, but also so very quite, especially the garden, felt like a paradise. The apartment itself is very clean, modern, tasteful, with all high qualities amenities. Pedro and Laura are the perfect hosts and we would love to come back some time in the near future.\nThank you both again for everything.\nKind Regards\nElen & Darwin"}],"likedByUsers":[]},{"_id":"65a5b653a57dc34cac57f3e8","name":"Conveniently Located, Sunny Brooklyn Heights!","type":"Castles","imgUrls":["http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436883/bcqxaecnu4e9kyzbwb4p.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436553/hbkx9lwxjd0wabqk0bmo.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436236/ctnbnqazpqhotjcauqwp.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436406/id1oo8krwgxvdf9s02qp.jpg"],"price":150,"summary":"Perfect for visiting family stays. Monthly sublets available. Can comfortably accommodate couples and single people. Very convenient to subways (one black away) and Montague Street shopping. Walk to end of block and stroll along the promenade. No pets !","capacity":2,"amenities":["Internet","Wifi","Air conditioning","Kitchen","Buzzer/wireless intercom","Heating","Family/kid friendly","Smoke detector","Carbon monoxide detector","Essentials","Shampoo","Hangers","Hair dryer","Iron","Laptop friendly workspace"],"bathrooms":1,"bedrooms":1,"roomType":"Entire home/apt","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Yonatan ","location":"New York, New York, United States","about":"photographer / artist","responseTime":"within a few hours","thumbnailUrl":"https://a0.muscache.com/im/pictures/afcc24e1-c219-4770-9793-efb3e49d4037.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/afcc24e1-c219-4770-9793-efb3e49d4037.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"593115"},"loc":{"country":"United States","countryCode":"US","city":"New York","address":"Brooklyn, NY, United States","lat":-73.99438,"lan":40.69263},"reviews":[{"at":"2011-05-23T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb88f","fullname":"Anan","imgUrl":"https://robohash.org/593270?set=set1","id":"593270"},"txt":"Really beautiful apartment with stunning views of the city. The place was immaculate, brand new, felt barely touched. Loved being by the water. We were only a few blocks from the L train, which is one stop from the city making it pretty convenient - though we ended up cabbing it most of the time. \r\nWilly, the host, was great, very easy to communicate with and everything was super smooth. No complaints. Hope to stay there again sometime. If you are a TV junky, do be aware there isn't one in the apartment, but we spied one in the common area you may be able to take advantage of.\r\nOverall, 5 stars without a doubt!"},{"at":"2011-05-30T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb71c","fullname":"Joy","imgUrl":"https://robohash.org/597975?set=set1","id":"597975"},"txt":"We loved our stay in Brooklyn. \r\nThe location could not have been better...\r\n contrast the quietness of this East River highrise  and then, within a few minutes  walk to the subway, we were in  Manhattan!!\r\nThe view from  the 14th floor was magnificent.\r\nThe place was neat and clean, fresh and new.\r\nState of the art modern minimalism.\r\nThe door men were very nice and welcoming.\r\n\r\n"},{"at":"2011-07-19T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb24d","fullname":"ScottandJill","imgUrl":"https://robohash.org/812074?set=set1","id":"812074"},"txt":"Great neighborhood, great building, airy and light decor, and all just a short walk away from the promenade!  Willy is a blessing....thank you for providing an accomodation so close to family!!"},{"at":"2011-08-02T04:00:00.000Z","by":{"_id":"622f3407e36c59e6164fbf78","fullname":"Kamil","imgUrl":"https://robohash.org/765476?set=set1","id":"765476"},"txt":"Willy is a wonderful host. Very helpful and flexible. Place is just great - very bright, clean room with calm, diffused light coming from big windows (so many of them!). Superb neighbourhood. Thank you Willy once more!"},{"at":"2011-08-15T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb0c7","fullname":"Colin","imgUrl":"https://robohash.org/797193?set=set1","id":"797193"},"txt":"I would highly recommend all those reading this review to book this apartment. My girlfriend and I had a fantastic stay in Willy's apartment and we wish we could return.\r\n\r\nWe booked this place almost last minute as I had to move to New York to start a job and look at apartments. We're glad we went with this one. It is half a block away from the R and only a few blocks from basically every other subway line worth having in Brooklyn. We could be in Manhattan in a minute's notice. \r\n\r\nIt is only a few blocks away from Montague St, the short shopping street in the middle of Brooklyn Heights, and a little farther away from Court St, the main shopping street this side of the Gowanus Canal. In short, the location is ideal. Don't pass this place up.\r\n\r\nThe apartment itself is spacious and light. The main room/bed room has two windows on three of its four walls and is constantly filled with light. The girl who lives there is a photographer, and it is obvious that she cares about the quality of the light in the room. To top it off, the apartment is appropriately accented with a few mirrors, which brightens the space even more. The bed, with its foam and vinyl mattress, is an absolute pleasure to sleep on. \r\n\r\nThose who come to New York fearing about grime and pests need not be afraid of this apartment. It is kept immaculately clean, and we stayed there ten days without seeing even a single fly. \r\n\r\nSheets and towels are provided, as well as a mostly empty closet and lots of reading material. The internet in the apartment has its ups and downs, but is mostly and unfortunately fairly slow.\r\n\r\nAgain, you would be a fool to pass this place up, especially at this price. "},{"at":"2011-08-23T04:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb4c4","fullname":"Lucas","imgUrl":"https://robohash.org/926181?set=set1","id":"926181"},"txt":"Nice, clean and quiet apartment in one of the most beautiful neighborhoods in NY. Lots of natural light and windows in the room.\r\nVery convenient access to trains/Manhattan and very close to the Promenade.\r\n\r\nWilly was extremely accommodating despite last minute changes on my part due to travel problems and I would happily recommend her place."},{"at":"2011-09-03T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb9ab","fullname":"Benjamin & Nicole","imgUrl":"https://robohash.org/487801?set=set1","id":"487801"},"txt":"Great location in downtown Brooklyn.  2 minutes from several Subway lines to Manhattan and close to shops, restaurants etc.  HUGE private studio apartment that is very bright and open.  \r\n\r\nWould recommend any couple of individual to stay here.  "},{"at":"2011-09-11T04:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb5fc","fullname":"Ged","imgUrl":"https://robohash.org/862153?set=set1","id":"862153"},"txt":"Lovely appartment, very clean, excellent location, safe street, close to subway and easy to get to Manhattan, also accomodating host."},{"at":"2011-09-20T04:00:00.000Z","by":{"_id":"622f3402e36c59e6164faefc","fullname":"Tanya","imgUrl":"https://robohash.org/928526?set=set1","id":"928526"},"txt":"Willy was great, and always available! The place is FULL of light, great location and super close to the metro. It was my first time to NY and it was a great experience. I highly recommend staying at her apartment and would love to stay there again! Thanks Willy!"},{"at":"2011-09-29T04:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb4d5","fullname":"Céline","imgUrl":"https://robohash.org/651148?set=set1","id":"651148"},"txt":"Willy is adorable, she was attentive and we received it in good humor and kindness.\r\nShe did everything to make us comfortable and we lacked nothing. She contacted us several times.\r\nThe apartment is beautiful, very bright and clean.\r\nI recommend this great apartment.\r\nIt is very very good, all the subways in range.\r\nThe area is very good, the street is very pretty and the people of Brooklyn Heights are very nice.\r\n\r\nI recommend this apartment, we definitely go back!"},{"at":"2011-10-04T04:00:00.000Z","by":{"_id":"622f3406e36c59e6164fbc42","fullname":"Sherri","imgUrl":"https://robohash.org/930927?set=set1","id":"930927"},"txt":"We loved the light airy feel to the apartment, and the neighborhood is beautiful and quiet.  It was close to everything, even Starbucks a block away!  Everything was sufficient for the time we were there.  If you stay longer than a week, you may need a few more amenities in the kitchen...but for our 5 days, it was fine, as we were out every day.  The bed was very comfortable, with views to roof gardens.\r\n\r\nI will definitely go back!  Thanks Willy!"},{"at":"2011-10-07T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb283","fullname":"Nidhal","imgUrl":"https://robohash.org/164683?set=set1","id":"164683"},"txt":"Great location that was super convenient to everywhere you need to go. Would definitely stay here again!"},{"at":"2011-10-11T04:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb305","fullname":"Karina","imgUrl":"https://robohash.org/680890?set=set1","id":"680890"},"txt":"Excelente apartamento, bairro muito bonito. Tivemos uma maravilhosa estadia. A Willamain foi muito atenciosa. Gostamos de tudo. Obrigada."},{"at":"2011-10-19T04:00:00.000Z","by":{"_id":"622f3402e36c59e6164faf0b","fullname":"Jennifer","imgUrl":"https://robohash.org/789422?set=set1","id":"789422"},"txt":"First of all, we loved the neighborhood.  It was very close to several subway lines and shops, not to mention the river, from which there is such a beautiful view.  \r\n\r\nSecond, the apartment is a lovely alternative to getting a hotel.  While there were a couple of quirks, they weren't substantial in any way and the price was more than 50% less than nearby hotels.  The lighting in the place is stunning and the building tends to be very quiet.  Getting the keys was not a problem.  We had a bit of trouble getting in to the building a couple of times, but that was resolved with the help of a friendly neighbor who was our designated contact since the host is away.  The door to the apartment was a difficult to unlock as well, but that may have been my error.\r\n\r\nOverall, I would very highly recommend staying at Willy's place.  It's comfortable, inexpensive, especially compared to other nearby options, and charming.  We would like to come back soon!"},{"at":"2011-11-30T05:00:00.000Z","by":{"_id":"622f3402e36c59e6164faef1","fullname":"Beatriz","imgUrl":"https://robohash.org/998256?set=set1","id":"998256"},"txt":"Nice appartment, clean, plenty of light. Highly recommended. Excellent neighbourhood, near to subways,shops, supermarket. Thank you for giving the place to all my family!"},{"at":"2011-12-15T05:00:00.000Z","by":{"_id":"622f3401e36c59e6164faba5","fullname":"Anna","imgUrl":"https://robohash.org/575910?set=set1","id":"575910"},"txt":"Willy's apartment is phenomenal -- the location can't be beat (heart of Brooklyn Heights), the space is charming, and Willy's a wonderful host. Highly recommended!"},{"at":"2011-12-31T05:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb8eb","fullname":"Nancy","imgUrl":"https://robohash.org/1481431?set=set1","id":"1481431"},"txt":"Lovely apartment just as we had hoped.  Great location."},{"at":"2012-01-09T05:00:00.000Z","by":{"_id":"622f3403e36c59e6164fafdd","fullname":"Maria","imgUrl":"https://robohash.org/809984?set=set1","id":"809984"},"txt":"Great Host!!, Always in comunication.  We loved the apt, the building and the neighborhood. Was a great experience and a great trip."},{"at":"2012-04-23T04:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb531","fullname":"Debbie","imgUrl":"https://robohash.org/1907558?set=set1","id":"1907558"},"txt":"I spent a delightful week at Willy's hideaway apartment. I call it hideaway because the apt. faces the back of the building and you hear nothing except birds chirping, no street noise. The apartment is very small: essentially the large, airy and lovely bedroom you see in the photo and then a tiny kitchen and bathroom. But it is the perfect setup and the PERFECT location if you want to be in the heart of Brooklyn Heights. There is a desk in the bedroom and an Internet connection (not perfect, but mostly worked) so I was able to get some work done too.  Willy was delightful to interact with - accommodating and prompt. After exchanging mobile numbers, we were able to text back and forth, which is very efficient. The bathroom sink turned out to be completely clogged but Willy got a plumber to fix it the next day. She met the plumber there and dealt with the situation, so it was no trouble at all for us. Definitely recommend."},{"at":"2012-05-15T04:00:00.000Z","by":{"_id":"622f3402e36c59e6164fac05","fullname":"Ana","imgUrl":"https://robohash.org/497426?set=set1","id":"497426"},"txt":"Nice apartment, Great location. Good host. Would return. "}],"likedByUsers":[]}],"myStays":[],"guestsReservations":[{"stay":{"stayId":"65a5b653a57dc34cac57f3de","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663437017/gjyzgdjngyrhfrj2loxz.jpg","stayName":"➳ Logement  4 1/2 Rosemont ❤️"},"checkIn":"Feb 1","checkOut":"Feb 3","booked":"Jan 16","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Rebekah","location":"Montreal, Quebec, Canada","about":"","thumbnailUrl":"https://a0.muscache.com/im/pictures/367d4387-064d-46f6-b03c-fabe661180e3.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/367d4387-064d-46f6-b03c-fabe661180e3.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"84813481"},"guest":{"_id":"65a41ab1316378825516e565","username":"demo_user","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Demo User"},"totalPrice":899.8,"status":"Accepted","_id":"0U4ir5"},{"stay":{"stayId":"65a58d5c9793d88f7e036fa4","stayImg":"https://a0.muscache.com/im/pictures/miso/Hosting-32792828/original/8b971f6c-c322-4825-8e51-475be52f0c10.jpeg?im_w=960\n","stayName":"Yoshino Sakura "},"checkIn":"Feb 4","checkOut":"Feb 9","booked":"Jan 16","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Boris Kho","thumbnailUrl":"https://res.cloudinary.com/dlscarx4f/image/upload/v1705345507/profile_lynbhp.jpg\n","hostingYears":"3"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":7480,"status":"pending","_id":"atzPYF"}],"chats":[],"trips":[{"stay":{"stayId":"65a4142d0f466e5567f5a47c","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 5","checkOut":"Feb 6","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Nadav Barda","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410"},"guest":{"_id":"65a42221f7cfe3ae31df43cc","username":"iris","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Iris Y"},"totalPrice":654.5,"status":"Accepted","_id":"iFXy5V"},{"stay":{"stayId":"65a4142d0f466e5567f5a47c","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 5","checkOut":"Feb 8","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Nave David","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://ca.slack-edge.com/T05H7RU7LTF-U060EFHM8NM-0017ca0cacfa-512","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410","hostingYears":8},"guest":{"_id":"65a42221f7cfe3ae31df43cc","username":"iris","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Iris Y"},"totalPrice":1963.5,"status":"Accepted","_id":"amKpKv"},{"stay":{"stayId":"65a4142d0f466e5567f5a47c","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 1","checkOut":"Feb 2","booked":"Jan 17","host":{"_id":"65a41ab1316378825516e565","fullname":"Nave David","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://ca.slack-edge.com/T05H7RU7LTF-U060EFHM8NM-0017ca0cacfa-512","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410","hostingYears":8},"guest":{"_id":"65a42221f7cfe3ae31df43cc","username":"iris","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Iris Y"},"totalPrice":654.5,"status":"Accepted","_id":"uGxnOP"}]} 
+17.1.2024, 13:49:13 - INFO - Setting socket.userId = [object Object] for socket [id: ndL2CxzU2fc3hRyEAAAH] 
+17.1.2024, 13:49:13 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:49:13 - INFO - New connected socket [id: hjDkbTKqGuHh7DmxAAAJ] 
+17.1.2024, 13:49:13 - INFO - Req was made | / 
+17.1.2024, 13:49:13 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:49:13 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: hjDkbTKqGuHh7DmxAAAJ] 
+17.1.2024, 13:49:33 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:49:34 - INFO - New connected socket [id: 2kwEl-92JVuGZIa-AAAL] 
+17.1.2024, 13:49:34 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: 2kwEl-92JVuGZIa-AAAL] 
+17.1.2024, 13:51:07 - INFO - Req was made | / 
+17.1.2024, 13:51:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:51:08 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:51:08 - INFO - New connected socket [id: 8cTtKZGmE29jcCoTAAAN] 
+17.1.2024, 13:51:08 - INFO - Req was made | / 
+17.1.2024, 13:51:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:51:08 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: 8cTtKZGmE29jcCoTAAAN] 
+17.1.2024, 13:51:14 - INFO - Req was made | / 
+17.1.2024, 13:51:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:51:14 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:51:14 - INFO - New connected socket [id: 4xvL9e4OImqy2lENAAAP] 
+17.1.2024, 13:51:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:51:14 - INFO - Req was made | / 
+17.1.2024, 13:51:14 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: 4xvL9e4OImqy2lENAAAP] 
+17.1.2024, 13:51:18 - INFO - Req was made | / 
+17.1.2024, 13:51:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:51:18 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:51:18 - INFO - New connected socket [id: ugYXZISavOMrg0zkAAAR] 
+17.1.2024, 13:51:18 - INFO - Req was made | / 
+17.1.2024, 13:51:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:51:18 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: ugYXZISavOMrg0zkAAAR] 
+17.1.2024, 13:51:52 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:51:53 - INFO - New connected socket [id: vs5cbpiFX658Ym0kAAAT] 
+17.1.2024, 13:51:53 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: vs5cbpiFX658Ym0kAAAT] 
+17.1.2024, 13:55:55 - INFO - Req was made | / 
+17.1.2024, 13:55:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:56:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:56:08 - INFO - Req was made | / 
+17.1.2024, 13:56:08 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:56:09 - INFO - New connected socket [id: wWUVnvgbDAbIOKTmAAAV] 
+17.1.2024, 13:56:09 - INFO - Req was made | / 
+17.1.2024, 13:56:09 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 13:56:09 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: wWUVnvgbDAbIOKTmAAAV] 
+17.1.2024, 13:56:11 - INFO - Req was made | / 
+17.1.2024, 13:56:11 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 13:56:56 - INFO - Emiting event: order-recieved to user: 65a42221f7cfe3ae31df43cc socket [id: vs5cbpiFX658Ym0kAAAT] 
+17.1.2024, 13:57:38 - INFO - Emiting event: host-order-answer to user: 65a5c318c0bb8d5af786f9fd socket [id: wWUVnvgbDAbIOKTmAAAV] 
+17.1.2024, 13:57:38 - INFO - Emiting event: host-order-answer to user: 65a5c318c0bb8d5af786f9fd socket [id: wWUVnvgbDAbIOKTmAAAV] 
+17.1.2024, 13:59:32 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 13:59:33 - INFO - New connected socket [id: hver7MJCVYLVAobVAAAX] 
+17.1.2024, 13:59:33 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: hver7MJCVYLVAobVAAAX] 
+17.1.2024, 14:00:14 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:00:14 - INFO - New connected socket [id: UWniKZ7RFV3b3tdPAAAZ] 
+17.1.2024, 14:00:14 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: UWniKZ7RFV3b3tdPAAAZ] 
+17.1.2024, 14:00:59 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:00:59 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:01:00 - INFO - New connected socket [id: myzsqggO7PGE6Z-FAAAc] 
+17.1.2024, 14:01:00 - INFO - New connected socket [id: uz2x5_5Rb8XvzKsDAAAd] 
+17.1.2024, 14:01:00 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: myzsqggO7PGE6Z-FAAAc] 
+17.1.2024, 14:01:00 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: uz2x5_5Rb8XvzKsDAAAd] 
+17.1.2024, 14:02:32 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:02:32 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:02:33 - INFO - New connected socket [id: iykGAGoYuVxd3V26AAAg] 
+17.1.2024, 14:02:33 - INFO - New connected socket [id: PEwbyPciJAzFnFVFAAAh] 
+17.1.2024, 14:02:33 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: iykGAGoYuVxd3V26AAAg] 
+17.1.2024, 14:02:33 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: PEwbyPciJAzFnFVFAAAh] 
+17.1.2024, 14:04:27 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:04:27 - INFO - New connected socket [id: _O_EKc8KYtzBLI6JAAAj] 
+17.1.2024, 14:04:27 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: _O_EKc8KYtzBLI6JAAAj] 
+17.1.2024, 14:04:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:04:27 - INFO - Req was made | / 
+17.1.2024, 14:10:49 - INFO - Removing socket.userId for socket [id: _O_EKc8KYtzBLI6JAAAj] 
+17.1.2024, 14:10:49 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:10:50 - INFO - New connected socket [id: kzkQNUMDVdw36lwcAAAl] 
+17.1.2024, 14:10:50 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:10:50 - INFO - Req was made | / 
+17.1.2024, 14:15:02 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:15:03 - INFO - New connected socket [id: RI6pvDqvODZyP3lQAAAn] 
+17.1.2024, 14:15:43 - DEBUG - auth.service - login with username: NoyLeibo 
+17.1.2024, 14:15:43 - INFO - User login:  | {"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","fullname":"Noy Leibovich","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","trips":[{"stay":{"stayId":"65a5b653a57dc34cac57f3dc","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg","stayName":"1+1 (4 PERSON) Flat in Central İstanbul"},"checkIn":"Invalid Date","checkOut":"Invalid Date","booked":"Jan 16","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Iris Yatskaer","location":"Istanbul, Istanbul, Turkey","about":"I am 29 years old. 112 emergency service ambulance driver. Laptop technical service owner. Likes to travel by motorcycle","thumbnailUrl":"https://a0.muscache.com/im/pictures/329b413b-02c4-470f-ad8e-fd48f8d2abb2.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/329b413b-02c4-470f-ad8e-fd48f8d2abb2.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"124726528","hostingYears":0},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":522.5,"status":"Accepted","_id":"twulmQ"},{"stay":{"stayId":"65a4142d0f466e5567f5a47c","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 4","checkOut":"Feb 9","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Nave David","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://ca.slack-edge.com/T05H7RU7LTF-U060EFHM8NM-0017ca0cacfa-512","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410","hostingYears":8},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":3272.5,"status":"Rejected","_id":"gTHGaP"},{"stay":{"stayId":"65a5b653a57dc34cac57f3e3","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436523/ptcgbydjsamgf67a0npw.jpg","stayName":"Mezzos Studio in Sydney CBD"},"checkIn":"Jan 28","checkOut":"Jan 31","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Larisa SSP","location":"Melbourne, Victoria, Australia","about":"Your trusted international host across major cities. Feel at home wherever you are! LIVE · LOVE · EXPLORE\r\n\r\n- Melbourne\r\n- Sydney\r\n- Gold Coast\r\n- Auckland\r\n- London\r\n- Kuala Lumpur\r\n- George Town\r\n- Johor Bahru\r\n\r\nI speak fluent English, Cantonese (广东话), Mandarin (普通话), Bahasa Melayu, Bahasa Indonesia & Tagalog.\r\n\r\nIf the dates you're after are available on my calendars, you may proceed to \"INSTANT-BOOK\" em'.\r\n\r\nMy calendars on AirBnb are always up to date, so if they're blocked and you can't select them, it pretty much means someone else has already booked em'.\r\n\r\nHappy stays & safe travels :)\r\n\r\nView more properties HERE (JL1) > https://www.airbnb.com.au/users/8530753/listings\r\n \r\nOR HERE (JL1) > https://www.airbnb.com.au/s/homes?host_id=8530753\r\n \r\nOR HERE (JL3) > https://www.airbnb.com.au/s/homes?host_id=114384153\r\n \r\nOR HERE (JLMY) > https://www.airbnb.com.au/s/homes?host_id=177114776\r\n\r\nOR HERE (JLMY2) > https://www.airbnb.com.au/s/homes?host_id=217495299\r\n\r\nOR HERE (JLMY3) > https://www.airbnb.com.au/s/homes?host_id=228789871","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/user/c7020809-2d2d-4e64-a38b-3acc7924b1d6.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/user/c7020809-2d2d-4e64-a38b-3acc7924b1d6.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"8530753"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":491.7,"status":"Accepted","_id":"lA9gQd"},{"stay":{"stayId":"65a5b653a57dc34cac57f3ed","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436588/cxkvvaext8m0kjuaxcrk.jpg","stayName":"Penthouse. Terrace."},"checkIn":"Apr 1","checkOut":"Apr 7","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Manuel","location":"Barcelona, Cataluña, Spain","about":"Amigo de sus huéspedes.\r\nViajero habitual.\r\nProfundo conocedor de la vida cultural de la ciudad de Barcelona. Facilitador de buena información sobre la Ciudad. Ayudo a \"integrar\" al viajero en la Ciudad.","responseTime":"within an hour","thumbnailUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705241642/WhatsApp_Image_2024-01-14_at_16.13.27_agqbsi.jpg","pictureUrl":"https://a0.muscache.com/im/users/3039107/profile_pic/1343297071/original.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"3039107"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":574.2,"status":"Accepted","_id":"1UBgXQ"},{"stay":{"stayId":"65a5b815a57dc34cac57f403","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436542/e96nrbkjz8mecvsbzukk.jpg","stayName":"Cosy rooms close to the metro and the River"},"checkIn":"Mar 18","checkOut":"Mar 21","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Alexia & Denis","location":"Montreal, Quebec, Canada","about":"Hi everyone, \r\n\r\nWe are a couple of French people, living in Montreal for now more than two years. I am an assistant manager in a clothing store and Denis is an IT/electronic engineer.\r\n\r\nWe are clean, very lively, open minded and we like to meet new people from all over the world to share our experiences :)\r\n\r\nHope to see you soon !","responseTime":"within a few hours","thumbnailUrl":"https://a0.muscache.com/im/pictures/9768e629-3f17-4d5b-b211-f55f2c22b73e.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/9768e629-3f17-4d5b-b211-f55f2c22b73e.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"5591356"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":165,"status":"Accepted","_id":"V5OsEe"},{"stay":{"stayId":"65a70cc04c1cb0295c05ed23","stayImg":"https://a0.muscache.com/im/pictures/miso/Hosting-806863249494914754/original/bb925365-25b6-4769-bfa9-d3a521e14579.jpeg?im_w=1200","stayName":"Yoshino Sakura "},"checkIn":"Jan 25","checkOut":"Jan 30","booked":"Jan 17","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Boris Kho","thumbnailUrl":"https://res.cloudinary.com/dlscarx4f/image/upload/v1705345507/profile_lynbhp.jpg\n","hostingYears":"3"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":7480,"status":"Accepted","_id":"A3viBz"}],"wishlist":[{"_id":"65a4142d0f466e5567f5a47c","name":"Westin Kaanapali KORVN 2BR","type":"National parks","imgUrls":["http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg","https://a0.muscache.com/im/pictures/miso/Hosting-1038042838655339722/original/fe720ccb-74f5-4822-86e1-617c743e3d13.jpeg?im_w=720","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"],"price":595,"summary":"Westin Kaanapali Ocean Resort Villas North timeshare - Pay resort: $14-20/day, stays under 7 night $38/res - Inquire about availability, I review then offer/approve if available :) - READ \"The Space\" for cleaning/etc AND brief explanation about timeshare reservations - Want guaranteed view for additional cost? Must be weekly rental, other restrictions - Wheelchair accessible / ADA, call resort directly to ensure U receive. If U need ADA U MUST inform us BEFORE booking.","capacity":8,"amenities":["TV","Cable TV","Internet","Wifi","Air conditioning","Wheelchair accessible","Pool","Kitchen","Free parking on premises","Doorman","Gym","Elevator","Hot tub","Heating","Family/kid friendly","Suitable for events","Washer","Dryer","Smoke detector","Carbon monoxide detector","First aid kit","Safety card","Fire extinguisher","Essentials","Shampoo","24-hour check-in","Hangers","Hair dryer","Iron","Laptop friendly workspace","Self check-in","Building staff","Private entrance","Room-darkening shades","Hot water","Bed linens","Extra pillows and blankets","Ethernet connection","Luggage dropoff allowed","Long term stays allowed","Ground floor access","Wide hallway clearance","Step-free access","Wide doorway","Flat path to front door","Well-lit path to entrance","Disabled parking spot","Step-free access","Wide doorway","Wide clearance to bed","Step-free access","Wide doorway","Step-free access","Wide entryway","Waterfront","Beachfront"],"bathrooms":2,"bedrooms":2,"roomType":"Entire home/apt","host":{"_id":"65a41ab1316378825516e565","fullname":"Nave David","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://ca.slack-edge.com/T05H7RU7LTF-U060EFHM8NM-0017ca0cacfa-512","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410","hostingYears":8},"loc":{"country":"United States","countryCode":"US","city":"Maui","address":"Lahaina, HI, United States","lat":-156.6917,"lan":20.93792},"reviews":[{"at":"2016-06-12T04:00:00.000Z","by":{"_id":"622f3407e36c59e6164fc004","fullname":"Kiesha","imgUrl":"https://robohash.org/10711825?set=set1","id":"10711825"},"txt":"I had a great experience working with Patty and Peter.  Both were very attentive in sorting out the booking details and following up directly when I had questions.  I rented a 2 bedroom unit at the Westin Villas  in Maui and both the unit and property was absolutely amazing.  I think we had the best unit on the resort complete with 2 outdoor patios with direct access  to  the  beach.  I would HIGHLY recommend renting with Patty and Peter."},{"at":"2016-07-28T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb204","fullname":"Chris","imgUrl":"https://robohash.org/70072865?set=set1","id":"70072865"},"txt":"Peter quickly responded to any questions I had before, and during the trip. Will use again, highly recommend. "},{"at":"2016-09-11T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb703","fullname":"Kim","imgUrl":"https://robohash.org/71179725?set=set1","id":"71179725"},"txt":"We had the perfect location for a room, first floor right in front of the pool. The resort is beautiful, and the staff is so friendly! I enjoyed it so much, we talked about buying a timeshare ourselves."},{"at":"2017-01-07T05:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb37f","fullname":"Tracy","imgUrl":"https://robohash.org/65593239?set=set1","id":"65593239"},"txt":"Beautiful location. Patty & Peter were super helpful and easy to work with!"},{"at":"2017-04-07T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb105","fullname":"Duyen","imgUrl":"https://robohash.org/26215688?set=set1","id":"26215688"},"txt":"Great spot for the kids and family and close to beach and everything at the resort. We will definitely be back."},{"at":"2017-05-09T04:00:00.000Z","by":{"_id":"622f3402e36c59e6164fabbe","fullname":"Binh","imgUrl":"https://robohash.org/117390236?set=set1","id":"117390236"},"txt":"The unit and the Westin offer variety of amenities you can possibly ask for. Sofa beds are very comfortable to sleep in. But there is charge for ocean view upgrade. Overall, I highly recommend to book with Patty and Peter. "},{"at":"2018-02-24T05:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb4af","fullname":"Samy","imgUrl":"https://robohash.org/15143517?set=set1","id":"15143517"},"txt":"We spent a great week at Patty and Peter's place. The place was exactly as shown in the pictures, very comfortable, nice view, with all amenities. The resort is great with several pools, a long beach, many restaurants, and of course a lot of great activities all around."},{"at":"2018-06-16T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb87b","fullname":"Breanne","imgUrl":"https://robohash.org/78173091?set=set1","id":"78173091"},"txt":"This place was perfect for my family. We had plenty of room to spread out and the service could not have been any better"},{"at":"2018-06-29T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb713","fullname":"Kimberly","imgUrl":"https://robohash.org/100535039?set=set1","id":"100535039"},"txt":"We love Westin Kaanapalli"},{"at":1705362944721,"by":{"_id":"65a5c318c0bb8d5af786f9fd","fullname":"Noy Leibovich","imgUrl":null},"txt":null,"id":"qnGtg"}],"likedByUsers":[],"beds":"7","rate":"5.0"},{"_id":"65a5b653a57dc34cac57f3dc","name":"1+1 (4 PERSON) Flat in Central İstanbul","type":"Islands","imgUrls":["https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/06e6395b-a488-49d5-ad6d-43e17331dc15.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/d74b1bc2-bf0a-4b89-b19a-fd3bb6690d79.jpeg?im_w=720","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436376/phpltehcr6uq9lh5jlax.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436988/rnk62shhgqcwvi45ao43.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436893/pkhxv5j90ubdzbpgdbdb.jpg"],"price":475,"summary":"Clean and useful flat. Center of Kocamustafapaşa. Near to Taksim-Beyoğlu, Eminönü, Beyazıt, Sultanahmet, Sirkeci, Bosprous.  5 minutes to walk sea and hospital. 24 hours taxi bus Taksim - Kocamustafapaşa  (end of the our Street),","capacity":4,"amenities":["TV","Cable TV","Wifi","Kitchen","Smoking allowed","Pets allowed","Heating","Washer","Essentials","Lock on bedroom door","Hangers","Hair dryer","Iron","Laptop friendly workspace","Private living room","Children’s books and toys","Window guards","Hot water","Bed linens","Extra pillows and blankets","Pocket wifi","Refrigerator","Dishes and silverware","Cooking basics","Oven","Patio or balcony","Luggage dropoff allowed","Long term stays allowed","Cleaning before checkout","Hot water kettle"],"bathrooms":1,"bedrooms":1,"roomType":"Entire home/apt","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Iris Yatskaer","location":"Istanbul, Istanbul, Turkey","about":"I am 29 years old. 112 emergency service ambulance driver. Laptop technical service owner. Likes to travel by motorcycle","thumbnailUrl":"https://a0.muscache.com/im/pictures/329b413b-02c4-470f-ad8e-fd48f8d2abb2.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/329b413b-02c4-470f-ad8e-fd48f8d2abb2.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"124726528","hostingYears":0},"loc":{"country":"Turkey","countryCode":"TR","city":"Istanbul","address":"İstanbul, Istanbul, Turkey","lat":28.93204,"lan":41.00193},"reviews":[{"at":"2017-08-26T04:00:00.000Z","by":{"_id":"622f3407e36c59e6164fbd01","fullname":"Aoitef","imgUrl":"https://robohash.org/141599143?set=set1","id":"141599143"},"txt":"Le logement est bien équipé. .Proche de tous bus corniche  le marché. ..endroit très calme et stratégique pour les courses et les autres stations de transport. ..C'est 2mn pour les bus et 25mn pour arriver au tramway  à (Website hidden by Airbnb) la famille  de Mehmet très gentille. .."},{"at":"2017-09-12T04:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb3d4","fullname":"Mariana","imgUrl":"https://robohash.org/116706753?set=set1","id":"116706753"},"txt":"La estancia con Mehmet fue muy buena! Mis amigas y yo disfrutamos del lugar, es bueno tener el departamento solo y el transporte público está a tan solo 2 minutos caminando. Lo recomendamos!"},{"at":"2017-10-01T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb7a2","fullname":"Игорь","imgUrl":"https://robohash.org/145063482?set=set1","id":"145063482"},"txt":"Mehmet's flat is very comfortable for living in Istanbul. It is located close center of Istanbul. If you go to Istanbul to see main places this flat is best option. Living in this flat you can get on a bus and go to Ayasofya in 25-30 minutes for example. There are many good place for eating and shopping near the house.\nWhen we arrived in Istanbul Mehmet's parents met us and show the apartament. They live in this house on the next floor and they are very nice people. \nI advice you to choose Mehmet's fat if you will go to Istanbul."}],"likedByUsers":[],"rate":"4.91"},{"_id":"65a5b653a57dc34cac57f3de","name":"➳ Logement  4 1/2 Rosemont ❤️","type":"Islands","imgUrls":["https://a0.muscache.com/im/pictures/miso/Hosting-6598905/original/5a897a6a-2f80-46a7-a2f1-4809f341e754.jpeg?im_w=1200","https://a0.muscache.com/im/pictures/miso/Hosting-6598905/original/a46f7b33-228c-4819-8eab-9fe661b92685.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-6598905/original/a8aa352f-92f1-4ef5-8b40-9762f5b44ac2.jpeg?im_w=720","https://a0.muscache.com/im/pictures/83354695/aedaabab_original.jpg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-6598905/original/d2bcfc72-5ed7-418d-a012-4cfe66efe77a.jpeg?im_w=720"],"price":409,"summary":"Chers Glob-trotteurs, travailleurs, vacanciers ou qui que vous soyez :)  Notre demeure est au dernier étage d’un petit immeuble (3 étages), situé à 20 min du centre ville.   L’appartement possède un salon double avec chambre ,balcon donnant sur une rue passante, deux chambres dont une fermée, une salle de bain ainsi qu’une cuisine avec un second balcon donnant cette fois sur une vue panoramique.  Les rues Beaubien et Masson regorgent de petits cafés, restaurants et commerces en tout genre !","capacity":1,"amenities":["TV","Internet","Wifi","Kitchen","Free parking on premises","Breakfast","Heating","Family/kid friendly","Suitable for events","Washer","Dryer","Smoke detector","Essentials","24-hour check-in","Hangers","Hair dryer","Laptop friendly workspace","Private entrance","Hot water"],"bathrooms":1,"bedrooms":1,"roomType":"Private room","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Noam Saar","location":"Montreal, Quebec, Canada","about":"","thumbnailUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705362492/ba892fb9-6a68-4629-a7cf-7be9242826f2_nvvffs.jpg","pictureUrl":"https://a0.muscache.com/im/pictures/367d4387-064d-46f6-b03c-fabe661180e3.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"84813481","hostingYears":5},"loc":{"country":"Canada","countryCode":"CA","city":"Montreal","address":"Montréal, Québec, Canada","lat":-73.58889,"lan":45.54424},"reviews":[{"at":"2016-09-21T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb0fa","fullname":"Hélène","imgUrl":"https://robohash.org/89982100?set=set1","id":"89982100"},"txt":"Nous n'avons pas rencontré Rebekah, c'est un ami à elle qui nous a donné et repris les clés. Nous étions une famille de 4 (un bébé et un enfant de 4 ans).\r\nNous avons aimé : la proximité des commerces (supermarché, pharmacie, fruiterie, le chaleureux Rose Café), le bus au pied de l'immeuble, la taille de l'appartement confortable pour 4, \r\nNous avons moins aimé : l'appartement pas très propre (odeur de cigarette, cendrier pas vidé, mégot dans la chambre - pour un logement non fumeur !!- le parquet qui noircit les genoux de notre fille à quatre pattes, le frigo pas vidé, la poussière sous les coussins des canapés ... et j'en passe), le manque d'équipement (balai, aspirateur, vaisselle pour préparer à manger), la machine à laver défectueuse (elle est tombée en panne après 2 utilisations, nous avons du aller en laverie), les lumières cassées dans les 2 chambres (que nous avons réparées), la TV qui est en fait un écran pour regarder des DVD, le couchage pour la 3e personne dans la petite chambre fermée est en fait un canapé non convertible de 1 mètre de long (notre fils de 4 ans ne pouvait pas dormir dessus ...). Rebekah nous a donc fait passer un matelas gonflable.\r\nC'est un appartement à moindre cout, certes, mais pas conforme à la description. Bien pour un couple qui aime manger à l’extérieur."}],"likedByUsers":[],"rate":"4.20"}],"myStays":[],"guestsReservations":[{"stay":{"stayId":"65a63e6ec0bb8d5af786f9ff","stayImg":"https://res.cloudinary.com/dlscarx4f/image/upload/v1705393736/fuaqbkplt69f27gob7s5.jpg","stayName":"Amazing!"},"checkIn":"Feb 5","checkOut":"Feb 20","booked":"Jan 16","host":{"_id":"65a5c318c0bb8d5af786f9fd","fullname":"Noy Leibovich"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Noy Leibovich"},"totalPrice":25014,"status":"Accepted","_id":"DCjbH8"},{"stay":{"stayId":"65a63e6ec0bb8d5af786f9ff","stayImg":"https://res.cloudinary.com/dlscarx4f/image/upload/v1705393736/fuaqbkplt69f27gob7s5.jpg","stayName":"Amazing!"},"checkIn":"Invalid Date","checkOut":"Invalid Date","booked":"Jan 16","host":{"_id":"65a5c318c0bb8d5af786f9fd","fullname":"Noy Leibovich"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705241642/WhatsApp_Image_2024-01-14_at_16.13.27_agqbsi.jpg","fullname":"Noy Leibovich"},"totalPrice":1667.6,"status":"Accepted","_id":"6oBHyJ"}],"chats":[]} 
+17.1.2024, 14:15:43 - INFO - Setting socket.userId = [object Object] for socket [id: RI6pvDqvODZyP3lQAAAn] 
+17.1.2024, 14:16:23 - INFO - Req was made | / 
+17.1.2024, 14:16:23 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:16:23 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:16:24 - INFO - New connected socket [id: NFkAo9coThxGV-HnAAAp] 
+17.1.2024, 14:16:24 - INFO - Req was made | / 
+17.1.2024, 14:16:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:16:24 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: NFkAo9coThxGV-HnAAAp] 
+17.1.2024, 14:17:56 - INFO - Removing socket.userId for socket [id: NFkAo9coThxGV-HnAAAp] 
+17.1.2024, 14:17:56 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:17:57 - INFO - New connected socket [id: hew1xkIrBd2CSlAcAAAr] 
+17.1.2024, 14:17:57 - INFO - Req was made | / 
+17.1.2024, 14:17:57 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:20:11 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:20:11 - INFO - Req was made | / 
+17.1.2024, 14:21:13 - DEBUG - auth.service - signup with username: , fullname:  
+17.1.2024, 14:21:13 - ERROR - Failed to signup Error: Missing details 
+17.1.2024, 14:21:13 - DEBUG - auth.service - signup with username: , fullname:  
+17.1.2024, 14:21:13 - ERROR - Failed to signup Error: Missing details 
+17.1.2024, 14:21:14 - DEBUG - auth.service - signup with username: , fullname:  
+17.1.2024, 14:21:14 - ERROR - Failed to signup Error: Missing details 
+17.1.2024, 14:24:58 - INFO - Req was made | / 
+17.1.2024, 14:24:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:24:58 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:24:59 - INFO - New connected socket [id: TjpkZgFhZy_EKH_yAAAt] 
+17.1.2024, 14:24:59 - INFO - Req was made | / 
+17.1.2024, 14:24:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:30:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:30:37 - INFO - Req was made | / 
+17.1.2024, 14:30:37 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:30:38 - INFO - New connected socket [id: lM0j2qMFDPid_oIWAAAv] 
+17.1.2024, 14:30:38 - INFO - Req was made | / 
+17.1.2024, 14:30:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:06 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"2","beds":"2","bathrooms":"2","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:06 - INFO - Req was made | / 
+17.1.2024, 14:48:09 - INFO - Req was made | / 
+17.1.2024, 14:48:09 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"2","beds":"2","bathrooms":"2","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:09 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:48:09 - INFO - New connected socket [id: UDnleSW90QbcUTfhAAAx] 
+17.1.2024, 14:48:09 - INFO - Req was made | / 
+17.1.2024, 14:48:09 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:14 - INFO - Req was made | / 
+17.1.2024, 14:48:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"2","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:19 - INFO - Req was made | / 
+17.1.2024, 14:48:19 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:27 - INFO - Req was made | / 
+17.1.2024, 14:48:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"3","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:29 - INFO - Req was made | / 
+17.1.2024, 14:48:29 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"3","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:29 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:48:29 - INFO - New connected socket [id: JnU9wUr1ZAhOImj6AAAz] 
+17.1.2024, 14:48:29 - INFO - Req was made | / 
+17.1.2024, 14:48:29 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:32 - INFO - Req was made | / 
+17.1.2024, 14:48:32 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"3","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:41 - INFO - Req was made | / 
+17.1.2024, 14:48:41 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"3","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:48:41 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:48:41 - INFO - New connected socket [id: F2-N2wqKsJ-AdjELAAA1] 
+17.1.2024, 14:48:41 - INFO - Req was made | / 
+17.1.2024, 14:48:41 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:50:20 - INFO - Req was made | / 
+17.1.2024, 14:50:20 - DEBUG - Getting Stays | {"priceRange":["1572","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:50:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:50:55 - INFO - Req was made | / 
+17.1.2024, 14:51:01 - INFO - Req was made | / 
+17.1.2024, 14:51:01 - DEBUG - Getting Stays | {"priceRange":["1625","2000"],"bedrooms":"","beds":"3","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:51:09 - INFO - Req was made | / 
+17.1.2024, 14:51:09 - DEBUG - Getting Stays | {"priceRange":["1625","2000"],"bedrooms":"","beds":"3","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:51:09 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:51:09 - INFO - New connected socket [id: sjQ9AZjJhDHJvhWBAAA3] 
+17.1.2024, 14:51:09 - INFO - Req was made | / 
+17.1.2024, 14:51:09 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:51:17 - INFO - Req was made | / 
+17.1.2024, 14:51:17 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"3","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:51:45 - INFO - Req was made | / 
+17.1.2024, 14:51:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"3","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:51:45 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:51:45 - INFO - New connected socket [id: gljaMBZ5R9qBsw3NAAA5] 
+17.1.2024, 14:51:46 - INFO - Req was made | / 
+17.1.2024, 14:51:46 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:51:49 - INFO - Req was made | / 
+17.1.2024, 14:51:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 14:51:55 - INFO - Req was made | / 
+17.1.2024, 14:51:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Italy"} 
+17.1.2024, 14:51:59 - INFO - Req was made | / 
+17.1.2024, 14:51:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Israel"} 
+17.1.2024, 14:52:05 - INFO - Req was made | / 
+17.1.2024, 14:52:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"United States"} 
+17.1.2024, 14:52:08 - INFO - Req was made | / 
+17.1.2024, 14:52:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"United States"} 
+17.1.2024, 14:52:08 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:52:08 - INFO - New connected socket [id: PZHVYfi29VSEJbm9AAA7] 
+17.1.2024, 14:52:08 - INFO - Req was made | / 
+17.1.2024, 14:52:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:52:14 - INFO - Req was made | / 
+17.1.2024, 14:52:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:52:17 - INFO - Req was made | / 
+17.1.2024, 14:52:17 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"4","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:52:21 - INFO - Req was made | / 
+17.1.2024, 14:52:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"12","Children":"4","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:52:26 - INFO - Req was made | / 
+17.1.2024, 14:52:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"12","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:52:28 - INFO - Req was made | / 
+17.1.2024, 14:52:28 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"9","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:52:31 - INFO - Req was made | / 
+17.1.2024, 14:52:31 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"7","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:54:18 - INFO - Req was made | / 
+17.1.2024, 14:54:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"7","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:54:18 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:54:19 - INFO - New connected socket [id: ikm0P0JBQHFqZ9IgAAA9] 
+17.1.2024, 14:54:19 - INFO - Req was made | / 
+17.1.2024, 14:54:19 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:56:04 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:56:04 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:56:14 - INFO - New connected socket [id: 0b5p0NkYT_WM5xtbAAA_] 
+17.1.2024, 14:56:15 - INFO - New connected socket [id: RmwMu94z0xxfQ3mYAABB] 
+17.1.2024, 14:56:15 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: RmwMu94z0xxfQ3mYAABB] 
+17.1.2024, 14:56:17 - INFO - Req was made | / 
+17.1.2024, 14:56:17 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:56:17 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:56:17 - INFO - New connected socket [id: FPcEr6mlP6SgUlcZAABD] 
+17.1.2024, 14:56:17 - INFO - Req was made | / 
+17.1.2024, 14:56:17 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:57:57 - INFO - Req was made | / 
+17.1.2024, 14:57:57 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:58:04 - INFO - Req was made | / 
+17.1.2024, 14:58:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:58:34 - INFO - Req was made | / 
+17.1.2024, 14:58:34 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:59:18 - INFO - Req was made | / 
+17.1.2024, 14:59:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:59:21 - INFO - Req was made | / 
+17.1.2024, 14:59:21 - DEBUG - Getting Stays | {"placeType":["Iron"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:59:34 - INFO - Req was made | / 
+17.1.2024, 14:59:34 - DEBUG - Getting Stays | {"placeType":["Iron"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 14:59:34 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 14:59:35 - INFO - New connected socket [id: hCRjmC_QxgBRHrb7AABF] 
+17.1.2024, 14:59:35 - INFO - Req was made | / 
+17.1.2024, 14:59:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:03:02 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:03:03 - INFO - New connected socket [id: slALhT--CfJqCPCYAABH] 
+17.1.2024, 15:03:17 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:03:17 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:03:18 - INFO - New connected socket [id: hRs1AxwNtBXnLAbyAABJ] 
+17.1.2024, 15:03:18 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: hRs1AxwNtBXnLAbyAABJ] 
+17.1.2024, 15:03:18 - INFO - New connected socket [id: Btnj0LANWBFxaC0qAABL] 
+17.1.2024, 15:03:47 - INFO - Req was made | / 
+17.1.2024, 15:03:47 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:05:02 - INFO - Req was made | / 
+17.1.2024, 15:05:02 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:05:33 - INFO - Req was made | / 
+17.1.2024, 15:05:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:05:56 - INFO - Req was made | / 
+17.1.2024, 15:05:56 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:05:59 - INFO - Req was made | / 
+17.1.2024, 15:05:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:06:27 - INFO - Req was made | / 
+17.1.2024, 15:06:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:07:15 - INFO - Req was made | / 
+17.1.2024, 15:07:15 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:07:59 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:07:59 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:08:45 - INFO - New connected socket [id: 8gPPsWyHTlvyGDM6AABN] 
+17.1.2024, 15:08:45 - INFO - Setting socket.userId = 65a42221f7cfe3ae31df43cc for socket [id: 8gPPsWyHTlvyGDM6AABN] 
+17.1.2024, 15:08:45 - INFO - New connected socket [id: gzF9Z0_hDU7uDy41AABP] 
+17.1.2024, 15:08:45 - INFO - Req was made | / 
+17.1.2024, 15:08:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:09:04 - INFO - Req was made | / 
+17.1.2024, 15:09:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:09:18 - INFO - Req was made | / 
+17.1.2024, 15:09:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:09:22 - INFO - Req was made | / 
+17.1.2024, 15:09:22 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:11:18 - INFO - Req was made | / 
+17.1.2024, 15:11:18 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:11:35 - INFO - Req was made | / 
+17.1.2024, 15:11:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:11:59 - INFO - Req was made | / 
+17.1.2024, 15:11:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:13:35 - INFO - Req was made | / 
+17.1.2024, 15:13:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:13:40 - INFO - Req was made | / 
+17.1.2024, 15:13:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:13:43 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:13:43 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:14:03 - INFO - New connected socket [id: qn1Xv7M2OJsLSTvWAABR] 
+17.1.2024, 15:14:03 - INFO - Req was made | / 
+17.1.2024, 15:14:03 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:18:05 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:18:37 - INFO - New connected socket [id: dbO7RHcvGXClk86ZAABT] 
+17.1.2024, 15:18:37 - INFO - Req was made | / 
+17.1.2024, 15:18:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:18:37 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:18:38 - INFO - New connected socket [id: YFg035VUogDE6Z1qAABV] 
+17.1.2024, 15:18:38 - INFO - Req was made | / 
+17.1.2024, 15:18:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:19:11 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:30:32 - INFO - New connected socket [id: tmAZ1d2RSK5KCsAkAABX] 
+17.1.2024, 15:30:32 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:30:32 - INFO - Req was made | / 
+17.1.2024, 15:33:21 - INFO - Req was made | / 
+17.1.2024, 15:33:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:33:49 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:33:49 - INFO - New connected socket [id: JSMNt0hGrErPePozAABZ] 
+17.1.2024, 15:34:50 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:34:51 - INFO - New connected socket [id: zCdStiHmoLKl0eQuAABb] 
+17.1.2024, 15:35:58 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:35:58 - INFO - New connected socket [id: -HlrfIFaoS1lbq65AABd] 
+17.1.2024, 15:36:24 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:36:25 - INFO - New connected socket [id: m_2JRZLKJpWcaXAhAABf] 
+17.1.2024, 15:37:32 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:37:33 - INFO - New connected socket [id: x7hp9_f5XEY0Ec90AABh] 
+17.1.2024, 15:38:27 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:38:28 - INFO - New connected socket [id: 52DiJOIT9tY0HaE2AABj] 
+17.1.2024, 15:39:02 - INFO - Req was made | / 
+17.1.2024, 15:39:02 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:40:59 - INFO - Req was made | / 
+17.1.2024, 15:40:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:41:31 - INFO - Req was made | / 
+17.1.2024, 15:41:31 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:43:54 - DEBUG - Getting Stays | {"placeType":["Iron"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:43:54 - INFO - Req was made | / 
+17.1.2024, 15:47:57 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:47:58 - INFO - New connected socket [id: MayQPsx9XdEpqLhpAABl] 
+17.1.2024, 15:47:58 - INFO - Req was made | / 
+17.1.2024, 15:47:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:48:29 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:48:29 - INFO - Req was made | / 
+17.1.2024, 15:48:29 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 15:48:30 - INFO - New connected socket [id: hguSlWd2TVIdkjMxAABn] 
+17.1.2024, 15:48:30 - INFO - Req was made | / 
+17.1.2024, 15:48:30 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 15:50:42 - INFO - Req was made | / 
+17.1.2024, 15:50:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:03:56 - INFO - Req was made | / 
+17.1.2024, 16:03:56 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:03:56 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:03:57 - INFO - New connected socket [id: b2UKZslYcYtlFTh_AABp] 
+17.1.2024, 16:03:57 - INFO - Req was made | / 
+17.1.2024, 16:03:57 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:05:24 - INFO - Req was made | / 
+17.1.2024, 16:05:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:05:32 - INFO - Req was made | / 
+17.1.2024, 16:05:32 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:05:37 - DEBUG - Getting Stays | {"placeType":["0"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:05:37 - INFO - Req was made | / 
+17.1.2024, 16:05:38 - INFO - Req was made | / 
+17.1.2024, 16:05:38 - DEBUG - Getting Stays | {"placeType":["0","1"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:05:40 - INFO - Req was made | / 
+17.1.2024, 16:05:40 - DEBUG - Getting Stays | {"placeType":["0"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:05:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:05:42 - INFO - Req was made | / 
+17.1.2024, 16:06:35 - INFO - Req was made | / 
+17.1.2024, 16:06:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:06:44 - INFO - Req was made | / 
+17.1.2024, 16:06:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:06:47 - INFO - Req was made | / 
+17.1.2024, 16:06:47 - DEBUG - Getting Stays | {"placeType":["Iron"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:07:00 - INFO - Req was made | / 
+17.1.2024, 16:07:00 - DEBUG - Getting Stays | {"placeType":["Iron"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:07:00 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:07:01 - INFO - New connected socket [id: mE9nMnHlR7TU2y9IAABr] 
+17.1.2024, 16:07:01 - INFO - Req was made | / 
+17.1.2024, 16:07:01 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:07:04 - DEBUG - Getting Stays | {"placeType":["Iron"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:07:04 - INFO - Req was made | / 
+17.1.2024, 16:07:07 - INFO - Req was made | / 
+17.1.2024, 16:07:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:07:57 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:07:58 - INFO - New connected socket [id: aKn32RsgR-cHEE1kAABt] 
+17.1.2024, 16:07:58 - INFO - Req was made | / 
+17.1.2024, 16:07:58 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:11:40 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:11:42 - INFO - New connected socket [id: 8e0DEZDC7NKNgWMwAABv] 
+17.1.2024, 16:11:42 - INFO - Req was made | / 
+17.1.2024, 16:11:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:11:50 - INFO - Req was made | / 
+17.1.2024, 16:11:50 - DEBUG - Getting Stays | {"placeType":["Wifi"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:12:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:12:00 - INFO - Req was made | / 
+17.1.2024, 16:12:06 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:12:07 - INFO - New connected socket [id: ULmMH96KJt2PTwBtAABx] 
+17.1.2024, 16:12:07 - INFO - Req was made | / 
+17.1.2024, 16:12:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:12:25 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:12:26 - INFO - New connected socket [id: qHF9Z4u2AZLc28E6AABz] 
+17.1.2024, 16:12:26 - INFO - Req was made | / 
+17.1.2024, 16:12:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:12:33 - INFO - Req was made | / 
+17.1.2024, 16:12:33 - DEBUG - Getting Stays | {"placeType":["Essentials"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:12:37 - INFO - Req was made | / 
+17.1.2024, 16:12:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:12:42 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:12:43 - INFO - New connected socket [id: irFckk9pcvdihMmHAAB1] 
+17.1.2024, 16:12:43 - INFO - Req was made | / 
+17.1.2024, 16:12:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:15:21 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:15:22 - INFO - New connected socket [id: HjtqyZ4AenQw9m6eAAB3] 
+17.1.2024, 16:15:22 - INFO - Req was made | / 
+17.1.2024, 16:15:22 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:16:56 - DEBUG - auth.service - login with username: NoyLeibo 
+17.1.2024, 16:16:56 - INFO - User login:  | {"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","fullname":"Noy Leibovich","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","trips":[{"stay":{"stayId":"65a5b653a57dc34cac57f3dc","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436334/nqgdwv3ljfkrbvynoetv.jpg","stayName":"1+1 (4 PERSON) Flat in Central İstanbul"},"checkIn":"Invalid Date","checkOut":"Invalid Date","booked":"Jan 16","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Iris Yatskaer","location":"Istanbul, Istanbul, Turkey","about":"I am 29 years old. 112 emergency service ambulance driver. Laptop technical service owner. Likes to travel by motorcycle","thumbnailUrl":"https://a0.muscache.com/im/pictures/329b413b-02c4-470f-ad8e-fd48f8d2abb2.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/329b413b-02c4-470f-ad8e-fd48f8d2abb2.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"124726528","hostingYears":0},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":522.5,"status":"Accepted","_id":"twulmQ"},{"stay":{"stayId":"65a4142d0f466e5567f5a47c","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436975/hx9ravtjop3uqv4giupt.jpg","stayName":"Westin Kaanapali KORVN 2BR"},"checkIn":"Feb 4","checkOut":"Feb 9","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Nave David","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://ca.slack-edge.com/T05H7RU7LTF-U060EFHM8NM-0017ca0cacfa-512","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410","hostingYears":8},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":3272.5,"status":"Rejected","_id":"gTHGaP"},{"stay":{"stayId":"65a5b653a57dc34cac57f3e3","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436523/ptcgbydjsamgf67a0npw.jpg","stayName":"Mezzos Studio in Sydney CBD"},"checkIn":"Jan 28","checkOut":"Jan 31","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Larisa SSP","location":"Melbourne, Victoria, Australia","about":"Your trusted international host across major cities. Feel at home wherever you are! LIVE · LOVE · EXPLORE\r\n\r\n- Melbourne\r\n- Sydney\r\n- Gold Coast\r\n- Auckland\r\n- London\r\n- Kuala Lumpur\r\n- George Town\r\n- Johor Bahru\r\n\r\nI speak fluent English, Cantonese (广东话), Mandarin (普通话), Bahasa Melayu, Bahasa Indonesia & Tagalog.\r\n\r\nIf the dates you're after are available on my calendars, you may proceed to \"INSTANT-BOOK\" em'.\r\n\r\nMy calendars on AirBnb are always up to date, so if they're blocked and you can't select them, it pretty much means someone else has already booked em'.\r\n\r\nHappy stays & safe travels :)\r\n\r\nView more properties HERE (JL1) > https://www.airbnb.com.au/users/8530753/listings\r\n \r\nOR HERE (JL1) > https://www.airbnb.com.au/s/homes?host_id=8530753\r\n \r\nOR HERE (JL3) > https://www.airbnb.com.au/s/homes?host_id=114384153\r\n \r\nOR HERE (JLMY) > https://www.airbnb.com.au/s/homes?host_id=177114776\r\n\r\nOR HERE (JLMY2) > https://www.airbnb.com.au/s/homes?host_id=217495299\r\n\r\nOR HERE (JLMY3) > https://www.airbnb.com.au/s/homes?host_id=228789871","responseTime":"within an hour","thumbnailUrl":"https://a0.muscache.com/im/pictures/user/c7020809-2d2d-4e64-a38b-3acc7924b1d6.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/user/c7020809-2d2d-4e64-a38b-3acc7924b1d6.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"8530753"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":491.7,"status":"Accepted","_id":"lA9gQd"},{"stay":{"stayId":"65a5b653a57dc34cac57f3ed","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436588/cxkvvaext8m0kjuaxcrk.jpg","stayName":"Penthouse. Terrace."},"checkIn":"Apr 1","checkOut":"Apr 7","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Manuel","location":"Barcelona, Cataluña, Spain","about":"Amigo de sus huéspedes.\r\nViajero habitual.\r\nProfundo conocedor de la vida cultural de la ciudad de Barcelona. Facilitador de buena información sobre la Ciudad. Ayudo a \"integrar\" al viajero en la Ciudad.","responseTime":"within an hour","thumbnailUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705241642/WhatsApp_Image_2024-01-14_at_16.13.27_agqbsi.jpg","pictureUrl":"https://a0.muscache.com/im/users/3039107/profile_pic/1343297071/original.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"3039107"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":574.2,"status":"Accepted","_id":"1UBgXQ"},{"stay":{"stayId":"65a5b815a57dc34cac57f403","stayImg":"http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436542/e96nrbkjz8mecvsbzukk.jpg","stayName":"Cosy rooms close to the metro and the River"},"checkIn":"Mar 18","checkOut":"Mar 21","booked":"Jan 16","host":{"_id":"65a41ab1316378825516e565","fullname":"Alexia & Denis","location":"Montreal, Quebec, Canada","about":"Hi everyone, \r\n\r\nWe are a couple of French people, living in Montreal for now more than two years. I am an assistant manager in a clothing store and Denis is an IT/electronic engineer.\r\n\r\nWe are clean, very lively, open minded and we like to meet new people from all over the world to share our experiences :)\r\n\r\nHope to see you soon !","responseTime":"within a few hours","thumbnailUrl":"https://a0.muscache.com/im/pictures/9768e629-3f17-4d5b-b211-f55f2c22b73e.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/9768e629-3f17-4d5b-b211-f55f2c22b73e.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"5591356"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":165,"status":"Accepted","_id":"V5OsEe"},{"stay":{"stayId":"65a70cc04c1cb0295c05ed23","stayImg":"https://a0.muscache.com/im/pictures/miso/Hosting-806863249494914754/original/bb925365-25b6-4769-bfa9-d3a521e14579.jpeg?im_w=1200","stayName":"Yoshino Sakura "},"checkIn":"Jan 25","checkOut":"Jan 30","booked":"Jan 17","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Boris Kho","thumbnailUrl":"https://res.cloudinary.com/dlscarx4f/image/upload/v1705345507/profile_lynbhp.jpg\n","hostingYears":"3"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705413225/WhatsApp_Image_2024-01-16_at_15.53.24_l6gdhn.jpg","fullname":"Noy Leibovich"},"totalPrice":7480,"status":"Accepted","_id":"A3viBz"}],"wishlist":[{"_id":"65a4142d0f466e5567f5a47c","name":"Westin Kaanapali KORVN 2BR","type":"National parks","imgUrls":["http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436294/mvhb3iazpiar6duvy9we.jpg","https://a0.muscache.com/im/pictures/miso/Hosting-1038042838655339722/original/fe720ccb-74f5-4822-86e1-617c743e3d13.jpeg?im_w=720","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436496/ihozxprafjzuhil9qhh4.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436952/aef9ajipinpjhkley1e3.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436948/vgfxpvmcpd2q40qxtuv3.jpg"],"price":595,"summary":"Westin Kaanapali Ocean Resort Villas North timeshare - Pay resort: $14-20/day, stays under 7 night $38/res - Inquire about availability, I review then offer/approve if available :) - READ \"The Space\" for cleaning/etc AND brief explanation about timeshare reservations - Want guaranteed view for additional cost? Must be weekly rental, other restrictions - Wheelchair accessible / ADA, call resort directly to ensure U receive. If U need ADA U MUST inform us BEFORE booking.","capacity":8,"amenities":["TV","Cable TV","Internet","Wifi","Air conditioning","Wheelchair accessible","Pool","Kitchen","Free parking on premises","Doorman","Gym","Elevator","Hot tub","Heating","Family/kid friendly","Suitable for events","Washer","Dryer","Smoke detector","Carbon monoxide detector","First aid kit","Safety card","Fire extinguisher","Essentials","Shampoo","24-hour check-in","Hangers","Hair dryer","Iron","Laptop friendly workspace","Self check-in","Building staff","Private entrance","Room-darkening shades","Hot water","Bed linens","Extra pillows and blankets","Ethernet connection","Luggage dropoff allowed","Long term stays allowed","Ground floor access","Wide hallway clearance","Step-free access","Wide doorway","Flat path to front door","Well-lit path to entrance","Disabled parking spot","Step-free access","Wide doorway","Wide clearance to bed","Step-free access","Wide doorway","Step-free access","Wide entryway","Waterfront","Beachfront"],"bathrooms":2,"bedrooms":2,"roomType":"Entire home/apt","host":{"_id":"65a41ab1316378825516e565","fullname":"Nave David","location":"Eureka, California, United States","about":"Adventurous couple loves to travel :)","responseTime":"within an hour","thumbnailUrl":"https://ca.slack-edge.com/T05H7RU7LTF-U060EFHM8NM-0017ca0cacfa-512","pictureUrl":"https://a0.muscache.com/im/pictures/542dba0c-eb1b-4ab3-85f3-94d3cc8f87a4.jpg?aki_policy=profile_x_medium","isSuperhost":true,"id":"36133410","hostingYears":8},"loc":{"country":"United States","countryCode":"US","city":"Maui","address":"Lahaina, HI, United States","lat":-156.6917,"lan":20.93792},"reviews":[{"at":"2016-06-12T04:00:00.000Z","by":{"_id":"622f3407e36c59e6164fc004","fullname":"Kiesha","imgUrl":"https://robohash.org/10711825?set=set1","id":"10711825"},"txt":"I had a great experience working with Patty and Peter.  Both were very attentive in sorting out the booking details and following up directly when I had questions.  I rented a 2 bedroom unit at the Westin Villas  in Maui and both the unit and property was absolutely amazing.  I think we had the best unit on the resort complete with 2 outdoor patios with direct access  to  the  beach.  I would HIGHLY recommend renting with Patty and Peter."},{"at":"2016-07-28T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb204","fullname":"Chris","imgUrl":"https://robohash.org/70072865?set=set1","id":"70072865"},"txt":"Peter quickly responded to any questions I had before, and during the trip. Will use again, highly recommend. "},{"at":"2016-09-11T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb703","fullname":"Kim","imgUrl":"https://robohash.org/71179725?set=set1","id":"71179725"},"txt":"We had the perfect location for a room, first floor right in front of the pool. The resort is beautiful, and the staff is so friendly! I enjoyed it so much, we talked about buying a timeshare ourselves."},{"at":"2017-01-07T05:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb37f","fullname":"Tracy","imgUrl":"https://robohash.org/65593239?set=set1","id":"65593239"},"txt":"Beautiful location. Patty & Peter were super helpful and easy to work with!"},{"at":"2017-04-07T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb105","fullname":"Duyen","imgUrl":"https://robohash.org/26215688?set=set1","id":"26215688"},"txt":"Great spot for the kids and family and close to beach and everything at the resort. We will definitely be back."},{"at":"2017-05-09T04:00:00.000Z","by":{"_id":"622f3402e36c59e6164fabbe","fullname":"Binh","imgUrl":"https://robohash.org/117390236?set=set1","id":"117390236"},"txt":"The unit and the Westin offer variety of amenities you can possibly ask for. Sofa beds are very comfortable to sleep in. But there is charge for ocean view upgrade. Overall, I highly recommend to book with Patty and Peter. "},{"at":"2018-02-24T05:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb4af","fullname":"Samy","imgUrl":"https://robohash.org/15143517?set=set1","id":"15143517"},"txt":"We spent a great week at Patty and Peter's place. The place was exactly as shown in the pictures, very comfortable, nice view, with all amenities. The resort is great with several pools, a long beach, many restaurants, and of course a lot of great activities all around."},{"at":"2018-06-16T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb87b","fullname":"Breanne","imgUrl":"https://robohash.org/78173091?set=set1","id":"78173091"},"txt":"This place was perfect for my family. We had plenty of room to spread out and the service could not have been any better"},{"at":"2018-06-29T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb713","fullname":"Kimberly","imgUrl":"https://robohash.org/100535039?set=set1","id":"100535039"},"txt":"We love Westin Kaanapalli"},{"at":1705362944721,"by":{"_id":"65a5c318c0bb8d5af786f9fd","fullname":"Noy Leibovich","imgUrl":null},"txt":null,"id":"qnGtg"}],"likedByUsers":[],"beds":"7","rate":"5.0"},{"_id":"65a5b653a57dc34cac57f3dc","name":"1+1 (4 PERSON) Flat in Central İstanbul","type":"Islands","imgUrls":["https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/06e6395b-a488-49d5-ad6d-43e17331dc15.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-842844862546384405/original/d74b1bc2-bf0a-4b89-b19a-fd3bb6690d79.jpeg?im_w=720","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436376/phpltehcr6uq9lh5jlax.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436988/rnk62shhgqcwvi45ao43.jpg","http://res.cloudinary.com/dmtlr2viw/image/upload/v1663436893/pkhxv5j90ubdzbpgdbdb.jpg"],"price":475,"summary":"Clean and useful flat. Center of Kocamustafapaşa. Near to Taksim-Beyoğlu, Eminönü, Beyazıt, Sultanahmet, Sirkeci, Bosprous.  5 minutes to walk sea and hospital. 24 hours taxi bus Taksim - Kocamustafapaşa  (end of the our Street),","capacity":4,"amenities":["TV","Cable TV","Wifi","Kitchen","Smoking allowed","Pets allowed","Heating","Washer","Essentials","Lock on bedroom door","Hangers","Hair dryer","Iron","Laptop friendly workspace","Private living room","Children’s books and toys","Window guards","Hot water","Bed linens","Extra pillows and blankets","Pocket wifi","Refrigerator","Dishes and silverware","Cooking basics","Oven","Patio or balcony","Luggage dropoff allowed","Long term stays allowed","Cleaning before checkout","Hot water kettle"],"bathrooms":1,"bedrooms":1,"roomType":"Entire home/apt","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Iris Yatskaer","location":"Istanbul, Istanbul, Turkey","about":"I am 29 years old. 112 emergency service ambulance driver. Laptop technical service owner. Likes to travel by motorcycle","thumbnailUrl":"https://a0.muscache.com/im/pictures/329b413b-02c4-470f-ad8e-fd48f8d2abb2.jpg?aki_policy=profile_small","pictureUrl":"https://a0.muscache.com/im/pictures/329b413b-02c4-470f-ad8e-fd48f8d2abb2.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"124726528","hostingYears":0},"loc":{"country":"Turkey","countryCode":"TR","city":"Istanbul","address":"İstanbul, Istanbul, Turkey","lat":28.93204,"lan":41.00193},"reviews":[{"at":"2017-08-26T04:00:00.000Z","by":{"_id":"622f3407e36c59e6164fbd01","fullname":"Aoitef","imgUrl":"https://robohash.org/141599143?set=set1","id":"141599143"},"txt":"Le logement est bien équipé. .Proche de tous bus corniche  le marché. ..endroit très calme et stratégique pour les courses et les autres stations de transport. ..C'est 2mn pour les bus et 25mn pour arriver au tramway  à (Website hidden by Airbnb) la famille  de Mehmet très gentille. .."},{"at":"2017-09-12T04:00:00.000Z","by":{"_id":"622f3404e36c59e6164fb3d4","fullname":"Mariana","imgUrl":"https://robohash.org/116706753?set=set1","id":"116706753"},"txt":"La estancia con Mehmet fue muy buena! Mis amigas y yo disfrutamos del lugar, es bueno tener el departamento solo y el transporte público está a tan solo 2 minutos caminando. Lo recomendamos!"},{"at":"2017-10-01T04:00:00.000Z","by":{"_id":"622f3405e36c59e6164fb7a2","fullname":"Игорь","imgUrl":"https://robohash.org/145063482?set=set1","id":"145063482"},"txt":"Mehmet's flat is very comfortable for living in Istanbul. It is located close center of Istanbul. If you go to Istanbul to see main places this flat is best option. Living in this flat you can get on a bus and go to Ayasofya in 25-30 minutes for example. There are many good place for eating and shopping near the house.\nWhen we arrived in Istanbul Mehmet's parents met us and show the apartament. They live in this house on the next floor and they are very nice people. \nI advice you to choose Mehmet's fat if you will go to Istanbul."}],"likedByUsers":[],"rate":"4.91"},{"_id":"65a5b653a57dc34cac57f3de","name":"➳ Logement  4 1/2 Rosemont ❤️","type":"Islands","imgUrls":["https://a0.muscache.com/im/pictures/miso/Hosting-6598905/original/5a897a6a-2f80-46a7-a2f1-4809f341e754.jpeg?im_w=1200","https://a0.muscache.com/im/pictures/miso/Hosting-6598905/original/a46f7b33-228c-4819-8eab-9fe661b92685.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-6598905/original/a8aa352f-92f1-4ef5-8b40-9762f5b44ac2.jpeg?im_w=720","https://a0.muscache.com/im/pictures/83354695/aedaabab_original.jpg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-6598905/original/d2bcfc72-5ed7-418d-a012-4cfe66efe77a.jpeg?im_w=720"],"price":409,"summary":"Chers Glob-trotteurs, travailleurs, vacanciers ou qui que vous soyez :)  Notre demeure est au dernier étage d’un petit immeuble (3 étages), situé à 20 min du centre ville.   L’appartement possède un salon double avec chambre ,balcon donnant sur une rue passante, deux chambres dont une fermée, une salle de bain ainsi qu’une cuisine avec un second balcon donnant cette fois sur une vue panoramique.  Les rues Beaubien et Masson regorgent de petits cafés, restaurants et commerces en tout genre !","capacity":1,"amenities":["TV","Internet","Wifi","Kitchen","Free parking on premises","Breakfast","Heating","Family/kid friendly","Suitable for events","Washer","Dryer","Smoke detector","Essentials","24-hour check-in","Hangers","Hair dryer","Laptop friendly workspace","Private entrance","Hot water"],"bathrooms":1,"bedrooms":1,"roomType":"Private room","host":{"_id":"65a42221f7cfe3ae31df43cc","fullname":"Noam Saar","location":"Montreal, Quebec, Canada","about":"","thumbnailUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705362492/ba892fb9-6a68-4629-a7cf-7be9242826f2_nvvffs.jpg","pictureUrl":"https://a0.muscache.com/im/pictures/367d4387-064d-46f6-b03c-fabe661180e3.jpg?aki_policy=profile_x_medium","isSuperhost":false,"id":"84813481","hostingYears":5},"loc":{"country":"Canada","countryCode":"CA","city":"Montreal","address":"Montréal, Québec, Canada","lat":-73.58889,"lan":45.54424},"reviews":[{"at":"2016-09-21T04:00:00.000Z","by":{"_id":"622f3403e36c59e6164fb0fa","fullname":"Hélène","imgUrl":"https://robohash.org/89982100?set=set1","id":"89982100"},"txt":"Nous n'avons pas rencontré Rebekah, c'est un ami à elle qui nous a donné et repris les clés. Nous étions une famille de 4 (un bébé et un enfant de 4 ans).\r\nNous avons aimé : la proximité des commerces (supermarché, pharmacie, fruiterie, le chaleureux Rose Café), le bus au pied de l'immeuble, la taille de l'appartement confortable pour 4, \r\nNous avons moins aimé : l'appartement pas très propre (odeur de cigarette, cendrier pas vidé, mégot dans la chambre - pour un logement non fumeur !!- le parquet qui noircit les genoux de notre fille à quatre pattes, le frigo pas vidé, la poussière sous les coussins des canapés ... et j'en passe), le manque d'équipement (balai, aspirateur, vaisselle pour préparer à manger), la machine à laver défectueuse (elle est tombée en panne après 2 utilisations, nous avons du aller en laverie), les lumières cassées dans les 2 chambres (que nous avons réparées), la TV qui est en fait un écran pour regarder des DVD, le couchage pour la 3e personne dans la petite chambre fermée est en fait un canapé non convertible de 1 mètre de long (notre fils de 4 ans ne pouvait pas dormir dessus ...). Rebekah nous a donc fait passer un matelas gonflable.\r\nC'est un appartement à moindre cout, certes, mais pas conforme à la description. Bien pour un couple qui aime manger à l’extérieur."}],"likedByUsers":[],"rate":"4.20"}],"myStays":[],"guestsReservations":[{"stay":{"stayId":"65a63e6ec0bb8d5af786f9ff","stayImg":"https://res.cloudinary.com/dlscarx4f/image/upload/v1705393736/fuaqbkplt69f27gob7s5.jpg","stayName":"Amazing!"},"checkIn":"Feb 5","checkOut":"Feb 20","booked":"Jan 16","host":{"_id":"65a5c318c0bb8d5af786f9fd","fullname":"Noy Leibovich"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png","fullname":"Noy Leibovich"},"totalPrice":25014,"status":"Accepted","_id":"DCjbH8"},{"stay":{"stayId":"65a63e6ec0bb8d5af786f9ff","stayImg":"https://res.cloudinary.com/dlscarx4f/image/upload/v1705393736/fuaqbkplt69f27gob7s5.jpg","stayName":"Amazing!"},"checkIn":"Invalid Date","checkOut":"Invalid Date","booked":"Jan 16","host":{"_id":"65a5c318c0bb8d5af786f9fd","fullname":"Noy Leibovich"},"guest":{"_id":"65a5c318c0bb8d5af786f9fd","username":"NoyLeibo","imgUrl":"https://res.cloudinary.com/dysh9q6ir/image/upload/v1705241642/WhatsApp_Image_2024-01-14_at_16.13.27_agqbsi.jpg","fullname":"Noy Leibovich"},"totalPrice":1667.6,"status":"Accepted","_id":"6oBHyJ"}],"chats":[]} 
+17.1.2024, 16:16:56 - INFO - Setting socket.userId = [object Object] for socket [id: HjtqyZ4AenQw9m6eAAB3] 
+17.1.2024, 16:17:04 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:17:05 - INFO - New connected socket [id: 6ngcDjBa_97NnGSrAAB5] 
+17.1.2024, 16:17:05 - INFO - Req was made | / 
+17.1.2024, 16:17:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:17:05 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: 6ngcDjBa_97NnGSrAAB5] 
+17.1.2024, 16:17:25 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:17:26 - INFO - New connected socket [id: WOBWAe0hBkqkpm6JAAB7] 
+17.1.2024, 16:17:26 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: WOBWAe0hBkqkpm6JAAB7] 
+17.1.2024, 16:17:40 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:17:41 - INFO - New connected socket [id: cpR85L0-sTpyw4o1AAB9] 
+17.1.2024, 16:17:41 - INFO - Req was made | / 
+17.1.2024, 16:17:41 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:17:41 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: cpR85L0-sTpyw4o1AAB9] 
+17.1.2024, 16:18:46 - INFO - Req was made | / 
+17.1.2024, 16:18:46 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"3","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:18:53 - INFO - Req was made | / 
+17.1.2024, 16:18:53 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"6","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:19:05 - INFO - Req was made | / 
+17.1.2024, 16:19:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"6","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:19:09 - INFO - Req was made | / 
+17.1.2024, 16:19:09 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"3","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:19:21 - INFO - Req was made | / 
+17.1.2024, 16:19:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"3","bathrooms":"3","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:19:26 - INFO - Req was made | / 
+17.1.2024, 16:19:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"3","bathrooms":"3","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:19:42 - INFO - Req was made | / 
+17.1.2024, 16:19:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"3","bathrooms":"3","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:19:42 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:19:42 - INFO - New connected socket [id: SBkVmEeFmFd3ac-1AAB_] 
+17.1.2024, 16:19:43 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: SBkVmEeFmFd3ac-1AAB_] 
+17.1.2024, 16:19:43 - INFO - Req was made | / 
+17.1.2024, 16:19:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:20:14 - INFO - Req was made | / 
+17.1.2024, 16:20:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 16:20:25 - INFO - Req was made | / 
+17.1.2024, 16:20:25 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Israel"} 
+17.1.2024, 16:20:35 - INFO - Req was made | / 
+17.1.2024, 16:20:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"3","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Israel"} 
+17.1.2024, 16:20:45 - INFO - Req was made | / 
+17.1.2024, 16:20:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"3","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Israel"} 
+17.1.2024, 16:20:45 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:20:45 - INFO - New connected socket [id: B7lTxxA1ODHPxE9fAACB] 
+17.1.2024, 16:20:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:20:45 - INFO - Req was made | / 
+17.1.2024, 16:20:45 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: B7lTxxA1ODHPxE9fAACB] 
+17.1.2024, 16:24:05 - INFO - Req was made | / 
+17.1.2024, 16:24:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:25:43 - INFO - Req was made | / 
+17.1.2024, 16:25:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:25:49 - INFO - Req was made | / 
+17.1.2024, 16:25:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:26:00 - INFO - Req was made | / 
+17.1.2024, 16:26:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"4","bathrooms":"4","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:26:17 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"4","bathrooms":"4","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:26:17 - INFO - Req was made | / 
+17.1.2024, 16:27:36 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:27:37 - INFO - New connected socket [id: FBcNYXKCqzaUDbOeAACD] 
+17.1.2024, 16:27:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:27:37 - INFO - Req was made | / 
+17.1.2024, 16:27:37 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: FBcNYXKCqzaUDbOeAACD] 
+17.1.2024, 16:27:43 - INFO - Req was made | / 
+17.1.2024, 16:27:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"3","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:28:02 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:28:03 - INFO - New connected socket [id: ldXvLne04jVWL3RoAACF] 
+17.1.2024, 16:28:03 - INFO - Req was made | / 
+17.1.2024, 16:28:03 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:28:03 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: ldXvLne04jVWL3RoAACF] 
+17.1.2024, 16:28:40 - INFO - Req was made | / 
+17.1.2024, 16:28:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"4","bathrooms":"4","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:28:54 - INFO - Req was made | / 
+17.1.2024, 16:28:54 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"4","bathrooms":"4","selectedGuests":{"Adults":"3","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:30:39 - INFO - Server is running on port: 3030 
+17.1.2024, 16:30:40 - INFO - New connected socket [id: BcnzfUZeAoysg_0wAAAB] 
+17.1.2024, 16:30:40 - INFO - Req was made | / 
+17.1.2024, 16:30:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"4","bathrooms":"4","selectedGuests":{"Adults":"3","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:30:41 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:30:41 - INFO - New connected socket [id: -WsUkrZGpLRwPHh5AAAD] 
+17.1.2024, 16:30:41 - INFO - Req was made | / 
+17.1.2024, 16:30:41 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:30:41 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: -WsUkrZGpLRwPHh5AAAD] 
+17.1.2024, 16:30:48 - INFO - Req was made | / 
+17.1.2024, 16:30:48 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"3","bathrooms":"3","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:30:51 - INFO - Req was made | / 
+17.1.2024, 16:30:51 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"3","bathrooms":"3","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:30:51 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:30:52 - INFO - New connected socket [id: ECTuqM36z5YPcOGwAAAF] 
+17.1.2024, 16:30:52 - INFO - Req was made | / 
+17.1.2024, 16:30:52 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:30:52 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: ECTuqM36z5YPcOGwAAAF] 
+17.1.2024, 16:31:00 - INFO - Req was made | / 
+17.1.2024, 16:31:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"4","beds":"4","bathrooms":"4","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:31:07 - INFO - Req was made | / 
+17.1.2024, 16:31:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"3","beds":"7","bathrooms":"4","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:31:11 - INFO - Req was made | / 
+17.1.2024, 16:31:11 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:31:14 - INFO - Req was made | / 
+17.1.2024, 16:31:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"7","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:31:17 - INFO - New connected socket [id: 1g6KrncqEO-CUTj8AAAH] 
+17.1.2024, 16:31:17 - INFO - New connected socket [id: NopRGUBnYGrk85xXAAAJ] 
+17.1.2024, 16:31:17 - INFO - New connected socket [id: rfBWpD9fpiIRFAaIAAAL] 
+17.1.2024, 16:31:19 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:31:20 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:31:21 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:34:00 - INFO - Server is running on port: 3030 
+17.1.2024, 16:34:01 - INFO - New connected socket [id: d4kVuSNBc05e7UXoAAAB] 
+17.1.2024, 16:34:10 - INFO - Server is running on port: 3030 
+17.1.2024, 16:34:11 - INFO - New connected socket [id: pYHijMsMj0A_7MlCAAAB] 
+17.1.2024, 16:34:15 - INFO - Server is running on port: 3030 
+17.1.2024, 16:34:16 - INFO - New connected socket [id: cuWmy2xIXizOAxABAAAB] 
+17.1.2024, 16:36:52 - INFO - Server is running on port: 3030 
+17.1.2024, 16:36:53 - INFO - New connected socket [id: ArcQGRT2tEk7eibHAAAB] 
+17.1.2024, 16:36:54 - INFO - Server is running on port: 3030 
+17.1.2024, 16:36:54 - INFO - New connected socket [id: 0EEB3YsXeYJnf6v0AAAB] 
+17.1.2024, 16:37:35 - INFO - Server is running on port: 3030 
+17.1.2024, 16:37:36 - INFO - New connected socket [id: dmrzF59Arq5MSqSqAAAB] 
+17.1.2024, 16:37:44 - INFO - Server is running on port: 3030 
+17.1.2024, 16:37:44 - INFO - New connected socket [id: UiV3AOFYiZMyxdNLAAAB] 
+17.1.2024, 16:37:51 - INFO - Req was made | / 
+17.1.2024, 16:37:51 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"7","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 16:37:52 - ERROR - Failed to get stays | ReferenceError: isArray is not defined 
+17.1.2024, 16:38:19 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:38:20 - INFO - New connected socket [id: Hn3soHl8CUR4E0XbAAAD] 
+17.1.2024, 16:38:20 - INFO - Req was made | / 
+17.1.2024, 16:38:20 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:38:20 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: Hn3soHl8CUR4E0XbAAAD] 
+17.1.2024, 16:38:21 - ERROR - Failed to get stays | ReferenceError: isArray is not defined 
+17.1.2024, 16:38:21 - INFO - Req was made | / 
+17.1.2024, 16:38:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:38:21 - ERROR - Failed to get stays | ReferenceError: isArray is not defined 
+17.1.2024, 16:38:41 - INFO - Server is running on port: 3030 
+17.1.2024, 16:38:42 - INFO - New connected socket [id: -i9rWgq_X-UHDctLAAAB] 
+17.1.2024, 16:38:44 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:38:44 - INFO - New connected socket [id: AMjTWipK-6gHu0Q1AAAD] 
+17.1.2024, 16:38:44 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: AMjTWipK-6gHu0Q1AAAD] 
+17.1.2024, 16:38:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:38:44 - INFO - Req was made | / 
+17.1.2024, 16:38:47 - ERROR - Failed to get stays | ReferenceError: array is not defined 
+17.1.2024, 16:38:47 - INFO - Req was made | / 
+17.1.2024, 16:38:47 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:38:48 - ERROR - Failed to get stays | ReferenceError: array is not defined 
+17.1.2024, 16:39:02 - INFO - Server is running on port: 3030 
+17.1.2024, 16:39:03 - INFO - New connected socket [id: 0X81codPhFjvNQ1ZAAAB] 
+17.1.2024, 16:39:04 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:39:05 - INFO - New connected socket [id: Thb0N8DqMaubsUt6AAAD] 
+17.1.2024, 16:39:05 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: Thb0N8DqMaubsUt6AAAD] 
+17.1.2024, 16:39:05 - INFO - Req was made | / 
+17.1.2024, 16:39:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:39:06 - INFO - Req was made | / 
+17.1.2024, 16:39:06 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:39:23 - INFO - Server is running on port: 3030 
+17.1.2024, 16:39:24 - INFO - New connected socket [id: FKsaBDYgK8b_goUwAAAB] 
+17.1.2024, 16:39:24 - INFO - Req was made | / 
+17.1.2024, 16:39:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:39:24 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: FKsaBDYgK8b_goUwAAAB] 
+17.1.2024, 16:39:26 - INFO - Req was made | / 
+17.1.2024, 16:39:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:40:25 - INFO - Server is running on port: 3030 
+17.1.2024, 16:40:25 - INFO - New connected socket [id: DFPEy49oJPC-q4yNAAAB] 
+17.1.2024, 16:40:31 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:40:32 - INFO - New connected socket [id: vBiJOG1FVwj_Ao3cAAAD] 
+17.1.2024, 16:40:32 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: vBiJOG1FVwj_Ao3cAAAD] 
+17.1.2024, 16:40:32 - INFO - Req was made | / 
+17.1.2024, 16:40:32 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:40:33 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 16:40:33 - INFO - Req was made | / 
+17.1.2024, 16:40:42 - INFO - Req was made | / 
+17.1.2024, 16:40:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Israel"} 
+17.1.2024, 16:48:52 - INFO - Server is running on port: 3030 
+17.1.2024, 16:48:53 - INFO - New connected socket [id: Lo_GktvVn_fsG8a8AAAB] 
+17.1.2024, 16:48:56 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 16:48:56 - INFO - Req was made | / 
+17.1.2024, 16:49:07 - INFO - Req was made | / 
+17.1.2024, 16:49:07 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 16:49:07 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 16:49:08 - INFO - New connected socket [id: SwfJW7Nva8GR5rP3AAAD] 
+17.1.2024, 16:49:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 16:49:08 - INFO - Req was made | / 
+17.1.2024, 16:49:08 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: SwfJW7Nva8GR5rP3AAAD] 
+17.1.2024, 16:59:54 - INFO - Server is running on port: 3030 
+17.1.2024, 16:59:55 - INFO - New connected socket [id: vjfzvCajnfN4NyIDAAAB] 
+17.1.2024, 17:00:01 - INFO - Req was made | / 
+17.1.2024, 17:00:01 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 17:01:02 - INFO - Server is running on port: 3030 
+17.1.2024, 17:01:03 - INFO - New connected socket [id: bRo5XuQ-F9ydFNoiAAAB] 
+17.1.2024, 17:01:05 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:01:06 - INFO - New connected socket [id: mT2EntCgZfU_lcWHAAAD] 
+17.1.2024, 17:01:06 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: mT2EntCgZfU_lcWHAAAD] 
+17.1.2024, 17:01:06 - INFO - Req was made | / 
+17.1.2024, 17:01:06 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:01:08 - INFO - Req was made | / 
+17.1.2024, 17:01:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:01:38 - INFO - Req was made | / 
+17.1.2024, 17:01:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 17:01:54 - INFO - Req was made | / 
+17.1.2024, 17:01:54 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 17:01:59 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:02:00 - INFO - New connected socket [id: jdPL2jZQAuEaUZDVAAAF] 
+17.1.2024, 17:02:00 - INFO - Req was made | / 
+17.1.2024, 17:02:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:02:00 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: jdPL2jZQAuEaUZDVAAAF] 
+17.1.2024, 17:02:00 - INFO - Req was made | / 
+17.1.2024, 17:02:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:02:04 - INFO - Req was made | / 
+17.1.2024, 17:02:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":["Thailand","Japan","China"]} 
+17.1.2024, 17:04:09 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:04:10 - INFO - New connected socket [id: 2Xj-sBXr_Rk7TuVbAAAH] 
+17.1.2024, 17:04:10 - INFO - Req was made | / 
+17.1.2024, 17:04:10 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:04:10 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: 2Xj-sBXr_Rk7TuVbAAAH] 
+17.1.2024, 17:04:10 - INFO - Req was made | / 
+17.1.2024, 17:04:10 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:04:22 - INFO - Server is running on port: 3030 
+17.1.2024, 17:04:22 - INFO - New connected socket [id: M8Gmq8YmJ_vmR0hkAAAB] 
+17.1.2024, 17:04:23 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:04:24 - INFO - New connected socket [id: nqnG6SdUMuMAFTtoAAAD] 
+17.1.2024, 17:04:24 - INFO - Req was made | / 
+17.1.2024, 17:04:24 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:04:24 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: nqnG6SdUMuMAFTtoAAAD] 
+17.1.2024, 17:04:25 - INFO - Req was made | / 
+17.1.2024, 17:04:25 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:04:55 - INFO - Server is running on port: 3030 
+17.1.2024, 17:04:55 - INFO - New connected socket [id: -SkcVL7cPRWCCTLbAAAB] 
+17.1.2024, 17:05:00 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:05:01 - INFO - New connected socket [id: tkxBDFOV3i0ztd_6AAAD] 
+17.1.2024, 17:05:01 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: tkxBDFOV3i0ztd_6AAAD] 
+17.1.2024, 17:05:01 - INFO - Req was made | / 
+17.1.2024, 17:05:01 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:05:02 - INFO - Req was made | / 
+17.1.2024, 17:05:02 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:06:12 - INFO - Server is running on port: 3030 
+17.1.2024, 17:06:13 - INFO - New connected socket [id: J8X27nyLI42FqOarAAAB] 
+17.1.2024, 17:06:19 - INFO - Req was made | / 
+17.1.2024, 17:06:19 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"3","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:08:13 - INFO - Server is running on port: 3030 
+17.1.2024, 17:08:14 - INFO - New connected socket [id: 1YopFLDZk-ju5kr9AAAB] 
+17.1.2024, 17:08:24 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:08:25 - INFO - New connected socket [id: BXQa32tFrZUi_sQBAAAD] 
+17.1.2024, 17:08:25 - INFO - Req was made | / 
+17.1.2024, 17:08:25 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"3","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:08:25 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: BXQa32tFrZUi_sQBAAAD] 
+17.1.2024, 17:08:27 - INFO - Req was made | / 
+17.1.2024, 17:08:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"3","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:09:04 - INFO - Req was made | / 
+17.1.2024, 17:09:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Israel"} 
+17.1.2024, 17:09:08 - INFO - Req was made | / 
+17.1.2024, 17:09:08 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Israel"} 
+17.1.2024, 17:09:14 - INFO - Req was made | / 
+17.1.2024, 17:09:14 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"United States"} 
+17.1.2024, 17:12:05 - INFO - Server is running on port: 3030 
+17.1.2024, 17:12:06 - INFO - New connected socket [id: uoua4j6lBTXIXiNHAAAB] 
+17.1.2024, 17:12:07 - INFO - Server is running on port: 3030 
+17.1.2024, 17:12:08 - INFO - New connected socket [id: nfyh-vZqgzmgd0gBAAAB] 
+17.1.2024, 17:12:13 - INFO - Server is running on port: 3030 
+17.1.2024, 17:12:14 - INFO - New connected socket [id: 8_Id3k31_tJH8xjoAAAB] 
+17.1.2024, 17:12:27 - INFO - Server is running on port: 3030 
+17.1.2024, 17:12:28 - INFO - New connected socket [id: 5kkI9mygjjHJDsl0AAAB] 
+17.1.2024, 17:12:32 - INFO - Req was made | / 
+17.1.2024, 17:12:32 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:13:39 - INFO - Server is running on port: 3030 
+17.1.2024, 17:13:40 - INFO - New connected socket [id: hIli6ZkIwP1k1ponAAAB] 
+17.1.2024, 17:13:46 - INFO - Server is running on port: 3030 
+17.1.2024, 17:13:47 - INFO - New connected socket [id: qJ0p6F10aH2UbTEAAAAB] 
+17.1.2024, 17:13:47 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:13:48 - INFO - New connected socket [id: m3CHSyht3Wm2Q1t9AAAD] 
+17.1.2024, 17:13:48 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: m3CHSyht3Wm2Q1t9AAAD] 
+17.1.2024, 17:13:48 - INFO - Req was made | / 
+17.1.2024, 17:13:48 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:13:49 - INFO - Req was made | / 
+17.1.2024, 17:13:49 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:14:25 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:14:26 - INFO - New connected socket [id: YbY8zdJVpCgIUJpaAAAF] 
+17.1.2024, 17:14:26 - INFO - Req was made | / 
+17.1.2024, 17:14:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:14:26 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: YbY8zdJVpCgIUJpaAAAF] 
+17.1.2024, 17:14:27 - INFO - Req was made | / 
+17.1.2024, 17:14:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:14:36 - INFO - Server is running on port: 3030 
+17.1.2024, 17:14:36 - INFO - New connected socket [id: M7ZIjzP_spXCRdIvAAAB] 
+17.1.2024, 17:14:38 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:14:39 - INFO - New connected socket [id: cxsrck9LEHGv1WqQAAAD] 
+17.1.2024, 17:14:39 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: cxsrck9LEHGv1WqQAAAD] 
+17.1.2024, 17:14:39 - INFO - Req was made | / 
+17.1.2024, 17:14:39 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:14:40 - INFO - Req was made | / 
+17.1.2024, 17:14:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand, Japan, China"} 
+17.1.2024, 17:14:44 - INFO - Req was made | / 
+17.1.2024, 17:14:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:15:06 - INFO - Req was made | / 
+17.1.2024, 17:15:06 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"1","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:16:24 - INFO - Server is running on port: 3030 
+17.1.2024, 17:16:25 - INFO - New connected socket [id: wsqoQwToh37LsLtgAAAB] 
+17.1.2024, 17:16:44 - INFO - Server is running on port: 3030 
+17.1.2024, 17:16:44 - INFO - New connected socket [id: UdW6WHR9wX2H4yD3AAAB] 
+17.1.2024, 17:16:47 - INFO - Server is running on port: 3030 
+17.1.2024, 17:16:48 - INFO - New connected socket [id: FG5BOCCU0FSuOO1EAAAB] 
+17.1.2024, 17:17:12 - INFO - Server is running on port: 3030 
+17.1.2024, 17:17:13 - INFO - New connected socket [id: c-bREsmKoiVVLGOJAAAB] 
+17.1.2024, 17:17:24 - INFO - Server is running on port: 3030 
+17.1.2024, 17:17:24 - INFO - New connected socket [id: C95JROVAqPG3mZ5iAAAB] 
+17.1.2024, 17:17:35 - INFO - Req was made | / 
+17.1.2024, 17:17:35 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:17:40 - INFO - Req was made | / 
+17.1.2024, 17:17:40 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:18:20 - INFO - Server is running on port: 3030 
+17.1.2024, 17:18:21 - INFO - New connected socket [id: 9oc_gaBuRnj80ET5AAAB] 
+17.1.2024, 17:18:25 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:18:25 - INFO - New connected socket [id: X3mtNRYcenPs5JTmAAAD] 
+17.1.2024, 17:18:25 - INFO - Req was made | / 
+17.1.2024, 17:18:25 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:18:25 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: X3mtNRYcenPs5JTmAAAD] 
+17.1.2024, 17:18:27 - INFO - Req was made | / 
+17.1.2024, 17:18:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:18:52 - INFO - Server is running on port: 3030 
+17.1.2024, 17:18:53 - INFO - New connected socket [id: q3rYEPEakXhys-tKAAAB] 
+17.1.2024, 17:18:55 - INFO - Server is running on port: 3030 
+17.1.2024, 17:18:56 - INFO - New connected socket [id: y9BWsfHmOgJNO9YSAAAB] 
+17.1.2024, 17:18:59 - INFO - Req was made | / 
+17.1.2024, 17:18:59 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:19:00 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:19:00 - INFO - New connected socket [id: IiZIrJx6TEqwFy_gAAAD] 
+17.1.2024, 17:19:00 - INFO - Req was made | / 
+17.1.2024, 17:19:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:19:00 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: IiZIrJx6TEqwFy_gAAAD] 
+17.1.2024, 17:19:12 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:19:12 - INFO - Req was made | / 
+17.1.2024, 17:19:12 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:19:13 - INFO - New connected socket [id: ZlRKcXqYjScmmZltAAAF] 
+17.1.2024, 17:19:13 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:19:13 - INFO - Req was made | / 
+17.1.2024, 17:19:13 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: ZlRKcXqYjScmmZltAAAF] 
+17.1.2024, 17:19:37 - INFO - Server is running on port: 3030 
+17.1.2024, 17:19:38 - INFO - New connected socket [id: SxHnyXe0E2dgNQuSAAAB] 
+17.1.2024, 17:19:41 - INFO - Server is running on port: 3030 
+17.1.2024, 17:19:41 - INFO - New connected socket [id: 3KCQRtoH7l8qx6BKAAAB] 
+17.1.2024, 17:19:43 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:19:44 - INFO - New connected socket [id: Hmd9P8kkEWkaOkzJAAAD] 
+17.1.2024, 17:19:44 - INFO - Req was made | / 
+17.1.2024, 17:19:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:19:44 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: Hmd9P8kkEWkaOkzJAAAD] 
+17.1.2024, 17:19:53 - INFO - Server is running on port: 3030 
+17.1.2024, 17:19:54 - INFO - New connected socket [id: zONi12wVGQEHpbN7AAAB] 
+17.1.2024, 17:20:02 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:20:02 - INFO - New connected socket [id: D8I1F54XCaRLMN14AAAD] 
+17.1.2024, 17:20:02 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: D8I1F54XCaRLMN14AAAD] 
+17.1.2024, 17:20:02 - INFO - Req was made | / 
+17.1.2024, 17:20:02 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:20:20 - INFO - Server is running on port: 3030 
+17.1.2024, 17:20:21 - INFO - New connected socket [id: wF8ADElFpbndKzlhAAAB] 
+17.1.2024, 17:20:46 - INFO - Server is running on port: 3030 
+17.1.2024, 17:20:47 - INFO - New connected socket [id: 6T9EbtuSHExaokZ5AAAB] 
+17.1.2024, 17:20:49 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:20:50 - INFO - New connected socket [id: SfVhJ1ZjwfQuUgvlAAAD] 
+17.1.2024, 17:20:50 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: SfVhJ1ZjwfQuUgvlAAAD] 
+17.1.2024, 17:20:50 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:20:50 - INFO - Req was made | / 
+17.1.2024, 17:21:03 - INFO - Server is running on port: 3030 
+17.1.2024, 17:21:03 - INFO - New connected socket [id: ox5MLu1Uh8E6crcDAAAB] 
+17.1.2024, 17:21:05 - INFO - Req was made | / 
+17.1.2024, 17:21:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:21:05 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:21:06 - INFO - New connected socket [id: fyOIITLf4ta_v_ZfAAAD] 
+17.1.2024, 17:21:06 - INFO - Req was made | / 
+17.1.2024, 17:21:06 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:21:06 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: fyOIITLf4ta_v_ZfAAAD] 
+17.1.2024, 17:21:44 - INFO - Server is running on port: 3030 
+17.1.2024, 17:21:46 - INFO - New connected socket [id: lLNannvsYgimcidtAAAB] 
+17.1.2024, 17:21:46 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: lLNannvsYgimcidtAAAB] 
+17.1.2024, 17:21:46 - INFO - Req was made | / 
+17.1.2024, 17:21:46 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:21:58 - INFO - Server is running on port: 3030 
+17.1.2024, 17:22:00 - INFO - New connected socket [id: 1P1_fsD_8RYH263MAAAB] 
+17.1.2024, 17:22:00 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: 1P1_fsD_8RYH263MAAAB] 
+17.1.2024, 17:22:00 - INFO - Req was made | / 
+17.1.2024, 17:22:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:22:20 - INFO - Server is running on port: 3030 
+17.1.2024, 17:22:21 - INFO - New connected socket [id: pHKLCmaNf9W_vVeEAAAB] 
+17.1.2024, 17:22:21 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:22:22 - INFO - New connected socket [id: FAojgq_8lpUM3R-eAAAD] 
+17.1.2024, 17:22:22 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: FAojgq_8lpUM3R-eAAAD] 
+17.1.2024, 17:22:22 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:22:22 - INFO - Req was made | / 
+17.1.2024, 17:22:29 - INFO - Server is running on port: 3030 
+17.1.2024, 17:22:31 - INFO - New connected socket [id: Q5ON51R2A5pAa_NQAAAB] 
+17.1.2024, 17:22:35 - INFO - Server is running on port: 3030 
+17.1.2024, 17:22:36 - INFO - New connected socket [id: 2B4RDjn09SlPJaKMAAAB] 
+17.1.2024, 17:22:40 - INFO - Server is running on port: 3030 
+17.1.2024, 17:22:41 - INFO - New connected socket [id: 9_rXHyxfDW_WbIJ-AAAB] 
+17.1.2024, 17:22:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:22:42 - INFO - Req was made | / 
+17.1.2024, 17:22:42 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:22:43 - INFO - New connected socket [id: HK4pxpSxe0YYfFkxAAAD] 
+17.1.2024, 17:22:43 - INFO - Req was made | / 
+17.1.2024, 17:22:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:22:43 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: HK4pxpSxe0YYfFkxAAAD] 
+17.1.2024, 17:23:15 - INFO - Server is running on port: 3030 
+17.1.2024, 17:23:16 - INFO - New connected socket [id: l0ZOX-qz6zsiQJ4qAAAB] 
+17.1.2024, 17:23:21 - INFO - Req was made | / 
+17.1.2024, 17:23:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:23:26 - INFO - Req was made | / 
+17.1.2024, 17:23:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+17.1.2024, 17:23:38 - INFO - Req was made | / 
+17.1.2024, 17:23:38 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Israel"} 
+17.1.2024, 17:23:44 - INFO - Req was made | / 
+17.1.2024, 17:23:44 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"United States"} 
+17.1.2024, 17:23:48 - INFO - Req was made | / 
+17.1.2024, 17:23:48 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"United States"} 
+17.1.2024, 17:24:54 - INFO - Req was made | / 
+17.1.2024, 17:24:54 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"United States"} 
+17.1.2024, 17:24:54 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:24:55 - INFO - New connected socket [id: oUyvbtirppLdmlh9AAAD] 
+17.1.2024, 17:24:55 - INFO - Req was made | / 
+17.1.2024, 17:24:55 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:24:55 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: oUyvbtirppLdmlh9AAAD] 
+17.1.2024, 17:26:45 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:26:45 - INFO - New connected socket [id: 6AkrUL53TCBuXrM_AAAF] 
+17.1.2024, 17:26:45 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:26:45 - INFO - Req was made | / 
+17.1.2024, 17:26:45 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: 6AkrUL53TCBuXrM_AAAF] 
+17.1.2024, 17:30:18 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:30:18 - INFO - New connected socket [id: jQowPGQBd4Q-ZqlXAAAH] 
+17.1.2024, 17:30:19 - INFO - Req was made | / 
+17.1.2024, 17:30:19 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:30:19 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: jQowPGQBd4Q-ZqlXAAAH] 
+17.1.2024, 17:31:42 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:31:43 - INFO - New connected socket [id: awesc3NTFr_RLES9AAAJ] 
+17.1.2024, 17:31:43 - INFO - Req was made | / 
+17.1.2024, 17:31:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:31:43 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: awesc3NTFr_RLES9AAAJ] 
+17.1.2024, 17:32:02 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:32:03 - INFO - New connected socket [id: mbr3naGxp7kKxT4BAAAL] 
+17.1.2024, 17:32:03 - INFO - Req was made | / 
+17.1.2024, 17:32:03 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:32:03 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: mbr3naGxp7kKxT4BAAAL] 
+17.1.2024, 17:32:20 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:32:21 - INFO - New connected socket [id: vDK07QeVsyk2UKD9AAAN] 
+17.1.2024, 17:32:21 - INFO - Req was made | / 
+17.1.2024, 17:32:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:32:21 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: vDK07QeVsyk2UKD9AAAN] 
+17.1.2024, 17:32:42 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:32:43 - INFO - New connected socket [id: majv5afG0LoeH9aJAAAP] 
+17.1.2024, 17:32:43 - INFO - Req was made | / 
+17.1.2024, 17:32:43 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:32:43 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: majv5afG0LoeH9aJAAAP] 
+17.1.2024, 17:32:51 - INFO - Req was made | / 
+17.1.2024, 17:32:51 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:33:05 - INFO - Req was made | / 
+17.1.2024, 17:33:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:33:05 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:33:05 - INFO - New connected socket [id: VXN-u-jPpala4bIiAAAR] 
+17.1.2024, 17:33:05 - INFO - Req was made | / 
+17.1.2024, 17:33:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:33:05 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: VXN-u-jPpala4bIiAAAR] 
+17.1.2024, 17:33:12 - INFO - Req was made | / 
+17.1.2024, 17:33:12 - DEBUG - Getting Stays | {"placeType":["Ski-in/Ski-out"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:33:22 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:33:22 - INFO - New connected socket [id: C6JewiCf0Av3oNnbAAAT] 
+17.1.2024, 17:33:22 - INFO - Req was made | / 
+17.1.2024, 17:33:22 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:33:22 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: C6JewiCf0Av3oNnbAAAT] 
+17.1.2024, 17:33:46 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:33:47 - INFO - New connected socket [id: z9_t0XApPD9BTkcPAAAV] 
+17.1.2024, 17:33:47 - INFO - Req was made | / 
+17.1.2024, 17:33:47 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:33:47 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: z9_t0XApPD9BTkcPAAAV] 
+17.1.2024, 17:34:14 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:34:15 - INFO - New connected socket [id: izFGMSfrvBRIRVdAAAAX] 
+17.1.2024, 17:34:15 - INFO - Req was made | / 
+17.1.2024, 17:34:15 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:34:15 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: izFGMSfrvBRIRVdAAAAX] 
+=======
 17.1.2024, 17:25:52 - INFO - New connected socket [id: 3DZpe80t9qUuE0amAAAF] 
 17.1.2024, 17:25:52 - INFO - New connected socket [id: 03r1Jm-_E-CekSPCAAAG] 
 17.1.2024, 17:25:53 - INFO - New connected socket [id: Hh2NWdESxMK0Lp0fAAAH] 
 17.1.2024, 17:25:53 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: Hh2NWdESxMK0Lp0fAAAH] 
 17.1.2024, 17:25:53 - INFO - Setting socket.userId = 65a41ab1316378825516e565 for socket [id: 3DZpe80t9qUuE0amAAAF] 
+<<<<<<< HEAD
 17.1.2024, 17:29:10 - INFO - New connected socket [id: KPcspOQzKRkqSg_7AAAJ] 
 17.1.2024, 17:29:11 - INFO - Req was made | / 
 17.1.2024, 17:29:11 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"2","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Flexible"} 
@@ -5007,3 +5955,71 @@
 17.1.2024, 19:55:42 - INFO - Req was made | / 
 17.1.2024, 19:55:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
 17.1.2024, 19:55:42 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: sdgugDCnSpccVMfMAAAh] 
+=======
+>>>>>>> 1c04a21191e358e0e42cf46c5589c21738a88448
+17.1.2024, 17:35:19 - INFO - Req was made | / 
+17.1.2024, 17:35:19 - DEBUG - Getting Stays | {"placeType":["Internet"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:39:37 - INFO - New connected socket [id: bMup936aP7m82zcfAAAZ] 
+17.1.2024, 17:39:37 - INFO - Req was made | / 
+17.1.2024, 17:39:37 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:39:37 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: bMup936aP7m82zcfAAAZ] 
+17.1.2024, 17:39:57 - DEBUG - Getting Stays | {"placeType":["BBQ gril"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:39:57 - INFO - Req was made | / 
+17.1.2024, 17:40:04 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:40:04 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:40:04 - INFO - New connected socket [id: F2Z8Gk98lSXWzjiIAAAb] 
+17.1.2024, 17:40:05 - INFO - Req was made | / 
+17.1.2024, 17:40:05 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:40:05 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: F2Z8Gk98lSXWzjiIAAAb] 
+17.1.2024, 17:40:07 - INFO - Req was made | / 
+17.1.2024, 17:40:07 - DEBUG - Getting Stays | {"placeType":["TV"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:40:09 - INFO - Req was made | / 
+17.1.2024, 17:40:09 - DEBUG - Getting Stays | {"placeType":["TV","Kitchen"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:40:10 - INFO - Req was made | / 
+17.1.2024, 17:40:10 - DEBUG - Getting Stays | {"placeType":["TV","Kitchen","Washer"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:40:12 - INFO - Req was made | / 
+17.1.2024, 17:40:12 - DEBUG - Getting Stays | {"placeType":["TV","Kitchen","Washer","Air conditioning"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:42:03 - INFO - Socket disconnected [id: undefined] 
+17.1.2024, 17:42:04 - INFO - New connected socket [id: MvbkHjj7YEUSVQnRAAAd] 
+17.1.2024, 17:42:04 - INFO - Req was made | / 
+17.1.2024, 17:42:04 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:42:04 - INFO - Setting socket.userId = 65a5c318c0bb8d5af786f9fd for socket [id: MvbkHjj7YEUSVQnRAAAd] 
+17.1.2024, 17:42:09 - INFO - Req was made | / 
+17.1.2024, 17:42:09 - DEBUG - Getting Stays | {"placeType":["Fire pit"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:42:21 - INFO - Req was made | / 
+17.1.2024, 17:42:21 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:46:31 - INFO - Req was made | / 
+17.1.2024, 17:46:31 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:46:34 - INFO - Req was made | / 
+17.1.2024, 17:46:34 - DEBUG - Getting Stays | {"placeType":["Heating"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:46:36 - INFO - Req was made | / 
+17.1.2024, 17:46:36 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:47:20 - INFO - Req was made | / 
+17.1.2024, 17:47:20 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:48:11 - INFO - Req was made | / 
+17.1.2024, 17:48:11 - DEBUG - Getting Stays | {"placeType":["Kitchen"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:48:13 - INFO - Req was made | / 
+17.1.2024, 17:48:13 - DEBUG - Getting Stays | {"placeType":["Kitchen","Washer"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:48:15 - INFO - Req was made | / 
+17.1.2024, 17:48:15 - DEBUG - Getting Stays | {"placeType":["Kitchen","Washer","Air conditioning"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:48:16 - INFO - Req was made | / 
+17.1.2024, 17:48:16 - DEBUG - Getting Stays | {"placeType":["Kitchen","Washer","Air conditioning","Beach access"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:48:17 - INFO - Req was made | / 
+17.1.2024, 17:48:17 - DEBUG - Getting Stays | {"placeType":["Kitchen","Washer","Air conditioning","Beach access","Essentials"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:48:19 - INFO - Req was made | / 
+17.1.2024, 17:48:19 - DEBUG - Getting Stays | {"placeType":["Kitchen","Washer","Air conditioning","Beach access","Essentials","Shampoo"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 17:48:21 - INFO - Req was made | / 
+17.1.2024, 17:48:21 - DEBUG - Getting Stays | {"placeType":["Kitchen","Washer","Air conditioning","Beach access","Essentials","Shampoo","Hangers"],"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+>>>>>>> b27975ded5baa72f4ce9e726376b896d255a0f95
+17.1.2024, 19:58:23 - INFO - Server is running on port: 3030 
+17.1.2024, 19:58:23 - INFO - New connected socket [id: sXwW2qrbe6A3kNuIAAAB] 
+17.1.2024, 19:58:23 - INFO - New connected socket [id: e23MgRWgl4l_C9I2AAAD] 
+17.1.2024, 19:58:23 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: e23MgRWgl4l_C9I2AAAD] 
+17.1.2024, 19:58:23 - INFO - Req was made | / 
+17.1.2024, 19:58:23 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+17.1.2024, 19:58:25 - INFO - New connected socket [id: 2zKmZDs-wpxRk6dqAAAG] 
+17.1.2024, 19:58:25 - INFO - New connected socket [id: zAfR4XFULDnrXiy-AAAH] 
+17.1.2024, 19:58:25 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: 2zKmZDs-wpxRk6dqAAAG] 
+17.1.2024, 19:58:26 - INFO - Setting socket.userId = 65a142d02d36065c09eb4f48 for socket [id: zAfR4XFULDnrXiy-AAAH] 
+17.1.2024, 19:58:26 - INFO - New connected socket [id: 14rDpXfHN8vV9-3pAAAJ] 
+17.1.2024, 19:58:26 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: 14rDpXfHN8vV9-3pAAAJ] 

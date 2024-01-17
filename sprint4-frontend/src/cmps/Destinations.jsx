@@ -34,7 +34,7 @@ export function Destinations({ setFilterBy }) {
                     Italy
                 </div>
                 <div className="region-option flex column fs14">
-                    <div className="region-option-img" onClick={(() => onSetRegion(['Thailand', 'Japan', 'China']))}><img src="https://a0.muscache.com/im/pictures/d77de9f5-5318-4571-88c7-e97d2355d20a.jpg?im_w=320" /></div>
+                    <div className="region-option-img" onClick={(() => onSetRegion('Thailand,Japan,China'))}><img src="https://a0.muscache.com/im/pictures/d77de9f5-5318-4571-88c7-e97d2355d20a.jpg?im_w=320" /></div>
                     Southeast Asia
                 </div>
             </div>

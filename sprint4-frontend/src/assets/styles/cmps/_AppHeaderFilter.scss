@@ -23,16 +23,19 @@
         position: sticky;
         top: 80px;
     }
+
     &.modal-filter-open {
         z-index: 6;
     }
-    .btn-filters{
+
+    .btn-filters {
         display: flex;
         align-items: center;
         padding: 20px 10px;
         font-size: 16px;
-        &:hover{
-          background-color: $clGreyLighter;
+
+        &:hover {
+            background-color: $clGreyLighter;
         }
     }
 }
@@ -54,14 +57,11 @@
     scrollbar-width: none;
 
     .emoji-container {
-
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         font-size: 12px;
-
         background-color: white;
         border-bottom: 1px solid transparent;
         cursor: pointer;

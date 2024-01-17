@@ -142,7 +142,6 @@ export function LoggedInModal({ isLoginOpen, setIsLoginOpen, setSignUp }) {
                     </NavLink>
                     <NavLink
                       to="/"
-                      className="bold"
                       onClick={() => {
                         openLoginModal();
                         setIsMenuOpen(false);

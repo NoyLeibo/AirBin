@@ -7,6 +7,8 @@ import { useEffectUpdate } from "../customHooks/useEffectUpdate";
 import { GiSettingsKnobs } from "react-icons/gi"
 import { Filter } from "./Filter"
 import { utilService } from "../services/util.service";
+import { MdOutlineIron } from "react-icons/md";
+import { FilterAmenities } from "./filtersAmenities";
 
 export function StayFilter({ filterBy, onSetFilter }) {
   const [scrolledLeft, setScrolledLeft] = useState(false);
@@ -18,6 +20,13 @@ export function StayFilter({ filterBy, onSetFilter }) {
   const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy });
   const filters = useSelector((storeState) => storeState.stayModule.filters)
   onSetFilter = useRef(utilService.debounce(onSetFilter));
+
+  // const getCmpFromString = (strCmp) => {
+  //   console.log('StrCmp:', strCmp);
+  //   const newCmp = () => strCmp
+  //   const dynamicCmp = newCmp()
+  //   return (<dynamicCmp />)
+  // }
 
   const selectedEmojis = filterBy.placeType
   // console.log('isOpenFilter', isOpenFilter);
@@ -107,19 +116,20 @@ export function StayFilter({ filterBy, onSetFilter }) {
         </div>
       )}
       <div ref={filterContainerRef} className="emojis-filters ">
-        {Object.entries(filters[0]).map(([key, value], filterIndex) => (
+        {filters.map((key, filterIndex) => (
           <label
             key={key + filterIndex}
             className={`emoji-container ${selectedEmojis.includes(key) ? "selectedEmoji" : ""}`}
-            onClick={(ev) => handleEmojiSelect(ev, key)}
-          >
-            <img
-              className={`emoji-filter ${selectedEmojis.includes(key) ? "selectedEmoji" : ""}`}
+            onClick={(ev) => handleEmojiSelect(ev, key)}>
+            <FilterAmenities amenitie={key} selectedEmojis={selectedEmojis} />
+            {/* {getCmpFromString(value)} */}
+            {/* <StayAmenities amenities={filters} /> */}
+            {/* <img
               src={value}
               alt={key}
               width="24"
               height="24"
-            />
+            /> */}
             <div className="color-overlay"></div>
             <div className="emoji-text">{key}</div>
           </label>
