@@ -247,13 +247,13 @@ export function AppHeader() {
     setIsLoginOpen(true)
     setIsMenuOpen(false)
   }
-
+//  console.log(bottomHeader);
   return (
     <header
       className={`app-header grid 
         ${((!isScrolledDown && !bottomHeader) ||
           (stayPath !== '/stay' && currentPath !== "/" && !bottomHeader)) ? " header-inserted " : ""
-        } ${((!isScrolledDown && currentPath === "/") || (!isScrolledDown && stayPath === '/stay') || bottomHeader)
+        } ${((!isScrolledDown && currentPath === "/") || (!isScrolledDown && currentPath === '/stay')||(!isScrolledDown && currentPath === '/')  || bottomHeader)
           ? " header-sticky " : ' '}
         
       `}

@@ -56,7 +56,7 @@ export function StayEdit() {
     stayToEdit.host.thumbnailUrl=user.imgUrl
     setStayToEdit(stayToEdit)
   }
-
+console.log(user,'user' ,stayToEdit);
   function handleChange(ev) {
     const { name, value, type, options } = ev.target
     let newValue = value

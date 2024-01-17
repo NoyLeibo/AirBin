@@ -161,9 +161,11 @@
     cursor: pointer;
 
     transition: all 0.3s;
+    display: none;
 
     &.small-form-expended {
       opacity: 1;
+      display: flex;
 
     }
 

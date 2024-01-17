@@ -46,7 +46,7 @@ export function StayDetails() {
       observer.disconnect()
     }
   }, [onToggleHeadr])
-
+  console.log(stay);
   const { stayId } = useParams()
   const navigate = useNavigate()
   const user = useSelector((storeState) => storeState.userModule.user)
@@ -156,7 +156,7 @@ export function StayDetails() {
             <img src={
               stay.host.thumbnailUrl
                 ? `${stay.host.thumbnailUrl}`
-                : "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/48.jpg"
+                : "https://res.cloudinary.com/dlscarx4f/image/upload/v1705511200/%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1%D7%9A_2024-01-17_190611_bana3a.png"
             } className="host-avatar-img" />
             <div className="apt-host-info ">
               <div className="host-name fs16 fw600">
@@ -331,7 +331,7 @@ export function StayDetails() {
               src={
                 stay.host.thumbnailUrl
                   ? `${stay.host.thumbnailUrl}`
-                  : "https://res.cloudinary.com/dgzyxjapv/image/upload/v1670246635/stayby/avatars/female/48.jpg"
+                  : "https://res.cloudinary.com/dlscarx4f/image/upload/v1705511200/%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1%D7%9A_2024-01-17_190611_bana3a.png"
               }
               className="host-avatar-img"
             />
