@@ -82,12 +82,12 @@ export function DashboardResarvation() {
   //   loadUsers();
   // }, []);
   return (
-        <TableContainer component={Paper} className="dashboard-resarvation-container"
-        sx={{ overflowX: 'scroll',width: 428 }}
-        
-        >
-      <Table 
-      sx={{width: 700,tableLayout: 'fixed', } }
+    <TableContainer component={Paper} className="dashboard-resarvation-container"
+      sx={{ overflowX: 'scroll', width: 428 }}
+
+    >
+      <Table
+        sx={{ width: 700, tableLayout: 'fixed', }}
       >
         <TableHead>
           <TableRow>
@@ -116,7 +116,7 @@ export function DashboardResarvation() {
                 {reservation.booked}
               </StyledTableCell>
               <StyledTableCell align="left">
-                {reservation.totalPrice}
+                {reservation.totalPrice}$
               </StyledTableCell>
               <StyledTableCell align="left">
                 <span className={changeFontColor(reservation.status)}>
@@ -145,7 +145,7 @@ export function DashboardResarvation() {
                   <Tooltip title="Action has already been sent to client">
                     <span>
                       {/* <Button disabled>Disabled Button</Button> */}
-                      <MdOutlineDoneOutline size="22"/>
+                      <MdOutlineDoneOutline size="22" />
                     </span>
                   </Tooltip>
                 )}
