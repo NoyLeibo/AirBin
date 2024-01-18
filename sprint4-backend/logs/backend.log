@@ -6579,3 +6579,8 @@
 18.1.2024, 12:13:39 - INFO - Server is running on port: 3030 
 18.1.2024, 12:13:40 - INFO - New connected socket [id: KP57bcEbHnu_gyAgAAAB] 
 18.1.2024, 12:13:40 - INFO - New connected socket [id: TomAmUGo-NguKCohAAAD] 
+18.1.2024, 12:40:42 - INFO - Req was made | / 
+18.1.2024, 12:40:42 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+18.1.2024, 12:40:45 - INFO - Socket disconnected [id: undefined] 
+18.1.2024, 12:40:46 - INFO - Server is running on port: 3030 
+18.1.2024, 12:40:47 - INFO - New connected socket [id: 8nVbWjkWv2spIN0wAAAB] 
