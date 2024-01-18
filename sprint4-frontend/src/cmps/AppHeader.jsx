@@ -263,7 +263,6 @@ export function AppHeader() {
     setIsLoginOpen(true)
     setIsMenuOpen(false)
   }
-  console.log(bottomHeader);
   return (
     <header
       className={`app-header grid 
