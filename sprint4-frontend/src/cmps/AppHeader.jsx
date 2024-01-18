@@ -38,7 +38,7 @@ export function AppHeader() {
   const location = useLocation()
   const currentPath = location.pathname
   let detailPath = location.pathname
-  let stayPath =location.pathname
+  let stayPath = location.pathname
   let hostPath = location.pathname
   if (currentPath.startsWith('/details/')) {
     detailPath = '/details/'
@@ -87,15 +87,31 @@ export function AppHeader() {
   }, [])
 
   useEffect(() => {
+
     if ((window.scrollY > 0) & isOpenDates) {
       setShowScreenShadow(true)
       // להכניס פה את הקוד שזה הופך בחזרה למרכז התפריט של הפילטור לפי תאריכים והכל
-      setIsScrolledDown(true)
+      return (setIsScrolledDown(true))
+    }
+    else if ((window.scrollY > 0) & isOpenDestinations) {
+      setShowScreenShadow(true)
+      return (setIsScrolledDown(true))
+    }
+    else if ((window.scrollY > 0) & isOpenGuests) {
+      setShowScreenShadow(true)
+      return (setIsScrolledDown(true))
     }
     if (isOpenDates === false) {
       setShowScreenShadow(false)
     }
-  }, [isOpenDates])
+    else if (isOpenDestinations === false) {
+      setShowScreenShadow(false)
+    }
+    else if (isOpenGuests === false) {
+      setShowScreenShadow(false)
+    }
+
+  }, [isOpenDates, isOpenDestinations, isOpenGuests])
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -247,13 +263,13 @@ export function AppHeader() {
     setIsLoginOpen(true)
     setIsMenuOpen(false)
   }
- console.log(bottomHeader);
+  console.log(bottomHeader);
   return (
     <header
       className={`app-header grid 
         ${((!isScrolledDown && !bottomHeader) ||
           (stayPath !== '/stay' && currentPath !== "/" && !bottomHeader)) ? " header-inserted " : ""
-        } ${(((window.scrollY > 0) && (currentPath === "/")) || ((window.scrollY > 0)&& (currentPath === '/stay'))||(!isScrolledDown && currentPath === '/')  || (!isScrolledDown &&!bottomHeader)&&((currentPath === '/')||(currentPath === '/stay')))
+        } ${(((window.scrollY > 0) && (currentPath === "/")) || ((window.scrollY > 0) && (currentPath === '/stay')) || (!isScrolledDown && currentPath === '/') || (!isScrolledDown && !bottomHeader) && ((currentPath === '/') || (currentPath === '/stay')))
           ? " header-sticky " : ' '}
         
       `}
@@ -272,7 +288,7 @@ export function AppHeader() {
         {(currentPath === "/" || detailPath === '/details/' || stayPath === "/stay") && <div
           className={`
           small-search-form flex align-center
-            ${(!isScrolledDown || ((stayPath!=="/stay"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")))
+            ${(!isScrolledDown || ((stayPath !== "/stay" && currentPath !== "/") || (stayPath !== "/stay" && currentPath === "/stay")))
               ? " small-form-expended "
               : " "
             }
@@ -290,7 +306,7 @@ export function AppHeader() {
         <nav
           className={`
           mid-three-menu flex column justify-center mid-header
-            ${(!isScrolledDown || ((stayPath!=="/stay"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay")||(stayPath!=="/stay"&&currentPath !== "/")))
+            ${(!isScrolledDown || ((stayPath !== "/stay" && currentPath !== "/") || (stayPath !== "/stay" && currentPath === "/stay") || (stayPath !== "/stay" && currentPath !== "/")))
               ? " mid-three-menu-close "
               : " "
             }  
@@ -344,12 +360,12 @@ export function AppHeader() {
           search-form justify-center flex row 
           
         }
-           ${((!isScrolledDown&&!bottomHeader )||
-            (currentPath !== "/details/"&&stayPath!=="/stay"&&currentPath !== "/"&&!bottomHeader))
+           ${((!isScrolledDown && !bottomHeader) ||
+              (currentPath !== "/details/" && stayPath !== "/stay" && currentPath !== "/" && !bottomHeader))
               ? " header-search-inserted "
               : " "
             }    
-              ${((currentPath !== '/details/'&&currentPath !== "/stay"&&currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
+              ${((currentPath !== '/details/' && currentPath !== "/stay" && currentPath !== "/" && !bottomHeader) || (isClassAdded && !bottomHeader)) ? " close-header" : ""}
               `}
         >
           {/* (stayPath!=="/stay"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay") */}
