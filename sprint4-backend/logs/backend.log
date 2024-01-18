@@ -6148,3 +6148,9 @@
 18.1.2024, 9:20:11 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
 18.1.2024, 9:20:11 - INFO - Req was made | / 
 18.1.2024, 9:20:11 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: pQtLKFKcRRgmEWYnAAA3] 
+18.1.2024, 9:21:09 - INFO - Server is running on port: 3030 
+18.1.2024, 9:21:10 - INFO - New connected socket [id: NaBjBKHlcn0DW5gyAAAB] 
+18.1.2024, 9:21:10 - INFO - New connected socket [id: IV7c6hakq2Whxr8AAAAD] 
+18.1.2024, 9:21:11 - INFO - New connected socket [id: Zwxjnb600-peMOZXAAAH] 
+18.1.2024, 9:21:11 - INFO - New connected socket [id: wNKVZl8fuCMt7ZwfAAAI] 
+18.1.2024, 9:21:11 - INFO - New connected socket [id: GshAf2uxXatJdb1jAAAJ] 
