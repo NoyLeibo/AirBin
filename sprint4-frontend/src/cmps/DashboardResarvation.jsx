@@ -83,11 +83,11 @@ export function DashboardResarvation() {
   // }, []);
   return (
         <TableContainer component={Paper} className="dashboard-resarvation-container"
-        sx={{ overflowX: 'scroll',width: 428 }}
+        sx={{ overflowX: 'scroll',width: 755 }}
         
         >
       <Table 
-      sx={{width: 700,tableLayout: 'fixed', } }
+      sx={{width: 755,tableLayout: 'fixed', } }
       >
         <TableHead>
           <TableRow>

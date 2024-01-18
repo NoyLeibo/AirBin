@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect} from "react";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -18,10 +19,14 @@ import {
   SOCKET_EVENT_REMOVE_ORDER,
   socketService,
 } from "../services/socket.service";
-
+// 1025px
 export function UserTrips() {
   const user = useSelector((storeState) => storeState.userModule.user);
   const tripList = user.trips;
+  useEffect(() => {
+    document.documentElement.style.setProperty("--main-layout-width", "1025px");
+    
+  }, [])
 
   async function onRemoveBtn(reservation) {
     const user = await userService.removeTrip(reservation);
@@ -61,7 +66,7 @@ export function UserTrips() {
       {tripList?.map((reservation, index) => (
         <Grid item xs={2} sm={4} md={3} key={index}>
           {/* <Item> */}
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 345 ,minHeight:330 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -86,13 +91,13 @@ export function UserTrips() {
                 </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions>
+            {/* <CardActions>
               <Tooltip onClick={() => onRemoveBtn(reservation)}>
                 <IconButton>
                   <DeleteIcon />
                 </IconButton>
               </Tooltip>
-            </CardActions>
+            </CardActions> */}
           </Card>
           {/* </Item> */}
         </Grid>
