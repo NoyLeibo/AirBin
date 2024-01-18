@@ -6154,3 +6154,26 @@
 18.1.2024, 9:21:11 - INFO - New connected socket [id: Zwxjnb600-peMOZXAAAH] 
 18.1.2024, 9:21:11 - INFO - New connected socket [id: wNKVZl8fuCMt7ZwfAAAI] 
 18.1.2024, 9:21:11 - INFO - New connected socket [id: GshAf2uxXatJdb1jAAAJ] 
+18.1.2024, 9:24:09 - INFO - Socket disconnected [id: undefined] 
+18.1.2024, 9:24:20 - INFO - Socket disconnected [id: undefined] 
+18.1.2024, 9:24:21 - INFO - Socket disconnected [id: undefined] 
+18.1.2024, 9:24:22 - INFO - Socket disconnected [id: undefined] 
+18.1.2024, 9:37:26 - INFO - Req was made | / 
+18.1.2024, 9:37:26 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+18.1.2024, 9:37:26 - INFO - Socket disconnected [id: undefined] 
+18.1.2024, 9:37:27 - INFO - New connected socket [id: edKu-nX4hHj6DGVcAAAL] 
+18.1.2024, 9:37:27 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+18.1.2024, 9:37:27 - INFO - Req was made | / 
+18.1.2024, 9:37:27 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: edKu-nX4hHj6DGVcAAAL] 
+18.1.2024, 10:45:08 - INFO - No active socket for user: 65a42221f7cfe3ae31df43cc 
+18.1.2024, 10:45:46 - INFO - Req was made | / 
+18.1.2024, 10:45:46 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+18.1.2024, 10:45:46 - INFO - Socket disconnected [id: undefined] 
+18.1.2024, 10:45:47 - INFO - New connected socket [id: futnS6arDYCSjdfjAAAN] 
+18.1.2024, 10:45:47 - INFO - Req was made | / 
+18.1.2024, 10:45:47 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":""} 
+18.1.2024, 10:45:47 - INFO - Setting socket.userId = 65a5822209a09868544c644c for socket [id: futnS6arDYCSjdfjAAAN] 
+18.1.2024, 10:46:00 - INFO - Req was made | / 
+18.1.2024, 10:46:00 - DEBUG - Getting Stays | {"priceRange":["0","2000"],"bedrooms":"","beds":"","bathrooms":"","selectedGuests":{"Adults":"0","Children":"0","Infants":"0","Pets":"0"},"selectedDestination":"Thailand,Japan,China"} 
+18.1.2024, 10:46:25 - INFO - Emiting event: order-recieved to user: 65a5822209a09868544c644c socket [id: futnS6arDYCSjdfjAAAN] 
+18.1.2024, 10:49:00 - INFO - Emiting event: remove_order_from_host to user: 65a5822209a09868544c644c socket [id: futnS6arDYCSjdfjAAAN] 

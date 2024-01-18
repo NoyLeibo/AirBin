@@ -14,6 +14,8 @@ import { useSelector } from "react-redux";
 import { loadUsers, updateUser } from "../store/user.actions";
 import { userService } from "../services/user.service";
 import { SOCKET_EVENT_HOST_ANSWER } from "../services/socket.service";
+import { MdOutlineDoneOutline } from "react-icons/md";
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -81,11 +83,11 @@ export function DashboardResarvation() {
   // }, []);
   return (
         <TableContainer component={Paper} className="dashboard-resarvation-container"
-        sx={{ overflowX: 'scroll',minWidth: 350 }}
+        sx={{ overflowX: 'scroll',width: 428 }}
         
         >
       <Table 
-      sx={{minWidth: 350,tableLayout: 'fixed', } }
+      sx={{width: 700,tableLayout: 'fixed', } }
       >
         <TableHead>
           <TableRow>
@@ -114,7 +116,7 @@ export function DashboardResarvation() {
                 {reservation.booked}
               </StyledTableCell>
               <StyledTableCell align="left">
-                {reservation.totalPrice}$
+                {reservation.totalPrice}
               </StyledTableCell>
               <StyledTableCell align="left">
                 <span className={changeFontColor(reservation.status)}>
@@ -142,7 +144,8 @@ export function DashboardResarvation() {
 
                   <Tooltip title="Action has already been sent to client">
                     <span>
-                      <Button disabled>Disabled Button</Button>
+                      {/* <Button disabled>Disabled Button</Button> */}
+                      <MdOutlineDoneOutline size="22"/>
                     </span>
                   </Tooltip>
                 )}
