@@ -247,13 +247,13 @@ export function AppHeader() {
     setIsLoginOpen(true)
     setIsMenuOpen(false)
   }
-//  console.log(bottomHeader);
+ console.log(bottomHeader);
   return (
     <header
       className={`app-header grid 
         ${((!isScrolledDown && !bottomHeader) ||
           (stayPath !== '/stay' && currentPath !== "/" && !bottomHeader)) ? " header-inserted " : ""
-        } ${((!isScrolledDown && currentPath === "/") || (!isScrolledDown && currentPath === '/stay')||(!isScrolledDown && currentPath === '/')  || bottomHeader)
+        } ${(((window.scrollY > 0) && (currentPath === "/")) || ((window.scrollY > 0)&& (currentPath === '/stay'))||(!isScrolledDown && currentPath === '/')  || (!isScrolledDown &&!bottomHeader)&&((currentPath === '/')||(currentPath === '/stay')))
           ? " header-sticky " : ' '}
         
       `}
@@ -345,11 +345,11 @@ export function AppHeader() {
           
         }
            ${((!isScrolledDown&&!bottomHeader )||
-            (stayPath!=="/stay"&&currentPath !== "/"&&bottomHeader))
+            (currentPath !== "/details/"&&stayPath!=="/stay"&&currentPath !== "/"&&!bottomHeader))
               ? " header-search-inserted "
               : " "
             }    
-              ${((currentPath !== "/stay"&&currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
+              ${((currentPath !== '/details/'&&currentPath !== "/stay"&&currentPath !== "/"&&!bottomHeader) || (isClassAdded&&!bottomHeader)) ? " close-header" : ""}
               `}
         >
           {/* (stayPath!=="/stay"&&currentPath !== "/")||(stayPath!=="/stay"&&currentPath === "/stay") */}
