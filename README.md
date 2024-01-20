@@ -21,7 +21,8 @@ Welcome to AirBin, an innovative marketplace app inspired by Airbnb, designed to
 
 **8. User-Friendly Registration:** Easily create guest or host accounts with our secure system.
 
-![8czo2a](https://github.com/NoyLeibo/Airbmb/assets/150171476/8ef5cb6c-a536-4eae-b0cc-e39ba8eb8ae2)
+
+https://github.com/NoyLeibo/Airbmb/assets/150171476/1f9b441b-3036-4621-84a3-08d7a248b159
 
 
 ## **🛠️ Technical Stack**
