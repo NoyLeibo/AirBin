@@ -2,9 +2,8 @@
 
 
 ## **_AirBnb: A marketplace application project inspire Airbnb._**
-#
 
-**Features:**
+**🚩 App Features:**
 1. Post for renting your place.
 2. Getting reviews for your place by other users.
 3. creating a new users.
@@ -14,4 +13,4 @@
 7. filtering by variables.
 
    ##
-   
+!NOTE: There are fake data on app that you can order from them, just to try our application.
