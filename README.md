@@ -1,5 +1,4 @@
 ![image](https://github.com/NoyLeibo/Airbmb/assets/150171476/20c4dbd3-d831-49f7-9b85-bd17b17e9c03)
-![image](https://github.com/NoyLeibo/Airbmb/assets/150171476/eaffca1a-c607-4714-a7a5-42fcc60b12ef)
 
 
 ## **_AirBin: Inspired by Airbnb_**
@@ -21,6 +20,7 @@ Welcome to AirBin, an innovative marketplace app inspired by Airbnb, designed to
 **7. Real-Time Notifications:** Stay updated with live updates on reservations and confirmations, powered by socket technology.
 
 **8. User-Friendly Registration:** Easily create guest or host accounts with our secure system.
+![image](https://github.com/NoyLeibo/Airbmb/assets/150171476/eaffca1a-c607-4714-a7a5-42fcc60b12ef)
 
 ## **🛠️ Technical Stack**
 **MongoDB:** Employed for its efficient data management capabilities, ensuring fast and reliable access to listings and user data.
