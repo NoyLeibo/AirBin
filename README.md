@@ -4,8 +4,10 @@
 ## **_AirBin: Inspired by Airbnb_**
 Welcome to AirBin, an innovative marketplace app inspired by Airbnb, designed to connect guests with unique homes and experiences around the globe. Leveraging a robust backend and an intuitive UI, AirBin simplifies the process of finding and renting homes, providing a seamless and enjoyable user experience.
 
+1. fds
+2. 
 ## **🌟 Key Features**
-**1. Explore Listings:** Effortlessly browse through a wide range of homes, gaining detailed insights into each listing.
+**1.  Explore Listings:** Effortlessly browse through a wide range of homes, gaining detailed insights into each listing.
 
 **2. In-Depth Home Details:** Delve into the specifics of each home with comprehensive photos, descriptions, and user reviews.
 
